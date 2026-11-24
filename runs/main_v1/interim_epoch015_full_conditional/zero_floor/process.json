@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-18T23:21:07+08:00",
+  "pid": 826156,
+  "stage": "completed",
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_zero_floor.py",
+    "--extension-dir",
+    "runs/main_v1/interim_epoch015_full_conditional",
+    "--outdir",
+    "runs/main_v1/interim_epoch015_full_conditional/zero_floor",
+    "--floors",
+    "0,0.001,0.005,0.01,0.02,0.03,0.05,0.07"
+  ],
+  "gpu_disabled": true,
+  "completion_time": "2026-11-18T23:22:59+08:00"
+}

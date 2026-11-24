@@ -1,0 +1,32 @@
+[Gloo] Rank [Gloo] Rank [Gloo] Rank 021 is connected to  is connected to  is connected to 222 peer ranks.  peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : Expected number of connected peer ranks is : 222
+
+
+{"time": "2026-11-23T11:53:25+08:00", "event": "start", "step": 0, "training_cells": 8, "steps_per_epoch": 1, "parameters": 11977, "world_size": 3, "local_micro_batch": 2, "accumulation": 1, "accumulation_by_rank": [1, 1, 1], "global_batch": 6, "gpu": "NVIDIA A100-PCIE-40GB", "dynamo_ddp_optimizer": null}
+{"time": "2026-11-23T11:53:26+08:00", "event": "train", "epoch": 1.0, "step": 1, "loss": 1.4436864852905273, "lr": 0.0001, "cells_per_sec": 16.372027796456205, "grad_norm": 2.432432174682617, "peak_gpu_GB": 0.017476608, "world_size": 3, "local_micro_batch": 2, "accumulation": 1, "accumulation_by_rank": [1, 1, 1], "global_batch": 6, "gpu": "NVIDIA A100-PCIE-40GB", "dynamo_ddp_optimizer": null}
+{"time": "2026-11-23T11:53:26+08:00", "event": "validation", "step": 1, "epoch": 1.0, "raw": {"velocity_mse": 0.9868610501289368, "endpoint_mse": 0.4986098110675812}, "ema_0.9996": {"velocity_mse": 0.9877415895462036, "endpoint_mse": 0.49906283617019653}}
+{"time": "2026-11-23T11:53:26+08:00", "completed": 1, "total": 1}
+{"time": "2026-11-23T11:53:26+08:00", "completed": 1, "total": 1}
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 1648.06it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 441.32it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 2713.88it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 29537.35it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 37617.08it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 36157.79it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 43240.25it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 37786.52it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 44858.87it/s]
+{"time": "2026-11-23T11:53:27+08:00", "event": "validation_generation", "epoch": 1, "step": 1, "PDCorr": 0.16066810861229897, "MSE": 0.3830793723464012, "MAE": 0.4695403128862381, "PDS_L1": 1.0, "PDS_L2": 0.75, "PDS_cos": 1.0}
+{"time": "2026-11-23T11:53:27+08:00", "event": "train", "epoch": 2.0, "step": 2, "loss": 1.2457215785980225, "lr": 0.0001, "cells_per_sec": 170.7348226717536, "grad_norm": 1.7853387594223022, "peak_gpu_GB": 0.018648064, "world_size": 3, "local_micro_batch": 2, "accumulation": 1, "accumulation_by_rank": [1, 1, 1], "global_batch": 6, "gpu": "NVIDIA A100-PCIE-40GB", "dynamo_ddp_optimizer": null}
+{"time": "2026-11-23T11:53:27+08:00", "event": "validation", "step": 2, "epoch": 2.0, "raw": {"velocity_mse": 0.9860017895698547, "endpoint_mse": 0.4981513023376465}, "ema_0.9996": {"velocity_mse": 0.9877408742904663, "endpoint_mse": 0.49906250834465027}}
+{"time": "2026-11-23T11:53:28+08:00", "completed": 1, "total": 1}
+{"time": "2026-11-23T11:53:28+08:00", "completed": 1, "total": 1}
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 1894.45it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 2183.40it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 2901.63it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 39568.91it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 46345.90it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 42799.02it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 46603.38it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 37957.50it/s]
+Iterating over perturbations...:   0%|          | 0/2 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 2/2 [00:00<00:00, 45343.83it/s]
+{"time": "2026-11-23T11:53:28+08:00", "event": "validation_generation", "epoch": 2, "step": 2, "PDCorr": 0.1606680527329445, "MSE": 0.38307930529117584, "MAE": 0.4695402532815933, "PDS_L1": 1.0, "PDS_L2": 0.75, "PDS_cos": 1.0}

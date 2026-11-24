@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-21T18:03:38+08:00",
+  "passed": true,
+  "expected_incomplete_refinement_refusal": true,
+  "returncode": 1,
+  "no_metric_or_execution_outputs_created": true,
+  "gpu_pids_unchanged": [
+    656512,
+    1251202
+  ],
+  "cuda_visibility_in_child": "",
+  "actual_CPU_metrics_not_launched_yet": true,
+  "test_access": false,
+  "plan_sha256": "cf687408640714b115633db628fc202d9f2807eed2ce11fa1d48101412f5a1a2"
+}

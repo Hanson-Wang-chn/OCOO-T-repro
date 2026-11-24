@@ -1,0 +1,136 @@
+{
+  "time": "2026-11-20T12:09:37+08:00",
+  "stage": "matched_midtraining_health_review",
+  "points": {
+    "original": {
+      "28000": {
+        "time": "2026-11-20T05:59:03+08:00",
+        "event": "validation",
+        "step": 28000,
+        "epoch": 25.044722719141323,
+        "raw": {
+          "velocity_mse": 0.2609976097010076,
+          "endpoint_mse": 0.10457005968783051
+        },
+        "ema_0.9996": {
+          "velocity_mse": 0.2594551315996796,
+          "endpoint_mse": 0.10396940517239273
+        }
+      },
+      "28250": {
+        "time": "2026-11-20T06:57:59+08:00",
+        "event": "validation",
+        "step": 28250,
+        "epoch": 25.268336314847943,
+        "raw": {
+          "velocity_mse": 0.2611507619731128,
+          "endpoint_mse": 0.10476539318915457
+        },
+        "ema_0.9996": {
+          "velocity_mse": 0.2594471932388842,
+          "endpoint_mse": 0.10396650899201632
+        }
+      }
+    },
+    "batch_retained": {
+      "28000": {
+        "time": "2026-11-20T11:00:11+08:00",
+        "event": "validation",
+        "step": 28000,
+        "epoch": 25.044722719141323,
+        "raw": {
+          "velocity_mse": 0.2610623510554433,
+          "endpoint_mse": 0.10459761717356741
+        },
+        "ema_0.9996": {
+          "velocity_mse": 0.25945247802883387,
+          "endpoint_mse": 0.10396862565539777
+        }
+      },
+      "28250": {
+        "time": "2026-11-20T12:08:41+08:00",
+        "event": "validation",
+        "step": 28250,
+        "epoch": 25.268336314847943,
+        "raw": {
+          "velocity_mse": 0.2611443174537271,
+          "endpoint_mse": 0.10476295626722276
+        },
+        "ema_0.9996": {
+          "velocity_mse": 0.25944729964248836,
+          "endpoint_mse": 0.10396659362595528
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "step": 28000,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.2609976097010076,
+      "candidate": 0.2610623510554433,
+      "difference": 6.47413544356823e-05
+    },
+    {
+      "step": 28000,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.10457005968783051,
+      "candidate": 0.10459761717356741,
+      "difference": 2.755748573690653e-05
+    },
+    {
+      "step": 28000,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.2594551315996796,
+      "candidate": 0.25945247802883387,
+      "difference": -2.653570845723152e-06
+    },
+    {
+      "step": 28000,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10396940517239273,
+      "candidate": 0.10396862565539777,
+      "difference": -7.795169949531555e-07
+    },
+    {
+      "step": 28250,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.2611507619731128,
+      "candidate": 0.2611443174537271,
+      "difference": -6.4445193856954575e-06
+    },
+    {
+      "step": 28250,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.10476539318915457,
+      "candidate": 0.10476295626722276,
+      "difference": -2.4369219318032265e-06
+    },
+    {
+      "step": 28250,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.2594471932388842,
+      "candidate": 0.25944729964248836,
+      "difference": 1.0640360414981842e-07
+    },
+    {
+      "step": 28250,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10396650899201632,
+      "candidate": 0.10396659362595528,
+      "difference": 8.463393896818161e-08
+    }
+  ],
+  "decision": "Continue the registered1118-update trial; no denoising instability. These aggregates do not establish generation or DE improvement. Keep original main unchanged and wait the matched fixedCFG all9 results.",
+  "paired_cell_level_uncertainty_available": false,
+  "automatic_main_switch": false,
+  "test_access": false
+}

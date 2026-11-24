@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-19T02:34:06+08:00",
+  "backup": "logs/README_before_parameterization_20261119.md",
+  "replacements": [
+    [
+      "**当前：八组小实验、九指标与配对复核已完成，全量主训练继续。正式 CFG 校准、带门槛的最终验证和测试尚未开始，不宣称达到论文成绩。**",
+      "**当前：八组网格及独立扰动投影对照已完成，全量v-prediction主训练继续，另运行论文x-prediction参数化的短对照。正式CFG校准、最终验证与测试尚未开始，尚未达到论文成绩。**"
+    ],
+    [
+      "完整九指标、固定扰动库上的配对区间、预算审计与输入哈希见 [八组分析](runs/pilot_grid_complete/summary.json) 和 [复核决定](runs/main_selection_after_grid.json)。区间不表示独立训练种子的不确定性。",
+      "完整九指标、固定扰动库上的配对区间、预算审计与输入哈希见 [八组分析](runs/pilot_grid_complete/summary.json) 和 [复核决定](runs/main_selection_after_grid.json)。区间不表示独立训练种子的不确定性。\n\n独立扰动投影的同预算对照未改善综合指标，保留共享投影。固定末段时间探针中FP32收益很小，继续BF16/time1；现比较论文Eq6的x-prediction+v-loss，384步、原训练索引和Heun50保持一致。这只是参数化诊断，原全量v模型继续，结果不会自动触发切换。见 [投影决定](runs/pert_projection_analysis/decision.json)、[末段探针](runs/main_v1/late_time_diagnostic_epoch015/decision.json) 和 [参数化计划](runs/xpred_vloss_plan.json)。"
+    ],
+    [
+      "训练前11项核心检查通过；最终校准流程的4项CPU检查通过（含全量细化排名反转）。",
+      "训练前11项核心检查通过；最终校准流程4项CPU检查通过（含全量细化排名反转）；可选投影/预测参数化的4项CPU检查通过（含默认数值兼容、Eq6 loss/梯度恒等式及Heun积分）。"
+    ]
+  ]
+}

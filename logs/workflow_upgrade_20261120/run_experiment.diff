@@ -1,0 +1,78 @@
+--- logs/source_archive/run_experiment_before_full_validation_cache_11819125c5b7.py
++++ scripts/run_experiment.py
+@@ -4,14 +4,36 @@
+ The final report records measured performance without declaring paper parity.
+ """
+ import argparse
++import fcntl
+ import json
+ import math
+ import os
+ from pathlib import Path
+ import subprocess
+ import sys
++import time
+ import yaml
+ from ocoot.runtime import file_sha256,log_event,readme_event,timestamp,exclusive_run
++
++
++def training_lock_held(run):
++    path=Path(run)/'training.lock'
++    if not path.exists():return False
++    with path.open('a+') as lock:
++        try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
++        except BlockingIOError:return True
++        finally:
++            # Unlocking a descriptor that did not acquire the lock is harmless.
++            fcntl.flock(lock,fcntl.LOCK_UN)
++    return False
++
++
++def wait_for_existing_training(run,poll_seconds=10):
++    attached=False
++    while training_lock_held(run):
++        attached=True
++        time.sleep(poll_seconds)
++    return attached
+ 
+ 
+ def main():
+@@ -29,9 +51,10 @@
+             value={'time':timestamp(),'pid':os.getpid(),'stage':stage,'config':str(Path(a.config).resolve()),**extra}
+             tmp=run/'pipeline_state.tmp';tmp.write_text(json.dumps(value,indent=2));tmp.replace(run/'pipeline_state.json')
+             log_event(run/'events.jsonl',{'event':'pipeline','stage':stage,**extra})
+-        def execute(args):
++        def execute(args,cpu_only=False):
+             with open(run/'pipeline.log','a') as log:
+-                subprocess.run([sys.executable,*args],stdout=log,stderr=log,check=True)
++                environment=dict(os.environ,CUDA_VISIBLE_DEVICES='') if cpu_only else None
++                subprocess.run([sys.executable,*args],stdout=log,stderr=log,check=True,env=environment)
+         def evaluate(selected,split,outdir):
+             args=['scripts/evaluate.py','--checkpoint',selected['checkpoint'],'--split',split,'--outdir',str(outdir),
+                   '--batch-size',str(selected['batch_size']),'--cfg-min',str(selected['cfg_min']),'--cfg-max',str(selected['cfg_max']),'--de']
+@@ -40,7 +63,9 @@
+             execute(args)
+         try:
+             if not (run/'finished.json').exists():
+-                state('training');execute(['scripts/train.py','--config',a.config])
++                state('training',attached_existing_training=training_lock_held(run))
++                wait_for_existing_training(run)
++                if not (run/'finished.json').exists():execute(['scripts/train.py','--config',a.config])
+                 if not (run/'finished.json').exists():raise RuntimeError('Training stopped before completion; checkpoint retained')
+             checkpoint=run/'best_generation.pt'
+             if not checkpoint.exists():raise RuntimeError('No EMA generation checkpoint has been selected')
+@@ -54,7 +79,13 @@
+                     w is None or not math.isfinite(w) or w<=0):
+                 raise ValueError('Formal reproduction requires literal dual-CFG with a positive scale; rerun validation calibration')
+             validation=run/'validation_full'
+-            if not (validation/'metrics/summary.json').exists():
++            reuse=(selected.get('cap') is None and selected.get('cache_provenance') is not None
++                   and ((validation/'promotion_config.json').exists()
++                        or not (validation/'generation_state.json').exists()))
++            if reuse:
++                state('full_validation_de_reusing_calibration')
++                execute(['scripts/promote_validation_cache.py','--calibration',str(calibration),'--outdir',str(validation)],cpu_only=True)
++            elif not (validation/'metrics/summary.json').exists():
+                 state('full_validation_de');evaluate(selected,'validation',validation)
+             metrics=json.loads((validation/'metrics/summary.json').read_text())
+             pds=sum(metrics[k] for k in ['PDS_L1','PDS_L2','PDS_cos'])/3

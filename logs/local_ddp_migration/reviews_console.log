@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 260, in <module>
+    main()
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 235, in main
+    execute('logs/run_epoch035_validation_calibration.py', '--plan', MOVED[E35] / 'plan.json', gpu=True)
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 231, in execute
+    write(LOG / 'reviews_state.json', {'time': timestamp(), 'pid': os.getpid(), 'script': script,
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 43, in write
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False) + '\n')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 326, in _iterencode_list
+    yield from chunks
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type PosixPath is not JSON serializable
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 187, in <module>
+    main()
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 155, in main
+    control.execute(job_commands['calibration'], 'validation_cfg_calibration')
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 83, in execute
+    raise InterruptedError('Interim controller interrupted; completed caches retained')
+InterruptedError: Interim controller interrupted; completed caches retained
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 261, in <module>
+    if not (MOVED[E35] / 'full_candidate_audit/completed.json').exists():
+^^^^^^
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 236, in main
+    subprocess.run(command, env=environment, check=True)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/resume_local_reviews.py", line 234, in execute
+    write(LOG / 'reviews_state.json', {'time': timestamp(), 'pid': os.getpid(), 'script': script,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/whs/miniconda3/envs/ocoo-t/bin/python', 'logs/run_epoch035_validation_calibration.py', '--plan', 'runs/main_v1/interim_epoch035_calibration_local_ddp/plan.json']' returned non-zero exit status 1.
+{"time": "2026-11-22T13:11:11+08:00", "step": 44720, "source_run": "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1", "snapshot_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1/snapshots/step_44720/full.pt", "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch040/full.pt", "sha256": "c0be315f6b387af44270ba43c20534cfc7e18f64254fcf39ec2ef6256d896979", "bytes": 2819039133, "ema_decays": ["0.9999", "0.9996"], "pending_generation_epoch": 40, "full_model_optimizer_ema_rng_retained": true, "active_training_or_last_checkpoint_modified": false, "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"}

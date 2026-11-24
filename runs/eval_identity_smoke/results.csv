@@ -1,0 +1,4 @@
+perturbation,overlap_at_N,precision_at_N,de_direction_match,pearson_delta,mse,mae,discrimination_score_l1,discrimination_score_l2,discrimination_score_cosine
+ALG11,1.0,1.0,1.0,0.9999998807907104,0.0,0.0,1.0,1.0,1.0
+ANAPC1,1.0,1.0,1.0,0.9999998211860657,0.0,0.0,1.0,1.0,1.0
+ASCC3,1.0,1.0,1.0,1.0,0.0,0.0,1.0,1.0,1.0

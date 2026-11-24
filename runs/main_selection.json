@@ -1,0 +1,230 @@
+{
+  "time": "2026-11-17T07:00:08.526703+08:00",
+  "selected_pilot": "sigma_1.0_cellinit_1.0",
+  "scores": {
+    "sigma_1.0": {
+      "raw": 0.4877782903918651,
+      "clipped": 0.49385942398117755
+    },
+    "sigma_0.5": {
+      "raw": 0.6173493546242551,
+      "clipped": 0.618507558681045
+    },
+    "sigma_1.0_t1000": {
+      "raw": 0.4934933817895567,
+      "clipped": 0.5016038912137176
+    },
+    "sigma_0.5_t1000": {
+      "raw": 0.6520907264168341,
+      "clipped": 0.6545402642463214
+    },
+    "sigma_1.0_cellinit_1.0": {
+      "raw": 0.7337498116275917,
+      "clipped": 0.7436110329910837
+    },
+    "sigma_0.5_cellinit_1.0": {
+      "raw": 0.7229265436073076,
+      "clipped": 0.7289021897908403
+    }
+  },
+  "criterion": "Validation PDCorr + mean of three PDS; raw and nonnegative results independently favor the same trial.",
+  "pilot_limitations": "384 updates on 16384 training cells; raw-weight diagnostics only, not paper inference or final perturbation performance.",
+  "postprocess": "clamp_min_0 for the nonnegative RNA domain and DE metrics; unclipped predictions also saved.",
+  "config": "configs/main_selected.yaml",
+  "config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "variance_diagnostics": {
+    "pilot_sigma_0.5": {
+      "source": "runs/pilot_sigma_0.5/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 913,
+        "jurkat": 3,
+        "k562": 24,
+        "rpe1": 20
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.020345655130669618,
+        "jurkat": 0.11015180925050297,
+        "k562": 0.07038385694733551,
+        "rpe1": 0.06258819066541786
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.16418598674518983,
+        "clipped": 0.15824336546362347,
+        "raw_ratio_to_real": 1.3008834768355058,
+        "clipped_ratio_to_real": 1.2537987165125777
+      },
+      "metrics": {
+        "PDCorr": 0.10623824351314397,
+        "MSE": 0.04080967543025812,
+        "MAE": 0.14091505507628124,
+        "PDS_L1": 0.5194444444444445,
+        "PDS_L2": 0.5180555555555555,
+        "PDS_cos": 0.49583333333333335
+      }
+    },
+    "pilot_sigma_0.5_cellinit_1.0": {
+      "source": "runs/pilot_sigma_0.5_cellinit_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0009165052680600582,
+        "jurkat": 0.14505571709601284,
+        "k562": 0.11162017899890782,
+        "rpe1": 0.10842866498374812
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12796218194810252,
+        "clipped": 0.12340673486038693,
+        "raw_ratio_to_real": 1.0138739088278623,
+        "clipped_ratio_to_real": 0.9777800498848045
+      },
+      "metrics": {
+        "PDCorr": 0.20116728434804826,
+        "MSE": 0.016361667417610685,
+        "MAE": 0.09131810354689757,
+        "PDS_L1": 0.5241666666666667,
+        "PDS_L2": 0.5305555555555556,
+        "PDS_cos": 0.5105555555555555
+      }
+    },
+    "pilot_sigma_0.5_t1000": {
+      "source": "runs/pilot_sigma_0.5_t1000/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 881,
+        "jurkat": 1,
+        "k562": 48,
+        "rpe1": 30
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.022521708169187797,
+        "jurkat": 0.10421163903339756,
+        "k562": 0.06785038618847312,
+        "rpe1": 0.06886995452204837
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.1934647568312382,
+        "clipped": 0.1871676835002428,
+        "raw_ratio_to_real": 1.5328659315020998,
+        "clipped_ratio_to_real": 1.4829727657630118
+      },
+      "metrics": {
+        "PDCorr": 0.126627763453871,
+        "MSE": 0.04550380911678076,
+        "MAE": 0.1474269206325213,
+        "PDS_L1": 0.5330555555555556,
+        "PDS_L2": 0.5280555555555556,
+        "PDS_cos": 0.5152777777777777
+      }
+    },
+    "pilot_sigma_1.0": {
+      "source": "runs/pilot_sigma_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 0,
+        "jurkat": 88,
+        "k562": 516,
+        "rpe1": 356
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.06202988084815577,
+        "jurkat": 0.043193846444487684,
+        "k562": 0.03268425764000254,
+        "rpe1": 0.05940395706518624
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12794731323192576,
+        "clipped": 0.11394133997424839,
+        "raw_ratio_to_real": 1.0137561005570133,
+        "clipped_ratio_to_real": 0.9027835410279872
+      },
+      "metrics": {
+        "PDCorr": -0.01768467257109781,
+        "MSE": 0.079306227962176,
+        "MAE": 0.18496454879641533,
+        "PDS_L1": 0.5030555555555556,
+        "PDS_L2": 0.5077777777777778,
+        "PDS_cos": 0.5055555555555555
+      }
+    },
+    "pilot_sigma_1.0_cellinit_1.0": {
+      "source": "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0010494717139919536,
+        "jurkat": 0.14419970158179257,
+        "k562": 0.11101272132755229,
+        "rpe1": 0.1068052315506025
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.08170491756768453,
+        "clipped": 0.07451612347527789,
+        "raw_ratio_to_real": 0.6473669242245595,
+        "clipped_ratio_to_real": 0.5904084490308265
+      },
+      "metrics": {
+        "PDCorr": 0.2179164782942583,
+        "MSE": 0.013664484303444625,
+        "MAE": 0.08211884573101998,
+        "PDS_L1": 0.5161111111111112,
+        "PDS_L2": 0.5208333333333334,
+        "PDS_cos": 0.5105555555555557
+      }
+    },
+    "pilot_sigma_1.0_t1000": {
+      "source": "runs/pilot_sigma_1.0_t1000/validation_epoch_012",
+      "generated_cells": 960,
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 7,
+        "jurkat": 242,
+        "k562": 338,
+        "rpe1": 373
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.05638047376299986,
+        "jurkat": 0.04649279467334143,
+        "k562": 0.044479388497378265,
+        "rpe1": 0.05023931092287322
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.14951670210559512,
+        "clipped": 0.13255976585313234,
+        "raw_ratio_to_real": 1.184655348095982,
+        "clipped_ratio_to_real": 1.0503016275021746
+      },
+      "metrics": {
+        "PDCorr": -0.009747358951184044,
+        "MSE": 0.07551583151022594,
+        "MAE": 0.1812330275774002,
+        "PDS_L1": 0.5005555555555555,
+        "PDS_L2": 0.5047222222222222,
+        "PDS_cos": 0.5044444444444445
+      }
+    }
+  },
+  "test_used_for_selection": false
+}

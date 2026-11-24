@@ -1,0 +1,9 @@
+{
+  "active_pipeline_pid": 656436,
+  "active_run": "runs/main_v1",
+  "config": "configs/main_selected.yaml",
+  "stage": "full_data_main_training",
+  "resumed_from_step": 1871,
+  "readme_update_seconds": 900,
+  "reason": "User requested 15-minute documentation updates; all scientific and checkpoint settings unchanged."
+}

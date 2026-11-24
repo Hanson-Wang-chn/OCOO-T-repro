@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-21T12:16:35+08:00",
+  "step": 39130,
+  "weights": "ema_0.9996",
+  "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+  "full_checkpoint_sha256": "5bbdfe093771ea2f38deffa7a7ad6d633cd27d3f1a33ff00458abd2d79aafb7a",
+  "all193_tensors_equal_default_ema_and_buffers": true,
+  "main_configuration_equal": true,
+  "cpu_only": true
+}

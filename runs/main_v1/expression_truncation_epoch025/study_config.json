@@ -1,0 +1,47 @@
+{
+  "generation_dir": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+  "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "step": 27950,
+  "weights": "ema_0.9996",
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 16,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "quantiles_of_positive_training_values": [
+    0.0005,
+    0.001,
+    0.0025,
+    0.005,
+    0.01
+  ],
+  "base_floors": [
+    0.0,
+    0.05,
+    0.07,
+    0.1
+  ],
+  "maximum_positive_training_censored_fraction": 0.01,
+  "prediction_sha256": "2689dfbf8b24c8398861585c9f1a75e5b8497b155b2f24f810d5dcdd129d52b1",
+  "indices_sha256": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+  "generation_config_sha256": "54e024c8aafecc9345e729eeb21ddc510117f4283adfddf0070da6e1be717d44",
+  "data_files_sha256": {
+    "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+    "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "source_sha256": {
+    "/home/whs/ocoo-t/scripts/diagnose_expression_truncation.py": "005348d513c8c3c426374bd4c1ca0e145aeddc3ab22e8052202f618164d26f6a",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "test_cells_used_for_statistics_or_evaluation": false,
+  "original_predictions_or_training_changed": false,
+  "formal_postprocess_selected": false
+}

@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-19T01:54:56+08:00",
+  "decision": "Keep the original shared-projection main configuration. This controlled short pilot does not support switching to the copied-then-untied projection.",
+  "raw_score_difference": -0.011720927583260599,
+  "raw_ci95": [
+    -0.01773307540123708,
+    -0.006103925275400956
+  ],
+  "clamped_score_difference": -0.007406760549207192,
+  "clamped_ci95": [
+    -0.013521943235321318,
+    -0.0012661314085600495
+  ],
+  "caveat": "Intervals are across the same60 perturbations for one seed and384 updates, not independent training-seed or mature-EMA evidence. Do not infer that every untied implementation is worse.",
+  "main_config_changed": false
+}

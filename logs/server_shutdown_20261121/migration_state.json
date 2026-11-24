@@ -1,0 +1,69 @@
+{
+  "time": "2026-11-21T22:41:26+08:00",
+  "requested_by_user": true,
+  "status": "training_and_experiment_processes_stopped",
+  "checkpoint": {
+    "step": 41374,
+    "epoch": 37.00715563506261,
+    "time": "2026-11-21T22:35:33+08:00"
+  },
+  "checkpoint_sha256": "cf418b1615a7ec4c48906f931a21c08a50564f2938816d117b18d1fbedc00df8",
+  "checkpoint_bytes": 2818999011,
+  "checkpoint_relative": "runs/main_v1/last.pt",
+  "snapshot_relative": "runs/main_v1/snapshots/step_41374/full.pt",
+  "external_snapshot": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+  "data_expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+  "config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "project_original": "/home/whs/ocoo-t",
+  "artifacts_original": "/home/dataset-assist-0/whs/ocoo-t-artifacts",
+  "conda_prefix_original": "/home/dataset-assist-0/whs/conda-env/ocoo-t",
+  "host_platform": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "libc": [
+      "glibc",
+      "2.35"
+    ]
+  },
+  "test_access": false,
+  "main_finished_marker_exists": false,
+  "interim_E35_process": {
+    "time": "2026-11-21T22:35:27+08:00",
+    "pid": 1251199,
+    "stage": "interrupted",
+    "test_access": false,
+    "main_training_changed": false,
+    "error": "InterruptedError('Interim controller interrupted; completed caches retained')"
+  },
+  "interim_E35_complete_metric_records": 7,
+  "interim_E35_generation": {
+    "refine_00": {
+      "completed": 4825,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.0,
+        "cfg_max": 1.0,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "refine_01": {
+      "completed": 1024,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    }
+  }
+}

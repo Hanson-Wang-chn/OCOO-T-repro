@@ -1,0 +1,7 @@
+{
+  "time": "2026-11-19T03:18:10+08:00",
+  "torch_version": "2.8.0+cu128",
+  "local_source_file": "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/nn/modules/linear.py",
+  "reset_parameters": "    def reset_parameters(self) -> None:\n        # Setting a=sqrt(5) in kaiming_uniform is the same as initializing with\n        # uniform(-1/sqrt(in_features), 1/sqrt(in_features)). For details, see\n        # https://github.com/pytorch/pytorch/issues/57109\n        init.kaiming_uniform_(self.weight, a=math.sqrt(5))\n        if self.bias is not None:\n            fan_in, _ = init._calculate_fan_in_and_fan_out(self.weight)\n            bound = 1 / math.sqrt(fan_in) if fan_in > 0 else 0\n            init.uniform_(self.bias, -bound, bound)\n",
+  "reproduction_choice": "Use the fan-in weight law with zero bias, not the full nn.Linear bias distribution."
+}

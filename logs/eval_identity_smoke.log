@@ -1,0 +1,17 @@
+Output directory runs/eval_identity_smoke already exists, potential overwrite occurring
+/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+  warnings.warn(problem)
+Running parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]Running parallel differential expression (against reference):  25%|██▌       | 1/4 [00:03<00:10,  3.61s/it]Running parallel differential expression (against reference):  50%|█████     | 2/4 [00:03<00:03,  1.55s/it]Running parallel differential expression (against reference): 100%|██████████| 4/4 [00:03<00:00,  1.05it/s]
+Running parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]Running parallel differential expression (against reference):  50%|█████     | 2/4 [00:00<00:00, 11.40it/s]Running parallel differential expression (against reference): 100%|██████████| 4/4 [00:00<00:00, 15.18it/s]
+Identified 4 infinite log2 fold change values (real)
+Identified 4 infinite log2 fold change values (pred)
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 1823.87it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 368.51it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 2862.35it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 40459.52it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 48210.39it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 42509.84it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 45590.26it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 44620.26it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 52428.80it/s]
+{'PDCorr': 0.9999999006589254, 'MSE': 0.0, 'MAE': 0.0, 'PDS_L1': 1.0, 'PDS_L2': 1.0, 'PDS_cos': 1.0, 'DEOver': 1.0, 'DEPrec': 1.0, 'DirAgr': 1.0}

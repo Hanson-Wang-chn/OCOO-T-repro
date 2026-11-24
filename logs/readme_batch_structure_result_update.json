@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-20T18:56:12+08:00",
+  "reason": "Merge CPU diagnostic outcome and E28 milestone; keep dynamic training count and condense duplicate events preserved in full history, respecting900s cadence.",
+  "replacements": [
+    [
+      "**当前：原全量训练已完成27轮并继续，下一周期第30轮。成熟batch dropout对照未显示稳定收益，误差和方向指标退化，保留原设计。正式校准与测试尚未开始。**",
+      "**当前：原全量训练继续，实时进度见下方，下一周期第30轮。成熟batch dropout对照未显示稳定收益，保留原设计；CPU误差分解也未支持简单批次补丁。正式校准与测试尚未开始。**"
+    ],
+    [
+      "成熟batch dropout单因素对照已完成：同一E25完整状态续训1118更新至E26，比较置空cell-line时是否保留batch。保留batch的综合差+0.00165[-0.00460,0.00786]，未显示稳定收益；MSE增加0.000296、MAE增加0.000982、DirAgr下降0.01040，三项配对区间均显示退化，0.05处理下结论相同。本轮不采用或追加该候选，原主训练继续；不据单轮试验否定所有更长替代训练。见 [决定](runs/batch_dropout_mature_trial/decision.json)、[九指标配对图](runs/batch_dropout_mature_trial/paired_comparison_readable.png)。",
+      "成熟batch dropout单因素对照已完成：同一E25完整状态续训1118更新至E26，比较置空cell-line时是否保留batch。保留batch的综合差+0.00165[-0.00460,0.00786]，未显示稳定收益；MSE增加0.000296、MAE增加0.000982、DirAgr下降0.01040，三项配对区间均显示退化，0.05处理下结论相同。本轮不采用或追加该候选，原主训练继续；不据单轮试验否定所有更长替代训练。见 [决定](runs/batch_dropout_mature_trial/decision.json)、[九指标配对图](runs/batch_dropout_mature_trial/paired_comparison_readable.png)。\n\nCPU批次结构检查中，生成的批次效应RMS高于真实，未支持简单漏学解释；跨扰动的误差结构外推五折均负。批次构成对应均值向量的平方范数比约0.57%，仅是描述性比例，不能作因果归因或验证拟合修正。当前不加大batch初始化或加入均值补丁，见 [分解决定](runs/main_v1/batch_structure_epoch025/decision.json)。第30轮的ordinary与固定w2联合复核已[登记并自动衔接](runs/main_v1/interim_epoch030_fixed_cfg/plan.json)。"
+    ],
+    [
+      "| 11-20 17:32–17:35 | 成熟对照九指标/配对分析完成，误差与方向退化，保留原batch处理；GPU恢复仅主训练，等待E30复核。 |",
+      "| 11-20 17:32–17:35 | 成熟对照九指标/配对分析完成，误差与方向退化，保留原batch处理；GPU恢复仅主训练，等待E30复核。 |\n| 11-20 17:39 | 登记E30完整断点和单次固定w2生成后续，联合比较ordinary/CFG，不自动更改选型或收敛规则。 |\n| 11-20 18:38–18:55 | CPU批次结构及均值关系复核完成，不采用拟合补丁；原主训练完成28轮，继续等待E30。 |"
+    ],
+    [
+      "\n\n- 2026-11-20T17:31:05+08:00：完成 `runs/batch_dropout_mature_trial/candidate` 的 validation 评估（细胞 960，weights=ema_0.9996，CFG=2.0）；指标见 `runs/batch_dropout_mature_trial/candidate/metrics/summary.json`。PDCorr=0.2903，MSE=0.02096。\n\n- 2026-11-20T17:31:43+08:00：成熟batch dropout单因素短续训及两组固定CFG九指标完成，均为step29068；待配对复核，不自动更改主模型；结果 `runs/batch_dropout_mature_trial/completed.json`。\n\n- 2026-11-20T17:32:39+08:00：成熟batch dropout两组固定CFG九指标配对分析完成：floor_0综合差+0.00165[-0.00460,+0.00786]；floor_0p05综合差+0.00201[-0.00382,+0.00795]。仍需结合九指标取舍复核，不自动切换主模型或改正式推理；见 `runs/batch_dropout_mature_trial/paired_comparison.json`。\n\n- 2026-11-20T17:35:40+08:00：成熟batch dropout对照完整复核：综合+0.00165[-0.00460,0.00786]未稳定改善，MSE/MAE和DirAgr的区间均显示退化，0.05处理亦同；本轮不采用或追加候选，保留原主训练并等待E30。完整raw/AdamW/双EMA/RNG、两端九指标和图表均保留；见 `runs/batch_dropout_mature_trial/decision.json`。\n\n- 2026-11-20T17:39:56+08:00：第30轮联合复核已登记并设置被动后续：原主训练继续；到E30完整断点与CPU观察就绪且GPU无其他辅助任务后，仅新增一次固定w2/960细胞生成，复用E25参考，同时比较ordinary与CFG的25→30九指标，不自动改选型/收敛规则。见 `runs/main_v1/interim_epoch030_fixed_cfg/plan.json`。\n\n- 2026-11-20T18:38:22+08:00：等待E30期间登记CPU批次结构误差分解：复用E25全量拼接预测，消除扰动均值后检查共享批次误差；4项独立OLS/识别性/留出恢复数学检查通过，输入SHA及源码已固定。无新GPU任务或正式设置更改；见 `runs/main_v1/batch_structure_epoch025/plan.json`。\n",
+      "\n"
+    ]
+  ],
+  "backup": "logs/README_before_batch_structure_result.md"
+}

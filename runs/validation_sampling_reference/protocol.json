@@ -1,0 +1,12 @@
+{
+  "split": "validation only",
+  "seeds": 4,
+  "caps": [
+    8,
+    16,
+    32
+  ],
+  "procedure": "Sample with replacement within each empirical validation perturbation; compare with the fixed full validation reference.",
+  "limitations": "The empirical reference is shared. This is not independent test performance or a rigorous ceiling.",
+  "purpose": "Quantify sampling variability at pilot/periodic-validation cell caps, not select or fit a prediction model."
+}

@@ -1,0 +1,52 @@
+{
+  "scope": "train subset and validation only",
+  "cases": {
+    "control": {
+      "config": "runs/repro2_pilots/control.yaml",
+      "config_sha256": "364b861491fa2bde0b739c769c2d9f2f869e7b7a0801a5c8ac6a8b22709db513",
+      "change": {},
+      "evaluation_workers": 1
+    },
+    "position_0p125": {
+      "config": "runs/repro2_pilots/position_0p125.yaml",
+      "config_sha256": "c3810e55f5c87ffa53bcb9b3aae635636f174062c3fd74f26a9dc06a61f74035",
+      "change": {
+        "position_scale": 0.125
+      },
+      "evaluation_workers": 4
+    },
+    "gene_init_2": {
+      "config": "runs/repro2_pilots/gene_init_2.yaml",
+      "config_sha256": "24b75846218d4db91953df2d75cc5268f36585be25f3d59e0e7e966a2c45ea98",
+      "change": {
+        "gene_proj_init_scale": 2.0
+      },
+      "evaluation_workers": 4
+    },
+    "swiglu_literal": {
+      "config": "runs/repro2_pilots/swiglu_literal.yaml",
+      "config_sha256": "0273bb81f3a452500e9f42308a67e685a938e5c10221fb37ca991f0d8f5187fe",
+      "change": {
+        "swiglu_convention": "literal"
+      },
+      "evaluation_workers": 4
+    }
+  },
+  "world_size": 4,
+  "train_cells": 16384,
+  "warmup_epochs": 5,
+  "updates": 384,
+  "validation_probe_cells": 384,
+  "paired_generation": {
+    "evaluation": "validation",
+    "cap": 16,
+    "seed": 4242,
+    "steps": 50,
+    "batch": 32,
+    "weights": "raw_pilot_only",
+    "guidance": null,
+    "clamp": true
+  },
+  "selection": "paired perturbation bootstrap of PDCorr + mean(PDS), with MSE/MAE and DE review. Raw sensitivity does not establish mature EMA performance.",
+  "generation_parallelism": "The same inference batches and per-global-offset seeds are assigned to disjoint ranks for candidates."
+}

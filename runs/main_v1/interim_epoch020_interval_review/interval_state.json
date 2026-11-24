@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-19T20:28:06+08:00",
+  "pid": 906363,
+  "stage": "completed_review_required",
+  "test_access": false,
+  "main_training_changed": false,
+  "result": {
+    "time": "2026-11-19T20:28:06+08:00",
+    "stage": "completed_review_required",
+    "comparison": "runs/main_v1/interim_epoch020_interval_review/paired/comparison.json",
+    "context": "runs/main_v1/interim_epoch020_interval_review/context/context_diagnostics.json",
+    "script_sha256": "124f41ffc7b2d8afaa45537fe7b5727e763a22c4210f1cfb6f02bc733513ae2a",
+    "test_access": false,
+    "main_training_changed": false,
+    "formal_setting_selected": false
+  }
+}

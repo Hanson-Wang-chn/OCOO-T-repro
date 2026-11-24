@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-21T17:15:38+08:00",
+  "scope": "Clarify ephemeral progress fields: completed training36 versus most recent observed generation35; synchronize health-only denoising values and remove retired E25 observation",
+  "prelaunch_check": "Initial assertion caught that observer.completed_epoch is training progress; the generation field now uses max(observed_epochs). Corrected before completing this update; scientific outputs unchanged.",
+  "before_sha256": "5c1f90171ae6c61fd3db141e75ff322a5cd3ca1e2821df6824cf6f3412f7a9ae",
+  "after_sha256": "54ecec8417ce536097c9a0f6572555061f05d1e7c947a6662d896dfa3b896704",
+  "completed_training_epoch": 36,
+  "completed_generation_epoch": 35,
+  "current_alerts": [],
+  "scientific_sources_or_training_changed": false,
+  "test_access": false
+}

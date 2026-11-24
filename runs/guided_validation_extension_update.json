@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T07:15:11+08:00",
+  "new_script_sha256": "f7619abaa9f713c1d32b50d975fc440e036a55d8c910e2e9cf2b4e8bb8f4952f",
+  "predecessor_source": {
+    "time": "2026-11-20T07:12:31+08:00",
+    "sha256": "c6f55f1e873fd959c7726689a90c7b5c0939671378bbd4e03ff8d51107d96249",
+    "archive": "logs/source_archive/extend_validation_cache_before_guided_c6f55f1e873f.py"
+  },
+  "validation": "4 CPU cases passed1.59s",
+  "test_log": "logs/tests_guided_validation_extension.log",
+  "core_model_or_training_math_changed": false,
+  "extra_guidance_preserved": true,
+  "positive_CFG_requires_explicit_plan_opt_in": true,
+  "full_plan": "runs/main_v1/interim_epoch025_full_guided/plan.json"
+}

@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-21T00:44:38+08:00",
+  "status": "created_not_launched",
+  "source_template_sha256": "3c893aff2c9b48bdaefaa90ab28264b7efab510d14fbfdc0d3e85133b41000d6",
+  "new_source_sha256": {
+    "logs/follow_epoch035_fixed_cfg.py": "270f1befdd265399b602aa3d958670a7f2847e69735e58e846ee8ce15aef7fb7",
+    "logs/preserve_main_epoch035_when_ready.py": "5c28bc758b8a2206c52d1805ad1f5cf3075f3c5470a997136c551c036d857207"
+  },
+  "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+  "preservation_registration_sha256": "604358620029a755f57b1d15be202a085e1401fcff5ca2fa7df1af368e105fff",
+  "source_diff_sha256": {
+    "logs/epoch035_followup_registration/follower.diff": "51bb096fd84f1237f2bfd3dfcd9c59df44c1909cfdd05fdd86e1cc5bb4461170",
+    "logs/epoch035_followup_registration/preserver.diff": "5248f4ef2cd0bf8739a26659901161aa283f6b26e0e50edd4963a039cdd4797b"
+  },
+  "new_gpu_jobs_now": 0,
+  "test_access": false,
+  "main_training_changed": false,
+  "source_prose_corrected_before_launch": true
+}

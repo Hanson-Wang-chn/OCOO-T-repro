@@ -1,0 +1,15 @@
+{
+  "target_cell_line": "hepg2",
+  "pseudobulk_mse_to_train_line_centroids": {
+    "hepg2": 0.06202991406234429,
+    "jurkat": 0.04319387261811484,
+    "k562": 0.03268428359212732,
+    "rpe1": 0.059404041567970654
+  },
+  "nearest_centroid_counts": {
+    "hepg2": 0,
+    "jurkat": 88,
+    "k562": 516,
+    "rpe1": 356
+  }
+}

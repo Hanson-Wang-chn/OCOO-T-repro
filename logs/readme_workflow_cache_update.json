@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-20T06:14:43+08:00",
+  "backup": "logs/README_before_workflow_cache_upgrade_20261120.md",
+  "replacements": [
+    [
+      "仅PDS_cos显示明确增量",
+      "仅PDS_cos的配对区间高于0"
+    ],
+    [
+      "工作流：训练 → 验证CFG校准（九指标）→ 完整验证/质量检查 → 全量测试 → 报告。相同命令恢复，进程锁防止重复写入。`last.pt`每50个优化步及每轮原子保存模型、优化器、双EMA、RNG和待办评估；生成按批落盘。README按要求每15分钟汇总，训练日志/断点频率不变。",
+      "工作流：训练 → 验证CFG校准（九指标）→ 完整验证/质量检查 → 全量测试 → 报告。相同命令恢复，进程锁防止重复写入。`last.pt`每50个优化步及每轮原子保存模型、优化器、双EMA、RNG和待办评估；生成按批落盘。README按要求每15分钟汇总，训练日志/断点频率不变。 正式校准的全量选中样本将经SHA、设置和全量索引核验后复用于完整验证，并在CPU重算九指标，避免重复生成；工作流可接续等待已运行的训练。见 [流程更新](runs/final_validation_cache_reuse_update.json)。"
+    ],
+    [
+      "训练前11项核心检查通过；最终校准流程4项CPU检查通过（含全量细化排名反转）；模型可选分支的5项CPU检查通过（含默认数值兼容、Eq6 loss/梯度/Heun及初始化解析检查）。原六组预测的array/完整DE入口前六项差值全部为0。版本锁定于 `environment.yml` / `environment.lock.txt`。进度见 [曲线](runs/main_v1/progress.png)、`runs/main_v1/events.jsonl`；最终报告路径为 `runs/main_v1/results/REPORT.md`。",
+      "训练前11项核心检查通过；后续校准/缓存复用/训练接续13项CPU检查通过（含全量排名反转、真实DE重算一致、中断恢复与进程锁）；模型可选分支的5项CPU检查通过（含默认数值兼容、Eq6 loss/梯度/Heun及初始化解析检查）。原六组预测的array/完整DE入口前六项差值全部为0。版本锁定于 `environment.yml` / `environment.lock.txt`。进度见 [曲线](runs/main_v1/progress.png)、`runs/main_v1/events.jsonl`；最终报告路径为 `runs/main_v1/results/REPORT.md`。"
+    ],
+    [
+      "| 11-20 05:56–06:02 | 留出扰动去噪依赖继续增强；只新增一次固定CFG的跨断点生成比较，不重新扫引导。 |",
+      "| 11-20 05:56–06:02 | 留出扰动去噪依赖继续增强；只新增一次固定CFG的跨断点生成比较，不重新扫引导。 |\n| 11-20 06:14 | 后续流程13项CPU检查通过；部署缓存复用及主进程接续，原训练进程保持运行。 |"
+    ]
+  ]
+}

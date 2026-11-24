@@ -1,0 +1,66 @@
+--- logs/preserve_main_epoch035_when_ready.py
++++ logs/preserve_main_epoch040_when_ready.py
+@@ -1,4 +1,4 @@
+-"""Wait passively for E35, then archive the exact complete checkpoint."""
++"""Wait passively for E40, then archive the exact complete checkpoint."""
+ import hashlib
+ import json
+ import os
+@@ -9,9 +9,9 @@
+ 
+ from ocoot.runtime import exclusive_run, timestamp
+ 
+-OUT = Path('logs/preservation_epoch035')
++OUT = Path('logs/preservation_epoch040')
+ RUN = Path('runs/main_v1')
+-TARGET_STEP = 39130
++TARGET_STEP = 44720
+ TRAINER_PID = 656512
+ TRAINER_START_TICK = '783674341'
+ CONFIG_SHA = 'e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52'
+@@ -33,10 +33,10 @@
+ 
+ def main():
+     with exclusive_run(OUT, 'watcher'):
+-        if (RUN / 'snapshots/step_39130/preserved.json').exists():
++        if (RUN / 'snapshots/step_44720/preserved.json').exists():
+             state('already_preserved')
+             return
+-        state('waiting_step39130', purpose='Preserve an exact mature checkpoint; no new experiment or policy change')
++        state('waiting_step44720', purpose='Preserve an exact mature checkpoint; no new experiment or policy change')
+         deadline = time.monotonic() + 48 * 3600
+         last_heartbeat = time.monotonic()
+         while time.monotonic() < deadline:
+@@ -46,26 +46,26 @@
+                 time.sleep(2)
+                 continue
+             if cp['step'] > TARGET_STEP:
+-                raise RuntimeError('Exact E35 checkpoint no longer current; do not substitute another step')
++                raise RuntimeError('Exact E40 checkpoint no longer current; do not substitute another step')
+             if cp['step'] == TARGET_STEP:
+                 assert digest('configs/main_selected.yaml') == CONFIG_SHA
+                 assert digest('scripts/preserve_checkpoint.py') == PRESERVER_SHA
+                 command = [sys.executable, 'scripts/preserve_checkpoint.py', '--run-dir', str(RUN),
+                            '--step', str(TARGET_STEP), '--destination',
+-                           '/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt']
++                           '/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch040/full.pt']
+                 state('archiving', command=command)
+                 with (OUT / 'archive.log').open('a') as stream:
+                     subprocess.run(command, stdout=stream, stderr=subprocess.STDOUT, check=True)
+-                state('completed', record='runs/main_v1/snapshots/step_39130/preserved.json')
++                state('completed', record='runs/main_v1/snapshots/step_44720/preserved.json')
+                 return
+             fields = Path(f'/proc/{TRAINER_PID}/stat').read_text().split(') ')[1].split()
+             if fields[0] == 'Z' or fields[19] != TRAINER_START_TICK:
+-                raise RuntimeError('Original trainer exited or changed before E35; review without relaunching')
++                raise RuntimeError('Original trainer exited or changed before E40; review without relaunching')
+             if time.monotonic() - last_heartbeat >= 3600:
+-                state('waiting_step39130', current_step=cp['step'])
++                state('waiting_step44720', current_step=cp['step'])
+                 last_heartbeat = time.monotonic()
+             time.sleep(20)
+-        raise TimeoutError('E35 not reached within48h; no training mutation')
++        raise TimeoutError('E40 not reached within48h; no training mutation')
+ 
+ 
+ if __name__ == '__main__':

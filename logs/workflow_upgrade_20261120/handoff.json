@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-20T06:13:56+08:00",
+  "stage": "completed_passive_parent_handoff",
+  "old_pipeline_pid": 656436,
+  "main_training_pid": 656512,
+  "train_start_events_before": 2,
+  "last_train_step_before": 28065,
+  "trainer_process_start_tick": "783674341",
+  "training_lock_held": true,
+  "source_plan": "/home/whs/ocoo-t/logs/workflow_upgrade_20261120/plan.json",
+  "new_pipeline_pid": 961459,
+  "new_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/main_selected.yaml"
+  ],
+  "completed_at": "2026-11-20T06:13:57+08:00",
+  "new_pipeline_state": {
+    "time": "2026-11-20T06:13:57+08:00",
+    "pid": 961459,
+    "stage": "training",
+    "config": "/home/whs/ocoo-t/configs/main_selected.yaml",
+    "attached_existing_training": true
+  },
+  "trainer_pid_and_start_identity_unchanged": true,
+  "no_new_training_start_event": true,
+  "main_config_sha256_unchanged": true
+}

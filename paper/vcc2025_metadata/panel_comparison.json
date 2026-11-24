@@ -1,0 +1,34 @@
+{
+  "vcc2025_genes": 18080,
+  "gene_csv_has_header": false,
+  "declared_perturbed_populations": {
+    "train": {
+      "perturbations": 150,
+      "perturbed_cells": 183097
+    },
+    "validation": {
+      "perturbations": 50,
+      "perturbed_cells": 60751
+    },
+    "test": {
+      "perturbations": 100,
+      "perturbed_cells": 132670
+    }
+  },
+  "current_replogle_populations": {
+    "train": {
+      "perturbations": 2013,
+      "cells": 572545
+    },
+    "validation": {
+      "perturbations": 60,
+      "cells": 4825
+    },
+    "test": {
+      "perturbations": 380,
+      "cells": 26878
+    }
+  },
+  "exact_symbol_overlap_with_replogle_hvg": 1865,
+  "note": "Metadata audit only. No VCC expression matrices downloaded; CSV perturbation counts exclude controls. Gene overlap is by exact original symbol, without alias correction."
+}

@@ -1,0 +1,519 @@
+--- v1
+
++++ v2
+
+@@ -1,14 +1,17 @@
+
+ OCOO-T : A Simple and Scalable Virtual Cell Model for
+ Transcriptional Perturbation Response Prediction
+ Danning Jiang1
++Zhiwen Yan1
++Qirun Wang1
+ Zheming An1
+ Yalong Zhao1,∗
+ Lipeng Lai1,2,∗*
+ 1INFevo
+ 2XtalPi
+ danning.jiang@infevo.ai
+-zheming.an@infevo.ai
+-yalong.zhao@infevo.ai
++zhiwen.yan@infevo.ai
++qirun.wang@infevo.ai
++zheming.an@infevo.ai yalong.zhao@infevo.ai
+ lipeng.lai@infevo.ai, lipeng.lai@xtalpi.com
+ Abstract
+ Predicting single-cell transcriptional responses to genetic, chemical and cytokine perturbations is
+@@ -38,13 +41,13 @@
+
+ tally profiling every perturbation-context combination remains infeasible. Accurate computational prediction
+ of perturbation responses is therefore critical for prioritizing candidate interventions, understanding gene
+ regulatory mechanisms, and enabling scalable in-silico cellular simulation.
+-Earlier efforts to model transcriptional perturbation responses drew on the success of pre-trained language
+-models. scGPT [1] pre-trains a generative Transformer on over 33 million human cells with a novel
+ *Corresponding authors: Yalong Zhao and Lipeng Lai. On behalf of the Infevo AI team.
+ 1OCOO is a model series developed by Infinite Evolution Technology Co., Ltd.
+ 1
+-arXiv:2606.12838v1 [q-bio.QM] 11 Jun 2026
+-
++arXiv:2606.12838v2 [q-bio.QM] 14 Aug 2026
++
++Earlier efforts to model transcriptional perturbation responses drew on the success of pre-trained language
++models. scGPT [1] pre-trains a generative Transformer on over 33 million human cells with a novel
+ autoregressive gene-masking scheme, demonstrating strong transfer learning across diverse single-cell tasks.
+ However, because single-cell RNA sequencing is destructive, true cell-level correspondences before and after
+ perturbation are fundamentally unobservable. Perturbation response prediction is therefore an inherently
+@@ -84,13 +87,13 @@
+
+ target distribution. This further supports the central design principle of OCOO-T: effective perturbation
+ response modeling can be achieved without complex auxiliary distribution-alignment modules.
+ 2
++
++2
+ Related Work
+ 2.1
+ Deep Learning for Single-Cell Perturbation Prediction
+ Predicting the transcriptional responses of single cells to genetic and chemical perturbations is a fundamental
+ challenge in computational biology. Early computational approaches heavily relied on linear models or
+-2
+-
+ shallow architectures, which struggled to capture the highly non-linear and context-dependent gene regulatory
+ dynamics. The advent of deep generative models led to a paradigm shift. scGen [14] first leveraged variational
+ autoencoders (VAEs) to predict single-cell gene expression under perturbations by performing latent space
+@@ -129,14 +132,14 @@
+
+ stochastic trajectories of cellular transitions under perturbations. CellFlow [6] utilizes conditional flow
+ matching to map continuous cellular state transitions through time and space. Squidiff [5] integrates a VAE
+ encoder with a conditional DDIM decoder, compressing cellular expression profiles into a semantic latent
++3
++
+ variable and a stochastic subcode to generate perturbed transcriptomes via conditional diffusion. Similarly,
+ scPPDM [7] performs continuous-time diffusion entirely within a VAE-derived latent space augmented with
+ temporal embeddings.
+ To more directly address the distributional fitting problem from unpaired data, PerturbDiff [9] treats the
+ perturbed cell population itself as a distribution-valued random variable. By embedding empirical cell popula-
+ tions as points in a reproducing kernel Hilbert space (RKHS) via kernel mean embeddings, PerturbDiff defines
+-3
+-
+ a DDPM-style diffusion process directly over these RKHS embeddings. This allows the model to capture a
+ manifold of plausible response distributions induced by unobserved latent factors (e.g., microenvironmental
+ fluctuations and batch effects) rather than collapsing to a single expected response.
+@@ -175,14 +178,14 @@
+
+ this sparsity-exploiting design introduces systematic information loss: by excluding zero-expressed and
+ low-abundance genes from the encoder’s attention computation, scFoundation’s cell-state representations are
+ constructed solely from highly expressed genes. Low-expression genes, including many transcription factors,
++4
++
+ signaling receptors, and cell-type-specific markers that are expressed at low but functionally critical levels,
+ are entirely absent from the encoder’s contextual modeling.
+ scLong [21] provides a more direct algorithmic solution to the long-sequence problem. To make it feasible
+ to compute self-attention across all 28,000 genes in the human genome, scLong replaces standard softmax
+ attention with Performer, a linear-complexity attention mechanism based on random feature approximations
+ of the softmax kernel, reducing the attention cost from O(N2) to O(N). Furthermore, scLong introduces
+-4
+-
+ a hierarchical dual-encoder design: high-expression genes—which carry core biological information—are
+ processed by a larger Performer encoder with more layers and parameters, while low-expression genes are
+ handled by a lightweight mini-Performer encoder; the outputs of both are then fused by a final full-length
+@@ -222,14 +225,14 @@
+
+ problem. Let x ∈RG denote the target gene expression profile of a perturbed cell, where G is the number of
+ selected genes. The generation process is conditioned on the perturbation identity p, the cell-line context l,
+ and an optional batch factor b.
++5
++
+ Instead of employing traditional diffusion models governed by stochastic differential equations, OCOO-T
+ adopts the Rectified Flow framework to construct a deterministic probability path. During training, we define
+ a linear interpolation between pure Gaussian noise ϵ ∼N(0, σ2
+ ϵ I) and the target perturbation response x:
+ zt = t · x + (1 −t) · ϵ,
+ (2)
+-5
+-
+ where t ∈[0, 1] is sampled from a logit-normal distribution, i.e. logit(t) ∼N(µ, σ2
+ t ), with µ = −0.8 by
+ default. The ground-truth velocity field of this linear trajectory is constant with respect to t:
+@@ -268,14 +271,6 @@
+
+ (6)
+ At inference time, the predicted velocity field is integrated via an ODE solver (Euler or Heun, 50 steps by
+ default) to generate the perturbed expression profile ˆx from pure noise.
+-3.3
+-Transformer Denoising Network
+-The core of OCOO-T is a plain Transformer, which is highly scalable and handles high-dimensional gene
+-expression vectors efficiently. Figure 1 shows the network architecture.
+-A set of general-purpose Transformer improvements that were originally developed for large language models
+-(LLM) are incorporated. This design philosophy ensures that the architecture remains task-agnostic and can
+-benefit from future advances in the broader Transformer literature.
+-The specific improvements adopted are as follows:
+ 6
+ 
+ ...
+@@ -324,6 +319,14 @@
+
+ encoding
+ Figure 1: Overview of OCOO-T . A continuous expression profile is denoised by Transformer blocks conditioned on
+ perturbation identity and cellular context.
++3.3
++Transformer Denoising Network
++The core of OCOO-T is a plain Transformer, which is highly scalable and handles high-dimensional gene
++expression vectors efficiently. Figure 1 shows the network architecture.
++A set of general-purpose Transformer improvements that were originally developed for large language models
++(LLM) are incorporated. This design philosophy ensures that the architecture remains task-agnostic and can
++benefit from future advances in the broader Transformer literature.
++The specific improvements adopted are as follows:
+ • SwiGLU FFN. OCOO-T replaces the standard ReLU feed-forward network with a SwiGLU feed-forward
+ layer. The gated activation SiLU(W1x) ⊙W2x improves the expressivity of the Transformer block while
+ preserving a simple and scalable architecture.
+@@ -341,6 +344,8 @@
+
+ artificial quantization boundaries.
+ Gene Identity Embedding. To inject biological semantics, each gene is assigned a pre-trained identity
+ embedding. We utilize frozen representations extracted from pretrained large-scale protein language models
++7
++
+ (e.g., ESM2). These 5120-dimensional embeddings are linearly projected to the hidden dimension D and
+ added to the expression tokens as semantic priors:
+ hgene = Wgene · ESM2(gene indices) ∈RG×D,
+@@ -349,8 +354,6 @@
+
+ xin = hexpr + hgene,
+ (9)
+ The resulting xin serves as the main token sequence input to the Transformer.
+-7
+-
+ In-Context Condition Tokens. To further strengthen the conditioning, especially for complex dual-condition
+ scenarios (e.g., a specific perturbation in a specific cell line), OCOO-T prepends a sequence of learnable ”in-
+ context tokens” to the gene token sequence at a designated intermediate layer. These tokens explicitly carry
+@@ -383,43 +386,43 @@
+
+ timestep interval [tmin, tmax] to avoid over-guidance at extreme noise levels. In addition, two exponential
+ moving average (EMA) copies of the model weights, with decay rates 0.9999 and 0.9996, are maintained
+ throughout training, and the EMA model is used exclusively for inference.
++8
++
+ 3.4
+ Condition Representation and Injection
++Linear
++...
++...
++zt∈RG
++Expression
++encoder
++...
++g∈RG
++Gene
++encoder
++...
++⊕
++Expression
++encoder
++...
++xc∈RG
++...
++⊕
++...
++...
++Concatenate
++...
++Conditions
++Model blocks
++...
++v∈RG
++Figure 2: Control cells (xc) are injected along with the input for perturbation prediction.
+ Figure 1 illustrates the default condition-representation setup in OCOO-T, where perturbation identity,
+ cell-line or cell-type identity, and batch information are encoded as label-derived embedding vectors.
+ For perturbation conditioning, we use modality-specific representations:
+ • Chemical perturbations in the Tahoe100M benchmark are represented by molecular fingerprints. Dosage
+ is encoded with a continuous value encoder, and the resulting dosage vector is added to the molecular
+ representation to capture dose-dependent chemical effects.
+-8
+-
+-Linear
+-...
+-...
+-zt∈RG
+-Expression
+-encoder
+-...
+-g∈RG
+-Gene
+-encoder
+-...
+-⊕
+-Expression
+-encoder
+-...
+-xc∈RG
+-...
+-⊕
+-...
+-...
+-Concatenate
+-...
+-Conditions
+-Model blocks
+-...
+-v∈RG
+-Figure 2: Control cells (xc) are injected along with the input for perturbation prediction.
+ • Genetic perturbations in the Replogle-Nadig benchmark share the same embedding space as gene tokens;
+ in our experiments, these gene embeddings are initialized from ESM2 representations.
+ • Cytokine stimulations in the PBMC benchmark are represented using ESM2 protein embeddings. For
+@@ -440,6 +443,8 @@
+
+ xin(xc) = hexpr(xc) + hgene.
+ (13)
+ Finally xin(zt) and xin(xc) are concatenated and projected to the original feature dimension:
++9
++
+ xproj = MLPout
+  Concat
+  xin(zt), xin(xc)
+@@ -453,8 +458,6 @@
+
+ or cell type, and batch. Under this setting, the cellular context condition no longer corresponds to a single
+ cell; instead, it summarizes the distributional characteristics of a group of cells and provides population-level
+ context for predicting the corresponding perturbed distribution.
+-9
+-
+ 3.5
+ Scaling to Long Transcriptional Profiles
+ ...
+@@ -496,6 +499,8 @@
+
+ on 18,080-gene profiles from AIVC [23]; to make the patching/depatching experiments directly comparable
+ with the other experimental setups, we report all benchmark metrics on the same 2,000 HVGs used elsewhere
+ in the study.
++10
++
+ 4
+ Experiment
+ 4.1
+@@ -505,11 +510,6 @@
+
+ evaluated on 2,000 highly variable genes (HVGs) except the experiments for long transcriptomic profiles,
+ and their preprocessing and train/validation/test splits follow the STATE protocol to enable fair comparison
+ across methods [2, 9]. Details are listed in Table 1.
+-Tahoe100M. Tahoe100M is a large-scale chemical perturbation atlas containing over 100 million single-cell
+-expression profiles from 50 human cancer cell lines exposed to more than 1,100 small-molecule drug and
+-dosage combinations [12]. As summarized in Table 1, the benchmark contains 89,495,239 training cells
+-10
+-
+ Table 1: Updated summary of benchmark dataset sizes (validated from raw h5ad files).
+ Benchmark
+ Perturbation
+@@ -563,6 +563,9 @@
+
+ 629,701 cells
+ 18 cell-types
+ 12 donors
++Tahoe100M. Tahoe100M is a large-scale chemical perturbation atlas containing over 100 million single-cell
++expression profiles from 50 human cancer cell lines exposed to more than 1,100 small-molecule drug and
++dosage combinations [12]. As summarized in Table 1, the benchmark contains 89,495,239 training cells
+ across 1,137 perturbations and 50 cell lines, 553,076 validation cells across 54 perturbations and 5 cell lines,
+ 8,270,319 test cells across 735 perturbations and 5 cell lines, and 2,330,156 control cells from 50 cell lines.
+ Overall, the dataset covers 1,137 perturbation conditions, 50 cell lines, and 14 experimental batches.
+@@ -583,6 +586,8 @@
+
+ induce pronounced transcriptional responses, including the upregulation of more than 50 genes. Owing to
+ its scale, perturbation diversity, donor diversity, and strong cytokine-induced expression changes, PBMC
+ provides a challenging benchmark for evaluating whether models can capture immune signaling responses in
++11
++
+ primary cells.
+ For preprocessing, per-cell library-size normalization and a log1p transformation are applied for all datasets.
+ Specially for Replogle, perturbations and cells are filtered by on-target knockdown efficacy to retain samples
+@@ -593,8 +598,6 @@
+
+ Replogle, and PBMC benchmarks. We evaluate each method using expression-level metrics, including
+ PDCorr, perturbation discrimination scores (PDS), MSE, and MAE, together with differential-expression
+ metrics, including DEOver, DEPrec, and DirAgr. Note that absolute reconstruction errors (MSE and MAE)
+-11
+-
+ are omitted from the radar charts due to scaling differences. Detailed quantitative results are deferred to
+ Tables 2–4. All metrics are computed via the STATE cell-eval toolkit [26], with detailed definitions and
+ computation procedures provided in Appendix B. We compare OCOO-T against a broad range of strong
+@@ -655,6 +658,8 @@
+
+ • Squidiff is a diffusion-based perturbation predictor [5].
+ • Mean predicts by assigning the average observed perturbed profile, and the three mean variants aggregate
+ this average overall, per cell type, or per batch [28].
++12
++
+ The above list includes both state-of-the-art and simple systems. Simple methods such as Linear and Mean
+ sometimes perform surprisingly well, helping indicate what the true baseline should be.
+ On Tahoe100M, OCOO-T achieves the strongest overall performance across all evaluated methods, obtaining
+@@ -666,8 +671,6 @@
+
+ The Linear baseline remains competitive on reconstruction error among the non-OCOO-T baselines (MSE
+ = 4.15 × 10−4, MAE = 0.009) and attains DirAgr = 0.760. The Tahoe100M results overall show OCOO-T
+ as the dominant method and the two PerturbDiff variants as trading off discrimination and DE recovery.
+-12
+-
+ On Replogle, OCOO-T again leads most metrics, with the best PDCorr (0.437), all three PDS scores (PDS L1
+ = 0.820, PDS L2 = 0.853, PDS cos = 0.833), and the strongest DE recovery scores (DEOver = 0.232,
+ DEPrec = 0.240). STATE is nevertheless competitive: it closely matches OCOO-T on PDCorr (0.437 vs.
+@@ -815,6 +818,12 @@
+
+ 0.501
+ 3.06e-3
+ 0.026
++4.3
++Long Transcriptomic Profile Generation Results
++We next evaluate whether the proposed patching/depatching strategy enables OCOO-T to scale from the
++standard 2,000-HVG setting to long transcriptomic profiles on Replogle-Nadig benchmark. Specifically,
++13
++
+ Table 3: Replogle-Nadig benchmark results.
+ Model
+ PDCorr↑
+@@ -946,8 +955,6 @@
+
+ 0.501
+ 7.11e-2
+ 0.175
+-13
+-
+ Table 4: PBMC benchmark results.
+ Model
+ PDCorr↑
+@@ -1079,10 +1086,6 @@
+
+ 0.508
+ 1.01e-3
+ 0.013
+-4.3
+-Long Transcriptomic Profile Generation Results
+-We next evaluate whether the proposed patching/depatching strategy enables OCOO-T to scale from the
+-standard 2,000-HVG setting to long transcriptomic profiles on Replogle-Nadig benchmark. Specifically,
+ we train and evaluate OCOO-T on 18,080-gene inputs using patch sizes of 8, 16, and 32, while reporting
+ metrics on the same 2,000 HVGs used in the short-panel benchmark for direct comparability. As shown in
+ Table 5, the patched models retain performance close to the short-panel model across perturbation-effect and
+@@ -1099,6 +1102,8 @@
+
+ transcriptomic vectors are sparse, heavy-tailed, biologically heterogeneous, and not organized on a spatially
+ local grid; consequently, the advantage of x-prediction observed for image manifolds does not directly transfer
+ to transcriptomic perturbation modeling.
++14
++
+ Table 5: Replogle-Nadig evaluation results for different patch sizes.
+ Model
+ PDCorr↑
+@@ -1180,7 +1185,41 @@
+
+ 0.800
+ 1.04e-2
+ 0.072
+-14
++4.4
++Cellular Context Conditioning: Covariate Embeddings vs. Mean Control-Cell Profiles
++Cellular context is a central conditioning signal for perturbation response prediction, because the same
++perturbation can induce substantially different transcriptional effects across cell lines, cell types, donors,
++and experimental batches. A simple and scalable strategy is to represent this context with learned covariate
++embeddings, such as cell-line or cell-type embeddings, and inject them into the denoising network together
++with perturbation and dosage conditions. This design is parameter-efficient and naturally supports in-silico
++generation once the relevant categorical covariates are known.
++However, learned categorical embeddings are tied to the cellular contexts observed during training and
++therefore cannot directly represent new cell lines or cell types encountered at application time. On the
++Replogle-Nadig benchmark, we therefore compare this embedding-based conditioning strategy with a
++population-level alternative that uses the mean profile of a set of control cells as the cellular context condition,
++as described in Section 3.4.
++Figure 6 shows that using mean control-cell profiles as cellular context (S2-S7) can produce reasonably
++strong perturbation-response predictions across a range of control set sizes. This supports the motivation for
++population-level control-cell conditioning: even without a learned cell-line embedding, the averaged control
++profile carries substantial information about the basal cellular state and can guide the denoising model toward
++the appropriate perturbed distribution. Appendix C provides a more detailed analysis of MMD regularization
++during optimization, showing that adding MMD does not consistently yield further improvements.
++At the same time, the cell-line embedding setup (S1) achieves stronger performance on DE-related and
++PDS metrics, indicating that learned categorical context remains effective when the target cell line has been
++observed during training. Overall, these results suggest a trade-off between applicability and peak benchmark
++performance: mean control-cell profile conditioning offers a practical route for representing unseen or fine-
++grained cellular contexts, whereas learned cell-line embeddings can provide stronger perturbation-specific
++discrimination and differential-expression recovery in seen contexts.
++5
++Discussion and Conclusion
++This work introduces OCOO-T , a simple and scalable virtual cell model for transcriptional perturbation
++response prediction. Rather than relying on auxiliary autoencoders, specialized encoder-decoder architectures,
++or explicit distribution-matching modules, OCOO-T formulates perturbation response prediction as condi-
++tional continuous-time denoising directly in the original gene-expression space. At the architectural level,
++OCOO-T is built on a plain Transformer backbone: patched continuous expression profiles are processed
++by standard self-attention and feed-forward blocks, while perturbation identity, dosage, time, and cellular
++context are injected through lightweight conditioning mechanisms. Across chemical perturbation, genetic
++15
+ 
+ 20
+ 40
+@@ -1277,46 +1316,6 @@
+
+ xpred, p32
+ Figure 5: Comparison of the benchmark results between v-prediction and x-prediction under different patch sizes.
+ vpred/xpred, v/x-prediction; p8/16/32, patch size 8/16/32.
+-4.4
+-Cellular Context Conditioning: Covariate Embeddings vs. Mean Control-Cell Profiles
+-Cellular context is a central conditioning signal for perturbation response prediction, because the same
+-perturbation can induce substantially different transcriptional effects across cell lines, cell types, donors,
+-and experimental batches. A simple and scalable strategy is to represent this context with learned covariate
+-embeddings, such as cell-line or cell-type embeddings, and inject them into the denoising network together
+-with perturbation and dosage conditions. This design is parameter-efficient and naturally supports in-silico
+-generation once the relevant categorical covariates are known.
+-However, learned categorical embeddings are tied to the cellular contexts observed during training and
+-therefore cannot directly represent new cell lines or cell types encountered at application time. On the
+-Replogle-Nadig benchmark, we therefore compare this embedding-based conditioning strategy with a
+-15
+-
+-population-level alternative that uses the mean profile of a set of control cells as the cellular context condition,
+-as described in Section 3.4.
+-Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line
+-embeddings; S2–S7: mean control-cell profiles with set sizes 1, 4, 8, 16, 32, and 64, respectively.
+-Figure 6 shows that using mean control-cell profiles as cellular context (S2-S7) can produce reasonably
+-strong perturbation-response predictions across a range of control set sizes. This supports the motivation for
+-population-level control-cell conditioning: even without a learned cell-line embedding, the averaged control
+-profile carries substantial information about the basal cellular state and can guide the denoising model toward
+-the appropriate perturbed distribution. Appendix C provides a more detailed analysis of MMD regularization
+-during optimization, showing that adding MMD does not consistently yield further improvements.
+-At the same time, the cell-line embedding setup (S1) achieves stronger performance on DE-related and
+-PDS metrics, indicating that learned categorical context remains effective when the target cell line has been
+-observed during training. Overall, these results suggest a trade-off between applicability and peak benchmark
+-16
+-
+-performance: mean control-cell profile conditioning offers a practical route for representing unseen or fine-
+-grained cellular contexts, whereas learned cell-line embeddings can provide stronger perturbation-specific
+-discrimination and differential-expression recovery in seen contexts.
+-5
+-Discussion and Conclusion
+-This work introduces OCOO-T , a simple and scalable virtual cell model for transcriptional perturbation
+-response prediction. Rather than relying on auxiliary autoencoders, specialized encoder-decoder architectures,
+-or explicit distribution-matching modules, OCOO-T formulates perturbation response prediction as condi-
+-tional continuous-time denoising directly in the original gene-expression space. At the architectural level,
+-OCOO-T is built on a plain Transformer backbone: patched continuous expression profiles are processed
+-by standard self-attention and feed-forward blocks, while perturbation identity, dosage, time, and cellular
+-context are injected through lightweight conditioning mechanisms. Across chemical perturbation, genetic
+ perturbation, and cytokine stimulation benchmarks, this minimalist Transformer design achieves strong
+ performance on expression-level reconstruction, perturbation-discrimination, and differential-expression
+ metrics.
+@@ -1328,6 +1327,10 @@
+
+ gene-level outputs. These results suggest that the proposed virtual cell model does not necessarily require
+ increasingly complex auxiliary modules; instead, strong generative performance can emerge from a compact
+ denoising backbone with biologically meaningful conditioning.
++16
++
++Figure 6: Comparisons of different cellular context injection methods on Raplogle-Nadig benchmark. S1: cell-line
++embeddings; S2–S7: mean control-cell profiles with set sizes 1, 4, 8, 16, 32, and 64, respectively.
+ Although promising results have been observed, important gaps remain between current virtual cell bench-
+ marks and real-world biological applications. In particular, although the Cell Eval toolkit provides a useful
+ and increasingly standardized evaluation interface, existing metrics may still introduce biases and may not
+@@ -1339,13 +1342,13 @@
+
+ models can generalize across unseen interventions, cellular contexts, laboratories, and experimental proto-
+ cols. Addressing these challenges will be essential for turning virtual cell models from accurate benchmark
+ predictors into reliable tools for biological discovery.
++17
++
+ References
+ [1] Haotian Cui et al. scGPT: toward building a foundation model for single-cell multi-omics using
+ generative AI. Nature Methods, 21(8):1470–1480, 2024. doi:10.1038/s41592-024-02201-0.
+ [2] Anish K. Adduri et al. Predicting cellular responses to perturbation across diverse contexts with State.
+ bioRxiv, 2025. doi:10.1101/2025.06.26.661135.
+-17
+-
+ [3] Jonathan Ho, Ajay Jain, and Pieter Abbeel. Denoising Diffusion Probabilistic Models. In Advances in
+ Neural Information Processing Systems (NeurIPS), 2020.
+ [4] Yaron Lipman, Ricky T. Q. Chen, Heli Ben-Hamu, Maximilian Nickel, and Matt Le. Flow Matching
+@@ -1378,13 +1381,13 @@
+
+ [17] Yusuf H. Roohani, Kexin Huang, and Jure Leskovec. Predicting transcriptional outcomes of novel
+ multigene perturbations with GEARS. Nature Biotechnology, 42:927–935, 2024. doi:10.1038/s41587-
+ 023-01905-6.
++18
++
+ [18] Minsheng Hao et al. Large-scale foundation model on single-cell transcriptomics. Nature Methods,
+ 21(8):1481–1491, 2024. doi:10.1038/s41592-024-02305-7.
+ [19] Chloe Wang, Mehran Karimzadeh, Neal G. Ravindra, Lexi R. Bounds, et al. X-Cell: Scaling Causal
+ Perturbation Prediction Across Diverse Cellular Contexts via Diffusion Language Models. bioRxiv,
+ 2026. doi:10.64898/2026.03.18.712807.
+-18
+-
+ [20] Jonathan M. Mudge et al. GENCODE 2025: reference gene annotation for human and mouse. Nucleic
+ Acids Research, 53(D1):D966–D975, 2025.
+ [21] Ding Bai et al. scLong: a billion-parameter foundation model for capturing long-range gene context in

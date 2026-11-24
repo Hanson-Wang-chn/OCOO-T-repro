@@ -1,0 +1,12 @@
+{
+  "cases": [
+    "ema_none",
+    "ema_cfg_0p6666666667",
+    "ema_cfg_1",
+    "ema_cfg_1p5",
+    "ema_cfg_2"
+  ],
+  "perturbations": 60,
+  "output": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_merge_cache_check/paired_differences.json"
+}
+{"outdir": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_merge_cache_check", "cases": ["ema_none", "ema_cfg_0p6666666667", "ema_cfg_1", "ema_cfg_1p5", "ema_cfg_2"], "new_generated_cells": 0}

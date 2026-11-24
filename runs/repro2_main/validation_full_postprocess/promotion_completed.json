@@ -1,0 +1,49 @@
+{
+  "time": "2026-11-24T21:56:58+08:00",
+  "source": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+  "cells": 4825,
+  "new_generated_samples": 0,
+  "gpu_used": false,
+  "test_access": false,
+  "raw_samples_retained_bitwise": true,
+  "all9_metrics_recomputed_and_agree_atol": 1e-10,
+  "metrics": {
+    "PDCorr": 0.3738548585679382,
+    "MSE": 0.01146308557751278,
+    "MAE": 0.06897375428428253,
+    "PDS_L1": 0.8038888888888888,
+    "PDS_L2": 0.8133333333333336,
+    "PDS_cos": 0.8180555555555556,
+    "DEOver": 0.19884692456764327,
+    "DEPrec": 0.17333844775021262,
+    "DirAgr": 0.7981793494318202
+  },
+  "protocol": {
+    "selected_sha256": "5a864f552a3f7ee34d118598a9ce2c165502ebcdcdece6f2695c115d2248a32d",
+    "calibration_config_sha256": "74a042eba79c93ad1ba62fba94548929c392f87f685587f83dcec2dc459447ba",
+    "source": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+    "source_files_sha256": {
+      "prediction.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "4074e7f004bbfa21846e83833add3407ac83fbd422e46ccc606422833c6c8ae1"
+    },
+    "checkpoint_sha256": "88180a502e5b08d6ba1d6ba2a03caeb7081fff82d216f5ac6c9d00d012b92d09",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "script_sha256": "9e465ed9e321468c34b686282b07c0292ab6d9c4f83fb2aba3f5d6344f90ef3d",
+    "zero_floor": 0.05,
+    "postprocess_review_sha256": "2351ec7267a9c5eb5e895996e960bbe7cbc5625e2eac1f26d5e7b444669dc90c"
+  },
+  "output_sha256": {
+    "prediction_raw.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+    "prediction.npy": "a42054ed5ab2d49ab475fc24f9eaa2ce5e216db0dd00f6c0a5a4801a9a638b95",
+    "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "generation_state.json": "c9e348ae4305270b5ddf06b676aecd02af1d1c9cc0b2ce0921672c8c184a5d77",
+    "evaluation_config.json": "45417560076efe642d2776bf4e3307a5ecc034b3a5ee4141f966b4fd99eb8993",
+    "metrics/summary.json": "d4948ca2419c5186dd46bcc3ed5599c81a03ce6dd2b9af0155905f39e7fdcf62",
+    "metrics/results.csv": "a1d7fd6af8db277fbb78fd260ab6c5ccd0017dea15c8e790c00e13964f48ab8a"
+  }
+}

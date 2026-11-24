@@ -1,0 +1,72 @@
+{
+  "time": "2026-11-21T13:07:30+08:00",
+  "status": "jointly_reviewed_continue_main_and_calibrate_frozen_epoch35_validation",
+  "reference_epoch": 30,
+  "candidate_epoch": 35,
+  "ordinary_primary_difference": {
+    "value": 0.009552101189415074,
+    "ci95": [
+      -0.010146107371788452,
+      0.032353939150775404
+    ]
+  },
+  "fixed_cfg_primary_difference": {
+    "value": 0.011156461291118802,
+    "ci95": [
+      -0.007622752507402796,
+      0.031300992555877226
+    ]
+  },
+  "fixed_cfg_error_cost": {
+    "MSE": {
+      "metric": "MSE",
+      "reference": 0.022058012646933352,
+      "candidate": 0.023117763626699595,
+      "difference": 0.001059750979766242,
+      "ci95": [
+        0.00023796854851147186,
+        0.002107173500116906
+      ]
+    },
+    "MAE": {
+      "metric": "MAE",
+      "reference": 0.09694590071837102,
+      "candidate": 0.09926172668735184,
+      "difference": 0.0023158259689808197,
+      "ci95": [
+        0.001104398320118606,
+        0.003763188241670533
+      ]
+    }
+  },
+  "interpretation": "Both primary intervals crosszero. Every ordinary metric interval crosseszero. Under fixedw2, MSE/MAE increase with positive intervals; the other seven intervals crosszero. DEPrec point estimate decreases but its interval crosseszero. Do not declare stable overall gain or paper-level performance.",
+  "main_config_changed": false,
+  "training_or_optimizer_changed": false,
+  "checkpoint_override": false,
+  "stopping_policy_changed": false,
+  "current_best_generation_epoch": 35,
+  "current_early_reference_epoch": 35,
+  "earliest_possible_original_early_stop_epoch": 45,
+  "hypothesis_to_test": "A fixedw2 may overguide a more mature conditional field; this is an inference from repeated error costs, not a proven cause. ExistingE20 scale results and E25 full-population0/.05 results motivate the original positiveCFG search with complete validation, rather than assuming longer training fixes the remaining gap.",
+  "next_actions": [
+    "Run the unchanged v2 positiveCFG calibration on immutableE35 defaultEMA, in a separate interim validation directory: original cap16 screening, four scales and best-scale interval comparison, two full4825 refinements, then registered0/.05 CPU feasibility selection with every original threshold.",
+    "Keep original main training, all paper-specified architecture/training/sampler values and stopping rule. No new architecture trial now.",
+    "No test command or final-setting adoption in the intermediate controller. Any future reuse of these caches must verify exact checkpoint and full provenance; the central posttraining workflow is separate.",
+    "Register passiveE40 complete-state preservation and the same matched fixedCFG comparison; the current reference35 makes earliest stopping45."
+  ],
+  "postprocess_selection_adopted": false,
+  "quality_thresholds_relaxed": false,
+  "intermediate_full_validation_calibration_planned": true,
+  "final_posttraining_calibration_started": false,
+  "test_access": false,
+  "uncertainty_scope": "Fixed-library paired perturbation resampling under one matched inference seed. Not independent training-seed or generation-noise uncertainty; DirAgr retains53 finite observations under the official nanmean convention.",
+  "evidence_sha256": {
+    "runs/main_v1/interim_epoch035_fixed_cfg/completed.json": "a821b06229dcb9ff8518cf670b75102b26d5f494ab8f40912075a0a7dd32ca9a",
+    "runs/main_v1/interim_epoch035_fixed_cfg/paired/comparison.json": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+    "runs/main_v1/observation/epoch030_to035/comparison.json": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+    "runs/main_v1/interim_epoch035_fixed_cfg/independent_comparison_verification.json": "00db9db35b19c31b696948f8f5e4473623dd2c1bb670165adb5f095801728e55",
+    "runs/main_v1/interim_epoch035_fixed_cfg/checkpoint_verification.json": "02da6e7503f759a445069f8d71f1dda1b931aa88ee28fa66e0f9359d4fd26356",
+    "runs/main_v1/interim_epoch035_fixed_cfg/joint_review/figure_provenance.json": "b6226a6734541105321f398be0d6ffe28e2e16fbfb3813412db1499abd7fbfce",
+    "logs/epoch035_periodic_selection_metadata.json": "4f630e649bc17bad2518259cca2235ec2774d85238875dcd1744d21cc31882c3"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "pid": 992514,
+  "script": "logs/follow_mature_batch_dropout_analysis.py",
+  "controller_pid": 979902,
+  "cpu_only": true
+}

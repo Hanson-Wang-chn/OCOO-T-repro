@@ -1,0 +1,116 @@
+{
+  "time": "2026-11-21T21:47:14+08:00",
+  "scope": "Early single-candidate complete validation diagnostic only",
+  "cells": 4825,
+  "conditions": 60,
+  "guidance": 2.0,
+  "cfg_min": 0.0,
+  "cfg_max": 1.0,
+  "baseline_floor0": {
+    "metrics": {
+      "PDCorr": 0.36139087307577333,
+      "MSE": 0.018197357802030942,
+      "MAE": 0.08195292359838884,
+      "PDS_L1": 0.8000000000000002,
+      "PDS_L2": 0.8125,
+      "PDS_cos": 0.8505555555555556,
+      "DEOver": 0.17702016847706575,
+      "DEPrec": 0.10120331530343506,
+      "DirAgr": 0.7931048160529413
+    },
+    "primary": 1.182409391594292,
+    "checks": {
+      "PDCorr": true,
+      "mean_PDS": true,
+      "MSE": true,
+      "MAE": true,
+      "DEOver": false,
+      "DEPrec": false,
+      "DirAgr": true,
+      "PDS_L1": true,
+      "PDS_L2": true,
+      "PDS_cos": true
+    }
+  },
+  "diagnostic_floor0p05": {
+    "metrics": {
+      "PDCorr": 0.3591260223183781,
+      "MSE": 0.0182232666372632,
+      "MAE": 0.08213744219392538,
+      "PDS_L1": 0.8022222222222223,
+      "PDS_L2": 0.8119444444444445,
+      "PDS_cos": 0.8497222222222223,
+      "DEOver": 0.1962686888538067,
+      "DEPrec": 0.15419366377567606,
+      "DirAgr": 0.795140792634802
+    },
+    "primary": 1.1804223186146743,
+    "checks": {
+      "PDCorr": true,
+      "mean_PDS": true,
+      "MSE": true,
+      "MAE": true,
+      "DEOver": true,
+      "DEPrec": false,
+      "DirAgr": true,
+      "PDS_L1": true,
+      "PDS_L2": true,
+      "PDS_cos": true
+    }
+  },
+  "raw_negative_fraction": 0.16507533678756478,
+  "zero_fraction_floor0": 0.16507533678756478,
+  "zero_fraction_floor0p05": 0.534358860103627,
+  "full_four_candidate_review_still_required": true,
+  "zero_floor_unreported_by_paper": true,
+  "final_protocol_adopted": false,
+  "training_or_original_calibration_changed": false,
+  "new_generated_samples": 0,
+  "test_access": false,
+  "protocol": {
+    "plan_sha256": "cf687408640714b115633db628fc202d9f2807eed2ce11fa1d48101412f5a1a2",
+    "calibration_config_sha256": "eb6d8259fc50a5874f95dd6de96aace7163542868c6f6a352170f6aab124b481",
+    "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+    "data_expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+    "complete_refinement_record": {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.36139087307577333,
+        "MSE": 0.018197357802030942,
+        "MAE": 0.08195292359838884,
+        "PDS_L1": 0.8000000000000002,
+        "PDS_L2": 0.8125,
+        "PDS_cos": 0.8505555555555556,
+        "DEOver": 0.17702016847706575,
+        "DEPrec": 0.10120331530343506,
+        "DirAgr": 0.7931048160529413
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3608543042248736,
+        "MSE": 0.018254958442412317,
+        "MAE": 0.08213135047505299,
+        "PDS_L1": 0.801388888888889,
+        "PDS_L2": 0.8125,
+        "PDS_cos": 0.8505555555555556
+      },
+      "score": 1.182409391594292,
+      "cache_provenance": {
+        "directory": "/home/whs/ocoo-t/runs/main_v1/interim_epoch035_calibration/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "08545388c23318af2a272d0894358a176b0a2f5b0dd0d3435425c27391a8a413",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+        }
+      }
+    },
+    "zero_floor": 0.05,
+    "independent_of_formal_selector_outputs": true
+  }
+}

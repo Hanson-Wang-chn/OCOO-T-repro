@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-18T07:23:52+08:00",
+  "pid": 759080,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_zero_floor.py",
+    "--generation-dir",
+    "runs/main_v1/validation_epoch_010",
+    "--outdir",
+    "runs/main_v1/interim_epoch010_review/zero_floor"
+  ],
+  "stage": "completed",
+  "completed_time": "2026-11-18T07:24:58+08:00"
+}

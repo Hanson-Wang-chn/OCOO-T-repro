@@ -1,0 +1,197 @@
+{
+  "cases": [
+    "ema_none",
+    "ema_cfg_0p6666666667",
+    "ema_cfg_1",
+    "ema_cfg_1p5",
+    "ema_cfg_2"
+  ],
+  "perturbations": 60,
+  "output": "runs/main_v1/interim_epoch020_review/paired_differences.json"
+}
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "ema_none": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_none",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0005179513305254415,
+        "jurkat": 0.14352570785982247,
+        "k562": 0.11047310218121334,
+        "rpe1": 0.10896475206879418
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.11865500533700697,
+        "clipped": 0.11720926806348395,
+        "raw_ratio_to_real": 0.9401309998903625,
+        "clipped_ratio_to_real": 0.9286760897104204
+      },
+      "metrics": {
+        "PDCorr": 0.23908504777161094,
+        "MSE": 0.013226490118540823,
+        "MAE": 0.08230679805080096,
+        "PDS_L1": 0.6641666666666667,
+        "PDS_L2": 0.6683333333333333,
+        "PDS_cos": 0.6649999999999999,
+        "DEOver": 0.0674163635034564,
+        "DEPrec": 0.06507034854245497,
+        "DirAgr": 0.6650626099847833
+      }
+    },
+    "ema_cfg_0p6666666667": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0004949555859015062,
+        "jurkat": 0.1431458398906583,
+        "k562": 0.10998969923969122,
+        "rpe1": 0.10857614351126633
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.11913944990927386,
+        "clipped": 0.11770625438534817,
+        "raw_ratio_to_real": 0.9439693660749425,
+        "clipped_ratio_to_real": 0.932613827072439
+      },
+      "metrics": {
+        "PDCorr": 0.24381282872830828,
+        "MSE": 0.012941090972162783,
+        "MAE": 0.08186910847822824,
+        "PDS_L1": 0.6655555555555555,
+        "PDS_L2": 0.673611111111111,
+        "PDS_cos": 0.6680555555555555,
+        "DEOver": 0.0680856663067889,
+        "DEPrec": 0.06551383758776749,
+        "DirAgr": 0.6660919095789687
+      }
+    },
+    "ema_cfg_1": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_cfg_1",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0006563970589645553,
+        "jurkat": 0.14586528175657826,
+        "k562": 0.1126863035498873,
+        "rpe1": 0.11149865843847238
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.1182900647371743,
+        "clipped": 0.11678983578474507,
+        "raw_ratio_to_real": 0.9372394912679759,
+        "clipped_ratio_to_real": 0.925352830936152
+      },
+      "metrics": {
+        "PDCorr": 0.2564945170888677,
+        "MSE": 0.013343920116312802,
+        "MAE": 0.08255706851681073,
+        "PDS_L1": 0.6941666666666667,
+        "PDS_L2": 0.7038888888888889,
+        "PDS_cos": 0.7008333333333335,
+        "DEOver": 0.07895324067252633,
+        "DEPrec": 0.07269659546132178,
+        "DirAgr": 0.6656312578657092
+      }
+    },
+    "ema_cfg_1p5": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0009912387806048537,
+        "jurkat": 0.146842044861575,
+        "k562": 0.11398717211020457,
+        "rpe1": 0.11284029754543008
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12124235314415407,
+        "clipped": 0.11958591572667053,
+        "raw_ratio_to_real": 0.9606311538795571,
+        "clipped_ratio_to_real": 0.947506817816939
+      },
+      "metrics": {
+        "PDCorr": 0.2664875737003361,
+        "MSE": 0.015499623601014416,
+        "MAE": 0.08691490354637305,
+        "PDS_L1": 0.7325,
+        "PDS_L2": 0.7433333333333335,
+        "PDS_cos": 0.7169444444444444,
+        "DEOver": 0.09553901834321403,
+        "DEPrec": 0.08366889091729991,
+        "DirAgr": 0.6778712337883684
+      }
+    },
+    "ema_cfg_2": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_cfg_2",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0016494261791114605,
+        "jurkat": 0.14645154589948817,
+        "k562": 0.11443975025830283,
+        "rpe1": 0.11282786825699324
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12768532292005502,
+        "clipped": 0.12582480239039526,
+        "raw_ratio_to_real": 1.011680290833175,
+        "clipped_ratio_to_real": 0.9969389571583112
+      },
+      "metrics": {
+        "PDCorr": 0.26780689170821764,
+        "MSE": 0.01939240605570376,
+        "MAE": 0.09411315793792406,
+        "PDS_L1": 0.7552777777777778,
+        "PDS_L2": 0.7663888888888889,
+        "PDS_cos": 0.7388888888888889,
+        "DEOver": 0.10897938537034077,
+        "DEPrec": 0.09173765885150176,
+        "DirAgr": 0.672418082273102
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-20T17:32:38+08:00",
+  "pid": 992514,
+  "cpu_only": true,
+  "test_access": false,
+  "stage": "completed_review_required",
+  "differences": {
+    "floor_0": {
+      "value": 0.001651867576961008,
+      "ci95": [
+        -0.004599233070923047,
+        0.00786188186183838
+      ]
+    },
+    "floor_0p05": {
+      "value": 0.002005648298913476,
+      "ci95": [
+        -0.0038164642153662083,
+        0.007953817356020012
+      ]
+    }
+  },
+  "paired_result_sha256": "de8f88a8d14ab65c4f3747f477ecf638e62f72cd22c68e6d7886cc9ca755f98a",
+  "automatic_main_switch": false
+}

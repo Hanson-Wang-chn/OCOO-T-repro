@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-21T00:38:54+08:00",
+  "pid": 1026899,
+  "stage": "completed_review_required",
+  "test_access": false,
+  "training_changed": false,
+  "result": {
+    "time": "2026-11-21T00:38:54+08:00",
+    "stage": "completed_review_required",
+    "plan_sha256": "1a52b452d4ef250858bef3992422fbdae9660c6bf4b11e49d6e11098b287d848",
+    "step": 33540,
+    "fixed_score_difference": {
+      "value": 0.01432304109412219,
+      "ci95": [
+        -0.00579462338871927,
+        0.03644093150327297
+      ]
+    },
+    "periodic_score_difference": {
+      "value": 0.008801953525000017,
+      "ci95": [
+        -0.007994444230293185,
+        0.026531295593955864
+      ]
+    },
+    "fixed_comparison_sha256": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+    "periodic_comparison_sha256": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+    "automatic_checkpoint_or_convergence_change": false,
+    "test_access": false
+  },
+  "cpu_only": true
+}

@@ -1,0 +1,30 @@
+{
+  "time": "2026-11-20T06:13:16+08:00",
+  "status": "deployed_parent_adopted_existing_training",
+  "changes": [
+    "Persist default-EMA and sample-byte provenance in calibration selection; objective/grid/full refinement remain unchanged.",
+    "Promote complete full-validation selected samples after strict source/checkpoint/options/indices/SHA checks, retain independent raw+clamp0 arrays and recompute all9 on CPU with exact metric agreement.",
+    "Updated workflow can wait on an existing training lock, so only its passive parent needs replacement; no duplicate trainer or training interruption."
+  ],
+  "source_sha256": {
+    "scripts/calibrate.py": "b9e3a554a862bfe7cc6dc66c194e76eee71a25b51c5cd5f745d58520a6fbaa47",
+    "scripts/run_experiment.py": "bfd7d8857979c2cf656bc0912b579f61bcfa41c1ff5c5c4f14192557032374f2",
+    "scripts/promote_validation_cache.py": "bf957b57e3335c25837f0a7f096da5687c671bffc005f46ba34082d89f6626b4",
+    "tests/test_calibration_policy.py": "c12cbda29be865a63cc54a104811abac088948ed53239ff4d931bb20ec02c0c5",
+    "tests/test_validation_cache_promotion.py": "d11409962e96bd195d1e07e13ff7d86d598f55b667ab3ede374fdefb7a0610ad",
+    "tests/test_training_adoption.py": "1d570eb5a6db1e251bfdd868f03c92cac89b6611d0fe3ff2e574c053af75363a"
+  },
+  "predecessor_sources": "logs/full_validation_cache_predecessor_sources.json",
+  "source_archive": "logs/workflow_upgrade_20261120/source_snapshot.tar.gz",
+  "source_archive_sha256": "6cbe17e48f590776c89c275b96b6f74e19ad2494e8dac79478d795f9ec7876ff",
+  "validation": "13 CPU tests passed7.59s; real CellEval nine-metric equality, interrupted metric promotion resume, invalid cache refusal, full-population rank reversal, OS-lock process adoption",
+  "test_log": "logs/tests_validation_cache_and_adoption_final.log",
+  "quality_gate_test_report_source_tail_unchanged": true,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_training_pid": 656512,
+  "old_pipeline_pid": 656436,
+  "new_generated_samples_in_promotion": 0,
+  "formal_calibration_or_test_run_yet": false,
+  "handoff": "/home/whs/ocoo-t/logs/workflow_upgrade_20261120/handoff.json",
+  "new_pipeline_pid": 961459
+}

@@ -1,0 +1,7 @@
+EXPECTED REFUSAL: first complete refinement not yet available; no metrics should run.
+Traceback (most recent call last):
+  File "/home/whs/ocoo-t/logs/diagnose_epoch035_first_full_floor.py", line 123, in <module>
+    main()
+  File "/home/whs/ocoo-t/logs/diagnose_epoch035_first_full_floor.py", line 55, in main
+    raise ValueError('Wait for the first complete original full refinement and its official nine metrics')
+ValueError: Wait for the first complete original full refinement and its official nine metrics

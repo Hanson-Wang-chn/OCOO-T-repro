@@ -1,0 +1,16 @@
+{
+  "plan_sha256": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371",
+  "calibration_config_sha256": "55045b962ef23882a3c29830fddb9d427836ddfd7148b89ed539b5860e6342cd",
+  "base_results_sha256": "ef41be490bed91c177f87a8ed0f598cea1d3dcfa49f1a0f76c4b43f444741bb9",
+  "original_selected_sha256": "5f1acf24fb1536d5759ae6badb7d5973c779c876408a217bea5cd73ffcb53a03",
+  "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "data_files_sha256": {
+    "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+    "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "source_sha256": {
+    "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9"
+  }
+}

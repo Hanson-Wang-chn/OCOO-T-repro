@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-20T06:22:59+08:00",
+  "previous_publication_unix": 1795126079.300529,
+  "publication_interval_seconds": 899.9998962879181,
+  "plan_sha256": "a99b31985f9a7d61998dc14af57e56a6b997feb248d222225d8d6f989951424c",
+  "readme_sha256": "4d59611a909a6eba6b4d3d65714a2808e0b34f03d8f389493c5361787bee33bf",
+  "backup": "logs/README_before_workflow_cache_upgrade_20261120.md"
+}

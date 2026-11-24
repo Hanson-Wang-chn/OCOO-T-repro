@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-20T10:31:46+08:00",
+  "pid": 978359,
+  "stage": "completed",
+  "step": 29068,
+  "record": "runs/main_v1/snapshots/step_29068/preserved.json",
+  "training_changed": false
+}

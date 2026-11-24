@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-18T23:38:27+08:00",
+  "controller_pid": 827966,
+  "stage": "completed",
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--trials",
+    "pert_projection_separate",
+    "--comparison-output",
+    "runs/pert_projection_trial_comparison.json",
+    "--de",
+    "--pid-file",
+    "logs/pert_projection_pilot.pid"
+  ],
+  "main_pipeline_pid_unchanged": 656436,
+  "main_training_pid_unchanged": 656512,
+  "free_local_GiB_at_start": 32.71480941772461,
+  "free_gpu_MiB_at_start": 21162,
+  "training_pid": 827967,
+  "pairing_check": "runs/pert_projection_initial_pairing.json",
+  "completion_time": "2026-11-19T01:54:56+08:00",
+  "comparison": "runs/pert_projection_trial_comparison.json",
+  "analysis": "runs/pert_projection_analysis/comparison.json"
+}

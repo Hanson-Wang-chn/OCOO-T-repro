@@ -1,0 +1,87 @@
+{
+  "time": "2026-11-19T03:17:13+08:00",
+  "status": "completed",
+  "question": "Does preserving scalar-input variance at initialization improve v-prediction learning and late-time sparsity at the same full-architecture short budget?",
+  "paper_basis": "Continuous expression encoder is a two-layer MLP; its initialization is not specified. General Xavier initialization is a reproduction choice, not a paper requirement.",
+  "evidence": "runs/value_initialization_audit.json",
+  "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate_run": "runs/pilot_value_fanin",
+  "candidate_config": "configs/pilot_value_fanin.yaml",
+  "candidate_config_sha256": "82e8cf7f9939f4f3af13a3a1c9f96bd6fe79c32d29d040314342f831879692e1",
+  "only_changes": [
+    "run_dir",
+    "model.value_input_init=fan_in"
+  ],
+  "initialization": {
+    "method": "Rescale the original first scalar Linear weight from U[-sqrt(6/(1+768)),sqrt(6/(1+768))] to U[-1,1]; preserve zero bias and every other weight/RNG draw. This matches nn.Linear fan-in weight distribution, not its random bias initialization.",
+    "factor": 11.321071798494463,
+    "why": "Fan-in scaling preserves scalar input variance independently of the expansion width; factor is derived from the distribution, not fitted to validation metrics.",
+    "measured_small_positive_signal_gain": {
+      "xavier_initial": 0.0253849681,
+      "fan_in_initial": 0.2873841226,
+      "mature_ema15": 0.2669608295
+    },
+    "interpretation_limit": "Descriptive gain differences do not establish better generation; test by the preregistered same-budget objective."
+  },
+  "fixed": {
+    "prediction_space": "v",
+    "pert_projection": "shared",
+    "noise_std": 1.0,
+    "time_scale": 1.0,
+    "cell_init_std": 1.0,
+    "depth": 12,
+    "dim": 768,
+    "heads": 12,
+    "train_cells": 16384,
+    "epochs": 12,
+    "updates": 384,
+    "warmup_epochs": 5,
+    "micro_batch": 16,
+    "effective_batch": 512,
+    "seed": 42,
+    "generation_weights": "raw",
+    "generation_steps": 50,
+    "guidance": null,
+    "cap_per_condition": 16,
+    "generation_batch": 32
+  },
+  "initial_function": "With zero output head, initial v functions and first loss match despite the changed value features. Check same indices/noise/source; do not infer learned equivalence from zero-head equality.",
+  "prelaunch_tests": {
+    "file": "logs/tests_value_initialization_compatibility.log",
+    "result": "5 CPU cases passed1.79s: exact legacy defaults, optional projection, x/v conversion loss-gradient and Heun checks, plus single-weight rescaling, unchanged RNG and analytic value-encoder derivative scaling."
+  },
+  "source_sha256": {
+    "src/ocoot/model.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "scripts/run_pilots.py": "65c766a73731123495cfbb8d35aab456f879e227818ce7bdc1302a68c6a4b44a",
+    "tests/test_value_initialization.py": "eca7f69ebb5e615e02b3a6280f4bc00c92e6787ebfaca58da5ee6a81659fadf5"
+  },
+  "archived_previous_model": "logs/source_archive/model_before_value_init_27321aad3057.py",
+  "primary_objective": "PDCorr+mean(PDS_L1,PDS_L2,PDS_cos), raw/nonnegative separately; same960 cells and60-condition library; all9 nonnegative metrics; paired2,000-condition bootstrap; context and variance diagnostics.",
+  "queue_dependency": "Wait for x-prediction controller839902 to exit before starting; never overlap three GPU jobs.",
+  "automatic_main_switch": false,
+  "main_config_unchanged_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_training_pid": 656512,
+  "test_access": false,
+  "caveat": "One short seed and raw weights do not establish mature EMA superiority. This tests an unspecified implementation detail; no paper architecture, time distribution, loss, effective batch or sampling count is reduced.",
+  "controller_pid": 846260,
+  "queue_time": "2026-11-19T03:17:45+08:00",
+  "analysis_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/analyze_parameterization_trial.py",
+    "--candidate",
+    "runs/pilot_value_fanin",
+    "--outdir",
+    "runs/value_fanin_analysis",
+    "--factor",
+    "value_input_init"
+  ],
+  "analysis_script_sha256": "b310fc16d85ba4332d10550b4391732d1adb351a79e02607da8b0266c07dd55f",
+  "training_pid": 850532,
+  "actual_start_time": "2026-11-19T04:25:19+08:00",
+  "pairing_check": "runs/value_fanin_initial_pairing.json",
+  "stage": "completed",
+  "completion_time": "2026-11-19T06:34:23+08:00",
+  "decision": "runs/value_fanin_analysis/decision.json"
+}

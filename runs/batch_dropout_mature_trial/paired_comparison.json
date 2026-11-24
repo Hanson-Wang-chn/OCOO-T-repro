@@ -1,0 +1,258 @@
+{
+  "time": "2026-11-20T17:32:36+08:00",
+  "step": 29068,
+  "continuation_updates": 1118,
+  "generated_cells_each": 960,
+  "perturbations": 60,
+  "bootstrap": 2000,
+  "seed": 9232,
+  "comparisons": {
+    "floor_0": {
+      "floor": 0,
+      "reference_score": 1.0635266438217972,
+      "candidate_score": 1.0651785113987582,
+      "score_difference": {
+        "value": 0.001651867576961008,
+        "ci95": [
+          -0.004599233070923047,
+          0.00786188186183838
+        ]
+      },
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.2895451623403157,
+          "candidate": 0.29027110399135075,
+          "difference": 0.0007259416510350669,
+          "ci95": [
+            -0.0016618907290588292,
+            0.0032518979828455637
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.11594089922806274,
+          "candidate": 0.10844705662575073,
+          "difference": -0.007493842602312006,
+          "ci95": [
+            -0.020650392574314152,
+            2.9244271559808003e-05
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.08692167999342319,
+          "candidate": 0.08637652675623766,
+          "difference": -0.0005451532371855278,
+          "ci95": [
+            -0.0016132739879349087,
+            0.0004939895005119622
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.6969765131086406,
+          "candidate": 0.6865723690153966,
+          "difference": -0.010404144093243972,
+          "ci95": [
+            -0.02088079687023672,
+            -0.0023734629701688864
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.7702777777777777,
+          "candidate": 0.7699999999999999,
+          "difference": -0.0002777777777778212,
+          "ci95": [
+            -0.004722222222222294,
+            0.0038888888888888307
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.7844444444444445,
+          "candidate": 0.7855555555555557,
+          "difference": 0.0011111111111111738,
+          "ci95": [
+            -0.004722222222222186,
+            0.007222222222222024
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.7672222222222221,
+          "candidate": 0.7691666666666668,
+          "difference": 0.0019444444444446374,
+          "ci95": [
+            -0.0038888888888888307,
+            0.008333333333333304
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.020664900246386682,
+          "candidate": 0.020961060343931078,
+          "difference": 0.00029616009754439634,
+          "ci95": [
+            0.00017667936626822035,
+            0.00042256043137361347
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.09455179075400032,
+          "candidate": 0.09553361584742862,
+          "difference": 0.0009818250934282985,
+          "ci95": [
+            0.0006831503255913518,
+            0.001287216038132707
+          ]
+        }
+      ]
+    },
+    "floor_0p05": {
+      "floor": 0.05,
+      "reference_score": 1.0617137291982632,
+      "candidate_score": 1.0637193774971767,
+      "score_difference": {
+        "value": 0.002005648298913476,
+        "ci95": [
+          -0.0038164642153662083,
+          0.007953817356020012
+        ]
+      },
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.2881952106797447,
+          "candidate": 0.289089747867547,
+          "difference": 0.0008945371878023023,
+          "ci95": [
+            -0.0015203099532906813,
+            0.003496789214356474
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.11755368144449663,
+          "candidate": 0.11636384578165641,
+          "difference": -0.0011898356628402135,
+          "ci95": [
+            -0.00460050589649651,
+            0.0019010104347240318
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.12459259879633182,
+          "candidate": 0.1238190559213567,
+          "difference": -0.0007735428749751222,
+          "ci95": [
+            -0.0034627311449204044,
+            0.0014978213624773416
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.6979628754418553,
+          "candidate": 0.6888577015580678,
+          "difference": -0.00910517388378751,
+          "ci95": [
+            -0.019742999377686882,
+            -0.0009979656440057552
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.7711111111111111,
+          "candidate": 0.7725000000000001,
+          "difference": 0.001388888888888995,
+          "ci95": [
+            -0.002777777777777657,
+            0.005277777777777168
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.7827777777777779,
+          "candidate": 0.7841666666666669,
+          "difference": 0.001388888888888995,
+          "ci95": [
+            -0.003055555555555478,
+            0.006388888888888888
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.7666666666666667,
+          "candidate": 0.7672222222222221,
+          "difference": 0.0005555555555554204,
+          "ci95": [
+            -0.005555555555555647,
+            0.00722222222222213
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.02079867202167706,
+          "candidate": 0.021098300411055447,
+          "difference": 0.00029962838937838687,
+          "ci95": [
+            0.0001807232305873186,
+            0.0004267511039506827
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.09530547074973579,
+          "candidate": 0.09630072476963199,
+          "difference": 0.0009952540198961968,
+          "ci95": [
+            0.0006889622317006267,
+            0.0012923327429840978
+          ]
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/plan.json": "97e36ed156277baac3415e38ff75e886c344c14d9f2ef488e8b24d5f2671bc02",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/execution_config.json": "13180b66daf9dc8479ab0148e16e1d1659b44a9dcfb5ea8b938e92ebb8e68d5f",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/completed.json": "551bb76f3eb3f1316a8c9506e9838126addaab2ff0dd4f894f205fd592cfe2d9",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/bounded_training_completed.json": "a7c991d8c299e4082cf87d01ccf96d498addb9f3d8e239341138181cc48c0ff7",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/fork_provenance.json": "182221cffbee1d90060fbaeaa935a9c82c16854882717507eda3b7d6708c3dc8",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/prelaunch_verification.json": "7d2fd21ac3c13ebefed1a99e6585affba7f763b2582885e26889fbd0617919c7",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt": "a98f0fc4171d481f19f698b5c260b23d1274de5588435261ddb1b41d62f4af3d",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/candidate.pt": "ae1ae3bc9dea9b0650a9946a5e60d952e86d3ff7883b0f6da3e90929ea17c4ea",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/prediction.npy": "1ce6a326f35a4e7e39f5bbc7584e69fc6982fb6579b4efc19badac2c2a0772c5",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/prediction_raw.npy": "fda7dad340b88d3ebdf2bdee2a28a2afcd93edd5211c6abd09199c9664477113",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/evaluation_config.json": "67f54299645cbfdda2b1e47539303e465d76a0a816778e16df437b5f0c30f7b0",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/metrics/summary.json": "eeccba572209885e25d149cbe8013ac186dcea11ed09aa8161cea41d7e633452",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/metrics_raw/summary.json": "4a6b01b36f6abdd76dc4493df27195ba03a665624cef572f70e55792bd6904d0",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/zero_floor/comparison.json": "8dbd0ba03160c502c35a785a801122433458bee448c957e3fd50d7378649393b",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/prediction.npy": "a9a61c70b27bacd3267087815f5701421ca71ab87176fb1e19ed32e5901f65b7",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/prediction_raw.npy": "d259c1772b7baa08b2a3b40ef2e249bc3a540792920621d1aff52b462e01d476",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/evaluation_config.json": "2e7e5f6c634b1ef14f699cc74ea7d569510620a142efd3a64cb9793801aa4b25",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/metrics/summary.json": "30e33e2403ef551ccd8ba2b2d0914b74fb1bd78108de15759b3bd50035fc7f1c",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/metrics_raw/summary.json": "61a248c6172e061dd73f4593f6226ddaa5fc2fff1264c0881f940847e9dd4893",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/zero_floor/comparison.json": "4e9c047bbcc30ae69892ec5c8435b727fcbbe1505df9ec7e65b9ce6a1bec1b86",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/zero_floor/floor_0/metrics/results.csv": "8ffd0c579024786acdbdea533fc6195905a8e5d8c38831a2fd08de182bcbe360",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/zero_floor/floor_0/metrics/summary.json": "eeccba572209885e25d149cbe8013ac186dcea11ed09aa8161cea41d7e633452",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0/metrics/results.csv": "39bbd95635fd91c0034f2d52ab4d9af8f1c1c9cdde68644d3661205639bbd630",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0/metrics/summary.json": "30e33e2403ef551ccd8ba2b2d0914b74fb1bd78108de15759b3bd50035fc7f1c",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/zero_floor/floor_0p05/metrics/results.csv": "a571f511ce0e208358e58ffce0aa003cc5bf50f855a752132a86ca9e33ab12ae",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/reference/zero_floor/floor_0p05/metrics/summary.json": "1dc5363aa71685229d4d035a928a40f9cce42412236d8ef23f192171998e625f",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0p05/metrics/results.csv": "96907624c7552ff544bcfe4924a1c505d504e668ae9336ca76546669f56082ac",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0p05/metrics/summary.json": "905209d80488c84dc3b4ba7569dba317208a23efa11b8e92fc1d0e4740887860"
+  },
+  "script_sha256": "075a86ad474814aec23cf3dae4984d9373e2b5d44968d61dcf77d7f447ca3532",
+  "bootstrap_helper_sha256": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+  "automatic_main_switch": false,
+  "test_access": false,
+  "note": "One mature-state interpretation trial with the same initial complete RNG state and schedule. Compiled training random streams were not separately instrumented. Inference indices and private noise seeds match exactly. Exploratory perturbation intervals, not independent training seeds or generation-noise repeats."
+}

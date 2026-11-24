@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-18T15:10:47+08:00",
+  "pid": 793319,
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_conditions.py",
+    "--checkpoint",
+    "runs/main_v1/conditioning_epoch_012/diagnostic_weights.pt",
+    "--outdir",
+    "runs/main_v1/conditioning_epoch_012",
+    "--cells",
+    "1024",
+    "--batch-size",
+    "8",
+    "--seed",
+    "9231",
+    "--bootstrap",
+    "1000"
+  ],
+  "stage": "completed",
+  "training_pid_unchanged": 656512,
+  "completion_time": "2026-11-18T15:15:30+08:00",
+  "result": "runs/main_v1/conditioning_epoch_012/summary.json",
+  "paired_analysis": "runs/main_v1/conditioning_epoch_012/paired_progress/comparison.json"
+}

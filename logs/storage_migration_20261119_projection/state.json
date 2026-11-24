@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-19T01:55:08+08:00",
+  "stage": "completed",
+  "records": [
+    {
+      "time": "2026-11-19T01:55:07+08:00",
+      "run": "runs/pilot_pert_projection_separate",
+      "original_path": "/home/whs/ocoo-t/runs/pilot_pert_projection_separate/last.pt",
+      "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt",
+      "bytes": 2897660951,
+      "sha256": "c088c2105b70858b43a16c807ee495af05010d6e32f312d79bede7eba80b9309",
+      "step": 384,
+      "full_model_optimizer_ema_rng_retained": true,
+      "original_path_is_symlink": true
+    }
+  ],
+  "archived_bytes": 2897660951,
+  "script_sha256": "834c01afcddd17c3f0676ab05a1cbb938587cd12cc744564e1f9111207baf6b8"
+}

@@ -1,0 +1,15 @@
+{
+  "nonidentical_prediction_protocol_comparison": true,
+  "perturbations": 3,
+  "generated_cells": 48,
+  "max_first_six_metrics_difference": 0.0,
+  "differences": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  },
+  "purpose": "Check constructor ordering, normalization and metric consistency on actual nonidentical pilot outputs; not a performance estimate."
+}

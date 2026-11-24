@@ -1,0 +1,22 @@
+F.......                                                                 [100%]
+=================================== FAILURES ===================================
+______________ test_real_guard_rejects_finished_or_test_directory ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-whs/pytest-2/test_real_guard_rejects_finish0')
+
+    def test_real_guard_rejects_finished_or_test_directory(tmp_path):
+        ns = namespace()
+        tick = Path(f'/proc/{os.getpid()}/stat').read_text().split(') ')[1].split()[19]
+        plan = {'trainer_pid': os.getpid(), 'trainer_start_tick': tick, 'main_run': str(tmp_path),
+                'main_config_sha256': file_sha256('configs/main_selected.yaml')}
+        ns['guard_main'](plan)
+        (tmp_path / 'finished.json').write_text('{}')
+>       with pytest.raises(RuntimeError, match='Training finished'):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'Training finished'
+E         Actual message: 'Original trainer changed or exited; review the interim validation job'
+
+tests/test_interim_validation_controller.py:27: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_interim_validation_controller.py::test_real_guard_rejects_finished_or_test_directory
+1 failed, 7 passed in 1.95s

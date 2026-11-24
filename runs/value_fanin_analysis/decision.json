@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-19T06:34:23+08:00",
+  "decision": "Keep the already running original full-data v/shared/Xavier model. Retain fan-in as an explicit alternative, without restarting on a small inconclusive short-budget gain.",
+  "comparison": "runs/value_fanin_analysis/comparison.json",
+  "raw_score_difference": 0.023575800563450322,
+  "raw_score_ci95": [
+    -0.0012115281045573512,
+    0.04934862752083717
+  ],
+  "clamped_score_difference": 0.015561838437785913,
+  "clamped_score_ci95": [
+    -0.007841128698785158,
+    0.038825795767190634
+  ],
+  "rationale": "Primary point estimates increase, but both paired intervals include0. PDCorr/PDS changes are inconclusive; pseudobulk MSE and MAE worsen and DEPrec falls. Thus this is not an overall performance fix. Variance ratios improve in the short pilot, while the mature existing main already has ratios0.943/0.925 and learned value gain0.267. These descriptive main comparisons have different budgets and do not prove equivalence, but give no reason to discard the mature trajectory.",
+  "candidate_clamped_metrics": {
+    "PDCorr": 0.23398768624368435,
+    "DEOver": 0.05558883271873375,
+    "DEPrec": 0.052578698736451074,
+    "DirAgr": 0.6347996706323807,
+    "PDS_L1": 0.5288888888888889,
+    "PDS_L2": 0.5341666666666668,
+    "PDS_cos": 0.5125,
+    "MSE": 0.015173958505814215,
+    "MAE": 0.08675119094550607
+  },
+  "limitations": "One seed,384 updates,960 samples/raw weights; does not establish asymptotic or mature-EMA ordering. Do not claim the old pilot has the highest point estimate among all11 trials. Original2x2x2 grid remains an8-trial experiment.",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_restarted": false,
+  "test_access": false,
+  "next": "No extra short GPU jobs queued. Give original full-data model the GPU; next periodic generation is epoch20, then inspect paired metrics and all9 before further changes."
+}

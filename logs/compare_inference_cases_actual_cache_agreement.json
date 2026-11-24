@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-19T19:31:55+08:00",
+  "result": "Actual epoch10 guided-pair objective difference and paired interval match archived analysis within1e-12",
+  "source": "runs/main_v1/interim_epoch010_review/guided_scale_score_difference.json",
+  "generic": "runs/main_v1/interim_epoch010_review/generic_guided_pair_check/comparison.json",
+  "extra_checks": "same checkpoint/current frozen SHA, all numerical options except registered factor, complete generation, exact validation indices, macro9 metrics",
+  "new_generation": 0,
+  "training_changed": false
+}

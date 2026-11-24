@@ -1,0 +1,16 @@
+{"time": "2026-11-18T15:11:06+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "matched", "velocity_mse": 0.2702324688434601}
+{"time": "2026-11-18T15:11:16+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "shuffled_pert", "velocity_mse": 0.27745580673217773}
+{"time": "2026-11-18T15:11:28+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "null_pert", "velocity_mse": 0.2743262052536011}
+{"time": "2026-11-18T15:11:38+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "shuffled_time", "velocity_mse": 0.39771568775177}
+{"time": "2026-11-18T15:11:47+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "matched", "velocity_mse": 0.2611042261123657}
+{"time": "2026-11-18T15:11:57+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "shuffled_pert", "velocity_mse": 0.2636093199253082}
+{"time": "2026-11-18T15:12:07+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "null_pert", "velocity_mse": 0.2618345618247986}
+{"time": "2026-11-18T15:12:17+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "shuffled_time", "velocity_mse": 0.3800469636917114}
+{"time": "2026-11-18T15:12:27+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "matched", "velocity_mse": 0.2709769010543823}
+{"time": "2026-11-18T15:12:37+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "shuffled_pert", "velocity_mse": 0.2763490378856659}
+{"time": "2026-11-18T15:12:48+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "null_pert", "velocity_mse": 0.27411460876464844}
+{"time": "2026-11-18T15:12:58+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "shuffled_time", "velocity_mse": 0.36929526925086975}
+{"time": "2026-11-18T15:13:08+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "matched", "velocity_mse": 0.260597825050354}
+{"time": "2026-11-18T15:13:18+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "shuffled_pert", "velocity_mse": 0.2625578045845032}
+{"time": "2026-11-18T15:13:28+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "null_pert", "velocity_mse": 0.26164525747299194}
+{"time": "2026-11-18T15:13:38+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "shuffled_time", "velocity_mse": 0.3543810248374939}

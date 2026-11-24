@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-18T23:35:05+08:00",
+  "pid": 827585,
+  "stage": "completed",
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/archive_finished_checkpoints.py",
+    "runs/pilot_sigma_1.0",
+    "runs/pilot_sigma_0.5",
+    "runs/pilot_sigma_1.0_t1000",
+    "runs/pilot_sigma_0.5_t1000",
+    "runs/pilot_sigma_1.0_cellinit_1.0",
+    "runs/pilot_sigma_0.5_cellinit_1.0",
+    "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+    "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+    "--destination",
+    "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots",
+    "--audit-dir",
+    "logs/storage_migration_20261118"
+  ],
+  "completion_time": "2026-11-18T23:36:27+08:00"
+}

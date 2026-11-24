@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-20T18:38:22+08:00",
+  "passed": true,
+  "cpu_only": true,
+  "elapsed_seconds": 0.5788401868194342,
+  "log": "logs/tests_batch_structure_cpu.log",
+  "source_sha256": {
+    "scripts/diagnose_batch_structure.py": "138e831849bcd82a52691ebc0180617210b04e6b94b19827d2c096317e2b0234",
+    "tests/test_batch_structure.py": "c96aee7592e4d88a1fd89d411dc2fdfdb74eb6379236cb260074f07d068d3fb5"
+  },
+  "checks": [
+    "Independent cell-level OLS agreement on unbalanced design",
+    "Perturbation-baseline/row-order invariance and nonidentifiability refusal",
+    "Held-out perturbation recovery of known shared batch signal",
+    "Weighted affine vector comparison"
+  ]
+}

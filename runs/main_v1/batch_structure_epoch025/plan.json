@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-20T18:38:21+08:00",
+  "status": "registered_after_math_checks_before_actual_expression_effect_analysis",
+  "question": "After removing perturbation-specific means, does the saved full E25 prediction reproduce validation batch-associated expression structure? Is there a shared batch component in prediction error consistent with real controls? Explanatory association only; not a causal technical-effect estimate or adopted correction.",
+  "cache": "runs/main_v1/interim_epoch025_full_guided",
+  "indices_file": "runs/main_v1/interim_epoch025_full_guided/indices.npy",
+  "raw_prediction_file": "runs/main_v1/interim_epoch025_full_guided/stitched_raw.npy",
+  "clamped_prediction_file": "runs/main_v1/interim_epoch025_full_guided/stitched_predictions.npy",
+  "data_dir": "data/processed",
+  "expected_cells": 4825,
+  "expected_perturbations": 60,
+  "expected_batches": 56,
+  "cell_line": "hepg2",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch025_full_guided/stitched_predictions.npy": "ba2ac516a0e7d09de5d51420597e8b4a0f76cd37824eb20079aed0803e9f35da",
+    "runs/main_v1/interim_epoch025_full_guided/stitched_raw.npy": "5fa141dafe6d4730b2ae988c62b22aea1a1c4b255475280abe93afe83e569ecc",
+    "runs/main_v1/interim_epoch025_full_guided/indices.npy": "a556f82115bda8c0f48a882c31739e03d13296cf385530161e1f73e0b2c12c34",
+    "runs/main_v1/interim_epoch025_full_guided/completed.json": "4690645ea29354f1213ba6aeec61ef46dbf7e9b73366cb3f72873bd9b3228f5a",
+    "runs/main_v1/interim_epoch025_full_guided/extension_config.json": "8b2393fa42ca5fb9578ee036bacdec984e6567d19027a137be2fca221f66024c",
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "expression_file": {
+    "path": "data/processed/expression.npy",
+    "bytes": 5147304128,
+    "mtime_ns": 1794848513249141962
+  },
+  "methods": [
+    "FWL batch effects residualized against perturbation means, requiring connected rank B−1. Same design for true, raw and clamp0 arrays.",
+    "Weighted centered effect norms/slopes/cosines; compare residual effects with same-cell-line controls.",
+    "Five perturbation-blocked folds seed9831, held-out within-perturbation centered residuals. All56 batches in descriptive fit; only both validation/control count≥30 batches in crossvalidation and control comparisons.",
+    "No official metric recalculation, fitted correction array, new model, or test expression access."
+  ],
+  "reliable_min_validation_cells": 30,
+  "reliable_min_control_cells": 30,
+  "crossvalidation_folds": 5,
+  "crossvalidation_seed": 9831,
+  "cpu_only": true,
+  "gpu_jobs": 0,
+  "test_access": false,
+  "training_or_formal_setting_change": false,
+  "decision_policy": "Prioritize hypotheses only. Do not infer an implementation bug from small embedding norms or choose a new initialization without a separate controlled training trial.",
+  "cache_note": "Read the immutable completed full-population stitched files by explicit names; not the partial extra/ cache."
+}

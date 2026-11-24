@@ -1,0 +1,52 @@
+{
+  "time": "2026-11-19T04:27:10+08:00",
+  "decision": "Keep original full-data v-prediction main model; do not switch to x-prediction on this evidence.",
+  "comparison": "runs/xpred_vloss_analysis/comparison.json",
+  "raw_score_difference": -0.1232903925532608,
+  "raw_score_ci95": [
+    -0.1594233565245214,
+    -0.08930929555964522
+  ],
+  "clamped_score_difference": -0.13060798728618672,
+  "clamped_score_ci95": [
+    -0.16831503808411397,
+    -0.09368072953176054
+  ],
+  "rationale": "Both primary score variants worsen. DE overlap/precision rise, but PDCorr, pseudobulk MSE/MAE and directional agreement worsen; increased DE scores alone do not justify switching. All960 generated cells are nearest HepG2, but bulk error to train HepG2 centroid is0.0436 versus0.00105 in reference. Variance ratio closer to1 does not establish correct perturbation recovery.",
+  "matched_fixed_probe_validation": {
+    "reference": {
+      "time": "2026-11-17T05:49:03+08:00",
+      "event": "validation",
+      "step": 384,
+      "epoch": 12.0,
+      "raw": {
+        "velocity_mse": 0.3041032685432583,
+        "endpoint_mse": 0.11919721669983119
+      },
+      "ema_0.9996": {
+        "velocity_mse": 1.5429473258554935,
+        "endpoint_mse": 0.7334254430606961
+      }
+    },
+    "x_candidate": {
+      "time": "2026-11-19T04:10:42+08:00",
+      "event": "validation",
+      "step": 384,
+      "epoch": 12.0,
+      "raw": {
+        "velocity_mse": 0.31423523370176554,
+        "endpoint_mse": 0.12317690742202103
+      },
+      "ema_0.9996": {
+        "velocity_mse": 1.586088640615344,
+        "endpoint_mse": 0.5479786619544029
+      }
+    }
+  },
+  "limitations": "One384-update raw pilot; x/v initial velocity functions differ intentionally. This does not disprove mature x-prediction, all initializations or the paper patched Fig.5 result. CPU checks establish algebraic conversion and solver plumbing, not attainable generation quality.",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_restarted": false,
+  "test_access": false,
+  "checkpoint_archive": "logs/storage_migration_xpred_vloss/state.json",
+  "next": "Complete already preregistered scalar fan-in v pilot; then focus on main epoch20 periodic generation before proposing more short variants."
+}

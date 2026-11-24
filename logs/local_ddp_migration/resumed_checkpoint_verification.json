@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-22T11:17:45+08:00",
+  "status": "passed",
+  "step": 41450,
+  "epoch": 37.075134168157426,
+  "configuration_exact": true,
+  "model_tensors_finite": 193,
+  "AdamW_slots_at_step": 189,
+  "ema_tensors_per_decay": 189,
+  "independent_rank_rng_states": 4,
+  "best_generation_epoch": 35,
+  "pending_generation_epoch": null,
+  "legacy_rng_field_matches_rank0": true
+}

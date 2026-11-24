@@ -1,0 +1,151 @@
+{
+  "time": "2026-11-18T08:31:11+08:00",
+  "status": "completed",
+  "hypothesis": "The earlier time-scale comparison used a weak cell embedding; cell-init and time encoding may interact. Complete the missing paired t=1000, cell-std=1, noise=1 trial before attributing slow specificity learning to training length alone.",
+  "reference_config": "configs/pilot_sigma_1.0_cellinit_1.0.yaml",
+  "candidate_config": "configs/pilot_sigma_1.0_t1000_cellinit_1.0.yaml",
+  "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate_run": "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+  "only_network_change": {
+    "model.time_scale": {
+      "reference_default": 1.0,
+      "candidate": 1000.0
+    }
+  },
+  "budget": {
+    "training_subset": 16384,
+    "epochs": 12,
+    "optimizer_updates": 384,
+    "effective_batch": 512,
+    "micro_batch": 16,
+    "seed": 42,
+    "val_cap": 16,
+    "sampling_steps": 50,
+    "sampling_batch_size": 32,
+    "sampling_seed": 4242
+  },
+  "kept_paper_parameters": "12x768 Transformer, 12 heads, context32/layer4, v-loss/path/time distribution, dropout0.1, AdamW/betas/LR/effective batch/warmup/cosine, two EMA and Heun50 unchanged.",
+  "data": "Training and validation only; no test cells. Use the same training subset and fixed validation noise.",
+  "selection": "PDCorr + mean(PDS_L1,PDS_L2,PDS_cos), raw and clamped arrays separately; inspect paired perturbation bootstrap, MSE, cell centroid and variance. No automatic replacement of the full-training model based on one short raw-weight pilot.",
+  "limitations": "384-update raw-weight diagnostic, not mature EMA or full-training superiority; the current main run remains unchanged.",
+  "start_after": "Completion of the epoch-10 paired CFG review and release of its GPU process; avoid three simultaneous GPU workloads.",
+  "config_sha256": "04c5ee0099839a82cc77556229ade8137d37e914afb93e18ae162338602cbc2f",
+  "reference_config_sha256": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+  "core_source_agreement": {
+    "src/ocoot/model.py": {
+      "current": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1",
+      "reference": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1"
+    },
+    "src/ocoot/flow.py": {
+      "current": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+      "reference": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78"
+    },
+    "src/ocoot/data.py": {
+      "current": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+      "reference": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c"
+    }
+  },
+  "input_sha256": {
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/embeddings.pt": "89bd99987d3bfd4da36fff453c12fa627668b6509bf8eb206e74346b646f1025",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "revisions": [
+    {
+      "time": "2026-11-18T09:04:25+08:00",
+      "reason": "Complete both missing high-cell-initialization time-scale trials. The initial four trials showed different time-scale effects at noise=1 and noise=0.5, so neither noise branch should be assumed equivalent. Both are registered before any new trial starts."
+    }
+  ],
+  "candidates": [
+    {
+      "noise_std": 1.0,
+      "reference_config": "configs/pilot_sigma_1.0_cellinit_1.0.yaml",
+      "candidate_config": "configs/pilot_sigma_1.0_t1000_cellinit_1.0.yaml",
+      "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+      "candidate_run": "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+      "config_sha256": "04c5ee0099839a82cc77556229ade8137d37e914afb93e18ae162338602cbc2f",
+      "only_change": "time_scale 1 -> 1000; output run_dir is separate",
+      "status": "completed",
+      "finished_time": "2026-11-18T11:12:56+08:00",
+      "comparison": "runs/time_cell_interaction_trial7_de_comparison.json",
+      "paired_analysis": "runs/pilot_grid_seven_analysis/summary.json",
+      "score_review": [
+        {
+          "postprocess": "raw",
+          "score": 0.7335694701274149,
+          "score_delta_vs_reference": -0.00018034150017665063,
+          "delta_ci95_low": -0.011419344421717697,
+          "delta_ci95_high": 0.010957600174138524
+        },
+        {
+          "postprocess": "clamped",
+          "score": 0.742829382285924,
+          "score_delta_vs_reference": -0.0007816507051596755,
+          "delta_ci95_low": -0.011616576859990452,
+          "delta_ci95_high": 0.00978677873267729
+        }
+      ]
+    },
+    {
+      "noise_std": 0.5,
+      "reference_config": "configs/pilot_sigma_0.5_cellinit_1.0.yaml",
+      "candidate_config": "configs/pilot_sigma_0.5_t1000_cellinit_1.0.yaml",
+      "reference_run": "runs/pilot_sigma_0.5_cellinit_1.0",
+      "candidate_run": "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+      "config_sha256": "48bad181c51f35c87b4e827d3d0b222a13346f2385e1c2d8c8645d692de7f173",
+      "only_change": "time_scale 1 -> 1000; output run_dir is separate",
+      "status": "completed",
+      "training_pid": 775745,
+      "finished_time": "2026-11-18T13:16:01+08:00",
+      "comparison": "runs/time_cell_interaction_trial8_de_comparison.json",
+      "paired_analysis": "runs/pilot_grid_complete/summary.json",
+      "score_review": [
+        {
+          "postprocess": "raw",
+          "score": 0.7284639940029699,
+          "score_delta_vs_reference": -0.005285817624621658,
+          "delta_ci95_low": -0.02578171172879511,
+          "delta_ci95_high": 0.015877904170119368
+        },
+        {
+          "postprocess": "clamped",
+          "score": 0.7333710563370388,
+          "score_delta_vs_reference": -0.010239976654044858,
+          "delta_ci95_low": -0.030486265751820948,
+          "delta_ci95_high": 0.011225692563445128
+        }
+      ]
+    }
+  ],
+  "factorial_grid": {
+    "noise_std": [
+      1.0,
+      0.5
+    ],
+    "time_scale": [
+      1.0,
+      1000.0
+    ],
+    "cell_init_std": [
+      0.02,
+      1.0
+    ],
+    "original_completed": 6,
+    "new_planned": 2
+  },
+  "pilot_command": [
+    "scripts/run_pilots.py",
+    "--trials",
+    "sigma_1.0_t1000_cellinit_1.0,sigma_0.5_t1000_cellinit_1.0",
+    "--comparison-output",
+    "runs/time_cell_interaction_comparison.json"
+  ],
+  "controller_pid": 767313,
+  "started_time": "2026-11-18T09:09:59+08:00",
+  "last_review": {
+    "time": "2026-11-18T13:20:18+08:00",
+    "decision": "Original selected pilot has the highest raw and nonnegative PDCorr+mean(PDS) point estimates across the completed 2x2x2 grid. Neither additional time-scale combination shows a reliable composite improvement; inspect all nine metrics and variance rather than one DE score."
+  },
+  "completed_time": "2026-11-18T13:20:18+08:00",
+  "final_decision": "runs/main_selection_after_grid.json"
+}

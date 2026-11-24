@@ -1,0 +1,21 @@
+{
+  "time": "2026-11-18T15:15:30+08:00",
+  "decision": "Continue the locked main training; no architecture/configuration/sampling changes. Perturbation dependence has strengthened since epoch8, but mature generation quality is unmeasured until the next periodic evaluation.",
+  "evidence": {
+    "validation_ema_shuffled_pert_delta_velocity_mse": 0.0019599507213570178,
+    "increase_from_epoch8": 0.0008204458354157396,
+    "paired_cluster_ci95": [
+      0.0004918809961212636,
+      0.0011645348487507967
+    ],
+    "validation_null_pert_delta_velocity_mse": 0.0010473989714228082,
+    "validation_null_pert_ci95": [
+      -7.323106441192469e-05,
+      0.002034674519594441
+    ]
+  },
+  "caveat": "Denoising interventions do not estimate full-sampling PDCorr/PDS/DE or independent-training-seed uncertainty. No claim that all remaining error is EMA lag or condition neglect.",
+  "source_checkpoint_step": 13416,
+  "test_access": false,
+  "main_training_pid_unchanged": 656512
+}

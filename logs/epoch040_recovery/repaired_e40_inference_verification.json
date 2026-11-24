@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-22T15:54:16+08:00",
+  "step": 44720,
+  "full_checkpoint_sha256": "c50a656d568c3f75d345b80ce5aa065dbe0cdbbf2c9576288bc4df57547f0c14",
+  "checkpoint_sha256": "f0938d4c8c0b53398e765311328aa5e9f01514215fce55b1440d6d6ae27baaef",
+  "all193_tensors_equal_default_ema_and_buffers": true,
+  "same_indices_as_E35": true,
+  "metrics": {
+    "PDCorr": 0.3009033913622261,
+    "MSE": 0.009511960619905342,
+    "MAE": 0.06795647827287515,
+    "PDS_L1": 0.6958333333333333,
+    "PDS_L2": 0.7111111111111109,
+    "PDS_cos": 0.7477777777777779
+  },
+  "test_access": false
+}

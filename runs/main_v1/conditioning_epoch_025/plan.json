@@ -1,0 +1,61 @@
+{
+  "time": "2026-11-20T05:55:52+08:00",
+  "status": "completed_reviewed",
+  "question": "After the epoch20\u219225 periodic primary score plateau, has matched-label denoising dependence on held-out perturbations continued to grow since epoch12, or is improvement confined to training conditions?",
+  "motivation": {
+    "value": 0.0027888860844541563,
+    "ci95": [
+      -0.018729618658522833,
+      0.02527051287085776
+    ]
+  },
+  "checkpoint": "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_025/source_snapshot.pt",
+  "checkpoint_sha256": "6c268c6cd92bff74d2e5e825d8b66bdfdd98c561ec5f457849fcd95b54deb1e4",
+  "step": 27950,
+  "reference": "runs/main_v1/conditioning_epoch_012",
+  "cells_per_split": 1024,
+  "splits": [
+    "train_hepg2",
+    "validation"
+  ],
+  "cases": [
+    "matched",
+    "shuffled_pert",
+    "null_pert",
+    "shuffled_time"
+  ],
+  "seed": 9231,
+  "batch_size": 8,
+  "weights": [
+    "raw_diagnostic",
+    "ema_0.9996"
+  ],
+  "flow": "same fixed t/noise/indices as epoch12",
+  "pair_analysis": "scripts/analyze_conditioning_progress.py, strict existing protocol/source guards, bootstrap2000 seed62341",
+  "isolated_legacy_module_directory": "/home/whs/ocoo-t/logs/legacy_inference_step1871",
+  "legacy_module_hashes_verified_against_step1871_manifest_and_epoch12_protocol": true,
+  "reason_for_isolation": "Current model.py gained optional branches after epoch15; use unchanged archived original modules for exact cross-epoch source agreement without weakening comparison guards. Main process and workspace source remain unchanged.",
+  "data_access": "train_hepg2 and validation only; no test expression",
+  "training_changed": false,
+  "formal_inference_changed": false,
+  "interpretation_limit": "Denoising/condition utilization only. Improvement cannot establish generated-cell performance or paper parity. No automatic configuration change.",
+  "pid": 959739,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "/home/whs/ocoo-t/scripts/diagnose_conditions.py",
+    "--checkpoint",
+    "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_025/source_snapshot.pt",
+    "--outdir",
+    "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_025",
+    "--cells",
+    "1024",
+    "--batch-size",
+    "8",
+    "--seed",
+    "9231",
+    "--bootstrap",
+    "1000"
+  ],
+  "completed_at": "2026-11-20T06:01:28+08:00",
+  "decision": "runs/main_v1/conditioning_epoch_025/decision.json"
+}

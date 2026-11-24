@@ -1,0 +1,55 @@
+{
+  "time": "2026-11-18T09:58:23+08:00",
+  "differences": {
+    "sigma_1.0": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    },
+    "sigma_0.5": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    },
+    "sigma_1.0_t1000": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    },
+    "sigma_0.5_t1000": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    },
+    "sigma_1.0_cellinit_1.0": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    },
+    "sigma_0.5_cellinit_1.0": {
+      "PDCorr": 0.0,
+      "MSE": 0.0,
+      "MAE": 0.0,
+      "PDS_L1": 0.0,
+      "PDS_L2": 0.0,
+      "PDS_cos": 0.0
+    }
+  },
+  "all_first_six_match": true,
+  "source_sha256": "993d09254486b5a1fa1f422d8c4e568f1643c39e103b90d9ce2c72476fe48a04"
+}

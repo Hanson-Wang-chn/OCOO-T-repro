@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-23T04:28:32+08:00",
+  "step": 50310,
+  "ema": [
+    "0.9996",
+    "0.9999"
+  ],
+  "split": "validation",
+  "seed": 4242,
+  "steps": 50,
+  "batch_size": 32,
+  "cap": 16,
+  "cells": 960,
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "test_access": false,
+  "archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt",
+  "modes": {
+    "conditional": [
+      "screen_00",
+      null,
+      0.1,
+      0.9
+    ],
+    "guided": [
+      "screen_full_interval",
+      2.0,
+      0.0,
+      1.0
+    ]
+  },
+  "inputs_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt": "ad0ff5e0282721a563b335ea4263d3a3dc8cf4384157b563d6ac80dd78a366fa",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/best_generation.pt": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+    "runs/main_ddp_recovery/calibration/calibration_config.json": "55045b962ef23882a3c29830fddb9d427836ddfd7148b89ed539b5860e6342cd",
+    "runs/main_ddp_recovery/postgate_guidance_study/report.json": "76ae62a1267a99277f95c6bed50cc42e4935ec79ac5fb396fa9fb0cc24afb530",
+    "runs/main_ddp_recovery/calibration/postprocessing/review.json": "3d3cb90e537647cb8f25fdb725ec157c6dc59552b4e118887c4d50b545dc6d21",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "/home/dataset-assist-0/whs/ocoo-t/logs/epoch040_recovery/review_e45_ema.py": "01aae87c1030d6ea22a37f2b97d71e4f6554ab0a85ea35a27261689901cb503b"
+  },
+  "promotion_rule": "Review only if the fixed guided comparison shows a material precision gain with no convincing degradation in the primary score, DEOver or expression errors. The paper default remains unchanged in the full training and original evaluation."
+}

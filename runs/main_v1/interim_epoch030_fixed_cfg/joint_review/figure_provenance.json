@@ -1,0 +1,13 @@
+{
+  "source_sha256": {
+    "runs/main_v1/observation/epoch025_to030/comparison.json": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+    "runs/main_v1/interim_epoch030_fixed_cfg/paired/comparison.json": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd"
+  },
+  "plot_script_sha256": "5b0f8ad852bd381a69d7534e8789088501b500c2b34df3df8930a70a6c78100d",
+  "recomputed_metrics": false,
+  "source_results_changed": false,
+  "artifacts": {
+    "paired_protocols.png": "d4fa7527667588f3012eaf19af647890277b836fdca2649df7a87956ef8f6378",
+    "paired_protocols.pdf": "7f4a1fd1a8ac2b93fcce320b594e0ffda062fcb5fc5911825a2103e4cddb060a"
+  }
+}

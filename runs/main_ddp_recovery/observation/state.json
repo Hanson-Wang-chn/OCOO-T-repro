@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-23T02:00:53+08:00",
+  "pid": 124417,
+  "stage": "finished",
+  "run_dir": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery",
+  "completed_epoch": 55,
+  "observed_epochs": [
+    40,
+    45,
+    50,
+    55
+  ],
+  "failures": {},
+  "gpu_disabled_for_observer_and_children": true,
+  "training_mutations": false,
+  "script_sha256": "48c965b9ed836b8fa20e08dc54e34bf47940e9613cf25805cd05ab692e910d04"
+}

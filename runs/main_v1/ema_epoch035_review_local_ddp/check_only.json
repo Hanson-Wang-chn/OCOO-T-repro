@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-22T11:18:57+08:00",
+  "cpu_only": true,
+  "plan_sha256": "e8e6214070c270c2cca77af8d96fef5284b3610e76596c6f095d320235db430c",
+  "references_verified": true,
+  "readiness": {
+    "preceding_full_review_complete": false,
+    "gpu_only_original_trainer": true,
+    "gpu_pids": [
+      83639,
+      83640,
+      83641,
+      83642
+    ]
+  },
+  "GPU_generation_launched": false,
+  "test_access": false
+}

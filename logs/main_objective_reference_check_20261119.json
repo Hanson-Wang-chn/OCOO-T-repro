@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-19T07:46:25+08:00",
+  "local_paper": "paper/OCOO-T_v2.txt",
+  "paper_pdf_sha256": "ad55f9fc7a6d5d053cacf103559108e19f2f2e40ef0d068ff09445b2ca33dd9f",
+  "review": "Confirmed existing main default remains faithful to the declared v-prediction velocity L2 baseline; default categorical context, MMD is an auxiliary ablation rather than a missing main loss. No training change.",
+  "evidence_line_locations": {
+    "default_categorical_context": 430,
+    "appendixA_v_prediction_velocity_L2": 1433,
+    "appendixC_MMD_no_consistent_improvement": 1524
+  },
+  "hardware": {
+    "paper": "8H100,64 cells/GPU, effective512",
+    "local": "1A10040GB,micro16,accumulate32,effective512",
+    "explicit_hyperparameters_reduced_for_time": false
+  },
+  "test_access": false
+}

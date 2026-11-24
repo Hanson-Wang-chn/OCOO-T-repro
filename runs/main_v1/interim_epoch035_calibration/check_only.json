@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-21T13:16:01+08:00",
+  "passed": true,
+  "commands_validation_only": true,
+  "gpu_pids": [
+    656512
+  ],
+  "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+  "test_access": false,
+  "source": "CPU check-only completed successfully in exec session66385",
+  "plan_sha256": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc"
+}

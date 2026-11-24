@@ -1,0 +1,37 @@
+{
+  "time_independent_settings": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+    "step": 27950,
+    "weights": "ema_0.9996",
+    "generation_dir": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_full_guided",
+    "sampling": {
+      "source_options": {
+        "noise_std": 1.0,
+        "batch_size": 16,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "extra_seed": 62525,
+      "nested_prefix_preserved": true
+    },
+    "prediction_sha256": "ba2ac516a0e7d09de5d51420597e8b4a0f76cd37824eb20079aed0803e9f35da",
+    "indices_sha256": "a556f82115bda8c0f48a882c31739e03d13296cf385530161e1f73e0b2c12c34",
+    "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "source_sha256": "37dc192f81806bede1cca4b36d309fbe2385967336170825d6324531d8247698",
+    "metric_source_sha256": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "floors": [
+      0.0,
+      0.05
+    ],
+    "target_cell_line": "hepg2",
+    "minimum_positive_training_expression": 0.07278690487146378,
+    "training_cells_for_support_check": 59937,
+    "extension_manifest_sha256": "4690645ea29354f1213ba6aeec61ef46dbf7e9b73366cb3f72873bd9b3228f5a"
+  },
+  "note": "Diagnostic only; candidate floors are not paper-specified. No test cells or new generation; no observed positive training entries are removed. Original prediction files stay unchanged."
+}

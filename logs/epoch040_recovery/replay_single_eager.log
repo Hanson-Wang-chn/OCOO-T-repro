@@ -1,0 +1,4 @@
+partial {'step': 41375, 'loss': 0.33508333563804626, 'world': 1, 'eager': True, 'bucket_view': True, 'seconds': 12.868382717482746}
+{"step": 41375, "loss": 0.33508333563804626, "world": 1, "eager": true, "bucket_view": true, "seconds": 12.868382717482746, "grad_norm": 0.08058354258537292}
+partial {'step': 41376, 'loss': 0.3265910744667053, 'world': 1, 'eager': True, 'bucket_view': True, 'seconds': 12.638993574306369}
+{"step": 41376, "loss": 0.3265910744667053, "world": 1, "eager": true, "bucket_view": true, "seconds": 12.638993574306369, "grad_norm": 0.12016993761062622}

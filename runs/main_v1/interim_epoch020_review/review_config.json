@@ -1,0 +1,28 @@
+{
+  "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/model.pt",
+  "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+  "guidances": [
+    null,
+    0.6666666667,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "cap": 16,
+  "batch_size": 16,
+  "cfg_min": 0.1,
+  "cfg_max": 0.9,
+  "split": "validation",
+  "clamp": true,
+  "de": true,
+  "steps": 50,
+  "seed": 4242,
+  "source_sha256": {
+    "/home/whs/ocoo-t/scripts/run_inference_review.py": "b464e7559f878f27921989469c8566595ec9cc8cbce2d57bacbf235e0681b706",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "src/ocoot/model.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f"
+  },
+  "note": "Paired inference diagnostics only, using identical indices and initial-noise seeds. Not final test or final calibration."
+}

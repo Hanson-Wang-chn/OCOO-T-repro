@@ -1,0 +1,25 @@
+{
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+  "outdir": "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_025",
+  "cells": 1024,
+  "batch_size": 8,
+  "seed": 9231,
+  "bootstrap": 1000,
+  "no_compile": false,
+  "checkpoint_sha256": "6c268c6cd92bff74d2e5e825d8b66bdfdd98c561ec5f457849fcd95b54deb1e4",
+  "step": 27950,
+  "script_sha256": "236d26a2a9d3eef7df5da5d0f60c2fbbf244ddff54f43219108701c35c25b0f0",
+  "model_sha256": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1",
+  "flow_sha256": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+  "data_code_sha256": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "vocab_sha256": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+  "cases": [
+    "matched",
+    "shuffled_pert",
+    "null_pert",
+    "shuffled_time"
+  ],
+  "ema_decay": "0.9996",
+  "note": "Paired denoising interventions only; no test cells or generation metrics. Perturbation labels are shuffled within batch and cell line. Positive loss delta favors matched conditions. Confidence intervals bootstrap perturbations, not training seeds."
+}

@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-21T15:03:15+08:00",
+  "reason": "Clarify the provenance of reproduction acceptance thresholds without changing thresholds or any experiment; respect900s publication cadence",
+  "backup": "logs/README_before_validation_checks_clarification.md",
+  "replacements": [
+    [
+      "只在通过全部原质量检查的候选中按既有综合目标选择；",
+      "以本复现预设检查（非论文公开的验证阈值）筛选完整候选，再按既有综合目标选择；"
+    ]
+  ]
+}

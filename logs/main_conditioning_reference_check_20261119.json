@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-19T16:32:51+08:00",
+  "local_source": "paper/OCOO-T_v2.txt",
+  "confirmed": "Section3.3 explicitly describes context tokens carrying perturbation and cell-line embeddings; time joins the AdaLN aggregate separately. Dropout of p/c is explicitly independent. CFG is the implemented literal four-field formula, with a designated but unnumbered timestep interval. No overlooked required time-in-context MLP or different dropout mode was found.",
+  "existing_implementation_change": false,
+  "sum_and_learned_positions": "Token formation details beyond p/c carrier are not explicitly specified; current sum/repetition+learned positions remains a documented interpretation.",
+  "test_access": false
+}

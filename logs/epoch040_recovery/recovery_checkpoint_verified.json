@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-22T13:50:42+08:00",
+  "step": 41400,
+  "epoch": 37.0304114490161,
+  "optimizer_slots": 189,
+  "model_tensors": 193,
+  "ema_tensors_per_decay": 189,
+  "rng_ranks": 4,
+  "config_exact": true,
+  "inherited_epoch35_selection": true,
+  "status": "passed"
+}

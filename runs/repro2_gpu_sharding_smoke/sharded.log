@@ -1,0 +1,23 @@
+[Gloo] Rank [Gloo] Rank 10 is connected to  is connected to 22 peer ranks.  peer ranks. Expected number of connected peer ranks is : Expected number of connected peer ranks is : 22
+
+[Gloo] Rank 2 is connected to 2 peer ranks. Expected number of connected peer ranks is : 2
+{"time": "2026-11-23T11:51:39+08:00", "completed": 8, "total": 24}
+{"time": "2026-11-23T11:51:40+08:00", "completed": 8, "total": 12}
+{"time": "2026-11-23T11:51:41+08:00", "completed": 8, "total": 24}
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3314.35it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 2915.58it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3605.37it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 75121.86it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 77361.89it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 71697.50it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 78325.00it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 72461.34it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 79512.87it/s]
+{
+  "PDCorr": 0.10489248064041021,
+  "MSE": 0.13797320903589327,
+  "MAE": 0.2711463169505199,
+  "PDS_L1": 0.7030555555555555,
+  "PDS_L2": 0.7272222222222222,
+  "PDS_cos": 0.7019444444444445
+}

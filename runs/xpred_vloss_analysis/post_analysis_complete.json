@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-19T04:25:25+08:00",
+  "stage": "completed_review_required",
+  "comparison": "runs/xpred_vloss_analysis/comparison.json",
+  "context": "runs/xpred_vloss_context/context_diagnostics.json",
+  "storage": "logs/storage_migration_xpred_vloss/state.json",
+  "main_model_mutations": false,
+  "automatic_main_switch": false,
+  "test_access": false,
+  "script_sha256": "1205b00589787fb3405078fe3cdfc901daa2d279d7de9d44142263fc16ba170c"
+}

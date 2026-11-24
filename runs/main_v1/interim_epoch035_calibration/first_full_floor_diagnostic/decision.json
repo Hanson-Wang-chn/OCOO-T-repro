@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-21T21:50:10+08:00",
+  "status": "reviewed_single_full_candidate_both_transforms_ineligible_await_second_full",
+  "completed_sha256": "e7120dc67c7a1c81ab81863758d23415aa6d5bc07aeb531d708b8ec27fd46b98",
+  "review_sha256": "d04e1d6fe2a8d06d232abb8ee414d3c196c22e88f5db6ed13eb610b685f666e5",
+  "failed_checks_floor0": [
+    "DEOver",
+    "DEPrec"
+  ],
+  "failed_checks_floor0p05": [
+    "DEPrec"
+  ],
+  "point_difference_floor0p05_minus_floor0": {
+    "PDCorr": -0.0022648507573952426,
+    "MSE": 2.5908835232256455e-05,
+    "MAE": 0.00018451859553654526,
+    "PDS_L1": 0.0022222222222221255,
+    "PDS_L2": -0.0005555555555555314,
+    "PDS_cos": -0.0008333333333333526,
+    "DEOver": 0.019248520376740935,
+    "DEPrec": 0.052990348472241,
+    "DirAgr": 0.002035976581860721
+  },
+  "interpretation": "Floor0.05 improves DE overlap and precision point estimates, but DEPrec0.15419 still misses the unchanged reproduction-defined0.18 check. PDCorr and primary decrease slightly; paired uncertainty remains for the registered full four-candidate audit. This is not a final protocol or a paper-test comparison.",
+  "next": "Finish refine_01 and unchanged four-candidate selector, compare early0.05 with its independently recomputed formal counterpart, then run the registered independent audit and review all nine metrics.",
+  "gates_from_paper": false,
+  "gates_changed": false,
+  "training_changed": false,
+  "model_or_floor_adopted": false,
+  "test_access": false
+}

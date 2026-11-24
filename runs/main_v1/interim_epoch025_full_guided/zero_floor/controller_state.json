@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-20T10:29:13+08:00",
+  "pid": 978358,
+  "stage": "completed_review_required",
+  "paired_analysis_sha256": "2b5a2eaa7bbb9e1a0f5dfc31a87b75a944131e2a9ef5f24a86985553526d90bd",
+  "full_cells": 4825,
+  "automatic_formal_selection": false,
+  "training_changed": false
+}

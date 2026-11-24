@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-21T13:16:40+08:00",
+  "status": "registered_not_launched",
+  "plan_sha256": "aea9cb95356bc8be4b9ab26e7ff6cfe647302fc0b2a616621176838ffebed00c",
+  "source_archive_sha256": "ba081402579839dcaea01db1494e61cbaf2cf387f4eed1455e8d0f5b6045db40",
+  "preserver_source_sha256": "49fbc9acab84ba4ea1de433006cac0dba4938101f9771c8f8a4c77805b18de14",
+  "follower_source_sha256": "6d2038a6c3c5ec4800e587c7ae60cdfa3e5f6d3e101dff3db2c885e65689587d",
+  "test_access": false,
+  "main_training_changed": false
+}

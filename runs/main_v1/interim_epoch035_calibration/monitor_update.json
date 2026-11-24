@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-21T13:19:23+08:00",
+  "scope": "Read-only health observer extended for frozenE35 calibration and passiveE40 preservation/comparison",
+  "before_sha256": "0e1a4d796a94ecad7b828ea16871e73ed344f2076eaf7e33b2398c396331a696",
+  "after_sha256": "75e1f22105fe23a79b4ef99831dba8d8ba2977542df64e3632f5eebe49d23e47",
+  "main_training_changed": false,
+  "scientific_sources_changed": false,
+  "test_access": false
+}

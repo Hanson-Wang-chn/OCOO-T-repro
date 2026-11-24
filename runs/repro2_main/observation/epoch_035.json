@@ -1,0 +1,30 @@
+{
+  "time": "2026-11-24T12:45:22+08:00",
+  "epoch": 35,
+  "generation_dir": "runs/repro2_main/validation_epoch_035",
+  "generated_cells": 1916,
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 1.5,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "checkpoint_sha256": "5dbdb49a239c530affc15240c3dd96f48d881739f120482c621d2ae791b93688",
+  "metrics": {
+    "PDCorr": 0.3277090274185563,
+    "MSE": 0.01237432328828921,
+    "MAE": 0.07407171620676915,
+    "PDS_L1": 0.7872222222222223,
+    "PDS_L2": 0.8019444444444447,
+    "PDS_cos": 0.831388888888889,
+    "DEOver": 0.11981295514087163,
+    "DEPrec": 0.08922122441923222,
+    "DirAgr": 0.739863446431561
+  },
+  "context": "runs/repro2_main/validation_epoch_035/context_diagnostics/context_diagnostics.json",
+  "note": "Capped validation diagnostic, not calibrated full validation or test."
+}

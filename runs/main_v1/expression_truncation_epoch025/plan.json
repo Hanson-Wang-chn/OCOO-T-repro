@@ -1,0 +1,89 @@
+{
+  "time": "2026-11-20T06:58:31+08:00",
+  "status": "completed_reviewed",
+  "question": "Earlier floors were constrained below the single smallest positive training value. Is this an unnecessarily extreme bound for diagnosing persistent generated near-zero mass and DE precision, given that only0.0162% of positive HepG2 training entries lie below0.1?",
+  "source_generation": "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+  "source_checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "stage1": "Audit exact positive-value quantiles using all59937 perturbed HepG2 training cells, and compare training/generated zero-mass profiles without computing new DE metrics.",
+  "prespecified_quantiles": [
+    0.0005,
+    0.001,
+    0.0025,
+    0.005,
+    0.01
+  ],
+  "base_floors": [
+    0.0,
+    0.05,
+    0.07,
+    0.1
+  ],
+  "maximum_fraction_of_real_positive_training_values_removed": 0.01,
+  "stage2_condition": "Review support profiles before deciding whether to evaluate all predefined thresholds. If evaluated, retain every case and original raw/clamp0 results, compute original all9 metrics with the same full validation reference and controls, require floor0 exact agreement.",
+  "different_from_prior_study": "Some thresholds may remove measured real positive entries. This is an unreported expression-truncation sensitivity diagnostic, not a claim of below-support numerical cleanup or author postprocessing.",
+  "interpretation": "No formal postprocess is selected, no metric epsilon/FDR or quality gate changed, no new model/GPU generation or test cells used for statistics/evaluation.",
+  "script": "scripts/diagnose_expression_truncation.py",
+  "script_sha256": "005348d513c8c3c426374bd4c1ca0e145aeddc3ab22e8052202f618164d26f6a",
+  "main_training_changed": false,
+  "formal_postprocess_changed": false,
+  "test_evaluation": false,
+  "audit_pid": 964328,
+  "audit_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_expression_truncation.py",
+    "--generation-dir",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+    "--outdir",
+    "runs/main_v1/expression_truncation_epoch025"
+  ],
+  "support_audit_completed_at": "2026-11-20T06:58:40+08:00",
+  "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+  "floors_before_new_metric_results": [
+    0.0,
+    0.05,
+    0.07,
+    0.1,
+    0.1130571961402893,
+    0.12557704746723175,
+    0.14515244960784912,
+    0.16297994554042816,
+    0.18690773844718933
+  ],
+  "stage2_decision": "Evaluate every predefined threshold. Nonzero floors improve training/generated gene-zero profile agreement and satisfy the1% positive-censoring bound. This evidence is support geometry, not validation metric performance.",
+  "evidence": {
+    "training_zero_fraction": 0.5557329612760066,
+    "base_generation_zero_fraction": 0.248815625,
+    "floor_0p05": {
+      "floor": 0.05,
+      "positive_training_fraction_censored": 0.0,
+      "all_training_fraction_censored": 0.0,
+      "training_mean_absolute_change": 0.0,
+      "generated_zero_fraction": 0.5232255208333334,
+      "gene_zero_fraction_correlation_with_training": 0.9938842987470048,
+      "gene_zero_fraction_mae_to_training": 0.03642418755839465,
+      "generated_mean_absolute_change": 0.0037842331375852077
+    },
+    "maximum_floor_case": {
+      "floor": 0.18690773844718933,
+      "positive_training_fraction_censored": 0.009993621947336067,
+      "all_training_fraction_censored": 0.004439836828670104,
+      "training_mean_absolute_change": 0.0007026336455084433,
+      "generated_zero_fraction": 0.5534234375000001,
+      "gene_zero_fraction_correlation_with_training": 0.9941221358209765,
+      "gene_zero_fraction_mae_to_training": 0.02256410645240002,
+      "generated_mean_absolute_change": 0.007504561257444152
+    }
+  },
+  "evaluation_pid": 964485,
+  "evaluation_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_expression_truncation.py",
+    "--generation-dir",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+    "--outdir",
+    "runs/main_v1/expression_truncation_epoch025",
+    "--evaluate"
+  ],
+  "completed_at": "2026-11-20T07:11:36+08:00",
+  "decision": "runs/main_v1/expression_truncation_epoch025/decision.json"
+}

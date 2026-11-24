@@ -1,0 +1,38 @@
+{
+  "time": "2026-11-19T17:53:30+08:00",
+  "decision": "Literal dual CFG now improves the matched-cap20 diagnostic. Keep original main training and examine the upper scale boundary before final selection. Do not callw2 globally best or disregard the expression-error tradeoff.",
+  "best_primary_point": "ema_cfg_2",
+  "best_metrics": {
+    "PDCorr": 0.26780689170821764,
+    "MSE": 0.01939240605570376,
+    "MAE": 0.09411315793792406,
+    "PDS_L1": 0.7552777777777778,
+    "PDS_L2": 0.7663888888888889,
+    "PDS_cos": 0.7388888888888889,
+    "DEOver": 0.10897938537034077,
+    "DEPrec": 0.09173765885150176,
+    "DirAgr": 0.672418082273102
+  },
+  "primary_difference": {
+    "delta": 0.1164070291217918,
+    "ci95": [
+      0.05227852437191791,
+      0.18567370490708027
+    ]
+  },
+  "ordinary_reference": {
+    "PDCorr": 0.23908504777161094,
+    "MSE": 0.013226490118540823,
+    "MAE": 0.08230679805080096,
+    "PDS_L1": 0.6641666666666667,
+    "PDS_L2": 0.6683333333333333,
+    "PDS_cos": 0.6649999999999999,
+    "DEOver": 0.0674163635034564,
+    "DEPrec": 0.06507034854245497,
+    "DirAgr": 0.6650626099847833
+  },
+  "finite_sample_caveat": "cap16/B16; these are not full-validation gate results or paper test results.",
+  "additional_plan": "runs/main_v1/interim_epoch020_guidance_boundary/plan.json",
+  "formal_policy_selected": false,
+  "test_access": false
+}

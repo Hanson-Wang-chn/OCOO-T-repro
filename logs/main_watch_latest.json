@@ -1,0 +1,387 @@
+{
+  "time": "2026-11-21T22:34:15+08:00",
+  "main_train": {
+    "time": "2026-11-21T22:32:35+08:00",
+    "event": "train",
+    "epoch": 36.99910554561718,
+    "step": 41365,
+    "loss": 0.33746166825294494,
+    "lr": 7.452375291765583e-05,
+    "cells_per_sec": 29.927141023879052,
+    "grad_norm": 0.05154557526111603,
+    "peak_gpu_GB": 17.379199488
+  },
+  "main_validation": {
+    "time": "2026-11-21T22:33:12+08:00",
+    "event": "validation",
+    "step": 41366,
+    "epoch": 37.0,
+    "raw": {
+      "velocity_mse": 0.260283924639225,
+      "endpoint_mse": 0.10433337930589914
+    },
+    "ema_0.9996": {
+      "velocity_mse": 0.2592832592781633,
+      "endpoint_mse": 0.10398453194648027
+    }
+  },
+  "main_generation": {},
+  "main_checkpoint": {
+    "step": 41366,
+    "epoch": 37.0,
+    "time": "2026-11-21T22:33:15+08:00"
+  },
+  "main_alive": true,
+  "main_finished": false,
+  "pipeline_alive": true,
+  "pipeline": {
+    "time": "2026-11-21T00:43:22+08:00",
+    "pid": 1100222,
+    "stage": "training",
+    "config": "/home/whs/ocoo-t/configs/main_selected.yaml",
+    "attached_existing_training": true,
+    "postprocess_plan_sha256": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371"
+  },
+  "observer": {
+    "time": "2026-11-21T22:33:33+08:00",
+    "pid": 785577,
+    "stage": "observing",
+    "run_dir": "/home/whs/ocoo-t/runs/main_v1",
+    "completed_epoch": 37,
+    "observed_epochs": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ],
+    "failures": {},
+    "gpu_disabled_for_observer_and_children": true,
+    "training_mutations": false,
+    "script_sha256": "f9f1a7668b98a6db6cea2e7b4e4a78fd01b5b26f633823db06ed669bb0fd17f0"
+  },
+  "observer_alive": true,
+  "epoch30_preservation": {
+    "time": "2026-11-20T23:38:34+08:00",
+    "pid": 1010863,
+    "stage": "completed",
+    "target_step": 33540,
+    "training_changed": false,
+    "record": "runs/main_v1/snapshots/step_33540/preserved.json"
+  },
+  "epoch30_follower": {
+    "time": "2026-11-21T00:38:54+08:00",
+    "pid": 1026899,
+    "stage": "completed_review_required",
+    "test_access": false,
+    "training_changed": false,
+    "result": {
+      "time": "2026-11-21T00:38:54+08:00",
+      "stage": "completed_review_required",
+      "plan_sha256": "1a52b452d4ef250858bef3992422fbdae9660c6bf4b11e49d6e11098b287d848",
+      "step": 33540,
+      "fixed_score_difference": {
+        "value": 0.01432304109412219,
+        "ci95": [
+          -0.00579462338871927,
+          0.03644093150327297
+        ]
+      },
+      "periodic_score_difference": {
+        "value": 0.008801953525000017,
+        "ci95": [
+          -0.007994444230293185,
+          0.026531295593955864
+        ]
+      },
+      "fixed_comparison_sha256": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+      "periodic_comparison_sha256": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+      "automatic_checkpoint_or_convergence_change": false,
+      "test_access": false
+    },
+    "cpu_only": true
+  },
+  "epoch30_completed": {
+    "time": "2026-11-21T00:38:54+08:00",
+    "stage": "completed_review_required",
+    "plan_sha256": "1a52b452d4ef250858bef3992422fbdae9660c6bf4b11e49d6e11098b287d848",
+    "step": 33540,
+    "fixed_score_difference": {
+      "value": 0.01432304109412219,
+      "ci95": [
+        -0.00579462338871927,
+        0.03644093150327297
+      ]
+    },
+    "periodic_score_difference": {
+      "value": 0.008801953525000017,
+      "ci95": [
+        -0.007994444230293185,
+        0.026531295593955864
+      ]
+    },
+    "fixed_comparison_sha256": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+    "periodic_comparison_sha256": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+    "automatic_checkpoint_or_convergence_change": false,
+    "test_access": false
+  },
+  "epoch35_preservation": {
+    "time": "2026-11-21T12:03:02+08:00",
+    "pid": 1100879,
+    "stage": "completed",
+    "target_step": 39130,
+    "training_changed": false,
+    "record": "runs/main_v1/snapshots/step_39130/preserved.json"
+  },
+  "epoch35_follower": {
+    "time": "2026-11-21T13:03:45+08:00",
+    "pid": 1100944,
+    "stage": "completed_review_required",
+    "test_access": false,
+    "training_changed": false,
+    "result": {
+      "time": "2026-11-21T13:03:45+08:00",
+      "stage": "completed_review_required",
+      "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+      "step": 39130,
+      "fixed_score_difference": {
+        "value": 0.011156461291118802,
+        "ci95": [
+          -0.007622752507402796,
+          0.031300992555877226
+        ]
+      },
+      "periodic_score_difference": {
+        "value": 0.009552101189415074,
+        "ci95": [
+          -0.010146107371788452,
+          0.032353939150775404
+        ]
+      },
+      "fixed_comparison_sha256": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+      "periodic_comparison_sha256": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+      "automatic_checkpoint_or_convergence_change": false,
+      "test_access": false
+    },
+    "cpu_only": true
+  },
+  "epoch35_completed": {
+    "time": "2026-11-21T13:03:45+08:00",
+    "stage": "completed_review_required",
+    "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+    "step": 39130,
+    "fixed_score_difference": {
+      "value": 0.011156461291118802,
+      "ci95": [
+        -0.007622752507402796,
+        0.031300992555877226
+      ]
+    },
+    "periodic_score_difference": {
+      "value": 0.009552101189415074,
+      "ci95": [
+        -0.010146107371788452,
+        0.032353939150775404
+      ]
+    },
+    "fixed_comparison_sha256": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+    "periodic_comparison_sha256": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+    "automatic_checkpoint_or_convergence_change": false,
+    "test_access": false
+  },
+  "epoch36_preservation": {
+    "time": "2026-11-21T17:13:15+08:00",
+    "pid": 1277287,
+    "stage": "completed",
+    "target_step": 40248,
+    "training_changed": false,
+    "record": "runs/main_v1/snapshots/step_40248/preserved.json"
+  },
+  "epoch40_preservation": {
+    "time": "2026-11-21T22:18:14+08:00",
+    "pid": 1251717,
+    "stage": "waiting_step44720",
+    "target_step": 44720,
+    "training_changed": false,
+    "current_step": 41300
+  },
+  "epoch40_follower": {
+    "time": "2026-11-21T22:33:51+08:00",
+    "pid": 1251718,
+    "stage": "waiting_for_registered_epoch40",
+    "test_access": false,
+    "training_changed": false,
+    "readiness": {
+      "ready": false,
+      "checks": {
+        "observer_epoch40_complete": false,
+        "epoch40_inference_checkpoint_exists": false,
+        "epoch40_full_snapshot_preserved": false,
+        "gpu_only_original_trainer": false
+      },
+      "gpu_pids": [
+        656512,
+        1251202
+      ],
+      "observer_epochs": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35
+      ]
+    },
+    "cpu_only": true
+  },
+  "epoch40_completed": {},
+  "epoch35_calibration": {
+    "time": "2026-11-21T13:16:04+08:00",
+    "pid": 1251199,
+    "stage": "validation_cfg_calibration",
+    "test_access": false,
+    "main_training_changed": false,
+    "child_pid": 1251202,
+    "command": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/calibrate.py",
+      "--checkpoint",
+      "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+      "--outdir",
+      "runs/main_v1/interim_epoch035_calibration/calibration",
+      "--screen-cap",
+      "16",
+      "--refine-cap",
+      "full",
+      "--batch-size",
+      "32",
+      "--scales",
+      "0.6666666667,1,1.5,2"
+    ],
+    "cpu_only": false
+  },
+  "epoch35_calibration_completed": {},
+  "epoch35_calibration_generation_progress": {
+    "screen_01": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 0.6666666667,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_00": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_02": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_03": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_04": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_full_interval": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.0,
+        "cfg_max": 1.0,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "refine_00": {
+      "completed": 4825,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.0,
+        "cfg_max": 1.0,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "refine_01": {
+      "completed": 992,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    }
+  },
+  "epoch35_calibration_progress_age_seconds": 79.5450086593628,
+  "main_config_unchanged": true,
+  "local_free_GiB": 20.147125244140625,
+  "memory_anon_GiB": 44.79029083251953,
+  "memory_file_cache_GiB": 54.042724609375,
+  "oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0\noom_kill_local 0\n",
+  "README_age_seconds": 358.2476587295532,
+  "break_reason": []
+}

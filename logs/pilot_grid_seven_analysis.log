@@ -1,0 +1,9 @@
+{
+  "trials": 7,
+  "best": {
+    "raw": "sigma_1.0_cellinit_1.0",
+    "clamped": "sigma_1.0_cellinit_1.0"
+  },
+  "grid_complete": false,
+  "outdir": "runs/pilot_grid_seven_analysis"
+}

@@ -1,0 +1,122 @@
+{
+  "paper": {
+    "version": "arXiv:2606.12838v2",
+    "method_source": "Section 3.5 cites AIVC / Virtual Cell Challenge [23] for 18,080-gene profiles",
+    "experiment_label": "Section 4.3 / Table 5 label the long-panel experiment Replogle\u2013Nadig"
+  },
+  "primary_sources": [
+    {
+      "url": "https://github.com/ArcInstitute/arc-virtual-cell-atlas/blob/main/virtual-cell-challenge/README.md",
+      "github_blob_sha": "05126fbee3baca052424e76df3149dbdbd5fab16"
+    },
+    {
+      "url": "https://github.com/alibaba-damo-academy/Lingshu-Cell/blob/main/README.md",
+      "github_blob_sha": "57f69d98f3050d0d9e40bafd90b5b938d057a1ad"
+    }
+  ],
+  "metadata_files": [
+    "paper/vcc2025_object_metadata.json",
+    "paper/vcc2025_metadata/download_manifest.json",
+    "paper/vcc2025_metadata/panel_comparison.json",
+    "paper/replogle_h5_schema_audit.json",
+    "paper/replogle_individual_files_schema_audit.json",
+    "paper/replogle_pinned_repository_tree.json"
+  ],
+  "observations": [
+    "Arc's own repository identifies the cited VCC dataset as H1 hESC, a single cellular context.",
+    "The official gene_names.csv contains 18,080 unique symbols and has no header.",
+    "The official perturbation-count CSVs have 150 / 50 / 100 target genes, unlike Table 1's 2,013 / 60 / 380.",
+    "Exact original-symbol overlap with the fixed Replogle 2,000-HVG panel is 1,865; this is not an alias-corrected biological coverage claim."
+  ],
+  "inference": "The cited public 18,080-gene panel cannot be identified as the same Replogle cohort and split from the information provided. This audit does not prove that a separate matching author dataset does not exist.",
+  "decision": "Continue the verified Replogle Table 3 reproduction. Do not substitute H1 data, zero-fill missing genes, or claim Table 5 reproduced without a matching source.",
+  "download_scope": "Object metadata and four small CSVs only; no H1 expression matrix or FASTQ downloaded.",
+  "time": "2026-11-18T03:17:52+08:00",
+  "population_comparison": {
+    "vcc2025_genes": 18080,
+    "gene_csv_has_header": false,
+    "declared_perturbed_populations": {
+      "train": {
+        "perturbations": 150,
+        "perturbed_cells": 183097
+      },
+      "validation": {
+        "perturbations": 50,
+        "perturbed_cells": 60751
+      },
+      "test": {
+        "perturbations": 100,
+        "perturbed_cells": 132670
+      }
+    },
+    "current_replogle_populations": {
+      "train": {
+        "perturbations": 2013,
+        "cells": 572545
+      },
+      "validation": {
+        "perturbations": 60,
+        "cells": 4825
+      },
+      "test": {
+        "perturbations": 380,
+        "cells": 26878
+      }
+    },
+    "exact_symbol_overlap_with_replogle_hvg": 1865,
+    "note": "Metadata audit only. No VCC expression matrices downloaded; CSV perturbation counts exclude controls. Gene overlap is by exact original symbol, without alias correction."
+  },
+  "metadata_download_bytes": 121719,
+  "known_replogle_h5_structure_confirmation": {
+    "time": "2026-11-18T16:38:21+08:00",
+    "revision": "833d2be9f604dd656ebaddf875d9ad3fbf5dda0d",
+    "source": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint",
+    "metadata_bytes_transferred_total": 4195656,
+    "expression_datasets_read": false,
+    "all_checked_files_have_no_raw_and_empty_layers": true,
+    "matrices": [
+      {
+        "file": "replogle.h5ad",
+        "X_shape": [
+          643413,
+          6642
+        ]
+      },
+      {
+        "file": "GSE264667_hepg2_raw_singlecell_01.h5ad",
+        "X_shape": [
+          145473,
+          9624
+        ]
+      },
+      {
+        "file": "GSE264667_jurkat_raw_singlecell_01.h5ad",
+        "X_shape": [
+          262956,
+          8882
+        ]
+      },
+      {
+        "file": "K562_essential_normalized_singlecell_01.h5ad",
+        "X_shape": [
+          310385,
+          8563
+        ]
+      },
+      {
+        "file": "rpe1_normalized_singlecell_01.h5ad",
+        "X_shape": [
+          247914,
+          8749
+        ]
+      }
+    ],
+    "conclusion": "The pinned merged file and four separately published cell-line files contain no hidden raw/full18,080-gene expression matrix. These files alone cannot recover a measured18,080-gene panel without inventing missing values. This does not exclude additional author or other raw data sources; the exact Table5 panel/split is still unidentified.",
+    "evidence_sha256": {
+      "paper/replogle_h5_schema_audit.json": "db941d973a376616bf0ff659567adba1183d9e71d30a0217546678b2449a3c58",
+      "paper/replogle_individual_files_schema_audit.json": "b69119374fbca9485ef317a10e1e87df8701ebde473177f2fc1166a457535b48",
+      "paper/replogle_pinned_repository_tree.json": "024a95414f6b5d1ee11f81dafb9a5b6736f004a3cbd5fb8be5b6b8820ec8006b"
+    },
+    "bounded_range_helper_sha256": "27fbe6b5b76223646ae189636f5c9d8e77d3a7ac4a2b0c77bd697ae1b9b1aff9"
+  }
+}

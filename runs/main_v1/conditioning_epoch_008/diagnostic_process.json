@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-18T02:18:09+08:00",
+  "pid": 740047,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_conditions.py",
+    "--checkpoint",
+    "runs/main_v1/last.pt",
+    "--outdir",
+    "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_008",
+    "--cells",
+    "1024",
+    "--batch-size",
+    "8",
+    "--bootstrap",
+    "1000"
+  ],
+  "stage": "completed",
+  "completed_time": "2026-11-18T02:21:11+08:00",
+  "checkpoint_step": 8944,
+  "paired_cache_verified": true
+}

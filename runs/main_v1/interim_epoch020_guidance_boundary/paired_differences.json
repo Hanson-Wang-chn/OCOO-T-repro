@@ -1,0 +1,261 @@
+{
+  "time": "2026-11-19T19:29:05+08:00",
+  "reference": "ema_none",
+  "perturbations": 60,
+  "bootstrap_draws": 2000,
+  "seed": 9232,
+  "completed_cases": [
+    "ema_none",
+    "ema_cfg_2p5",
+    "ema_cfg_3"
+  ],
+  "rows": [
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "PDCorr",
+      "reference": 0.23908504777161094,
+      "candidate": 0.2657343431298311,
+      "delta": 0.026649295358220138,
+      "delta_ci95_low": -0.0022113680745921146,
+      "delta_ci95_high": 0.05683402636098132,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "DEOver",
+      "reference": 0.0674163635034564,
+      "candidate": 0.12137919582931748,
+      "delta": 0.05396283232586109,
+      "delta_ci95_low": 0.03478994350189235,
+      "delta_ci95_high": 0.07412516211368708,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "DEPrec",
+      "reference": 0.06507034854245494,
+      "candidate": 0.09504996938823687,
+      "delta": 0.02997962084578193,
+      "delta_ci95_low": 0.017496596518401485,
+      "delta_ci95_high": 0.04282617818731398,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "DirAgr",
+      "reference": 0.6650626099847833,
+      "candidate": 0.6603454642116647,
+      "delta": -0.004717145773118547,
+      "delta_ci95_low": -0.08741165765564116,
+      "delta_ci95_high": 0.07068067098395982,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "PDS_L1",
+      "reference": 0.6641666666666667,
+      "candidate": 0.7591666666666668,
+      "delta": 0.09500000000000008,
+      "delta_ci95_low": 0.03471527777777776,
+      "delta_ci95_high": 0.16196527777777778,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "PDS_L2",
+      "reference": 0.6683333333333333,
+      "candidate": 0.7702777777777777,
+      "delta": 0.1019444444444444,
+      "delta_ci95_low": 0.04000000000000026,
+      "delta_ci95_high": 0.17113194444444443,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "PDS_cos",
+      "reference": 0.6649999999999999,
+      "candidate": 0.7502777777777777,
+      "delta": 0.08527777777777779,
+      "delta_ci95_low": 0.04250000000000009,
+      "delta_ci95_high": 0.12917361111111106,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "MSE",
+      "reference": 0.013226490118540777,
+      "candidate": 0.025032216000060194,
+      "delta": 0.011805725881519418,
+      "delta_ci95_low": 0.007511280338900768,
+      "delta_ci95_high": 0.01766047880363962,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": false
+    },
+    {
+      "case": "ema_cfg_2p5",
+      "guidance": 2.5,
+      "metric": "MAE",
+      "reference": 0.08230679805080093,
+      "candidate": 0.10377348065376277,
+      "delta": 0.021466682602961834,
+      "delta_ci95_low": 0.015558920158073307,
+      "delta_ci95_high": 0.028406765141213933,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": false
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "PDCorr",
+      "reference": 0.23908504777161094,
+      "candidate": 0.2615319525159672,
+      "delta": 0.02244690474435629,
+      "delta_ci95_low": -0.006417534465217612,
+      "delta_ci95_high": 0.052945434222371295,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "DEOver",
+      "reference": 0.0674163635034564,
+      "candidate": 0.12980715414068128,
+      "delta": 0.062390790637224885,
+      "delta_ci95_low": 0.04115694593007125,
+      "delta_ci95_high": 0.08372838208536608,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "DEPrec",
+      "reference": 0.06507034854245494,
+      "candidate": 0.09732880135245693,
+      "delta": 0.03225845281000199,
+      "delta_ci95_low": 0.019465886370811453,
+      "delta_ci95_high": 0.045626109488407125,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "DirAgr",
+      "reference": 0.6650626099847833,
+      "candidate": 0.6664893828781492,
+      "delta": 0.0014267728933659019,
+      "delta_ci95_low": -0.08425407543466866,
+      "delta_ci95_high": 0.0802525719460488,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "PDS_L1",
+      "reference": 0.6641666666666667,
+      "candidate": 0.7616666666666667,
+      "delta": 0.09750000000000003,
+      "delta_ci95_low": 0.034166666666666554,
+      "delta_ci95_high": 0.16695138888888864,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "PDS_L2",
+      "reference": 0.6683333333333333,
+      "candidate": 0.7727777777777777,
+      "delta": 0.10444444444444434,
+      "delta_ci95_low": 0.03888194444444473,
+      "delta_ci95_high": 0.17611805555555562,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "PDS_cos",
+      "reference": 0.6649999999999999,
+      "candidate": 0.7555555555555556,
+      "delta": 0.09055555555555572,
+      "delta_ci95_low": 0.043597222222222155,
+      "delta_ci95_high": 0.13972916666666627,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": true
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "MSE",
+      "reference": 0.013226490118540777,
+      "candidate": 0.032328424789011434,
+      "delta": 0.01910193467047066,
+      "delta_ci95_low": 0.013115680402843282,
+      "delta_ci95_high": 0.027219176572204278,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": false
+    },
+    {
+      "case": "ema_cfg_3",
+      "guidance": 3.0,
+      "metric": "MAE",
+      "reference": 0.08230679805080093,
+      "candidate": 0.11540407178302603,
+      "delta": 0.033097273732225096,
+      "delta_ci95_low": 0.025911199689532337,
+      "delta_ci95_high": 0.04159614418012399,
+      "valid_bootstrap_draws": 2000,
+      "higher_is_better": false
+    }
+  ],
+  "selection_score_differences": {
+    "ema_cfg_2p5": {
+      "delta": 0.12072336943229423,
+      "ci95": [
+        0.049526418748200664,
+        0.19504287209274696
+      ]
+    },
+    "ema_cfg_3": {
+      "delta": 0.11994690474435621,
+      "ci95": [
+        0.047115497607868144,
+        0.1984514478307517
+      ]
+    }
+  },
+  "source_sha256": {
+    "runs/main_v1/interim_epoch020_guidance_boundary/review_config.json": "08c39fae5d415372a302f8c536d7345d1d398ece000f98f2ed608bbf3acf0654",
+    "runs/main_v1/interim_epoch020_guidance_boundary/comparison.json": "a50a980e0aa2beaf6e2d5d39bb03f6a859b9f39467c9e6920baf8c1afd6a0808",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_none/metrics/results.csv": "47ccb60ca3ac971466e340ead502e705c494ca2dbb7d62d226a138acad101e53",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_none/evaluation_config.json": "bce30d14d0edee52f3273685f414f97b0d3f094a30be7ca99fb329d7af726e13",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_none/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/metrics/results.csv": "226332ecb65e3971668127225471fa9aceee766a86e4a007c21b035bb0c54952",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/evaluation_config.json": "e1ae30a132adebad315cd7fef77b0bd1b05cc633c16aaa10b2ddbc17b56264aa",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/metrics/results.csv": "fe03d42223b6ed3083954cdf4dafbf3e4a69e64488e13c3475ec9d839383dfdc",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/evaluation_config.json": "7e1eca19198861c41b785b24d6815b7b1a95c716dc081403b24d3266c8b11936",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035"
+  },
+  "script_sha256": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+  "note": "Validation diagnostic only; candidate minus ordinary conditional reference. Matched perturbation bootstrap, not training-seed or generation-noise uncertainty. The ordinary conditional field is excluded from final formal CFG selection."
+}

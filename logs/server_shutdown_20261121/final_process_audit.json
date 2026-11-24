@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-21T22:52:35+08:00",
+  "task_long_running_processes": [],
+  "NVIDIA_compute_process_query": "",
+  "all_original_task_PIDs_exited": true,
+  "old_host_jobs_must_not_be_restarted": true,
+  "unrelated_system_or_user_services_touched": false
+}

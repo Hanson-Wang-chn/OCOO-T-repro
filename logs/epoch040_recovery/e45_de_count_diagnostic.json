@@ -1,0 +1,79 @@
+{
+  "time": "2026-11-23T04:02:58+08:00",
+  "scope": "FDR<.05 with matching target gene excluded. Counts are descriptive, distinct from the official precision_at_N score.",
+  "test_access": false,
+  "cases": {
+    "full_floor0": {
+      "real": {
+        "median": 28.0,
+        "mean": 210.81666666666666,
+        "min": 0,
+        "max": 1507
+      },
+      "predicted": {
+        "median": 1415.5,
+        "mean": 1417.9833333333333,
+        "min": 863,
+        "max": 1828
+      },
+      "source_sha256": {
+        "runs/main_ddp_recovery/calibration/refine_00/metrics_clamped/real_de.csv": "03c3a14fb2365d090e2cce7f26b42ed128691ebb33811f6c05ad9aa2c504e4b1",
+        "runs/main_ddp_recovery/calibration/refine_00/metrics_clamped/pred_de.csv": "26d553f71f929b46659461b22dac0af37bd4a3fa0c9c8c30b13babc194a0b65b"
+      }
+    },
+    "full_floor005": {
+      "real": {
+        "median": 28.0,
+        "mean": 210.81666666666666,
+        "min": 0,
+        "max": 1507
+      },
+      "predicted": {
+        "median": 172.0,
+        "mean": 444.95,
+        "min": 0,
+        "max": 1523
+      },
+      "source_sha256": {
+        "runs/main_ddp_recovery/calibration/postprocessing/refine_00_floor_0p05/metrics/real_de.csv": "03c3a14fb2365d090e2cce7f26b42ed128691ebb33811f6c05ad9aa2c504e4b1",
+        "runs/main_ddp_recovery/calibration/postprocessing/refine_00_floor_0p05/metrics/pred_de.csv": "4fa1e45e8de625108c850bc613a1ca92c47d069186f6bc3ad521f044c4f84e4d"
+      }
+    },
+    "partial_floor0": {
+      "real": {
+        "median": 28.0,
+        "mean": 210.81666666666666,
+        "min": 0,
+        "max": 1507
+      },
+      "predicted": {
+        "median": 1356.5,
+        "mean": 1366.2,
+        "min": 806,
+        "max": 1799
+      },
+      "source_sha256": {
+        "runs/main_ddp_recovery/calibration/refine_01/metrics_clamped/real_de.csv": "03c3a14fb2365d090e2cce7f26b42ed128691ebb33811f6c05ad9aa2c504e4b1",
+        "runs/main_ddp_recovery/calibration/refine_01/metrics_clamped/pred_de.csv": "ecc0a69229f30362a0b3a4a0366bfd82c354dc6010b2ce9ba75ec10afac622ae"
+      }
+    },
+    "partial_floor005": {
+      "real": {
+        "median": 28.0,
+        "mean": 210.81666666666666,
+        "min": 0,
+        "max": 1507
+      },
+      "predicted": {
+        "median": 143.0,
+        "mean": 382.9,
+        "min": 0,
+        "max": 1421
+      },
+      "source_sha256": {
+        "runs/main_ddp_recovery/calibration/postprocessing/refine_01_floor_0p05/metrics/real_de.csv": "03c3a14fb2365d090e2cce7f26b42ed128691ebb33811f6c05ad9aa2c504e4b1",
+        "runs/main_ddp_recovery/calibration/postprocessing/refine_01_floor_0p05/metrics/pred_de.csv": "c5ddf2add6056712b39715ed4a6ddb815be712674eee0fe554a7370a644910ac"
+      }
+    }
+  }
+}

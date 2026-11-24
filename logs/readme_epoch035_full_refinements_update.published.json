@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-21T17:30:21+08:00",
+  "previous_publication_unix": 1795252521.8040333,
+  "publication_interval_seconds": 899.9991507530212,
+  "plan_sha256": "498169f6a30e3325e43f0aa2bbde1842c585e34558d99ed43caddf6fc3fe8229",
+  "readme_sha256": "bc73d2becf4a276729e9b444ea5d448bee6437ac8e1d3271d8ad4ceac22130f8",
+  "backup": "logs/README_before_epoch035_full_refinements.md"
+}

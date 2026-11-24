@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-21T22:35:21+08:00",
+  "pid": 1251718,
+  "stage": "waiting_for_registered_epoch40",
+  "test_access": false,
+  "training_changed": false,
+  "readiness": {
+    "ready": false,
+    "checks": {
+      "observer_epoch40_complete": false,
+      "epoch40_inference_checkpoint_exists": false,
+      "epoch40_full_snapshot_preserved": false,
+      "gpu_only_original_trainer": false
+    },
+    "gpu_pids": [
+      656512,
+      1251202
+    ],
+    "observer_epochs": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ]
+  },
+  "cpu_only": true
+}

@@ -1,0 +1,25 @@
+{
+  "reference": "runs/main_v1/interim_epoch010_review/ema_none",
+  "candidate": "runs/main_v1/interim_epoch020_review/ema_none",
+  "factor": "checkpoint",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch010_review/ema_none/evaluation_config.json": "1ebb5b5303a46e8383dff0eb836082eac67a096b5df7fa42c36c435351efd3bc",
+    "runs/main_v1/interim_epoch010_review/ema_none/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch010_review/ema_none/generation_state.json": "a4f56f7f9ee3559879e19becd63a9a5f9f652e583e4c133d23bb6217615a1e8e",
+    "runs/main_v1/interim_epoch010_review/ema_none/prediction.npy": "5f2a6ef3aa34290e0e2456967365252010c26f1e2527e795e357cdf1273395f7",
+    "runs/main_v1/interim_epoch010_review/ema_none/prediction_raw.npy": "7803463aafb65be789ee33b4850b6a39b5f9b7c927ec5f951c8decb6219aa99d",
+    "runs/main_v1/interim_epoch010_review/ema_none/metrics/summary.json": "51262dc47a93891e7c7ea559e5feab2ef3d6fd70e6c91f188359868c66e289fb",
+    "runs/main_v1/interim_epoch010_review/ema_none/metrics/results.csv": "c1373cd7dc32cf124a174c1435e0b96d4e75a293ad88e5acbe9c5f89fae389a7",
+    "runs/main_v1/interim_epoch020_review/ema_none/evaluation_config.json": "bce30d14d0edee52f3273685f414f97b0d3f094a30be7ca99fb329d7af726e13",
+    "runs/main_v1/interim_epoch020_review/ema_none/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_review/ema_none/generation_state.json": "a4f56f7f9ee3559879e19becd63a9a5f9f652e583e4c133d23bb6217615a1e8e",
+    "runs/main_v1/interim_epoch020_review/ema_none/prediction.npy": "c08e03f1905a408c813ffb36205f5fc709b118d2e0c6cf431dd5f9f14ce2d78f",
+    "runs/main_v1/interim_epoch020_review/ema_none/prediction_raw.npy": "b3f00943ead700950b80ca2ffcd44c7a38c601b7b7021ce980cfbbb752e40e69",
+    "runs/main_v1/interim_epoch020_review/ema_none/metrics/summary.json": "363f8586cd99bc8c79674a8841a6ced7e67d4c9767172812678def109be8f393",
+    "runs/main_v1/interim_epoch020_review/ema_none/metrics/results.csv": "47ccb60ca3ac971466e340ead502e705c494ca2dbb7d62d226a138acad101e53"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "66d5f36ad6c2d9e9ab65b698581a01deaa4a884b957630535f13446f2799fd40",
+  "bootstrap": 2000,
+  "seed": 9232
+}

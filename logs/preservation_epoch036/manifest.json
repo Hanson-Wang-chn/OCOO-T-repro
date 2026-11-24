@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-21T16:34:42+08:00",
+  "status": "registered_not_launched",
+  "registration_sha256": "ba451f8296dad0101bc200d64f2cc26a34f1f5da19f1edd43ecc105a688c72dd",
+  "source_archive_sha256": "326dd0661141354e000aa12c3a65bd44e384ec6a3030f2d037d9433f31fb3753",
+  "source_sha256": "9d956927e706fc7b394762bfd79ac4a28d3f9fe0193f0c27d410afe08401d9e4",
+  "test_access": false
+}

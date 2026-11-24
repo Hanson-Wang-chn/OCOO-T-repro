@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-20T12:44:46+08:00",
+  "reason": "Read-only check after a transient rise in cgroup anonymous memory; no training or GPU setting changed.",
+  "anonymous_GiB": 56.92762756347656,
+  "reclaimable_file_GiB": 42.360633850097656,
+  "memory_limit_GiB": 105.0,
+  "memory_failure_count": 0,
+  "oom_control": "oom_kill_disable 0\nunder_oom 0\noom_kill 0\noom_kill_local 0\n",
+  "decision": "Continue unchanged: memory headroom includes ample reclaimable file cache and OOM count is zero. Keep the existing90GiB anonymous-memory alert.",
+  "main_pid": 656512,
+  "trial_pid": 979910
+}

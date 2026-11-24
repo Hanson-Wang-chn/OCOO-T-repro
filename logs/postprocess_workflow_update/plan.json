@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-20T19:38:02+08:00",
+  "status": "registered_before_implementation_not_deployed",
+  "scope": "Opt-in validation-only postprocessing candidate evaluation, preserving original clamp0 workflow and main training. No formal calibration/test or new GPU job now.",
+  "reason": "FullE25 .05 study improved DEPrec0.059665 CI[0.023200,0.092758], but PD worsened0.001825 and full checks still failed. Need independent mature full validation and explicit provenance before any adoption.",
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "model_and_sampler": "Unchanged defaultEMA0.9996, positive literal dualCFG, uniformHeun50/finalEuler, fixed seed/batch and raw samples.",
+  "calibration_search": "Keep v2 positiveCFG grid, diagnostic ordinary case, and two full-population base refinements unchanged. Evaluate both postprocessing choices on each complete refined raw cache using CPU.",
+  "objective": "Among full candidates passing every existing check, maximize PDCorr+mean(PDS_L1,PDS_L2,PDS_cos). If none pass, stop before test and review. Preserve original calibration selection, all raw samples and clamp0 results.",
+  "quality_thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "implementation_constraints": [
+    "New postprocessing selector and test wrapper; preserve existing calibration and generation implementations.",
+    "Extend validation promotion with an optional explicit selection file and zero floor, retaining default0 numerics and old schema when unused.",
+    "Positive floor requires a registered validation selection and full-source/cache/indices/metric checks; reject mixed-RNG interim stitched caches as formal refinements.",
+    "Formal test only after complete validation passes original checks; freeze selection before test, generate one complete clamp0 baseline through existing evaluate.py, then derive selected floor on CPU. Retain both nine-metric results, with explicit labels.",
+    "No change to E30 pinned source files or waiting main parent until implementation/tests and a separate deployment record are ready."
+  ],
+  "required_checks": [
+    "Existing validation promotion/adoption/calibration CPU tests",
+    "Feasible-candidate choice versus higher primary score that fails DE or error checks; refuse capped or ordinary references",
+    "Actual prior nonnegative/.05 metric agreement without promoting that interim cache as formal validation",
+    "Provenance/corruption/nonfinite/threshold/selection tamper rejection and interruption/resume",
+    "Test wrapper refuses generation before complete passing validation; immutable selected settings and complete split indices"
+  ],
+  "old_promotion_source_sha256": "bf957b57e3335c25837f0a7f096da5687c671bffc005f46ba34082d89f6626b4",
+  "test_access": false,
+  "new_gpu_jobs": 0,
+  "main_training_changed": false
+}

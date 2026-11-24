@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-18T07:24:58+08:00",
+  "pid": 759080,
+  "stage": "complete",
+  "cases": [
+    "floor_0",
+    "floor_0p01",
+    "floor_0p02",
+    "floor_0p05",
+    "floor_0p07"
+  ]
+}

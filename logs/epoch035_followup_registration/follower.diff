@@ -1,0 +1,83 @@
+--- completedE30
++++ registeredE35
+@@ -1,4 +1,4 @@
+-"""Wait for the existing E30 observation; run one registered fixed-CFG case."""
++"""Wait for the existing E35 observation; run one registered fixed-CFG case."""
+ import argparse
+ import json
+ import os
+@@ -30,7 +30,7 @@
+ def verify_registered_sources(plan):
+     for path, digest in plan['source_sha256'].items():
+         if file_sha256(path) != digest:
+-            raise ValueError('Registered source changed before E30 review: ' + path)
++            raise ValueError('Registered source changed before E35 review: ' + path)
+     if file_sha256('configs/main_selected.yaml') != plan['main_config_sha256']:
+         raise ValueError('Main configuration changed')
+     for path, digest in plan['prerequisite_sha256'].items():
+@@ -48,9 +48,9 @@
+     output = subprocess.check_output(
+         ['nvidia-smi', '--query-compute-apps=pid', '--format=csv,noheader,nounits'], text=True)
+     gpu_pids = sorted({int(line.strip()) for line in output.splitlines() if line.strip()})
+-    checks = {'observer_epoch30_complete': 30 in observer.get('observed_epochs', []),
+-              'epoch30_inference_checkpoint_exists': Path(plan['candidate_checkpoint']).exists(),
+-              'epoch30_full_snapshot_preserved': Path(plan['full_snapshot_record']).exists(),
++    checks = {'observer_epoch35_complete': 35 in observer.get('observed_epochs', []),
++              'epoch35_inference_checkpoint_exists': Path(plan['candidate_checkpoint']).exists(),
++              'epoch35_full_snapshot_preserved': Path(plan['full_snapshot_record']).exists(),
+               'gpu_only_original_trainer': set(gpu_pids).issubset({plan['trainer_pid']})}
+     return {'ready': all(checks.values()), 'checks': checks, 'gpu_pids': gpu_pids,
+             'observer_epochs': observer.get('observed_epochs', [])}
+@@ -61,7 +61,7 @@
+     import yaml
+     torch.set_num_threads(1)
+     full_record = read(plan['full_snapshot_record'])
+-    assert full_record['step'] == plan['candidate_step'] == 33540
++    assert full_record['step'] == plan['candidate_step'] == 39130
+     full = torch.load(full_record['archive_path'], map_location='cpu', mmap=True, weights_only=False)
+     checkpoint = torch.load(plan['candidate_checkpoint'], map_location='cpu', mmap=True, weights_only=False)
+     assert full['step'] == checkpoint['step'] == plan['candidate_step']
+@@ -116,9 +116,9 @@
+                 ready = readiness(plan)
+                 if ready['ready']:
+                     break
+-                state('waiting_for_registered_epoch30', readiness=ready, cpu_only=True)
++                state('waiting_for_registered_epoch35', readiness=ready, cpu_only=True)
+                 if time.monotonic() >= deadline:
+-                    raise TimeoutError('E30 readiness not reached within48h')
++                    raise TimeoutError('E35 readiness not reached within48h')
+                 time.sleep(30)
+             verify_registered_sources(plan)
+             state('verifying_mature_checkpoint', cpu_only=True)
+@@ -132,7 +132,7 @@
+                 for record in (previous, fingerprint):
+                     record['checkpoint'].pop('time', None)
+                 if previous != fingerprint:
+-                    raise ValueError('E30 output directory belongs to another protocol')
++                    raise ValueError('E35 output directory belongs to another protocol')
+             else:
+                 atomic_json(execution, fingerprint)
+             if not (out / 'candidate/metrics/summary.json').exists():
+@@ -140,18 +140,18 @@
+             execute(plan['fixed_comparison_command'], 'fixed_cfg_comparison', cpu=True)
+             execute(plan['periodic_comparison_command'], 'periodic_comparison', cpu=True)
+             fixed = read(out / 'paired/comparison.json')
+-            periodic = read('runs/main_v1/observation/epoch025_to030/comparison.json')
++            periodic = read('runs/main_v1/observation/epoch030_to035/comparison.json')
+             completed = {'time': timestamp(), 'stage': 'completed_review_required',
+                          'plan_sha256': file_sha256(plan_path), 'step': plan['candidate_step'],
+                          'fixed_score_difference': fixed['score_difference'],
+                          'periodic_score_difference': periodic['score_difference'],
+                          'fixed_comparison_sha256': file_sha256(out / 'paired/comparison.json'),
+-                         'periodic_comparison_sha256': file_sha256('runs/main_v1/observation/epoch025_to030/comparison.json'),
++                         'periodic_comparison_sha256': file_sha256('runs/main_v1/observation/epoch030_to035/comparison.json'),
+                          'automatic_checkpoint_or_convergence_change': False, 'test_access': False}
+             atomic_json(out / 'completed.json', completed)
+             state('completed_review_required', result=completed, cpu_only=True)
+-            readme_event('第30轮ordinary与固定w2的E25→30九指标配对分析完成，等待联合复核；'
+-                         '未自动更改断点选择或收敛策略。见 `runs/main_v1/interim_epoch030_fixed_cfg/completed.json`。')
++            readme_event('第35轮ordinary与固定w2的E30→35九指标配对分析完成，等待联合复核；'
++                         '未自动更改断点选择或收敛策略。见 `runs/main_v1/interim_epoch035_fixed_cfg/completed.json`。')
+         except BaseException as exc:
+             state('failed', error=repr(exc))
+             raise

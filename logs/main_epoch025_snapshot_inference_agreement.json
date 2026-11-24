@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-20T05:54:50+08:00",
+  "step": 27950,
+  "snapshot": "runs/main_v1/snapshots/step_27950/preserved.json",
+  "periodic_inference_checkpoint": "runs/main_v1/validation_epoch_025/model.pt",
+  "periodic_inference_checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "weights": "ema_0.9996",
+  "config_equal": true,
+  "all_parameter_and_buffer_tensors_bitwise_equal": true,
+  "tensor_count": 193,
+  "parameters_in_ema": 189,
+  "gpu_used": false
+}

@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-24T19:37:09+08:00",
+  "completed_step": 50310,
+  "best_step": 39130,
+  "markers": {
+    "time": "2026-11-24T19:34:42+08:00",
+    "step": 50310,
+    "epoch": 45.0,
+    "planned_epochs": 60,
+    "stopped_early": true,
+    "early_reference_epoch": 35,
+    "best_validation_generation": 1.134560879270408
+  },
+  "optimizer_slots": 189,
+  "ranks_saved": 4,
+  "sha256": {
+    "last.pt": "af2a7dfef99e21851e8207ac20cbe7f2c4d634f1ac0055a6cff4278a051e563b",
+    "best_generation.pt": "88180a502e5b08d6ba1d6ba2a03caeb7081fff82d216f5ac6c9d00d012b92d09",
+    "final_ema.pt": "5e3432837feae851b03d3126c4f8d773d12579053ad7024031345b0d430d4473",
+    "validation_epoch_035/model.pt": "5dbdb49a239c530affc15240c3dd96f48d881739f120482c621d2ae791b93688"
+  }
+}

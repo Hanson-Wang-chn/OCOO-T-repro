@@ -1,0 +1,253 @@
+{
+  "items": [
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/CRISPR_S1_L001_R1_001.fastq.gz",
+      "generation": "1770569224494270",
+      "size": "28905449729"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/CRISPR_S1_L001_R2_001.fastq.gz",
+      "generation": "1770572014448222",
+      "size": "39500677836"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/CRISPR_S1_L002_R1_001.fastq.gz",
+      "generation": "1770569835655688",
+      "size": "25663563562"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/CRISPR_S1_L002_R2_001.fastq.gz",
+      "generation": "1770569839210690",
+      "size": "38284687976"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L001_R1_001.fastq.gz",
+      "generation": "1770572902279705",
+      "size": "50523574815"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L001_R2_001.fastq.gz",
+      "generation": "1770572531136381",
+      "size": "98910532617"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L002_R1_001.fastq.gz",
+      "generation": "1770570804191187",
+      "size": "44177742071"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L002_R2_001.fastq.gz",
+      "generation": "1770569553733532",
+      "size": "91310496757"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L003_R1_001.fastq.gz",
+      "generation": "1770574355894753",
+      "size": "127284560143"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L003_R2_001.fastq.gz",
+      "generation": "1770575068031217",
+      "size": "265534801778"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L004_R1_001.fastq.gz",
+      "generation": "1770571389279707",
+      "size": "127349607253"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L004_R2_001.fastq.gz",
+      "generation": "1770569509698550",
+      "size": "261355508699"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L005_R1_001.fastq.gz",
+      "generation": "1770569365830141",
+      "size": "123752321484"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane1/GEX_S1_L005_R2_001.fastq.gz",
+      "generation": "1770571355345180",
+      "size": "258285510253"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/CRISPR_S1_L001_R1_001.fastq.gz",
+      "generation": "1770572904107298",
+      "size": "26186317400"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/CRISPR_S1_L001_R2_001.fastq.gz",
+      "generation": "1770571745522492",
+      "size": "35425101798"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/CRISPR_S1_L002_R1_001.fastq.gz",
+      "generation": "1770571581608863",
+      "size": "23980214790"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/CRISPR_S1_L002_R2_001.fastq.gz",
+      "generation": "1770569662964943",
+      "size": "35270173752"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L001_R1_001.fastq.gz",
+      "generation": "1770572148432368",
+      "size": "72938222867"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L001_R2_001.fastq.gz",
+      "generation": "1770571637716652",
+      "size": "143987623837"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L002_R1_001.fastq.gz",
+      "generation": "1770572766708817",
+      "size": "62367650236"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L002_R2_001.fastq.gz",
+      "generation": "1770578060108524",
+      "size": "130006276040"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L003_R1_001.fastq.gz",
+      "generation": "1770576383139451",
+      "size": "169142069160"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L003_R2_001.fastq.gz",
+      "generation": "1770577790007615",
+      "size": "355737453305"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L004_R1_001.fastq.gz",
+      "generation": "1770578063821080",
+      "size": "169008952611"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L004_R2_001.fastq.gz",
+      "generation": "1770580982487210",
+      "size": "349668421091"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L005_R1_001.fastq.gz",
+      "generation": "1770576454476469",
+      "size": "173874811471"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane2/GEX_S1_L005_R2_001.fastq.gz",
+      "generation": "1770575380901183",
+      "size": "365704781740"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/CRISPR_S1_L001_R1_001.fastq.gz",
+      "generation": "1770575733170806",
+      "size": "25019991707"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/CRISPR_S1_L001_R2_001.fastq.gz",
+      "generation": "1770581611045694",
+      "size": "34259588168"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/CRISPR_S1_L002_R1_001.fastq.gz",
+      "generation": "1770584323294722",
+      "size": "21965983242"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/CRISPR_S1_L002_R2_001.fastq.gz",
+      "generation": "1770584432488685",
+      "size": "32721341498"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L001_R1_001.fastq.gz",
+      "generation": "1770579874941782",
+      "size": "70219001107"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L001_R2_001.fastq.gz",
+      "generation": "1770584451666343",
+      "size": "138813876856"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L002_R1_001.fastq.gz",
+      "generation": "1770578647545035",
+      "size": "60653440524"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L002_R2_001.fastq.gz",
+      "generation": "1770584389420489",
+      "size": "126341785401"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L003_R1_001.fastq.gz",
+      "generation": "1770581443572116",
+      "size": "173921617338"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L003_R2_001.fastq.gz",
+      "generation": "1770581099248305",
+      "size": "365908154496"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L004_R1_001.fastq.gz",
+      "generation": "1770581159533046",
+      "size": "173085900157"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L004_R2_001.fastq.gz",
+      "generation": "1770583968773368",
+      "size": "358122752243"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L005_R1_001.fastq.gz",
+      "generation": "1770583469651316",
+      "size": "172555539290"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/FASTQ/Lane3/GEX_S1_L005_R2_001.fastq.gz",
+      "generation": "1770583980512355",
+      "size": "362500671229"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/gene_names.csv",
+      "generation": "1765906114880540",
+      "size": "116023",
+      "md5Hash": "PnSuaCYgIvYvcHAb7FolCQ=="
+    },
+    {
+      "name": "virtual-cell-challenge/2025/test/adata_Test.h5ad",
+      "generation": "1765905295402700",
+      "size": "11950739168"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/test/pert_counts_Test.csv",
+      "generation": "1765906557881304",
+      "size": "1894",
+      "md5Hash": "uN65ffyTEiKmM/RBiukicA=="
+    },
+    {
+      "name": "virtual-cell-challenge/2025/train/adata_Training.h5ad",
+      "generation": "1765904883947296",
+      "size": "15482497461"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/train/pert_counts_Training.csv",
+      "generation": "1765906581937013",
+      "size": "2824",
+      "md5Hash": "bh3NLwtPpGQowaNqmLiQdA=="
+    },
+    {
+      "name": "virtual-cell-challenge/2025/validation/adata_Validation.h5ad",
+      "generation": "1765905029341737",
+      "size": "6928967541"
+    },
+    {
+      "name": "virtual-cell-challenge/2025/validation/pert_counts_Validation.csv",
+      "generation": "1765906468730692",
+      "size": "978",
+      "md5Hash": "GxyJJsYNW+VZ2fyzHbfbEA=="
+    }
+  ]
+}

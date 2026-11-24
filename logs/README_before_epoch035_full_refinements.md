@@ -1,0 +1,98 @@
+# OCOO-T 复现（Replogle–Nadig）
+
+在本机 A100 40 GB / conda `ocoo-t` 上独立实现 [OCOO-T v2](https://arxiv.org/abs/2606.12838v2)。仅下载并运行 Replogle–Nadig；Tahoe100M / PBMC 未下载。
+
+**当前：第35轮两协议复核完成，综合增益区间跨0，固定CFG误差继续上升。原训练继续；冻结E35已开始完整验证校准，最终设置未采用，测试尚未运行。**
+
+<!-- LIVE_TRAINING_START -->
+
+实时训练：`runs/main_v1`，epoch **36.006**，优化步 **40255**，loss **0.33868**，约 **29.3 cells/s**，更新于 2026-11-21T17:15:21+08:00。
+
+<!-- LIVE_TRAINING_END -->
+
+## 数据与模型
+
+| 划分 | 扰动细胞 | 扰动数 | 细胞系 |
+| --- | ---: | ---: | --- |
+| 训练 | 572,545 | 2,013 | 4 |
+| 验证 | 4,825 | 60 | HepG2 |
+| 测试 | 26,878 | 380 | HepG2 |
+
+另有39,165个真实对照，其中HepG2为4,976个。公开数据与Arc原文件SHA256一致；沿用已发布efficacy过滤、库大小归一化/log1p、固定2,000 HVG及官方拆分，不重复归一化。保留56个batch、全部官方条件；验证含2个、测试标签含8个全局未见扰动。ESM2匹配3,545/3,618个联合基因，缺失处理与来源见[设计说明](paper/implementation_notes.md)。
+
+模型为12层/768宽/12头连续基因Transformer：RMSNorm、QK-norm、SwiGLU、adaLN-zero，从第4层起32个条件token，冻结5120维ESM2，2,000 HVG不patch，v-prediction rectified flow。保持有效batch512（micro16、累积32）、lr1e-4、5轮warmup、cosine、BF16及双EMA；推理用默认EMA0.9996、均匀50步Heun/末步Euler、原式双条件CFG。原文8×H100，本机通过累积保持有效batch。
+
+未公开选择：noise_std=1、time_scale=1、cell_init_std=1；最多100轮、至少20轮，按预登记验证点分数/10轮耐心及0.002最小增益判断。训练长度属于复现选择。每5轮生成验证；单训练进程约69–71 cells/s，每轮约2.3小时。明确参数、解释与试验依据均[单独记录](paper/implementation_notes.md)。
+
+## 当前结果与尝试
+
+下表是第35轮**限量验证诊断**；两行采样协议不同，绝对分数不直接比较，均非测试成绩。
+
+| 协议 | 预测细胞 | PDCorr | PDS_L2 | MSE | DEPrec | DirAgr |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 普通条件场，cap32/B32 | 1,916 | 0.2961 | 0.7119 | 0.00943 | 0.0784 | 0.7092 |
+| 固定w2/[0.1,0.9]，cap16/B16 | 960 | 0.2931 | 0.7967 | 0.02312 | 0.0875 | 0.7046 |
+
+E30→35的综合差（PDCorr+meanPDS）：ordinary +0.00955[-0.01015,0.03235]，固定CFG +0.01116[-0.00762,0.03130]，均跨0。固定CFG的MSE增0.00106[0.00024,0.00211]、MAE增0.00232[0.00110,0.00376]；其余七项差值区间均跨0。全部九项均值/差值/2000次区间独立核算最大差0，DirAgr按官方方式保留53个有效条件。见[联合决定](runs/main_v1/interim_epoch035_fixed_cfg/decision.json)、[配对图](runs/main_v1/interim_epoch035_fixed_cfg/joint_review/paired_protocols.png)。
+
+两套点排序均偏好E35，保持原模型、训练日程和收敛规则；best/early_reference按原规则为E35，最早可能E45停止，后续改善会顺延。完整模型/AdamW/双EMA/RNG已[SHA归档](runs/main_v1/snapshots/step_39130/preserved.json)，193个推理tensor与默认EMA及buffers一致；下一周期E40[完整归档和一次固定CFG比较](runs/main_v1/interim_epoch040_fixed_cfg/plan.json)已登记并被动等待。
+
+因连续两期固定CFG误差上升，13:16开始对冻结E35运行[中途完整验证校准](runs/main_v1/interim_epoch035_calibration/plan.json)：沿用既有B32正CFG强度/区间搜索、两个全4,825细胞细化，随后CPU比较0/.05并检查全部原质量线。主训练并行，未增加架构试验、改明确参数或放宽检查线；不同B16诊断缓存不混入此次校准。结果尚待完成，最终测试设置未采用。
+
+已完成的主要尝试：
+
+- 同一16,384训练细胞/384更新/seed42，完成noise×time×cell-init八组及独立投影、x预测、fan-in共11组短对照。保留当前共享投影/v预测/Xavier主模型；fan-in综合点估计略高但区间跨0，误差与DEPrec更差，不据短试跑推断成熟结果。详见[八组网格](runs/pilot_grid_complete/summary.json)、[补充三组](runs/supplemental_trials_complete.json)。这些是raw短预算诊断，正式推理始终用成熟EMA。
+- E20七种CFG强度及区间检查显示：w2附近辨别收益趋平，更强引导增加误差；保留两区间供成熟验证，未擅改原公式或50步。见[强度](runs/main_v1/interim_epoch020_all_scales/decision.json)、[区间](runs/main_v1/interim_epoch020_interval_review/decision.json)。
+- E25全4,825细胞固定CFG诊断：PD=0.3306、PDS_L2=0.7908、DEPrec=0.0989；同一raw样本用0.05处理后DEPrec=0.1586，增益0.0597[0.0232,0.0928]，但PD降至0.3288，完整检查仍未过。该阈值仅保留为候选，拼接诊断缓存不冒充正式细化。见[全量决定](runs/main_v1/interim_epoch025_full_guided/decision.json)。
+- E25→26成熟batch-retention单因素对照综合增益区间跨0，MSE/MAE/方向退化，未采用或追加预算；CPU批次结构检查也不支持简单漏学或均值补丁。见[成熟对照](runs/batch_dropout_mature_trial/decision.json)、[结构检查](runs/main_v1/batch_structure_epoch025/decision.json)。
+
+## 运行与恢复
+
+环境、公开数据和缓存已准备好。首次数据步骤由[scripts/download_data.py](scripts/download_data.py)、[scripts/prepare_data.py](scripts/prepare_data.py)完成；版本锁定于[environment.yml](environment.yml)和[environment.lock.txt](environment.lock.txt)。已有环境与缓存时的接续命令：
+
+```bash
+conda activate ocoo-t
+python scripts/run_experiment.py --config configs/main_selected.yaml --postprocess-plan logs/postprocess_workflow_update/plan.json
+python scripts/status.py --run-dir runs/main_v1
+```
+
+流程：训练 → 原正CFG搜索/两个全量验证细化 → 完整0/.05候选检查 → 固定验证选择 → 全量测试/九指标报告。以本复现预设检查（非论文公开的验证阈值）筛选完整候选，再按既有综合目标选择；无合格候选则停在测试前继续分析。原校准selected、raw与clamp0结果保留；任何正阈值均标记为原文未公开选择，测试保留同一raw的clamp0对照，参数先锁定再生成。
+
+后续流程已通过35项CPU检查，并[安全接续原训练](logs/postprocess_workflow_update/deployment.json)，训练进程/优化器/日程保持。**中途E35完整验证校准已启动；训练结束后的最终选择和测试尚未执行，0.05仍是候选。** 中途控制器另通过4项CPU进程/中断/无合格候选检查；只操作自己的验证子进程，缓存可恢复。新选择器拒绝限量/拼接/来源不一致缓存，实际旧全量缓存0.05九指标重算差0；原核验及源码见[核验记录](logs/postprocess_workflow_update/verification.json)。
+
+同一命令可恢复，进程锁防止重复运行。`last.pt`每50步及每轮原子保存模型、AdamW、双EMA、随机状态和待办评估，生成按批落盘；旧完整断点SHA核验后转存现有挂载。README每15分钟汇总，日志/断点频率保持。进度见[训练曲线](runs/main_v1/progress.png)、`runs/main_v1/events.jsonl`；最终报告将写入`runs/main_v1/results/REPORT.md`，clamp0对照写入`results_clamp0/`。
+
+## 关键记录（北京时间）
+
+| 时间 | 进展 / 决策 |
+| --- | --- |
+| 11-17 00:54–01:02 | 建立ocoo-t环境，保存论文/数据，核对SHA、HVG及官方拆分。 |
+| 11-17 07:00 | 开始第一版全量训练；明确的论文参数保持。 |
+| 11-17 10:59 | 改为15分钟更新README；step1871安全保存后原配置续训。 |
+| 11-18 | 条件干预、E10/E15生成和数量/近零诊断完成，差距仍在，保留原训练。 |
+| 11-19 | 11组短对照、E20验证与CFG强度/区间检查完成，未采用无稳定收益的替代配置。 |
+| 11-20 05:38–18:56 | E25全量/0.05诊断、成熟batch对照和CPU结构检查完成；保留主模型，阈值待新完整验证。 |
+| 11-20 23:38 | E30完整模型/优化器/双EMA/RNG归档，随后完成周期生成。 |
+| 11-21 00:39–00:46 | 两协议联合复核；安全接续验证流程，原训练保持；E35完整归档/单次CFG被动后续已登记。 |
+| 11-21 12:03–13:18 | E35完整归档/联合复核完成；原训练继续，启动冻结E35全量验证校准，登记E40后续。 |
+
+详细设计、未知项与尝试见[implementation_notes.md](paper/implementation_notes.md)，完整时间记录见[progress_history.md](logs/progress_history.md)，重复旧摘要保留于发布备份。
+
+范围：当前优先复现可核对数据与拆分的Table3主基准。Table5的18,080-gene公开引用与Replogle面板不一致，[官方来源审计](paper/long_panel_source_audit.json)已保存；control-context/MMD消融尚未运行，不以其他数据或补零面板冒充长面板实验。
+
+
+- 2026-11-21T13:16:04+08:00：冻结E35默认EMA开始中途完整验证校准：沿用原正CFG搜索和两个全量4825细化，随后检查0/.05；主训练及质量线保持，不执行测试。见 `runs/main_v1/interim_epoch035_calibration/plan.json`。
+
+- 2026-11-21T13:29:52+08:00：验证集 CFG 校准 `screen_00`：w=None，区间 [0.1,0.9]，PDCorr=0.2503，PDS_L2=0.7044，MSE=0.01318（非测试）。
+
+- 2026-11-21T13:35:29+08:00：冻结E35完整校准的四候选/九指标/全部配对区间分析已登记，3项CPU检查通过；首个普通参考完成，正CFG粗筛进行中。训练、原质量线和测试隔离保持；见 `runs/main_v1/interim_epoch035_calibration/analysis_plan.json`。
+
+- 2026-11-21T14:16:24+08:00：验证集 CFG 校准 `screen_01`：w=0.6666666667，区间 [0.1,0.9]，PDCorr=0.2552，PDS_L2=0.7161，MSE=0.01283（非测试）。
+
+- 2026-11-21T15:01:46+08:00：验证集 CFG 校准 `screen_02`：w=1.0，区间 [0.1,0.9]，PDCorr=0.2801，PDS_L2=0.7678，MSE=0.01334（非测试）。
+
+- 2026-11-21T15:47:29+08:00：验证集 CFG 校准 `screen_03`：w=1.5，区间 [0.1,0.9]，PDCorr=0.2959，PDS_L2=0.7869，MSE=0.01633（非测试）。
+
+- 2026-11-21T16:33:00+08:00：验证集 CFG 校准 `screen_04`：w=2.0，区间 [0.1,0.9]，PDCorr=0.3003，PDS_L2=0.8039，MSE=0.02134（非测试）。
+
+- 2026-11-21T16:35:22+08:00：已登记第36轮step40248完整状态额外归档，只在原训练保存后用CPU复制/SHA核验到现有挂载，保留E35评估完成后的恢复备份；原训练、校准和策略保持。见 `logs/preservation_epoch036/registration.json`。

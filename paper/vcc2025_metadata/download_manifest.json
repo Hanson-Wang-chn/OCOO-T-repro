@@ -1,0 +1,96 @@
+[
+  {
+    "name": "virtual-cell-challenge/2025/gene_names.csv",
+    "generation": "1765906114880540",
+    "bytes": 116023,
+    "sha256": "e29ff3512b4c2440759bfb2a34577049b2f49df786b3e19c2a91b565de47b38e",
+    "local_path": "paper/vcc2025_metadata/gene_names.csv",
+    "rows_including_header": 18080,
+    "first_rows": [
+      [
+        "SAMD11"
+      ],
+      [
+        "NOC2L"
+      ],
+      [
+        "KLHL17"
+      ]
+    ]
+  },
+  {
+    "name": "virtual-cell-challenge/2025/test/pert_counts_Test.csv",
+    "generation": "1765906557881304",
+    "bytes": 1894,
+    "sha256": "c4f0ba439d7c3121562ca1f79fa3854d8f96fc7c3de24dca23eb9e7c41c8923a",
+    "local_path": "paper/vcc2025_metadata/pert_counts_Test.csv",
+    "rows_including_header": 101,
+    "first_rows": [
+      [
+        "target_gene",
+        "n_cells",
+        "median_umi_per_cell"
+      ],
+      [
+        "GRB10",
+        "4074",
+        "54815.0"
+      ],
+      [
+        "STXBP1",
+        "3751",
+        "55077.0"
+      ]
+    ]
+  },
+  {
+    "name": "virtual-cell-challenge/2025/train/pert_counts_Training.csv",
+    "generation": "1765906581937013",
+    "bytes": 2824,
+    "sha256": "633d202be221418bdbac16efd8cb169666de0ef6469a4e9bfdfb64666ea81a89",
+    "local_path": "paper/vcc2025_metadata/pert_counts_Training.csv",
+    "rows_including_header": 151,
+    "first_rows": [
+      [
+        "target_gene",
+        "n_cells",
+        "median_umi_per_cell"
+      ],
+      [
+        "TMSB4X",
+        "4760",
+        "53652.0"
+      ],
+      [
+        "PRCP",
+        "4331",
+        "54594.0"
+      ]
+    ]
+  },
+  {
+    "name": "virtual-cell-challenge/2025/validation/pert_counts_Validation.csv",
+    "generation": "1765906468730692",
+    "bytes": 978,
+    "sha256": "9da5dec8c25aff1bddc01cf76897cf94ec65f8f877beee29482c543bf1e7e43b",
+    "local_path": "paper/vcc2025_metadata/pert_counts_Validation.csv",
+    "rows_including_header": 51,
+    "first_rows": [
+      [
+        "target_gene",
+        "n_cells",
+        "median_umi_per_cell"
+      ],
+      [
+        "SH3BP4",
+        "2925",
+        "54551.0"
+      ],
+      [
+        "ZNF581",
+        "2502",
+        "53803.5"
+      ]
+    ]
+  }
+]

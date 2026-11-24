@@ -1,0 +1,109 @@
+{
+  "time": "2026-11-18T09:20:21+08:00",
+  "strata": {
+    "seen_training_label": 58,
+    "globally_unseen_label": 2
+  },
+  "unseen_validation_labels": [
+    "NFKBIE",
+    "SMN2"
+  ],
+  "records": {
+    "ema_none": {
+      "seen_training_label": {
+        "perturbations": 58,
+        "metrics": {
+          "PDCorr": 0.24441289837504254,
+          "MSE": 0.012710396320848067,
+          "MAE": 0.07923419388203781,
+          "PDS_L1": 0.639367816091954,
+          "PDS_L2": 0.6410919540229885,
+          "PDS_cos": 0.5761494252873562,
+          "DEOver": 0.05248078532021747,
+          "DEPrec": 0.05414065043814034,
+          "DirAgr": 0.6572609754935237
+        }
+      },
+      "globally_unseen_label": {
+        "perturbations": 2,
+        "metrics": {
+          "PDCorr": 0.028059482574462905,
+          "MSE": 0.0213919505476951,
+          "MAE": 0.10300910845398895,
+          "PDS_L1": 0.1166666666666666,
+          "PDS_L2": 0.13333333333333336,
+          "PDS_cos": 0.5083333333333332,
+          "DEOver": 0.092899800928998,
+          "DEPrec": 0.1096774193548387,
+          "DirAgr": 0.2710683477106835
+        }
+      }
+    },
+    "ema_cfg_1": {
+      "seen_training_label": {
+        "perturbations": 58,
+        "metrics": {
+          "PDCorr": 0.23479520562426026,
+          "MSE": 0.012187678294641659,
+          "MAE": 0.07734536906254699,
+          "PDS_L1": 0.654022988505747,
+          "PDS_L2": 0.6528735632183907,
+          "PDS_cos": 0.6310344827586207,
+          "DEOver": 0.05822842704064068,
+          "DEPrec": 0.05720084811406689,
+          "DirAgr": 0.6401605576221184
+        }
+      },
+      "globally_unseen_label": {
+        "perturbations": 2,
+        "metrics": {
+          "PDCorr": -0.0297854170203209,
+          "MSE": 0.021512256935238748,
+          "MAE": 0.1027879863977432,
+          "PDS_L1": 0.13333333333333325,
+          "PDS_L2": 0.16666666666666663,
+          "PDS_cos": 0.4083333333333333,
+          "DEOver": 0.0975447909754479,
+          "DEPrec": 0.1151452282157676,
+          "DirAgr": 0.25680159256801594
+        }
+      }
+    },
+    "ema_cfg_1p5": {
+      "seen_training_label": {
+        "perturbations": 58,
+        "metrics": {
+          "PDCorr": 0.21122760210459218,
+          "MSE": 0.013210596998446929,
+          "MAE": 0.07925653688866513,
+          "PDS_L1": 0.6505747126436782,
+          "PDS_L2": 0.6479885057471264,
+          "PDS_cos": 0.667816091954023,
+          "DEOver": 0.06860429575616996,
+          "DEPrec": 0.05997262575754924,
+          "DirAgr": 0.6270619548140115
+        }
+      },
+      "globally_unseen_label": {
+        "perturbations": 2,
+        "metrics": {
+          "PDCorr": -0.10578114539384839,
+          "MSE": 0.0229013715870678,
+          "MAE": 0.1046987362205982,
+          "PDS_L1": 0.19999999999999996,
+          "PDS_L2": 0.225,
+          "PDS_cos": 0.19166666666666665,
+          "DEOver": 0.1134704711347047,
+          "DEPrec": 0.1335807050092764,
+          "DirAgr": 0.2282680822826808
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "runs/main_v1/interim_epoch010_review/ema_none/metrics/results.csv": "c1373cd7dc32cf124a174c1435e0b96d4e75a293ad88e5acbe9c5f89fae389a7",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/metrics/results.csv": "f7f92f1e8b07027d4cb011954c37354ef0cb54bf0cf8a0923f2f46e3c3402cb7",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/metrics/results.csv": "cda87b38e85da17fbfa8f780b2e433639af81c2bcfd54045fa300912a7bb0de3"
+  },
+  "note": "Post-hoc validation interpretation only. PDS uses the original fixed 60-condition comparison library; stratum means do not rerun PDS with fewer references. Official aggregate and final selection remain all 60 conditions. No test expression used."
+}

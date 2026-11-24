@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-21T12:04:33+08:00",
+  "epoch": 35,
+  "step": 39130,
+  "full_checkpoint": {
+    "time": "2026-11-21T12:03:02+08:00",
+    "step": 39130,
+    "source_run": "/home/whs/ocoo-t/runs/main_v1",
+    "snapshot_path": "/home/whs/ocoo-t/runs/main_v1/snapshots/step_39130/full.pt",
+    "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt",
+    "sha256": "5bbdfe093771ea2f38deffa7a7ad6d633cd27d3f1a33ff00458abd2d79aafb7a",
+    "bytes": 2818999011,
+    "ema_decays": [
+      "0.9999",
+      "0.9996"
+    ],
+    "pending_generation_epoch": 35,
+    "full_model_optimizer_ema_rng_retained": true,
+    "active_training_or_last_checkpoint_modified": false,
+    "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"
+  },
+  "periodic_generation_in_progress": true,
+  "inference_tensor_verification": "pending registered follower after ordinary generation",
+  "main_trainer_pid_unchanged": 656512,
+  "main_pipeline_pid": 1100222,
+  "main_config_and_registered_sources_unchanged": true,
+  "postprocess_workflow_activated": true,
+  "positive_floor_adopted": false,
+  "formal_calibration_started": false,
+  "test_access": false
+}

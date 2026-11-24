@@ -1,0 +1,5 @@
+{"time": "2026-11-17T01:06:00+08:00", "event": "start", "step": 0, "training_cells": 512, "steps_per_epoch": 1, "parameters": 362601, "gpu": "NVIDIA A100-PCIE-40GB"}
+{"time": "2026-11-17T01:06:01+08:00", "event": "train", "epoch": 1.0, "step": 1, "loss": 1.6587650775909424, "lr": 0.0001, "cells_per_sec": 602.0027651887407, "grad_norm": 2.7746143341064453, "peak_gpu_GB": 0.552840704}
+{"time": "2026-11-17T01:06:01+08:00", "event": "validation", "step": 1, "epoch": 1.0, "raw": {"velocity_mse": 1.6030335426330566, "endpoint_mse": 0.7406625151634216}, "ema_0.9996": {"velocity_mse": 1.6040980815887451, "endpoint_mse": 0.7411854863166809}}
+{"time": "2026-11-17T01:06:02+08:00", "event": "train", "epoch": 2.0, "step": 2, "loss": 1.6541227102279663, "lr": 0.0001, "cells_per_sec": 843.8008836201685, "grad_norm": 2.7608182430267334, "peak_gpu_GB": 0.555822592}
+{"time": "2026-11-17T01:06:02+08:00", "event": "validation", "step": 2, "epoch": 2.0, "raw": {"velocity_mse": 1.6018352508544922, "endpoint_mse": 0.740079402923584}, "ema_0.9996": {"velocity_mse": 1.6040972471237183, "endpoint_mse": 0.7411849498748779}}

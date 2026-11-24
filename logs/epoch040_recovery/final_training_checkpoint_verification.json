@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-23T02:01:59+08:00",
+  "training": {
+    "time": "2026-11-23T02:00:32+08:00",
+    "step": 61490,
+    "epoch": 55.0,
+    "planned_epochs": 100,
+    "stopped_early": true,
+    "early_reference_epoch": 45,
+    "best_validation_generation": 1.026460669732618
+  },
+  "best_checkpoint_step": 50310,
+  "best_checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "last_complete_checkpoint_sha256": "4d00c5b3657d10fb8ecc1b1d69761343164f563ee1d7fb2db3111e651c116268",
+  "final_ema_sha256": "2f51e2a754d3f0101f910a1da148fdc9984499484bd4168fc2dec186e17b2b95",
+  "all193_best_and_final_tensors_match_respective_full_state": true,
+  "AdamW_slots": 189,
+  "RNG_ranks": 4,
+  "test_access": false
+}

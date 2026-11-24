@@ -1,0 +1,93 @@
+{
+  "raw": {
+    "reference_score": 0.7337498116275916,
+    "candidate_score": 0.7573256121910419,
+    "score_difference": 0.023575800563450322,
+    "score_difference_ci95": [
+      -0.0012115281045573512,
+      0.04934862752083717
+    ]
+  },
+  "clamped": {
+    "reference_score": 0.7436110329910837,
+    "candidate_score": 0.7591728714288696,
+    "score_difference": 0.015561838437785913,
+    "score_difference_ci95": [
+      -0.007841128698785158,
+      0.038825795767190634
+    ]
+  }
+}
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "pilot_sigma_1.0_cellinit_1.0": {
+      "source": "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "evaluated_postprocess": "none",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0010494717139919536,
+        "jurkat": 0.14419970158179257,
+        "k562": 0.11101272132755229,
+        "rpe1": 0.1068052315506025
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.08170491756768453,
+        "clipped": 0.07451612347527789,
+        "raw_ratio_to_real": 0.6473669242245595,
+        "clipped_ratio_to_real": 0.5904084490308265
+      },
+      "metrics": {
+        "PDCorr": 0.2179164782942583,
+        "MSE": 0.013664484303444625,
+        "MAE": 0.08211884573101998,
+        "PDS_L1": 0.5161111111111112,
+        "PDS_L2": 0.5208333333333334,
+        "PDS_cos": 0.5105555555555557
+      }
+    },
+    "pilot_value_fanin": {
+      "source": "runs/pilot_value_fanin/validation_epoch_012",
+      "generated_cells": 960,
+      "evaluated_postprocess": "none",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0007136596973788096,
+        "jurkat": 0.14344492817213655,
+        "k562": 0.10990399529262374,
+        "rpe1": 0.10516168382314427
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.11369021201297663,
+        "clipped": 0.10835614412758805,
+        "raw_ratio_to_real": 0.9007937962156188,
+        "clipped_ratio_to_real": 0.8585307449407865
+      },
+      "metrics": {
+        "PDCorr": 0.2305663529317826,
+        "MSE": 0.015381838862473766,
+        "MAE": 0.08767576403915882,
+        "PDS_L1": 0.5347222222222221,
+        "PDS_L2": 0.5358333333333334,
+        "PDS_cos": 0.5097222222222222
+      }
+    }
+  }
+}
+{"time": "2026-11-19T06:31:59+08:00", "event": "checkpoint_archived", "run": "runs/pilot_value_fanin", "original_path": "/home/whs/ocoo-t/runs/pilot_value_fanin/last.pt", "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt", "bytes": 2818998819, "sha256": "ecfc67f049c38fdf19f2d325d64b67fd5f3a63a9144c0cc455bf9783e754f320", "step": 384, "full_model_optimizer_ema_rng_retained": true, "original_path_is_symlink": true}

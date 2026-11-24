@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-19T14:25:48+08:00",
+  "decision": "Continue original full-data main training. All3 PDS paired increments are positive but DE improvement is small; no evidence to declare convergence or paper parity. Run a bounded frozen epoch20 CFG screen to separate inference settings from training progress.",
+  "periodic_metrics": {
+    "PDCorr": 0.300116267313327,
+    "MSE": 0.009013737190980465,
+    "MAE": 0.06667922666917245,
+    "PDS_L1": 0.6888888888888888,
+    "PDS_L2": 0.701388888888889,
+    "PDS_cos": 0.6969444444444446,
+    "DEOver": 0.08975126229973615,
+    "DEPrec": 0.07686461996545925,
+    "DirAgr": 0.6767609566915194
+  },
+  "paired_change": {
+    "value": 0.03222451900668788,
+    "ci95": [
+      0.010182656372620315,
+      0.05720410100891923
+    ]
+  },
+  "current_protocol": "ordinary conditional EMA0.9996,cap32,B32,Heun50",
+  "formal_calibration_or_test_done": false,
+  "next_generation_epoch": 25,
+  "inference_plan": "runs/main_v1/interim_epoch020_review/plan.json"
+}

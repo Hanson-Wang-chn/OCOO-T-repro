@@ -1,0 +1,110 @@
+{
+  "time": "2026-11-20T06:58:40+08:00",
+  "training_cells": 59937,
+  "training_entries": 119874000,
+  "positive_training_entries": 53256067,
+  "target_cell_line": "hepg2",
+  "training_zero_fraction": 0.5557329612760066,
+  "minimum_positive_training_value": 0.07278690487146378,
+  "training_positive_quantiles": {
+    "0.0005": 0.1130571961402893,
+    "0.001": 0.12557704746723175,
+    "0.0025": 0.14515244960784912,
+    "0.005": 0.16297994554042816,
+    "0.01": 0.18690773844718933
+  },
+  "cases": [
+    {
+      "floor": 0.0,
+      "positive_training_fraction_censored": 0.0,
+      "all_training_fraction_censored": 0.0,
+      "training_mean_absolute_change": 0.0,
+      "generated_zero_fraction": 0.248815625,
+      "gene_zero_fraction_correlation_with_training": 0.9160987355322423,
+      "gene_zero_fraction_mae_to_training": 0.30693973661928364,
+      "generated_mean_absolute_change": 0.0
+    },
+    {
+      "floor": 0.05,
+      "positive_training_fraction_censored": 0.0,
+      "all_training_fraction_censored": 0.0,
+      "training_mean_absolute_change": 0.0,
+      "generated_zero_fraction": 0.5232255208333334,
+      "gene_zero_fraction_correlation_with_training": 0.9938842987470048,
+      "gene_zero_fraction_mae_to_training": 0.03642418755839465,
+      "generated_mean_absolute_change": 0.0037842331375852077
+    },
+    {
+      "floor": 0.07,
+      "positive_training_fraction_censored": 0.0,
+      "all_training_fraction_censored": 0.0,
+      "training_mean_absolute_change": 0.0,
+      "generated_zero_fraction": 0.5293484375,
+      "gene_zero_fraction_correlation_with_training": 0.9938123066207836,
+      "gene_zero_fraction_mae_to_training": 0.031928457562732535,
+      "generated_mean_absolute_change": 0.00414071400177617
+    },
+    {
+      "floor": 0.1,
+      "positive_training_fraction_censored": 0.00016204726496231876,
+      "all_training_fraction_censored": 7.199225853813171e-05,
+      "training_mean_absolute_change": 6.847977650488855e-06,
+      "generated_zero_fraction": 0.533459375,
+      "gene_zero_fraction_correlation_with_training": 0.9937779745328578,
+      "gene_zero_fraction_mae_to_training": 0.029292099516992846,
+      "generated_mean_absolute_change": 0.004487300285965034
+    },
+    {
+      "floor": 0.1130571961402893,
+      "positive_training_fraction_censored": 0.0004956806141918065,
+      "all_training_fraction_censored": 0.0002202145586198842,
+      "training_mean_absolute_change": 2.264778296057283e-05,
+      "generated_zero_fraction": 0.5352317708333333,
+      "gene_zero_fraction_correlation_with_training": 0.9937898685835973,
+      "gene_zero_fraction_mae_to_training": 0.028193732194846256,
+      "generated_mean_absolute_change": 0.004676386456343175
+    },
+    {
+      "floor": 0.12557704746723175,
+      "positive_training_fraction_censored": 0.000999848524300527,
+      "all_training_fraction_censored": 0.0004441997430635501,
+      "training_mean_absolute_change": 4.969872211356895e-05,
+      "generated_zero_fraction": 0.5371958333333333,
+      "gene_zero_fraction_correlation_with_training": 0.993801375801511,
+      "gene_zero_fraction_mae_to_training": 0.02709918867936333,
+      "generated_mean_absolute_change": 0.0049111067506604055
+    },
+    {
+      "floor": 0.14515244960784912,
+      "positive_training_fraction_censored": 0.002495847092876761,
+      "all_training_fraction_censored": 0.0011088225970602465,
+      "training_mean_absolute_change": 0.00014044161949367076,
+      "generated_zero_fraction": 0.5411104166666667,
+      "gene_zero_fraction_correlation_with_training": 0.9938641664906543,
+      "gene_zero_fraction_mae_to_training": 0.0252001808148556,
+      "generated_mean_absolute_change": 0.005443064943317154
+    },
+    {
+      "floor": 0.16297994554042816,
+      "positive_training_fraction_censored": 0.004995637398458283,
+      "all_training_fraction_censored": 0.002219397033551896,
+      "training_mean_absolute_change": 0.00031243691535375924,
+      "generated_zero_fraction": 0.5457052083333334,
+      "gene_zero_fraction_correlation_with_training": 0.9939763770165987,
+      "gene_zero_fraction_mae_to_training": 0.02352535881425497,
+      "generated_mean_absolute_change": 0.0061527532232579
+    },
+    {
+      "floor": 0.18690773844718933,
+      "positive_training_fraction_censored": 0.009993621947336067,
+      "all_training_fraction_censored": 0.004439836828670104,
+      "training_mean_absolute_change": 0.0007026336455084433,
+      "generated_zero_fraction": 0.5534234375000001,
+      "gene_zero_fraction_correlation_with_training": 0.9941221358209765,
+      "gene_zero_fraction_mae_to_training": 0.02256410645240002,
+      "generated_mean_absolute_change": 0.007504561257444152
+    }
+  ],
+  "protocol_sha256": "c84490b784e283257bd85d37e777098bc8054370fbbe46ae88ed234712b3ebea",
+  "note": "Train-derived sensitivity grid. Measured real positive entries may be censored; this is an unreported postprocessing variant, not below-support numerical cleanup. No validation DE metric has been computed by the audit."
+}

@@ -1,0 +1,46 @@
+{
+  "time": "2026-11-19T19:33:44+08:00",
+  "status": "completed_reviewed",
+  "question": "At fixedw2, does including early/late times in the literal dual-CFG field improve DE/perturbation recovery or exacerbate the mean-error tradeoff?",
+  "motivation": "The prespecified larger-scale bracket is complete. w2.5 has only+0.00432 primary score over2, CI[-0.00516,0.01528], while MSE/MAE increase0.00564/0.00966; w3 worsens errors further. Stop increasing strength; examine the already planned interval dimension. Late-time denoising/zero-tie diagnostics also motivate measuring this factor separately.",
+  "diagnostic_reference": "runs/main_v1/interim_epoch020_review/ema_cfg_2",
+  "reference_interval": [
+    0.1,
+    0.9
+  ],
+  "candidate_interval": [
+    0.0,
+    1.0
+  ],
+  "fixed_guidance": 2.0,
+  "choice_of_strength": "Usew2 to isolate the interval at a substantial guided effect without the unsupported tiny primary gain and larger expression errors ofw2.5/3. This is a diagnostic choice, not a declaration thatw2 is the globally best formal setting.",
+  "unchanged": {
+    "checkpoint": "runs/main_v1/validation_epoch_020/model.pt",
+    "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+    "step": 22360,
+    "weights": "ema_0.9996",
+    "split": "validation",
+    "cap": 16,
+    "cells": 960,
+    "conditions": 60,
+    "batch_size": 16,
+    "seed": 4242,
+    "steps": 50,
+    "noise_std": 1.0,
+    "clamp": true,
+    "de": true
+  },
+  "metrics": "all9; same raw/nonnegative retention, matched indices/noise and reference library; paired2,000-condition intervals and context/variance diagnostics",
+  "new_generation_cases": 1,
+  "reference_reused_without_generation": true,
+  "training_changed": false,
+  "formal_policy_changed": false,
+  "test_access": false,
+  "runner_source_sha256": "124f41ffc7b2d8afaa45537fe7b5727e763a22c4210f1cfb6f02bc733513ae2a",
+  "comparison_source_sha256": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+  "comparison_actual_cache_verification": "logs/compare_inference_cases_actual_cache_agreement.json",
+  "objective": "same PDCorr+mean3PDS plus review of all9 and original future quality gates",
+  "controller_pid": 906363,
+  "completed_at": "2026-11-19T20:29:03+08:00",
+  "decision": "runs/main_v1/interim_epoch020_interval_review/decision.json"
+}

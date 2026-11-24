@@ -1,0 +1,60 @@
+{
+  "reference": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+  "reference_config": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/model.pt",
+    "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+    "step": 22360,
+    "weights": "ema_0.9996",
+    "split": "validation",
+    "cap": 16,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "de": true,
+    "seed": 4242,
+    "steps": 50,
+    "batch_size": 16,
+    "noise_std": 1.0,
+    "model": {
+      "dim": 768,
+      "depth": 12,
+      "heads": 12,
+      "mlp_ratio": 4.0,
+      "swiglu_convention": "param_matched",
+      "context_tokens": 32,
+      "context_start": 3,
+      "drop_prob": 0.1,
+      "value_hidden": 768,
+      "time_dim": 256,
+      "time_scale": 1.0,
+      "pos_encoding": true,
+      "batch_condition": true,
+      "cell_init_std": 1.0,
+      "batch_init_std": 0.02,
+      "grad_checkpoint": false
+    }
+  },
+  "reference_sha256": {
+    "evaluation_config.json": "1f4064cd4f39d1b3502c94cc7466303a7a8966b1f22a04db1ed841dd48e4939a",
+    "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "prediction.npy": "60f3b81a0c023e32b1fbfe886f5499c43e189c32228e7544f4109457bc5f6b3a",
+    "prediction_raw.npy": "a5c2537fb114231f086533e6f163f66cca5ba8f95760c5f460a0ec59397db9de",
+    "metrics/summary.json": "4a622e5cfe762f29d5b25fac64678192fdc905a4d54dfdc037c22ba9c985bf01",
+    "metrics/results.csv": "b27da1b56e257fc58c99cd8d9e0488c3d4f8725f2b147b0005db8f179cad9cc2"
+  },
+  "candidate_interval": [
+    0.0,
+    1.0
+  ],
+  "source_sha256": {
+    "/home/whs/ocoo-t/scripts/run_interval_review.py": "124f41ffc7b2d8afaa45537fe7b5727e763a22c4210f1cfb6f02bc733513ae2a",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "scripts/compare_inference_cases.py": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+    "src/ocoot/model.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f"
+  },
+  "purpose": "One-factor interval diagnostic, no formal settings or test selection"
+}

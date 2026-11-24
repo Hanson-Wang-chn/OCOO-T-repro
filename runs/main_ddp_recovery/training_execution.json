@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-22T13:47:53+08:00",
+  "start_step": 41374,
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 119312,
+      "start_tick": 517120705
+    },
+    {
+      "rank": 1,
+      "pid": 119313,
+      "start_tick": 517120705
+    },
+    {
+      "rank": 2,
+      "pid": 119314,
+      "start_tick": 517120705
+    },
+    {
+      "rank": 3,
+      "pid": 119315,
+      "start_tick": 517120705
+    }
+  ],
+  "cuda_visible_devices": "0,1,2,3",
+  "world_size": 4,
+  "local_micro_batch": 16,
+  "accumulation": 8,
+  "accumulation_by_rank": [
+    8,
+    8,
+    8,
+    8
+  ],
+  "global_batch": 512,
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "dynamo_ddp_optimizer": false,
+  "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+  "max_ema_endpoint_relative_gap": 0.04
+}

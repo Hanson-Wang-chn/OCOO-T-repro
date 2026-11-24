@@ -1,0 +1,96 @@
+Processing ./paper/cell_eval_reference
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: anndata>=0.12.10 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from cell-eval==0.8.2) (0.12.19)
+Collecting igraph>=0.11.8 (from cell-eval==0.8.2)
+  Downloading igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl.metadata (4.4 kB)
+Collecting pdex>=0.2.5 (from cell-eval==0.8.2)
+  Downloading pdex-0.3.0-py3-none-any.whl.metadata (6.0 kB)
+Collecting polars>=1.30.0 (from cell-eval==0.8.2)
+  Downloading polars-2.1.0-py3-none-any.whl.metadata (11 kB)
+Collecting pyarrow>=18.0.0 (from cell-eval==0.8.2)
+  Downloading pyarrow-26.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Requirement already satisfied: pyyaml>=6.0.2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from cell-eval==0.8.2) (6.0.3)
+Requirement already satisfied: scanpy>=1.10.3 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from cell-eval==0.8.2) (1.11.5)
+Requirement already satisfied: tqdm>=4.67.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from cell-eval==0.8.2) (4.70.1)
+Requirement already satisfied: array-api-compat>=1.7.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (1.16.0)
+Requirement already satisfied: h5py>=3.8 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (3.16.0)
+Requirement already satisfied: legacy-api-wrap in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (1.5)
+Requirement already satisfied: natsort in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (8.4.0)
+Requirement already satisfied: numpy>=1.26 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (2.3.5)
+Requirement already satisfied: packaging>=24.2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (26.3)
+Requirement already satisfied: pandas!=2.1.2,<3,>=2.1.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (2.3.3)
+Requirement already satisfied: scipy!=1.17.0,>=1.12 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (1.17.1)
+Requirement already satisfied: scverse-misc>=0.0.3 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (0.0.3)
+Requirement already satisfied: zarr!=3.0.*,>=2.18.7 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from anndata>=0.12.10->cell-eval==0.8.2) (3.1.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from pandas!=2.1.2,<3,>=2.1.0->anndata>=0.12.10->cell-eval==0.8.2) (4.0.0)
+Requirement already satisfied: pytz>=2020.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from pandas!=2.1.2,<3,>=2.1.0->anndata>=0.12.10->cell-eval==0.8.2) (2026.6)
+Requirement already satisfied: tzdata>=2022.7 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from pandas!=2.1.2,<3,>=2.1.0->anndata>=0.12.10->cell-eval==0.8.2) (2026.6)
+Collecting texttable>=1.6.2 (from igraph>=0.11.8->cell-eval==0.8.2)
+  Downloading texttable-1.7.3-py2.py3-none-any.whl.metadata (10.0 kB)
+Collecting numba-mwu>=0.2.0 (from pdex>=0.2.5->cell-eval==0.8.2)
+  Downloading numba_mwu-0.2.0-py3-none-any.whl.metadata (8.3 kB)
+Requirement already satisfied: numba>=0.64.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from pdex>=0.2.5->cell-eval==0.8.2) (0.68.1)
+Collecting numpy>=1.26 (from anndata>=0.12.10->cell-eval==0.8.2)
+  Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: llvmlite<0.51,>=0.50.0dev0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from numba>=0.64.0->pdex>=0.2.5->cell-eval==0.8.2) (0.50.0)
+Collecting polars-runtime-32==2.1.0 (from polars>=1.30.0->cell-eval==0.8.2)
+  Downloading polars_runtime_32-2.1.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Requirement already satisfied: joblib in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (1.6.0)
+Requirement already satisfied: matplotlib>=3.7.5 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (3.11.2)
+Requirement already satisfied: networkx>=2.7.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (3.6.1)
+Requirement already satisfied: patsy!=1.0.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (1.0.3)
+Requirement already satisfied: pynndescent>=0.5.13 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (0.7.0)
+Requirement already satisfied: scikit-learn>=1.1.3 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (1.9.1)
+Requirement already satisfied: seaborn>=0.13.2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (0.13.2)
+Requirement already satisfied: session-info2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (0.4.1)
+Requirement already satisfied: statsmodels>=0.14.5 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (0.15.0)
+Requirement already satisfied: typing-extensions in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (4.16.0)
+Requirement already satisfied: umap-learn>=0.5.6 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scanpy>=1.10.3->cell-eval==0.8.2) (0.6.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (0.12.1)
+Requirement already satisfied: fonttools>=4.28.2 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (4.68.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (1.5.1)
+Requirement already satisfied: pillow>=9 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (13.0.0)
+Requirement already satisfied: pyparsing>=3 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from matplotlib>=3.7.5->scanpy>=1.10.3->cell-eval==0.8.2) (3.3.3)
+Requirement already satisfied: cloudpickle>=3.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from joblib->scanpy>=1.10.3->cell-eval==0.8.2) (3.1.2)
+Requirement already satisfied: narwhals>=2.0.1 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scikit-learn>=1.1.3->scanpy>=1.10.3->cell-eval==0.8.2) (2.28.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from scikit-learn>=1.1.3->scanpy>=1.10.3->cell-eval==0.8.2) (3.8.0)
+Requirement already satisfied: formulaic>=1.1.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from statsmodels>=0.14.5->scanpy>=1.10.3->cell-eval==0.8.2) (1.2.2)
+Requirement already satisfied: interface-meta>=1.2.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from formulaic>=1.1.0->statsmodels>=0.14.5->scanpy>=1.10.3->cell-eval==0.8.2) (2.0.1)
+Requirement already satisfied: wrapt>=1.0 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from formulaic>=1.1.0->statsmodels>=0.14.5->scanpy>=1.10.3->cell-eval==0.8.2) (2.5.2)
+Requirement already satisfied: donfig>=0.8 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from zarr!=3.0.*,>=2.18.7->anndata>=0.12.10->cell-eval==0.8.2) (0.8.1.post1)
+Requirement already satisfied: google-crc32c>=1.5 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from zarr!=3.0.*,>=2.18.7->anndata>=0.12.10->cell-eval==0.8.2) (1.9.0)
+Requirement already satisfied: numcodecs>=0.14 in /home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages (from zarr!=3.0.*,>=2.18.7->anndata>=0.12.10->cell-eval==0.8.2) (0.16.6)
+Downloading igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl (5.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 6.3 MB/s  0:00:01
+Downloading pdex-0.3.0-py3-none-any.whl (16 kB)
+Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 18.1 MB/s  0:00:00
+Downloading numba_mwu-0.2.0-py3-none-any.whl (17 kB)
+Downloading polars-2.1.0-py3-none-any.whl (911 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 911.5/911.5 kB 35.8 MB/s  0:00:00
+Downloading polars_runtime_32-2.1.0-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (53.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.9/53.9 MB 9.7 MB/s  0:00:05
+Downloading pyarrow-26.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (55.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.0/55.0 MB 11.4 MB/s  0:00:04
+Downloading texttable-1.7.3-py2.py3-none-any.whl (10 kB)
+Building wheels for collected packages: cell-eval
+  Building wheel for cell-eval (pyproject.toml): started
+  Building wheel for cell-eval (pyproject.toml): finished with status 'done'
+  Created wheel for cell-eval: filename=cell_eval-0.8.2-py3-none-any.whl size=44887 sha256=ce29c3c4ceefada17847a61e1ee21c52c67b88c0341a06f54c6ef28b55c8d572
+  Stored in directory: /tmp/pip-ephem-wheel-cache-pn0or78c/wheels/f9/53/d4/bab2502e18045ff78479c24ae6ce545b37b41eb7f8f97990f1
+Successfully built cell-eval
+Installing collected packages: texttable, pyarrow, polars-runtime-32, numpy, igraph, polars, numba-mwu, pdex, cell-eval
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.3.5
+    Uninstalling numpy-2.3.5:
+      Successfully uninstalled numpy-2.3.5
+
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+ocoot-reproduction 0.1.0 requires torch==2.8.0, which is not installed.
+Successfully installed cell-eval-0.8.2 igraph-1.0.0 numba-mwu-0.2.0 numpy-2.4.6 pdex-0.3.0 polars-2.1.0 polars-runtime-32-2.1.0 pyarrow-26.0.1 texttable-1.7.3

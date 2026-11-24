@@ -1,0 +1,55 @@
+{
+  "time": "2026-11-23T04:00:24+08:00",
+  "stage": "validation_needs_review",
+  "training": {
+    "time": "2026-11-23T01:47:41+08:00",
+    "event": "train",
+    "epoch": 55.0,
+    "step": 61490,
+    "loss": 0.33006598353385924,
+    "lr": 4.587250663013931e-05,
+    "cells_per_sec": 266.53053400664203,
+    "grad_norm": 0.055583540350198746,
+    "peak_gpu_GB": 17.924446208,
+    "world_size": 4,
+    "local_micro_batch": 16,
+    "accumulation": 8,
+    "accumulation_by_rank": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "global_batch": 512,
+    "gpu": "NVIDIA A100-PCIE-40GB",
+    "dynamo_ddp_optimizer": false,
+    "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+    "max_ema_endpoint_relative_gap": 0.04
+  },
+  "last_validation": {
+    "step": 61490,
+    "raw_endpoint_mse": 0.10524393431842327,
+    "ema_endpoint_mse": 0.1049621794372797,
+    "ema_relative_gap": -0.0026771602845166997
+  },
+  "checkpoint": {
+    "step": 61490,
+    "epoch": 55.0,
+    "time": "2026-11-23T02:00:31+08:00"
+  },
+  "preserved_steps": [
+    42250,
+    44720
+  ],
+  "e35_e40_comparison": "logs/epoch040_recovery/repaired_e35_e40/comparison.json",
+  "free_gib": 2929.8,
+  "pipeline_exit_code": 2,
+  "pipeline_state": {
+    "time": "2026-11-23T04:00:24+08:00",
+    "pid": 244544,
+    "stage": "validation_needs_review",
+    "config": "/home/dataset-assist-0/whs/ocoo-t/configs/main_ddp_recovery.yaml",
+    "postprocess_review": "runs/main_ddp_recovery/calibration/postprocessing/review.json",
+    "postprocess_plan_sha256": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371"
+  }
+}

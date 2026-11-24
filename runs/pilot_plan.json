@@ -1,0 +1,14 @@
+{
+  "trials": [
+    "sigma_1.0",
+    "sigma_0.5",
+    "sigma_1.0_t1000",
+    "sigma_0.5_t1000",
+    "sigma_1.0_cellinit_1.0"
+  ],
+  "purpose": "Choose unspecified noise/time/init settings using validation only; raw diagnostic weights, not final reproduction.",
+  "additional_trial": {
+    "config": "configs/pilot_sigma_0.5_cellinit_1.0.yaml",
+    "reason": "Check interaction between the cell initialization that fixed context and the lower noise scale."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "time": "2026-11-18T15:18:18+08:00",
+  "status": "registered before any formal calibration",
+  "version": 2,
+  "change": "Refine the two eligible guided candidates on all4825 validation cells by default, instead of cap32. Screening cap16 remains unchanged.",
+  "reason": "Empirical validation resampling and paired inference diagnostics show material finite-generated-cell variation. Full-population refinement matches the intended final validation size and can reverse a screen ranking; do not select the final scale/interval using capped scores alone.",
+  "screen_cap": 16,
+  "refine_cap": null,
+  "refine_cells": 4825,
+  "formal_guidance_policy": "literal_dual_cfg_positive_scale",
+  "scales": [
+    0.6666666667,
+    1,
+    1.5,
+    2
+  ],
+  "intervals": [
+    [
+      0.1,
+      0.9
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "objective": "PDCorr+mean(PDS_L1,PDS_L2,PDS_cos)",
+  "metrics": "all9 nonnegative,6 raw diagnostics",
+  "unchanged": [
+    "model",
+    "training",
+    "Heun50",
+    "EMA0.9996",
+    "sampling seed",
+    "positive literal dual-CFG family",
+    "pre-set full-validation gates",
+    "test separation"
+  ],
+  "evidence": [
+    "runs/validation_sampling_reference",
+    "runs/validation_sampling_reference_de",
+    "runs/main_v1/interim_epoch010_review/paired_differences.json"
+  ],
+  "implementation_sha256": "35b5c97516ce1963ea8442ad147dd6ed55efc9f2c6e16f90d00c95df13c60664",
+  "test_sha256": "bc51519fb0488c079d31cdf463f37b249da74dca9eef641c2fd37fb561743fea",
+  "validation": "4 CPU workflow tests passed in1.80s, including full-population ranking reversal and exclusion of conditional-only reference whether higher or lower.",
+  "runtime_note": "More validation generation than cap32; do not shorten training or sampler to compensate. The independent full-validation pipeline check remains enabled.",
+  "test_access": false,
+  "scales_cli": "0.6666666667,1,1.5,2"
+}

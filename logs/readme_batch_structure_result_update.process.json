@@ -1,0 +1,7 @@
+{
+  "time": "2026-11-20T18:56:12+08:00",
+  "pid": 1041848,
+  "plan": "logs/readme_batch_structure_result_update.json",
+  "cadence_seconds": 900,
+  "force_flush": false
+}

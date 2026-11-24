@@ -1,0 +1,53 @@
+{
+  "time": "2026-11-18T08:31:11+08:00",
+  "status": "prepared_not_started",
+  "hypothesis": "The earlier time-scale comparison used a weak cell embedding; cell-init and time encoding may interact. Complete the missing paired t=1000, cell-std=1, noise=1 trial before attributing slow specificity learning to training length alone.",
+  "reference_config": "configs/pilot_sigma_1.0_cellinit_1.0.yaml",
+  "candidate_config": "configs/pilot_sigma_1.0_t1000_cellinit_1.0.yaml",
+  "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate_run": "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+  "only_network_change": {
+    "model.time_scale": {
+      "reference_default": 1.0,
+      "candidate": 1000.0
+    }
+  },
+  "budget": {
+    "training_subset": 16384,
+    "epochs": 12,
+    "optimizer_updates": 384,
+    "effective_batch": 512,
+    "micro_batch": 16,
+    "seed": 42,
+    "val_cap": 16,
+    "sampling_steps": 50,
+    "sampling_batch_size": 32,
+    "sampling_seed": 4242
+  },
+  "kept_paper_parameters": "12x768 Transformer, 12 heads, context32/layer4, v-loss/path/time distribution, dropout0.1, AdamW/betas/LR/effective batch/warmup/cosine, two EMA and Heun50 unchanged.",
+  "data": "Training and validation only; no test cells. Use the same training subset and fixed validation noise.",
+  "selection": "PDCorr + mean(PDS_L1,PDS_L2,PDS_cos), raw and clamped arrays separately; inspect paired perturbation bootstrap, MSE, cell centroid and variance. No automatic replacement of the full-training model based on one short raw-weight pilot.",
+  "limitations": "384-update raw-weight diagnostic, not mature EMA or full-training superiority; the current main run remains unchanged.",
+  "start_after": "Completion of the epoch-10 paired CFG review and release of its GPU process; avoid three simultaneous GPU workloads.",
+  "config_sha256": "04c5ee0099839a82cc77556229ade8137d37e914afb93e18ae162338602cbc2f",
+  "reference_config_sha256": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+  "core_source_agreement": {
+    "src/ocoot/model.py": {
+      "current": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1",
+      "reference": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1"
+    },
+    "src/ocoot/flow.py": {
+      "current": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+      "reference": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78"
+    },
+    "src/ocoot/data.py": {
+      "current": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+      "reference": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c"
+    }
+  },
+  "input_sha256": {
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/embeddings.pt": "89bd99987d3bfd4da36fff453c12fa627668b6509bf8eb206e74346b646f1025",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  }
+}

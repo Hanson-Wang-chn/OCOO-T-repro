@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-18T23:35:05+08:00",
+  "mode": "Exact byte-copy + fsync + SHA256 verification + atomic symlink replacement",
+  "runs": [
+    "runs/pilot_sigma_1.0",
+    "runs/pilot_sigma_0.5",
+    "runs/pilot_sigma_1.0_t1000",
+    "runs/pilot_sigma_0.5_t1000",
+    "runs/pilot_sigma_1.0_cellinit_1.0",
+    "runs/pilot_sigma_0.5_cellinit_1.0",
+    "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+    "runs/pilot_sigma_0.5_t1000_cellinit_1.0"
+  ],
+  "destination": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots",
+  "source_free_bytes": 12575543296,
+  "destination_free_bytes": 413613948928,
+  "all_optimizer_ema_rng_retained": true,
+  "active_checkpoints_remain_local": true,
+  "script_sha256": "834c01afcddd17c3f0676ab05a1cbb938587cd12cc744564e1f9111207baf6b8"
+}

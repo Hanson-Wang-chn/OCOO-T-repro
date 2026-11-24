@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-19T17:53:30+08:00",
+  "stage": "completed",
+  "controller_pid": 899825,
+  "post_analysis_pid": 899826,
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_inference_review.py",
+    "--checkpoint",
+    "runs/main_v1/validation_epoch_020/model.pt",
+    "--outdir",
+    "runs/main_v1/interim_epoch020_guidance_boundary",
+    "--guidances",
+    "none,2.5,3",
+    "--cap",
+    "16",
+    "--batch-size",
+    "16"
+  ],
+  "main_training_pid_unchanged": 656512,
+  "new_generation_cases": 2,
+  "reused_reference_no_generation": true,
+  "free_gpu_MiB_at_start": 21162,
+  "status": "completed",
+  "completion_time": "2026-11-19T19:33:44+08:00",
+  "decision": "runs/main_v1/interim_epoch020_all_scales/decision.json"
+}

@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "cpu_only": true,
+  "recomputed_predictions_or_official_metrics": false,
+  "audits": {
+    "ordinary": {
+      "perturbations": 60,
+      "bootstrap": 2000,
+      "finite_observations_per_metric": {
+        "PDCorr": 60,
+        "DEOver": 60,
+        "DEPrec": 60,
+        "DirAgr": 53,
+        "PDS_L1": 60,
+        "PDS_L2": 60,
+        "PDS_cos": 60,
+        "MSE": 60,
+        "MAE": 60
+      },
+      "seed": 9232,
+      "maximum_absolute_difference": 0.0
+    },
+    "fixed_cfg": {
+      "perturbations": 60,
+      "bootstrap": 2000,
+      "finite_observations_per_metric": {
+        "PDCorr": 60,
+        "DEOver": 60,
+        "DEPrec": 60,
+        "DirAgr": 53,
+        "PDS_L1": 60,
+        "PDS_L2": 60,
+        "PDS_cos": 60,
+        "MSE": 60,
+        "MAE": 60
+      },
+      "seed": 9232,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "source_sha256": {
+    "runs/main_v1/observation/epoch025_to030/comparison.json": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+    "runs/main_v1/validation_epoch_025/metrics_de_diagnostic/results.csv": "03f20eebd1ab588b82896f51aec7b66d19bc8ee77cd44557623049944a100f51",
+    "runs/main_v1/validation_epoch_030/metrics_de_diagnostic/results.csv": "6ca3c5e261525043530037c257543cd7de90639089ce96706d944afa25294394",
+    "runs/main_v1/interim_epoch030_fixed_cfg/paired/comparison.json": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/results.csv": "b5dfda10686c7c9c7113d5720934bcf5feefa1b287a73c6defd14f12ca6f3421",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/results.csv": "b9172d9b474b329133a8a0a198ff5b93c2d9ea9bbccf706d156c4a4109d91502"
+  },
+  "script_sha256": "5bd87c4894fdef664f31ff52b51e6ddb231052313a4cb6a7987c90b82db0474e"
+}

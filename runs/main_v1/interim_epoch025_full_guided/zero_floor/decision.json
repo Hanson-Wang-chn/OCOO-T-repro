@@ -1,0 +1,90 @@
+{
+  "time": "2026-11-20T10:34:31+08:00",
+  "decision": "Keep original full training. Finite predicted-cell counts and zero support alone do not resolve the remaining PD/DE precision gap. Retain floor0p05 as an exploratory postprocessing candidate for a later independent mature validation check; formal defaults remain clamp0. Prepare one controlled mature-state batch-dropout interpretation trial; do not change the main trajectory or test protocol.",
+  "full_population": 4825,
+  "base960_raw_and_clipped_bitwise_preserved": true,
+  "primary_floor_difference": {
+    "value": -0.0006216602406439176,
+    "ci95": [
+      -0.003582746170692495,
+      0.0022353573701888118
+    ]
+  },
+  "precision_heterogeneity": {
+    "increased": 34,
+    "decreased": 14,
+    "equal": 12,
+    "median_difference": 0.021724089540313754,
+    "top_three_share_of_net_change": 0.2577708601152162
+  },
+  "all9": {
+    "floor_0": {
+      "metrics": {
+        "PDCorr": 0.3306210098813608,
+        "MSE": 0.014458370274708917,
+        "MAE": 0.07542472134033838,
+        "PDS_L1": 0.7816666666666666,
+        "PDS_L2": 0.7908333333333333,
+        "PDS_cos": 0.8213888888888888,
+        "DEOver": 0.16823972826188463,
+        "DEPrec": 0.0989262727680655,
+        "DirAgr": 0.7120130080493234
+      },
+      "diagnostic_checks_against_unchanged_engineering_thresholds": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": false,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "failed": [
+        "PDCorr",
+        "DEOver",
+        "DEPrec"
+      ]
+    },
+    "floor_0p05": {
+      "metrics": {
+        "PDCorr": 0.3287956459370131,
+        "MSE": 0.0145073885563761,
+        "MAE": 0.07577362085382143,
+        "PDS_L1": 0.7830555555555556,
+        "PDS_L2": 0.7916666666666666,
+        "PDS_cos": 0.8227777777777778,
+        "DEOver": 0.1942845435857245,
+        "DEPrec": 0.15859118495792834,
+        "DirAgr": 0.7305319429384035
+      },
+      "diagnostic_checks_against_unchanged_engineering_thresholds": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "failed": [
+        "PDCorr",
+        "DEPrec"
+      ]
+    }
+  },
+  "automatic_formal_selection": false,
+  "test_access": false,
+  "formal_calibration_started": false,
+  "source_sha256": {
+    "runs/main_v1/interim_epoch025_full_guided/completed.json": "4690645ea29354f1213ba6aeec61ef46dbf7e9b73366cb3f72873bd9b3228f5a",
+    "runs/main_v1/interim_epoch025_full_guided/zero_floor/paired_comparison.json": "2b5a2eaa7bbb9e1a0f5dfc31a87b75a944131e2a9ef5f24a86985553526d90bd",
+    "runs/main_v1/interim_epoch025_full_guided/zero_floor/comparison.json": "aa9b72989d34b62ee54d61883e4bfb6a29122bafad1f596455b4595cfacf12e5"
+  },
+  "prospective_next_step": "One epoch25→26 continuation from the archived complete E25 model/optimizer/dualEMA/RNG. Change only whether batch embedding is retained when the cell-line condition is dropped; compare with archived original E26 at identical optimizer step29068, fixed w2/cap16/B16/seed4242/Heun50/EMA0.9996. Explicitly unresolved by paper; test default compatibility and exact bounded budget before any GPU launch."
+}

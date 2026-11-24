@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-20T05:39:35+08:00",
+  "step": 27950,
+  "source_run": "/home/whs/ocoo-t/runs/main_v1",
+  "snapshot_path": "/home/whs/ocoo-t/runs/main_v1/snapshots/step_27950/full.pt",
+  "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+  "sha256": "6c268c6cd92bff74d2e5e825d8b66bdfdd98c561ec5f457849fcd95b54deb1e4",
+  "bytes": 2818999011,
+  "ema_decays": [
+    "0.9999",
+    "0.9996"
+  ],
+  "pending_generation_epoch": 25,
+  "full_model_optimizer_ema_rng_retained": true,
+  "active_training_or_last_checkpoint_modified": false,
+  "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+  "training_source_manifest": "runs/main_v1/source_manifest_step_1871.json",
+  "training_source_archive": "runs/main_v1/source_snapshot_step_1871.tar.gz",
+  "note": "Full exact-step pre-generation state. Trainer loaded original math at step1871; later optional model branches preserve default numerics. This snapshot does not alter active last.pt or select a model for formal inference."
+}

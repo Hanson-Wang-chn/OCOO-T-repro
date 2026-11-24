@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/watch_training.py", line 121, in <module>
+    main()
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/watch_training.py", line 63, in main
+    command(['scripts/plot_progress.py', str(run)], 'plot_progress')
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/watch_training.py", line 55, in command
+    subprocess.run([sys.executable, *arguments], env=environment,
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/whs/miniconda3/envs/ocoo-t/bin/python', 'scripts/plot_progress.py', 'runs/main_ddp_recovery']' returned non-zero exit status 1.

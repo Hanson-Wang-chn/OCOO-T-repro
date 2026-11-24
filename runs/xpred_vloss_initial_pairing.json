@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-19T02:19:23+08:00",
+  "training_pid": 839903,
+  "actual_training_indices_equal": true,
+  "actual_source_snapshot_matches_plan": true,
+  "training_index_sha256": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+  "candidate_parameters": 136919041,
+  "reference_parameters": 136919041,
+  "initial_loss_equality_not_expected": true,
+  "analysis_script": "scripts/analyze_parameterization_trial.py",
+  "analysis_script_sha256": "94cbf45b8da1302f7a8904cead1daffbbce55fb294ff3e63a6b73df39c8bd011"
+}

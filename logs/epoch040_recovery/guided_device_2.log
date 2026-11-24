@@ -1,0 +1,1 @@
+{"time": "2026-11-23T02:29:01+08:00", "physical_gpu": 2, "case": "screen_01", "n": 32, "bitwise_equal_guided_batch": true, "options": {"noise_std": 1.0, "batch_size": 32, "steps": 50, "guidance": 0.6666666667, "cfg_min": 0.1, "cfg_max": 0.9, "clamp": false, "seed": 4242}}

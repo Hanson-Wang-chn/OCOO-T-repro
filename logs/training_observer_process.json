@@ -1,0 +1,7 @@
+{
+  "time": "2026-11-18T13:27:16+08:00",
+  "pid": 785577,
+  "stage": "launched",
+  "log": "runs/main_v1/observation/observer.log",
+  "purpose": "CPU-only completed validation-cache diagnostics; no training mutation"
+}

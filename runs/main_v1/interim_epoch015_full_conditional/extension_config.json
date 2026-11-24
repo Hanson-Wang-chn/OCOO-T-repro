@@ -1,0 +1,24 @@
+{
+  "plan_sha256": "54fcdd8f84ff451ad7592f861b8867364d5d8fb2cc7c5b47088bb5d923ecf077",
+  "source_dir": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_015",
+  "source_options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "source_checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+  "step": 16770,
+  "weights": "ema_0.9996",
+  "base_cells": 1916,
+  "extra_cells": 2909,
+  "full_cells": 4825,
+  "extra_seed": 6158,
+  "extra_batch_size": 32,
+  "data_metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "note": "All validation cells, preserving the complete capped prefix. Extra cells use a separate RNG segment with seed+base_count. Ordinary-field finite-population diagnostic, not formal dual-CFG or test."
+}

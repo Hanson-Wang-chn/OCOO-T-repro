@@ -1,0 +1,19 @@
+{
+  "ready": false,
+  "checks": {
+    "observer_epoch35_complete": false,
+    "epoch35_inference_checkpoint_exists": false,
+    "epoch35_full_snapshot_preserved": false,
+    "gpu_only_original_trainer": true
+  },
+  "gpu_pids": [
+    656512
+  ],
+  "observer_epochs": [
+    10,
+    15,
+    20,
+    25,
+    30
+  ]
+}

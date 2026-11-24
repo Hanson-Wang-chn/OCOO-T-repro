@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-20T08:39:51+08:00",
+  "source_sha256": "4cad8e652d6cdaaa891efa92e8cf2f91d3487ef6de10d03db869627c530f9172",
+  "real_cache": "runs/main_v1/interim_epoch015_full_conditional/zero_floor",
+  "cases": 7,
+  "all9_paired_ci_independent_reference_max_abs_error": 0.0,
+  "absolute_tolerance": 1e-12,
+  "rejected_invalid_protocols": [
+    {
+      "case": "incomplete",
+      "exception": "Sensitivity evaluation is incomplete"
+    },
+    {
+      "case": "changed_source",
+      "exception": "Sensitivity source changed: /home/whs/ocoo-t/runs/main_v1/interim_epoch015_full_conditional/stitched_predictions.npy"
+    },
+    {
+      "case": "wrong_floor",
+      "exception": "Expected distinct registered floors below the training positive support, including zero"
+    }
+  ],
+  "cuda_visible_devices": "",
+  "training_or_inference_defaults_changed": false
+}

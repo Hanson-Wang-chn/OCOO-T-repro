@@ -1,0 +1,159 @@
+{
+  "time": "2026-11-21T13:03:40+08:00",
+  "reference": "runs/main_v1/interim_epoch030_fixed_cfg/candidate",
+  "candidate": "runs/main_v1/interim_epoch035_fixed_cfg/candidate",
+  "factor": "checkpoint",
+  "reference_options": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_030/model.pt",
+    "checkpoint_sha256": "9e686ce7e324dc2e0d705df736f629e161783cbba79e655515fd73c42e06f5f8",
+    "step": 33540
+  },
+  "candidate_options": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+    "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+    "step": 39130
+  },
+  "checkpoint_sha256": "9e686ce7e324dc2e0d705df736f629e161783cbba79e655515fd73c42e06f5f8",
+  "step": 33540,
+  "cells": 960,
+  "perturbations": 60,
+  "rows": [
+    {
+      "metric": "PDCorr",
+      "reference": 0.2872353238441671,
+      "candidate": 0.2931140073575079,
+      "difference": 0.00587868351334081,
+      "ci95": [
+        -0.0035505988864072955,
+        0.01576469518981562
+      ]
+    },
+    {
+      "metric": "DEOver",
+      "reference": 0.11666601148873183,
+      "candidate": 0.11838172517860722,
+      "difference": 0.0017157136898753866,
+      "ci95": [
+        -0.004235272228014891,
+        0.008026315234999894
+      ]
+    },
+    {
+      "metric": "DEPrec",
+      "reference": 0.09159200751649337,
+      "candidate": 0.08751770726186263,
+      "difference": -0.004074300254630736,
+      "ci95": [
+        -0.008501335527206964,
+        0.0005766365128511108
+      ]
+    },
+    {
+      "metric": "DirAgr",
+      "reference": 0.6997945642261856,
+      "candidate": 0.7046465718136506,
+      "difference": 0.004852007587465068,
+      "ci95": [
+        -0.00822527675621785,
+        0.01877990059395403
+      ]
+    },
+    {
+      "metric": "PDS_L1",
+      "reference": 0.781388888888889,
+      "candidate": 0.7825000000000001,
+      "difference": 0.0011111111111110628,
+      "ci95": [
+        -0.01583333333333348,
+        0.01722916666666676
+      ]
+    },
+    {
+      "metric": "PDS_L2",
+      "reference": 0.7916666666666666,
+      "candidate": 0.7966666666666667,
+      "difference": 0.0050000000000001155,
+      "ci95": [
+        -0.0036111111111112315,
+        0.014722222222222196
+      ]
+    },
+    {
+      "metric": "PDS_cos",
+      "reference": 0.7944444444444444,
+      "candidate": 0.8041666666666667,
+      "difference": 0.009722222222222299,
+      "ci95": [
+        -0.009999999999999901,
+        0.03000000000000003
+      ]
+    },
+    {
+      "metric": "MSE",
+      "reference": 0.022058012646933352,
+      "candidate": 0.023117763626699595,
+      "difference": 0.001059750979766242,
+      "ci95": [
+        0.00023796854851147186,
+        0.002107173500116906
+      ]
+    },
+    {
+      "metric": "MAE",
+      "reference": 0.09694590071837102,
+      "candidate": 0.09926172668735184,
+      "difference": 0.0023158259689808197,
+      "ci95": [
+        0.001104398320118606,
+        0.003763188241670533
+      ]
+    }
+  ],
+  "reference_score": 1.0764019905108337,
+  "candidate_score": 1.0875584518019525,
+  "score_difference": {
+    "value": 0.011156461291118802,
+    "ci95": [
+      -0.007622752507402796,
+      0.031300992555877226
+    ]
+  },
+  "source_sha256": {
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/evaluation_config.json": "108b5159eb30d6540b1d2623af29b2d288f0e11faae9cead9b7f7ca825a28f3e",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/prediction.npy": "649e351420deaef6ea6824823bd53555e03d18a21d6c85f956028108fee2f359",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/prediction_raw.npy": "b974035143b1e60c8c7aef567f5890f1c93f027f7dbb50896993dab04648169d",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/summary.json": "a29d9325d87fb0b2d31d02a0751f6f511e7f641697d018e2edb3e6fb8c3aa61c",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/results.csv": "b9172d9b474b329133a8a0a198ff5b93c2d9ea9bbccf706d156c4a4109d91502",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/evaluation_config.json": "48ad75803d207c21e6d20e2161c6a7f01a29b5146b58b2a868a6ec251105061b",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction.npy": "c21f3d3d3f2e2a7e34ebc6537b35accb16075822b0c8ddd1d16a9f9d45148a8d",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction_raw.npy": "8593aacb7ce0f352a985f799b2614035089c17df6772761e02a81c05d7124245",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/summary.json": "1ae823f8449e95b7cc421d3c92abf5ac0777b901228def632750c3b60b2ee9f2",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/results.csv": "7cdcec006f99a443479cd1adbabe1427f70bc415648abd15fbfadaa5e97871f7"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "bootstrap": 2000,
+  "seed": 9232,
+  "note": "One controlled validation-only inference factor. Matched indices/noise, fixed reference library. Intervals do not measure independent training seeds or generation noise. No automatic formal-setting selection and no test access.",
+  "checkpoint_comparison_proof": {
+    "training_config_equal": true,
+    "model_tensor_schema_equal": true,
+    "frozen_buffers_bitwise_equal": true,
+    "checkpoints": [
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_030/model.pt",
+        "checkpoint_sha256": "9e686ce7e324dc2e0d705df736f629e161783cbba79e655515fd73c42e06f5f8",
+        "step": 33540
+      },
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+        "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+        "step": 39130
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-18T07:36:52+08:00",
+  "pid": 760988,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/bootstrap_reference.py",
+    "--outdir",
+    "runs/validation_sampling_reference_de",
+    "--caps",
+    "16,32",
+    "--seeds",
+    "2",
+    "--de"
+  ],
+  "stage": "completed",
+  "completed_time": "2026-11-18T07:43:33+08:00",
+  "array_metric_agreement": true
+}

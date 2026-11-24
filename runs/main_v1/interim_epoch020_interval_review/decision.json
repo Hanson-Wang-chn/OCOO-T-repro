@@ -1,0 +1,127 @@
+{
+  "time": "2026-11-19T20:29:03+08:00",
+  "status": "completed_reviewed",
+  "decision": "End epoch20 interim inference diagnostics. Retain both interval candidates for prospective validation calibration; do not select a final setting, change main training, or access test. Return sole GPU to original main model and await periodic epoch25 generation.",
+  "evidence": {
+    "same_checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+    "step": 22360,
+    "cells": 960,
+    "conditions": 60,
+    "guidance": 2.0,
+    "reference_interval": [
+      0.1,
+      0.9
+    ],
+    "candidate_interval": [
+      0.0,
+      1.0
+    ],
+    "score_difference": {
+      "value": 0.013805461383324502,
+      "ci95": [
+        -0.008758295837563343,
+        0.03706016035778952
+      ]
+    },
+    "metrics": {
+      "PDCorr": {
+        "metric": "PDCorr",
+        "reference": 0.26780689170821764,
+        "candidate": 0.2871679086470976,
+        "difference": 0.019361016938879982,
+        "ci95": [
+          0.010715431213933108,
+          0.029490770363499893
+        ]
+      },
+      "DEOver": {
+        "metric": "DEOver",
+        "reference": 0.10897938537034076,
+        "candidate": 0.12670323776981773,
+        "difference": 0.017723852399476978,
+        "ci95": [
+          0.009399760440733066,
+          0.026729780500844343
+        ]
+      },
+      "DEPrec": {
+        "metric": "DEPrec",
+        "reference": 0.09173765885150174,
+        "candidate": 0.10530579584982565,
+        "difference": 0.013568136998323904,
+        "ci95": [
+          0.005343327925189944,
+          0.023945813977618757
+        ]
+      },
+      "DirAgr": {
+        "metric": "DirAgr",
+        "reference": 0.672418082273102,
+        "candidate": 0.7022953319340848,
+        "difference": 0.02987724966098282,
+        "ci95": [
+          -0.008643220098370463,
+          0.08044670739498869
+        ]
+      },
+      "PDS_L1": {
+        "metric": "PDS_L1",
+        "reference": 0.7552777777777778,
+        "candidate": 0.7541666666666667,
+        "difference": -0.0011111111111111738,
+        "ci95": [
+          -0.021111111111110654,
+          0.01666666666666683
+        ]
+      },
+      "PDS_L2": {
+        "metric": "PDS_L2",
+        "reference": 0.7663888888888889,
+        "candidate": 0.7658333333333334,
+        "difference": -0.0005555555555555314,
+        "ci95": [
+          -0.015562500000000092,
+          0.014166666666666883
+        ]
+      },
+      "PDS_cos": {
+        "metric": "PDS_cos",
+        "reference": 0.7388888888888889,
+        "candidate": 0.7238888888888888,
+        "difference": -0.015000000000000124,
+        "ci95": [
+          -0.03416666666666679,
+          0.003062500000000208
+        ]
+      },
+      "MSE": {
+        "metric": "MSE",
+        "reference": 0.01939240605570371,
+        "candidate": 0.02131531061604614,
+        "difference": 0.0019229045603424318,
+        "ci95": [
+          0.0009316121030133377,
+          0.003195833398494869
+        ]
+      },
+      "MAE": {
+        "metric": "MAE",
+        "reference": 0.09411315793792402,
+        "candidate": 0.09670730754733081,
+        "difference": 0.002594149609406793,
+        "ci95": [
+          0.0012366094191869135,
+          0.004135173360506694
+        ]
+      }
+    }
+  },
+  "interpretation": "Full-interval guidance improves PDCorr, DEOver and DEPrec with paired condition-bootstrap intervals above0; primary score interval crosses0 and MSE/MAE worsen. PDS cosine point estimate decreases, interval crosses0. Neither setting establishes paper-level performance.",
+  "limitations": "cap16/B16 validation-only diagnostic with one fixed sample seed and frozen epoch20 EMA; intervals measure variation across60 perturbations, not independent training seeds or fresh generation noise. Formal refinement requires all4825 validation cells. No conclusion that either interval is globally best.",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "formal_policy_changed": false,
+  "test_access": false,
+  "comparison": "runs/main_v1/interim_epoch020_interval_review/paired/comparison.json",
+  "context": "runs/main_v1/interim_epoch020_interval_review/context/context_diagnostics.json",
+  "new_gpu_jobs_queued": false
+}

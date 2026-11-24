@@ -1,0 +1,3518 @@
+[
+  {
+    "type": "directory",
+    "oid": "a5963e6f16705b6c8d7a8f2ad5388af4eace613c",
+    "size": 0,
+    "path": "perturb_data"
+  },
+  {
+    "type": "directory",
+    "oid": "e73b65fafeeb6598bfdd64c137ccafd2f45468de",
+    "size": 0,
+    "path": "perturb_data/cellxgene_merged_zst"
+  },
+  {
+    "type": "directory",
+    "oid": "fcf46a2c4be26f2cea7e681d8ab46f515ceaa390",
+    "size": 0,
+    "path": "perturb_data/finetune_data"
+  },
+  {
+    "type": "directory",
+    "oid": "58696b734e774d6b39c34ae56de307ae2ae72e91",
+    "size": 0,
+    "path": "perturb_data/finetune_data/nadig_processed_data"
+  },
+  {
+    "type": "directory",
+    "oid": "f352703a36adb16fbcb8f0e3dcf136b33af46723",
+    "size": 0,
+    "path": "perturb_data/finetune_data/pbmc_new"
+  },
+  {
+    "type": "directory",
+    "oid": "97f94bb239116e9cecfa007b77d8fc3265a19f01",
+    "size": 0,
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new"
+  },
+  {
+    "type": "directory",
+    "oid": "c97478a76c3895dccaa41543d4e041983d809f39",
+    "size": 0,
+    "path": "perturb_data/gene_names"
+  },
+  {
+    "type": "directory",
+    "oid": "42585ff19004196d5bc46237b226db2165125f24",
+    "size": 0,
+    "path": "perturb_data/indices_cache"
+  },
+  {
+    "type": "directory",
+    "oid": "0f4cddcc00cf37deadf0e965608b1ba8e6067b86",
+    "size": 0,
+    "path": "perturb_data/meta_data"
+  },
+  {
+    "type": "directory",
+    "oid": "aaa3261f520ebfd1edbd752ca9917bc7f70cb296",
+    "size": 0,
+    "path": "perturb_data/selected_genes"
+  },
+  {
+    "type": "file",
+    "oid": "cfcfc65e71cf6792729d01e4454e047566132d56",
+    "size": 2644,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "24d9f001cb5177d6aa0ffdf40403fbbfa85d2d20",
+    "size": 6358622599,
+    "lfs": {
+      "oid": "fb80e2c7e034aac8aaead873144fc6745046d56c970385a71e5a94075c486af4",
+      "size": 6358622599,
+      "pointerSize": 135
+    },
+    "xetHash": "e04510e258a3e5bdf57180b36126c74716d402f3f4aef72934b66dc22d912016",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_1.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "c73784871e17164e5f1d1a6581537a2024f924ac",
+    "size": 3724728768,
+    "lfs": {
+      "oid": "24f0149d579c23813b4342b29eff70359e9214920820cc47cd6cec9d1edc9194",
+      "size": 3724728768,
+      "pointerSize": 135
+    },
+    "xetHash": "6caa18df2031aac69a4c9be5281debd0f076900d55e7541abbdaa87c99496e86",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_10.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "6fdd3caf371b40c791ed34f7659534529cad3ace",
+    "size": 3473128429,
+    "lfs": {
+      "oid": "a4d3f9c78adc4d2dbd4da82365474bd44ad1ecf28f7bb544e2781a361ffa4839",
+      "size": 3473128429,
+      "pointerSize": 135
+    },
+    "xetHash": "6ba4ceb513d7f25ab01cb3da0f9548ef3d8ca07a204b0f9ccc31c2ca5e788086",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_11.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "c11eb99e91bcc03e3820658786dfefeb5decf30d",
+    "size": 5687533837,
+    "lfs": {
+      "oid": "dd0488dcbdea9920bef0f59a59ae17dd7ae264f4a8900725a0135c9fe9c1bc05",
+      "size": 5687533837,
+      "pointerSize": 135
+    },
+    "xetHash": "120327bbd6e566d065427b5075c6ce95b41db90d08c1cf08d6b064e82d48d04d",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_12.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "f6ad98812de829416096fc9cce5a1a8ffe20a742",
+    "size": 3888604571,
+    "lfs": {
+      "oid": "8b02308cbfd3298a949e0b60447f14b1dbd36ec7b7ae50d30da546774f12ca84",
+      "size": 3888604571,
+      "pointerSize": 135
+    },
+    "xetHash": "83f0dd78a850e7a194ade000a5692cf0bebdff452461f10f0f3ce7ef8a5c7ed3",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_13.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "d4c57a8b0389958aa016a441593f416db7897b5f",
+    "size": 7792255625,
+    "lfs": {
+      "oid": "ec5f48cd7d50eabab64a0b3f4a19bb67e0136fdf6a2adb0390d2cf230347191a",
+      "size": 7792255625,
+      "pointerSize": 135
+    },
+    "xetHash": "3d4fda1525db77277efac5be52a3a5662ba6af428500a981ae39dcb067ddc5aa",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_14.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "0d9f268d840b5e69b3bad337b218de1b51c5ff4d",
+    "size": 4198536719,
+    "lfs": {
+      "oid": "ac1feb56a6f0a71ec426d4eafbeaca145e88ff0819b1fc92ccc505a46442c80e",
+      "size": 4198536719,
+      "pointerSize": 135
+    },
+    "xetHash": "4a923bf67cc25373075595fca4a24604db5ed00700d7e631ebd282852179f888",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_15.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "2a90810fe795b4733c4597074bee8f670bbd9a83",
+    "size": 7572652768,
+    "lfs": {
+      "oid": "81a8d4b6706f1b70dadccb773393840197bcf603a943328ab85c555230820421",
+      "size": 7572652768,
+      "pointerSize": 135
+    },
+    "xetHash": "74206aabb692b3c5023e5ecf7c2305d7230564d1a4faadae677a53bb7e9e5453",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_16.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "a449915377f521f0d80d4c468ef35a59bacb303f",
+    "size": 5023714669,
+    "lfs": {
+      "oid": "2dbd323f36433470f51f0d75c44bfdd0c2f3aa3dd7e64e9e2ba907e7f9e11677",
+      "size": 5023714669,
+      "pointerSize": 135
+    },
+    "xetHash": "e1aa64d03826e10dba62a4fe7c371ca1fb85033a560da29b4f82300d44734f31",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_17.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "ba4e497a49b1912bec2021275859c1c6edc452e3",
+    "size": 6361254148,
+    "lfs": {
+      "oid": "a6695596a87da060a530eb60fd3bf4bb674ef9777c1e6e73830171849bbe9d23",
+      "size": 6361254148,
+      "pointerSize": 135
+    },
+    "xetHash": "f525c6630632d016bb23034e91693479ab6422e47721b249d419ad4bbf812e99",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_18.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "e32a1884b8fc44a5c722d47e4fa3598c58e49093",
+    "size": 7766308872,
+    "lfs": {
+      "oid": "60e3a6721e4f4b919552574c65b8f60cd1e204296ead6aaca30afc827edaaa4b",
+      "size": 7766308872,
+      "pointerSize": 135
+    },
+    "xetHash": "85165e3f97d2bab692d639425c1af4cae9fd5cc968c5159110db9f6bd51f6e6a",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_19.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "e16987b59fcf01042ffc2e9614b038f640c23864",
+    "size": 5184761096,
+    "lfs": {
+      "oid": "43c4cd1c34d6b20d29734baef886703cb11a3cbd98fc1a2bb18dc5e5cbbeb553",
+      "size": 5184761096,
+      "pointerSize": 135
+    },
+    "xetHash": "b2122de668436aff052c7d91b47d10f1392725ac58600971e1fd5e5430248090",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_2.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "0c7d29d8c036d583ab861711c3f265011b462485",
+    "size": 2577688305,
+    "lfs": {
+      "oid": "54481c95ea04b0f44878124e76e8d8c52fb738e698dce8c44bbb3470b66e1b38",
+      "size": 2577688305,
+      "pointerSize": 135
+    },
+    "xetHash": "b244b90f868c20e1ab3a70706e8a1c640cb4e328db85ca09371a321d465aa5ca",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_20.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "779de6f9a6fe2d11fd770fbed3ac15bcde0a66db",
+    "size": 4687347844,
+    "lfs": {
+      "oid": "4eff8be8006e739ee044ba294f4822a7c7d52d2cb0da726fc1554ef5da5bb117",
+      "size": 4687347844,
+      "pointerSize": 135
+    },
+    "xetHash": "66576280c8c0ad760918463621e6f39e01d0f61d4edda4ee007913a1ef010054",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_21.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "9da19ad2bbd6882c1403f1c3467b9cfda7b0f9b2",
+    "size": 5168403780,
+    "lfs": {
+      "oid": "4e4281cadc66f9ea94cdde159224632c3adc8937cd0d68342052387e108a660c",
+      "size": 5168403780,
+      "pointerSize": 135
+    },
+    "xetHash": "124c9ca294cbcea7945dd86367442a9c4db804eb89627ff5e567a436fd617026",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_22.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "f4122b61b1c2eb205048066b5b10cbdaeb4f61d9",
+    "size": 4609873229,
+    "lfs": {
+      "oid": "5ae53cab40d9a18fb3cf6328efefef8c375bb9c04137043058c3b45beecf174d",
+      "size": 4609873229,
+      "pointerSize": 135
+    },
+    "xetHash": "243adb6c2e453f9d2d889af426db9847ac0ad245fc6144243aba11290c31333f",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_23.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "97fcdee5ed98271a4f3fa5c1fdd63138744718ed",
+    "size": 5114424861,
+    "lfs": {
+      "oid": "b57c00c3664010f84a3d168662531245634d2f48ea106b8c2b0628e5a5df2398",
+      "size": 5114424861,
+      "pointerSize": 135
+    },
+    "xetHash": "299a4c68f02d7b340c1d056480ebf17f2c1bf5d26c2310b83180a73972f1b2ff",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_3.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "86a72ed2937490c4470bc7675e3bece54f637c0a",
+    "size": 5590665126,
+    "lfs": {
+      "oid": "7b270f49211686c94356dc95ed5ceee8014a3f399f65b4dfcdd7afaba416007f",
+      "size": 5590665126,
+      "pointerSize": 135
+    },
+    "xetHash": "a3f09069f1e8c123f06f1b536fc49dc0d609d815b743da6313e6be619e5e3e08",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_4.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "e5383de5ab5dc17448a731691d6ca619f797cd92",
+    "size": 6435088280,
+    "lfs": {
+      "oid": "fe9c9582b8dadde7aae476cd9f1c56dbb277c3a25064c9ec2351bd0a202da9a4",
+      "size": 6435088280,
+      "pointerSize": 135
+    },
+    "xetHash": "af88f0e0b500a7a7a005c64ed3db095e92de0f8e2b3b18be6c3d375952e9a965",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_5.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "5f27cdcd4a1354676c2599acd0bfd1ebd50a263d",
+    "size": 8687510414,
+    "lfs": {
+      "oid": "ea7f064bd9d6f18d9ee18cbbb0b75f4b615ddf39d7d19c0de95a0dac00e83220",
+      "size": 8687510414,
+      "pointerSize": 135
+    },
+    "xetHash": "4e4bca0033a338e5f76627d7af39884d0b8c81dc955f9fa68e154bafbd8c5fd6",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_6.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "a65638c33c053d46f51725cdd530fa1374355365",
+    "size": 4008968960,
+    "lfs": {
+      "oid": "dfec34722082b036307dddd73044542ba31149239cf117301a355d4d01b04117",
+      "size": 4008968960,
+      "pointerSize": 135
+    },
+    "xetHash": "bb91dacdcf4c34faf00ba2f8aa4c6978382fbc1aec8db4d7d635a008bd90f588",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_7.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "1795fe6694180f745d17eda1eb8bb8f8971d2b83",
+    "size": 6189804938,
+    "lfs": {
+      "oid": "86460a830a3680907ff14683c2abd058c3028c941a7bb179213a27c4ead0b859",
+      "size": 6189804938,
+      "pointerSize": 135
+    },
+    "xetHash": "35c06e1df1909521ec2699661685893410ee2a5cd044673c29e681d38a96ec98",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_8.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "c85b4291ef408cce2c9bfebb8b512a49500e91b8",
+    "size": 10324160746,
+    "lfs": {
+      "oid": "87db78a373f717e5b94add1c686683b290da0abcc965fe664ba4a4d3bd26d41e",
+      "size": 10324160746,
+      "pointerSize": 136
+    },
+    "xetHash": "a4af90fe0522d619fa6ee65650586219d3d37b4463163bbd130194765d9ae8c8",
+    "path": "perturb_data/cellxgene_merged_zst/proc_cellxgene_combined_9.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "2d8eec6524198dd04e1266c3ee13488c0ff413be",
+    "size": 2549667537,
+    "lfs": {
+      "oid": "5f42388fff4a50414e67bc1b5b3685208a3b1b0b92920a6eb87bf1004e8976d8",
+      "size": 2549667537,
+      "pointerSize": 135
+    },
+    "xetHash": "6ef69cf9d26de43225a49ecdd2307011bd7bb2f644cce5495779326b94a15dcf",
+    "path": "perturb_data/finetune_data/nadig_processed_data/replogle.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "bc6fbbd045c522befbc542d57b5a3fc502519c04",
+    "size": 52748663197,
+    "lfs": {
+      "oid": "3c7369df75b6548a1220cdd4273a0ca93032969320ecbae3b5aa2b4dd0038bdc",
+      "size": 52748663197,
+      "pointerSize": 136
+    },
+    "xetHash": "723a8775308cb6594d0c57713eba211b6270effb7a8807d7ae32f9f9493cd48d",
+    "path": "perturb_data/finetune_data/pbmc_new/Parse_10M_PBMC_cytokines_processed_Xselected.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "7909a4be1f55190278b3d6f3a839e533f41127d6",
+    "size": 17838377330,
+    "lfs": {
+      "oid": "f6c7a75b463f65454a760a018d6de764862c3624ba0f2eeab48279862bfa7bf1",
+      "size": 17838377330,
+      "pointerSize": 136
+    },
+    "xetHash": "b5d3f1e13f5b609855c4b2da65964b4d77c058537caf3d121bfbba3bcf88c3cb",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "9b1c891eafd4a4392fda455dd67e479b8294c0e4",
+    "size": 15633119486,
+    "lfs": {
+      "oid": "b5ee9b06d5b045484f31a16e13ded86c1063b7a3f4d398124030640d237c3e7f",
+      "size": 15633119486,
+      "pointerSize": 136
+    },
+    "xetHash": "152d2f4493c52695f1591fc57860618525ea449aa08ad42d21eae0a61a2ce034",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "5094062c87bf2803310fe6326ed08be168371cd7",
+    "size": 25119633885,
+    "lfs": {
+      "oid": "9db87eba95bacd0f6a3c14f030eb393901d8c048e979e461333c72e05f7f1cfb",
+      "size": 25119633885,
+      "pointerSize": 136
+    },
+    "xetHash": "e359a7f430fe40faf64c4f8e43a868d0e6676b18bf528b6271a4c609ce93c98f",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "3d702b09fba321746c6fcffc070ae56f4e54d0cc",
+    "size": 18868127075,
+    "lfs": {
+      "oid": "26699a3db918b603122b3127712ba5c344da952addc2ced49fc1bfb29b81fb07",
+      "size": 18868127075,
+      "pointerSize": 136
+    },
+    "xetHash": "691f7ebbd47eec78d028387925794f3473681f522c09f8671b0a6f0d86e5ff1e",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "7c0982b943a6dcf3f82dce0023a4a5c169ab7c61",
+    "size": 15189726363,
+    "lfs": {
+      "oid": "1ef4e2ab1f05da457af0b4356a78a5db9582c1544fb8ed86a268d3aaffd81855",
+      "size": 15189726363,
+      "pointerSize": 136
+    },
+    "xetHash": "ab7f152eb2fc65c9cc3ec918e7691071c79e6736238c449249f359b5a2706e12",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "2f66f1fef7cb592df1dfeac564f51edb1d43792d",
+    "size": 12890687003,
+    "lfs": {
+      "oid": "0bb46e5e800916b7ad063a63857b584b091b92f7d2866f35d9045cb800bfbc1f",
+      "size": 12890687003,
+      "pointerSize": 136
+    },
+    "xetHash": "a3c78d089a5fd492b225193e06de64ac43809fb4ab488be339794b42691e4002",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "eae1b7305662064bccfd6c6d783b3b25e44384e4",
+    "size": 19550010916,
+    "lfs": {
+      "oid": "02cb2f4353ebbe82ae07bc27feadb56fccc10ad698735f45b79ecf6b5d7469bb",
+      "size": 19550010916,
+      "pointerSize": 136
+    },
+    "xetHash": "3226e7d1a5f6f9d45b1f648cad10fbd925b04b95b906880d6e740123a5e8424b",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "5a192045e5bd48d391bbd42aae292a2cf404727e",
+    "size": 9026998932,
+    "lfs": {
+      "oid": "defdc2a620213b93de5e16690d3b6d2a3b799d91c809883e623a3c49df3f34d1",
+      "size": 9026998932,
+      "pointerSize": 135
+    },
+    "xetHash": "2d4553cf5284f3b1440359e3d6e677d4a750219af33eb8063896a8366d700059",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "dfb9eec20298921f7328e0f8884dd8e660fc99af",
+    "size": 15775619151,
+    "lfs": {
+      "oid": "6c9a235ef97269395451808d2c5d54bdbcfcb23f1cf7d8f443748f22653d5ca9",
+      "size": 15775619151,
+      "pointerSize": 136
+    },
+    "xetHash": "0338eb04f2dbccd620eda7a17ecdf8511da48567c5d3f94eb452e48667d69638",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "9c453ab52d16c561e4ea81ad9fff763a35abd611",
+    "size": 13511992797,
+    "lfs": {
+      "oid": "a5a6d60a75e651c6eed0dd7d932a4d203dbc913d69289544eb5ef4d2999a0fce",
+      "size": 13511992797,
+      "pointerSize": 136
+    },
+    "xetHash": "5060fac49feac6d0e0c8fefdb7c78edae1bf373706671a98943f4bd4b6872a24",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "f01a43f84e399af3f72c27e137ac510ab3c51f6d",
+    "size": 19464167068,
+    "lfs": {
+      "oid": "99ced9bbbf7b6dbe5115ad3d720561e21bd38332ed191aa83008751088bbde83",
+      "size": 19464167068,
+      "pointerSize": 136
+    },
+    "xetHash": "5957942f3ad16b2fa21d70410dcd1e2c49d70013aafad1e33af64cb4bebab092",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "00bbc17ff98ffb7ae8169605809f68bbbc037982",
+    "size": 11195232336,
+    "lfs": {
+      "oid": "e99fb6b6cebd45f0087b301e508769e110eec978d944a8e9b4b8a6d16221ce66",
+      "size": 11195232336,
+      "pointerSize": 136
+    },
+    "xetHash": "03187c3654c05fdc9185625b7ef8ac7152ec328aca57d7a54c5da6b336aac7dc",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "e3344cf6d66ee0fdf2a0f9656cc621384b5e97d9",
+    "size": 20390668405,
+    "lfs": {
+      "oid": "a1efe721bc48a46f7247ce21f5d4b5e74d2cd23c8f0ccb9191096b80ded30966",
+      "size": 20390668405,
+      "pointerSize": 136
+    },
+    "xetHash": "a1630d51580535a57f1b90627b3c4815f86f945fcb606078f79681f66345f5d1",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "c0c1b3f7e5599e6d1bbc669356d8607ed5325a60",
+    "size": 12641349421,
+    "lfs": {
+      "oid": "4edc13f48d1ffb141493d81e5fb7d7da45c3c4cb7d0e71efa24b6d01e58bfe3f",
+      "size": 12641349421,
+      "pointerSize": 136
+    },
+    "xetHash": "fb91d62c45750b8b4158382ffdee39390efe8d668e727d45afb86358fb983784",
+    "path": "perturb_data/finetune_data/tahoe100m_full_selected_processed_new/plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed.h5ad.zst"
+  },
+  {
+    "type": "file",
+    "oid": "0803be9ad382b05bab43631ad3c3d4c789e46bc2",
+    "size": 54870042,
+    "lfs": {
+      "oid": "8c43bce711e34b4b7cb27541e1dc654d54d01a0efb225993b5c396124c4a7574",
+      "size": 54870042,
+      "pointerSize": 133
+    },
+    "xetHash": "88ce91b9c41071255b62fd75549c2fa2cbe89418a74b83a72cee74a5de9f8600",
+    "path": "perturb_data/gene_names/replogle_gene_emb_dict_perturbation_emb_dict.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d7a3264ce3d36c3ee0773aaae3f1ebdebf9eeb9b",
+    "size": 18829896,
+    "lfs": {
+      "oid": "feb67093ad59f2eff2d82cff649323ad037d72740c5c595d1edef088b6fb56e7",
+      "size": 18829896,
+      "pointerSize": 133
+    },
+    "xetHash": "974382672007602d7fa2a8d09b0f7135bb1877763932d9669a5cf02c87b6164d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_Parse_10M_PBMC_cytokines_processed_Xselected_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "08f65cfb4a6c6b83909c7fa1eb9de775c0fbf784",
+    "size": 54046531,
+    "lfs": {
+      "oid": "5b38c43424b7f30dd9570cafb5f62420400d6e927ecf4be14c9a8793cf1a91f9",
+      "size": 54046531,
+      "pointerSize": 133
+    },
+    "xetHash": "ec62ba2d707031b84de140b3f8a47bb0f2a1ba90242c94055a4b07b275dcafd0",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_Parse_10M_PBMC_cytokines_processed_Xselected_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "cfb471346f0da79e201e2ef0ed0455c7def47428",
+    "size": 1932604,
+    "lfs": {
+      "oid": "bc4e52d0469d6980fef5a338a62a5b38058bcf8dde0ca613693b49b930b287a0",
+      "size": 1932604,
+      "pointerSize": 132
+    },
+    "xetHash": "4a1603a998676f397fe4efc98cd3dfb79d7f6f4017ad2339ba98c87b6c06e70b",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_Parse_10M_PBMC_cytokines_processed_Xselected_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ec4ba8dab26a4d96be5b2bffac2d05faf9d276fb",
+    "size": 7314258,
+    "lfs": {
+      "oid": "65b8466faed58ba0b67d324b61594543e4d868d78fe13da223be0abc17e2f903",
+      "size": 7314258,
+      "pointerSize": 132
+    },
+    "xetHash": "738c8e94ac1094be9df4fac5fed36ea7b3b15b2eb64445baf835afe115a2a25e",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "36e2dff83875a5488046efaedd9f27ac8154a047",
+    "size": 55736120,
+    "lfs": {
+      "oid": "bc855ae57887fb4d8f56a3481455fbfabb3f31c172e797e8aa8ab8b1a59366ff",
+      "size": 55736120,
+      "pointerSize": 133
+    },
+    "xetHash": "a9a1483d101423b3496448f0ca54740b1ae7f0ec02cdce1c9f4bca23780d99ae",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "bb901eb45bc96442e127c335d19508445c90ede6",
+    "size": 520322,
+    "lfs": {
+      "oid": "31083427ba8f9360cda00f42f61eb681a83297b56cde37e7ded9543ce24c3c6d",
+      "size": 520322,
+      "pointerSize": 131
+    },
+    "xetHash": "eb0dedad4f05c0b004ffcfd35470079f8d4d077aef1f98c1d2439805a56acc97",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "28aab1f8cb3d41b85a25998bf95e46a89d37cf32",
+    "size": 7252825,
+    "lfs": {
+      "oid": "0019cd2959be05fad3cd2dae92f2b54feb474753b8b6c43d30f79221680e6826",
+      "size": 7252825,
+      "pointerSize": 132
+    },
+    "xetHash": "aaa13c813cd3f0c0d83bd7587d85c1c66d6e90acb9201d6fa454b8c501f02cf1",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "635466f119765a6dad94274ce467fcd0c57eb9df",
+    "size": 51103289,
+    "lfs": {
+      "oid": "4371f4c93d4baa9fcfcf002a6ca27fcb00ea28fd1ed043b5b9f279e98089eeb8",
+      "size": 51103289,
+      "pointerSize": 133
+    },
+    "xetHash": "d292d3dfda97f7adce0a774b669f354312374350767e1eac957f93edc3c36837",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "45e68c4b1d7b51edf47999413aa4f3ddb311a97b",
+    "size": 414802,
+    "lfs": {
+      "oid": "626a653382a210b1faaf70cb994763dec7dd48258241350358a6e8088afedf45",
+      "size": 414802,
+      "pointerSize": 131
+    },
+    "xetHash": "a87ef41bb295137bcaac8fb1312e972ded9c9bca86d1d78c85dd8fe6b2291b63",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3d18d8f49642d11ede9b6991d16de986783f86ba",
+    "size": 410279,
+    "lfs": {
+      "oid": "33852f6b7ed8d5f917af16c2b879e0d03c1e28acb0a20a5bd8f0b8a12d63861b",
+      "size": 410279,
+      "pointerSize": 131
+    },
+    "xetHash": "0d4e3c330f72e6bb434c0e5c2657cd203e0bcc972c9cbcf70813a7b81cab65b2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4f6e24321955e59b79a010d77a57c198a0c8afa4",
+    "size": 82419871,
+    "lfs": {
+      "oid": "2022a1214158d4f6bde20a9f2bda84c80a222b4b87b6f5f184745d478623d023",
+      "size": 82419871,
+      "pointerSize": 133
+    },
+    "xetHash": "df6f34f69660495461d646df5831a74098d8d056406ff865cb5a9afcd4c1da5e",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3f9d4258b514f8a1a59e9fb4278cb447e8262d90",
+    "size": 5,
+    "lfs": {
+      "oid": "926248e52d1fa532c317e37da24ed652ae64110f8219cb5e061668bd3091f048",
+      "size": 5,
+      "pointerSize": 126
+    },
+    "xetHash": "471ecf14d913063e9741d282c43f6bf4e95f69defea398c112904282f5ed6482",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "23b162ec8df3d2abad4a8c7e20b787f813586097",
+    "size": 7274245,
+    "lfs": {
+      "oid": "e9706ce003a04b6a26f5c0b440f9df4abb8e55ebc27e657067b5a520318a2cbe",
+      "size": 7274245,
+      "pointerSize": 132
+    },
+    "xetHash": "911665f041b46ddb4fbe63b06deaee530063866fc89bdd64519979ae5ca8bd3c",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c30acdca470cdb2d348901a04548c8b2a985924f",
+    "size": 60136423,
+    "lfs": {
+      "oid": "fc3d387eb3c96f0e0bf3ca464c321383ceee10eee20d6823cfc47d2156acc3c5",
+      "size": 60136423,
+      "pointerSize": 133
+    },
+    "xetHash": "cad23e325a210596f477de446b6c1ea1f346c12d3e7fd2bf84dbb2317ae38794",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "764108b7613c8bf2e63aa86a3f034a5c2cd1f55f",
+    "size": 801150,
+    "lfs": {
+      "oid": "502b264fec48de1761bb7ee78ec9ea87197882e772c8f7fbeaba73d70424d4a8",
+      "size": 801150,
+      "pointerSize": 131
+    },
+    "xetHash": "37933d4264f8166c56192b42bdec75debdbb4f1cb159c5d94567cc6461dd7e5d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e7b82db33d252cd3960e046c883aac36e2f50016",
+    "size": 5055315,
+    "lfs": {
+      "oid": "c083cd47b813507fde24c941935f4c306bcfe1fd9ae0002e4bc685909c920761",
+      "size": 5055315,
+      "pointerSize": 132
+    },
+    "xetHash": "6f78237f7addaa57d27539a8e1000d05cc3ffff56ec1dec1bda4630e45953a27",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0bb4316ba7e1715d2d881524c1f00d9530103e9c",
+    "size": 46766716,
+    "lfs": {
+      "oid": "d0f6ddf87fdef03a919b7edf1a12eb1bb76dceab3b8d4d047b1dfa121a7d664b",
+      "size": 46766716,
+      "pointerSize": 133
+    },
+    "xetHash": "6d29e9379925a6b0e1acee9ddb27d2ee8cb69954bfe82283a395b696d853f556",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9a4d658b6507561f2548b61fd84ba4a71589d5d5",
+    "size": 481587,
+    "lfs": {
+      "oid": "2533d0b9db1156ebaa9eec1c6a8b9a79a0d9ccd446de71cf33fd5381aee3438c",
+      "size": 481587,
+      "pointerSize": 131
+    },
+    "xetHash": "25d2eb426aeadc917234dbc1a988758346d6ec153e03a2f7d014f31c8290caf7",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5bdd551e19af3f13ad35389a5ca15b2b41cab059",
+    "size": 3349733,
+    "lfs": {
+      "oid": "526d4e52f2b4841ba133baafc744238e370f52fdda80d338ec116ac54ff0d1a3",
+      "size": 3349733,
+      "pointerSize": 132
+    },
+    "xetHash": "bf9b47012bf4615fcad557d826c931ec25b2f7db5357de9b5cdc68898d571e87",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "cd1780b2a232edce736ab2b95e665d01854cf76a",
+    "size": 39117739,
+    "lfs": {
+      "oid": "76d576d929a37e150593a267136be5cc10ac0c67cceb3131de2e4327eea36b56",
+      "size": 39117739,
+      "pointerSize": 133
+    },
+    "xetHash": "b3d624fe1834a7538b74df49d7df798c4b603e6e65fb78a2b24fd6c290e334b6",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f46805056fa9710f3a2be9926a20f4bdfb96eaec",
+    "size": 567874,
+    "lfs": {
+      "oid": "8de6d6154cbfc0067a32e73d8084b90cbdba0947e2b5cdd44a304d5bea533878",
+      "size": 567874,
+      "pointerSize": 131
+    },
+    "xetHash": "0f7cb3bb9a48105b642c53a4f2dcf3ec40df127a2146193eafda6ae780cf36cd",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "bde2cfb2145b9ebeaf1244c253063d68e19e1de5",
+    "size": 5638477,
+    "lfs": {
+      "oid": "96e41c068a5aad17333dedb54b59d81255b8d3d0698fccc8fa9c0ce4c43a460b",
+      "size": 5638477,
+      "pointerSize": 132
+    },
+    "xetHash": "a97d09d615783773f5a76bdc662ce0afba394a632e45584b45f5a6ef22843d76",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3f683f4d4f0939aed68f8305544b82545a461f05",
+    "size": 57061974,
+    "lfs": {
+      "oid": "68486bbd7b9eb2d57bbadd04f59d78e9002dd19e53a8a4db61e547317278212b",
+      "size": 57061974,
+      "pointerSize": 133
+    },
+    "xetHash": "a13d957019ca4b7522d2c18454f0d39adcd5ac342fd713cf2cb216b973d5ccdf",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c2a1cccc2c8448437af616a5d67c71502969db12",
+    "size": 429485,
+    "lfs": {
+      "oid": "9b3db809fa39b6c3e6b222e60bf8da5143abe1a388b5a608124f2e75bd797faa",
+      "size": 429485,
+      "pointerSize": 131
+    },
+    "xetHash": "dbb048c9acbc360fcbc5de045795087dae0690b75388e9202aa65dfd463fe550",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3a28d61d4ffb5c20d05ec9adf3d57c2204c055bd",
+    "size": 3108955,
+    "lfs": {
+      "oid": "3c0eaf180fe489e885aa0067e716cc107a26fce3cf3e5578603fad836f6ccaa7",
+      "size": 3108955,
+      "pointerSize": 132
+    },
+    "xetHash": "eb9d4d32592fd2f31ced026e0b03366226e95f7eea44dd2bae2f22670dd341b7",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c20fd1f5d84957467443042e1ffa0b435f8cfb82",
+    "size": 33851934,
+    "lfs": {
+      "oid": "99dfd9a9d00c5aa13203fb83c3551a6b4e04a0685b73e913d8b66714d8f8837c",
+      "size": 33851934,
+      "pointerSize": 133
+    },
+    "xetHash": "92da03066c0122740d539e3717a0189807973674511a58d22d17bf209031f434",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6497ca34b640f0dec81a1fda34af983260757954",
+    "size": 530978,
+    "lfs": {
+      "oid": "64bcbcf130142de663d3165d34adbec9deb2789b21061b0d0216970286422f69",
+      "size": 530978,
+      "pointerSize": 131
+    },
+    "xetHash": "ada7db83e111018f7b08f0746470026272009cde970031b260368944fdb1ca12",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "18c8cef79cbfb477f4260ef1bf0d7a259e17b0fb",
+    "size": 5226528,
+    "lfs": {
+      "oid": "21ba8a197d91940d9bfa8b590f034867ce0701e8b6750dec8bdf16042c9f2c11",
+      "size": 5226528,
+      "pointerSize": 132
+    },
+    "xetHash": "4b5c2e2bb74ea71941f196191d478690dbe5ad03954dc83fffed3bacbf066152",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "66f9a514025ce5f42f5cea7d926a1afffea0c121",
+    "size": 49992358,
+    "lfs": {
+      "oid": "097a907e20296854406b4715f1a89a2091b1fc2e9e3b590c69d6fb6b57b86545",
+      "size": 49992358,
+      "pointerSize": 133
+    },
+    "xetHash": "15580fcc7968b68036169b2c7ff7fdefd9b363164ce51ff3d6db563017b8c47b",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ff9b1fac039c68212acd1488369a8e948db9e155",
+    "size": 492411,
+    "lfs": {
+      "oid": "47d6f193b815a7078c2a414d086c7915565f83aa5b6bd5d90e6615f5d9766102",
+      "size": 492411,
+      "pointerSize": 131
+    },
+    "xetHash": "32f9098301885f3a112e86844b7086ea18579dabefe6cfc63901e5adf81575c9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a88f61eb2f3e4863b3f6f22439b397f62265cc21",
+    "size": 4964972,
+    "lfs": {
+      "oid": "464e52e147787d3fc5e51709fe8068b77592fde1a50391a2d462105ede7f5b6a",
+      "size": 4964972,
+      "pointerSize": 132
+    },
+    "xetHash": "93e6a9f560e2a5c8c805585fa3c64a0abee92a7dc7d7291828461ebbc41ba0b2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ccda142566d9c3fe3998c18418162872599fef3e",
+    "size": 45319810,
+    "lfs": {
+      "oid": "15c5e45ebb8f76c652ebfad8f360ddca6dfc42ac885c17887784d8e17c39dcbb",
+      "size": 45319810,
+      "pointerSize": 133
+    },
+    "xetHash": "40b51f81f89252aaf78e77c22c4b6f038f9e3688676ad7eace1528d7bf2d8d39",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b9689cc4c37919231ef5176673fa17d107f39c9a",
+    "size": 447186,
+    "lfs": {
+      "oid": "6d30389ef062a93bcfb9694b8532947ab642143b3af8008d8ae2fedebe10be47",
+      "size": 447186,
+      "pointerSize": 131
+    },
+    "xetHash": "6b1436a16c11dfbe6239827f88ba81dd41aa93796db2d97c9eafb9d65936d7cc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9b019dba40fff5b38f709ae82d2a4b356d2d1118",
+    "size": 5696157,
+    "lfs": {
+      "oid": "79165c3732139332308758af5d79baeb10032c48adaea77d8ad1ad144252beda",
+      "size": 5696157,
+      "pointerSize": 132
+    },
+    "xetHash": "1712e491d8bc0351386169a2c7955f374d23b84794f786a4d210245362c6b407",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f02c7af3ad8a4a1054317850ed21be14d28543ad",
+    "size": 53561944,
+    "lfs": {
+      "oid": "1a21b5eb9e046618026196816305118a550c8fe60b3c98a30bc9057e3702cd07",
+      "size": 53561944,
+      "pointerSize": 133
+    },
+    "xetHash": "e2537494c31b5e7bc28f85602141c6efa465d2ca0a1c080e84cfd6949725468a",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "80e77e41ad400620c1236bcdbfcf12d4eb6d4f1e",
+    "size": 431315,
+    "lfs": {
+      "oid": "91169028e1b44c52aa6482c654a211564a381b4eaf22ec46bac33fea0833592e",
+      "size": 431315,
+      "pointerSize": 131
+    },
+    "xetHash": "9b36dc47f6c512455622c7876527373517dfd257eab789535e1af12cc89c623a",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e3884abe8c56a707caad97f8dec267896feefaa9",
+    "size": 4930543,
+    "lfs": {
+      "oid": "5cb19d1e26696f890d16861afe018d91ae75192e047fdcd7cf35aeb21f922d2e",
+      "size": 4930543,
+      "pointerSize": 132
+    },
+    "xetHash": "bbd6931bdacb24d9d11e0fbbbc0868dd8c943239291c30e43b22dec7918cdaf2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3659d6c00b0bdc54838d96ad6aa6656d5703358d",
+    "size": 40221082,
+    "lfs": {
+      "oid": "54f1cacaabb781b5024ab2ccd303f8813993b1378771414200dc33a125a54f73",
+      "size": 40221082,
+      "pointerSize": 133
+    },
+    "xetHash": "52be1c84e9b6ae5b8f40e00e62a9152f83c9e50053860def8ae5f17c85a23862",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "2c2c724a167f7fa84e637e8f517e4c8430d4b1ae",
+    "size": 476985,
+    "lfs": {
+      "oid": "8d81c43bb7778ee280b5e90f28b0640d36a667b3342538b1585c1d3048803329",
+      "size": 476985,
+      "pointerSize": 131
+    },
+    "xetHash": "d06d2c482eaf2019cbe9ec31b9f392d118427a364728c537f2d174a9328944c3",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f70d8740a248874298b1e4ff1ab814db4b441fb8",
+    "size": 7536829,
+    "lfs": {
+      "oid": "23f02e6ed0df6343ba42355268b95d45cb51817e5c19b30f11f910b8624585db",
+      "size": 7536829,
+      "pointerSize": 132
+    },
+    "xetHash": "9731f74343156d6f4a0b9e93feee60adfddb475745402a3d30f68268ca42ce70",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d9b04a59c084468495a26a2bec2870dc2e0f9199",
+    "size": 62394632,
+    "lfs": {
+      "oid": "24d30f8bbc8c79ec9c092333d3960f0c50ee33003db1b6a4a5ccfd0ee8206cc0",
+      "size": 62394632,
+      "pointerSize": 133
+    },
+    "xetHash": "f34cdb3abeadb1dcf5cc30e27dbd4e23ce9d020693614dbb88e92369fdbc18f5",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ac72f26d7ea33f256312e1009baa8dca69a972d8",
+    "size": 553612,
+    "lfs": {
+      "oid": "23364e74a1153e92b6268acee2b7cd38219f8ec974c461c4f0fbf8e1c54f2f32",
+      "size": 553612,
+      "pointerSize": 131
+    },
+    "xetHash": "d3b9b7fa813aca2b1563d204477ec514b8bec9eb51f38c461a0b20e7cd6edf85",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "260cce6e246ef0c7204fb7aa2a161b71c4cf2f7b",
+    "size": 5039971,
+    "lfs": {
+      "oid": "0f613126f55da1556086e534b16fcbc0a28dcf5438e6279bef8bbfc8536e84da",
+      "size": 5039971,
+      "pointerSize": 132
+    },
+    "xetHash": "1c1aec43f4afacc2873810683390697ecd1ac30eb38c3609aa76e1c30f72f803",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "cb513e3be55c83a81c35bfb0b402b3727f429884",
+    "size": 41107220,
+    "lfs": {
+      "oid": "9c903fc3d852b14d4c0917dd68b40890dc310be828676665d4a4b8affce85e5e",
+      "size": 41107220,
+      "pointerSize": 133
+    },
+    "xetHash": "faf1f015713d9b9f5b6fb10beab9eed9c33bbc98c7e5e2c15b5a31c68cb020e1",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f9aa54e3a886b4482a7b24a7b016420601de5fb7",
+    "size": 550740,
+    "lfs": {
+      "oid": "a03bdf30517402d43cffd734ce0be9798d5eab1aad27b89b21b29f1de3842749",
+      "size": 550740,
+      "pointerSize": 131
+    },
+    "xetHash": "012c98259b81fe642c45368391d05d9f3eaeeacd7ac9ece755fd50f87917a7d2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "903e4e9839ba5ef8ac1244e18712a0a041271c36",
+    "size": 4308,
+    "lfs": {
+      "oid": "534e1947e964516b13421157ef74e286351d88845a7d75cfddb6a315e09398ac",
+      "size": 4308,
+      "pointerSize": 129
+    },
+    "xetHash": "790af48d6ac87f8c01b03ab619055edec68d3703d328e08d557d6ec7bdfe06b9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_10_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9e2817eff1a0aaca2c24fc5ac2c8ceb0853dc1e4",
+    "size": 20040133,
+    "lfs": {
+      "oid": "2f27b1a21e26c6748bd86edd2bfbef529c29133cf1c28cb51022ce61729b16a2",
+      "size": 20040133,
+      "pointerSize": 133
+    },
+    "xetHash": "d2beeb9c967c9f326c065a12126f7a2af335a9eda0ea53edf814176cf250122d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_10_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "903e4e9839ba5ef8ac1244e18712a0a041271c36",
+    "size": 4308,
+    "lfs": {
+      "oid": "534e1947e964516b13421157ef74e286351d88845a7d75cfddb6a315e09398ac",
+      "size": 4308,
+      "pointerSize": 129
+    },
+    "xetHash": "790af48d6ac87f8c01b03ab619055edec68d3703d328e08d557d6ec7bdfe06b9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_10_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "bdc1719d733ca8348e81b6b2e363e5d2d1be87c9",
+    "size": 4804,
+    "lfs": {
+      "oid": "c1091e6ce1087d64a391f0f9d6053b2ba2e17503cb029074978c0b4e02c3d9dc",
+      "size": 4804,
+      "pointerSize": 129
+    },
+    "xetHash": "fca6863378fa57496bc8a3809be153301cc8371f9d72ac41cc96c84542ea54dc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_11_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5de36d3ebe6e851a2f70c3fcb31ef556bcdf4c4e",
+    "size": 11394892,
+    "lfs": {
+      "oid": "617a9b3ba87247c5e182c20441945f1156ebfdb25830c9363123f4121c4aba74",
+      "size": 11394892,
+      "pointerSize": 133
+    },
+    "xetHash": "19f2c5427834c759017545d1ab6507a7052758095d7d19a4c7dd7a7ff1f38a28",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_11_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "bdc1719d733ca8348e81b6b2e363e5d2d1be87c9",
+    "size": 4804,
+    "lfs": {
+      "oid": "c1091e6ce1087d64a391f0f9d6053b2ba2e17503cb029074978c0b4e02c3d9dc",
+      "size": 4804,
+      "pointerSize": 129
+    },
+    "xetHash": "fca6863378fa57496bc8a3809be153301cc8371f9d72ac41cc96c84542ea54dc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_11_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4b41086c67ea53620dde40a217bb4ea93eaeabb4",
+    "size": 6447,
+    "lfs": {
+      "oid": "4d5605e213e0f0c0ae3f46b010433afdc3eaa46644529aeb63f5352711fc7ab3",
+      "size": 6447,
+      "pointerSize": 129
+    },
+    "xetHash": "28656868c9891097599ebd289bd93fc702eff272eda45dcddf3078ff4c365ad3",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_12_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "fe9223d572000684c71ffe4ed5e3b7518548c2d8",
+    "size": 20268997,
+    "lfs": {
+      "oid": "5143a8bd2b4dc403aeb61a2a1c56d9527807fb02d953fa22f492b0e9aaace2e1",
+      "size": 20268997,
+      "pointerSize": 133
+    },
+    "xetHash": "e502700f424c065a517ef32e9445dc2f32598fdb1cd97129e0e7f2402353a1ab",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_12_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4b41086c67ea53620dde40a217bb4ea93eaeabb4",
+    "size": 6447,
+    "lfs": {
+      "oid": "4d5605e213e0f0c0ae3f46b010433afdc3eaa46644529aeb63f5352711fc7ab3",
+      "size": 6447,
+      "pointerSize": 129
+    },
+    "xetHash": "28656868c9891097599ebd289bd93fc702eff272eda45dcddf3078ff4c365ad3",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_12_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0ef6baf98d0d414693d5e57aacacb9e76e0fe7e7",
+    "size": 5145,
+    "lfs": {
+      "oid": "38564c067f8a70dc849cae6c619dc0d177b17813f25a1b794c8ee26a69684478",
+      "size": 5145,
+      "pointerSize": 129
+    },
+    "xetHash": "13c96a19baf762a70f527ab92bba399f881a1be1f24b0b6a025204a1b7f1ca85",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_13_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4a1476218cf68102032e6335d3a2e6ce540df5d1",
+    "size": 12599805,
+    "lfs": {
+      "oid": "2c686caab596cbc5f58a9c3485d83ae4732d6b6796f16390070b18d992a4825b",
+      "size": 12599805,
+      "pointerSize": 133
+    },
+    "xetHash": "75acb196fddfa1b7749111c3b70150b41e3d7f9d97057bb0c0b836c8b279ed29",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_13_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0ef6baf98d0d414693d5e57aacacb9e76e0fe7e7",
+    "size": 5145,
+    "lfs": {
+      "oid": "38564c067f8a70dc849cae6c619dc0d177b17813f25a1b794c8ee26a69684478",
+      "size": 5145,
+      "pointerSize": 129
+    },
+    "xetHash": "13c96a19baf762a70f527ab92bba399f881a1be1f24b0b6a025204a1b7f1ca85",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_13_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a3ecf4e6349f9f14124d6dee172e90acd4451ad1",
+    "size": 8283,
+    "lfs": {
+      "oid": "3baa5660fbfb6bb3f5fb06a173f6da32c8e8fcb3abe29e5f5cc166f0c893f9d7",
+      "size": 8283,
+      "pointerSize": 129
+    },
+    "xetHash": "5dae7309209dd5b2ce8f612ad5130e54f5b91bfdea39e9afb9a2e36eeea35b8c",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_14_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "7e2d3ad392d997f67170bf7d69cec93e2dbcfdcc",
+    "size": 24874545,
+    "lfs": {
+      "oid": "453975377e36a348b437a48c773cfcee674aff92899b66428a8cb27161155aeb",
+      "size": 24874545,
+      "pointerSize": 133
+    },
+    "xetHash": "ee33df81b34decba7d6770ba61ca56b36caf2751c6e0ea7feb0fb0a66965fe54",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_14_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a3ecf4e6349f9f14124d6dee172e90acd4451ad1",
+    "size": 8283,
+    "lfs": {
+      "oid": "3baa5660fbfb6bb3f5fb06a173f6da32c8e8fcb3abe29e5f5cc166f0c893f9d7",
+      "size": 8283,
+      "pointerSize": 129
+    },
+    "xetHash": "5dae7309209dd5b2ce8f612ad5130e54f5b91bfdea39e9afb9a2e36eeea35b8c",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_14_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "140f98635994554bbba9ea26266e944350a05fb3",
+    "size": 5734,
+    "lfs": {
+      "oid": "073c8c37577675b8a897e2a774fd3096693581c4216af99ffe8f45eb5f897a52",
+      "size": 5734,
+      "pointerSize": 129
+    },
+    "xetHash": "b547762e67542feb2b370ea664c5ae8303852134d7cab00992777ea511d3cf44",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_15_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "aae1c72ebc0d12e26b9b66594cdc5236285841c5",
+    "size": 11351952,
+    "lfs": {
+      "oid": "8dd75b23ce8a605f25a91942e9b94e561b08089898cd7e7687d0e288e70f1c8d",
+      "size": 11351952,
+      "pointerSize": 133
+    },
+    "xetHash": "a97dfff9117a63e16c297af75889caaf6583c26b17daf0c6cccdf4a0c8d3f21a",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_15_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "140f98635994554bbba9ea26266e944350a05fb3",
+    "size": 5734,
+    "lfs": {
+      "oid": "073c8c37577675b8a897e2a774fd3096693581c4216af99ffe8f45eb5f897a52",
+      "size": 5734,
+      "pointerSize": 129
+    },
+    "xetHash": "b547762e67542feb2b370ea664c5ae8303852134d7cab00992777ea511d3cf44",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_15_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9d6ccac087b0287653b7ab4d1531f0045f38e64c",
+    "size": 5393,
+    "lfs": {
+      "oid": "d64f1ff585b4e7cdc2e72bc8c0835a4252fd22e6d3d6a976d6deb13e82bd7a07",
+      "size": 5393,
+      "pointerSize": 129
+    },
+    "xetHash": "23dfed5022469077b4da09b4c03fbf441a355d1a0507336ea549ecb3fbabae7d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_16_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "1be2e4f2f5b217c7bc84a40dbf7c48044060728e",
+    "size": 25608342,
+    "lfs": {
+      "oid": "d1c25ade91032d4d642989a36a87d92924dad7d437989da9ede44b0e607509eb",
+      "size": 25608342,
+      "pointerSize": 133
+    },
+    "xetHash": "48e5504414af14daa215c037496cc1d64eb11b2a98496cb589b52c831a8b0335",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_16_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9d6ccac087b0287653b7ab4d1531f0045f38e64c",
+    "size": 5393,
+    "lfs": {
+      "oid": "d64f1ff585b4e7cdc2e72bc8c0835a4252fd22e6d3d6a976d6deb13e82bd7a07",
+      "size": 5393,
+      "pointerSize": 129
+    },
+    "xetHash": "23dfed5022469077b4da09b4c03fbf441a355d1a0507336ea549ecb3fbabae7d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_16_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ab4f9e7e86fed25a408e7790b8b3c10a634d5d7c",
+    "size": 5796,
+    "lfs": {
+      "oid": "595f531fd80f5eecc1c79b0bc416d7b2e4482a28cb607141a050ad58bbad4bcd",
+      "size": 5796,
+      "pointerSize": 129
+    },
+    "xetHash": "1dfff72c9db6947f6d5303a4eccfabe6a59475ccd1f9fac2075f2f01965a1afe",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_17_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c89c73a53a0cd634886958577bf12ed8e266cac5",
+    "size": 20243767,
+    "lfs": {
+      "oid": "7db98da0df0d25f98e1cb71a9fd39ebdf82e122618e4f0696383928af5aa58fa",
+      "size": 20243767,
+      "pointerSize": 133
+    },
+    "xetHash": "305d3670cae648ab059c4f3ff90f590cfc38957be50af6bdcc2a59110e033122",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_17_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ab4f9e7e86fed25a408e7790b8b3c10a634d5d7c",
+    "size": 5796,
+    "lfs": {
+      "oid": "595f531fd80f5eecc1c79b0bc416d7b2e4482a28cb607141a050ad58bbad4bcd",
+      "size": 5796,
+      "pointerSize": 129
+    },
+    "xetHash": "1dfff72c9db6947f6d5303a4eccfabe6a59475ccd1f9fac2075f2f01965a1afe",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_17_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a3cb1caec77ead16fcc3ff08bdd11d0d4bed7d12",
+    "size": 4866,
+    "lfs": {
+      "oid": "5ae765e17b458f8907e203912b611f839687473ca583cc7c40d67cbd00d62318",
+      "size": 4866,
+      "pointerSize": 129
+    },
+    "xetHash": "cab360c5e5ad23432443a2097451484449d012500ac84a7008d080749515f7a9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_18_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6b7ff88a6cee41664fb108af20c61496035db467",
+    "size": 16711038,
+    "lfs": {
+      "oid": "d1f6d25f502759c57a8e1e16a599f24cf468d1e214bd26fae098caab8143757b",
+      "size": 16711038,
+      "pointerSize": 133
+    },
+    "xetHash": "837952f6a2f3735880d627b6d0e50c32692d4506574f8e8a5b71e6f7d4bbd6eb",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_18_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a3cb1caec77ead16fcc3ff08bdd11d0d4bed7d12",
+    "size": 4866,
+    "lfs": {
+      "oid": "5ae765e17b458f8907e203912b611f839687473ca583cc7c40d67cbd00d62318",
+      "size": 4866,
+      "pointerSize": 129
+    },
+    "xetHash": "cab360c5e5ad23432443a2097451484449d012500ac84a7008d080749515f7a9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_18_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f2d3cd303d0810feae0a05af1781ae600f718dc5",
+    "size": 5083,
+    "lfs": {
+      "oid": "58594308f9d2eda86a9982a356f8b0c0f1bc8c14c900364fc07635844155615b",
+      "size": 5083,
+      "pointerSize": 129
+    },
+    "xetHash": "f37657ec1f33233624e153a947339a46dc1e90db37a534962b31ecdcce65cefc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_19_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "140e12b5ccf8db165e84e7ba52e6358544c99437",
+    "size": 22621420,
+    "lfs": {
+      "oid": "5d9636dfdee5b9440f8ef01840aa2e3ea9b4110c07a33d963829a34a784f8d9a",
+      "size": 22621420,
+      "pointerSize": 133
+    },
+    "xetHash": "3a10bddee09d38cf7f7f35c36a47a4b12d572b26260795b805fbff085d942c01",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_19_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f2d3cd303d0810feae0a05af1781ae600f718dc5",
+    "size": 5083,
+    "lfs": {
+      "oid": "58594308f9d2eda86a9982a356f8b0c0f1bc8c14c900364fc07635844155615b",
+      "size": 5083,
+      "pointerSize": 129
+    },
+    "xetHash": "f37657ec1f33233624e153a947339a46dc1e90db37a534962b31ecdcce65cefc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_19_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0ef6baf98d0d414693d5e57aacacb9e76e0fe7e7",
+    "size": 5145,
+    "lfs": {
+      "oid": "38564c067f8a70dc849cae6c619dc0d177b17813f25a1b794c8ee26a69684478",
+      "size": 5145,
+      "pointerSize": 129
+    },
+    "xetHash": "13c96a19baf762a70f527ab92bba399f881a1be1f24b0b6a025204a1b7f1ca85",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_1_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9429c8218fd1e9918c27d68aa7f34a788973f799",
+    "size": 23492596,
+    "lfs": {
+      "oid": "82d5e608f2378f6e558f32fa1eb2584ded25e3d81108aa775f0464b03c9b991b",
+      "size": 23492596,
+      "pointerSize": 133
+    },
+    "xetHash": "dbb95190e6018eec2dfb6689977872aa7fd97fdc936d8cf96b3a7f1b54092ec3",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_1_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0ef6baf98d0d414693d5e57aacacb9e76e0fe7e7",
+    "size": 5145,
+    "lfs": {
+      "oid": "38564c067f8a70dc849cae6c619dc0d177b17813f25a1b794c8ee26a69684478",
+      "size": 5145,
+      "pointerSize": 129
+    },
+    "xetHash": "13c96a19baf762a70f527ab92bba399f881a1be1f24b0b6a025204a1b7f1ca85",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_1_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "36e34391b8c5135f7c22e48db20ea2b3913a71f8",
+    "size": 5486,
+    "lfs": {
+      "oid": "c862bfa2ae15a08f2d586a4d5601031e964b777706640382b4aa77d33368f766",
+      "size": 5486,
+      "pointerSize": 129
+    },
+    "xetHash": "efc7a80662402c17bb4cc5d4651b5f1a470bf1ab07e423681dfedb1dc7228c3e",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_20_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "987fb994776553c6c5a041b184cdde78bedca446",
+    "size": 29439282,
+    "lfs": {
+      "oid": "98e7e395d5377dace06105cb0f4ffed0077df1aa9deb726dd8156408f1cbdc3b",
+      "size": 29439282,
+      "pointerSize": 133
+    },
+    "xetHash": "7d679ebec14e6b9bb700690bd825d3f279894aefba54b82a9dc5379a5b8decbd",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_20_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "36e34391b8c5135f7c22e48db20ea2b3913a71f8",
+    "size": 5486,
+    "lfs": {
+      "oid": "c862bfa2ae15a08f2d586a4d5601031e964b777706640382b4aa77d33368f766",
+      "size": 5486,
+      "pointerSize": 129
+    },
+    "xetHash": "efc7a80662402c17bb4cc5d4651b5f1a470bf1ab07e423681dfedb1dc7228c3e",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_20_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "46dbfb75131c0b3ef5e7b2770ef0439bddea4153",
+    "size": 4618,
+    "lfs": {
+      "oid": "7f03423e97417904544cd81e702daae60b02768d036d3c6e3c3e890a23f4a231",
+      "size": 4618,
+      "pointerSize": 129
+    },
+    "xetHash": "398027ef5668a15b89fbb00f35b8fd4255479b1ea8180ac17db9cbed7c18affb",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_21_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "30e247103886f6943bf89c6ce4f26330aa9310e4",
+    "size": 23620967,
+    "lfs": {
+      "oid": "d869bad2b9f7c5930fd29525be83c8c02edd19a64923bcd4032103d511768923",
+      "size": 23620967,
+      "pointerSize": 133
+    },
+    "xetHash": "bb0d23ed1b6700ea5aff1b4cfc6f7c57bb262212ec478a2932a8f3159c4d2829",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_21_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "46dbfb75131c0b3ef5e7b2770ef0439bddea4153",
+    "size": 4618,
+    "lfs": {
+      "oid": "7f03423e97417904544cd81e702daae60b02768d036d3c6e3c3e890a23f4a231",
+      "size": 4618,
+      "pointerSize": 129
+    },
+    "xetHash": "398027ef5668a15b89fbb00f35b8fd4255479b1ea8180ac17db9cbed7c18affb",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_21_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f2d3cd303d0810feae0a05af1781ae600f718dc5",
+    "size": 5083,
+    "lfs": {
+      "oid": "58594308f9d2eda86a9982a356f8b0c0f1bc8c14c900364fc07635844155615b",
+      "size": 5083,
+      "pointerSize": 129
+    },
+    "xetHash": "f37657ec1f33233624e153a947339a46dc1e90db37a534962b31ecdcce65cefc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_22_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b616ec139978f6c48ac840b65e3dad4313f686e7",
+    "size": 19280812,
+    "lfs": {
+      "oid": "5fef0db45b91913dec942f30428e9cbdf173fad52fa7efce1932b4c70c0848ec",
+      "size": 19280812,
+      "pointerSize": 133
+    },
+    "xetHash": "9aa2f228e01aa33c03665cbb5fa04d641c4a93e2761461eefa61fa4e3a988f47",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_22_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f2d3cd303d0810feae0a05af1781ae600f718dc5",
+    "size": 5083,
+    "lfs": {
+      "oid": "58594308f9d2eda86a9982a356f8b0c0f1bc8c14c900364fc07635844155615b",
+      "size": 5083,
+      "pointerSize": 129
+    },
+    "xetHash": "f37657ec1f33233624e153a947339a46dc1e90db37a534962b31ecdcce65cefc",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_22_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "54426ec8a6002ecb6141ff5088f6c9c4e9511baf",
+    "size": 5517,
+    "lfs": {
+      "oid": "0556428098eed88ac771b4058e146a61f265bf8e7e07cb92f42b695a3978945e",
+      "size": 5517,
+      "pointerSize": 129
+    },
+    "xetHash": "14ca4a0fdec889274aaa2a562cfd6bcc2afdf9589d37ed76d4688ab6e0250d9c",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_23_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "90669e8ed6ac4f6d5832d1080dd8058f8263a5a8",
+    "size": 17658632,
+    "lfs": {
+      "oid": "ac16169d2e03f2533b7855ee52e49102d8b68e6a7db675d5227599a878caa46c",
+      "size": 17658632,
+      "pointerSize": 133
+    },
+    "xetHash": "907ef258e962551e3217252e17d78ae8c9d7b61151148ad3f94277b187ea4dd3",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_23_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "54426ec8a6002ecb6141ff5088f6c9c4e9511baf",
+    "size": 5517,
+    "lfs": {
+      "oid": "0556428098eed88ac771b4058e146a61f265bf8e7e07cb92f42b695a3978945e",
+      "size": 5517,
+      "pointerSize": 129
+    },
+    "xetHash": "14ca4a0fdec889274aaa2a562cfd6bcc2afdf9589d37ed76d4688ab6e0250d9c",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_23_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e69d7b34103cfdf37491a4bdfa4da201d963f9e3",
+    "size": 5672,
+    "lfs": {
+      "oid": "68f3f894bbdb6ace1f0e53fa8bf9d189fc22d03e4e1f3544903330bd327dbe68",
+      "size": 5672,
+      "pointerSize": 129
+    },
+    "xetHash": "b0e59ff5f5897454c75031b678ff9f2cf653e526e79298ba3aa55b2c5ce1eefa",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_2_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "1ad907542c0ef2d00597f410b5286fb4b0efbdc9",
+    "size": 18238288,
+    "lfs": {
+      "oid": "27f10bc2a27e3d683468a732826495095214037e8670fea46f93214d2b87f397",
+      "size": 18238288,
+      "pointerSize": 133
+    },
+    "xetHash": "4450bb5ef9039ae16cb0dd7c5aaad55f9da58ef1277eb8f2c580b2c8f1606775",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_2_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e69d7b34103cfdf37491a4bdfa4da201d963f9e3",
+    "size": 5672,
+    "lfs": {
+      "oid": "68f3f894bbdb6ace1f0e53fa8bf9d189fc22d03e4e1f3544903330bd327dbe68",
+      "size": 5672,
+      "pointerSize": 129
+    },
+    "xetHash": "b0e59ff5f5897454c75031b678ff9f2cf653e526e79298ba3aa55b2c5ce1eefa",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_2_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f01fa3a34308e4d4945d8893c872de04a7d1606d",
+    "size": 6478,
+    "lfs": {
+      "oid": "06ca324b2725b654e35167878933d02d697ee91367e37e664c1b6b8c0e2eb794",
+      "size": 6478,
+      "pointerSize": 129
+    },
+    "xetHash": "f0a9db9f6c0977458145cd280496b49b4aa04da1733782fd90b4824dc6951478",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_3_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "decd917206415291e6afa0e7a61393c0900df167",
+    "size": 18732875,
+    "lfs": {
+      "oid": "23e05604789bbf373ad006a0cc5420bf5104c5c396cdae3904b5ef7ce88c58de",
+      "size": 18732875,
+      "pointerSize": 133
+    },
+    "xetHash": "d98ad8bf38f51e1481890f97825442dabff7200efd30d1e9f029a4cf22c035c2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_3_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f01fa3a34308e4d4945d8893c872de04a7d1606d",
+    "size": 6478,
+    "lfs": {
+      "oid": "06ca324b2725b654e35167878933d02d697ee91367e37e664c1b6b8c0e2eb794",
+      "size": 6478,
+      "pointerSize": 129
+    },
+    "xetHash": "f0a9db9f6c0977458145cd280496b49b4aa04da1733782fd90b4824dc6951478",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_3_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f83aeddcbb535cc9665f068c5ae0a989e77901c6",
+    "size": 4060,
+    "lfs": {
+      "oid": "285ec0ea71dff0d629598eec1476b409180e636f5c439b2ccbf00068781a6fd6",
+      "size": 4060,
+      "pointerSize": 129
+    },
+    "xetHash": "9251c841a9bb198d96f7a45479ede1664df958418def7a87b4b68a003b0389c9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_4_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "da48a2e9eea144bafe8b5050897a4ccd2feaa613",
+    "size": 29651271,
+    "lfs": {
+      "oid": "2fe5c444f1e2e0cad5c7e811a548e2fabb37fb7a48571504779cb266415924f2",
+      "size": 29651271,
+      "pointerSize": 133
+    },
+    "xetHash": "9547931df0a035834b5878f3119c550cd0b9931e78b5a428ff3952a0403eaf03",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_4_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f83aeddcbb535cc9665f068c5ae0a989e77901c6",
+    "size": 4060,
+    "lfs": {
+      "oid": "285ec0ea71dff0d629598eec1476b409180e636f5c439b2ccbf00068781a6fd6",
+      "size": 4060,
+      "pointerSize": 129
+    },
+    "xetHash": "9251c841a9bb198d96f7a45479ede1664df958418def7a87b4b68a003b0389c9",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_4_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ceafe0f463cff153cb7c7cfefe260386f65f3af6",
+    "size": 6695,
+    "lfs": {
+      "oid": "ae4e69accb8fc2b3c7c6cc387b3f65e448916071e60c10d1ab47ca14ddb2e31d",
+      "size": 6695,
+      "pointerSize": 129
+    },
+    "xetHash": "e0ebc4dc6c94391d0186b0563dd0810cba1e91736ed3e59394e3efa7b3235a3d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_5_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5e6b36ce104ede5e1ed23980a7577e2ae905bdef",
+    "size": 16650978,
+    "lfs": {
+      "oid": "8cc210b7f6e10a20e765d0202fd53fadcec66dff839a56ec40132d03c566be4f",
+      "size": 16650978,
+      "pointerSize": 133
+    },
+    "xetHash": "7afe84d07f50c6d6c81cc2cfa61a9f69e24bca9711c357c0ac64ebb18a118fc1",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_5_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ceafe0f463cff153cb7c7cfefe260386f65f3af6",
+    "size": 6695,
+    "lfs": {
+      "oid": "ae4e69accb8fc2b3c7c6cc387b3f65e448916071e60c10d1ab47ca14ddb2e31d",
+      "size": 6695,
+      "pointerSize": 129
+    },
+    "xetHash": "e0ebc4dc6c94391d0186b0563dd0810cba1e91736ed3e59394e3efa7b3235a3d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_5_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "879872bfc0df71368cbb0955a00a8b9c951b59a0",
+    "size": 6168,
+    "lfs": {
+      "oid": "d726754fbdaa48f781dd5cac6ef93e8312fd13c3a3c6b97244b8cb6a8ad7355d",
+      "size": 6168,
+      "pointerSize": 129
+    },
+    "xetHash": "9ef1188ae9d5484b10f54c610c90c77935f4027bcbb5530102484b0300ca2ed7",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_6_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "1868b7aba0c4b3eb507153e53419541f91072aec",
+    "size": 36656985,
+    "lfs": {
+      "oid": "f66c24ea7817295365df012d23c0af733db5689235c226819022fc46808560fb",
+      "size": 36656985,
+      "pointerSize": 133
+    },
+    "xetHash": "a33dac1308ae3cb61f9dc6d4269ff511d7bf4d3bbfb5fddc518e855d9f2b0f39",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_6_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "879872bfc0df71368cbb0955a00a8b9c951b59a0",
+    "size": 6168,
+    "lfs": {
+      "oid": "d726754fbdaa48f781dd5cac6ef93e8312fd13c3a3c6b97244b8cb6a8ad7355d",
+      "size": 6168,
+      "pointerSize": 129
+    },
+    "xetHash": "9ef1188ae9d5484b10f54c610c90c77935f4027bcbb5530102484b0300ca2ed7",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_6_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e6ed29ba65ecfa35be8cdd6a4fffdbb2008d2acc",
+    "size": 5021,
+    "lfs": {
+      "oid": "eced6444ae6bc01580c750b83d3002236d686b2f8fd859c6268be8b063dc693a",
+      "size": 5021,
+      "pointerSize": 129
+    },
+    "xetHash": "adc14bc76c8ae60a2e8c383b1b8b29bd5a65b3d2c204a750bd8743d917f47019",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_7_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b2c6be68d38dc2698ce161e9d977214596214c31",
+    "size": 11457170,
+    "lfs": {
+      "oid": "8d962f7615e528d4551d407c2232e09c2512a32c90b3a35fea59a59f303fe291",
+      "size": 11457170,
+      "pointerSize": 133
+    },
+    "xetHash": "b4f2066121294330b8408bb5a83cae31d67fb4ba6c55799e77cf4c178089794d",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_7_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e6ed29ba65ecfa35be8cdd6a4fffdbb2008d2acc",
+    "size": 5021,
+    "lfs": {
+      "oid": "eced6444ae6bc01580c750b83d3002236d686b2f8fd859c6268be8b063dc693a",
+      "size": 5021,
+      "pointerSize": 129
+    },
+    "xetHash": "adc14bc76c8ae60a2e8c383b1b8b29bd5a65b3d2c204a750bd8743d917f47019",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_7_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "01e319b01c80c03c9b05ba61a654a69f2a28fa8d",
+    "size": 5765,
+    "lfs": {
+      "oid": "e04f35870178744472a8417aef20cb000f947a75a962a628887fab447a7def80",
+      "size": 5765,
+      "pointerSize": 129
+    },
+    "xetHash": "69a41d6d8fd4b01ef403b3d896232bdaa55d122aa630d60cf20c9397f797795a",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_8_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0906572f71e8692664c31787fecc156a3f53df44",
+    "size": 23615143,
+    "lfs": {
+      "oid": "b22b1464429967bb971eb6385ea10070e1044d214b42f1d0e7afa575c1de44de",
+      "size": 23615143,
+      "pointerSize": 133
+    },
+    "xetHash": "bfde7679fc347cb876810b75778df990c4578bc148f79b07b6f13501649de77b",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_8_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "01e319b01c80c03c9b05ba61a654a69f2a28fa8d",
+    "size": 5765,
+    "lfs": {
+      "oid": "e04f35870178744472a8417aef20cb000f947a75a962a628887fab447a7def80",
+      "size": 5765,
+      "pointerSize": 129
+    },
+    "xetHash": "69a41d6d8fd4b01ef403b3d896232bdaa55d122aa630d60cf20c9397f797795a",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_8_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6ef0ac38d1dee19ebccb8a7be8fa9d711fb4ec3c",
+    "size": 8475,
+    "lfs": {
+      "oid": "1a5d8aff1537acde5c92bbfab8a97437cd7f5a5ae2c764a61b5cdeebc1a367f0",
+      "size": 8475,
+      "pointerSize": 129
+    },
+    "xetHash": "298b222a1d223d4703f64a3b09d021423c892b217f504427023cb5c1048dba16",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_9_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0beb71c956edc31401074a124e6fd775f17e4a6e",
+    "size": 33159988,
+    "lfs": {
+      "oid": "0d29f1399090980643d910283d5a4a215e045d121b2838418175315ed7a545ba",
+      "size": 33159988,
+      "pointerSize": 133
+    },
+    "xetHash": "1692b6f18e36e0adf50d007cf950008803dd5e6f4c281760632d4c9f01a623d2",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_9_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6ef0ac38d1dee19ebccb8a7be8fa9d711fb4ec3c",
+    "size": 8475,
+    "lfs": {
+      "oid": "1a5d8aff1537acde5c92bbfab8a97437cd7f5a5ae2c764a61b5cdeebc1a367f0",
+      "size": 8475,
+      "pointerSize": 129
+    },
+    "xetHash": "298b222a1d223d4703f64a3b09d021423c892b217f504427023cb5c1048dba16",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_proc_cellxgene_combined_9_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3976907b320d8819de77f52267c1198c889b94af",
+    "size": 17402601,
+    "lfs": {
+      "oid": "e14a4ff5fa0f7e865b30537eaee864f73627a082c332b4002a937c3e84d4f7c3",
+      "size": 17402601,
+      "pointerSize": 133
+    },
+    "xetHash": "b9c89ad15bbaaffb1a65d708561802fcc16cca35b46d28feb1e1a8d16cdfcdb4",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_replogle_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "dc6d161966f0d69809341a4408b208b7b2ec0de3",
+    "size": 21970207,
+    "lfs": {
+      "oid": "7790809168bbea482157fa1bf3cf735f351008e1d4771faf2c0e6a4ea1c0fb8c",
+      "size": 21970207,
+      "pointerSize": 133
+    },
+    "xetHash": "5159e0567c013002330f76d23043ce3ca0ce5065ef14667fbb374c416bf42978",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_replogle_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f757e649ce51832c44897207364fa2c814902e7e",
+    "size": 17215040,
+    "lfs": {
+      "oid": "f4450d672fdfabcd754f6bc980a199b98f916af8537cd238ef8ce3ad37ef2f7d",
+      "size": 17215040,
+      "pointerSize": 133
+    },
+    "xetHash": "9bf58646a27ce661b02eb23e5416a1c040ad579912715ed520fb0e846fef8516",
+    "path": "perturb_data/indices_cache/grouped_pert_data_indices_replogle_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "7982ea22317c34393b6259ca4ef6827af852e3fa",
+    "size": 198641,
+    "lfs": {
+      "oid": "8ac332a419a3c978e49ce907b6063a7419291ec494d7f51e96bcc43990f68219",
+      "size": 198641,
+      "pointerSize": 131
+    },
+    "xetHash": "efa0b6ecbbb261e317c142d926e1e9b7be39a00a6eacf5391e14a016e74ae063",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_Parse_10M_PBMC_cytokines_processed_Xselected_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "1713ee2629f72bb12b2deefd7fd647624374e8d9",
+    "size": 202937,
+    "lfs": {
+      "oid": "453ccebb89461fbee6488c5d91d712cdbb4d584d2552cb9a3fbd51a2a9fb787f",
+      "size": 202937,
+      "pointerSize": 131
+    },
+    "xetHash": "8fa535032eb38bc8eb7c697649a07324c8d88fcf08ea8d4fea76e82baae05bba",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_Parse_10M_PBMC_cytokines_processed_Xselected_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b3ec5966a1c13ba9f74db5a31490b1dd4f6d9fbe",
+    "size": 196765,
+    "lfs": {
+      "oid": "e38f9165e7bfbedd710d3a0489354c4a47d3c0a0f334f834ca45b8f29e773a90",
+      "size": 196765,
+      "pointerSize": 131
+    },
+    "xetHash": "f775c124a84827d77ba60a3347f85dd45dac04022e57f92edce7441df2a666eb",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_Parse_10M_PBMC_cytokines_processed_Xselected_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d62246606f6a9f55019870cf174a30da854075a4",
+    "size": 47873,
+    "lfs": {
+      "oid": "a365ffb933b4b7fe640bead95fc4b393705397cd3fb844bdfbb66eb094c25e28",
+      "size": 47873,
+      "pointerSize": 130
+    },
+    "xetHash": "719a27a3cc3bfbe2e320352abed39ae1c4cf8bcf4bf4dcd7cadb8995b4941bdd",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d1fb2c15ccd740f592164753efae97ee7f786ffd",
+    "size": 51391,
+    "lfs": {
+      "oid": "cc9373185e9f1c3b92991a33a1d796ad5383becbedddbe17a3569e0bde7a693c",
+      "size": 51391,
+      "pointerSize": 130
+    },
+    "xetHash": "e9339861c2c63e87ec5823c54cb467462c730501d4c0ebf6d8f34536b1b78e6b",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "49695559f35965b3d8f7511816d6fa1bdf42e4f1",
+    "size": 47539,
+    "lfs": {
+      "oid": "6aaed9384738b16026fcfa27a9e04c088253f69b7db50d1682fc428f31603f6d",
+      "size": 47539,
+      "pointerSize": 130
+    },
+    "xetHash": "efc0c4dd682cd3e1c849298fb25ac69de8c18f95c5bd389bfaecf3a2e036d463",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate10_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "34f07c4cf7c6f275f13f50a1f344a77ee7891f03",
+    "size": 47874,
+    "lfs": {
+      "oid": "d59a88d4d93636570fea454986a3708b6f5537c21b14fc6b3af93f76c3cdbb02",
+      "size": 47874,
+      "pointerSize": 130
+    },
+    "xetHash": "a0118c63794f0fb25ec7eeaf3e38fd67cc2402f8ace9b8978506b515a86c1d25",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "eb41c4f02a05fd1817febc989a658a3c4aeb6032",
+    "size": 51344,
+    "lfs": {
+      "oid": "057aeedef3fb01949b3bae18d98465f2d0e136ded0f19ca854f9935aaa11ab40",
+      "size": 51344,
+      "pointerSize": 130
+    },
+    "xetHash": "bedbfd54eab2e12d4ec085a983376f9568e05a2a774b7943e908cbac6481195f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ebe8a49b83712a20de957afe8d1e3e4f36ac1121",
+    "size": 47539,
+    "lfs": {
+      "oid": "6e04c85a257252c0f1d35a7b834e0e98872d089a2acfbd4b5ee83fcfe85c6271",
+      "size": 47539,
+      "pointerSize": 130
+    },
+    "xetHash": "e6e87b5a720edf79fc59cfda0cf2d3fbe06981820638a5df4a3b1331c270003e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate11_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "a1a04ff98a54955030e5815dd9ddce319272a577",
+    "size": 47529,
+    "lfs": {
+      "oid": "3f276ffdbc8d04cf9416107b3fca52ae526bd809f5f6cb908e3b6fd6cdc621f7",
+      "size": 47529,
+      "pointerSize": 130
+    },
+    "xetHash": "d0e3faa8291a47491e6c8f6c1a5c08cedd71c818aaa668b619b2df5f477cf485",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "8122352b55738d758a367f3c9d0675eea274735c",
+    "size": 51778,
+    "lfs": {
+      "oid": "6e74c30108603b03a7e7b9a101fd864f96b9b8df5cbedfae5d49cd96cb737a7b",
+      "size": 51778,
+      "pointerSize": 130
+    },
+    "xetHash": "cfb703b3dac9d0235f9a7b0e19c8c218803e49e885019ff3115dc3e95452cf51",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3f9d4258b514f8a1a59e9fb4278cb447e8262d90",
+    "size": 5,
+    "lfs": {
+      "oid": "926248e52d1fa532c317e37da24ed652ae64110f8219cb5e061668bd3091f048",
+      "size": 5,
+      "pointerSize": 126
+    },
+    "xetHash": "471ecf14d913063e9741d282c43f6bf4e95f69defea398c112904282f5ed6482",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate12_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "dfe60d5f918256f0d5bacf311ff3058bd99d374e",
+    "size": 47338,
+    "lfs": {
+      "oid": "03259a3560a87232dc4d550cc857d2bbc9fde8928d6d622da40debfe83b4c89d",
+      "size": 47338,
+      "pointerSize": 130
+    },
+    "xetHash": "56b6aaa2fb3b8a976ac78bf2602861668e75e42261d892b4e3b518be26ccf860",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "07599a1f4b403af55432721f8e87e2ef060986e8",
+    "size": 50853,
+    "lfs": {
+      "oid": "45e575db42348c8ae957ce9e1bebe625daa6969963e2495301455677aa810126",
+      "size": 50853,
+      "pointerSize": 130
+    },
+    "xetHash": "41cdb2ed0c85f6770f3c295b006921998a84979e1c3bc0409c824ca4853148b6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "54190ac5fa85ce176274b10524dfddad3355c378",
+    "size": 47054,
+    "lfs": {
+      "oid": "de687515d76fe6ab4244fd3fc9fb5f1576b0f52307617a8190076f7a310a4444",
+      "size": 47054,
+      "pointerSize": 130
+    },
+    "xetHash": "59774c9365a09b9ecdca91f858e99fcc2b45cac6bff5a39bc80d6cd2634eb275",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate13_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "2dd6dc3af4da43fc56208296c3be8b3f4ade2c35",
+    "size": 47849,
+    "lfs": {
+      "oid": "69a40e884139b111f41489cc12e2c0f54375b1ac2086c30a7ef9400b21ff8302",
+      "size": 47849,
+      "pointerSize": 130
+    },
+    "xetHash": "7cf0fe80e25fcc786b6e94ba1203d8f3fc0eb8aa268f07f13661a9ed34f53f16",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0e110bf0959fa1ecb5d92c1914440db4b3d8018c",
+    "size": 51327,
+    "lfs": {
+      "oid": "b119fddfc3c35fea6be2db0437f9dd013b595b025d3c2f6474e07603d8c4721a",
+      "size": 51327,
+      "pointerSize": 130
+    },
+    "xetHash": "9b5987a3419694ddebb7ac40c442609cf6fc61c51f2e3747710786fe771f2251",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "7a2d4df5fa6804ec9b48f01954f9b628650c5e4e",
+    "size": 47544,
+    "lfs": {
+      "oid": "fc14dc494bf8b8559fb12edd2ba656e656ff0cc5b94179949825f48dbc070ee6",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "e580eae297e255730bbf0532580783d455fd5d1cf7f2955dfaa0f4fbff17e73f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate14_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "fc0fc5302e5e40295b7910c1ca626122600e5e55",
+    "size": 46799,
+    "lfs": {
+      "oid": "2c1cb3b3d96ca3c284284e3e478fe1cc757513dfad5fb20f338db680587437b3",
+      "size": 46799,
+      "pointerSize": 130
+    },
+    "xetHash": "c3a1e9fb3f768b769a6cc247ef9a8df1052cbbdfde6a72c6a9b7740984626068",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "cfb87aad5c10a14001946094ecbc462f5ab8894b",
+    "size": 49871,
+    "lfs": {
+      "oid": "b8f299c6a42c12f57bedb0d098e12ca289bc10c4b13a1755d868d07ebbd325d2",
+      "size": 49871,
+      "pointerSize": 130
+    },
+    "xetHash": "e5e207bbd37251d625156d5f5bbd243adef8cc743aeb412f6d27ee067611726a",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d4586b9309b6062ae2f56413fe08ada26b7fc77e",
+    "size": 46554,
+    "lfs": {
+      "oid": "6e31c33c316fbe87a2a7194beb6a6ef15bbbb3e4b9fc7d1207a358d12920be6a",
+      "size": 46554,
+      "pointerSize": 130
+    },
+    "xetHash": "80c0eaa5dbc3647bd81fee602ef2d58c1613308381b1a7a497d12b11f4104d54",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate1_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4c8c399d56aff257880e2e8ccbb18703e54ceacf",
+    "size": 46834,
+    "lfs": {
+      "oid": "db171129954ed5b733a392b6d4047b8b1b07160ed8b5e5fbde311f038d6f813d",
+      "size": 46834,
+      "pointerSize": 130
+    },
+    "xetHash": "ffea74c0c7f39aa40090f82f16144c682028b5382a9d78597a3f2c0140c9df52",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6042e231c0a96d7edd46e8bb7dfcf5bb46fcdc90",
+    "size": 50176,
+    "lfs": {
+      "oid": "0df76ce4ab737f50fc5bc534df45d30a1449f298105bd925bb4a0c7d48e7d0c8",
+      "size": 50176,
+      "pointerSize": 130
+    },
+    "xetHash": "caf97a6d588dcd68fd014d6f6491aca7dfa7dc2ab8602553824da15139a3936c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "823a19422626f8166208a156b6c0cb3cc3549b5d",
+    "size": 46549,
+    "lfs": {
+      "oid": "ba1ad22108bca4c2ac7052b9ef88aba699717b2a393a187599870b10048ae0df",
+      "size": 46549,
+      "pointerSize": 130
+    },
+    "xetHash": "6c82ee18fcfc29f232f77d3dd2739ed6ec16d5b90812b8c1f787dc2d5f9ef10d",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate2_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "324746231b9d0791c7c65e6eb6f482cb85fe3549",
+    "size": 46831,
+    "lfs": {
+      "oid": "ad9827910622987b088509387b2a2d07d2f18fa80aa70a6d17003cdd79326bb8",
+      "size": 46831,
+      "pointerSize": 130
+    },
+    "xetHash": "8fc278cac948c015b432b0d180235c8769a54bbfc6154ee4a4013d0d04782c56",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c22f9ad8deae4c1c3efe99c12a29503de5929ebf",
+    "size": 50099,
+    "lfs": {
+      "oid": "81e2850c5fb8c73f1aacb294ccb445298269551013814ac59bd6650235ea3d6e",
+      "size": 50099,
+      "pointerSize": 130
+    },
+    "xetHash": "34df37c36b2fd75edeb32630dd06a24940995cba6490ffc2eb84c0d5b23e9aaa",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "564adf8e84754670e63fc0dc3c72c47e0ae167ad",
+    "size": 46554,
+    "lfs": {
+      "oid": "2e61ee83f6363e768a144d8619f4c6ba8fd3668a71d14fae7255fafe2fe821c0",
+      "size": 46554,
+      "pointerSize": 130
+    },
+    "xetHash": "1c6ccfd6a7f348fc09e874bd72787517e78c9a8036518c81a52be0a19473602c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate3_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "7bed81c580d5da01f654dfbe4ef67a88ad82c56b",
+    "size": 47854,
+    "lfs": {
+      "oid": "93634a86e6d5e48772e156a160cfad541b05217dc4925cbcf81233ed3379981f",
+      "size": 47854,
+      "pointerSize": 130
+    },
+    "xetHash": "407af6d8b7163b76c021d594f99afefef0ac8a31218cf6cf216c16c55c6edc48",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "8302ff97ea1b54bf8c431e3a4eba1146a6709c76",
+    "size": 51395,
+    "lfs": {
+      "oid": "df894886f39a2cbcc7ff83d7d814bab7e590db8eaf11884da534fe19d9b216e0",
+      "size": 51395,
+      "pointerSize": 130
+    },
+    "xetHash": "ea507c120a019e70763b78ca3858e690273ee2789a3c187f42f214fd47b854b2",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c38fb25dd70f78c626c032d80b2a8a548cf51c1d",
+    "size": 47544,
+    "lfs": {
+      "oid": "40b83b712e2f161e77887196d4c1073c9a7487a16a49a9d867bf324804f06834",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "ffc1380cc9dba673b820f1d07c38f57cd3b700bd119fae74d67925b3cd437655",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate4_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ff07c3cf9faf889625b4072c8548357fed0666bc",
+    "size": 47854,
+    "lfs": {
+      "oid": "dd36e5f5749418880e8c8e3c42005830566222064e336f58710b3c3ca549f77d",
+      "size": 47854,
+      "pointerSize": 130
+    },
+    "xetHash": "eb24aae4e84cedaee22e21642bfc7514087f3ac518993691d27774a9e1a4a56c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "3fef68687f1a337bcd8a31a8b4c03d2d526626b5",
+    "size": 51358,
+    "lfs": {
+      "oid": "bfe21ea9a530a25739ac00b3011f376447c2ab35b3cfa39a0797449dda231b7d",
+      "size": 51358,
+      "pointerSize": 130
+    },
+    "xetHash": "931b14bca8ab6b8e02dd971b1db942ffb0da14106bf2fde8fdb9ca0e14c98498",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c827a5b73555dec71618de28cb04eb9748aaae6c",
+    "size": 47544,
+    "lfs": {
+      "oid": "dd8950fd4777c852a82f16214ce10141ac32d160dd469d1180aa3fef52b72105",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "46199d6a592eea46b4f1f72c7fc0d04d5b9ba67c1ce77de001076a45a32516b0",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate5_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4b660e1f1942bccbd29d409868beea2d98bcc06f",
+    "size": 47853,
+    "lfs": {
+      "oid": "16ced806c916d37c3609b859fe79b0d3baf637137d8919bffc146ed9796790a7",
+      "size": 47853,
+      "pointerSize": 130
+    },
+    "xetHash": "09878ee2469d81592b47eb621b68935908477090ca8301e3c739178d164117b1",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9429992d4a004a291a1bfa4285210878f60d58f5",
+    "size": 51385,
+    "lfs": {
+      "oid": "0dcce22cdb15bb1a5f8d22cf66fb8be7e0479e6b7f15a747616a386c16d21346",
+      "size": 51385,
+      "pointerSize": 130
+    },
+    "xetHash": "0863857af9d9cb30d48c3bb5011cc681dab47014e48fbd11c1b3e840fd55fb9c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "dc793d997b30f927040f720a5b782492c8e7cc05",
+    "size": 47544,
+    "lfs": {
+      "oid": "4115e4951dfe6fd81098328d32689af72de367b8a53d60d50cf468eb7f982a0f",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "de1824bc278bb6c7811033b9530b8769926f952b2e685f81f94c482c2aaabc87",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate6_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "7b4f63a9ec8f34f8c624d3a3918f5d71f3c7dec2",
+    "size": 47332,
+    "lfs": {
+      "oid": "68d43f2b0221ffe71bc98c5a4ea097c75a05c2e646ba9b352a374521bbf586a1",
+      "size": 47332,
+      "pointerSize": 130
+    },
+    "xetHash": "82880048908ab9bfa38c173c383ae3762eee047e49e2a3c2a1279f08a531c873",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b21702bf8390a6b498d6a34698b2dbab6d2d9afc",
+    "size": 50818,
+    "lfs": {
+      "oid": "3e129d32323ea93a0018ce2beaa3ce8bcd13f0c826fba08614b95f32df7ed1f1",
+      "size": 50818,
+      "pointerSize": 130
+    },
+    "xetHash": "3560f0cba26f4f4dc061885b6436a323c36ac03e285dea3d212d8fa342769b92",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e980f5f496b12371f9284daaef77ac53bfa5b15f",
+    "size": 47044,
+    "lfs": {
+      "oid": "dcac62858fe0e5a7c26570805aabc07ee2a9c5af771444adf011f40aa81774c3",
+      "size": 47044,
+      "pointerSize": 130
+    },
+    "xetHash": "edc7ed7d80930a5e717c380eb0449c28f650a5f3263cc3af87a4ac8663443daf",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate7_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f1d71a61d0e8959318c139410ed0910bc320f59a",
+    "size": 47839,
+    "lfs": {
+      "oid": "c4ae51c7d692c5c01b1dfc5cdd75c8b7c1b727b00caaf3b2ac7d4cc8f7dc040c",
+      "size": 47839,
+      "pointerSize": 130
+    },
+    "xetHash": "b8da71b4fc17ab36efcd9893ef73be108744336f86e7396fafdd83206ec0ebef",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6291ed3ce6df3294897362b476fc234bbf15d39e",
+    "size": 51411,
+    "lfs": {
+      "oid": "73c365b0e632bc2a8525d6919088071da1b4c6104fb27e06b350309c54c2784b",
+      "size": 51411,
+      "pointerSize": 130
+    },
+    "xetHash": "83bbc9260de260947fab3d0252d293e78e366d6df91f325ed3ac36a2d4986a21",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9cc205649aa5816391d0cbf7ca7291e0bbc54088",
+    "size": 47544,
+    "lfs": {
+      "oid": "9e7878c6c86b010453a5a8036a62ceaa80675610815c9b64bca0625ae8278b75",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "f27a428014fae4d2e70a7f2dabd48299ae0aa2547635b1a6659c77ca22aea7ff",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate8_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "bee6723e082587c6eb0fc8740d5628096a62f44c",
+    "size": 47832,
+    "lfs": {
+      "oid": "ff37b7dfdc2e772a4108fea05ceb67a1f40ac825dfd12f28378cf50dca9b58ad",
+      "size": 47832,
+      "pointerSize": 130
+    },
+    "xetHash": "8a31766c24f03f6df57cf868acf05a9520ad4f7a64896dbe1026a0e394a8b0e9",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "f1fee8cb2798670452f9859f194f140d2fb30487",
+    "size": 51318,
+    "lfs": {
+      "oid": "ac7c7a8b93077f638c845b60070633ac5b542b0727bad24adea8610dff886933",
+      "size": 51318,
+      "pointerSize": 130
+    },
+    "xetHash": "a24f847cb5c7e13852f2fae32b71969d1f4ae4fea4dbb6cfaacd5309d581e2f2",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d32209fb4c1d62f609926eb45615adbb0089215d",
+    "size": 47544,
+    "lfs": {
+      "oid": "2e3a83eff492cb274803e672c3aca22eeb29dc55f0c3cadbbf051e3e1c15a272",
+      "size": 47544,
+      "pointerSize": 130
+    },
+    "xetHash": "4ff8d3e5a1e04f91f0936dd84a7e2e636702972ae8c7f1caa4ff6b635be4d0d7",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_plate9_filt_Vevo_Tahoe100M_WServicesFrom_ParseGigalab_processed_final_processed_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ea2e92659297baf5b165fa578200a17e21ac931f",
+    "size": 556,
+    "lfs": {
+      "oid": "7914e35212444b778482f23044b309f5cc5ac62167fe3fa85ee1be7a0c8cc0ee",
+      "size": 556,
+      "pointerSize": 128
+    },
+    "xetHash": "1d08d74e9e7239cb9cabf083bc8c45fca5f20dcf37c6e6e29a6f8335d7c16497",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_10_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "afc4d57f792f730ee108fd62fc8ff4d5c8533847",
+    "size": 674,
+    "lfs": {
+      "oid": "c28d6d2b1b9b7b14b3c9b0de1992125d89dbd0eeb2ae4916c3105eed724c73f9",
+      "size": 674,
+      "pointerSize": 128
+    },
+    "xetHash": "f4973f9535e756b387c187e8f23c8b224b8425753ba0bcd52abc4e72db7a3579",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_10_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ea2e92659297baf5b165fa578200a17e21ac931f",
+    "size": 556,
+    "lfs": {
+      "oid": "7914e35212444b778482f23044b309f5cc5ac62167fe3fa85ee1be7a0c8cc0ee",
+      "size": 556,
+      "pointerSize": 128
+    },
+    "xetHash": "1d08d74e9e7239cb9cabf083bc8c45fca5f20dcf37c6e6e29a6f8335d7c16497",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_10_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9a9e3b09c650fb524d5b87a962d38a45aa985f5f",
+    "size": 620,
+    "lfs": {
+      "oid": "23ee3999e59338a7ad989708cb8e19c4d74b43cf0c9cbbc0d8631dd87dce3362",
+      "size": 620,
+      "pointerSize": 128
+    },
+    "xetHash": "50d95079904559e74d92a42458938c657d0df4d1bf04c26401dd10975aaa4e5c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_11_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "65ed9502a17cf9e10d5c8879f77d6562f5594b75",
+    "size": 744,
+    "lfs": {
+      "oid": "f031269328cfe3e7b53ee0f98954d816bef45dc5174191b7db27108fa5c0cee3",
+      "size": 744,
+      "pointerSize": 128
+    },
+    "xetHash": "0b4e796e16233ca336bc9e75857ebee44b4b7320496a6d9c274ffb61a6f9ac6e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_11_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9a9e3b09c650fb524d5b87a962d38a45aa985f5f",
+    "size": 620,
+    "lfs": {
+      "oid": "23ee3999e59338a7ad989708cb8e19c4d74b43cf0c9cbbc0d8631dd87dce3362",
+      "size": 620,
+      "pointerSize": 128
+    },
+    "xetHash": "50d95079904559e74d92a42458938c657d0df4d1bf04c26401dd10975aaa4e5c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_11_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9f31531e7830fcc6ad53bf7bd000876bc23b720d",
+    "size": 832,
+    "lfs": {
+      "oid": "b85e47d6cea8038745210d78e644d4c2bc27e668e5e9bcc78c93e06db23052ae",
+      "size": 832,
+      "pointerSize": 128
+    },
+    "xetHash": "750b3c6ad75b036639c78c126f486714923e5afaef4e1d7f20dd76eb86dff882",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_12_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "72d7c673bbfe169688661d9873343ec55b32f114",
+    "size": 1002,
+    "lfs": {
+      "oid": "7c8df711264dfd5a45df80dcb08b04165259914d290e96da9449f777fb463b20",
+      "size": 1002,
+      "pointerSize": 129
+    },
+    "xetHash": "6c0ed3d478e0c4c21db6dfb944fc681840f3a13cd1e12a8571a83a1730a5c2f6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_12_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "9f31531e7830fcc6ad53bf7bd000876bc23b720d",
+    "size": 832,
+    "lfs": {
+      "oid": "b85e47d6cea8038745210d78e644d4c2bc27e668e5e9bcc78c93e06db23052ae",
+      "size": 832,
+      "pointerSize": 128
+    },
+    "xetHash": "750b3c6ad75b036639c78c126f486714923e5afaef4e1d7f20dd76eb86dff882",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_12_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0299fd12190e5664d08d4c9a29f5d4833df8ceaa",
+    "size": 664,
+    "lfs": {
+      "oid": "20d55bd234cbe932a0f30ac47220a78925276cf4894a7e8b0f0f14efaaacdbe4",
+      "size": 664,
+      "pointerSize": 128
+    },
+    "xetHash": "5da84a2f47379430e366420f4e0d45f3cd3fb4001773414c5702db731a2b45d4",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_13_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e8c3a973ee1e57fa82feefa4a242962ad9e71d74",
+    "size": 797,
+    "lfs": {
+      "oid": "aee3b5e9697918bc65513fdf66034b879a05836971225d187e37ac2b1831aa9a",
+      "size": 797,
+      "pointerSize": 128
+    },
+    "xetHash": "921a89047e41d6583000cd9ef19a61222f4b05ad4ac3ceb656bb767018293666",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_13_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0299fd12190e5664d08d4c9a29f5d4833df8ceaa",
+    "size": 664,
+    "lfs": {
+      "oid": "20d55bd234cbe932a0f30ac47220a78925276cf4894a7e8b0f0f14efaaacdbe4",
+      "size": 664,
+      "pointerSize": 128
+    },
+    "xetHash": "5da84a2f47379430e366420f4e0d45f3cd3fb4001773414c5702db731a2b45d4",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_13_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5cf7f25bfda9a5279a52d2218cbffe2b0a0f92a1",
+    "size": 1075,
+    "lfs": {
+      "oid": "854eddeddbf65ee77e3a20702d20168031045c3767481970aa0bba14ef26212b",
+      "size": 1075,
+      "pointerSize": 129
+    },
+    "xetHash": "6aa8da39d5fc9218310ddde96cb3c93f399ce0ecf7375839d4a2159f4ff6689e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_14_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6023c49a0d9df97af36b7956bb5e17f673ed4ea8",
+    "size": 1294,
+    "lfs": {
+      "oid": "cb4aa7fc661fb251e71a88ffbdd97026de1dd60ee38fda7756a44fb3f3f5df92",
+      "size": 1294,
+      "pointerSize": 129
+    },
+    "xetHash": "f71a55291f540a42ec816cff4ad95fed82f679e03705b86db445835c6b1b0b7f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_14_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5cf7f25bfda9a5279a52d2218cbffe2b0a0f92a1",
+    "size": 1075,
+    "lfs": {
+      "oid": "854eddeddbf65ee77e3a20702d20168031045c3767481970aa0bba14ef26212b",
+      "size": 1075,
+      "pointerSize": 129
+    },
+    "xetHash": "6aa8da39d5fc9218310ddde96cb3c93f399ce0ecf7375839d4a2159f4ff6689e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_14_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "37a6342a355474f13702d2ed5bd167fa8f4a378d",
+    "size": 740,
+    "lfs": {
+      "oid": "eb4c5d44d9665a0e9408df02c1f93c413b6247e91f759407322b5896d94afe92",
+      "size": 740,
+      "pointerSize": 128
+    },
+    "xetHash": "ff0e473d4d191138d2462083bd58c1e1f20b3a8df254277079a4e43dd0fe7155",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_15_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0362c14f7251212bba6d8746caf8ed313b843fd6",
+    "size": 879,
+    "lfs": {
+      "oid": "57dc66856e2121ff98ee65743ecafa285b3b04365b13e94a5693ebf210610051",
+      "size": 879,
+      "pointerSize": 128
+    },
+    "xetHash": "953afc7e5842175f80bb63346eba26ab15077ed167ed50d625a8ba41b011938c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_15_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "37a6342a355474f13702d2ed5bd167fa8f4a378d",
+    "size": 740,
+    "lfs": {
+      "oid": "eb4c5d44d9665a0e9408df02c1f93c413b6247e91f759407322b5896d94afe92",
+      "size": 740,
+      "pointerSize": 128
+    },
+    "xetHash": "ff0e473d4d191138d2462083bd58c1e1f20b3a8df254277079a4e43dd0fe7155",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_15_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "084148a4098e26500440c0efb13721f952ac7a9a",
+    "size": 696,
+    "lfs": {
+      "oid": "37fcdaac9e9c801df44ca072021e4bc7151b6178f76e252a7dc1f3797a2379e3",
+      "size": 696,
+      "pointerSize": 128
+    },
+    "xetHash": "9d99cf7205de2a091429b9c0d381b2100790b6473a75e5712f5ade35ebac3d2f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_16_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d3fd3f0d4eca25f703522d4ef4912c0769f50ba6",
+    "size": 849,
+    "lfs": {
+      "oid": "7144330981b198f710969f9056700b59a4f6c63c5b8cb7e9ad9deccbfa182d9f",
+      "size": 849,
+      "pointerSize": 128
+    },
+    "xetHash": "3f64a840aca3a0ac8647c122cd1df2619c0cc65f7c42cca7ff350f135f25cbe4",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_16_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "084148a4098e26500440c0efb13721f952ac7a9a",
+    "size": 696,
+    "lfs": {
+      "oid": "37fcdaac9e9c801df44ca072021e4bc7151b6178f76e252a7dc1f3797a2379e3",
+      "size": 696,
+      "pointerSize": 128
+    },
+    "xetHash": "9d99cf7205de2a091429b9c0d381b2100790b6473a75e5712f5ade35ebac3d2f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_16_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5023f1035c42967c651a8990af714d2ad16febbe",
+    "size": 748,
+    "lfs": {
+      "oid": "462ae9eea48e6e12066090ec02d60b264dab8ffbddf1b47f7504631d6920e915",
+      "size": 748,
+      "pointerSize": 128
+    },
+    "xetHash": "9a31f727e002b0ff19d5157df4be8ffdb179e9c7ec24cccc6e03637b6eab1218",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_17_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c7cf171c923bc1adee3165822596974b1be7afb6",
+    "size": 901,
+    "lfs": {
+      "oid": "129363773f1db8dce59b215fa994f458435e46b885b5272d31bbd51b2bcc6b7c",
+      "size": 901,
+      "pointerSize": 128
+    },
+    "xetHash": "84e76a25357b7f8f3c03cc0608cd309e5e726d5508248c16e9d68392adb6b278",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_17_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5023f1035c42967c651a8990af714d2ad16febbe",
+    "size": 748,
+    "lfs": {
+      "oid": "462ae9eea48e6e12066090ec02d60b264dab8ffbddf1b47f7504631d6920e915",
+      "size": 748,
+      "pointerSize": 128
+    },
+    "xetHash": "9a31f727e002b0ff19d5157df4be8ffdb179e9c7ec24cccc6e03637b6eab1218",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_17_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "79488b8dff201137dbece517cf205c6fec3155fa",
+    "size": 628,
+    "lfs": {
+      "oid": "1863612546dcbc05ea1d85d00edda9d655bbaeea163f6fec42582f106cad6099",
+      "size": 628,
+      "pointerSize": 128
+    },
+    "xetHash": "c267ee20c654b76abe7cfcc3ba84e75177bc1bae8a119e0bee0cf25842f0b879",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_18_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "b903a5677dc05ff0a39196285064d62c5a5db70d",
+    "size": 760,
+    "lfs": {
+      "oid": "181f74bbb92db209f167d04031e427f9e89a7d30ca5d8a4984ae89cb3346985e",
+      "size": 760,
+      "pointerSize": 128
+    },
+    "xetHash": "2e7ea8a83e5787cee427d98eaab917072ce6301f81ff9861f1e9cad12392462d",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_18_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "79488b8dff201137dbece517cf205c6fec3155fa",
+    "size": 628,
+    "lfs": {
+      "oid": "1863612546dcbc05ea1d85d00edda9d655bbaeea163f6fec42582f106cad6099",
+      "size": 628,
+      "pointerSize": 128
+    },
+    "xetHash": "c267ee20c654b76abe7cfcc3ba84e75177bc1bae8a119e0bee0cf25842f0b879",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_18_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "42a55b420a027b7f3a958d2007188641abdb4d0f",
+    "size": 656,
+    "lfs": {
+      "oid": "9ce54244c39b1ea7b77e06f15e417f74a593e41d42e35221b19e5cd8e416a3c6",
+      "size": 656,
+      "pointerSize": 128
+    },
+    "xetHash": "86a08e2470ccb47bc96cdc272b445a97e12e12fa090dba8f4561fe5fa5113f46",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_19_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e7e352bc85d09ca4bc0281e610b939bc302edfd4",
+    "size": 817,
+    "lfs": {
+      "oid": "587b0934bef13f5aa96b99af2c29d2f173fa8c86b314e5d7ffaef8525ebf0d42",
+      "size": 817,
+      "pointerSize": 128
+    },
+    "xetHash": "5871f0dac7f4991e0641883960c773cf3dc39b962e5347f69b211f25d14ba6c6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_19_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "42a55b420a027b7f3a958d2007188641abdb4d0f",
+    "size": 656,
+    "lfs": {
+      "oid": "9ce54244c39b1ea7b77e06f15e417f74a593e41d42e35221b19e5cd8e416a3c6",
+      "size": 656,
+      "pointerSize": 128
+    },
+    "xetHash": "86a08e2470ccb47bc96cdc272b445a97e12e12fa090dba8f4561fe5fa5113f46",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_19_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0299fd12190e5664d08d4c9a29f5d4833df8ceaa",
+    "size": 664,
+    "lfs": {
+      "oid": "20d55bd234cbe932a0f30ac47220a78925276cf4894a7e8b0f0f14efaaacdbe4",
+      "size": 664,
+      "pointerSize": 128
+    },
+    "xetHash": "5da84a2f47379430e366420f4e0d45f3cd3fb4001773414c5702db731a2b45d4",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_1_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "892442e4011ad8cfedc43f52ecf1bd253569b9b5",
+    "size": 813,
+    "lfs": {
+      "oid": "6a07d54e5420c312277ec988f8110f3acf0478d773bed3f28848b0dac294bdc2",
+      "size": 813,
+      "pointerSize": 128
+    },
+    "xetHash": "070228d4e01c4c3fc2e925e7306f3eb1790db394283c7fe654bb1a8d95d9b56a",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_1_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0299fd12190e5664d08d4c9a29f5d4833df8ceaa",
+    "size": 664,
+    "lfs": {
+      "oid": "20d55bd234cbe932a0f30ac47220a78925276cf4894a7e8b0f0f14efaaacdbe4",
+      "size": 664,
+      "pointerSize": 128
+    },
+    "xetHash": "5da84a2f47379430e366420f4e0d45f3cd3fb4001773414c5702db731a2b45d4",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_1_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d1f89546a060e0950d32c510bf516ea3208e9d98",
+    "size": 708,
+    "lfs": {
+      "oid": "ed589ce31fb3a363412d884ab7fcdc698fc73672161ee0aa3f04c53f76860566",
+      "size": 708,
+      "pointerSize": 128
+    },
+    "xetHash": "47867f2367817654050db559674e81c1c173288a42055984c6454d8579ba7ea7",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_20_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0379242f4a3eae48d259980ab18828ae06d2885e",
+    "size": 853,
+    "lfs": {
+      "oid": "9f9b908662c3f73cdb8501c2ad79ee776f37a957917b8babd4dec9b8572fa697",
+      "size": 853,
+      "pointerSize": 128
+    },
+    "xetHash": "08e8255340e622f916bee03b28f552c6e51608844592ee7b2222646bc5315e38",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_20_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d1f89546a060e0950d32c510bf516ea3208e9d98",
+    "size": 708,
+    "lfs": {
+      "oid": "ed589ce31fb3a363412d884ab7fcdc698fc73672161ee0aa3f04c53f76860566",
+      "size": 708,
+      "pointerSize": 128
+    },
+    "xetHash": "47867f2367817654050db559674e81c1c173288a42055984c6454d8579ba7ea7",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_20_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "20e35b1bf30a20947d9bd264f939b0aaf76c6455",
+    "size": 596,
+    "lfs": {
+      "oid": "98ac542151b1c82fc41bbdc8717127a1a0859bedd1d9aefb433b719fc3ec96c2",
+      "size": 596,
+      "pointerSize": 128
+    },
+    "xetHash": "c30603fd7a9f21e61f4dbef05bf59d764f010896f386806f052c2689bd576902",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_21_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5cf8221be6a799c4ff18b0588c8232de322df3a1",
+    "size": 739,
+    "lfs": {
+      "oid": "4856c2b09ba9a4599f04f9a9259076b07fba14b030d0543a6ada560ac8162d1e",
+      "size": 739,
+      "pointerSize": 128
+    },
+    "xetHash": "1db46d5045355c8f672ff87cd1238893ebb992a293a74a41e21ab7dd6ad1dade",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_21_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "20e35b1bf30a20947d9bd264f939b0aaf76c6455",
+    "size": 596,
+    "lfs": {
+      "oid": "98ac542151b1c82fc41bbdc8717127a1a0859bedd1d9aefb433b719fc3ec96c2",
+      "size": 596,
+      "pointerSize": 128
+    },
+    "xetHash": "c30603fd7a9f21e61f4dbef05bf59d764f010896f386806f052c2689bd576902",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_21_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "42a55b420a027b7f3a958d2007188641abdb4d0f",
+    "size": 656,
+    "lfs": {
+      "oid": "9ce54244c39b1ea7b77e06f15e417f74a593e41d42e35221b19e5cd8e416a3c6",
+      "size": 656,
+      "pointerSize": 128
+    },
+    "xetHash": "86a08e2470ccb47bc96cdc272b445a97e12e12fa090dba8f4561fe5fa5113f46",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_22_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "6e76052ab40fd786a3463be449ff70e08828e102",
+    "size": 802,
+    "lfs": {
+      "oid": "d1f4a52ad601d47954e55de26118c71da394e32a9a878e466bf989b1493743b8",
+      "size": 802,
+      "pointerSize": 128
+    },
+    "xetHash": "1d09866f7545f02ebd17e948120df337b38c9edb4fcf247c330e249c7b57412f",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_22_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "42a55b420a027b7f3a958d2007188641abdb4d0f",
+    "size": 656,
+    "lfs": {
+      "oid": "9ce54244c39b1ea7b77e06f15e417f74a593e41d42e35221b19e5cd8e416a3c6",
+      "size": 656,
+      "pointerSize": 128
+    },
+    "xetHash": "86a08e2470ccb47bc96cdc272b445a97e12e12fa090dba8f4561fe5fa5113f46",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_22_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "76c221c5ef4eb718e9f497b19c6e665d821fb869",
+    "size": 712,
+    "lfs": {
+      "oid": "628411590a8454af43a1e2bb109bea54d965beaf989340a9b7428783630f38dc",
+      "size": 712,
+      "pointerSize": 128
+    },
+    "xetHash": "b18867992d9f0a0d1d37279a25c708163230651e7139b3972915d7d49cc9d2c6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_23_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0dd7441ec43e99a901f78b784aadf34dbc1139da",
+    "size": 854,
+    "lfs": {
+      "oid": "f4f2947c5a6ba4fc42d85d705fd9519d8459d4aca522a11df13ab307ea0b661c",
+      "size": 854,
+      "pointerSize": 128
+    },
+    "xetHash": "34da201234a9f2d6c857f01e7b685ab84e444244862fa234f2301d38d92bee1e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_23_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "76c221c5ef4eb718e9f497b19c6e665d821fb869",
+    "size": 712,
+    "lfs": {
+      "oid": "628411590a8454af43a1e2bb109bea54d965beaf989340a9b7428783630f38dc",
+      "size": 712,
+      "pointerSize": 128
+    },
+    "xetHash": "b18867992d9f0a0d1d37279a25c708163230651e7139b3972915d7d49cc9d2c6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_23_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d39ee79c7aa352afd3c2aba8a481c8e96cfcea45",
+    "size": 732,
+    "lfs": {
+      "oid": "3af2fa68f7d651c65a94318c0b4d29de76f947779683407bc482cab86f1316a6",
+      "size": 732,
+      "pointerSize": 128
+    },
+    "xetHash": "0ffe4f8f6d897d5646ef2b6215154eb0fd4a87938c37e86b7458eafe1820285d",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_2_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d32641ea9e2099d723d61ca8f41846edb3397f31",
+    "size": 871,
+    "lfs": {
+      "oid": "8c3cb3e8c06d09fd18846bb03fda632abec2db51d172510cb10cb165c074287a",
+      "size": 871,
+      "pointerSize": 128
+    },
+    "xetHash": "d4e83d853403e9e84a8396f4cdbbc3f2b7fe414186d097109fd61e5c6f63aeac",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_2_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d39ee79c7aa352afd3c2aba8a481c8e96cfcea45",
+    "size": 732,
+    "lfs": {
+      "oid": "3af2fa68f7d651c65a94318c0b4d29de76f947779683407bc482cab86f1316a6",
+      "size": 732,
+      "pointerSize": 128
+    },
+    "xetHash": "0ffe4f8f6d897d5646ef2b6215154eb0fd4a87938c37e86b7458eafe1820285d",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_2_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d4ce17136e2683f4db927035391d1bc61254a89b",
+    "size": 836,
+    "lfs": {
+      "oid": "2a22a35301ef4c90a0b94fb4ef6a340d4b46803c7facff341caa8603b2c63e8f",
+      "size": 836,
+      "pointerSize": 128
+    },
+    "xetHash": "664eddf1279177bb92a32ca042dcf97a599fbd9637db0be8543a3657cec61c62",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_3_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "fc385632f044aefbf0fd916c242de2cd7bc3f3e0",
+    "size": 1010,
+    "lfs": {
+      "oid": "69c48931efb9b9ff702efed7c67d3f916186ddacdea70a57e61c45ab6bc6c6b9",
+      "size": 1010,
+      "pointerSize": 129
+    },
+    "xetHash": "5484ddfeb2fc19c6085c8a0c52c9a4f6d69114f56cb5b134068ea7bd0a341f5b",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_3_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "d4ce17136e2683f4db927035391d1bc61254a89b",
+    "size": 836,
+    "lfs": {
+      "oid": "2a22a35301ef4c90a0b94fb4ef6a340d4b46803c7facff341caa8603b2c63e8f",
+      "size": 836,
+      "pointerSize": 128
+    },
+    "xetHash": "664eddf1279177bb92a32ca042dcf97a599fbd9637db0be8543a3657cec61c62",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_3_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0d021b903c4dbbc8406b14bb9fe200625c5d3d68",
+    "size": 524,
+    "lfs": {
+      "oid": "a6dbdd7dd0376992e15b0530d4d254d5fd6724ba9498362ed88eead836e74605",
+      "size": 524,
+      "pointerSize": 128
+    },
+    "xetHash": "c7ae0d5ca863d743e6d8f393a9ac102023f25818c65f8e688cae4bd3246f8370",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_4_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5b985f0063596e4992a7cb9ddb12bf77bc6027cb",
+    "size": 655,
+    "lfs": {
+      "oid": "566ec9c937ef26ee88aea2278e386a87c97e446eecef7e21c79b59ab03f220f5",
+      "size": 655,
+      "pointerSize": 128
+    },
+    "xetHash": "3ff1e905845986f131de822f9446e54166821396ca781ce1f605c3cf8ea1a6ca",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_4_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0d021b903c4dbbc8406b14bb9fe200625c5d3d68",
+    "size": 524,
+    "lfs": {
+      "oid": "a6dbdd7dd0376992e15b0530d4d254d5fd6724ba9498362ed88eead836e74605",
+      "size": 524,
+      "pointerSize": 128
+    },
+    "xetHash": "c7ae0d5ca863d743e6d8f393a9ac102023f25818c65f8e688cae4bd3246f8370",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_4_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0e9bc8ca0429c556067581f510a348cf9b3b5e8d",
+    "size": 864,
+    "lfs": {
+      "oid": "b97ef41118223ca47d1dad09d7d6d2533b184d50e6fa4a753c3894ebe3810e0f",
+      "size": 864,
+      "pointerSize": 128
+    },
+    "xetHash": "15d5c6897a1fc946d60ec6283c061aa2c481a976254e71e9d2cfebbadfdd170c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_5_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "4843478eae668725047692b76921c438f29a05bc",
+    "size": 1036,
+    "lfs": {
+      "oid": "0e0e1fdb887a8fe01c17626f3d154cae4f784f6221364922c145b2e001bae296",
+      "size": 1036,
+      "pointerSize": 129
+    },
+    "xetHash": "01dbc62171fde7535b6014caa29f005c1e42aaca6e019a02c57874c395740583",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_5_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0e9bc8ca0429c556067581f510a348cf9b3b5e8d",
+    "size": 864,
+    "lfs": {
+      "oid": "b97ef41118223ca47d1dad09d7d6d2533b184d50e6fa4a753c3894ebe3810e0f",
+      "size": 864,
+      "pointerSize": 128
+    },
+    "xetHash": "15d5c6897a1fc946d60ec6283c061aa2c481a976254e71e9d2cfebbadfdd170c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_5_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ba68357daa0029b8c4f783606d51a91d93cded92",
+    "size": 796,
+    "lfs": {
+      "oid": "657dcbd7f4ac2f49d05bbeeb67d0604291f7ecd8a28dc657dacbd5d20d3833ef",
+      "size": 796,
+      "pointerSize": 128
+    },
+    "xetHash": "a89943a2ac8298f35198f403f523f293ab809d8339c2e6ae3ef766b56edff69e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_6_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "11a12a5f680de1b1a0b997436e10deff5caacbb4",
+    "size": 977,
+    "lfs": {
+      "oid": "c1eb92d6e333c89256ffdc4f3fa6d924acfa0e630ed18c0e2a16400d275469c4",
+      "size": 977,
+      "pointerSize": 128
+    },
+    "xetHash": "45f832583112ee6ad11b773d44c4556893add46cfaf4c333e5bda7a0cf319f05",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_6_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ba68357daa0029b8c4f783606d51a91d93cded92",
+    "size": 796,
+    "lfs": {
+      "oid": "657dcbd7f4ac2f49d05bbeeb67d0604291f7ecd8a28dc657dacbd5d20d3833ef",
+      "size": 796,
+      "pointerSize": 128
+    },
+    "xetHash": "a89943a2ac8298f35198f403f523f293ab809d8339c2e6ae3ef766b56edff69e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_6_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "90b382d60501679c46caa14b7a64cd91cfb671c2",
+    "size": 648,
+    "lfs": {
+      "oid": "a3903385075f028a3ce2a0bf0c1e8babcf52a23df1a5254dd5588683a74597c4",
+      "size": 648,
+      "pointerSize": 128
+    },
+    "xetHash": "11776f47968c4976f4ac6ed6f06b6814291e2601f9f61ae92bfda67554bf0b3e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_7_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "849344d9eccb6d92cb3c4a12c4876d2d52e8bfa4",
+    "size": 767,
+    "lfs": {
+      "oid": "15497cb2a4d8ef4ef755958c506e396613e6133e9bcd34d5c27aacc807ab79a1",
+      "size": 767,
+      "pointerSize": 128
+    },
+    "xetHash": "e7049e5219f4f9dd38f470fcef866339cdf5cf10ea9f907596fbf561a88bbbfe",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_7_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "90b382d60501679c46caa14b7a64cd91cfb671c2",
+    "size": 648,
+    "lfs": {
+      "oid": "a3903385075f028a3ce2a0bf0c1e8babcf52a23df1a5254dd5588683a74597c4",
+      "size": 648,
+      "pointerSize": 128
+    },
+    "xetHash": "11776f47968c4976f4ac6ed6f06b6814291e2601f9f61ae92bfda67554bf0b3e",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_7_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0dc6bf4e57de70c258a26de77c3217d78e618fca",
+    "size": 744,
+    "lfs": {
+      "oid": "a97df2643e462789ea8ce396b1ada7ca1ad2d65dd29a866f1cb020ce30352101",
+      "size": 744,
+      "pointerSize": 128
+    },
+    "xetHash": "d042d6037edb61b123dd823bb14f0ac01ac13ea6a367052b495b11a8a4edc991",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_8_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "96762d8de46598649bf416b357444d7e18db296e",
+    "size": 908,
+    "lfs": {
+      "oid": "4533265ab4f84a7ea90032e5b1a634d9d2ba33f92a9bd2a0d1393340525648f9",
+      "size": 908,
+      "pointerSize": 128
+    },
+    "xetHash": "5985c144f7e96bb1552d6bc9e5f68a1b2bc4102456bb7fcab91cd240f0462c39",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_8_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "0dc6bf4e57de70c258a26de77c3217d78e618fca",
+    "size": 744,
+    "lfs": {
+      "oid": "a97df2643e462789ea8ce396b1ada7ca1ad2d65dd29a866f1cb020ce30352101",
+      "size": 744,
+      "pointerSize": 128
+    },
+    "xetHash": "d042d6037edb61b123dd823bb14f0ac01ac13ea6a367052b495b11a8a4edc991",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_8_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "db1c9aaa58b6a0fbdd62e2b84be46eaf1b428023",
+    "size": 1105,
+    "lfs": {
+      "oid": "4594da137c27cfc663e493acdff4fb27fbdd1efd06614b470e0e2a18f5131fe7",
+      "size": 1105,
+      "pointerSize": 129
+    },
+    "xetHash": "983d19521270c80a990e52c9b834891356605b00144c22c63206c832f4bc4e35",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_9_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "588faf04022d7e075f7ca2b7320515af46bb902d",
+    "size": 1328,
+    "lfs": {
+      "oid": "8ec332e87ee5e01c530bde2bf288396955016a916865dcf6d2e1af3f2b62a573",
+      "size": 1328,
+      "pointerSize": 129
+    },
+    "xetHash": "73f4350a399a721919d433162259a28bdbcc78cf8e4a9f0fe8a755735156da55",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_9_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "db1c9aaa58b6a0fbdd62e2b84be46eaf1b428023",
+    "size": 1105,
+    "lfs": {
+      "oid": "4594da137c27cfc663e493acdff4fb27fbdd1efd06614b470e0e2a18f5131fe7",
+      "size": 1105,
+      "pointerSize": 129
+    },
+    "xetHash": "983d19521270c80a990e52c9b834891356605b00144c22c63206c832f4bc4e35",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_proc_cellxgene_combined_9_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ef380e1fa0d88dd31ab8fe04c892f5f7df973da2",
+    "size": 4931389,
+    "lfs": {
+      "oid": "4ebb4d321136d27af2c4012b9fbe826db83e665f44fc5b10bc9f3cfad55eef48",
+      "size": 4931389,
+      "pointerSize": 132
+    },
+    "xetHash": "7e1f7600b39359262f6922e5bc1c65cade9debbbd631200a2b48a9c2490bee0c",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_replogle_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "29607e6142dbc942e5ae8f8bf754ddc335d4d942",
+    "size": 4931389,
+    "lfs": {
+      "oid": "021e4e9832b25059817fe35fa7e4246a567de21221209cb5087776431b17df45",
+      "size": 4931389,
+      "pointerSize": 132
+    },
+    "xetHash": "3ebc39cb0cbe62dcc8cce335c4227c5148508ffa3c7ffefed359e40cf941e0bb",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_replogle_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "2c605f5d90014a7f333cd201f02d6126b5289935",
+    "size": 4931389,
+    "lfs": {
+      "oid": "c117a060fc6e2a9950e05e3d7c1244ca082ea0f114a51423ff5360f697485003",
+      "size": 4931389,
+      "pointerSize": 132
+    },
+    "xetHash": "46d7312cf37f036b7dd3b9e881f6a8c87475819155df02308e02721ddee4b5d6",
+    "path": "perturb_data/indices_cache/grouped_pert_num_cell_replogle_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "5647a3bf5068d5d2d67e29a32ae5c26d19da5bc2",
+    "size": 528521,
+    "lfs": {
+      "oid": "fa29edf32eda065f64aa066af41ed6e2d38da21dafbf37e183b1d87eb7a26044",
+      "size": 528521,
+      "pointerSize": 131
+    },
+    "xetHash": "c54c380e0cb6f7b66564d257c24aec16ea6cbeb936e8b087fbde40844c016ed2",
+    "path": "perturb_data/indices_cache/split_indices_Tahoe100mPBMCReplogleCellxGenePretrain_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "af76667cd6868ef705244c9402ee19da4af015c0",
+    "size": 4893857,
+    "lfs": {
+      "oid": "05fea6c5ba9ba145bed36031bae982115bec843b54a9d3c9e7559b7c91182725",
+      "size": 4893857,
+      "pointerSize": 132
+    },
+    "xetHash": "ec4384eb11dea18f2b17032d2070bbf079110033f2ac6b2530ff193f8223c4a9",
+    "path": "perturb_data/indices_cache/split_indices_Tahoe100mPBMCReplogleCellxGenePretrain_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "cf97a5f594933e4e318d7dfe1dc3f4af4897447f",
+    "size": 352095,
+    "lfs": {
+      "oid": "7394b84cf13c4d3b9775057d123518c5b9eec2d803aae7a4e25ffc610fc7ecc8",
+      "size": 352095,
+      "pointerSize": 131
+    },
+    "xetHash": "cdb848dfa039e2605ecd38f609304275adeeed20ec282517b3007dd096b051b9",
+    "path": "perturb_data/indices_cache/split_indices_Tahoe100mPBMCReplogleCellxGenePretrain_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "e96c1515d2aad79db03a8e6ee023698dc9c77b72",
+    "size": 31,
+    "lfs": {
+      "oid": "737319b29062cc7e2bd098b39a8e7de4e95514e1c64bf5c5773ac09c0ba2f68f",
+      "size": 31,
+      "pointerSize": 127
+    },
+    "xetHash": "d7fc202df9d65fdcf61542f72878e67b4738807ce115fd14989791142fb0d77e",
+    "path": "perturb_data/indices_cache/split_num_cell_Tahoe100mPBMCReplogleCellxGenePretrain_test.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "2eefbdd54a19f48b149aec3415d46b68aa1823f1",
+    "size": 31,
+    "lfs": {
+      "oid": "1cf1e0a4665882c89d1864729340af7422899278efc3e9295ceb383a2db93b62",
+      "size": 31,
+      "pointerSize": 127
+    },
+    "xetHash": "e6ba303131e9f97e5ba5efdc6b073b9ffe42ea01394993872c785ad4b696566c",
+    "path": "perturb_data/indices_cache/split_num_cell_Tahoe100mPBMCReplogleCellxGenePretrain_train.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ead16975906f1eb6d885da8f6f057094e97fea55",
+    "size": 29,
+    "lfs": {
+      "oid": "82e336993b443bf9ef1e8553ea8a88305994c0f85a36b577b71d841cd30c4078",
+      "size": 29,
+      "pointerSize": 127
+    },
+    "xetHash": "df0257e6d21120b23e437ffcac45f443081a2654da7243ea31ce354d4a4f6871",
+    "path": "perturb_data/indices_cache/split_num_cell_Tahoe100mPBMCReplogleCellxGenePretrain_validation.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ff1f3a0b12b43314e2734dfac5164d2d53e2539a",
+    "size": 20406061,
+    "lfs": {
+      "oid": "e29b1213fc95a72d5f4402920291d26125f07b22b3ab74d414f500fe8811d99a",
+      "size": 20406061,
+      "pointerSize": 133
+    },
+    "xetHash": "df66868b8751b047e3201a6b010faded8b26fb1c2664e2e061a489591620b798",
+    "path": "perturb_data/meta_data/new_all_emb.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "feed11c500762ee9b246ff4c416101a519ad760d",
+    "size": 108666,
+    "lfs": {
+      "oid": "9c7c4d6715e8ecb0202d9324c84a3247a6113094fc76856194a90b6ca718deb7",
+      "size": 108666,
+      "pointerSize": 131
+    },
+    "xetHash": "9d73f57e499c77a0f1a8d343ab1dfeee44d9d2468c1c8370872c9d9f2aa46bef",
+    "path": "perturb_data/selected_genes/merged_pbmc_tahoe_rep_cellxgene_genes_mapped.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "00feccd3a1191d5affdb64c8879c05ac04b6ef7f",
+    "size": 19807,
+    "lfs": {
+      "oid": "d0593d524caeaf431a9a0ac3ffeb5d192aea20e9bc891ea059fc94180ff04089",
+      "size": 19807,
+      "pointerSize": 130
+    },
+    "xetHash": "200bed30f06a443dbb267742b47ce766b5442dbd535c782fba437ed6fd4e0621",
+    "path": "perturb_data/selected_genes/pbmc_real_selected_genes.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "c72a4410ce46636ddbd8e8557ab9b52c5fb4ac23",
+    "size": 16684,
+    "lfs": {
+      "oid": "e2c1ddfb36b1e9c11ad3320ba7c6d57551a895b7203d51f8c80d2bee350dae79",
+      "size": 16684,
+      "pointerSize": 130
+    },
+    "xetHash": "688c0b884298ad4285baef514931d101eed55e69384a274a66d46d0918825675",
+    "path": "perturb_data/selected_genes/replogle_real_selected_genes.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "8308533d717cade0871eafc04c50e6bd838849da",
+    "size": 16552,
+    "lfs": {
+      "oid": "abf869dfa91577b522f4686afc3ddd19e7ff1ebefc342067f77736909a34603d",
+      "size": 16552,
+      "pointerSize": 130
+    },
+    "xetHash": "a97b47dc82faa04fee58e27c29a51f26db3c132020de678bd484ee47240b588f",
+    "path": "perturb_data/selected_genes/tahoe100m_real_selected_genes.pkl"
+  },
+  {
+    "type": "file",
+    "oid": "ed9ee115592266ae71a87914d139791a832fa0dc",
+    "size": 579965,
+    "path": "perturb_data/selected_genes/vocab_id2name.csv"
+  },
+  {
+    "type": "file",
+    "oid": "da7ef06cc7504d925daf9fb718440c3165b61804",
+    "size": 1662505896,
+    "lfs": {
+      "oid": "be3482a238d8831fa66bbbdf568cc6448ff4ba2e35857820ec7abd2be2707a36",
+      "size": 1662505896,
+      "pointerSize": 135
+    },
+    "xetHash": "3e324d27dd2629f691a24579d4b1ec0fd5ecc7ff5b0302c64b61eba4008e0afb",
+    "path": "perturb_data/tmp_ourtahoe_ctrl.h5ad"
+  },
+  {
+    "type": "file",
+    "oid": "48fd737789664cad745c5f502a5f4e75d94b0b41",
+    "size": 5619756468,
+    "lfs": {
+      "oid": "d298123fefd2b5e7a1095b9f8bb7910c1406a285bbfcf9b763af348b49a2c49f",
+      "size": 5619756468,
+      "pointerSize": 135
+    },
+    "xetHash": "608332aca57ccea8e0c2b22f8a793fe7f86226abd3b77482adbfa1be131f8b7d",
+    "path": "perturb_data/tmp_pbmc_ctrl.h5ad"
+  }
+]

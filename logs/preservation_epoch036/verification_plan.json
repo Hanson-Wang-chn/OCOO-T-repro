@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-21T16:36:57+08:00",
+  "scope": "Independent CPU bytes/schema/finiteness/RNG/post-generation-selection metadata audit of exactE36 archive; no GPU, train resume, inference or test",
+  "target_step": 40248,
+  "source_sha256": {
+    "logs/verify_epoch036_archive.py": "49977eaa4f2521d33b4988b3555eca958aa69b200358e8e3651df9487b2f6c3a",
+    "logs/preservation_epoch036/registration.json": "ba451f8296dad0101bc200d64f2cc26a34f1f5da19f1edd43ecc105a688c72dd",
+    "scripts/preserve_checkpoint.py": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "configs/main_selected.yaml": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+    "logs/epoch035_periodic_selection_metadata.json": "4f630e649bc17bad2518259cca2235ec2774d85238875dcd1744d21cc31882c3"
+  },
+  "after_archive_only": true,
+  "test_access": false
+}

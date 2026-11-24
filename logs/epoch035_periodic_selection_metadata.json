@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-21T12:18:29+08:00",
+  "metadata": {
+    "step": 39150,
+    "best_generation": 1.016999948852937,
+    "best_generation_epoch": 35,
+    "early_reference": 1.016999948852937,
+    "early_reference_epoch": 35,
+    "pending_generation_epoch": null
+  },
+  "earliest_possible_original_early_stop_epoch": 45,
+  "stopping_rule_changed": false,
+  "fixedCFG_joint_review_pending": true,
+  "ordinary_metrics_sha256": "b1ad949f3aa843420b8230dbea2a81582bed447225b74f7c82335b9eedbe73a5",
+  "checkpoint_tensor_proof_sha256": "02da6e7503f759a445069f8d71f1dda1b931aa88ee28fa66e0f9359d4fd26356",
+  "test_access": false
+}

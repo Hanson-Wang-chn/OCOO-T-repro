@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-20T07:00:34+08:00",
+  "identity": {
+    "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+    "floor": 0.0
+  },
+  "floor": 0.0,
+  "positive_training_fraction_censored": 0.0,
+  "all_training_fraction_censored": 0.0,
+  "training_mean_absolute_change": 0.0,
+  "generated_zero_fraction": 0.248815625,
+  "gene_zero_fraction_correlation_with_training": 0.9160987355322423,
+  "gene_zero_fraction_mae_to_training": 0.30693973661928364,
+  "generated_mean_absolute_change": 0.0,
+  "metrics": {
+    "PDCorr": 0.28754191237967464,
+    "MSE": 0.020757763118793567,
+    "MAE": 0.09505822968979677,
+    "PDS_L1": 0.7719444444444445,
+    "PDS_L2": 0.7852777777777777,
+    "PDS_cos": 0.7663888888888889,
+    "DEOver": 0.11277152386400632,
+    "DEPrec": 0.0862287934445941,
+    "DirAgr": 0.6918600832790334
+  },
+  "score": 1.0620789494167115
+}

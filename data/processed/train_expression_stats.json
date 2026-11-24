@@ -1,0 +1,7 @@
+{
+  "training_cells": 572545,
+  "mean": 0.4360538951281508,
+  "global_std": 0.6796788669867733,
+  "within_gene_std_rms": 0.4571865936813754,
+  "used_for_normalization": false
+}

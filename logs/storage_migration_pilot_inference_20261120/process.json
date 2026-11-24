@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-20T13:28:13+08:00",
+  "pid": 993729,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/archive_finished_pilot_inference.py",
+    "runs/pilot_sigma_1.0",
+    "runs/pilot_sigma_0.5",
+    "runs/pilot_sigma_1.0_t1000",
+    "runs/pilot_sigma_0.5_t1000",
+    "runs/pilot_sigma_1.0_cellinit_1.0",
+    "runs/pilot_sigma_0.5_cellinit_1.0",
+    "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+    "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+    "runs/pilot_pert_projection_separate",
+    "runs/pilot_xpred_vloss",
+    "runs/pilot_value_fanin",
+    "--destination",
+    "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference",
+    "--audit-dir",
+    "logs/storage_migration_pilot_inference_20261120"
+  ]
+}

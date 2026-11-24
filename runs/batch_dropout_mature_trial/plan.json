@@ -1,0 +1,66 @@
+{
+  "time": "2026-11-20T10:35:15+08:00",
+  "status": "registered_before_implementation_and_gpu_launch",
+  "hypothesis": "Paper§3.1 separates cell-line c and batch b;§3.3 drops p/c independently but leaves b handling unspecified. Original combines c+b before cell dropout. Alternative retains b across all four p/c CFG modes, which could reduce extrapolation of technical batch effects. This is an unresolved interpretation, not a confirmed implementation error.",
+  "reason_for_now": "Full4825 fixedE25/w2 validation still fails PD and DE precision checks even after a stable but partial zero-floor precision improvement. Test this one ambiguity with a mature-state matched control rather than restarting the main model or changing explicit paper parameters.",
+  "base_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+  "base_checkpoint_sha256": "6c268c6cd92bff74d2e5e825d8b66bdfdd98c561ec5f457849fcd95b54deb1e4",
+  "base_step": 27950,
+  "reference_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch026/full.pt",
+  "reference_checkpoint_sha256": "4cab554940edfea758a933df67f32f664f85f637c5be509719dd2d67ae8d21d3",
+  "reference_step": 29068,
+  "candidate_run": "runs/main_batch_retained_from025",
+  "candidate_config": "configs/main_batch_retained_from025.yaml",
+  "changed_field": {
+    "model.drop_batch_with_cell": [
+      true,
+      false
+    ]
+  },
+  "allowed_fork_metadata_changes": [
+    "config.run_dir",
+    "config.model.drop_batch_with_cell",
+    "pending_generation_epoch:25→None after already completed isolated-RNG epoch25 evaluation"
+  ],
+  "retained": "Every raw parameter, optimizer slot, both EMA tensors, all RNG states; full data, deterministic epoch order, logit-normal times, noise, effective batch512/micro16, original100-epoch cosine schedule and LR, uniform50 Heun/finalEuler/defaultEMA. Main training continues unmodified.",
+  "updates": 1118,
+  "stop_after_step": 29068,
+  "runtime_bound": "Use a trial-local AdamW subclass with the identical superclass update. After exactly the remaining optimizer updates, send SIGTERM to this trial process itself. Existing trainer handler then completes EMA/global step/epoch validation and saves. Verify exact final step; no training epochs/LR schedule edit and no finished.json claim. Reject an extra optimizer step.",
+  "evaluation": {
+    "weights": "ema_0.9996",
+    "split": "validation",
+    "cap": 16,
+    "batch_size": 16,
+    "seed": 4242,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "steps": 50,
+    "clamp": true,
+    "de": true,
+    "raw6_retained": true,
+    "secondary_postprocessing_floors_for_both_cases": [
+      0,
+      0.05
+    ]
+  },
+  "analysis": "Strict checkpoint/config/buffer/index/seed/budget audit. Paired2000-perturbation bootstrap seed9232 for all9 and PD+meanPDS. Report mean-error and DE tradeoffs, not just the primary score. Intervals are exploratory fixed-cache perturbation uncertainty, not independent seeds. No automatic main switch after one epoch.",
+  "decision_policy": "Keep the main model unless a consistent validation gain survives matched nine-metric review and, if promising, further mature validation. If ambiguous, keep original main and review epoch30 as planned; do not silently relax gates.",
+  "required_prelaunch_checks": [
+    "default initialization/parameter order/RNG/nonzero forward/backward equality with archived model",
+    "all four dropout modes retain batch only in alternative; fully conditional path unchanged",
+    "bounded AdamW update/slots/RNG equality and exact callback before any extra step",
+    "fork full-state whitelist and tensor/RNG equality",
+    "actual E25/E26 full checkpoints and original main config SHA verified"
+  ],
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "original_source_sha256": {
+    "src/ocoot/model.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "scripts/train.py": "ec8436012e068a5d33364a49be6c6f9509bd8b038ebda9ed1e6abba5f342b2fa",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db"
+  },
+  "main_training_changed": false,
+  "test_access": false
+}

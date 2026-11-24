@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T13:33:22+08:00",
+  "url": "https://arxiv.org/src/2606.12838v2",
+  "purpose": "Inspect publicly published TeX comments/supplementary text for unreported hyperparameters. Read only; do not execute TeX or code. Active training sources/configs unchanged.",
+  "bytes": 1331548,
+  "sha256": "10815999c1c3efb2b1f7a1c7ec4932341bfc525a909ade38d19b847608b794d3",
+  "status": "downloaded_text_only_extracted",
+  "text_members": [
+    {
+      "path": "paper/tex_source_v2/main.tex",
+      "bytes": 82716,
+      "sha256": "1352aaf4a9326904e91a3f30ab4d24336795f935e8492c623df027bbcc6e4d93"
+    }
+  ]
+}

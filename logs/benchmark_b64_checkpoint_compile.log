@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "/home/whs/ocoo-t/scripts/benchmark_gpu.py", line 30, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/whs/ocoo-t/scripts/benchmark_gpu.py", line 23, in main
+    loss.backward();opt.step();torch.cuda.synchronize();ts.append(time.monotonic()-start)
+    ^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_tensor.py", line 647, in backward
+    torch.autograd.backward(
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/autograd/function.py", line 311, in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 2259, in backward
+    return impl_fn()
+           ^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 2245, in impl_fn
+    out = CompiledFunction._backward_impl(ctx, all_args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 2376, in _backward_impl
+    out = call_func_at_runtime_with_args(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+    out = normalize_as_list(f(args))
+                            ^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+    return self.current_callable(inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_inductor/utils.py", line 2716, in run
+    out = model(new_inputs)
+          ^^^^^^^^^^^^^^^^^
+  File "/tmp/torchinductor_whs/di/cdirrpphfedcpj2vlrpzvrhjmx4lgqf7qgoss2th2tmnp5abbnlb.py", line 9334, in call
+    buf956 = torch.ops.aten._scaled_dot_product_flash_attention_backward.default(reinterpret_tensor(buf951, (64, 12, 2000, 64), (1536000, 64, 768, 1), 0), buf910, buf912, reinterpret_tensor(buf908, (64, 12, 2000, 64), (4608000, 64, 2304, 1), 1536), buf914, buf915, None, None, 2000, 2000, 0.0, False, buf916, buf917, scale=0.125)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/torch/_ops.py", line 829, in __call__
+    return self._op(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 188.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 149.56 MiB is free. Including non-PyTorch memory, this process has 39.34 GiB memory in use. Of the allocated memory 38.49 GiB is allocated by PyTorch, and 346.76 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR conda.cli.main_run:execute(149): `conda run python scripts/benchmark_gpu.py --batch 64 --checkpoint --compile` failed. (See above for error)

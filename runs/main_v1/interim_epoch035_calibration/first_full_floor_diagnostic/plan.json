@@ -1,0 +1,52 @@
+{
+  "time": "2026-11-21T18:03:03+08:00",
+  "status": "registered_before_any_first_full_metrics_or_diagnostic_result",
+  "calibration": "runs/main_v1/interim_epoch035_calibration/calibration",
+  "outdir": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic",
+  "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+  "quality_thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "scope": "Advance only the already registered floor0.05 CPU check of refine_00 after its complete original4825-cell generation and nine metrics. Separate output, no original cache mutation/reuse into formal selection, no new samples or parameters. Original two-refinement/four-candidate selection remains required and unchanged.",
+  "source_sha256": {
+    "logs/diagnose_epoch035_first_full_floor.py": "f9e915242648fc31c930cd1ae699ad71e58076e9b8189c9e016f4a7cbdc13937",
+    "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "prerequisite_sha256": {
+    "runs/main_v1/interim_epoch035_calibration/plan.json": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc",
+    "logs/postprocess_workflow_update/plan.json": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371",
+    "runs/main_v1/interim_epoch035_fixed_cfg/checkpoint_verification.json": "02da6e7503f759a445069f8d71f1dda1b931aa88ee28fa66e0f9359d4fd26356",
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "runs/main_v1/interim_epoch035_calibration/coarse_review/full_settings_from_screen.json": "7c861b76edb8845a5faa8e577b08c80515dbb7a4a8317e0cbec8058624fe0013",
+    "runs/main_v1/interim_epoch035_calibration/coarse_review/screen_results_snapshot.json": "ba45840a8391bb73f8a64ce4cc05fd207050c2ace5c2ff4cf9c341e78aa5199c"
+  },
+  "first_full_metrics_exist_now": false,
+  "cpu_only": true,
+  "new_gpu_job": false,
+  "new_training_trial": false,
+  "final_protocol_adopted": false,
+  "test_access": false,
+  "data_expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+  "expected_sampling": {
+    "guidance": 2.0,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "batch_size": 32,
+    "seed": 4242,
+    "steps": 50
+  },
+  "prelaunch_review": "Bind the first full sampling parameters to the already completed unchanged coarse selection and verify the original processed expression SHA before any early CPU metrics. No diagnostic launched and no full metrics existed."
+}

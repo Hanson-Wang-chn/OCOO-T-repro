@@ -1,0 +1,6 @@
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank [Gloo] Rank 2 is connected to 33 peer ranks.  is connected to Expected number of connected peer ranks is : 33 peer ranks. 
+Expected number of connected peer ranks is : 3
+{"event": "benchmark_start", "step": 50310, "training_cells": 572545, "steps_per_epoch": 1118, "parameters": 136919041, "world_size": 4, "local_micro_batch": 16, "accumulation": 8, "accumulation_by_rank": [8, 8, 8, 8], "global_batch": 512, "gpu": "NVIDIA A100-PCIE-40GB", "dynamo_ddp_optimizer": false, "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt"}
+{"event": "benchmark_result", "start_step": 50310, "first_timed_step": 50313, "end_step": 50324, "seconds": 22.899365602061152, "cells_per_sec": 268.3043760586531, "loss": 0.3402305841445923, "grad_norm": 0.07801473885774612, "peak_gpu_GB": 18.469584896, "world_size": 4, "local_micro_batch": 16, "accumulation": 8, "accumulation_by_rank": [8, 8, 8, 8], "global_batch": 512, "gpu": "NVIDIA A100-PCIE-40GB", "dynamo_ddp_optimizer": false, "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt"}

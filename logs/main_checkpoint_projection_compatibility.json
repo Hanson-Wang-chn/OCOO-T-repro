@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-18T23:30:02+08:00",
+  "immutable_checkpoint": "runs/main_v1/validation_epoch_015/model.pt",
+  "immutable_checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+  "step": 16770,
+  "current_last_step_checked": 17050,
+  "strict_model_load": true,
+  "default_projection": "shared",
+  "parameters": 136919041,
+  "parameter_tensors": 189,
+  "optimizer_parameter_count_matches": true,
+  "both_ema_names_and_shapes_match": true,
+  "cuda_accessed": false,
+  "model_source_sha256": "faa2d7d95d066f68395d64166dfcd7712a538362aca192cdd0931a8235f51eaa",
+  "legacy_source_sha256": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1",
+  "note": "CPU checkpoint compatibility check only; existing trainer process and training config were not changed."
+}

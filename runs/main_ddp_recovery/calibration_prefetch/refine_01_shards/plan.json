@@ -1,0 +1,66 @@
+{
+  "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "calibration_config_sha256": "55045b962ef23882a3c29830fddb9d427836ddfd7148b89ed539b5860e6342cd",
+  "ranges": [
+    [
+      0,
+      1632
+    ],
+    [
+      1632,
+      3232
+    ],
+    [
+      3232,
+      4825
+    ]
+  ],
+  "screen_record": {
+    "tag": "screen_04",
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.298920163551035,
+      "MSE": 0.022330724556619923,
+      "MAE": 0.09973940029740333,
+      "PDS_L1": 0.8091666666666667,
+      "PDS_L2": 0.8211111111111112,
+      "PDS_cos": 0.8183333333333334,
+      "DEOver": 0.11599544467689553,
+      "DEPrec": 0.08766138220201776,
+      "DirAgr": 0.7704208732760451
+    },
+    "raw_metrics": {
+      "PDCorr": 0.298280754359439,
+      "MSE": 0.02239975679355363,
+      "MAE": 0.10000615864992142,
+      "PDS_L1": 0.8097222222222223,
+      "PDS_L2": 0.8219444444444445,
+      "PDS_cos": 0.8191666666666667
+    },
+    "score": 1.1151238672547388,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration_prefetch/screen_04",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "7ffd3764946f298b99df759407c61b84811e739a35466e89be9667480032419c",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "feb35f1cac2a6399fa039c00d3b6beb862b2bf9eeb3350a1a3b0ffbdb8a6b786"
+      }
+    }
+  },
+  "options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": false,
+    "seed": 4242
+  }
+}

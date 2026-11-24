@@ -1,0 +1,78 @@
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "interim_epoch020_review": {
+      "source": "runs/main_v1/interim_epoch020_review/ema_cfg_2",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0016494261791114605,
+        "jurkat": 0.14645154589948817,
+        "k562": 0.11443975025830283,
+        "rpe1": 0.11282786825699324
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12768532292005502,
+        "clipped": 0.12582480239039526,
+        "raw_ratio_to_real": 1.011680290833175,
+        "clipped_ratio_to_real": 0.9969389571583112
+      },
+      "metrics": {
+        "PDCorr": 0.26780689170821764,
+        "MSE": 0.01939240605570376,
+        "MAE": 0.09411315793792406,
+        "PDS_L1": 0.7552777777777778,
+        "PDS_L2": 0.7663888888888889,
+        "PDS_cos": 0.7388888888888889,
+        "DEOver": 0.10897938537034077,
+        "DEPrec": 0.09173765885150176,
+        "DirAgr": 0.672418082273102
+      }
+    },
+    "interim_epoch025_fixed_cfg": {
+      "source": "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+      "generated_cells": 960,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0014752414666306026,
+        "jurkat": 0.14626788496550233,
+        "k562": 0.11477200973022932,
+        "rpe1": 0.11220489887682897
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.1285600228950425,
+        "clipped": 0.12715482598832514,
+        "raw_ratio_to_real": 1.018610740667579,
+        "clipped_ratio_to_real": 1.0074770411729568
+      },
+      "metrics": {
+        "PDCorr": 0.28754191237967464,
+        "MSE": 0.020757763118793567,
+        "MAE": 0.09505822968979677,
+        "PDS_L1": 0.7719444444444445,
+        "PDS_L2": 0.7852777777777777,
+        "PDS_cos": 0.7663888888888889,
+        "DEOver": 0.11277152386400632,
+        "DEPrec": 0.0862287934445941,
+        "DirAgr": 0.6918600832790334
+      }
+    }
+  }
+}

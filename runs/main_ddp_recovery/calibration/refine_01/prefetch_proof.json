@@ -1,0 +1,96 @@
+{
+  "time": "2026-11-23T03:32:25+08:00",
+  "plan_sha256": "c356d7e90a1c44b0cb1474d5028cba320bab901e9bc029bee78fed680d0fffe6",
+  "validation_only": true,
+  "shards": [
+    {
+      "time": "2026-11-23T03:32:23+08:00",
+      "range": [
+        0,
+        1632
+      ],
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      },
+      "device_match": {
+        "device": "NVIDIA A100-PCIE-40GB",
+        "n": 32,
+        "bitwise_equal_screen_00": true
+      },
+      "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+      "files": {
+        "prediction.npy": "30a36ed44b61a711169d405bb492be55988cf26611f5f6ce0634675d60c4f984",
+        "indices.npy": "92e543ed624ce3679861ca3223a29f5eb639daaa1f05ff05712bfb2a6c3eec1f",
+        "generation_state.json": "6585c2c315f0e08a3beba1b8847d1be5f53b15090cb3f7459f9cd573b85694b0"
+      }
+    },
+    {
+      "time": "2026-11-23T03:31:13+08:00",
+      "range": [
+        1632,
+        3232
+      ],
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 5874
+      },
+      "device_match": {
+        "device": "NVIDIA A100-PCIE-40GB",
+        "n": 32,
+        "bitwise_equal_screen_00": true
+      },
+      "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+      "files": {
+        "prediction.npy": "dd87a2f63e402f8e4ca764ccd1365b4cfd71e2764fa9068de1f32173f576b0f3",
+        "indices.npy": "2f323729f01a7579ab8d79b79817b3d4865db5069a8f6e82ac031416ac5443fe",
+        "generation_state.json": "42884b93de82afe929006d730eb040b3c14ec75e8e3d34cb48b495458a766398"
+      }
+    },
+    {
+      "time": "2026-11-23T03:31:14+08:00",
+      "range": [
+        3232,
+        4825
+      ],
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 7474
+      },
+      "device_match": {
+        "device": "NVIDIA A100-PCIE-40GB",
+        "n": 32,
+        "bitwise_equal_screen_00": true
+      },
+      "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+      "files": {
+        "prediction.npy": "645d2d4119ffd5e056cf77b8bdc9b9484679fb807d916d87e69bd4f18c83b0ae",
+        "indices.npy": "ee3c2450beafda37f24716cf3638b32d4cd5d9aeb7dae4b66817e64ec0baee4e",
+        "generation_state.json": "3a57a778bc6373746d89b1c19d8dc46c9a7fa362fcb42bdd41eede380fd20509"
+      }
+    }
+  ],
+  "files": {
+    "prediction.npy": "bcf13b49716311384896faaea6d197ec535404551faad188b91bfa6d869298ca",
+    "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "generation_state.json": "be185daaabf89067ce2685344aa9686400a05cddc59375bfc6e3125624c73e16"
+  }
+}

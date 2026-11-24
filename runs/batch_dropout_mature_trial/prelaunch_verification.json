@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-20T10:44:47+08:00",
+  "passed": true,
+  "cpu_tests": 11,
+  "test_log": "logs/tests_batch_dropout_trial_cpu.log",
+  "test_log_sha256": "52cc97531c421cb58886174460c7e4d9985d77d7c97be543a58fcc1c29384d29",
+  "actual_checkpoint_verification_sha256": "cc865692ce9f94600e45f73b6753fdb496a96dc9558ee7d865e66cd090966c2f",
+  "fork_provenance_sha256": "182221cffbee1d90060fbaeaa935a9c82c16854882717507eda3b7d6708c3dc8",
+  "source_sha256": {
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "scripts/run_batch_dropout_trial.py": "38e101960644baee64481f28fdf5dc83c3fb0d1d4f007ce31a2faf853494ac1a",
+    "tests/test_batch_dropout_trial.py": "6319e27d30a2d5515653e8e76f204857e6305a51debbf8bbf0631da89c122d3b",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "scripts/diagnose_zero_floor.py": "37dc192f81806bede1cca4b36d309fbe2385967336170825d6324531d8247698",
+    "scripts/analyze_zero_floor.py": "4cad8e652d6cdaaa891efa92e8cf2f91d3487ef6de10d03db869627c530f9172",
+    "tests/model_before_batch_retention.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09"
+  },
+  "only_gpu_process_before_trial": 656512,
+  "local_free_GiB": 20.316757202148438,
+  "original_main_config_unchanged": true,
+  "training_source_unchanged": true,
+  "actual_checkpoint_full_conditional_output_bitwise_same": true,
+  "compiled_training_random_streams_separately_audited": false
+}

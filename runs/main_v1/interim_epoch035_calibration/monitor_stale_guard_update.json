@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-21T14:17:29+08:00",
+  "scope": "Read-only health check: alert when registered GPU calibration has no saved generation/case/stage progress for30min; no process signals or scientific changes",
+  "before_sha256": "75e1f22105fe23a79b4ef99831dba8d8ba2977542df64e3632f5eebe49d23e47",
+  "after_sha256": "fd7918d0fb91ba671ca9241d9ff0f3056fba9364c033727476525fa92c7dcd58",
+  "current_progress_age_seconds": 64.90138745307922,
+  "current_alerts": [],
+  "main_training_changed": false,
+  "test_access": false
+}

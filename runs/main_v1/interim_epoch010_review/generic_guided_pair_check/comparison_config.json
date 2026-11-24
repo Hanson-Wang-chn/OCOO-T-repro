@@ -1,0 +1,25 @@
+{
+  "reference": "runs/main_v1/interim_epoch010_review/ema_cfg_1",
+  "candidate": "runs/main_v1/interim_epoch010_review/ema_cfg_1p5",
+  "factor": "guidance",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/evaluation_config.json": "3445dd5082ae307e5566ba276356b5b8ae41fc77f407083648ae2e0c8467145f",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/generation_state.json": "517922ccfddc79e551718a3ef489557de09561390aff90a84992b2f566bbf937",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/prediction.npy": "58ba06720c8547ec6cca599ffc4f96eae3f3f1ec499495fb0ac4175a52a05582",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/prediction_raw.npy": "84c4b9aa870f91b6a2bcc5662626fae48a71b026dc165625b318aff15227c386",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/metrics/summary.json": "e8308098c4abca4bfad925e54cef5d839a45604364140703925f633ddc8298ff",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/metrics/results.csv": "f7f92f1e8b07027d4cb011954c37354ef0cb54bf0cf8a0923f2f46e3c3402cb7",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/evaluation_config.json": "d4d6913c63129d7f7177ec11fad270180a4ed73de3a8394f1494f15f9ed59731",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/generation_state.json": "5421d75d76b22dacca4e39bb306917f5d7f33574fe7ec4667807a8c9e3e35f76",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/prediction.npy": "51f179333a7e0ac00067dbf648e597736b977372734eff5f3f209a9d55e52059",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/prediction_raw.npy": "2f121c31144d92f9d82ead2727da904fc52594c5aaed0b512fbc766d9aee100b",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/metrics/summary.json": "d10e02f137c5a27b9c853e2a4ee081133f53072fa9ef288052fca5d9ef23cba5",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/metrics/results.csv": "cda87b38e85da17fbfa8f780b2e433639af81c2bcfd54045fa300912a7bb0de3"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+  "bootstrap": 2000,
+  "seed": 9232
+}

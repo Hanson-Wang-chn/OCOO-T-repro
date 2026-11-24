@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-21T00:43:22+08:00",
+  "pid": 1100222,
+  "stage": "training",
+  "config": "/home/whs/ocoo-t/configs/main_selected.yaml",
+  "attached_existing_training": true,
+  "postprocess_plan_sha256": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371"
+}

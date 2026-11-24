@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-19T04:25:25+08:00",
+  "run": "runs/pilot_xpred_vloss",
+  "original_path": "/home/whs/ocoo-t/runs/pilot_xpred_vloss/last.pt",
+  "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt",
+  "bytes": 2818998819,
+  "sha256": "e15e70be04f48162a02ec42e057625cfa1e5626d6e6a4d7dd0a68c398d4a231d",
+  "step": 384,
+  "full_model_optimizer_ema_rng_retained": true,
+  "original_path_is_symlink": true
+}

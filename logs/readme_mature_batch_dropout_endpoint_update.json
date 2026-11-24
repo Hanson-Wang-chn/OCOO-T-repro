@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T15:59:24+08:00",
+  "reason": "registered exact-budget endpoint reached; publish only at next900s window",
+  "replacements": [
+    [
+      "**当前：原全量训练已完成26轮并继续。E25全量验证诊断仍有PD/DE精度差距；成熟断点的单因素batch dropout短续训已启动，等待同协议验证。正式校准与测试尚未开始。**",
+      "**当前：原全量训练已完成27轮并继续。成熟batch dropout对照准确完成1118次更新，正在做相同960细胞/噪声/CFG的九指标评估；E25全量诊断仍有PD/DE精度差距。正式校准与测试尚未开始。**"
+    ],
+    [
+      "| 11-20 10:45 | 兼容性/状态继承/预算检查通过，启动同一E25→26成熟短续训；原100轮LR日程和主训练保持。 |",
+      "| 11-20 10:45 | 兼容性/状态继承/预算检查通过，启动同一E25→26成熟短续训；原100轮LR日程和主训练保持。 |\n| 11-20 15:56 | 候选精确完成1118更新，raw/AdamW/双EMA/RNG与默认EMA导出核验通过；开始两端配对生成，原主模型已完成27轮。 |"
+    ]
+  ],
+  "backup": "logs/README_before_mature_batch_dropout_endpoint.md"
+}

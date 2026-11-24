@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-19T17:50:26+08:00",
+  "pid": 886613,
+  "stage": "complete",
+  "cases": [
+    "ema_none",
+    "ema_cfg_0p6666666667",
+    "ema_cfg_1",
+    "ema_cfg_1p5",
+    "ema_cfg_2"
+  ],
+  "best_guided": "ema_cfg_2"
+}

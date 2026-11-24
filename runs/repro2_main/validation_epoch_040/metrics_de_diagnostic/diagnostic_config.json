@@ -1,0 +1,23 @@
+{
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/validation_epoch_040/model.pt",
+  "checkpoint_sha256": "a393e9627071f7efab03946db4e9deeb7a02ae017d551d6742e017436e852bf2",
+  "step": 44720,
+  "weights": "ema_0.9996",
+  "generation_dir": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/validation_epoch_040",
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 1.5,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "prediction_sha256": "7ae6acd1c61f58e1807bf3c01021fdc75a6336b62bc0c46bc2cd6bde83215323",
+  "indices_sha256": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "e4b48131802e024caca3aafbfc028c522ac99482b83c29c648fc4210ae6773ce",
+  "metric_source_sha256": "05bd7bea99e012dc264290b3f8daace4e66be78c874180189554ea0ca8850ee2",
+  "note": "Validation-only cached diagnostic, no new generation. Sampling cap and guidance differ from the final calibrated full benchmark."
+}

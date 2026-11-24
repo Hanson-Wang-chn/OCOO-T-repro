@@ -1,0 +1,11 @@
+{
+  "archive_members": 50202,
+  "required_members_present": [
+    "bin/python",
+    "bin/conda-unpack",
+    "bin/activate",
+    "lib/python3.11/site-packages/torch/__init__.py"
+  ],
+  "archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/ocoo-t-environment.tar",
+  "no_GPU_job": true
+}

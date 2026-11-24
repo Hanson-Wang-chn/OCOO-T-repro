@@ -1,0 +1,193 @@
+{
+  "time": "2026-11-19T02:01:49+08:00",
+  "case": {
+    "tag": "main_ema15_fp32",
+    "checkpoint": "runs/main_v1/validation_epoch_015/model.pt",
+    "checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+    "weights": "ema_0.9996",
+    "precision": "fp32",
+    "role": "same mature weights, fullFP32 inference with TF32 disabled"
+  },
+  "cells": 64,
+  "rows": [
+    {
+      "t": 0,
+      "velocity_mse": 0.13438642838551448,
+      "endpoint_mse": 0.1343864282709353,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.08087438854208606,
+        "endpoint_mse": 0.08087438854208606,
+        "endpoint_bias": 0.20409542196032596,
+        "endpoint_abs_error": 0.20410514948957434,
+        "velocity_noise_slope": 0.996443230212558,
+        "velocity_noise_correlation": 0.9808456180864921,
+        "endpoint_positive_fraction": 0.9992857743046802
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.20190384574600428,
+        "endpoint_mse": 0.20190384547258794,
+        "endpoint_bias": -0.25109667056161644,
+        "endpoint_abs_error": 0.3541407655364653
+      }
+    },
+    {
+      "t": 0.2,
+      "velocity_mse": 0.19049847992150154,
+      "endpoint_mse": 0.12191902696592755,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.10968852364430175,
+        "endpoint_mse": 0.07020065737116048,
+        "endpoint_bias": 0.18757050425146604,
+        "endpoint_abs_error": 0.18776259330799797,
+        "velocity_noise_slope": 0.9591358952217218,
+        "velocity_noise_correlation": 0.9723926812002566,
+        "endpoint_positive_fraction": 0.990266924348094
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.2924583296021194,
+        "endpoint_mse": 0.18717332780486487,
+        "endpoint_bias": -0.24262892373345127,
+        "endpoint_abs_error": 0.34261522126722516
+      }
+    },
+    {
+      "t": 0.4,
+      "velocity_mse": 0.2903061531540421,
+      "endpoint_mse": 0.10451021716810777,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.16325524270020014,
+        "endpoint_mse": 0.05877189206447644,
+        "endpoint_bias": 0.16844326532115284,
+        "endpoint_abs_error": 0.1690370438883055,
+        "velocity_noise_slope": 0.8963352412235238,
+        "velocity_noise_correlation": 0.9571257228745873,
+        "endpoint_positive_fraction": 0.9701145561997592
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.4506093178970292,
+        "endpoint_mse": 0.16221935308363425,
+        "endpoint_bias": -0.21874106470829194,
+        "endpoint_abs_error": 0.3199104055149857
+      }
+    },
+    {
+      "t": 0.6,
+      "velocity_mse": 0.48381211500620225,
+      "endpoint_mse": 0.07740993634092232,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.2656744969031381,
+        "endpoint_mse": 0.04250792086765634,
+        "endpoint_bias": 0.1348384362225507,
+        "endpoint_abs_error": 0.13677264412606108,
+        "velocity_noise_slope": 0.7765830464806527,
+        "velocity_noise_correlation": 0.9248848940854363,
+        "endpoint_positive_fraction": 0.9173738901492872
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.7590415519863984,
+        "endpoint_mse": 0.12144664194153003,
+        "endpoint_bias": -0.17470314168973655,
+        "endpoint_abs_error": 0.27716108573374276
+      }
+    },
+    {
+      "t": 0.8,
+      "velocity_mse": 0.684066890429232,
+      "endpoint_mse": 0.027362675630270613,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.30980692295129575,
+        "endpoint_mse": 0.012392277343604203,
+        "endpoint_bias": 0.05301477041068217,
+        "endpoint_abs_error": 0.059394074410501256,
+        "velocity_noise_slope": 0.6663410566729241,
+        "velocity_noise_correlation": 0.881101405634671,
+        "endpoint_positive_fraction": 0.6972103184606335
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 1.1562796202882546,
+        "endpoint_mse": 0.046251184306406255,
+        "endpoint_bias": -0.07245422209997343,
+        "endpoint_abs_error": 0.16821463372133522
+      }
+    },
+    {
+      "t": 0.9,
+      "velocity_mse": 0.5079827538824362,
+      "endpoint_mse": 0.005079827959215165,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.12636906874798512,
+        "endpoint_mse": 0.0012636907316804199,
+        "endpoint_bias": 0.007217589084894195,
+        "endpoint_abs_error": 0.013929058354334166,
+        "velocity_noise_slope": 0.8158353962404382,
+        "velocity_noise_correlation": 0.9403667378382542,
+        "endpoint_positive_fraction": 0.5297033862700613
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.9894738452813183,
+        "endpoint_mse": 0.009894739336357997,
+        "endpoint_bias": -0.010998650642803256,
+        "endpoint_abs_error": 0.07120586827491608
+      }
+    },
+    {
+      "t": 0.95,
+      "velocity_mse": 0.3461303434502189,
+      "endpoint_mse": 0.0008653258901794825,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.05393741338414459,
+        "endpoint_mse": 0.00013484353790610288,
+        "endpoint_bias": 0.001614919178761234,
+        "endpoint_abs_error": 0.008162679055662665,
+        "velocity_noise_slope": 0.8289842694230634,
+        "velocity_noise_correlation": 0.9832714577293559,
+        "endpoint_positive_fraction": 0.5758059546816794
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.7147971342911918,
+        "endpoint_mse": 0.0017869929008374717,
+        "endpoint_bias": 0.0010287432338973047,
+        "endpoint_abs_error": 0.03059374360434073
+      }
+    },
+    {
+      "t": 0.98,
+      "velocity_mse": 0.5273632090985112,
+      "endpoint_mse": 0.00021094527289356084,
+      "zero": {
+        "entries": 71406,
+        "velocity_mse": 0.29885454225774916,
+        "endpoint_mse": 0.00011954181154989289,
+        "endpoint_bias": 0.0013141338797463744,
+        "endpoint_abs_error": 0.008643017611162072,
+        "velocity_noise_slope": 0.48796146576721355,
+        "velocity_noise_correlation": 0.9389170261235082,
+        "endpoint_positive_fraction": 0.5538890289331428
+      },
+      "positive": {
+        "entries": 56594,
+        "velocity_mse": 0.8156780456594552,
+        "endpoint_mse": 0.00032627120063758244,
+        "endpoint_bias": 0.001589275490410038,
+        "endpoint_abs_error": 0.014180237801304705
+      }
+    }
+  ],
+  "value_encoder_f32_small_signal_rms_gain": 0.26696181297302246,
+  "velocity_sha256": "69f33d12a3a19a24fe43ac768e656575e2faca10b172e098b0b40e85fdda5572",
+  "note": "Fixed-time, matched denoising only. Oracle verifies units, not attainable conditional Bayes error. Raw short pilots and mature EMA have different training budgets; only matched cases support comparisons."
+}

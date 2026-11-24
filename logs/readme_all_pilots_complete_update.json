@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-19T06:34:50+08:00",
+  "backup": "logs/README_before_all_pilots_complete_20261119.md",
+  "replacements": [
+    [
+      "**当前：八组网格、独立投影及x-prediction对照已完成，均保留原主配置。全量v模型继续，另运行值编码初始化控制组。正式CFG校准、最终验证与测试尚未开始，尚未达到论文成绩。**",
+      "**当前：11组短实验及九指标复核均已完成，保留原主配置。GPU仅用于全量主训练，下一周期评估为第20轮。正式CFG校准、最终验证与测试尚未开始，尚未达到论文成绩。**"
+    ],
+    [
+      "补充同预算对照中，独立投影未改善综合指标；x-prediction的非负PDCorr/MSE为0.0982/0.0565，方向一致性下降，综合配对差-0.1306。因此保留共享投影和v预测，不能据短实验否定成熟x模型。现运行仅调整一维值MLP首层初始化的控制组，其他论文明确参数保持。见 [投影决定](runs/pert_projection_analysis/decision.json)、[x预测决定](runs/xpred_vloss_analysis/decision.json) 和 [初始化计划](runs/value_fanin_plan.json)。",
+      "三个补充对照也已完成：独立投影和x预测未改善综合指标；fan-in初始化的非负综合点估计提高0.0156，但配对区间[-0.0078,0.0388]跨0，MSE/MAE及DEPrec更差。保留已训练的共享投影/v预测/Xavier主模型；不据短实验否定其他设计的成熟性能。原第五组仍是八组网格内最高点估计，全部11组中fan-in点估计略高，不能混淆。见 [11组汇总](runs/supplemental_trials_complete.json)、[投影决定](runs/pert_projection_analysis/decision.json)、[x预测决定](runs/xpred_vloss_analysis/decision.json) 和 [初始化决定](runs/value_fanin_analysis/decision.json)。"
+    ],
+    [
+      "| 11-19 04:25 | 启动预登记fan-in初始化对照；主模型和论文明确设置不变。 |",
+      "| 11-19 04:25 | 启动预登记fan-in初始化对照；主模型和论文明确设置不变。 |\n| 11-19 06:32 | 11组短实验全部完成，fan-in证据不足以重启；GPU恢复仅原全量主训练，等待第20轮生成。 |"
+    ]
+  ]
+}

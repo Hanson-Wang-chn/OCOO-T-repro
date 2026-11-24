@@ -1,0 +1,25 @@
+{
+  "reference": "runs/main_v1/interim_epoch030_fixed_cfg/candidate",
+  "candidate": "runs/main_v1/interim_epoch035_fixed_cfg/candidate",
+  "factor": "checkpoint",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/evaluation_config.json": "108b5159eb30d6540b1d2623af29b2d288f0e11faae9cead9b7f7ca825a28f3e",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/prediction.npy": "649e351420deaef6ea6824823bd53555e03d18a21d6c85f956028108fee2f359",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/prediction_raw.npy": "b974035143b1e60c8c7aef567f5890f1c93f027f7dbb50896993dab04648169d",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/summary.json": "a29d9325d87fb0b2d31d02a0751f6f511e7f641697d018e2edb3e6fb8c3aa61c",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/results.csv": "b9172d9b474b329133a8a0a198ff5b93c2d9ea9bbccf706d156c4a4109d91502",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/evaluation_config.json": "48ad75803d207c21e6d20e2161c6a7f01a29b5146b58b2a868a6ec251105061b",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction.npy": "c21f3d3d3f2e2a7e34ebc6537b35accb16075822b0c8ddd1d16a9f9d45148a8d",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction_raw.npy": "8593aacb7ce0f352a985f799b2614035089c17df6772761e02a81c05d7124245",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/summary.json": "1ae823f8449e95b7cc421d3c92abf5ac0777b901228def632750c3b60b2ee9f2",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/results.csv": "7cdcec006f99a443479cd1adbabe1427f70bc415648abd15fbfadaa5e97871f7"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "bootstrap": 2000,
+  "seed": 9232
+}

@@ -1,0 +1,25 @@
+{
+  "reference": "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+  "candidate": "runs/batch_dropout_mature_trial/reference",
+  "factor": "checkpoint",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json": "54e024c8aafecc9345e729eeb21ddc510117f4283adfddf0070da6e1be717d44",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy": "2689dfbf8b24c8398861585c9f1a75e5b8497b155b2f24f810d5dcdd129d52b1",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy": "42cc220e1c676fd52abe44592b5fa8fb485f799d450730aed46422f71c018a69",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/summary.json": "3bb18c8c464fba874f84380961d79e951f2ea7939fdebb337becd0f73230f080",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/results.csv": "b5dfda10686c7c9c7113d5720934bcf5feefa1b287a73c6defd14f12ca6f3421",
+    "runs/batch_dropout_mature_trial/reference/evaluation_config.json": "67f54299645cbfdda2b1e47539303e465d76a0a816778e16df437b5f0c30f7b0",
+    "runs/batch_dropout_mature_trial/reference/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/batch_dropout_mature_trial/reference/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/batch_dropout_mature_trial/reference/prediction.npy": "1ce6a326f35a4e7e39f5bbc7584e69fc6982fb6579b4efc19badac2c2a0772c5",
+    "runs/batch_dropout_mature_trial/reference/prediction_raw.npy": "fda7dad340b88d3ebdf2bdee2a28a2afcd93edd5211c6abd09199c9664477113",
+    "runs/batch_dropout_mature_trial/reference/metrics/summary.json": "eeccba572209885e25d149cbe8013ac186dcea11ed09aa8161cea41d7e633452",
+    "runs/batch_dropout_mature_trial/reference/metrics/results.csv": "8ffd0c579024786acdbdea533fc6195905a8e5d8c38831a2fd08de182bcbe360"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "bootstrap": 2000,
+  "seed": 9232
+}

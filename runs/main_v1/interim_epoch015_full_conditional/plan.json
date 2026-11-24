@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-18T22:31:33+08:00",
+  "status": "registered before extra generation",
+  "step": 16770,
+  "source_dir": "runs/main_v1/validation_epoch_015",
+  "source_sha256": {
+    "model.pt": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+    "indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "prediction.npy": "0f94f79540a5ea926a8f9fba8d0d06c153ff2dd85592a482d17bca3491241eb3",
+    "prediction_raw.npy": "222f5280e272b64c725de23a2cee4d12a2124a3043a997846909abc238af3d3a"
+  },
+  "base_cells": 1916,
+  "extra_cells": 2909,
+  "full_cells": 4825,
+  "extra_seed": 6158,
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242,
+    "extra_seed": 6158
+  },
+  "purpose": "Quantify finite-generated-cell effects at a mature intermediate checkpoint by extending the exact saved prefix to all validation cells. No model or sampling-policy selection from this diagnostic.",
+  "formal_paper_inference": false,
+  "test_access": false,
+  "training_change": false,
+  "reason": "Epoch15 cap32 PDS improves but DE remains low. Empirical resampling suggests a material count effect, which cannot be inferred exactly for the model; directly measure it without regenerating existing cells.",
+  "script_sha256": "c6f55f1e873fd959c7726689a90c7b5c0939671378bbd4e03ff8d51107d96249",
+  "note": "Extra cells form a separate private-RNG segment (seed4242+1916=6158); original1916 raw/clipped arrays remain bitwise unchanged. This is not the same batch/seed assignment as a new direct full-population run."
+}

@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-20T10:29:15+08:00",
+  "reason": "Correct legacy explanatory prose after the immutable-source generation job completed. Numeric seed62525, all predictions, registered plan, extension_config and completed manifests remain untouched.",
+  "old_source_sha256": "f7619abaa9f713c1d32b50d975fc440e036a55d8c910e2e9cf2b4e8bb8f4952f",
+  "new_source_sha256": "39043ffcb8ad4e8158d0c6a26029678e6f1ef7ef52527f84c67b270334b8bf2b",
+  "only_text_constant_changed": true,
+  "archived_registered_helper": "logs/source_archive/extend_validation_cache_guided_f7619abaa9f7.py",
+  "resume_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "logs/source_archive/extend_validation_cache_guided_f7619abaa9f7.py",
+    "--source-dir",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/full_source_view",
+    "--outdir",
+    "runs/main_v1/interim_epoch025_full_guided"
+  ],
+  "new_training_or_generation": false
+}

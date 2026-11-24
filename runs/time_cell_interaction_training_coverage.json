@@ -1,0 +1,17 @@
+{
+  "pilot_training_cells": 16384,
+  "validation_perturbations": 60,
+  "validation_perturbations_seen_in_pilot": 58,
+  "pilot_cells_per_validation_perturbation": {
+    "min": 0,
+    "median": 6.0,
+    "max": 100
+  },
+  "note": "Training subset only; no test expression. Counts aggregate the other training cell lines, not the held-out HepG2-pair.",
+  "full_training_cells_per_validation_perturbation": {
+    "min": 0,
+    "median": 250.5,
+    "max": 3829,
+    "nonzero": 58
+  }
+}

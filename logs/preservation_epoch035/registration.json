@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-21T00:44:38+08:00",
+  "purpose": "Routine passive exactE35 complete-checkpoint preservation; no training or policy change",
+  "target_step": 39130,
+  "trainer_pid": 656512,
+  "trainer_start_tick": "783674341",
+  "destination": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt",
+  "watcher_sha256": "5c28bc758b8a2206c52d1805ad1f5cf3075f3c5470a997136c551c036d857207",
+  "preserver_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52"
+}

@@ -1,0 +1,52 @@
+{
+  "time": "2026-11-20T06:00:31+08:00",
+  "current_script_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "previous_script_archived": "logs/source_archive/compare_inference_cases_before_checkpoint_factor_451cb7511361.py",
+  "checkpoint_branch_all9_points_deltas_ci_and_primary_agree_with_independent_periodic_comparator_atol": 1e-12,
+  "actual_periodic_comparison": "logs/checkpoint_factor_periodic_agreement/comparison.json",
+  "other_actual_checkpoint_pair": "logs/checkpoint_factor_actual_epoch010_to020_check/comparison.json",
+  "legacy_guidance_result": "logs/checkpoint_factor_legacy_guidance_check/comparison.json",
+  "legacy_primary_difference": {
+    "value": -0.01716705953331521,
+    "ci95": [
+      -0.04744510299266165,
+      0.012245072290585959
+    ]
+  },
+  "gpu_used": false,
+  "core_model_or_training_math_changed": false,
+  "legacy_primary_value_and_ci_agree_with_historical_atol": 1e-12,
+  "guard_cases": [
+    {
+      "case": "guidance_changed",
+      "rejected": true,
+      "reason": "Cases differ beyond",
+      "output_artifact_created": false
+    },
+    {
+      "case": "reversed_training_steps",
+      "rejected": true,
+      "reason": "Candidate must be a later",
+      "output_artifact_created": false
+    },
+    {
+      "case": "stale_candidate_hash",
+      "rejected": true,
+      "reason": "Frozen checkpoint changed",
+      "output_artifact_created": false
+    },
+    {
+      "case": "different_training_configuration",
+      "rejected": true,
+      "reason": "Training configurations differ",
+      "output_artifact_created": false
+    },
+    {
+      "case": "wrong_candidate_step_metadata",
+      "rejected": true,
+      "reason": "tagged default-EMA inference weights",
+      "output_artifact_created": false
+    }
+  ],
+  "guard_check_time": "2026-11-20T06:01:18+08:00"
+}

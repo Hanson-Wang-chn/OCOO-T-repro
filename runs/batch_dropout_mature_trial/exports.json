@@ -1,0 +1,14 @@
+{
+  "reference": {
+    "source_checkpoint_sha256": "4cab554940edfea758a933df67f32f664f85f637c5be509719dd2d67ae8d21d3",
+    "export_sha256": "a98f0fc4171d481f19f698b5c260b23d1274de5588435261ddb1b41d62f4af3d",
+    "step": 29068,
+    "weights": "ema_0.9996"
+  },
+  "candidate": {
+    "source_checkpoint_sha256": "22f96a66588b51645524f9389586afeb86b10a9efc0dda5bfa20808ccc9a9626",
+    "export_sha256": "ae1ae3bc9dea9b0650a9946a5e60d952e86d3ff7883b0f6da3e90929ea17c4ea",
+    "step": 29068,
+    "weights": "ema_0.9996"
+  }
+}

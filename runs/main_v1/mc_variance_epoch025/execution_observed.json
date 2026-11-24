@@ -1,0 +1,15 @@
+{
+  "root_observed_time": "2026-11-21T18:47:46+08:00",
+  "CPU_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/diagnose_generation_mc.py",
+    "--plan",
+    "runs/main_v1/mc_variance_epoch025/plan.json"
+  ],
+  "exec_session": 75103,
+  "exit_code": 0,
+  "output_file_SHA_verified": true,
+  "completed_sha256": "d99c614df15e14aa18ff5f6264ce3d191dbd9ff83ebcc016532671361a016983",
+  "no_training_or_official_metric_change": true,
+  "test_access": false
+}

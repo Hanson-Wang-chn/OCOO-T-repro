@@ -1,0 +1,10 @@
+{
+  "step": 352,
+  "gene_condition_rms": 0.23194020986557007,
+  "gene_between_identity_std": 0.10038381814956665,
+  "cell_embedding_rms": 0.024179961532354355,
+  "cell_between_identity_std": 0.023746617138385773,
+  "batch_embedding_rms": 0.02040361799299717,
+  "time_embedding_rms": 0.8588194847106934,
+  "time_endpoint_difference_rms": 0.07856154441833496
+}

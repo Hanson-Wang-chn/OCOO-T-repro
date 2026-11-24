@@ -1,0 +1,322 @@
+{"time": "2026-11-18T02:18:39+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "matched", "velocity_mse": 0.27337467670440674}
+{"time": "2026-11-18T02:18:45+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "shuffled_pert", "velocity_mse": 0.2778047025203705}
+{"time": "2026-11-18T02:19:05+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "null_pert", "velocity_mse": 0.2760584354400635}
+{"time": "2026-11-18T02:19:15+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "train_hepg2", "case": "shuffled_time", "velocity_mse": 0.3679018020629883}
+{"time": "2026-11-18T02:19:25+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "matched", "velocity_mse": 0.26254457235336304}
+{"time": "2026-11-18T02:19:34+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "shuffled_pert", "velocity_mse": 0.2642587423324585}
+{"time": "2026-11-18T02:19:44+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "null_pert", "velocity_mse": 0.2637583017349243}
+{"time": "2026-11-18T02:19:54+08:00", "event": "intervention_case", "weights": "raw_diagnostic", "split": "validation", "case": "shuffled_time", "velocity_mse": 0.35234498977661133}
+{"time": "2026-11-18T02:20:04+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "matched", "velocity_mse": 0.29751652479171753}
+{"time": "2026-11-18T02:20:13+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "shuffled_pert", "velocity_mse": 0.3004942834377289}
+{"time": "2026-11-18T02:20:23+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "null_pert", "velocity_mse": 0.3001948893070221}
+{"time": "2026-11-18T02:20:33+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "train_hepg2", "case": "shuffled_time", "velocity_mse": 0.3284273147583008}
+{"time": "2026-11-18T02:20:42+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "matched", "velocity_mse": 0.2861095070838928}
+{"time": "2026-11-18T02:20:52+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "shuffled_pert", "velocity_mse": 0.28724902868270874}
+{"time": "2026-11-18T02:21:02+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "null_pert", "velocity_mse": 0.28723978996276855}
+{"time": "2026-11-18T02:21:11+08:00", "event": "intervention_case", "weights": "ema_0.9996", "split": "validation", "case": "shuffled_time", "velocity_mse": 0.3165370225906372}
+{
+  "time": "2026-11-18T02:18:16+08:00",
+  "protocol": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/last.pt",
+    "outdir": "/home/whs/ocoo-t/runs/main_v1/conditioning_epoch_008",
+    "cells": 1024,
+    "batch_size": 8,
+    "seed": 9231,
+    "bootstrap": 1000,
+    "no_compile": false,
+    "checkpoint_sha256": "3cde4c7f5d6b7f7b01e746270e9f0781082372c040dfa8a72e3a882c7d247731",
+    "step": 8944,
+    "script_sha256": "236d26a2a9d3eef7df5da5d0f60c2fbbf244ddff54f43219108701c35c25b0f0",
+    "model_sha256": "42dfbc953b20c4584a6e53bb6da003db33c0c2e6d432c3c386b238e801b890f1",
+    "flow_sha256": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "data_code_sha256": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "vocab_sha256": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "cases": [
+      "matched",
+      "shuffled_pert",
+      "null_pert",
+      "shuffled_time"
+    ],
+    "ema_decay": "0.9996",
+    "note": "Paired denoising interventions only; no test cells or generation metrics. Perturbation labels are shuffled within batch and cell line. Positive loss delta favors matched conditions. Confidence intervals bootstrap perturbations, not training seeds."
+  },
+  "weights": {
+    "raw_diagnostic": {
+      "train_hepg2": {
+        "cells": 1024,
+        "perturbations": 561,
+        "changed_perturbation_fraction": 0.94921875,
+        "changed_time_fraction": 0.9990234375,
+        "cases": {
+          "matched": {
+            "velocity_mse": 0.27337465651362436,
+            "endpoint_mse": 0.10710184622464247,
+            "delta_velocity_mse": 0.0,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "delta_endpoint_mse": 0.0,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "velocity_response_rms": 0.0
+          },
+          "shuffled_pert": {
+            "velocity_mse": 0.27780470724974293,
+            "endpoint_mse": 0.10955042126801452,
+            "delta_velocity_mse": 0.004430050736118574,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0037215922213010557,
+              0.005140948401088538
+            ],
+            "delta_endpoint_mse": 0.0024485750433720535,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.002036686643622424,
+              0.002891298590721195
+            ],
+            "velocity_response_rms": 0.06654582388297235
+          },
+          "null_pert": {
+            "velocity_mse": 0.276058461615321,
+            "endpoint_mse": 0.10852765961381095,
+            "delta_velocity_mse": 0.0026838051016966347,
+            "delta_velocity_mse_cluster_ci95": [
+              0.002151599895000165,
+              0.0032124042399008473
+            ],
+            "delta_endpoint_mse": 0.001425813389168493,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0011237695553673564,
+              0.0017372890314419646
+            ],
+            "velocity_response_rms": 0.04985545500310658
+          },
+          "shuffled_time": {
+            "velocity_mse": 0.3679017980757635,
+            "endpoint_mse": 0.15882277123044086,
+            "delta_velocity_mse": 0.09452714156213915,
+            "delta_velocity_mse_cluster_ci95": [
+              0.08571938605688008,
+              0.10378330278249435
+            ],
+            "delta_endpoint_mse": 0.051720925005798384,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.04601160870742144,
+              0.058230764217837475
+            ],
+            "velocity_response_rms": 0.30880135411519816
+          }
+        }
+      },
+      "validation": {
+        "cells": 1024,
+        "perturbations": 60,
+        "changed_perturbation_fraction": 0.912109375,
+        "changed_time_fraction": 1.0,
+        "cases": {
+          "matched": {
+            "velocity_mse": 0.2625445544872491,
+            "endpoint_mse": 0.10643853550703664,
+            "delta_velocity_mse": 0.0,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "delta_endpoint_mse": 0.0,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "velocity_response_rms": 0.0
+          },
+          "shuffled_pert": {
+            "velocity_mse": 0.2642587386253581,
+            "endpoint_mse": 0.10741399439633609,
+            "delta_velocity_mse": 0.0017141841381089762,
+            "delta_velocity_mse_cluster_ci95": [
+              0.000995306821479368,
+              0.0025806212544243682
+            ],
+            "delta_endpoint_mse": 0.0009754588892994637,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0005534738597171379,
+              0.0014780707182410065
+            ],
+            "velocity_response_rms": 0.04549510381651981
+          },
+          "null_pert": {
+            "velocity_mse": 0.26375827829542686,
+            "endpoint_mse": 0.10714109297942187,
+            "delta_velocity_mse": 0.0012137238081777468,
+            "delta_velocity_mse_cluster_ci95": [
+              0.00014135461137614755,
+              0.0021363518839518647
+            ],
+            "delta_endpoint_mse": 0.0007025574723852435,
+            "delta_endpoint_mse_cluster_ci95": [
+              8.622809464347573e-05,
+              0.0012368501373127875
+            ],
+            "velocity_response_rms": 0.04188433140197666
+          },
+          "shuffled_time": {
+            "velocity_mse": 0.35234498132922454,
+            "endpoint_mse": 0.15731591214896515,
+            "delta_velocity_mse": 0.08980042684197542,
+            "delta_velocity_mse_cluster_ci95": [
+              0.08010214160635583,
+              0.09898882938612424
+            ],
+            "delta_endpoint_mse": 0.050877376641928485,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.04362407646860057,
+              0.05779304202463327
+            ],
+            "velocity_response_rms": 0.30171297279339837
+          }
+        }
+      }
+    },
+    "ema_0.9996": {
+      "train_hepg2": {
+        "cells": 1024,
+        "perturbations": 561,
+        "changed_perturbation_fraction": 0.94921875,
+        "changed_time_fraction": 0.9990234375,
+        "cases": {
+          "matched": {
+            "velocity_mse": 0.29751655163272517,
+            "endpoint_mse": 0.11798682498652711,
+            "delta_velocity_mse": 0.0,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "delta_endpoint_mse": 0.0,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "velocity_response_rms": 0.0
+          },
+          "shuffled_pert": {
+            "velocity_mse": 0.3004942962070345,
+            "endpoint_mse": 0.11948587482411317,
+            "delta_velocity_mse": 0.0029777445743093267,
+            "delta_velocity_mse_cluster_ci95": [
+              0.002378738083415867,
+              0.0036110593742360716
+            ],
+            "delta_endpoint_mse": 0.0014990498375860653,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0011759171177605898,
+              0.0018188874149747346
+            ],
+            "velocity_response_rms": 0.04354613470852777
+          },
+          "null_pert": {
+            "velocity_mse": 0.3001948759483639,
+            "endpoint_mse": 0.11934557610355588,
+            "delta_velocity_mse": 0.002678324315638747,
+            "delta_velocity_mse_cluster_ci95": [
+              0.002142987802619207,
+              0.003241422571550178
+            ],
+            "delta_endpoint_mse": 0.0013587511170287802,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0010619929781312994,
+              0.001657543050322657
+            ],
+            "velocity_response_rms": 0.032962905361263534
+          },
+          "shuffled_time": {
+            "velocity_mse": 0.32842732166318456,
+            "endpoint_mse": 0.13286589013216837,
+            "delta_velocity_mse": 0.03091077003045939,
+            "delta_velocity_mse_cluster_ci95": [
+              0.027281428168159733,
+              0.03497508814104372
+            ],
+            "delta_endpoint_mse": 0.014879065145641236,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.012415480992114113,
+              0.017789170594153452
+            ],
+            "velocity_response_rms": 0.15234417020684807
+          }
+        }
+      },
+      "validation": {
+        "cells": 1024,
+        "perturbations": 60,
+        "changed_perturbation_fraction": 0.912109375,
+        "changed_time_fraction": 1.0,
+        "cases": {
+          "matched": {
+            "velocity_mse": 0.2861095215630485,
+            "endpoint_mse": 0.11694561829134563,
+            "delta_velocity_mse": 0.0,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "delta_endpoint_mse": 0.0,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.0,
+              0.0
+            ],
+            "velocity_response_rms": 0.0
+          },
+          "shuffled_pert": {
+            "velocity_mse": 0.28724902644898975,
+            "endpoint_mse": 0.11757946056597529,
+            "delta_velocity_mse": 0.0011395048859412782,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0004253878649476839,
+              0.0020625085975124278
+            ],
+            "delta_endpoint_mse": 0.0006338422746296697,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.00024000800752438625,
+              0.0011571659681551367
+            ],
+            "velocity_response_rms": 0.030909394531363536
+          },
+          "null_pert": {
+            "velocity_mse": 0.2872397852734139,
+            "endpoint_mse": 0.1175442470515561,
+            "delta_velocity_mse": 0.0011302637103653979,
+            "delta_velocity_mse_cluster_ci95": [
+              0.00027627875604907705,
+              0.0019499463328197953
+            ],
+            "delta_endpoint_mse": 0.0005986287602104558,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.00012845734672073018,
+              0.0010589657020562647
+            ],
+            "velocity_response_rms": 0.024943480767863322
+          },
+          "shuffled_time": {
+            "velocity_mse": 0.3165370328388235,
+            "endpoint_mse": 0.1319870306777699,
+            "delta_velocity_mse": 0.030427511275775032,
+            "delta_velocity_mse_cluster_ci95": [
+              0.0262152140115358,
+              0.03542368102131774
+            ],
+            "delta_endpoint_mse": 0.01504141238642428,
+            "delta_endpoint_mse_cluster_ci95": [
+              0.012053596663993001,
+              0.018344252852947888
+            ],
+            "velocity_response_rms": 0.15034038806135586
+          }
+        }
+      }
+    }
+  }
+}

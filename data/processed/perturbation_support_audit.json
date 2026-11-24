@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-18T09:14:55+08:00",
+  "training_target_genes": 2013,
+  "union_target_genes": 2023,
+  "splits": {
+    "validation": {
+      "perturbations": 60,
+      "seen_in_training": 58,
+      "globally_unseen_count": 2,
+      "globally_unseen": [
+        {
+          "id": 1938,
+          "gene": "NFKBIE",
+          "cells": 31,
+          "in_hvg": false,
+          "esm_symbol": "NFKBIE",
+          "missing_esm": false
+        },
+        {
+          "id": 2866,
+          "gene": "SMN2",
+          "cells": 446,
+          "in_hvg": false,
+          "esm_symbol": "SMN2",
+          "missing_esm": false
+        }
+      ]
+    },
+    "test_labels_only": {
+      "perturbations": 380,
+      "seen_in_training": 372,
+      "globally_unseen_count": 8
+    }
+  },
+  "input_sha256": {
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "data/processed/embedding_mapping.csv": "80b5dcd0a4b421eddf26798ce4c8e09c809e696853c85246154b3ebd858e3b90"
+  },
+  "note": "Metadata audit only; no test expression read and no split or label changes. Pair holdout is the intended protocol, but efficacy-filtered released data also contain globally unseen perturbation labels. Keep all official conditions in evaluation."
+}

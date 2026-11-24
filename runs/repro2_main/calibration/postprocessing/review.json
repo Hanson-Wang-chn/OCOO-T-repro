@@ -1,0 +1,298 @@
+{
+  "time": "2026-11-24T21:56:33+08:00",
+  "scope": "complete validation only",
+  "cells_each": 4825,
+  "perturbations": 60,
+  "thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "candidates": [
+    {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.3637612698754917,
+        "MSE": 0.01733553862043967,
+        "MAE": 0.08036993158360323,
+        "PDS_L1": 0.8105555555555557,
+        "PDS_L2": 0.8183333333333334,
+        "PDS_cos": 0.8277777777777778,
+        "DEOver": 0.18508125037216316,
+        "DEPrec": 0.1003904942732867,
+        "DirAgr": 0.7915397882595757
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3634787939799329,
+        "MSE": 0.0173863150489827,
+        "MAE": 0.08057724616179864,
+        "PDS_L1": 0.8102777777777779,
+        "PDS_L2": 0.8186111111111111,
+        "PDS_cos": 0.8277777777777778
+      },
+      "score": 1.1826501587643807,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "ffdde873c669f5c9df8d47288469679f4c6002045965d063b25a2b7f31bb5f13",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+        }
+      },
+      "zero_floor": 0.0,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true,
+        "MSE": true,
+        "MAE": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_00/metrics_clamped/summary.json"
+    },
+    {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.36068897192987304,
+        "MSE": 0.017360475709817063,
+        "MAE": 0.08040200124184291,
+        "PDS_L1": 0.8122222222222221,
+        "PDS_L2": 0.8175,
+        "PDS_cos": 0.8266666666666667,
+        "DEOver": 0.20259042191494642,
+        "DEPrec": 0.16554693810127977,
+        "DirAgr": 0.7879547039056057
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3634787939799329,
+        "MSE": 0.0173863150489827,
+        "MAE": 0.08057724616179864,
+        "PDS_L1": 0.8102777777777779,
+        "PDS_L2": 0.8186111111111111,
+        "PDS_cos": 0.8277777777777778
+      },
+      "score": 1.1794852682261694,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "ffdde873c669f5c9df8d47288469679f4c6002045965d063b25a2b7f31bb5f13",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+        }
+      },
+      "zero_floor": 0.05,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true,
+        "MSE": true,
+        "MAE": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json"
+    },
+    {
+      "tag": "refine_01",
+      "guidance": 1.5,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.3771456860316296,
+        "MSE": 0.011411207726147647,
+        "MAE": 0.0687280929957827,
+        "PDS_L1": 0.8033333333333333,
+        "PDS_L2": 0.8119444444444445,
+        "PDS_cos": 0.8197222222222222,
+        "DEOver": 0.16140346691439705,
+        "DEPrec": 0.09791297323009432,
+        "DirAgr": 0.7848416168842908
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3769080446412166,
+        "MSE": 0.011430502954560022,
+        "MAE": 0.06881742120410005,
+        "PDS_L1": 0.8033333333333333,
+        "PDS_L2": 0.8122222222222223,
+        "PDS_cos": 0.818611111111111
+      },
+      "score": 1.1888123526982963,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "4074e7f004bbfa21846e83833add3407ac83fbd422e46ccc606422833c6c8ae1"
+        }
+      },
+      "zero_floor": 0.0,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "DEOver": false,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true,
+        "MSE": true,
+        "MAE": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01/metrics_clamped/summary.json"
+    },
+    {
+      "tag": "refine_01",
+      "guidance": 1.5,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.3738548585679382,
+        "MSE": 0.01146308557751278,
+        "MAE": 0.06897375428428253,
+        "PDS_L1": 0.8038888888888888,
+        "PDS_L2": 0.8133333333333336,
+        "PDS_cos": 0.8180555555555556,
+        "DEOver": 0.19884692456764327,
+        "DEPrec": 0.17333844775021262,
+        "DirAgr": 0.7981793494318202
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3769080446412166,
+        "MSE": 0.011430502954560022,
+        "MAE": 0.06881742120410005,
+        "PDS_L1": 0.8033333333333333,
+        "PDS_L2": 0.8122222222222223,
+        "PDS_cos": 0.818611111111111
+      },
+      "score": 1.1856141178271975,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "4074e7f004bbfa21846e83833add3407ac83fbd422e46ccc606422833c6c8ae1"
+        }
+      },
+      "zero_floor": 0.05,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true,
+        "MSE": true,
+        "MAE": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/postprocessing/refine_01_floor_0p05/metrics/summary.json"
+    }
+  ],
+  "selected": {
+    "tag": "refine_01",
+    "guidance": 1.5,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": null,
+    "metrics": {
+      "PDCorr": 0.3738548585679382,
+      "MSE": 0.01146308557751278,
+      "MAE": 0.06897375428428253,
+      "PDS_L1": 0.8038888888888888,
+      "PDS_L2": 0.8133333333333336,
+      "PDS_cos": 0.8180555555555556,
+      "DEOver": 0.19884692456764327,
+      "DEPrec": 0.17333844775021262,
+      "DirAgr": 0.7981793494318202
+    },
+    "raw_metrics": {
+      "PDCorr": 0.3769080446412166,
+      "MSE": 0.011430502954560022,
+      "MAE": 0.06881742120410005,
+      "PDS_L1": 0.8033333333333333,
+      "PDS_L2": 0.8122222222222223,
+      "PDS_cos": 0.818611111111111
+    },
+    "score": 1.1856141178271975,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+        "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+        "generation_state.json": "4074e7f004bbfa21846e83833add3407ac83fbd422e46ccc606422833c6c8ae1"
+      }
+    },
+    "zero_floor": 0.05,
+    "checks": {
+      "PDCorr": true,
+      "mean_PDS": true,
+      "DEOver": true,
+      "DEPrec": false,
+      "DirAgr": true,
+      "PDS_L1": true,
+      "PDS_L2": true,
+      "PDS_cos": true,
+      "MSE": true,
+      "MAE": true
+    },
+    "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/postprocessing/refine_01_floor_0p05/metrics/summary.json"
+  },
+  "protocol": {
+    "plan_sha256": "63a360d103824603a1628d2e5c3a030445aa0e0bd83270f4d04b44022b36c5e6",
+    "calibration_config_sha256": "74a042eba79c93ad1ba62fba94548929c392f87f685587f83dcec2dc459447ba",
+    "base_results_sha256": "878ae969bdfe3e650ac2ba6d7973bbcbaf700956ec6992b3a5cbac4e8ada4c7d",
+    "original_selected_sha256": "151e609767339221c29445c97d83131e2307baac301a88f65f1c9e73e4860f8c",
+    "checkpoint_sha256": "88180a502e5b08d6ba1d6ba2a03caeb7081fff82d216f5ac6c9d00d012b92d09",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "source_sha256": {
+      "scripts/select_validation_postprocess.py": "40090e71b7fed1106d7af0cb7952cb2f30bc0c2e2d9d75b1b52f4f7f7b1d0ecc",
+      "src/ocoot/postprocess.py": "8abea4ea8d3d79b274b1ffcccfb04c889f982f407682442325fc3efb1a4513a5"
+    }
+  },
+  "test_access": false,
+  "new_generated_samples": 0,
+  "allow_validation_shortfall": true,
+  "decision_policy": "Highest primary score among candidates passing all original checks. With explicit report mode and no passing case, choose the lowest total relative shortfall."
+}

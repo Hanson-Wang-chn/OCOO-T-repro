@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-21T22:18:14+08:00",
+  "pid": 1251717,
+  "stage": "waiting_step44720",
+  "target_step": 44720,
+  "training_changed": false,
+  "current_step": 41300
+}

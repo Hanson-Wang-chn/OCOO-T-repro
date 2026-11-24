@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-19T19:29:10+08:00",
+  "pid": 899826,
+  "stage": "completed_review_required",
+  "gpu_disabled": true,
+  "test_access": false,
+  "result": {
+    "time": "2026-11-19T19:29:10+08:00",
+    "stage": "completed_review_required",
+    "paired_analysis": "runs/main_v1/interim_epoch020_guidance_boundary/paired_differences.json",
+    "context": "runs/main_v1/interim_epoch020_guidance_boundary/context/context_diagnostics.json",
+    "script_sha256": "1132e3df62bd77c69580accedbc357bd1bc26f24bf7bd406cda61e51ae8644ae",
+    "test_access": false,
+    "main_training_changed": false,
+    "formal_settings_selected": false
+  }
+}

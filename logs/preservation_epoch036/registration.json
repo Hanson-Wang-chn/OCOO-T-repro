@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-21T16:34:42+08:00",
+  "purpose": "Passive exactE36 full checkpoint preservation for a postE35-generation recoverable backup and potential later diagnosis; no new experiment or training/stopping change",
+  "target_step": 40248,
+  "trainer_pid": 656512,
+  "trainer_start_tick": "783674341",
+  "destination": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch036/full.pt",
+  "watcher_sha256": "9d956927e706fc7b394762bfd79ac4a28d3f9fe0193f0c27d410afe08401d9e4",
+  "preserver_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "checkpoint_state_before_launch": {
+    "step": 40100,
+    "epoch": 35.86762075134168,
+    "time": "2026-11-21T16:30:42+08:00"
+  },
+  "test_access": false,
+  "new_gpu_job": false,
+  "new_training_trial": false
+}

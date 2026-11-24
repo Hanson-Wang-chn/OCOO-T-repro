@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-19T04:18:32+08:00",
+  "calibration_has_run": false,
+  "change": "Atomic file+directory-fsynced JSON commits for calibration configuration, cumulative results and selected final settings; source hashes recorded and checked for resumption. Prevent an interrupted final JSON write from being mistaken for a completed calibration.",
+  "previous_source": "logs/source_archive/calibrate_before_atomic_json_35b5c97516ce.py",
+  "previous_sha256": "35b5c97516ce1963ea8442ad147dd6ed55efc9f2c6e16f90d00c95df13c60664",
+  "current_source_sha256": "ba57f98edbcfbf775e5d382040d5678a47a61b4b38f0279fcc45b65755e806a3",
+  "tests": "logs/tests_calibration_atomic_json_final.log",
+  "test_result": "....                                                                     [100%]\n4 passed in 1.56s",
+  "candidate_objective_steps_guidance_weights_population_gates_unchanged": true,
+  "main_training_mutations": false
+}

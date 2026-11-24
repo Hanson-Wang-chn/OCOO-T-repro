@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-22T11:18:52+08:00",
+  "cpu_only": true,
+  "step": 39130,
+  "full_checkpoint_sha256": "5bbdfe093771ea2f38deffa7a7ad6d633cd27d3f1a33ff00458abd2d79aafb7a",
+  "reference_checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+  "default193_tensors_equal_full_EMA_and_buffers": true,
+  "candidate193_tensors_equal_full_EMA0p9999_and_buffers": true,
+  "different_parameter_tensors": 189,
+  "training_configs_identical": true,
+  "new_training": false,
+  "test_access": false
+}

@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T06:07:12+08:00",
+  "records": [
+    {
+      "source": "scripts/calibrate.py",
+      "sha256": "ba57f98edbcfbf775e5d382040d5678a47a61b4b38f0279fcc45b65755e806a3",
+      "archive": "logs/source_archive/calibrate_before_full_validation_cache_ba57f98edbcf.py"
+    },
+    {
+      "source": "scripts/run_experiment.py",
+      "sha256": "11819125c5b7fa3faa0417652a0e6f96ac25d79b8f1e42c1b8612782cfbe2517",
+      "archive": "logs/source_archive/run_experiment_before_full_validation_cache_11819125c5b7.py"
+    }
+  ]
+}

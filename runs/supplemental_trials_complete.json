@@ -1,0 +1,84 @@
+{
+  "time": "2026-11-19T06:34:23+08:00",
+  "completed_subset_pilots": 11,
+  "original_factorial_grid_trials": 8,
+  "additional_single_factor_trials": 3,
+  "full_checkpoints_all_preserved": true,
+  "records": [
+    {
+      "run": "runs/pilot_pert_projection_separate",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt",
+      "sha256": "c088c2105b70858b43a16c807ee495af05010d6e32f312d79bede7eba80b9309"
+    },
+    {
+      "run": "runs/pilot_sigma_0.5",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5/last.pt",
+      "sha256": "2603364a5e7cee60d40f5c257902944b4073b6268bebd9c86311c8dd5bcd8c15"
+    },
+    {
+      "run": "runs/pilot_sigma_0.5_cellinit_1.0",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt",
+      "sha256": "4b6a199ce8144420c38597e625374bfd0bb90efa968673207ca521cc8b8c00e6"
+    },
+    {
+      "run": "runs/pilot_sigma_0.5_t1000",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000/last.pt",
+      "sha256": "10e82643d61273b57e0f93c291e8dce538a1b40ed9c993f1ef37e13ac40be0c6"
+    },
+    {
+      "run": "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+      "sha256": "5be203750deaa1643e00c313da500686b99b10343a0479bf95e52d653bdbb07b"
+    },
+    {
+      "run": "runs/pilot_sigma_1.0",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0/last.pt",
+      "sha256": "a8fb6448df8e68330cee1aa9dd1b2315635ca461c3319c8efa750200116bbfa4"
+    },
+    {
+      "run": "runs/pilot_sigma_1.0_cellinit_1.0",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_cellinit_1.0/last.pt",
+      "sha256": "666cc295fa27da27f065c6cb5abf062dabd2a1a2e1a1d72831a547057787bebe"
+    },
+    {
+      "run": "runs/pilot_sigma_1.0_t1000",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000/last.pt",
+      "sha256": "2e657aa2ae2537cdda5c325985af70f94735fb4d3ff8e5d9f2fc94899784da3f"
+    },
+    {
+      "run": "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+      "sha256": "d176a696dd47fedddafe6538d6a1659d5a3aa628fb6a1e3079ac084f80e81f62"
+    },
+    {
+      "run": "runs/pilot_value_fanin",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt",
+      "sha256": "ecfc67f049c38fdf19f2d325d64b67fd5f3a63a9144c0cc455bf9783e754f320"
+    },
+    {
+      "run": "runs/pilot_xpred_vloss",
+      "step": 384,
+      "checkpoint_archive": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt",
+      "sha256": "e15e70be04f48162a02ec42e057625cfa1e5626d6e6a4d7dd0a68c398d4a231d"
+    }
+  ],
+  "decisions": [
+    "runs/main_selection_after_grid.json",
+    "runs/pert_projection_analysis/decision.json",
+    "runs/xpred_vloss_analysis/decision.json",
+    "runs/value_fanin_analysis/decision.json"
+  ],
+  "main_config_kept": "configs/main_selected.yaml",
+  "no_further_short_pilots_queued": true,
+  "formal_calibration_full_gate_test_completed": false
+}

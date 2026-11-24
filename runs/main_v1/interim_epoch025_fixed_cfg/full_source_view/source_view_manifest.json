@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-20T07:15:10+08:00",
+  "purpose": "Immutable source view for nested full-validation diagnostic; all original files retained",
+  "links": {
+    "prediction.npy": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy",
+    "prediction_raw.npy": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy",
+    "indices.npy": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy",
+    "generation_state.json": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json",
+    "evaluation_config.json": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json",
+    "model.pt": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "metrics": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-24T19:34:59+08:00",
+  "pid": 323981,
+  "stage": "finished",
+  "run_dir": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main",
+  "completed_epoch": 45,
+  "observed_epochs": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45
+  ],
+  "failures": {},
+  "gpu_disabled_for_observer_and_children": true,
+  "training_mutations": false,
+  "script_sha256": "089781f18bb0e9338367af708b99a9491a34e944f8e9d1002222fe52b922bba1"
+}

@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-18T09:12:37+08:00",
+  "reference": "ema_cfg_1",
+  "candidate": "ema_cfg_1p5",
+  "formula": "PDCorr + mean(PDS_L1,PDS_L2,PDS_cos), candidate minus reference",
+  "delta": -0.01716705953331521,
+  "paired_ci95": [
+    -0.04744510299266165,
+    0.012245072290585959
+  ],
+  "perturbations": 60,
+  "bootstrap_draws": 2000,
+  "seed": 9232,
+  "source_sha256": {
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1/metrics/results.csv": "f7f92f1e8b07027d4cb011954c37354ef0cb54bf0cf8a0923f2f46e3c3402cb7",
+    "runs/main_v1/interim_epoch010_review/ema_cfg_1p5/metrics/results.csv": "cda87b38e85da17fbfa8f780b2e433639af81c2bcfd54045fa300912a7bb0de3"
+  },
+  "bootstrap_source_sha256": "7148ff621116acddda21179e21d115063fd6b271a28c7ddb2cc5d744a6e82f1b",
+  "note": "Fixed-reference paired perturbation bootstrap; not independent training seeds or repeated generation noise."
+}

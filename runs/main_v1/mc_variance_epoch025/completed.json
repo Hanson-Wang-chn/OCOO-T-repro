@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-21T18:45:13+08:00",
+  "cpu_only": true,
+  "test_access": false,
+  "plan_sha256": "b6432299ddee933042da276fa7250271a8cd09e04ba95a609b8ffac49e2846be",
+  "output_sha256": {
+    "runs/main_v1/mc_variance_epoch025/summary.json": "2eaed45a472b53336981d4e3280763c576a4402cbdca7c11f8066018b4db4423",
+    "runs/main_v1/mc_variance_epoch025/per_condition.csv": "9488d953238d57682ed3ff593b70f98a9c30f8e2bba27f70bee20c4071cb813d",
+    "runs/main_v1/mc_variance_epoch025/mc_variance_diagnostic.png": "75c160c5794c77334d14c4be5f3517c38715bf4c68f77242408bd6b5371ecc4e",
+    "runs/main_v1/mc_variance_epoch025/mc_variance_diagnostic.pdf": "5470ce1e2084cbddaec33eb6bd2e53242104d3daddc8a88813d7ea18c75a0fdf"
+  }
+}

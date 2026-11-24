@@ -1,0 +1,71 @@
+{
+  "time": "2026-11-19T02:00:16+08:00",
+  "status": "registered before any inference",
+  "data_dir": "data/processed",
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "cells": 64,
+  "cell_seed": 9421,
+  "noise_seed": 9238,
+  "noise_std": 1.0,
+  "batch_size": 4,
+  "times": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    0.9,
+    0.95,
+    0.98
+  ],
+  "cases": [
+    {
+      "tag": "main_ema15_bf16",
+      "checkpoint": "runs/main_v1/validation_epoch_015/model.pt",
+      "checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+      "weights": "ema_0.9996",
+      "precision": "bf16",
+      "role": "mature-main ordinary field"
+    },
+    {
+      "tag": "main_ema15_fp32",
+      "checkpoint": "runs/main_v1/validation_epoch_015/model.pt",
+      "checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+      "weights": "ema_0.9996",
+      "precision": "fp32",
+      "role": "same mature weights, fullFP32 inference with TF32 disabled"
+    },
+    {
+      "tag": "pilot_t1_raw",
+      "checkpoint": "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/model.pt",
+      "checkpoint_sha256": "cc242816d67483e25c68d7e3cb57ea1fef23ea242e0af25e1316f7822c1eb272",
+      "weights": "raw_pilot_only",
+      "precision": "bf16",
+      "role": "short shared control"
+    },
+    {
+      "tag": "pilot_t1000_raw",
+      "checkpoint": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/validation_epoch_012/model.pt",
+      "checkpoint_sha256": "0e2fe0c51c649ecaa310d78bd7587654cf9648333e18af2f596ba5f698b70b55",
+      "weights": "raw_pilot_only",
+      "precision": "bf16",
+      "role": "same-budget time1000 control"
+    }
+  ],
+  "training_time_tail_probabilities": {
+    "0.9": 8.964852703406219e-05,
+    "0.95": 1.430540508436683e-06,
+    "0.98": 2.248705628254154e-09
+  },
+  "question": "Current validation probes sample logit-normal times and rarely cover the lastODE time0.98. Measure fixed-time velocity and true-zero endpoint residuals; compare inference precision with identical mature weights and compare time encodings only between matched short pilots.",
+  "hypotheses": [
+    "Late-time extrapolation may leave continuous near-zero residuals even when mean metrics look good.",
+    "BF16 inference precision may contribute; compare fullFP32 without changing BF16 training.",
+    "Scalar expression encoder gain may affect resolution near zero; record a CPU-FP32 finite-difference gain."
+  ],
+  "script_sha256": "7d454d8e79ef2212073b9545ab2995c8dd91639907991b763aa0d855ec7daff9",
+  "model_source_sha256": "faa2d7d95d066f68395d64166dfcd7712a538362aca192cdd0931a8235f51eaa",
+  "main_training_change": false,
+  "test_access": false,
+  "caveat": "Denoising dependence, not generation performance. Analytic oracle verifies equations, not attainable Bayes risk. MainEMA versus raw pilots have unequal maturity; only same-weight precision and same-budget time-scale comparisons are paired."
+}

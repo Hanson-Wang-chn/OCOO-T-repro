@@ -1,0 +1,166 @@
+{
+  "time": "2026-11-20T17:35:40+08:00",
+  "status": "completed_reviewed_not_adopted",
+  "decision": "Keep the original combined cell+batch dropout main model. Do not extend or switch to this candidate on the present evidence. Continue original training and the planned epoch30 generation review.",
+  "primary_score_differences": {
+    "floor_0": {
+      "value": 0.001651867576961008,
+      "ci95": [
+        -0.004599233070923047,
+        0.00786188186183838
+      ]
+    },
+    "floor_0p05": {
+      "value": 0.002005648298913476,
+      "ci95": [
+        -0.0038164642153662083,
+        0.007953817356020012
+      ]
+    }
+  },
+  "paired_metric_effects": {
+    "floor_0": {
+      "PDCorr": {
+        "difference": 0.0007259416510350669,
+        "ci95": [
+          -0.0016618907290588292,
+          0.0032518979828455637
+        ]
+      },
+      "DEOver": {
+        "difference": -0.007493842602312006,
+        "ci95": [
+          -0.020650392574314152,
+          2.9244271559808003e-05
+        ]
+      },
+      "DEPrec": {
+        "difference": -0.0005451532371855278,
+        "ci95": [
+          -0.0016132739879349087,
+          0.0004939895005119622
+        ]
+      },
+      "DirAgr": {
+        "difference": -0.010404144093243972,
+        "ci95": [
+          -0.02088079687023672,
+          -0.0023734629701688864
+        ]
+      },
+      "PDS_L1": {
+        "difference": -0.0002777777777778212,
+        "ci95": [
+          -0.004722222222222294,
+          0.0038888888888888307
+        ]
+      },
+      "PDS_L2": {
+        "difference": 0.0011111111111111738,
+        "ci95": [
+          -0.004722222222222186,
+          0.007222222222222024
+        ]
+      },
+      "PDS_cos": {
+        "difference": 0.0019444444444446374,
+        "ci95": [
+          -0.0038888888888888307,
+          0.008333333333333304
+        ]
+      },
+      "MSE": {
+        "difference": 0.00029616009754439634,
+        "ci95": [
+          0.00017667936626822035,
+          0.00042256043137361347
+        ]
+      },
+      "MAE": {
+        "difference": 0.0009818250934282985,
+        "ci95": [
+          0.0006831503255913518,
+          0.001287216038132707
+        ]
+      }
+    },
+    "floor_0p05": {
+      "PDCorr": {
+        "difference": 0.0008945371878023023,
+        "ci95": [
+          -0.0015203099532906813,
+          0.003496789214356474
+        ]
+      },
+      "DEOver": {
+        "difference": -0.0011898356628402135,
+        "ci95": [
+          -0.00460050589649651,
+          0.0019010104347240318
+        ]
+      },
+      "DEPrec": {
+        "difference": -0.0007735428749751222,
+        "ci95": [
+          -0.0034627311449204044,
+          0.0014978213624773416
+        ]
+      },
+      "DirAgr": {
+        "difference": -0.00910517388378751,
+        "ci95": [
+          -0.019742999377686882,
+          -0.0009979656440057552
+        ]
+      },
+      "PDS_L1": {
+        "difference": 0.001388888888888995,
+        "ci95": [
+          -0.002777777777777657,
+          0.005277777777777168
+        ]
+      },
+      "PDS_L2": {
+        "difference": 0.001388888888888995,
+        "ci95": [
+          -0.003055555555555478,
+          0.006388888888888888
+        ]
+      },
+      "PDS_cos": {
+        "difference": 0.0005555555555554204,
+        "ci95": [
+          -0.005555555555555647,
+          0.00722222222222213
+        ]
+      },
+      "MSE": {
+        "difference": 0.00029962838937838687,
+        "ci95": [
+          0.0001807232305873186,
+          0.0004267511039506827
+        ]
+      },
+      "MAE": {
+        "difference": 0.0009952540198961968,
+        "ci95": [
+          0.0006889622317006267,
+          0.0012923327429840978
+        ]
+      }
+    }
+  },
+  "reason": "No stable PD/PDS or primary-score improvement; MSE and MAE increase and direction agreement decreases with intervals excluding0 under both registered postprocessing settings. DE precision does not improve.",
+  "scope": "E25→26,1118updates,defaultEMA0.9996,960cells/60perturbations,one fixed inference seed; exploratory paired perturbation intervals, not independent training-seed evidence. This does not rule out all longer alternative training.",
+  "raw_prediction_error_consistency": "Candidate raw6 MSE0.0210851 versus original0.0207912; MAE0.0961487 versus0.0952008, consistent with nonnegative error deterioration.",
+  "analysis_sha256": "de8f88a8d14ab65c4f3747f477ecf638e62f72cd22c68e6d7886cc9ca755f98a",
+  "plan_sha256": "97e36ed156277baac3415e38ff75e886c344c14d9f2ef488e8b24d5f2671bc02",
+  "endpoint_verification": "endpoint_independent_verification.json",
+  "figure": "paired_comparison_readable.png",
+  "figure_provenance": "readable_figure_provenance.json",
+  "all_resumable_states_retained": true,
+  "main_training_changed": false,
+  "formal_postprocessing_changed": false,
+  "quality_gates_changed": false,
+  "test_access": false
+}

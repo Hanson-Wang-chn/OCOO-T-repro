@@ -1,0 +1,373 @@
+{
+  "time": "2026-11-22T11:06:46.796505+08:00",
+  "project": "/home/dataset-assist-0/whs/ocoo-t",
+  "artifacts": "/home/dataset-assist-0/whs/ocoo-t-artifacts",
+  "scientific_JSON_modified": false,
+  "changes": [
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch020/generation_state.json",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/generation_state.json",
+      "new": "../../../runs/main_v1/validation_epoch_020/generation_state.json"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch020/indices.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/indices.npy",
+      "new": "../../../runs/main_v1/validation_epoch_020/indices.npy"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch020/metrics",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/metrics_de_diagnostic",
+      "new": "../../../runs/main_v1/validation_epoch_020/metrics_de_diagnostic"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch020/prediction.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction.npy",
+      "new": "../../../runs/main_v1/validation_epoch_020/prediction.npy"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch020/prediction_raw.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction_raw.npy",
+      "new": "../../../runs/main_v1/validation_epoch_020/prediction_raw.npy"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch025/generation_state.json",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/generation_state.json",
+      "new": "../../../runs/main_v1/validation_epoch_025/generation_state.json"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch025/indices.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/indices.npy",
+      "new": "../../../runs/main_v1/validation_epoch_025/indices.npy"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch025/metrics",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/metrics_de_diagnostic",
+      "new": "../../../runs/main_v1/validation_epoch_025/metrics_de_diagnostic"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch025/prediction.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction.npy",
+      "new": "../../../runs/main_v1/validation_epoch_025/prediction.npy"
+    },
+    {
+      "path": "logs/checkpoint_factor_periodic_view/epoch025/prediction_raw.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction_raw.npy",
+      "new": "../../../runs/main_v1/validation_epoch_025/prediction_raw.npy"
+    },
+    {
+      "path": "logs/legacy_inference_step1871/data",
+      "old": "/home/whs/ocoo-t/data",
+      "new": "../../data"
+    },
+    {
+      "path": "runs/batch_dropout_mature_trial/candidate/model.pt",
+      "old": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/candidate.pt",
+      "new": "../ema_models/candidate.pt"
+    },
+    {
+      "path": "runs/batch_dropout_mature_trial/reference/model.pt",
+      "old": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt",
+      "new": "../ema_models/reference.pt"
+    },
+    {
+      "path": "runs/main_v1/conditioning_epoch_025/source_snapshot.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+      "new": "../../../../ocoo-t-artifacts/main-snapshots/epoch025/full.pt"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_0p6666666667",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+      "new": "../interim_epoch020_review/ema_cfg_0p6666666667"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_1",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+      "new": "../interim_epoch020_review/ema_cfg_1"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_1p5",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+      "new": "../interim_epoch020_review/ema_cfg_1p5"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_2",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+      "new": "../interim_epoch020_review/ema_cfg_2"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_2p5",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5",
+      "new": "../interim_epoch020_guidance_boundary/ema_cfg_2p5"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_3",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3",
+      "new": "../interim_epoch020_guidance_boundary/ema_cfg_3"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_all_scales/ema_none",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+      "new": "../interim_epoch020_review/ema_none"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_guidance_boundary/ema_none",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+      "new": "../interim_epoch020_review/ema_none"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_0p6666666667",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+      "new": "../interim_epoch020_review/ema_cfg_0p6666666667"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_1",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+      "new": "../interim_epoch020_review/ema_cfg_1"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_1p5",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+      "new": "../interim_epoch020_review/ema_cfg_1p5"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_2",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+      "new": "../interim_epoch020_review/ema_cfg_2"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_none",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+      "new": "../interim_epoch020_review/ema_none"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/evaluation_config.json",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json",
+      "new": "../candidate/evaluation_config.json"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/generation_state.json",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json",
+      "new": "../candidate/generation_state.json"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/indices.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy",
+      "new": "../candidate/indices.npy"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/metrics",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics",
+      "new": "../candidate/metrics"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/model.pt",
+      "old": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+      "new": "../../validation_epoch_025/model.pt"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/prediction.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy",
+      "new": "../candidate/prediction.npy"
+    },
+    {
+      "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/prediction_raw.npy",
+      "old": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy",
+      "new": "../candidate/prediction_raw.npy"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_27950/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/epoch025/full.pt"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_29068/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch026/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/epoch026/full.pt"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_33540/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch030/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/epoch030/full.pt"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_39130/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/epoch035/full.pt"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_40248/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch036/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/epoch036/full.pt"
+    },
+    {
+      "path": "runs/main_v1/snapshots/step_41374/full.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+      "new": "../../../../../ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt"
+    },
+    {
+      "path": "runs/pilot_pert_projection_separate/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_pert_projection_separate/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_pert_projection_separate/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_cellinit_1.0/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_cellinit_1.0/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_cellinit_1.0/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_cellinit_1.0/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000/last.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt"
+    },
+    {
+      "path": "runs/pilot_value_fanin/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_value_fanin/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_value_fanin/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt"
+    },
+    {
+      "path": "runs/pilot_xpred_vloss/best_denoise.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/best_denoise.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/best_denoise.pt"
+    },
+    {
+      "path": "runs/pilot_xpred_vloss/final_ema.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/final_ema.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/final_ema.pt"
+    },
+    {
+      "path": "runs/pilot_xpred_vloss/last.pt",
+      "old": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt",
+      "new": "../../../ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt"
+    }
+  ]
+}

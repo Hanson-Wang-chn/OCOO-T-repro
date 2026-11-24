@@ -1,0 +1,26 @@
+{
+  "None": {
+    "boundary_mean_mse_to_target": 0.057531584054231644,
+    "mean_expression": 0.4106735587120056
+  },
+  "0.5": {
+    "boundary_mean_mse_to_target": 0.05843086913228035,
+    "mean_expression": 0.4163065254688263
+  },
+  "0.6666666666666666": {
+    "boundary_mean_mse_to_target": 0.057861123234033585,
+    "mean_expression": 0.40996861457824707
+  },
+  "1.0": {
+    "boundary_mean_mse_to_target": 0.05720924213528633,
+    "mean_expression": 0.3972928524017334
+  },
+  "2.0": {
+    "boundary_mean_mse_to_target": 0.05915451794862747,
+    "mean_expression": 0.35926544666290283
+  },
+  "4.0": {
+    "boundary_mean_mse_to_target": 0.08059918135404587,
+    "mean_expression": 0.2832106649875641
+  }
+}

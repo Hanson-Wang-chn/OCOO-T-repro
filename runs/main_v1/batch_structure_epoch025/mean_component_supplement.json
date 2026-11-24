@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-20T18:42:22+08:00",
+  "post_hoc_descriptive_supplement": true,
+  "purpose": "Relate the registered within-perturbation batch decomposition to pseudobulk mean errors; prevent treating a cell-variance decomposition as a benchmark error attribution.",
+  "all_gene_perturbation_mean_error_rms": 0.12024296272458507,
+  "centered_batch_composition_mean_component_rms": 0.00907614024664251,
+  "batch_composition_component_squared_norm_over_mean_error_squared_norm": 0.005697483277413527,
+  "common_across_perturbations_gene_bias_rms": 0.03262023091529643,
+  "common_gene_bias_squared_norm_fraction": 0.07359608716109399,
+  "source_sha256": {
+    "plan.json": "08e92d610962c512ad3e57fcbef7b256422c59cfc03c2147777ddad296d84845",
+    "summary.json": "efa17d8003e05094e068c8e4fb66d463ac02a8a72583f0724660a469315db156",
+    "batch_effects.npz": "a0857eb4e2f07453780902c2ee7d98644fe866be8e28b5c59f0a73d85f9893bf",
+    "script": "9c7efff827d0ba53240bafacf2a68208d90a210eb9f95f2c055a22b189e94d98"
+  },
+  "note": "All2000 genes, macro perturbation means; these descriptors are not official metric values. Batch effects have a cell-count-weighted zero-mean constraint. Ratios are descriptive norms, not causal explained-error fractions. Coefficients use validation truth and must not be adopted as a test-time correction.",
+  "cpu_only": true,
+  "test_access": false,
+  "corrected_prediction_produced": false
+}

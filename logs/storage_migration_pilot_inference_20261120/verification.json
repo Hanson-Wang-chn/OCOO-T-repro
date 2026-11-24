@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-20T13:31:41+08:00",
+  "artifacts": 22,
+  "GiB_byte_verified_and_relocated": 12.896562626585364,
+  "local_free_GiB_after": 27.23723602294922,
+  "all_original_paths_load_same_byte_verified_destinations": true,
+  "all_original_link_targets_and_sizes_checked": true,
+  "active_checkpoint_paths_not_touched": true,
+  "main_and_trial_pids_unchanged": [
+    656512,
+    979910
+  ],
+  "pinned_trial_sources_unchanged": true,
+  "cpu_tests": 4,
+  "test_log": "logs/tests_finished_inference_archival.log"
+}

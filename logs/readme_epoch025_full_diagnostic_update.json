@@ -1,0 +1,28 @@
+{
+  "time": "2026-11-20T07:19:30+08:00",
+  "backup": "logs/README_before_epoch025_full_diagnostic_20261120.md",
+  "replacements": [
+    [
+      "**当前：第25轮周期验证的综合改善已明显放缓；留出扰动条件在去噪中仍有学习进展。原全量主训练继续，现做一次固定CFG的跨轮生成比较，下一周期为第30轮。正式校准、最终验证与测试尚未开始，尚未达到论文成绩。**",
+      "**当前：第25轮固定CFG生成仍有辨别收益，DE差距未解决。原全量主训练继续，正补齐4,825细胞的验证诊断。正式校准、门槛验证与测试尚未开始，尚未达到论文成绩。**"
+    ],
+    [
+      "同协议条件探针中，第25轮EMA验证置乱扰动的velocity损失增量为0.003321，较第12轮增长0.001361[0.000842,0.001983]。这说明仍在利用留出扰动条件，不等于生成达标。现只新增固定w2/[0.1,0.9]/cap16/B16的E20→25生成比较，复用已有E20参考，不重新搜索强度或区间。见 [条件探针决定](runs/main_v1/conditioning_epoch_025/decision.json) 和 [固定CFG计划](runs/main_v1/interim_epoch025_fixed_cfg/plan.json)。",
+      "同协议条件探针中，第25轮EMA验证置乱扰动的velocity损失增量较第12轮增长0.001361[0.000842,0.001983]。随后固定w2/[0.1,0.9]/cap16/B16的E20→25生成比较完成：综合+0.04075[0.01885,0.06420]，PDCorr和三项PDS的配对增量区间均高于0；DEPrec下降0.00551[-0.01162,-0.00022]。这是同一cap16协议内的跨轮比较，与周期cap32的绝对分数不同。原模型继续训练，见 [条件探针决定](runs/main_v1/conditioning_epoch_025/decision.json) 和 [固定CFG决定](runs/main_v1/interim_epoch025_fixed_cfg/decision.json)。\n\nCPU九阈值分析中，0.05未删任何已观测训练正值，DEPrec点估计升至0.1266，但区间跨0，18个条件升、26个降，前三个条件占净增益69.5%；PDCorr和均值误差变差。更大阈值会删少量真实正值，额外收益仍不稳定，均未采用。现冻结同一E25/w2，只补3,865个缺失预测，连同原960个覆盖全部4,825验证细胞，再比较0与0.05；新增部分B32、独立seed62525，原50步Heun/EMA/CFG不变。这是中间数量诊断，正式后处理仍为clamp0。见 [阈值决定](runs/main_v1/expression_truncation_epoch025/decision.json)、[敏感性图](runs/main_v1/expression_truncation_epoch025/metric_sensitivity.png) 和 [全量诊断计划](runs/main_v1/interim_epoch025_full_guided/plan.json)。"
+    ],
+    [
+      "| 11-20 06:14 | 后续流程13项CPU检查通过；部署缓存复用及主进程接续，原训练进程保持运行。 |",
+      "| 11-20 06:14 | 后续流程13项CPU检查通过；部署缓存复用及主进程接续，原训练进程保持运行。 |\n| 11-20 06:50–07:15 | 固定CFG跨轮九指标继续显示辨别进展；近零阈值未支持整体修复，启动同一冻结模型的全量验证数量诊断。 |"
+    ],
+    [
+      "训练前11项核心检查通过；后续校准/缓存复用/训练接续13项CPU检查通过（含全量排名反转、真实DE重算一致、中断恢复与进程锁）；模型可选分支的5项CPU检查通过（含默认数值兼容、Eq6 loss/梯度/Heun及初始化解析检查）。原六组预测的array/完整DE入口前六项差值全部为0。版本锁定于 `environment.yml` / `environment.lock.txt`。进度见 [曲线](runs/main_v1/progress.png)、`runs/main_v1/events.jsonl`；最终报告路径为 `runs/main_v1/results/REPORT.md`。",
+      "训练前11项核心检查通过；后续校准/缓存复用/训练接续13项CPU检查通过（含全量排名反转、真实DE重算一致、中断恢复与进程锁）；模型可选分支的5项CPU检查通过（含默认数值兼容、Eq6 loss/梯度/Heun及初始化解析检查）。正CFG全量扩展4项CPU检查通过（路由、前缀保留、恢复及坏缓存拒绝）。原六组预测的array/完整DE入口前六项差值全部为0。版本锁定于 `environment.yml` / `environment.lock.txt`。进度见 [曲线](runs/main_v1/progress.png)、`runs/main_v1/events.jsonl`；最终报告路径为 `runs/main_v1/results/REPORT.md`。"
+    ],
+    [
+      "\n\n- 2026-11-20T06:01:28+08:00：第25轮同协议条件探针完成：EMA验证中置乱扰动的velocity损失增量由第12轮0.001960升至0.003321，增长0.001361[0.000842,0.001983]。留出扰动条件仍有学习进展，但不是生成成绩；原训练继续，下一步只比较E20/E25固定w2、固定区间的生成，不重新扫引导。见 `runs/main_v1/conditioning_epoch_025/decision.json`。\n\n- 2026-11-20T06:02:07+08:00：第25轮普通条件周期综合增益仅+0.00279[-0.01873,0.02527]，而同协议留出扰动去噪依赖仍增强。登记并启动一次固定w2/[0.1,0.9]/cap16/B16的E20→25跨断点生成比较（PID960334），复用E20参考；不重扫强度或区间，不改原训练/门槛。计划 `runs/main_v1/interim_epoch025_fixed_cfg/plan.json`。\n\n- 2026-11-20T06:13:57+08:00：后续流程通过13项CPU检查：完整校准缓存将经SHA/配置/全量索引校验后复用于最终验证，并重新计算九指标，避免重复生成。已将被动工作流主进程由PID656436接续为PID961459；训练PID656512、进程起始标识、配置及训练启动事件数均不变，训练未重启。质量门槛、校准选型与测试流程保持不变。见 `runs/final_validation_cache_reuse_update.json`。\n\n- 2026-11-20T06:50:29+08:00：完成 `runs/main_v1/interim_epoch025_fixed_cfg/candidate` 的 validation 评估（细胞 960，weights=ema_0.9996，CFG=2.0）；指标见 `runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/summary.json`。PDCorr=0.2875，MSE=0.02076。\n\n- 2026-11-20T06:54:47+08:00：第25轮固定CFG跨断点对照完成：相对E20综合+0.04075[0.01885,0.06420]，PDCorr和三项PDS的配对增量区间均高于0；DEPrec下降0.00551[-0.01162,-0.00022]。保留原全量训练并结束本次GPU诊断，下一周期E30；仅在CPU复查近零支持，不自动锁定推理设置或更改门槛。见 `runs/main_v1/interim_epoch025_fixed_cfg/decision.json`。\n\n- 2026-11-20T07:00:09+08:00：CPU支持审查完成：训练HepG2零比例55.57%，E25引导预测24.88%；阈值0.05恢复到52.32%且不删任何已观测训练正值。按预登记训练正值0.05%–1%分位数得到上限0.18691，现对全部9个预定阈值计算原九指标；较大阈值确实删少量真实正值，明确仅作未报告后处理的敏感性诊断，正式clamp0设置保持不变。见 `runs/main_v1/expression_truncation_epoch025/plan.json`。\n",
+      "\n"
+    ]
+  ],
+  "condensed_event_count": 6,
+  "all_condensed_events_retained_verbatim_in": "logs/progress_history.md"
+}

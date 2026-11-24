@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-20T13:35:28+08:00",
+  "primary_source": "https://arxiv.org/src/2606.12838v2",
+  "tex_sha256": "1352aaf4a9326904e91a3f30ab4d24336795f935e8492c623df027bbcc6e4d93",
+  "total_lines": 808,
+  "training_appendix_lines": [
+    706,
+    720
+  ],
+  "independent_p_c_dropout_lines": [
+    209,
+    220
+  ],
+  "long_panel_methods_line": 273,
+  "long_panel_results_line": 471,
+  "unresolved_after_comment_and_appendix_review": [
+    "total_training_epochs",
+    "numeric_noise_sigma",
+    "embedding_initialization_scales",
+    "time_embedding_frequency",
+    "batch_retention_when_cell_line_dropped",
+    "numeric_CFG_scale_and_interval",
+    "near_zero_output_postprocessing"
+  ],
+  "confirmed_explicit_parameters_unchanged": [
+    "12layers768/12heads",
+    "context32fromlayer4",
+    "effective_batch512/lr1e-4",
+    "AdamW.9/.95/no_weight_decay",
+    "5epochwarmup/cosinemin0",
+    "defaultEMA.9996",
+    "logitnormal-.8/.8",
+    "vprediction/vloss",
+    "uniformHeun50/finalEuler"
+  ],
+  "comment_findings": "Comments contain an older table layout, alternative MMD wording and an extra baseline result; no missing training configuration or implementation code was found. Archive members are the paper TeX, build metadata and six figures.",
+  "long_panel_scope": "TeX retains the same AIVC citation in methods and Replogle-Nadig label in results/Table5. No exact Replogle18080-gene panel/split is supplied; do not fabricate a panel or silently substitute another benchmark.",
+  "MMD": "AppendixC explicitly describes it as an additional explored regularizer; pure vloss baseline remains the reproduction target.",
+  "new_hyperparameters_inferred": false,
+  "active_training_or_config_changed": false
+}

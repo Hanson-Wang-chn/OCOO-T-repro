@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-21T15:56:50+08:00",
+  "reason": "Read-only check after local free space declined by about0.5GiB over several minutes",
+  "local_free_GiB": 20.49163055419922,
+  "artifact_mount_free_GiB": 276.228515625,
+  "main_run_disk_usage_approx_GiB": 19,
+  "interim_calibration_disk_usage_approx_MiB": 151,
+  "recent_large_cache_or_tmp_files_over20MiB": [],
+  "source_of_global_short_term_change": "not established; no storage limit reached",
+  "action": "No file moved or removed, no process/configuration changed; continue the existing10GiB free-space guard",
+  "current_alerts": [],
+  "test_access": false,
+  "scan_scope": [
+    "runs",
+    "data",
+    "logs"
+  ],
+  "no_new_scanned_regular_file_over100MiB_since_last_checkpoint": true
+}

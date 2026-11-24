@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-23T12:12:02+08:00",
+  "step": 384,
+  "epoch": 12.0,
+  "planned_epochs": 12,
+  "stopped_early": false,
+  "early_reference_epoch": 12,
+  "best_validation_generation": 0.7342951882856519
+}

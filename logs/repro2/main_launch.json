@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-23T12:51:00+08:00",
+  "pipeline_pid": 323980,
+  "observer_pid": 323981,
+  "pipeline_command": [
+    "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/repro2_main.yaml",
+    "--gpu-workers",
+    "4",
+    "--calibration-scales",
+    "0.75,1,1.25,1.5,1.75,2",
+    "--compare-windows",
+    "--postprocess-plan",
+    "configs/repro2_postprocess.json"
+  ],
+  "observer_command": [
+    "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "scripts/watch_training.py",
+    "--run-dir",
+    "runs/repro2_main",
+    "--from-epoch",
+    "5",
+    "--publish-progress"
+  ],
+  "training_config_sha256": "a41165a96f5cbeff726b49876c17fcf3cc19874c12e8d0537b3dc6df9a38c1ba",
+  "postprocess_plan_sha256": "63a360d103824603a1628d2e5c3a030445aa0e0bd83270f4d04b44022b36c5e6",
+  "pilot_summary_sha256": "4f2b7451a3ea94e1f3966c1491a7d1ce923f24f0a3f2dd9d15933fa404060063",
+  "starting_step": 0,
+  "cuda_visible_devices": "0,1,2,3"
+}

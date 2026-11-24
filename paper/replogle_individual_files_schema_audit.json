@@ -1,0 +1,1194 @@
+[
+  {
+    "time": "2026-11-18T16:36:59+08:00",
+    "name": "GSE264667_hepg2_raw_singlecell_01.h5ad",
+    "url": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/resolve/833d2be9f604dd656ebaddf875d9ad3fbf5dda0d/GSE264667_hepg2_raw_singlecell_01.h5ad",
+    "file_size": 5614623998,
+    "file_sha256_from_pinned_lfs_metadata": "8cc99a14e832ed37f3c76f652105025787d97130385814431e42e552eca7ad4b",
+    "metadata_bytes_transferred": 941310,
+    "http_ranges": [
+      [
+        0,
+        65535
+      ],
+      [
+        5614600192,
+        5614623997
+      ],
+      [
+        5614075904,
+        5614141439
+      ],
+      [
+        5614141440,
+        5614206975
+      ],
+      [
+        5600116736,
+        5600182271
+      ],
+      [
+        5613092864,
+        5613158399
+      ],
+      [
+        5611978752,
+        5612044287
+      ],
+      [
+        5610864640,
+        5610930175
+      ],
+      [
+        5611323392,
+        5611388927
+      ],
+      [
+        5611388928,
+        5611454463
+      ],
+      [
+        5614338048,
+        5614403583
+      ],
+      [
+        5614403584,
+        5614469119
+      ],
+      [
+        5613289472,
+        5613355007
+      ],
+      [
+        5613748224,
+        5613813759
+      ],
+      [
+        5613682688,
+        5613748223
+      ]
+    ],
+    "expression_datasets_read": false,
+    "schema": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "obsm",
+        "obsp",
+        "uns",
+        "var",
+        "varm",
+        "varp"
+      ],
+      "root": {
+        "X": {
+          "kind": "dataset",
+          "shape": [
+            145473,
+            9624
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "layers": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obs": {
+          "kind": "group",
+          "keys": [
+            "UMI_count",
+            "cell_barcode",
+            "cell_line",
+            "gem_group",
+            "gene",
+            "gene_id",
+            "gene_transcript",
+            "mitopercent",
+            "sgID_AB",
+            "transcript",
+            "z_gemgroup_UMI"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "obsm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obsp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "uns": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "var": {
+          "kind": "group",
+          "keys": [
+            "chr",
+            "class",
+            "cv",
+            "end",
+            "fano",
+            "gene_id",
+            "gene_name",
+            "in_matrix",
+            "length",
+            "mean",
+            "start",
+            "std",
+            "strand"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "varm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "varp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        }
+      },
+      "obsm": {},
+      "layers": {},
+      "var": {
+        "chr": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "class": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "cv": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "end": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "fano": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_id": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "object",
+          "compression": null,
+          "encoding-type": "string-array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_name": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "in_matrix": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "bool",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "length": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "mean": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "start": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "std": {
+          "kind": "dataset",
+          "shape": [
+            9624
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "strand": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-11-18T16:37:12+08:00",
+    "name": "GSE264667_jurkat_raw_singlecell_01.h5ad",
+    "url": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/resolve/833d2be9f604dd656ebaddf875d9ad3fbf5dda0d/GSE264667_jurkat_raw_singlecell_01.h5ad",
+    "file_size": 9366776068,
+    "file_sha256_from_pinned_lfs_metadata": "f03f01359eab6cdc40f24e20b3f886ff4c50190bd74c90c5cbf9c9c72972eb79",
+    "metadata_bytes_transferred": 960772,
+    "http_ranges": [
+      [
+        0,
+        65535
+      ],
+      [
+        9366732800,
+        9366776067
+      ],
+      [
+        9366339584,
+        9366405119
+      ],
+      [
+        9342287872,
+        9342353407
+      ],
+      [
+        9365291008,
+        9365356543
+      ],
+      [
+        9363193856,
+        9363259391
+      ],
+      [
+        9361358848,
+        9361424383
+      ],
+      [
+        9362079744,
+        9362145279
+      ],
+      [
+        9362145280,
+        9362210815
+      ],
+      [
+        9366470656,
+        9366536191
+      ],
+      [
+        9366601728,
+        9366667263
+      ],
+      [
+        9365553152,
+        9365618687
+      ],
+      [
+        9366536192,
+        9366601727
+      ],
+      [
+        9365946368,
+        9366011903
+      ],
+      [
+        9366011904,
+        9366077439
+      ]
+    ],
+    "expression_datasets_read": false,
+    "schema": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "obsm",
+        "obsp",
+        "uns",
+        "var",
+        "varm",
+        "varp"
+      ],
+      "root": {
+        "X": {
+          "kind": "dataset",
+          "shape": [
+            262956,
+            8882
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "layers": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obs": {
+          "kind": "group",
+          "keys": [
+            "UMI_count",
+            "cell_barcode",
+            "cell_line",
+            "gem_group",
+            "gene",
+            "gene_id",
+            "gene_transcript",
+            "mitopercent",
+            "sgID_AB",
+            "transcript",
+            "z_gemgroup_UMI"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "obsm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obsp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "uns": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "var": {
+          "kind": "group",
+          "keys": [
+            "chr",
+            "class",
+            "cv",
+            "end",
+            "fano",
+            "gene_id",
+            "gene_name",
+            "in_matrix",
+            "length",
+            "mean",
+            "start",
+            "std",
+            "strand"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "varm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "varp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        }
+      },
+      "obsm": {},
+      "layers": {},
+      "var": {
+        "chr": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "class": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "cv": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "end": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "fano": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_id": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "object",
+          "compression": null,
+          "encoding-type": "string-array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_name": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "in_matrix": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "bool",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "length": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "mean": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "start": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "std": {
+          "kind": "dataset",
+          "shape": [
+            8882
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "strand": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-11-18T16:37:25+08:00",
+    "name": "K562_essential_normalized_singlecell_01.h5ad",
+    "url": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/resolve/833d2be9f604dd656ebaddf875d9ad3fbf5dda0d/K562_essential_normalized_singlecell_01.h5ad",
+    "file_size": 10662212844,
+    "file_sha256_from_pinned_lfs_metadata": "dfd2898643aff82f939ae22876e81f25629b9b7240e2f07564046dfa6c0953b2",
+    "metadata_bytes_transferred": 816364,
+    "http_ranges": [
+      [
+        0,
+        65535
+      ],
+      [
+        10662182912,
+        10662212843
+      ],
+      [
+        10661789696,
+        10661855231
+      ],
+      [
+        10631249920,
+        10631315455
+      ],
+      [
+        10660675584,
+        10660741119
+      ],
+      [
+        10655760384,
+        10655825919
+      ],
+      [
+        10654449664,
+        10654515199
+      ],
+      [
+        10654515200,
+        10654580735
+      ],
+      [
+        10661920768,
+        10661986303
+      ],
+      [
+        10661003264,
+        10661068799
+      ],
+      [
+        10661986304,
+        10662051839
+      ],
+      [
+        10653663232,
+        10653728767
+      ],
+      [
+        10661396480,
+        10661462015
+      ]
+    ],
+    "expression_datasets_read": false,
+    "schema": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "obsm",
+        "obsp",
+        "uns",
+        "var",
+        "varm",
+        "varp"
+      ],
+      "root": {
+        "X": {
+          "kind": "dataset",
+          "shape": [
+            310385,
+            8563
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "layers": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obs": {
+          "kind": "group",
+          "keys": [
+            "UMI_count",
+            "cell_barcode",
+            "cell_line",
+            "core_adjusted_UMI_count",
+            "core_scale_factor",
+            "gem_group",
+            "gene",
+            "gene_id",
+            "gene_transcript",
+            "mitopercent",
+            "sgID_AB",
+            "transcript",
+            "z_gemgroup_UMI"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "obsm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obsp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "uns": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "var": {
+          "kind": "group",
+          "keys": [
+            "chr",
+            "class",
+            "cv",
+            "end",
+            "fano",
+            "gene_id",
+            "gene_name",
+            "in_matrix",
+            "length",
+            "mean",
+            "start",
+            "std",
+            "strand"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "varm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "varp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        }
+      },
+      "obsm": {},
+      "layers": {},
+      "var": {
+        "chr": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "class": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "cv": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "end": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "fano": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_id": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "object",
+          "compression": null,
+          "encoding-type": "string-array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_name": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "in_matrix": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "bool",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "length": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "mean": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "start": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "std": {
+          "kind": "dataset",
+          "shape": [
+            8563
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "strand": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        }
+      }
+    }
+  },
+  {
+    "time": "2026-11-18T16:37:37+08:00",
+    "name": "rpe1_normalized_singlecell_01.h5ad",
+    "url": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/resolve/833d2be9f604dd656ebaddf875d9ad3fbf5dda0d/rpe1_normalized_singlecell_01.h5ad",
+    "file_size": 8701143594,
+    "file_sha256_from_pinned_lfs_metadata": "91282e58371ae9d98a3283af0d69fc9e3b0984386437139e7d44dba2c60f232e",
+    "metadata_bytes_transferred": 846378,
+    "http_ranges": [
+      [
+        0,
+        65535
+      ],
+      [
+        8701083648,
+        8701143593
+      ],
+      [
+        8701018112,
+        8701083647
+      ],
+      [
+        8675983360,
+        8676048895
+      ],
+      [
+        8699707392,
+        8699772927
+      ],
+      [
+        8695709696,
+        8695775231
+      ],
+      [
+        8694661120,
+        8694726655
+      ],
+      [
+        8694726656,
+        8694792191
+      ],
+      [
+        8700887040,
+        8700952575
+      ],
+      [
+        8699904000,
+        8699969535
+      ],
+      [
+        8694005760,
+        8694071295
+      ],
+      [
+        8700690432,
+        8700755967
+      ],
+      [
+        8700362752,
+        8700428287
+      ]
+    ],
+    "expression_datasets_read": false,
+    "schema": {
+      "root_keys": [
+        "X",
+        "layers",
+        "obs",
+        "obsm",
+        "obsp",
+        "uns",
+        "var",
+        "varm",
+        "varp"
+      ],
+      "root": {
+        "X": {
+          "kind": "dataset",
+          "shape": [
+            247914,
+            8749
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "layers": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obs": {
+          "kind": "group",
+          "keys": [
+            "UMI_count",
+            "cell_barcode",
+            "cell_line",
+            "core_adjusted_UMI_count",
+            "core_scale_factor",
+            "gem_group",
+            "gene",
+            "gene_id",
+            "gene_transcript",
+            "mitopercent",
+            "sgID_AB",
+            "transcript",
+            "z_gemgroup_UMI"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "obsm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "obsp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "uns": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "var": {
+          "kind": "group",
+          "keys": [
+            "chr",
+            "class",
+            "cv",
+            "end",
+            "fano",
+            "gene_id",
+            "gene_name",
+            "in_matrix",
+            "length",
+            "mean",
+            "start",
+            "std",
+            "strand"
+          ],
+          "encoding-type": "dataframe",
+          "encoding-version": "0.2.0"
+        },
+        "varm": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        },
+        "varp": {
+          "kind": "group",
+          "keys": [],
+          "encoding-type": "dict",
+          "encoding-version": "0.1.0"
+        }
+      },
+      "obsm": {},
+      "layers": {},
+      "var": {
+        "chr": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "class": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "cv": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "end": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "fano": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_id": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "object",
+          "compression": null,
+          "encoding-type": "string-array",
+          "encoding-version": "0.2.0"
+        },
+        "gene_name": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        },
+        "in_matrix": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "bool",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "length": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "mean": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "start": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "int64",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "std": {
+          "kind": "dataset",
+          "shape": [
+            8749
+          ],
+          "dtype": "float32",
+          "compression": null,
+          "encoding-type": "array",
+          "encoding-version": "0.2.0"
+        },
+        "strand": {
+          "kind": "group",
+          "keys": [
+            "categories",
+            "codes"
+          ],
+          "encoding-type": "categorical",
+          "encoding-version": "0.2.0"
+        }
+      }
+    }
+  }
+]

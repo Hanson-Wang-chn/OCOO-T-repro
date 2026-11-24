@@ -1,0 +1,245 @@
+{
+  "case_00": {
+    "time": "2026-11-20T07:00:34+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.0
+    },
+    "floor": 0.0,
+    "positive_training_fraction_censored": 0.0,
+    "all_training_fraction_censored": 0.0,
+    "training_mean_absolute_change": 0.0,
+    "generated_zero_fraction": 0.248815625,
+    "gene_zero_fraction_correlation_with_training": 0.9160987355322423,
+    "gene_zero_fraction_mae_to_training": 0.30693973661928364,
+    "generated_mean_absolute_change": 0.0,
+    "metrics": {
+      "PDCorr": 0.28754191237967464,
+      "MSE": 0.020757763118793567,
+      "MAE": 0.09505822968979677,
+      "PDS_L1": 0.7719444444444445,
+      "PDS_L2": 0.7852777777777777,
+      "PDS_cos": 0.7663888888888889,
+      "DEOver": 0.11277152386400632,
+      "DEPrec": 0.0862287934445941,
+      "DirAgr": 0.6918600832790334
+    },
+    "score": 1.0620789494167115
+  },
+  "case_01": {
+    "time": "2026-11-20T07:00:45+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.05
+    },
+    "floor": 0.05,
+    "positive_training_fraction_censored": 0.0,
+    "all_training_fraction_censored": 0.0,
+    "training_mean_absolute_change": 0.0,
+    "generated_zero_fraction": 0.5232255208333334,
+    "gene_zero_fraction_correlation_with_training": 0.9938842987470048,
+    "gene_zero_fraction_mae_to_training": 0.03642418755839465,
+    "generated_mean_absolute_change": 0.0037842331375852077,
+    "metrics": {
+      "PDCorr": 0.28626753327747184,
+      "MSE": 0.020869115584840378,
+      "MAE": 0.09570864625275136,
+      "PDS_L1": 0.7733333333333333,
+      "PDS_L2": 0.7847222222222221,
+      "PDS_cos": 0.7641666666666667,
+      "DEOver": 0.1181153672269355,
+      "DEPrec": 0.12662193095237845,
+      "DirAgr": 0.7018441156469991
+    },
+    "score": 1.060341607351546
+  },
+  "case_02": {
+    "time": "2026-11-20T07:00:57+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.07
+    },
+    "floor": 0.07,
+    "positive_training_fraction_censored": 0.0,
+    "all_training_fraction_censored": 0.0,
+    "training_mean_absolute_change": 0.0,
+    "generated_zero_fraction": 0.5293484375,
+    "gene_zero_fraction_correlation_with_training": 0.9938123066207836,
+    "gene_zero_fraction_mae_to_training": 0.031928457562732535,
+    "generated_mean_absolute_change": 0.00414071400177617,
+    "metrics": {
+      "PDCorr": 0.2861609580460936,
+      "MSE": 0.020883042303224405,
+      "MAE": 0.0957848654439052,
+      "PDS_L1": 0.773888888888889,
+      "PDS_L2": 0.7847222222222221,
+      "PDS_cos": 0.7641666666666667,
+      "DEOver": 0.1178451829654449,
+      "DEPrec": 0.12683564393269633,
+      "DirAgr": 0.7019007999679984
+    },
+    "score": 1.0604202173053527
+  },
+  "case_03": {
+    "time": "2026-11-20T07:01:09+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.1
+    },
+    "floor": 0.1,
+    "positive_training_fraction_censored": 0.00016204726496231876,
+    "all_training_fraction_censored": 7.199225853813171e-05,
+    "training_mean_absolute_change": 6.847977650488855e-06,
+    "generated_zero_fraction": 0.533459375,
+    "gene_zero_fraction_correlation_with_training": 0.9937779745328578,
+    "gene_zero_fraction_mae_to_training": 0.029292099516992846,
+    "generated_mean_absolute_change": 0.004487300285965034,
+    "metrics": {
+      "PDCorr": 0.28608148388254145,
+      "MSE": 0.020895759450892608,
+      "MAE": 0.09585878712435564,
+      "PDS_L1": 0.7741666666666667,
+      "PDS_L2": 0.7847222222222221,
+      "PDS_cos": 0.7636111111111111,
+      "DEOver": 0.11783663936067702,
+      "DEPrec": 0.12662762226554647,
+      "DirAgr": 0.7019803198204017
+    },
+    "score": 1.060248150549208
+  },
+  "case_04": {
+    "time": "2026-11-20T07:01:20+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.1130571961402893
+    },
+    "floor": 0.1130571961402893,
+    "positive_training_fraction_censored": 0.0004956806141918065,
+    "all_training_fraction_censored": 0.0002202145586198842,
+    "training_mean_absolute_change": 2.264778296057283e-05,
+    "generated_zero_fraction": 0.5352317708333333,
+    "gene_zero_fraction_correlation_with_training": 0.9937898685835973,
+    "gene_zero_fraction_mae_to_training": 0.028193732194846256,
+    "generated_mean_absolute_change": 0.004676386456343175,
+    "metrics": {
+      "PDCorr": 0.2860239188419655,
+      "MSE": 0.020902215037494898,
+      "MAE": 0.09590062648057937,
+      "PDS_L1": 0.7741666666666667,
+      "PDS_L2": 0.7844444444444444,
+      "PDS_cos": 0.763611111111111,
+      "DEOver": 0.117904535931605,
+      "DEPrec": 0.1268389622441879,
+      "DirAgr": 0.7020202643181136
+    },
+    "score": 1.0600979929160395
+  },
+  "case_05": {
+    "time": "2026-11-20T07:01:32+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.12557704746723175
+    },
+    "floor": 0.12557704746723175,
+    "positive_training_fraction_censored": 0.000999848524300527,
+    "all_training_fraction_censored": 0.0004441997430635501,
+    "training_mean_absolute_change": 4.969872211356895e-05,
+    "generated_zero_fraction": 0.5371958333333333,
+    "gene_zero_fraction_correlation_with_training": 0.993801375801511,
+    "gene_zero_fraction_mae_to_training": 0.02709918867936333,
+    "generated_mean_absolute_change": 0.0049111067506604055,
+    "metrics": {
+      "PDCorr": 0.2859470749118676,
+      "MSE": 0.020910894063611827,
+      "MAE": 0.09595241943995157,
+      "PDS_L1": 0.773611111111111,
+      "PDS_L2": 0.7844444444444444,
+      "PDS_cos": 0.7636111111111111,
+      "DEOver": 0.11799407719486352,
+      "DEPrec": 0.1268965762339507,
+      "DirAgr": 0.7004974288008398
+    },
+    "score": 1.0598359638007564
+  },
+  "case_06": {
+    "time": "2026-11-20T07:01:44+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.14515244960784912
+    },
+    "floor": 0.14515244960784912,
+    "positive_training_fraction_censored": 0.002495847092876761,
+    "all_training_fraction_censored": 0.0011088225970602465,
+    "training_mean_absolute_change": 0.00014044161949367076,
+    "generated_zero_fraction": 0.5411104166666667,
+    "gene_zero_fraction_correlation_with_training": 0.9938641664906543,
+    "gene_zero_fraction_mae_to_training": 0.0252001808148556,
+    "generated_mean_absolute_change": 0.005443064943317154,
+    "metrics": {
+      "PDCorr": 0.28575823752519985,
+      "MSE": 0.020927355624735355,
+      "MAE": 0.09606041399141153,
+      "PDS_L1": 0.7727777777777778,
+      "PDS_L2": 0.7841666666666666,
+      "PDS_cos": 0.763611111111111,
+      "DEOver": 0.11867278186912866,
+      "DEPrec": 0.1274201461335955,
+      "DirAgr": 0.7003346336629998
+    },
+    "score": 1.0592767560437184
+  },
+  "case_07": {
+    "time": "2026-11-20T07:01:55+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.16297994554042816
+    },
+    "floor": 0.16297994554042816,
+    "positive_training_fraction_censored": 0.004995637398458283,
+    "all_training_fraction_censored": 0.002219397033551896,
+    "training_mean_absolute_change": 0.00031243691535375924,
+    "generated_zero_fraction": 0.5457052083333334,
+    "gene_zero_fraction_correlation_with_training": 0.9939763770165987,
+    "gene_zero_fraction_mae_to_training": 0.02352535881425497,
+    "generated_mean_absolute_change": 0.0061527532232579,
+    "metrics": {
+      "PDCorr": 0.28548064146501323,
+      "MSE": 0.020946613590543468,
+      "MAE": 0.0961824432015419,
+      "PDS_L1": 0.7722222222222223,
+      "PDS_L2": 0.7836111111111111,
+      "PDS_cos": 0.7633333333333334,
+      "DEOver": 0.11910326332832524,
+      "DEPrec": 0.12772057490535052,
+      "DirAgr": 0.7005057095444789
+    },
+    "score": 1.058536197020569
+  },
+  "case_08": {
+    "time": "2026-11-20T07:02:07+08:00",
+    "identity": {
+      "support_audit_sha256": "24f15e8f6d4abec6e290e36bde937dc7945a9cf4f9a23baf7abcd5b42e3a509e",
+      "floor": 0.18690773844718933
+    },
+    "floor": 0.18690773844718933,
+    "positive_training_fraction_censored": 0.009993621947336067,
+    "all_training_fraction_censored": 0.004439836828670104,
+    "training_mean_absolute_change": 0.0007026336455084433,
+    "generated_zero_fraction": 0.5534234375000001,
+    "gene_zero_fraction_correlation_with_training": 0.9941221358209765,
+    "gene_zero_fraction_mae_to_training": 0.02256410645240002,
+    "generated_mean_absolute_change": 0.007504561257444152,
+    "metrics": {
+      "PDCorr": 0.28503799848258493,
+      "MSE": 0.020981160970404745,
+      "MAE": 0.09639184040327867,
+      "PDS_L1": 0.7733333333333333,
+      "PDS_L2": 0.7833333333333332,
+      "PDS_cos": 0.7627777777777778,
+      "DEOver": 0.11942546061559113,
+      "DEPrec": 0.1284508489033357,
+      "DirAgr": 0.700989962520506
+    },
+    "score": 1.0581861466307332
+  }
+}

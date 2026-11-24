@@ -1,0 +1,27 @@
+{
+  "plan_sha256": "1a52b452d4ef250858bef3992422fbdae9660c6bf4b11e49d6e11098b287d848",
+  "checkpoint": {
+    "time": "2026-11-20T23:51:54+08:00",
+    "step": 33540,
+    "weights": "ema_0.9996",
+    "checkpoint_sha256": "9e686ce7e324dc2e0d705df736f629e161783cbba79e655515fd73c42e06f5f8",
+    "full_checkpoint_sha256": "003af1b7850351a70b5000b1e0fd2589a786f085d2088746318ca8e73020636a",
+    "all193_tensors_equal_default_ema_and_buffers": true,
+    "main_configuration_equal": true,
+    "cpu_only": true
+  },
+  "source_sha256": {
+    "logs/follow_epoch030_fixed_cfg.py": "3c893aff2c9b48bdaefaa90ab28264b7efab510d14fbfdc0d3e85133b41000d6",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "scripts/compare_inference_cases.py": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+    "scripts/compare_generation_epochs.py": "5cb4f04a6ab6cab7611d3cac6b948a87431337c54b1fc2c917c0b8d72bea4c2c",
+    "scripts/analyze_inference_review.py": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+    "scripts/preserve_checkpoint.py": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db"
+  }
+}

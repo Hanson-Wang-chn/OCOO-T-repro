@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-20T20:17:22+08:00",
+  "status": "implemented_cpu_verified_not_activated",
+  "passed": true,
+  "cpu_only": true,
+  "unique_cpu_checks_passed": 35,
+  "tests_log_sha256": "792aad0d9c8af873bc03d3f63d3d1a2491b00de13fcd7d572e34cefbf79d7e92",
+  "actual4825cell_zero_floor005_all9_max_difference": 0.0,
+  "actual_data_proof_sha256": "db78b22c66baf5e0e14c41643e265a947c77f75d789d95457f2397c263bbcb37",
+  "source_sha256": {
+    "scripts/promote_validation_cache.py": "9e465ed9e321468c34b686282b07c0292ab6d9c4f83fb2aba3f5d6344f90ef3d",
+    "scripts/report.py": "d6bdc9aff556d15de92d188630ca89bc7e54117c3a101596e98449952886698f",
+    "scripts/run_experiment.py": "728bb0cbc40b8379da6edf1ff14208ac5f7f9de894f764a884832dd8d63e3e28",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+    "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+    "scripts/evaluate_postprocess.py": "84b73844932ca86c363c9607e87838fb7281946134e562a6ce355695e18c32a1",
+    "tests/test_calibration_policy.py": "c12cbda29be865a63cc54a104811abac088948ed53239ff4d931bb20ec02c0c5",
+    "tests/test_validation_cache_promotion.py": "d11409962e96bd195d1e07e13ff7d86d598f55b667ab3ede374fdefb7a0610ad",
+    "tests/test_training_adoption.py": "1d570eb5a6db1e251bfdd868f03c92cac89b6611d0fe3ff2e574c053af75363a",
+    "tests/test_postprocess_workflow.py": "60e397c774ae91f0cc5aa029992b92b06c869db92f9159b9e0e643cb6727a002",
+    "tests/test_postprocess_report.py": "9ce84df1705efbf36eeffacf3dea6de9e14ff8fce256ff8f38445bff36073e7c",
+    "tests/test_postprocess_pipeline.py": "49225e3aa343b37a98515e0b7bffc3e6c6d4d7d1097c21ba9b63293002a3bf35"
+  },
+  "before_sha256": {
+    "scripts/promote_validation_cache.py": "bf957b57e3335c25837f0a7f096da5687c671bffc005f46ba34082d89f6626b4",
+    "scripts/report.py": "2bc46b7b2abe1ec1e7a2a84dae4b0d37fc42f969523304a9503689870ae09f81",
+    "scripts/run_experiment.py": "bfd7d8857979c2cf656bc0912b579f61bcfa41c1ff5c5c4f14192557032374f2"
+  },
+  "diff_sha256": {
+    "logs/postprocess_workflow_update/promote_validation_cache.diff": "c453bf8818f701b3c99e23d04f6e6d428103e84fae360387287fe9b45ea4c78e",
+    "logs/postprocess_workflow_update/report.diff": "a082acbe0a8315ac46e9f03d5fbb68026ce3c7f955a9c0cce516cc3b89b1b90e",
+    "logs/postprocess_workflow_update/run_experiment.diff": "884998838509f60ae8d3ff0b6aa312d1779b0d80a43cb1e7559c175ddaafb97a"
+  },
+  "main_trainer_pid_unchanged": 656512,
+  "main_pipeline_pid_unchanged": 961459,
+  "main_training_start_events": 2,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "epoch30_pinned_sources_unchanged": true,
+  "positive_floor_adopted": false,
+  "formal_calibration_started": false,
+  "test_access": false,
+  "new_gpu_jobs": 0,
+  "activation_note": "Compatibility extensions are present on disk and pass CPU checks. The existing waiting parent still runs the original v2 path without the optional flag. Any activation/handoff needs a separate progress record after the E30 review; training stays unchanged."
+}

@@ -1,0 +1,159 @@
+{
+  "time": "2026-11-20T16:44:24+08:00",
+  "reference": "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+  "candidate": "runs/batch_dropout_mature_trial/reference",
+  "factor": "checkpoint",
+  "reference_options": {
+    "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+    "step": 27950
+  },
+  "candidate_options": {
+    "checkpoint": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt",
+    "checkpoint_sha256": "a98f0fc4171d481f19f698b5c260b23d1274de5588435261ddb1b41d62f4af3d",
+    "step": 29068
+  },
+  "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "step": 27950,
+  "cells": 960,
+  "perturbations": 60,
+  "rows": [
+    {
+      "metric": "PDCorr",
+      "reference": 0.28754191237967464,
+      "candidate": 0.2895451623403157,
+      "difference": 0.0020032499606410514,
+      "ci95": [
+        -0.0015348555368836752,
+        0.005327103216744341
+      ]
+    },
+    {
+      "metric": "DEOver",
+      "reference": 0.1127715238640063,
+      "candidate": 0.11594089922806274,
+      "difference": 0.00316937536405644,
+      "ci95": [
+        0.0004970345841078469,
+        0.005757830283053936
+      ]
+    },
+    {
+      "metric": "DEPrec",
+      "reference": 0.08622879344459407,
+      "candidate": 0.08692167999342319,
+      "difference": 0.0006928865488291247,
+      "ci95": [
+        -0.0005342693564692671,
+        0.002147858269543332
+      ]
+    },
+    {
+      "metric": "DirAgr",
+      "reference": 0.6918600832790334,
+      "candidate": 0.6969765131086406,
+      "difference": 0.00511642982960725,
+      "ci95": [
+        -0.0015635636700487177,
+        0.012771184672634224
+      ]
+    },
+    {
+      "metric": "PDS_L1",
+      "reference": 0.7719444444444445,
+      "candidate": 0.7702777777777777,
+      "difference": -0.0016666666666668162,
+      "ci95": [
+        -0.007777777777778105,
+        0.0038888888888888307
+      ]
+    },
+    {
+      "metric": "PDS_L2",
+      "reference": 0.7852777777777777,
+      "candidate": 0.7844444444444445,
+      "difference": -0.0008333333333332416,
+      "ci95": [
+        -0.004722222222222075,
+        0.002777777777778101
+      ]
+    },
+    {
+      "metric": "PDS_cos",
+      "reference": 0.7663888888888889,
+      "candidate": 0.7672222222222221,
+      "difference": 0.0008333333333332416,
+      "ci95": [
+        -0.003333333333333302,
+        0.005277777777777826
+      ]
+    },
+    {
+      "metric": "MSE",
+      "reference": 0.020757763118793522,
+      "candidate": 0.020664900246386682,
+      "difference": -9.286287240684032e-05,
+      "ci95": [
+        -0.0004547081068934286,
+        0.00047874077688901673
+      ]
+    },
+    {
+      "metric": "MAE",
+      "reference": 0.09505822968979673,
+      "candidate": 0.09455179075400032,
+      "difference": -0.0005064389357964105,
+      "ci95": [
+        -0.000987340599919358,
+        1.848378218710104e-05
+      ]
+    }
+  ],
+  "reference_score": 1.0620789494167115,
+  "candidate_score": 1.0635266438217972,
+  "score_difference": {
+    "value": 0.001447694405085631,
+    "ci95": [
+      -0.004860520112863049,
+      0.007681249275268836
+    ]
+  },
+  "source_sha256": {
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json": "54e024c8aafecc9345e729eeb21ddc510117f4283adfddf0070da6e1be717d44",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy": "2689dfbf8b24c8398861585c9f1a75e5b8497b155b2f24f810d5dcdd129d52b1",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy": "42cc220e1c676fd52abe44592b5fa8fb485f799d450730aed46422f71c018a69",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/summary.json": "3bb18c8c464fba874f84380961d79e951f2ea7939fdebb337becd0f73230f080",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/results.csv": "b5dfda10686c7c9c7113d5720934bcf5feefa1b287a73c6defd14f12ca6f3421",
+    "runs/batch_dropout_mature_trial/reference/evaluation_config.json": "67f54299645cbfdda2b1e47539303e465d76a0a816778e16df437b5f0c30f7b0",
+    "runs/batch_dropout_mature_trial/reference/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/batch_dropout_mature_trial/reference/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/batch_dropout_mature_trial/reference/prediction.npy": "1ce6a326f35a4e7e39f5bbc7584e69fc6982fb6579b4efc19badac2c2a0772c5",
+    "runs/batch_dropout_mature_trial/reference/prediction_raw.npy": "fda7dad340b88d3ebdf2bdee2a28a2afcd93edd5211c6abd09199c9664477113",
+    "runs/batch_dropout_mature_trial/reference/metrics/summary.json": "eeccba572209885e25d149cbe8013ac186dcea11ed09aa8161cea41d7e633452",
+    "runs/batch_dropout_mature_trial/reference/metrics/results.csv": "8ffd0c579024786acdbdea533fc6195905a8e5d8c38831a2fd08de182bcbe360"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "bootstrap": 2000,
+  "seed": 9232,
+  "note": "One controlled validation-only inference factor. Matched indices/noise, fixed reference library. Intervals do not measure independent training seeds or generation noise. No automatic formal-setting selection and no test access.",
+  "checkpoint_comparison_proof": {
+    "training_config_equal": true,
+    "model_tensor_schema_equal": true,
+    "frozen_buffers_bitwise_equal": true,
+    "checkpoints": [
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+        "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+        "step": 27950
+      },
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt",
+        "checkpoint_sha256": "a98f0fc4171d481f19f698b5c260b23d1274de5588435261ddb1b41d62f4af3d",
+        "step": 29068
+      }
+    ]
+  }
+}

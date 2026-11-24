@@ -1,0 +1,37 @@
+{
+  "time": "2026-11-21T00:43:20+08:00",
+  "trainer_before": {
+    "pid": 656512,
+    "state": "R",
+    "start_tick": "783674341",
+    "command": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/train.py --config configs/main_selected.yaml",
+    "cwd": "/home/whs/ocoo-t"
+  },
+  "old_parent": {
+    "pid": 961459,
+    "state": "S",
+    "start_tick": "807880988",
+    "command": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/run_experiment.py --config configs/main_selected.yaml",
+    "cwd": "/home/whs/ocoo-t"
+  },
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_experiment.py",
+    "--config",
+    "configs/main_selected.yaml",
+    "--postprocess-plan",
+    "logs/postprocess_workflow_update/plan.json"
+  ],
+  "verified_implementation_sha256": "0b48f18cf9069ed0e977002f0f366fbc4756f75977dc3c8924d328ea9b9870f0",
+  "epoch30_decision_sha256": "a75182e70e1812155d2a4c705bca46380e8c68c4ae4e2cf988f0bd5591648789",
+  "checkpoint_before": {
+    "step": 33750,
+    "epoch": 30.18783542039356,
+    "time": "2026-11-21T00:42:43+08:00"
+  },
+  "training_start_events": 2,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "monitor_before_sha256": "11d8c1c5079dd6c9cada57729f1d879f506b408f416b878bda423fda88f87e3a",
+  "deploy_script_sha256": "0fb276328a05866deec3c8c190458ffc83bc849d42b83da7b254c9a1d1746ddd",
+  "scope": "Only terminate the waiting parent. Retain the original running trainer, config, optimizer and schedule."
+}

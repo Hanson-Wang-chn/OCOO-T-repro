@@ -1,0 +1,288 @@
+{
+  "time": "2026-11-23T04:29:29+08:00",
+  "scope": "paired validation; w=2, [0,1], floor .05, EMA .9996",
+  "test_access": false,
+  "cells": 4825,
+  "perturbations": 60,
+  "files": {
+    "runs/main_v1/interim_epoch035_calibration/calibration/refine_00/indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "runs/main_v1/interim_epoch035_calibration/calibration/refine_00/generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a",
+    "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/metrics_floor_0p05/results.csv": "2fc9be785d774605c731e01d1bbfd64c3b6cb28ed379f05624bc433319d37853",
+    "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/metrics_floor_0p05/summary.json": "71e675cdaedb95785851547707ba7a9c1cc6a00c4291b92c9e14252a99927157",
+    "runs/main_ddp_recovery/calibration/refine_00/indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "runs/main_ddp_recovery/calibration/refine_00/generation_state.json": "93c6f65b7aff5fff77105474ce7c14c0b25d2fa02e42de5bea43de3d51d55920",
+    "runs/main_ddp_recovery/calibration/postprocessing/refine_00_floor_0p05/metrics/results.csv": "4d75f27be40e87971aa8a97975673b2c6f45efd4975e2666e7a4326c907e9646",
+    "runs/main_ddp_recovery/calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json": "123916ae5d651edf960620e4353760a1419454346537adf601040958d372e479"
+  },
+  "cases": {
+    "e35": {
+      "metrics": {
+        "PDCorr": {
+          "value": 0.3591260223183781,
+          "ci95": [
+            0.27198605495582645,
+            0.4419611018298503
+          ],
+          "finite_perturbations": 60
+        },
+        "DEOver": {
+          "value": 0.1962686888538067,
+          "ci95": [
+            0.13812697148253333,
+            0.25477290187673407
+          ],
+          "finite_perturbations": 60
+        },
+        "DEPrec": {
+          "value": 0.15419366377567603,
+          "ci95": [
+            0.10723651206839126,
+            0.20208848920930475
+          ],
+          "finite_perturbations": 60
+        },
+        "DirAgr": {
+          "value": 0.795140792634802,
+          "ci95": [
+            0.7249211460273022,
+            0.8542369867661951
+          ],
+          "finite_perturbations": 53
+        },
+        "PDS_L1": {
+          "value": 0.8022222222222222,
+          "ci95": [
+            0.7399861111111111,
+            0.8591736111111112
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_L2": {
+          "value": 0.8119444444444445,
+          "ci95": [
+            0.7502638888888891,
+            0.8691736111111112
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_cos": {
+          "value": 0.8497222222222222,
+          "ci95": [
+            0.7944444444444446,
+            0.897513888888889
+          ],
+          "finite_perturbations": 60
+        },
+        "MSE": {
+          "value": 0.018223266637263154,
+          "ci95": [
+            0.01273607977374918,
+            0.027932979022734748
+          ],
+          "finite_perturbations": 60
+        },
+        "MAE": {
+          "value": 0.08213744219392535,
+          "ci95": [
+            0.07457499653721848,
+            0.09274100643582642
+          ],
+          "finite_perturbations": 60
+        }
+      },
+      "primary": {
+        "value": 1.1804223186146743,
+        "ci95": [
+          1.0546378108881918,
+          1.3042403627835921
+        ]
+      }
+    },
+    "e45": {
+      "metrics": {
+        "PDCorr": {
+          "value": 0.36513211481894053,
+          "ci95": [
+            0.2778600865004895,
+            0.44749884285420793
+          ],
+          "finite_perturbations": 60
+        },
+        "DEOver": {
+          "value": 0.19464386780680082,
+          "ci95": [
+            0.1366956099166756,
+            0.25279223369406983
+          ],
+          "finite_perturbations": 60
+        },
+        "DEPrec": {
+          "value": 0.15862601107232258,
+          "ci95": [
+            0.11062381958230554,
+            0.2049334526680458
+          ],
+          "finite_perturbations": 60
+        },
+        "DirAgr": {
+          "value": 0.8196504238469156,
+          "ci95": [
+            0.7675680479980587,
+            0.8669676614853333
+          ],
+          "finite_perturbations": 53
+        },
+        "PDS_L1": {
+          "value": 0.8216666666666667,
+          "ci95": [
+            0.7622152777777776,
+            0.8747222222222223
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_L2": {
+          "value": 0.8344444444444444,
+          "ci95": [
+            0.7755486111111112,
+            0.8861180555555558
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_cos": {
+          "value": 0.8683333333333334,
+          "ci95": [
+            0.8141597222222222,
+            0.916111111111111
+          ],
+          "finite_perturbations": 60
+        },
+        "MSE": {
+          "value": 0.019074094039387954,
+          "ci95": [
+            0.013227684000545754,
+            0.02951144745321166
+          ],
+          "finite_perturbations": 60
+        },
+        "MAE": {
+          "value": 0.08379152106742062,
+          "ci95": [
+            0.07588420043389,
+            0.09463174501123524
+          ],
+          "finite_perturbations": 60
+        }
+      },
+      "primary": {
+        "value": 1.206613596300422,
+        "ci95": [
+          1.0802093558362686,
+          1.3238195228966607
+        ]
+      }
+    }
+  },
+  "paired": {
+    "reference": "e35",
+    "candidate": "e45",
+    "rows": [
+      {
+        "metric": "PDCorr",
+        "reference": 0.3591260223183781,
+        "candidate": 0.36513211481894053,
+        "difference": 0.006006092500562443,
+        "ci95": [
+          -0.010924182758511333,
+          0.023211456880283844
+        ]
+      },
+      {
+        "metric": "DEOver",
+        "reference": 0.1962686888538067,
+        "candidate": 0.19464386780680082,
+        "difference": -0.00162482104700587,
+        "ci95": [
+          -0.011126433987511192,
+          0.009814105745714218
+        ]
+      },
+      {
+        "metric": "DEPrec",
+        "reference": 0.15419366377567603,
+        "candidate": 0.15862601107232258,
+        "difference": 0.004432347296646544,
+        "ci95": [
+          -0.007071590627812896,
+          0.017983592129615124
+        ]
+      },
+      {
+        "metric": "DirAgr",
+        "reference": 0.795140792634802,
+        "candidate": 0.8196504238469156,
+        "difference": 0.02450963121211358,
+        "ci95": [
+          -0.0033435736240258083,
+          0.06093855172124474
+        ]
+      },
+      {
+        "metric": "PDS_L1",
+        "reference": 0.8022222222222222,
+        "candidate": 0.8216666666666667,
+        "difference": 0.019444444444444486,
+        "ci95": [
+          -0.0019444444444443043,
+          0.04527777777777776
+        ]
+      },
+      {
+        "metric": "PDS_L2",
+        "reference": 0.8119444444444445,
+        "candidate": 0.8344444444444444,
+        "difference": 0.022499999999999964,
+        "ci95": [
+          0.0019444444444444153,
+          0.047784722222222215
+        ]
+      },
+      {
+        "metric": "PDS_cos",
+        "reference": 0.8497222222222222,
+        "candidate": 0.8683333333333334,
+        "difference": 0.018611111111111245,
+        "ci95": [
+          -0.0030555555555553727,
+          0.04361111111111082
+        ]
+      },
+      {
+        "metric": "MSE",
+        "reference": 0.018223266637263154,
+        "candidate": 0.019074094039387954,
+        "difference": 0.0008508274021248007,
+        "ci95": [
+          -0.00014591088712523679,
+          0.0019500069131997042
+        ]
+      },
+      {
+        "metric": "MAE",
+        "reference": 0.08213744219392535,
+        "candidate": 0.08379152106742062,
+        "difference": 0.0016540788734952655,
+        "ci95": [
+          9.451697270075958e-05,
+          0.0032168425526469813
+        ]
+      }
+    ],
+    "primary_difference": {
+      "value": 0.026191277685747694,
+      "ci95": [
+        -0.005546941667036389,
+        0.061055792069985335
+      ]
+    }
+  }
+}

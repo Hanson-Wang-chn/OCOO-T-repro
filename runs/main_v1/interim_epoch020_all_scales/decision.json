@@ -1,0 +1,30 @@
+{
+  "time": "2026-11-19T19:33:44+08:00",
+  "decision": "The upper bracket has a shallow primary point maximum near2.5, with no stable benefit over2 and increasing expression errors. End scale expansion, retain all7 settings, and run one fixedw2 interval comparison. Do not adopt a final setting or change the main model.",
+  "point_scores": {
+    "ema_none": 0.9049183811049444,
+    "ema_cfg_0p6666666667": 0.9128869028023823,
+    "ema_cfg_1": 0.9561241467184974,
+    "ema_cfg_1p5": 0.997413499626262,
+    "ema_cfg_2": 1.0213254102267362,
+    "ema_cfg_2p5": 1.0256417505372386,
+    "ema_cfg_3": 1.0248652858493006
+  },
+  "pair_2_to2p5": {
+    "value": 0.004316340310502431,
+    "ci95": [
+      -0.005161906988002195,
+      0.015280888903629641
+    ]
+  },
+  "pair_2p5_to3": {
+    "value": -0.0007764646879380166,
+    "ci95": [
+      -0.009819329797294746,
+      0.008378865183542163
+    ]
+  },
+  "all9_source": "runs/main_v1/interim_epoch020_all_scales/comparison.json",
+  "interval_plan": "runs/main_v1/interim_epoch020_interval_review/plan.json",
+  "test_access": false
+}

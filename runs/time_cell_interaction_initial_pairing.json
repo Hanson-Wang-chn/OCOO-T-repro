@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-18T09:12:37+08:00",
+  "training_indices_exactly_equal": true,
+  "reference_first_step_loss": 1.6526803970336914,
+  "candidate_first_step_loss": 1.6526803970336914,
+  "difference": 0.0,
+  "note": "The zero-initialized output head makes the initial loss a target/noise consistency check; it is not a learned-quality comparison."
+}

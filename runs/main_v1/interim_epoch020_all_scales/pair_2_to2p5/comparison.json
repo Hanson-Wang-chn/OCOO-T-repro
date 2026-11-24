@@ -1,0 +1,138 @@
+{
+  "time": "2026-11-19T19:31:58+08:00",
+  "reference": "runs/main_v1/interim_epoch020_review/ema_cfg_2",
+  "candidate": "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5",
+  "factor": "guidance",
+  "reference_options": {
+    "guidance": 2.0
+  },
+  "candidate_options": {
+    "guidance": 2.5
+  },
+  "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+  "step": 22360,
+  "cells": 960,
+  "perturbations": 60,
+  "rows": [
+    {
+      "metric": "PDCorr",
+      "reference": 0.26780689170821764,
+      "candidate": 0.2657343431298311,
+      "difference": -0.0020725485783865683,
+      "ci95": [
+        -0.006205118790191289,
+        0.0021169745924150144
+      ]
+    },
+    {
+      "metric": "DEOver",
+      "reference": 0.10897938537034076,
+      "candidate": 0.12137919582931748,
+      "difference": 0.012399810458976729,
+      "ci95": [
+        0.0076218119456370114,
+        0.01804007469340149
+      ]
+    },
+    {
+      "metric": "DEPrec",
+      "reference": 0.09173765885150174,
+      "candidate": 0.09504996938823687,
+      "difference": 0.0033123105367351274,
+      "ci95": [
+        0.0009129549522436224,
+        0.005687614850407427
+      ]
+    },
+    {
+      "metric": "DirAgr",
+      "reference": 0.672418082273102,
+      "candidate": 0.6603454642116647,
+      "difference": -0.012072618061437224,
+      "ci95": [
+        -0.04304160840962555,
+        0.010249615332483366
+      ]
+    },
+    {
+      "metric": "PDS_L1",
+      "reference": 0.7552777777777778,
+      "candidate": 0.7591666666666668,
+      "difference": 0.0038888888888889417,
+      "ci95": [
+        -0.004722222222221964,
+        0.013611111111110796
+      ]
+    },
+    {
+      "metric": "PDS_L2",
+      "reference": 0.7663888888888889,
+      "candidate": 0.7702777777777777,
+      "difference": 0.0038888888888888307,
+      "ci95": [
+        -0.0027777777777774374,
+        0.010833333333333365
+      ]
+    },
+    {
+      "metric": "PDS_cos",
+      "reference": 0.7388888888888889,
+      "candidate": 0.7502777777777777,
+      "difference": 0.011388888888888782,
+      "ci95": [
+        -0.0022222222222220145,
+        0.027777777777777683
+      ]
+    },
+    {
+      "metric": "MSE",
+      "reference": 0.01939240605570371,
+      "candidate": 0.025032216000060194,
+      "difference": 0.0056398099443564845,
+      "ci95": [
+        0.003966984704990556,
+        0.00785639942119211
+      ]
+    },
+    {
+      "metric": "MAE",
+      "reference": 0.09411315793792402,
+      "candidate": 0.10377348065376277,
+      "difference": 0.009660322715838748,
+      "ci95": [
+        0.007931342649584021,
+        0.011689037907247735
+      ]
+    }
+  ],
+  "reference_score": 1.0213254102267362,
+  "candidate_score": 1.0256417505372386,
+  "score_difference": {
+    "value": 0.004316340310502431,
+    "ci95": [
+      -0.005161906988002195,
+      0.015280888903629641
+    ]
+  },
+  "source_sha256": {
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/evaluation_config.json": "1f4064cd4f39d1b3502c94cc7466303a7a8966b1f22a04db1ed841dd48e4939a",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/prediction.npy": "60f3b81a0c023e32b1fbfe886f5499c43e189c32228e7544f4109457bc5f6b3a",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/prediction_raw.npy": "a5c2537fb114231f086533e6f163f66cca5ba8f95760c5f460a0ec59397db9de",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/metrics/summary.json": "4a622e5cfe762f29d5b25fac64678192fdc905a4d54dfdc037c22ba9c985bf01",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/metrics/results.csv": "b27da1b56e257fc58c99cd8d9e0488c3d4f8725f2b147b0005db8f179cad9cc2",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/evaluation_config.json": "e1ae30a132adebad315cd7fef77b0bd1b05cc633c16aaa10b2ddbc17b56264aa",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/generation_state.json": "b4d59db0962ebe94b33be662a6b33984c572b541659720cbd7576092589c9107",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/prediction.npy": "1f4dcf7264290c806a2357ccfc62918a20d81f1c2d27a0336a8b5c9feb6fd467",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/prediction_raw.npy": "1cb050f1f8a831bcef9e5d9294699f7e1e9e4d6027420181c457b8d1f1bd69bf",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/metrics/summary.json": "3d4c48ad59e4cce642f5b5d2c327cec174a0320ae9c281571e911ae7f7a1b4e8",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/metrics/results.csv": "226332ecb65e3971668127225471fa9aceee766a86e4a007c21b035bb0c54952"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+  "bootstrap": 2000,
+  "seed": 9232,
+  "note": "One controlled validation-only inference factor. Matched indices/noise, fixed reference library. Intervals do not measure independent training seeds or generation noise. No automatic formal-setting selection and no test access."
+}

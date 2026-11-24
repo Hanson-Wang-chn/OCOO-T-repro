@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-20T17:35:40+08:00",
+  "reason": "Completed mature interpretation trial reviewed. Merge summary and remove duplicate appended events already preserved in progress_history; honor900s cadence.",
+  "replacements": [
+    [
+      "**当前：原全量训练已完成27轮并继续。成熟batch dropout对照准确完成1118次更新，正在做相同960细胞/噪声/CFG的九指标评估；E25全量诊断仍有PD/DE精度差距。正式校准与测试尚未开始。**",
+      "**当前：原全量训练已完成27轮并继续，下一周期第30轮。成熟batch dropout对照未显示稳定收益，误差和方向指标退化，保留原设计。正式校准与测试尚未开始。**"
+    ],
+    [
+      "已登记一个成熟状态的单因素对照：从E25完整模型/优化器/双EMA/RNG续训1轮，只比较cell-line置空时是否保留batch向量，与已归档的原E26、同step29068比较固定CFG九指标。该细节未见原文说明，不能预认定原解释错误；11项CPU检查及实际成熟断点兼容性核验通过，已于10:45启动短续训，完成后再做配对复核。原主训练、明确的论文参数和正式检查线保持不变，见 [对照计划](runs/batch_dropout_mature_trial/plan.json)。",
+      "成熟batch dropout单因素对照已完成：同一E25完整状态续训1118更新至E26，比较置空cell-line时是否保留batch。保留batch的综合差+0.00165[-0.00460,0.00786]，未显示稳定收益；MSE增加0.000296、MAE增加0.000982、DirAgr下降0.01040，三项配对区间均显示退化，0.05处理下结论相同。本轮不采用或追加该候选，原主训练继续；不据单轮试验否定所有更长替代训练。见 [决定](runs/batch_dropout_mature_trial/decision.json)、[九指标配对图](runs/batch_dropout_mature_trial/paired_comparison_readable.png)。"
+    ],
+    [
+      "| 11-20 15:56 | 候选精确完成1118更新，raw/AdamW/双EMA/RNG与默认EMA导出核验通过；开始两端配对生成，原主模型已完成27轮。 |",
+      "| 11-20 15:56 | 候选精确完成1118更新，raw/AdamW/双EMA/RNG与默认EMA导出核验通过；开始两端配对生成，原主模型已完成27轮。 |\n| 11-20 17:32–17:35 | 成熟对照九指标/配对分析完成，误差与方向退化，保留原batch处理；GPU恢复仅主训练，等待E30复核。 |"
+    ],
+    [
+      "\n\n- 2026-11-20T07:11:36+08:00：CPU九阈值敏感性分析完成，floor0九指标与原缓存一致。0.05的DEPrec点估计由0.0862升至0.1266，但区间跨0，18个条件升/26个降，前三个条件占净增益69.5%；PDCorr/MSE/MAE变差，不能宣称整体修复。更大阈值额外收益不稳定且会删真实正值，未采用。正准备固定E25/w2的4,825细胞数量诊断，仅补缺失样本，再比较0与0.05；正式后处理不变。见 `runs/main_v1/expression_truncation_epoch025/decision.json`。\n\n- 2026-11-20T07:15:11+08:00：第25轮固定w2全量数量诊断已启动（PID965660）：保留原960个raw/非负预测，仅补3865个，覆盖全部4825验证细胞；新增部分B32、独立seed62525，原50步Heun/EMA/CFG不变。辅助工具4项CPU检查通过，计划文件固定不再改写。完成后仅对相同全量样本比较0与0.05，原训练继续，正式推理设置尚未锁定。见 `runs/main_v1/interim_epoch025_full_guided/plan.json`。\n\n- 2026-11-20T10:26:52+08:00：第25轮固定w2缓存扩展诊断完成：保留原960个预测，只新增3865个，覆盖全部4825验证细胞；PDCorr=0.3306、PDS_L2=0.7908、DEPrec=0.0989。这是嵌套生成数量诊断，非正式校准或测试；结果 `runs/main_v1/interim_epoch025_full_guided/completed.json`。\n\n- 2026-11-20T10:29:13+08:00：第25轮固定CFG全量4825细胞的0/0.05近零处理诊断及九指标配对分析完成；DEPrec为0.0989/0.1586。等待综合复核，未自动更改正式设置；结果 `/home/whs/ocoo-t/runs/main_v1/interim_epoch025_full_guided/zero_floor/paired_comparison.json`。\n\n- 2026-11-20T10:34:31+08:00：第25轮/w2全量4825细胞诊断复核：clamp0的PDCorr/PDS_L2/DEPrec=0.3306/0.7908/0.0989。0.05将DEPrec提高0.0597[0.0232,0.0928]至0.1586，但PD仍0.3288，整体未过既定检查；保留该后处理候选待独立成熟验证，不自动改正式设置。准备从同一成熟完整断点检验未公开的batch dropout解释，原主训练继续；见 `runs/main_v1/interim_epoch025_full_guided/decision.json`。\n\n- 2026-11-20T10:45:10+08:00：已启动成熟batch dropout单因素对照（控制器PID979902）：同一E25完整状态续训1118更新到原E26 step29068，沿用原100轮cosine日程；11项CPU检查及实际193-tensor/优化器/双EMA兼容核验通过。原主训练不变，之后自动做同协议固定CFG九指标；`runs/batch_dropout_mature_trial/launch.json`。\n\n- 2026-11-20T10:45:33+08:00：启动/续训 `runs/main_batch_retained_from025`；训练细胞 572,545；有效 batch=512、microbatch=16；计划 100 epoch；噪声标准差=1.0。完整配置 `runs/main_batch_retained_from025/config.yaml`。\n\n- 2026-11-20T12:10:17+08:00：成熟batch dropout短续训中途检查（step28250，300/1118更新）正常：EMA完全条件去噪误差与原同step差8.46e−8，完整断点持续保存；该结果不代表CFG/DE收益，继续既定预算并等待同协议九指标。见 `runs/batch_dropout_mature_trial/midtraining_health_step28250.json`。\n\n- 2026-11-20T13:20:08+08:00：成熟单因素短续训完成约一半（step28500，550/1118更新），完整断点与中途评估正常；EMA去噪误差较原同step差+1.31e−6。继续既定预算，端点九指标完成后由CPU后续器自动做已登记的配对分析，结果仍待复核；原主训练不变。\n\n- 2026-11-20T13:31:41+08:00：为后续检查点和全量评估保留磁盘余量：22个已结束pilot的固定推理权重经copy/fsync/SHA核验迁到现有挂载，原路径保留链接，约12.90GiB，本地可用约27.24GiB。完整可恢复断点仍在原归档，活跃主训练/候选文件及源码均未改；4项CPU迁移检查通过。见 `logs/storage_migration_pilot_inference_20261120/verification.json`。\n\n- 2026-11-20T14:29:47+08:00：成熟batch dropout短续训已完成800/1118更新（超过七成），step28750完整断点已保存；EMA去噪误差较原同step差+3.64e−6，仍稳定。继续到精确端点29068，再比较固定CFG九指标；尚无新生成收益结论。\n\n- 2026-11-20T15:56:29+08:00：`runs/main_batch_retained_from025` 收到停止信号，完成当前优化步 29068 后安全保存。\n\n- 2026-11-20T15:59:24+08:00：成熟batch dropout对照在step29068准确完成1118次更新，完整raw/AdamW/双EMA/RNG与两端默认EMA导出已独立核验；开始相同960细胞/seed4242/w2的端点九指标评估，尚无生成收益结论。原主训练已完成27轮并继续；见 `runs/batch_dropout_mature_trial/endpoint_independent_verification.json`。\n\n- 2026-11-20T16:43:23+08:00：完成 `runs/batch_dropout_mature_trial/reference` 的 validation 评估（细胞 960，weights=ema_0.9996，CFG=2.0）；指标见 `runs/batch_dropout_mature_trial/reference/metrics/summary.json`。PDCorr=0.2895，MSE=0.02066。\n\n- 2026-11-20T16:45:24+08:00：原E26固定CFG/960细胞九指标及E25→26缓存配对完成：综合+0.00145[-0.00486,0.00768]，单轮未显示稳定整体增益。候选端点正按相同设置生成，主对照结果待完成；原训练与E30复核保持。见 `runs/batch_dropout_mature_trial/original_epoch25_to26/decision.json`。\n",
+      "\n"
+    ]
+  ],
+  "backup": "logs/README_before_mature_batch_dropout_result.md"
+}

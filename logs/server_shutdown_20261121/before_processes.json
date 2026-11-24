@@ -1,0 +1,48 @@
+{
+  "time": "2026-11-21T22:35:08+08:00",
+  "project_processes_before_shutdown": [
+    {
+      "pid": 656512,
+      "state": "R",
+      "start_tick": 783674341,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/train.py --config configs/main_selected.yaml"
+    },
+    {
+      "pid": 1100222,
+      "state": "S",
+      "start_tick": 814537445,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/run_experiment.py --config configs/main_selected.yaml --postprocess-plan logs/postprocess_workflow_update/plan.json"
+    },
+    {
+      "pid": 785577,
+      "state": "S",
+      "start_tick": 793200993,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/watch_training.py --run-dir runs/main_v1 --from-epoch 10"
+    },
+    {
+      "pid": 1251199,
+      "state": "S",
+      "start_tick": 819053558,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python logs/run_epoch035_validation_calibration.py --plan runs/main_v1/interim_epoch035_calibration/plan.json"
+    },
+    {
+      "pid": 1251202,
+      "state": "R",
+      "start_tick": 819053781,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python scripts/calibrate.py --checkpoint /home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt --outdir runs/main_v1/interim_epoch035_calibration/calibration --screen-cap 16 --refine-cap full --batch-size 32 --scales 0.6666666667,1,1.5,2"
+    },
+    {
+      "pid": 1251717,
+      "state": "S",
+      "start_tick": 819066606,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python logs/preserve_main_epoch040_when_ready.py"
+    },
+    {
+      "pid": 1251718,
+      "state": "S",
+      "start_tick": 819066756,
+      "args": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python logs/follow_epoch040_fixed_cfg.py --plan runs/main_v1/interim_epoch040_fixed_cfg/plan.json"
+    }
+  ],
+  "user_requested_shutdown": true
+}

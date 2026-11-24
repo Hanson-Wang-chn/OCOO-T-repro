@@ -1,0 +1,787 @@
+{
+  "time": "2026-11-21T22:51:21+08:00",
+  "objective_status": "stopped by explicit user request for server migration; latest full step41374 safely saved and verified; original reproduction remains unfinished; all old training/calibration/observer/waiter PIDs exited",
+  "python": "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+  "main": {
+    "pipeline_pid": null,
+    "training_pid": null,
+    "config": "configs/main_selected.yaml",
+    "run": "runs/main_v1",
+    "completed_epoch": 37,
+    "last_epoch_checkpoint_step": 39130,
+    "ema_denoise_endpoint_mse": 0.10398453194648027,
+    "raw_denoise_endpoint_mse": 0.10433337930589914,
+    "latest_checkpoint": {
+      "step": 41374,
+      "epoch": 37.00715563506261,
+      "time": "2026-11-21T22:35:33+08:00"
+    },
+    "latest_observer_state": {
+      "time": "2026-11-21T22:33:33+08:00",
+      "pid": 785577,
+      "stage": "observing",
+      "run_dir": "/home/whs/ocoo-t/runs/main_v1",
+      "completed_epoch": 37,
+      "observed_epochs": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35
+      ],
+      "failures": {},
+      "gpu_disabled_for_observer_and_children": true,
+      "training_mutations": false,
+      "script_sha256": "f9f1a7668b98a6db6cea2e7b4e4a78fd01b5b26f633823db06ed669bb0fd17f0"
+    },
+    "latest_train": {
+      "time": "2026-11-21T22:32:35+08:00",
+      "event": "train",
+      "epoch": 36.99910554561718,
+      "step": 41365,
+      "loss": 0.33746166825294494,
+      "lr": 7.452375291765583e-05,
+      "cells_per_sec": 29.927141023879052,
+      "grad_norm": 0.05154557526111603,
+      "peak_gpu_GB": 17.379199488
+    },
+    "latest_denoise": {
+      "time": "2026-11-21T22:33:12+08:00",
+      "event": "validation",
+      "step": 41366,
+      "epoch": 37.0,
+      "raw": {
+        "velocity_mse": 0.260283924639225,
+        "endpoint_mse": 0.10433337930589914
+      },
+      "ema_0.9996": {
+        "velocity_mse": 0.2592832592781633,
+        "endpoint_mse": 0.10398453194648027
+      }
+    },
+    "latest_generation": {
+      "PDCorr": 0.29607402292701107,
+      "MSE": 0.009433741312629232,
+      "MAE": 0.06780563183128833,
+      "PDS_L1": 0.6980555555555555,
+      "PDS_L2": 0.7119444444444444,
+      "PDS_cos": 0.752777777777778
+    },
+    "preserved_full_snapshots": {
+      "epoch025": "runs/main_v1/snapshots/step_27950/preserved.json",
+      "epoch026": "runs/main_v1/snapshots/step_29068/preserved.json",
+      "epoch030": "runs/main_v1/snapshots/step_33540/preserved.json",
+      "epoch035": "runs/main_v1/snapshots/step_39130/preserved.json",
+      "epoch036": "runs/main_v1/snapshots/step_40248/preserved.json"
+    },
+    "best_generation_epoch": 35,
+    "early_reference_epoch": 35,
+    "earliest_possible_original_early_stop_epoch": 45,
+    "earliest_current_stopping_epoch": 45,
+    "completed_training_epoch": 37,
+    "completed_validation_generation_epoch": 35,
+    "old_training_pid": 656512,
+    "old_pipeline_pid": 1100222
+  },
+  "supplemental": {
+    "controller_pid": 767313,
+    "eighth_training_pid": 775745,
+    "run": "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+    "plan": "runs/time_cell_interaction_plan.json",
+    "status": "completed",
+    "completed_pilots": 8,
+    "analysis": "runs/pilot_grid_complete/summary.json"
+  },
+  "readme_cadence_seconds": 900,
+  "next_actions": [
+    "Do not restart on old expiring server. Transfer project plus external artifacts/environment archive using MIGRATION.md.",
+    "On new server read context.md, restore environment/relink files and pass scripts/verify_migration.py before resuming unchanged main at41375.",
+    "Register new PID/path guard bindings and continue frozenE35 refine_01 from1024/4825, original four-candidate review/independent audit, then registered matureEMA and E40 followup. No test tuning."
+  ],
+  "important_correction": "Only 58/60 validation targets and 372/380 test labels occur in training; union targets2023 vs train2013. Keep official split. NFKBIE/SMN2 have ESM2 priors. See perturbation_support_audit.json.",
+  "source_scope": "PrimaryTable3 full training active; Table5 exact18,080-gene panel/split unidentified. Pinned merged and allfour individual official H5ADs structurally audited via4,195,656 bytes only: no raw/layers and X6642-9624genes. Control-context/MMD ablations unrun.",
+  "documents": [
+    "README.md",
+    "paper/implementation_notes.md",
+    "logs/progress_history.md"
+  ],
+  "verification": "11 core tests passed before main;4 final calibration-policy CPU cases passed1.80s. Optional separate projection added after epoch15; default shared path matches archived old initialization/RNG/nonzero forward/backward/parameter order exactly(2 CPU checks,1.33s); actual old EMA/raw checkpoint and optimizer/dualEMA strict CPU checks passed. Main process remains loaded with original implementation and unchanged YAML; model.py source now has a tested optional branch, other core math files unchanged. Optional prediction_space=x now implements paperEq6 with velocity API unchanged;4 CPU checks passed1.60s including legacy defaults and weighted x/v loss-gradient equivalence and actual Heun50 zero-head integration. Optional scalar fan-in initialization added with exact default compatibility;5 CPU checks passed1.79s. Main and active x processes retain their loaded earlier numerical implementations. Mature batch-retention option adds no parameters;11CPU checks passed3.22s, actual full mature model/optimizer/dualEMA strict checks and fully-conditional output bitwise agreement passed. Main trainer source and loaded process unchanged.",
+  "last_server_recovery_check": {
+    "time": "2026-11-20T09:32:58+08:00",
+    "audit": "logs/recovery_audit_20261120_0933.json",
+    "training_pid_unchanged": 656512,
+    "aux_pid_unchanged": 965660,
+    "action": "Existing jobs retained; no relaunch."
+  },
+  "observer": {
+    "pid": 785577,
+    "state": "runs/main_v1/observation/state.json",
+    "role": "CPU cached DE/context diagnostics and epoch progress plots"
+  },
+  "latest_diagnostic": {
+    "type": "CPU conditional MC variance of frozen E25 predictions",
+    "status": "completed_reviewed_keep_existing_protocol",
+    "decision": "runs/main_v1/mc_variance_epoch025/decision.json",
+    "summary": "runs/main_v1/mc_variance_epoch025/summary.json",
+    "figure": "runs/main_v1/mc_variance_epoch025/mc_variance_diagnostic.png",
+    "cpu_only": true,
+    "test_access": false
+  },
+  "final_calibration_plan": "runs/final_calibration_plan_v2.json",
+  "supplemental_active": {
+    "type": "mature epoch25→26 batch-retention continuation",
+    "controller_pid": 979902,
+    "plan": "runs/batch_dropout_mature_trial/plan.json",
+    "run_dir": "runs/main_batch_retained_from025",
+    "status": "completed_reviewed_not_adopted",
+    "training_pid": null,
+    "expected_final_step": 29068,
+    "analysis": "scripts/analyze_mature_batch_dropout_trial.py",
+    "endpoint_step": 29068,
+    "verification": "runs/batch_dropout_mature_trial/endpoint_independent_verification.json",
+    "child_pid": null,
+    "active": false,
+    "decision": "runs/batch_dropout_mature_trial/decision.json",
+    "analysis_process_completed": true
+  },
+  "latest_full_population_diagnostic": "runs/main_v1/interim_epoch025_full_guided/completed.json",
+  "latest_zero_tie_sensitivity": "runs/zero_tie_sensitivity_epoch015/summary.json",
+  "storage_archive": {
+    "path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots",
+    "audit": "logs/storage_migration_20261118/state.json",
+    "all8_complete_checkpoints_byte_identical": true,
+    "original_paths_are_symlinks": true,
+    "ninth_checkpoint_migration": "logs/storage_migration_20261119_projection",
+    "completed_pilot_checkpoints": 11,
+    "xpred_checkpoint_migration": "logs/storage_migration_xpred_vloss/state.json",
+    "fanin_checkpoint_migration": "logs/storage_migration_value_fanin/state.json"
+  },
+  "latest_floor_decision": "runs/main_v1/interim_epoch025_full_guided/zero_floor/decision.json",
+  "latest_projection_decision": "runs/pert_projection_analysis/decision.json",
+  "latest_late_time_decision": "runs/main_v1/late_time_diagnostic_epoch015/decision.json",
+  "supplemental_queue": null,
+  "final_calibration_durability_update": "runs/final_calibration_durability_update.json",
+  "latest_parameterization_decision": "runs/xpred_vloss_analysis/decision.json",
+  "readme_pending_edit": null,
+  "main_config_unchanged_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "current_model_source_sha256": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+  "latest_initialization_decision": "runs/value_fanin_analysis/decision.json",
+  "supplemental_summary": "runs/supplemental_trials_complete.json",
+  "next_generation_comparison": {
+    "after_observer_epoch": 20,
+    "reference_epoch": 15,
+    "command": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/compare_generation_epochs.py",
+      "--reference-epoch",
+      "15",
+      "--candidate-epoch",
+      "20",
+      "--outdir",
+      "runs/main_v1/observation/epoch015_to020"
+    ],
+    "script_sha256": "5cb4f04a6ab6cab7611d3cac6b948a87431337c54b1fc2c917c0b8d72bea4c2c",
+    "actual_previous_cache_verification": "logs/compare_generation_epochs_actual_cache_agreement.json",
+    "verified_all9_points_and_ci_tolerance": 1e-12,
+    "status": "completed",
+    "result": "runs/main_v1/observation/epoch015_to020/comparison.json"
+  },
+  "main_objective_reference_check": "logs/main_objective_reference_check_20261119.json",
+  "latest_epoch_comparison": "runs/main_v1/observation/epoch020_to025/decision.json",
+  "latest_guidance_decision": "runs/main_v1/interim_epoch020_all_scales/decision.json",
+  "next_periodic_comparison_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/compare_generation_epochs.py",
+    "--reference-epoch",
+    "25",
+    "--candidate-epoch",
+    "30",
+    "--outdir",
+    "runs/main_v1/observation/epoch025_to030"
+  ],
+  "boundary_aggregate_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/merge_inference_reviews.py",
+    "--review-dirs",
+    "runs/main_v1/interim_epoch020_review",
+    "runs/main_v1/interim_epoch020_guidance_boundary",
+    "--outdir",
+    "runs/main_v1/interim_epoch020_all_scales"
+  ],
+  "cache_merge_verification": "logs/merge_inference_reviews_cache_agreement.json",
+  "latest_interval_state": {
+    "time": "2026-11-19T20:28:06+08:00",
+    "pid": 906363,
+    "stage": "completed_review_required",
+    "test_access": false,
+    "main_training_changed": false,
+    "result": {
+      "time": "2026-11-19T20:28:06+08:00",
+      "stage": "completed_review_required",
+      "comparison": "runs/main_v1/interim_epoch020_interval_review/paired/comparison.json",
+      "context": "runs/main_v1/interim_epoch020_interval_review/context/context_diagnostics.json",
+      "script_sha256": "124f41ffc7b2d8afaa45537fe7b5727e763a22c4210f1cfb6f02bc733513ae2a",
+      "test_access": false,
+      "main_training_changed": false,
+      "formal_setting_selected": false
+    }
+  },
+  "readme_last_structured_publication": "logs/readme_epoch035_first_full_update.published.json",
+  "latest_interval_decision": "runs/main_v1/interim_epoch020_interval_review/decision.json",
+  "inference_efficiency_readonly_check": {
+    "time": "2026-11-20T01:13:26+08:00",
+    "finding": "Literal four-condition guidance is already fused into one concatenated 4B model batch in guided_velocity; no serial-four-forward bottleneck or code change. Single-GPU main process alone remains active.",
+    "flow_sha256": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "model_or_training_change": false,
+    "new_gpu_job_started": false
+  },
+  "formal_workflow_efficiency_review": {
+    "time": "2026-11-20T05:42:41+08:00",
+    "status": "implemented_verified_deployed",
+    "finding": "Current final workflow will regenerate identical full4825-cell selected calibration samples for validation_full. Full refinement already uses identical index order/seed/batch/noise/Heun/settings. A strict provenance-checked promotion can retain raw prediction, create clamped array and recompute all9 DE on CPU, avoiding duplicate GPU inference without changing outputs or gates.",
+    "needed_checks": [
+      "selected capNone, checkpoint SHA and source pins match",
+      "source complete generation options and full validation indices match",
+      "raw finite and hashes pinned; retain independent raw copy and clamp0",
+      "recompute official9 CPU; preserve existing artifacts and refuse mismatch"
+    ],
+    "active_pipeline_loaded_older_runner": false,
+    "deployment_constraint": "Deployed06:14 by replacing waiting parent only; trainer656512 uninterrupted. New parent961459 waits on the existing training lock and will use strict full-cache promotion.",
+    "test_access": false,
+    "source_plan": "runs/final_validation_cache_reuse_update.json",
+    "handoff": "/home/whs/ocoo-t/logs/workflow_upgrade_20261120/handoff.json",
+    "original_finding_retained_as_historical": true
+  },
+  "current_comparison_source_sha256": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+  "checkpoint_factor_verification": "logs/compare_inference_checkpoint_factor_verification.json",
+  "workflow_upgrade": "runs/final_validation_cache_reuse_update.json",
+  "batch_drop_semantics_review": "runs/main_v1/batch_condition_audit_epoch025.json",
+  "unimplemented_hypotheses": [
+    "No new training/architecture trial registered. Mature batch-retention trial is completed/reviewed and not adopted. The second already-maintained EMA is now a registered bounded inference-only diagnostic awaiting the complete current E35 full review."
+  ],
+  "implementation_notes_latest_summary": "2026-11-21T22:14 matureEMA study preregistered21:56,4 CPU guards passed1.48s, actual193-tensor loading proof passed for bothEMAs; no new GPU case/training/adoption. README published22:13:01 interval900.023s and all links valid.",
+  "latest_fixed_cfg_state": {
+    "pid": 960334,
+    "alive": false,
+    "generation": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 16,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      }
+    },
+    "metrics_ready": true
+  },
+  "latest_fixed_cfg_decision": "runs/main_v1/interim_epoch025_fixed_cfg/decision.json",
+  "next_fixed_cfg_review": {
+    "candidate_epoch": 30,
+    "reference_epoch": 25,
+    "reference": "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+    "fixed_settings": {
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "cap": 16,
+      "batch_size": 16,
+      "steps": 50,
+      "seed": 4242
+    },
+    "not_yet_started": true
+  },
+  "latest_truncation_decision": "runs/main_v1/expression_truncation_epoch025/decision.json",
+  "guided_extension_update": "runs/guided_validation_extension_update.json",
+  "extension_description_erratum": "runs/main_v1/interim_epoch025_full_guided/protocol_note_correction.json",
+  "after_extension_completion_minor_source_cleanup": "Correct the legacy seed+base_count prose in extend_validation_cache.py after this immutable-source job is complete; archive its exact registered source first. Numeric seed62525 is correct throughout and unchanged.",
+  "latest_full_guided_diagnostic_state": {
+    "pid": 965660,
+    "alive": false,
+    "extra_generation": {
+      "completed": 3865,
+      "total": 3865,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 62525
+      }
+    },
+    "metrics_ready": true,
+    "completed": true
+  },
+  "zero_floor_paired_analysis": {
+    "script": "scripts/analyze_zero_floor.py",
+    "verification": "logs/zero_floor_analysis_verification.json",
+    "actual_prior_full_validation_cases": 7,
+    "all9_paired_ci_reference_max_abs_error": 0.0,
+    "invalid_protocols_rejected": 3,
+    "cpu_only": true,
+    "next_study_dir": "runs/main_v1/interim_epoch025_full_guided/zero_floor",
+    "formal_defaults_changed": false
+  },
+  "after_full_guided_completion_commands": [
+    [
+      "scripts/diagnose_zero_floor.py",
+      "--extension-dir",
+      "runs/main_v1/interim_epoch025_full_guided",
+      "--outdir",
+      "runs/main_v1/interim_epoch025_full_guided/zero_floor",
+      "--floors",
+      "0,.05"
+    ],
+    [
+      "scripts/analyze_zero_floor.py",
+      "--study-dir",
+      "runs/main_v1/interim_epoch025_full_guided/zero_floor"
+    ]
+  ],
+  "latest_full_guided_decision": "runs/main_v1/interim_epoch025_full_guided/decision.json",
+  "mature_batch_dropout_trial": "runs/batch_dropout_mature_trial/plan.json",
+  "extension_helper_description_update": "runs/main_v1/interim_epoch025_full_guided/helper_description_update.json",
+  "mature_batch_dropout_analysis_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/analyze_mature_batch_dropout_trial.py",
+    "--trial-dir",
+    "runs/batch_dropout_mature_trial"
+  ],
+  "mature_batch_dropout_analysis_verification": "logs/mature_batch_dropout_analysis_verification.json",
+  "latest_mature_batch_dropout_trial_state": {
+    "controller_alive": true,
+    "process": {
+      "time": "2026-11-20T17:31:08+08:00",
+      "pid": 979902,
+      "stage": "floor_candidate",
+      "child_pid": 1025483,
+      "command": [
+        "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+        "scripts/diagnose_zero_floor.py",
+        "--generation-dir",
+        "runs/batch_dropout_mature_trial/candidate",
+        "--outdir",
+        "runs/batch_dropout_mature_trial/candidate/zero_floor",
+        "--floors",
+        "0,.05"
+      ],
+      "main_training_changed": false,
+      "test_access": false
+    },
+    "latest_train": {
+      "time": "2026-11-20T15:55:11+08:00",
+      "event": "train",
+      "epoch": 25.997316636851522,
+      "step": 29065,
+      "loss": 0.3345817029476166,
+      "lr": 8.842384120832221e-05,
+      "cells_per_sec": 30.712712896398724,
+      "grad_norm": 0.07609891146421432,
+      "peak_gpu_GB": 17.379199488
+    },
+    "latest_validation": {
+      "time": "2026-11-20T15:56:18+08:00",
+      "event": "validation",
+      "step": 29068,
+      "epoch": 26.0,
+      "raw": {
+        "velocity_mse": 0.26039815647527575,
+        "endpoint_mse": 0.10433807212393731
+      },
+      "ema_0.9996": {
+        "velocity_mse": 0.25943535566329956,
+        "endpoint_mse": 0.10396709176711738
+      }
+    },
+    "checkpoint": {
+      "step": 29068,
+      "epoch": 26.0,
+      "time": "2026-11-20T15:56:29+08:00"
+    },
+    "completed": false,
+    "sources_unchanged": true
+  },
+  "mature_batch_dropout_checkpoint_verification": "runs/batch_dropout_mature_trial/first_checkpoint_verification.json",
+  "mature_batch_dropout_immutable_pins": {
+    "plan_sha256": "97e36ed156277baac3415e38ff75e886c344c14d9f2ef488e8b24d5f2671bc02",
+    "controller_source_sha256": "38e101960644baee64481f28fdf5dc83c3fb0d1d4f007ce31a2faf853494ac1a",
+    "model_source_sha256": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "analysis_source_sha256": "075a86ad474814aec23cf3dae4984d9373e2b5d44968d61dcf77d7f447ca3532",
+    "prelaunch_source_and_tests": "runs/batch_dropout_mature_trial/prelaunch_verification.json"
+  },
+  "next_matched_denoise_review_step": 29000,
+  "latest_matched_denoise_review": "runs/batch_dropout_mature_trial/midtraining_health_step28750.json",
+  "mature_batch_dropout_analysis_registration": "runs/batch_dropout_mature_trial/analysis_registration.json",
+  "mature_batch_dropout_analysis_follower": {
+    "pid": 992514,
+    "script": "logs/follow_mature_batch_dropout_analysis.py",
+    "source_sha256": "79627900152af4081ddeb7bfca24bc773f7e7fa9fa4e63882e87387d6e6f99be",
+    "state": "runs/batch_dropout_mature_trial/analysis_process.json",
+    "cpu_only": true
+  },
+  "latest_resource_review": "logs/memory_readonly_audit_20261120_1256.json",
+  "finished_pilot_inference_archive": {
+    "audit": "logs/storage_migration_pilot_inference_20261120/verification.json",
+    "artifacts": 22,
+    "GiB": 12.896562626585364
+  },
+  "latest_primary_source_recheck": "paper/public_source_recheck_20261120.json",
+  "latest_published_tex_review": "paper/tex_source_v2_review.json",
+  "latest_storage_review": "logs/storage_migration_pilot_inference_20261120/verification.json",
+  "latest_endpoint_verification": "runs/batch_dropout_mature_trial/endpoint_independent_verification.json",
+  "checkpoint_preserver_epoch030": {
+    "time": "2026-11-20T16:00:57+08:00",
+    "pid": 1010863,
+    "cpu_only": true,
+    "training_changed": false,
+    "target_step": 33540,
+    "state": "logs/preservation_epoch030/state.json"
+  },
+  "latest_batch_dropout_decision": "runs/batch_dropout_mature_trial/decision.json",
+  "epoch30_fixed_cfg_followup": {
+    "time": "2026-11-21T00:38:54+08:00",
+    "pid": 1026899,
+    "stage": "completed_review_required",
+    "test_access": false,
+    "training_changed": false,
+    "result": {
+      "time": "2026-11-21T00:38:54+08:00",
+      "stage": "completed_review_required",
+      "plan_sha256": "1a52b452d4ef250858bef3992422fbdae9660c6bf4b11e49d6e11098b287d848",
+      "step": 33540,
+      "fixed_score_difference": {
+        "value": 0.01432304109412219,
+        "ci95": [
+          -0.00579462338871927,
+          0.03644093150327297
+        ]
+      },
+      "periodic_score_difference": {
+        "value": 0.008801953525000017,
+        "ci95": [
+          -0.007994444230293185,
+          0.026531295593955864
+        ]
+      },
+      "fixed_comparison_sha256": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+      "periodic_comparison_sha256": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+      "automatic_checkpoint_or_convergence_change": false,
+      "test_access": false
+    },
+    "cpu_only": true
+  },
+  "latest_main_health": "logs/main_watch_latest.json",
+  "latest_batch_structure_decision": "runs/main_v1/batch_structure_epoch025/decision.json",
+  "optional_postprocess_workflow": {
+    "status": "optional_full_validation_workflow_activated_waiting_for_training",
+    "plan": "logs/postprocess_workflow_update/plan.json",
+    "verification": "logs/postprocess_workflow_update/verification.json",
+    "deployment": "logs/postprocess_workflow_update/deployment.json",
+    "source_archive": "logs/postprocess_workflow_update/source_snapshot.tar.gz",
+    "cpu_checks_passed": 35,
+    "previous_waiting_parent": 961459,
+    "active_waiting_parent": 1100222,
+    "formal_choice_not_adopted": true
+  },
+  "epoch30_checkpoint_milestone": "logs/epoch030_checkpoint_milestone.json",
+  "epoch30_joint_decision": "runs/main_v1/interim_epoch030_fixed_cfg/decision.json",
+  "epoch35_fixed_cfg_followup": {
+    "time": "2026-11-21T13:03:45+08:00",
+    "pid": 1100944,
+    "stage": "completed_review_required",
+    "test_access": false,
+    "training_changed": false,
+    "result": {
+      "time": "2026-11-21T13:03:45+08:00",
+      "stage": "completed_review_required",
+      "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+      "step": 39130,
+      "fixed_score_difference": {
+        "value": 0.011156461291118802,
+        "ci95": [
+          -0.007622752507402796,
+          0.031300992555877226
+        ]
+      },
+      "periodic_score_difference": {
+        "value": 0.009552101189415074,
+        "ci95": [
+          -0.010146107371788452,
+          0.032353939150775404
+        ]
+      },
+      "fixed_comparison_sha256": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+      "periodic_comparison_sha256": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+      "automatic_checkpoint_or_convergence_change": false,
+      "test_access": false
+    },
+    "cpu_only": true
+  },
+  "epoch35_preservation": {
+    "time": "2026-11-21T12:03:02+08:00",
+    "pid": 1100879,
+    "stage": "completed",
+    "target_step": 39130,
+    "training_changed": false,
+    "record": "runs/main_v1/snapshots/step_39130/preserved.json"
+  },
+  "epoch35_checkpoint_milestone": "logs/epoch035_checkpoint_milestone.json",
+  "epoch35_periodic_selection_metadata": "logs/epoch035_periodic_selection_metadata.json",
+  "epoch40_fixed_cfg_followup": {
+    "time": "2026-11-21T22:33:51+08:00",
+    "pid": 1251718,
+    "stage": "waiting_for_registered_epoch40",
+    "test_access": false,
+    "training_changed": false,
+    "readiness": {
+      "ready": false,
+      "checks": {
+        "observer_epoch40_complete": false,
+        "epoch40_inference_checkpoint_exists": false,
+        "epoch40_full_snapshot_preserved": false,
+        "gpu_only_original_trainer": false
+      },
+      "gpu_pids": [
+        656512,
+        1251202
+      ],
+      "observer_epochs": [
+        10,
+        15,
+        20,
+        25,
+        30,
+        35
+      ]
+    },
+    "cpu_only": true
+  },
+  "epoch40_preservation": {
+    "time": "2026-11-21T22:18:14+08:00",
+    "pid": 1251717,
+    "stage": "waiting_step44720",
+    "target_step": 44720,
+    "training_changed": false,
+    "current_step": 41300
+  },
+  "epoch35_complete_validation_calibration": {
+    "time": "2026-11-21T13:16:04+08:00",
+    "pid": 1251199,
+    "stage": "validation_cfg_calibration",
+    "test_access": false,
+    "main_training_changed": false,
+    "child_pid": 1251202,
+    "command": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/calibrate.py",
+      "--checkpoint",
+      "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+      "--outdir",
+      "runs/main_v1/interim_epoch035_calibration/calibration",
+      "--screen-cap",
+      "16",
+      "--refine-cap",
+      "full",
+      "--batch-size",
+      "32",
+      "--scales",
+      "0.6666666667,1,1.5,2"
+    ],
+    "cpu_only": false
+  },
+  "epoch35_calibration_generation_progress": {
+    "screen_01": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 0.6666666667,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_00": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_02": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_03": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_04": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "screen_full_interval": {
+      "completed": 960,
+      "total": 960,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.0,
+        "cfg_max": 1.0,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "refine_00": {
+      "completed": 4825,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.0,
+        "cfg_max": 1.0,
+        "clamp": false,
+        "seed": 4242
+      }
+    },
+    "refine_01": {
+      "completed": 992,
+      "total": 4825,
+      "options": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 2.0,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": false,
+        "seed": 4242
+      }
+    }
+  },
+  "epoch35_joint_decision": "runs/main_v1/interim_epoch035_fixed_cfg/decision.json",
+  "epoch35_full_validation_calibration_plan": "runs/main_v1/interim_epoch035_calibration/plan.json",
+  "epoch40_followup_plan": "runs/main_v1/interim_epoch040_fixed_cfg/plan.json",
+  "epoch35_complete_validation_calibration_context": {
+    "root": "runs/main_v1/interim_epoch035_calibration",
+    "controller_pid": 1251199,
+    "calibrator_pid": 1251202,
+    "completed_coarse_cases": 6,
+    "scope": "Frozen E35 original v2 calibration; no test or final adoption",
+    "full_candidate_audit_script": "scripts/analyze_full_calibration.py",
+    "full_candidate_audit_plan": "runs/main_v1/interim_epoch035_calibration/analysis_plan.json",
+    "analysis_not_launched_yet": true,
+    "CPU_analysis_checks_passed": 3,
+    "next": "Finish both registered full4825 refinements. On complete first full nine metrics run the already-registered earlyCPU0.05 diagnostic; after original all4 review run independent registered full audit and write separate decision. Keep pinned E35 fixed-CFG decision unchanged.",
+    "last_root_review_time": "2026-11-21T21:50:10+08:00",
+    "active_stage": "refine_01: w2/[.1,.9] full4825 active; refine_00 full4825 plus earlyCPU0.05 complete, both ineligible; final four-candidate review pending",
+    "coarse_figure": "runs/main_v1/interim_epoch035_calibration/coarse_review/screen_tradeoffs.png",
+    "coarse_snapshot_and_figure_proof": "runs/main_v1/interim_epoch035_calibration/coarse_review/plot_completed.json",
+    "first_full_early_floor_diagnostic": {
+      "script": "logs/diagnose_epoch035_first_full_floor.py",
+      "plan": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/plan.json",
+      "prelaunch_check": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/prelaunch_refusal_check.json",
+      "status": "completed_reviewed_no_adoption",
+      "when": "After original all_results contains complete refine_00 with its nine official metrics (7 total cases), run CPU diagnostic once while refine_01 continues; do not duplicate GPU generation or adopt a setting. At complete four-candidate review, check the early floor0.05 metrics against formal refine_00 floor0.05, then execute the registered independent full audit.",
+      "decision": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/decision.json",
+      "review": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/review.json",
+      "completed": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/completed.json",
+      "next": "After original formal four-candidate selection, verify early0.05 metrics against formal same-candidate0.05, then run registered independent full audit."
+    }
+  },
+  "epoch36_preservation": {
+    "time": "2026-11-21T17:13:15+08:00",
+    "pid": 1277287,
+    "stage": "completed",
+    "target_step": 40248,
+    "training_changed": false,
+    "record": "runs/main_v1/snapshots/step_40248/preserved.json"
+  },
+  "epoch36_archive_verification": "logs/preservation_epoch036/verification.json",
+  "latest_public_source_review": "paper/public_sources_review_20261121.json",
+  "latest_early_full_validation_review": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/decision.json",
+  "mature_EMA_diagnostic": {
+    "status": "registered_CPU_prelaunch_passed_GPU_not_launched",
+    "plan": "runs/main_v1/ema_epoch035_review/plan.json",
+    "plan_sha256": "cdc72b7b4b4d9427e218b2f6aed41d9083d3dc58bf7f52fb0b72b93a5ec5fd50",
+    "script": "scripts/review_ema_weights.py",
+    "CPU_proof": "runs/main_v1/ema_epoch035_review/checkpoint_verification.json",
+    "check_only": "runs/main_v1/ema_epoch035_review/check_only.json",
+    "protocol_CPU_checks_passed": 4,
+    "GPU_cases_registered": 2,
+    "new_training": false,
+    "launch_requires": "Complete original E35 full4 review, independent full audit and separate root decision with test_access=false, then original trainer must be the only GPU PID. Root must explicitly start the registered script without --check-only; no passive auto-launcher exists.",
+    "when_ready_command": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/review_ema_weights.py",
+      "--plan",
+      "runs/main_v1/ema_epoch035_review/plan.json"
+    ],
+    "test_access": false,
+    "EMA_adopted": false,
+    "GPU_environment_instructions": "runs/main_v1/ema_epoch035_review/actual_GPU_launch_environment_instructions.json",
+    "GPU_launch_environment": "Match original trainer visibility: currently variable absent; remove CUDA_VISIBLE_DEVICES. Do not inherit the empty CPU-check variable."
+  },
+  "user_requested_migration": {
+    "context": "context.md",
+    "instructions": "MIGRATION.md",
+    "manifest": "logs/server_shutdown_20261121/migration_state.json",
+    "checkpoint_verification": "logs/server_shutdown_20261121/checkpoint_verification.json",
+    "latest_step": 41374,
+    "latest_sha256": "cf418b1615a7ec4c48906f931a21c08a50564f2938816d117b18d1fbedc00df8",
+    "environment_pack": "/home/dataset-assist-0/whs/ocoo-t-artifacts/ocoo-t-environment.tar",
+    "GPU_or_training_restart_on_old_host_authorized": false
+  }
+}

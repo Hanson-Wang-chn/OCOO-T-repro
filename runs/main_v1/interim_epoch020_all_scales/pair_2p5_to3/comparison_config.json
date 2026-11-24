@@ -1,0 +1,25 @@
+{
+  "reference": "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5",
+  "candidate": "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3",
+  "factor": "guidance",
+  "source_sha256": {
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/evaluation_config.json": "e1ae30a132adebad315cd7fef77b0bd1b05cc633c16aaa10b2ddbc17b56264aa",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/generation_state.json": "b4d59db0962ebe94b33be662a6b33984c572b541659720cbd7576092589c9107",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/prediction.npy": "1f4dcf7264290c806a2357ccfc62918a20d81f1c2d27a0336a8b5c9feb6fd467",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/prediction_raw.npy": "1cb050f1f8a831bcef9e5d9294699f7e1e9e4d6027420181c457b8d1f1bd69bf",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/metrics/summary.json": "3d4c48ad59e4cce642f5b5d2c327cec174a0320ae9c281571e911ae7f7a1b4e8",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5/metrics/results.csv": "226332ecb65e3971668127225471fa9aceee766a86e4a007c21b035bb0c54952",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/evaluation_config.json": "7e1eca19198861c41b785b24d6815b7b1a95c716dc081403b24d3266c8b11936",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/generation_state.json": "3227d342a675110d4ea59b3c0ae691d5d8eb417af94ed3d2bc68e194f7f24fed",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/prediction.npy": "e355c3f895dc4f47d6e5379756f9461f8b8de6779075442256c9c1276771da93",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/prediction_raw.npy": "242b97d3b80a9ac239a241e0b0638608a218bc07d4fbf40dd1a0b4614e649e34",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/metrics/summary.json": "f2408a463e4bc0faec0196e9f40080d68e8a23c746dd8a54430511db019bbf55",
+    "runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3/metrics/results.csv": "fe03d42223b6ed3083954cdf4dafbf3e4a69e64488e13c3475ec9d839383dfdc"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+  "bootstrap": 2000,
+  "seed": 9232
+}

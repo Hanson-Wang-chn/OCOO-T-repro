@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 180, in <module>
+    main()
+  File "/home/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 148, in main
+    control.execute(job_commands['calibration'], 'validation_cfg_calibration')
+  File "/home/whs/ocoo-t/logs/run_epoch035_validation_calibration.py", line 77, in execute
+    raise InterruptedError('Interim controller interrupted; completed caches retained')
+InterruptedError: Interim controller interrupted; completed caches retained

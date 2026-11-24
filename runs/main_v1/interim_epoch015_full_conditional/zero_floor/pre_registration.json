@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-18T23:21:07+08:00",
+  "status": "registered before evaluation",
+  "source_extension_manifest_sha256": "f1d85d34b9d36ad141121fc161677175ecb1c3e39a6dcbd10c2a9b3094481ba9",
+  "prediction_sha256": "0fcceba6e473a24af9a97d78b9924a29b1a7bce20aa1f52e851e5f2ba6669b91",
+  "floors": [
+    0,
+    0.001,
+    0.005,
+    0.01,
+    0.02,
+    0.03,
+    0.05,
+    0.07
+  ],
+  "script_sha256": "37dc192f81806bede1cca4b36d309fbe2385967336170825d6324531d8247698",
+  "reason_to_revisit_after_epoch10_rejection": "The mature epoch15 EMA and full generated population differ from epoch10 cap32. Controlled zero-only jitter of measured validation cells showed dramatic DE precision degradation despite virtually unchanged means; test whether lower-than-training-positive cutoffs help this new immutable prediction population.",
+  "limits": "Every cutoff must be strictly below the smallest positive observed training HepG2 value; preserve all predictions, score all9, no new generation, no test data, no automatic postprocess adoption. Formal positive-CFG calibration remains unchanged.",
+  "prior_rejected_study": "runs/main_v1/interim_epoch010_review/zero_floor",
+  "controlled_evidence": "runs/zero_tie_sensitivity_epoch015/summary.json",
+  "prior_script_archive": "logs/source_archive/diagnose_zero_floor_before_extension_0ef1ff64ddb4.py"
+}

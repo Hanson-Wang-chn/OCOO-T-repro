@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-21T12:18:29+08:00",
+  "reason": "PartialE35 status and original automatic stopping metadata; fixedCFG paired quality review remains pending. Publish after900 seconds.",
+  "backup": "logs/README_before_epoch035_periodic.md",
+  "replacements": [
+    [
+      "**当前：原模型已完成第30轮联合复核，继续训练，下一周期E35。综合增益区间跨0且固定CFG有误差代价；后续完整验证流程已接续，尚未采用新阈值或访问测试。**",
+      "**当前：第35轮周期生成已完成，固定CFG对照进行中。原训练继续，点分数已按既定规则刷新早停参考为E35；联合结论待配对分析，正式校准与测试未开始。**"
+    ],
+    [
+      "下表均是第30轮**限量验证诊断**，不是正式完整验证或测试；两行采样协议不同，绝对分数不直接比较。",
+      "E35普通条件场（cap32/B32）已完成：PD=0.2961、PDS_L2=0.7119、MSE=0.00943、DEPrec=0.0784、DirAgr=0.7092；固定CFG对照仍在生成。原点分数规则已将best/early_reference刷新为E35，最早可能E45停止，后续改善会顺延；这不是稳定整体增益结论。\n\n下表均是第30轮**限量验证诊断**，不是正式完整验证或测试；两行采样协议不同，绝对分数不直接比较。"
+    ],
+    [
+      "两套点排序目前均偏好E30，保留原训练、选型及收敛规则；原规则的best/early_reference已刷新为E30，最早可能E40停止，后续改善会继续顺延。下一周期E35的完整状态归档及一个固定CFG对照已[登记并自动等待](runs/main_v1/interim_epoch035_fixed_cfg/plan.json)，不重复参考生成、不自动改策略。E30完整模型/优化器/双EMA/RNG已[SHA核验归档](runs/main_v1/snapshots/step_33540/preserved.json)。",
+      "E30联合复核时两套点排序均偏好E30，原训练、选型及收敛规则保持。E35完整状态已[SHA归档](runs/main_v1/snapshots/step_39130/preserved.json)，推理模型全部193个tensor与默认EMA及buffers一致；[固定CFG后续](runs/main_v1/interim_epoch035_fixed_cfg/plan.json)完成后再联合检查E30→35，不重复参考生成或自动改策略。E30完整状态也已[保留](runs/main_v1/snapshots/step_33540/preserved.json)。"
+    ]
+  ]
+}

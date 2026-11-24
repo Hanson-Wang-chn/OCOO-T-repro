@@ -1,0 +1,76 @@
+{
+  "time": "2026-11-19T17:53:30+08:00",
+  "status": "completed",
+  "reason": "Prespecified epoch20 screen found the primary point estimate increasing through the upper boundaryw2, with a clear tradeoff in MSE/MAE. Check two nearby larger positive scales before calling the initial grid optimal.",
+  "checkpoint": "runs/main_v1/validation_epoch_020/model.pt",
+  "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+  "step": 22360,
+  "weights": "ema_0.9996",
+  "source_review": "runs/main_v1/interim_epoch020_review",
+  "previous_best": {
+    "guidance": 2.0,
+    "metrics": {
+      "PDCorr": 0.26780689170821764,
+      "MSE": 0.01939240605570376,
+      "MAE": 0.09411315793792406,
+      "PDS_L1": 0.7552777777777778,
+      "PDS_L2": 0.7663888888888889,
+      "PDS_cos": 0.7388888888888889,
+      "DEOver": 0.10897938537034077,
+      "DEPrec": 0.09173765885150176,
+      "DirAgr": 0.672418082273102
+    },
+    "score": 1.0213254102267362
+  },
+  "previous_best_minus_reference": {
+    "delta": 0.1164070291217918,
+    "ci95": [
+      0.05227852437191791,
+      0.18567370490708027
+    ]
+  },
+  "additional_guidances": [
+    2.5,
+    3.0
+  ],
+  "reused_reference": {
+    "method": "immutable symlink; reference evaluate marker skips new generation",
+    "source": "runs/main_v1/interim_epoch020_review/ema_none",
+    "source_sha256": {
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "a4f56f7f9ee3559879e19becd63a9a5f9f652e583e4c133d23bb6217615a1e8e",
+      "prediction.npy": "c08e03f1905a408c813ffb36205f5fc709b118d2e0c6cf431dd5f9f14ce2d78f",
+      "prediction_raw.npy": "b3f00943ead700950b80ca2ffcd44c7a38c601b7b7021ce980cfbbb752e40e69",
+      "evaluation_config.json": "bce30d14d0edee52f3273685f414f97b0d3f094a30be7ca99fb329d7af726e13",
+      "metrics/summary.json": "363f8586cd99bc8c79674a8841a6ced7e67d4c9767172812678def109be8f393",
+      "metrics/results.csv": "47ccb60ca3ac971466e340ead502e705c494ca2dbb7d62d226a138acad101e53",
+      "review_completed.json": "03b9461abd3e69f0ef5a128f5b50e9deeff9657c3d1f01fbf30b3cc5ae3b01df"
+    }
+  },
+  "unchanged": {
+    "validation_only": true,
+    "cap_per_condition": 16,
+    "conditions": 60,
+    "generated_per_new_case": 960,
+    "batch_size": 16,
+    "steps": 50,
+    "noise_std": 1.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "seed": 4242,
+    "clamp": true,
+    "all9_metrics": true,
+    "raw_preserved": true
+  },
+  "objective": "same PDCorr+mean3PDS; report all9 and paired60-condition intervals, and inspect worsening mean/directional metrics",
+  "stopping_bound": "This interim extension is bounded atw3; do not continue indefinitely if only discrimination rises while expression errors worsen. No formal policy is locked; full validation still uses original gates.",
+  "subsequent_interval_check": "After boundary results, review whether the highest supported positive-scale setting warrants the preplanned full-interval[0,1] comparison; do not automatically launch a test or replace the model.",
+  "main_training_change": false,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "test_access": false,
+  "controller_pid": 899825,
+  "post_analysis_pid": 899826,
+  "stage": "completed",
+  "completion_time": "2026-11-19T19:33:44+08:00",
+  "decision": "runs/main_v1/interim_epoch020_all_scales/decision.json"
+}

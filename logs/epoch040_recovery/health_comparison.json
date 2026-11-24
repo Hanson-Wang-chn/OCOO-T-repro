@@ -1,0 +1,269 @@
+{
+  "time": "2026-11-22T15:53:47+08:00",
+  "checkpoint_rollback_step": 41374,
+  "paired_probes": {
+    "41500": {
+      "original_ddp": {
+        "epoch": 37.119856887298745,
+        "time": "2026-11-22T11:19:06+08:00",
+        "raw_endpoint_mse": 0.10448930563870817,
+        "ema_endpoint_mse": 0.10397758660838008,
+        "relative_gap": -0.0048973340113624975
+      },
+      "repaired_ddp": {
+        "epoch": 37.119856887298745,
+        "time": "2026-11-22T13:52:43+08:00",
+        "raw_endpoint_mse": 0.10443237319123,
+        "ema_endpoint_mse": 0.10398506082128733,
+        "relative_gap": -0.004283273052921754
+      }
+    },
+    "41750": {
+      "original_ddp": {
+        "epoch": 37.34347048300537,
+        "time": "2026-11-22T11:28:45+08:00",
+        "raw_endpoint_mse": 0.10436693206429482,
+        "ema_endpoint_mse": 0.10414412792306393,
+        "relative_gap": -0.0021348154709924794
+      },
+      "repaired_ddp": {
+        "epoch": 37.34347048300537,
+        "time": "2026-11-22T14:01:07+08:00",
+        "raw_endpoint_mse": 0.10447501693852246,
+        "ema_endpoint_mse": 0.10399431397672743,
+        "relative_gap": -0.004601128345142036
+      }
+    },
+    "42000": {
+      "original_ddp": {
+        "epoch": 37.567084078711986,
+        "time": "2026-11-22T11:37:12+08:00",
+        "raw_endpoint_mse": 0.10443639161530882,
+        "ema_endpoint_mse": 0.10575203609187156,
+        "relative_gap": 0.012597567344234895
+      },
+      "repaired_ddp": {
+        "epoch": 37.567084078711986,
+        "time": "2026-11-22T14:09:30+08:00",
+        "raw_endpoint_mse": 0.10445973870810121,
+        "ema_endpoint_mse": 0.10399916977621615,
+        "relative_gap": -0.004409056901550024
+      }
+    },
+    "42250": {
+      "original_ddp": {
+        "epoch": 37.7906976744186,
+        "time": "2026-11-22T11:45:42+08:00",
+        "raw_endpoint_mse": 0.1042526790406555,
+        "ema_endpoint_mse": 0.11207751021720469,
+        "relative_gap": 0.07505640381191303
+      },
+      "repaired_ddp": {
+        "epoch": 37.7906976744186,
+        "time": "2026-11-22T14:17:53+08:00",
+        "raw_endpoint_mse": 0.10429279936943203,
+        "ema_endpoint_mse": 0.10400613315869123,
+        "relative_gap": -0.0027486673334499168
+      }
+    },
+    "42484": {
+      "original_ddp": {
+        "epoch": 38.0,
+        "time": "2026-11-22T11:53:42+08:00",
+        "raw_endpoint_mse": 0.10435070283710957,
+        "ema_endpoint_mse": 0.12444767670240253,
+        "relative_gap": 0.192590690037461
+      },
+      "repaired_ddp": {
+        "epoch": 38.0,
+        "time": "2026-11-22T14:25:46+08:00",
+        "raw_endpoint_mse": 0.1044393852353096,
+        "ema_endpoint_mse": 0.10400358308106661,
+        "relative_gap": -0.004172775943300455
+      }
+    },
+    "42500": {
+      "original_ddp": {
+        "epoch": 38.014311270125226,
+        "time": "2026-11-22T11:54:26+08:00",
+        "raw_endpoint_mse": 0.10428177868016064,
+        "ema_endpoint_mse": 0.12541047274135053,
+        "relative_gap": 0.20261156194883334
+      },
+      "repaired_ddp": {
+        "epoch": 38.014311270125226,
+        "time": "2026-11-22T14:26:28+08:00",
+        "raw_endpoint_mse": 0.10433802800253034,
+        "ema_endpoint_mse": 0.10400498285889626,
+        "relative_gap": -0.0031919823482383647
+      }
+    },
+    "42750": {
+      "original_ddp": {
+        "epoch": 38.23792486583184,
+        "time": "2026-11-22T12:02:57+08:00",
+        "raw_endpoint_mse": 0.10474368440918624,
+        "ema_endpoint_mse": 0.14375456050038338,
+        "relative_gap": 0.37244132007806097
+      },
+      "repaired_ddp": {
+        "epoch": 38.23792486583184,
+        "time": "2026-11-22T14:34:52+08:00",
+        "raw_endpoint_mse": 0.10478665167465806,
+        "ema_endpoint_mse": 0.10401560482569039,
+        "relative_gap": -0.0073582544784579484
+      }
+    },
+    "43000": {
+      "original_ddp": {
+        "epoch": 38.46153846153846,
+        "time": "2026-11-22T12:11:28+08:00",
+        "raw_endpoint_mse": 0.10477621713653207,
+        "ema_endpoint_mse": 0.16488745738752186,
+        "relative_gap": 0.5737107322042356
+      },
+      "repaired_ddp": {
+        "epoch": 38.46153846153846,
+        "time": "2026-11-22T14:43:15+08:00",
+        "raw_endpoint_mse": 0.10474756476469338,
+        "ema_endpoint_mse": 0.10401718993671238,
+        "relative_gap": -0.006972714159242943
+      }
+    },
+    "43250": {
+      "original_ddp": {
+        "epoch": 38.685152057245084,
+        "time": "2026-11-22T12:20:00+08:00",
+        "raw_endpoint_mse": 0.10419508011545986,
+        "ema_endpoint_mse": 0.18370092404074967,
+        "relative_gap": 0.7630479657694815
+      },
+      "repaired_ddp": {
+        "epoch": 38.685152057245084,
+        "time": "2026-11-22T14:51:40+08:00",
+        "raw_endpoint_mse": 0.10422584204934537,
+        "ema_endpoint_mse": 0.10402241325937212,
+        "relative_gap": -0.0019518075937150492
+      }
+    },
+    "43500": {
+      "original_ddp": {
+        "epoch": 38.9087656529517,
+        "time": "2026-11-22T12:28:32+08:00",
+        "raw_endpoint_mse": 0.10439872334245592,
+        "ema_endpoint_mse": 0.19808241701684892,
+        "relative_gap": 0.8973643611242761
+      },
+      "repaired_ddp": {
+        "epoch": 38.9087656529517,
+        "time": "2026-11-22T15:00:03+08:00",
+        "raw_endpoint_mse": 0.10439856676384807,
+        "ema_endpoint_mse": 0.10401978902518749,
+        "relative_gap": -0.0036281890681255646
+      }
+    },
+    "43602": {
+      "original_ddp": {
+        "epoch": 39.0,
+        "time": "2026-11-22T12:32:12+08:00",
+        "raw_endpoint_mse": 0.10426695551723242,
+        "ema_endpoint_mse": 0.20228389441035688,
+        "relative_gap": 0.9400575513775791
+      },
+      "repaired_ddp": {
+        "epoch": 39.0,
+        "time": "2026-11-22T15:03:37+08:00",
+        "raw_endpoint_mse": 0.10431470174808055,
+        "ema_endpoint_mse": 0.10402147064451128,
+        "relative_gap": -0.0028110237450270636
+      }
+    },
+    "43750": {
+      "original_ddp": {
+        "epoch": 39.13237924865832,
+        "time": "2026-11-22T12:37:18+08:00",
+        "raw_endpoint_mse": 0.10435231099836528,
+        "ema_endpoint_mse": 0.20617427327670157,
+        "relative_gap": 0.9757518669608702
+      },
+      "repaired_ddp": {
+        "epoch": 39.13237924865832,
+        "time": "2026-11-22T15:08:38+08:00",
+        "raw_endpoint_mse": 0.10438863188028336,
+        "ema_endpoint_mse": 0.10402526566758752,
+        "relative_gap": -0.003480898313837022
+      }
+    },
+    "44000": {
+      "original_ddp": {
+        "epoch": 39.355992844364934,
+        "time": "2026-11-22T12:45:52+08:00",
+        "raw_endpoint_mse": 0.10444500553421676,
+        "ema_endpoint_mse": 0.20881758886389434,
+        "relative_gap": 0.9993065996390278
+      },
+      "repaired_ddp": {
+        "epoch": 39.355992844364934,
+        "time": "2026-11-22T15:17:01+08:00",
+        "raw_endpoint_mse": 0.10452012508176267,
+        "ema_endpoint_mse": 0.10403401893563569,
+        "relative_gap": -0.004650837776425498
+      }
+    },
+    "44250": {
+      "original_ddp": {
+        "epoch": 39.57960644007156,
+        "time": "2026-11-22T12:54:25+08:00",
+        "raw_endpoint_mse": 0.10441220854409039,
+        "ema_endpoint_mse": 0.20758820744231343,
+        "relative_gap": 0.9881602959739586
+      },
+      "repaired_ddp": {
+        "epoch": 39.57960644007156,
+        "time": "2026-11-22T15:25:23+08:00",
+        "raw_endpoint_mse": 0.10442193783819675,
+        "ema_endpoint_mse": 0.10404777573421597,
+        "relative_gap": -0.003583175257296456
+      }
+    },
+    "44500": {
+      "original_ddp": {
+        "epoch": 39.803220035778175,
+        "time": "2026-11-22T13:02:59+08:00",
+        "raw_endpoint_mse": 0.10441460448782891,
+        "ema_endpoint_mse": 0.2026437900494784,
+        "relative_gap": 0.9407609792086087
+      },
+      "repaired_ddp": {
+        "epoch": 39.803220035778175,
+        "time": "2026-11-22T15:33:46+08:00",
+        "raw_endpoint_mse": 0.10442225984297693,
+        "ema_endpoint_mse": 0.10405052895657718,
+        "relative_gap": -0.003559881647445029
+      }
+    },
+    "44720": {
+      "original_ddp": {
+        "epoch": 40.0,
+        "time": "2026-11-22T13:10:36+08:00",
+        "raw_endpoint_mse": 0.10437517066020519,
+        "ema_endpoint_mse": 0.19701115088537335,
+        "relative_gap": 0.8875288982927356
+      },
+      "repaired_ddp": {
+        "epoch": 40.0,
+        "time": "2026-11-22T15:41:12+08:00",
+        "raw_endpoint_mse": 0.1042942856438458,
+        "ema_endpoint_mse": 0.10405020287726074,
+        "relative_gap": -0.0023403273254928303
+      }
+    }
+  },
+  "healthy_threshold_relative_gap": 0.04,
+  "number_of_matched_probes": 16,
+  "repaired_ema_mse_range": [
+    0.10398506082128733,
+    0.10405052895657718
+  ],
+  "test_access": false
+}

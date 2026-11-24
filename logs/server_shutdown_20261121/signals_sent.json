@@ -1,0 +1,38 @@
+[
+  {
+    "pid": 1100222,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": false
+  },
+  {
+    "pid": 1251717,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": false
+  },
+  {
+    "pid": 1251718,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": false
+  },
+  {
+    "pid": 785577,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": false
+  },
+  {
+    "pid": 1251199,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": false
+  },
+  {
+    "pid": 656512,
+    "signal": "SIGTERM",
+    "time": "2026-11-21T22:35:25+08:00",
+    "main_checkpoint_requested": true
+  }
+]

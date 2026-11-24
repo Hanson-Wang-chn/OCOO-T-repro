@@ -1,0 +1,285 @@
+{
+  "time": "2026-11-19T06:31:44+08:00",
+  "reference": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate": "runs/pilot_value_fanin",
+  "factor": "value_input_init",
+  "updates": 384,
+  "generated_cells": 960,
+  "perturbations": [
+    "ALG11",
+    "ANAPC1",
+    "ASCC3",
+    "ATP6V1G1",
+    "C9orf78",
+    "CABIN1",
+    "CCDC115",
+    "CEP85",
+    "CSNK2B",
+    "CYREN",
+    "DCTN1",
+    "DCTN6",
+    "DERL2",
+    "DESI1",
+    "DHX36",
+    "DNTTIP2",
+    "E4F1",
+    "GINS4",
+    "GNL3",
+    "HMGCS1",
+    "HNRNPH1",
+    "INTS13",
+    "LAMTOR4",
+    "MRGBP",
+    "MRPL36",
+    "NAA10",
+    "NDC1",
+    "NDUFA3",
+    "NDUFS3",
+    "NFKBIE",
+    "NFRKB",
+    "NOC4L",
+    "NOL10",
+    "NPLOC4",
+    "NUP85",
+    "PABPC4",
+    "PITRM1",
+    "POLR2G",
+    "POLR3K",
+    "PPAN",
+    "PRDM4",
+    "RFC4",
+    "RPA3",
+    "RTCB",
+    "SLC1A5",
+    "SMN2",
+    "SPG7",
+    "SRSF7",
+    "STAT5B",
+    "TAF5",
+    "TERF2",
+    "THAP1",
+    "TP53RK",
+    "TRAIP",
+    "TRAPPC8",
+    "TUBD1",
+    "UCHL5",
+    "WDR77",
+    "ZC3H4",
+    "ZCCHC9"
+  ],
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": false,
+    "seed": 4242
+  },
+  "results": {
+    "raw": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.2179164782942583,
+          "candidate": 0.2305663529317826,
+          "difference": 0.012649874637524289,
+          "ci95": [
+            0.004965323863240565,
+            0.020230498922367883
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5161111111111112,
+          "candidate": 0.5347222222222221,
+          "difference": 0.018611111111110912,
+          "ci95": [
+            -0.011944444444444592,
+            0.05277777777777787
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5208333333333334,
+          "candidate": 0.5358333333333334,
+          "difference": 0.015000000000000013,
+          "ci95": [
+            -0.01250694444444462,
+            0.04249999999999965
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5105555555555555,
+          "candidate": 0.5097222222222223,
+          "difference": -0.0008333333333332416,
+          "ci95": [
+            -0.011111111111111183,
+            0.009451388888889039
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013664484303444574,
+          "candidate": 0.01538183886247371,
+          "difference": 0.0017173545590291363,
+          "ci95": [
+            0.0013603756188725288,
+            0.002113385236589236
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08211884573101995,
+          "candidate": 0.08767576403915876,
+          "difference": 0.005556918308138814,
+          "ci95": [
+            0.004709763051941997,
+            0.0064771685438851445
+          ]
+        }
+      ],
+      "reference_score": 0.7337498116275916,
+      "candidate_score": 0.7573256121910419,
+      "score_difference": 0.023575800563450322,
+      "score_difference_ci95": [
+        -0.0012115281045573512,
+        0.04934862752083717
+      ]
+    },
+    "clamped": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.22990732928737997,
+          "candidate": 0.23398768624368435,
+          "difference": 0.004080356956304376,
+          "ci95": [
+            -0.0028118720795221827,
+            0.010599216140593209
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.05293600144839774,
+          "candidate": 0.05558883271873375,
+          "difference": 0.002652831270336012,
+          "ci95": [
+            -0.0012710225284897315,
+            0.0071583456469544015
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.05452449758784506,
+          "candidate": 0.052578698736451074,
+          "difference": -0.0019457988513939886,
+          "ci95": [
+            -0.00395543445211817,
+            -0.00010236291542445623
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.63140910783508,
+          "candidate": 0.6347996706323807,
+          "difference": 0.003390562797300767,
+          "ci95": [
+            -0.012278073042106874,
+            0.02167570338095839
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5147222222222222,
+          "candidate": 0.5288888888888889,
+          "difference": 0.01416666666666666,
+          "ci95": [
+            -0.015284722222222382,
+            0.04195138888888886
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5183333333333332,
+          "candidate": 0.5341666666666668,
+          "difference": 0.015833333333333588,
+          "ci95": [
+            -0.010569444444444636,
+            0.04139583333333355
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5080555555555556,
+          "candidate": 0.5125,
+          "difference": 0.004444444444444362,
+          "ci95": [
+            -0.006111111111111067,
+            0.015277777777777725
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013566651071111312,
+          "candidate": 0.015173958505814215,
+          "difference": 0.0016073074347029027,
+          "ci95": [
+            0.0012755383768429135,
+            0.001970389498552911
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08192139901220792,
+          "candidate": 0.08675119094550607,
+          "difference": 0.004829791933298147,
+          "ci95": [
+            0.004016477425272261,
+            0.005698291799053555
+          ]
+        }
+      ],
+      "reference_score": 0.7436110329910837,
+      "candidate_score": 0.7591728714288696,
+      "score_difference": 0.015561838437785913,
+      "score_difference_ci95": [
+        -0.007841128698785158,
+        0.038825795767190634
+      ]
+    }
+  },
+  "source_sha256": {
+    "runs/pilot_sigma_1.0_cellinit_1.0/config.yaml": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+    "runs/pilot_sigma_1.0_cellinit_1.0/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/finished.json": "23b3c8cb22f55a7502299921e172e959f0729275bcf7e966abd9e4622464b84f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/source_manifest_step_0.json": "5fc3aec65642e420fbc86493694dec65d84883f3576545e0e5e820c54732d264",
+    "runs/pilot_sigma_1.0_cellinit_1.0/source_snapshot_step_0.tar.gz": "1129cc6dbe6960abfb4ca154c4565570c2ced2f74f88aa756ec8bc988bdb739c",
+    "runs/pilot_value_fanin/config.yaml": "82e8cf7f9939f4f3af13a3a1c9f96bd6fe79c32d29d040314342f831879692e1",
+    "runs/pilot_value_fanin/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_value_fanin/finished.json": "7d8b9403707d57237c1d382b4898f674e5fe1bfaa26e816dca13a2575f124ab9",
+    "runs/pilot_value_fanin/source_manifest_step_0.json": "06ee39f9a3ebfb2940209ded1a71064edd4a44007ea35c1c461a6eece3f8db5e",
+    "runs/pilot_value_fanin/source_snapshot_step_0.tar.gz": "b0cb1e03870957705fc0bd7b257c03e1c6feb90a4a2e72141883fb6333855d2e",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/model.pt": "cc242816d67483e25c68d7e3cb57ea1fef23ea242e0af25e1316f7822c1eb272",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/prediction.npy": "da1123f69f893d278652384a8da4d8f73315fad396baba0ad7795f4d0d289c98",
+    "runs/pilot_value_fanin/validation_epoch_012/model.pt": "f637c5a0893dd0a1274a0c91746a963c0e1e81e279a827aeed7176bbcf280a2e",
+    "runs/pilot_value_fanin/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_value_fanin/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_value_fanin/validation_epoch_012/prediction.npy": "951a340d36be1427bffbcbf18ec970c2020830fb659492b0b4e4da6ee95de20f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/results.csv": "24b731c00be338ff6e314f30c1d41208f42f7e97beb8b7a9fa3bf784408fed1e",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/summary.json": "55660beef9dc907cb8166e4fc0bd368d3c42b8c98eea3887d83f240de5549b34",
+    "runs/pilot_value_fanin/validation_epoch_012/metrics/results.csv": "386fdaabd0e33c7283e72caf3b82a2dae75534fffe4e87b984b82ad9b8575a49",
+    "runs/pilot_value_fanin/validation_epoch_012/metrics/summary.json": "5f51a6adbc8ddf8f0989a77f5bfede39ed33597e239d9c0e0be558aef7ff7538",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/results.csv": "c45b6aa573d38e213b2e826cc054445d8c434d13b0dbcb43b7dc9b2aa7e52c7f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/summary.json": "0bd32a738cbc233d33c5cf65b2774c71be8ea675dab622871faf7e6576c64042",
+    "runs/pilot_value_fanin/validation_epoch_012/metrics_clamped_de/results.csv": "602783fecbc4db198dc724499735543f36ab22bd39e9446ac15140e7687c7b58",
+    "runs/pilot_value_fanin/validation_epoch_012/metrics_clamped_de/summary.json": "211bb396fe87ff951a17d803a8fa3108d34d29535fc63562992cf1a772e4a6c6"
+  },
+  "script_sha256": "b310fc16d85ba4332d10550b4391732d1adb351a79e02607da8b0266c07dd55f",
+  "automatic_main_switch": false,
+  "note": "Only the scalar input weight initialization changes; zero output heads give the same initial velocity function. Initialization is not specified by the paper. Same data, architecture, budget and sampling noise. Fixed-library paired perturbation intervals do not measure independent training-seed uncertainty. Short raw diagnostics are not mature EMA or test results."
+}

@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-20T13:33:22+08:00",
+  "primary_pages": [
+    {
+      "url": "https://arxiv.org/abs/2606.12838",
+      "finding": "Current version remainsv2, revised2026-08-14. No newer version listed."
+    },
+    {
+      "url": "https://infevo.ai/publications",
+      "finding": "Lists the OCOO-T preprint and benchmark summary; no implementation, checkpoint or hyperparameter-config download linked on the retrieved page."
+    },
+    {
+      "url": "https://infevo.ai/technology",
+      "finding": "Research links are the arXiv preprint and company/institutional releases. Generic Open source link text means open the linked source page, not a source-code repository."
+    }
+  ],
+  "searches": [
+    "OCOO-T github code",
+    "2606.12838 code github",
+    "OCOO-T domain:github.com",
+    "OCOO-T domain:huggingface.co"
+  ],
+  "conclusion": "No newly published canonical implementation was located in this scoped check. This does not establish universal absence. Continue the independently implemented, recorded reproduction and controlled validation experiments.",
+  "training_or_configuration_changes": false,
+  "next_read_only_check": "Inspect the published v2 TeX source for useful unrendered methodological details."
+}

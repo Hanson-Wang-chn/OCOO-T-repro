@@ -1,0 +1,39 @@
+{
+  "time": "2026-11-20T06:17:13+08:00",
+  "checkpoint": "runs/main_v1/validation_epoch_025/model.pt",
+  "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "step": 27950,
+  "weights": "ema_0.9996",
+  "cell": {
+    "rms": 0.9697200059890747,
+    "max_abs": 3.6530845165252686,
+    "across_labels_std_rms": 0.8443448543548584
+  },
+  "batch": {
+    "rms": 0.08093704283237457,
+    "max_abs": 0.45544832944869995,
+    "across_labels_std_rms": 0.08024837076663971
+  },
+  "null_cell": {
+    "rms": 0.08486785739660263,
+    "max_abs": 0.24136066436767578,
+    "across_labels_std_rms": null
+  },
+  "null_pert": {
+    "rms": 0.024594463407993317,
+    "max_abs": 0.0910274013876915,
+    "across_labels_std_rms": null
+  },
+  "validation_perturbation_projection": {
+    "rms": 0.42910096049308777,
+    "max_abs": 5.6285810470581055,
+    "across_labels_std_rms": 0.28824299573898315
+  },
+  "current_policy": "Batch and cell-line vectors are added before the cell-line dropout mask, so both are removed when c is dropped. This was documented as an unspecified implementation choice.",
+  "paper_reference": "Section3.1 defines c and b separately; Section3.3 explicitly specifies independent y/c label dropout but does not explicitly state batch-drop treatment. Optional batch conditioning remains a source-level ambiguity.",
+  "untested_alternative": "Keep batch embedding when the cell-line label alone is null. Need a controlled training/inference study before adopting; no current source/parameter change.",
+  "interpretation": "Vector norms are descriptive and cannot establish functional importance, an implementation bug, or an explanation of DE/generation errors.",
+  "gpu_used": false,
+  "test_access": false,
+  "main_training_changed": false
+}

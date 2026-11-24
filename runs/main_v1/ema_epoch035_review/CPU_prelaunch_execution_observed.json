@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-21T21:57:34+08:00",
+  "CPU_check_exec_session": 21042,
+  "exit_code": 0,
+  "source_plan_sha256": "cdc72b7b4b4d9427e218b2f6aed41d9083d3dc58bf7f52fb0b72b93a5ec5fd50",
+  "CPU_proof_sha256": "8d30fe8200f292af98b608181658e6214ba99dcf548abeaa611594a5747376e7",
+  "GPU_generation_launched": false,
+  "test_access": false
+}

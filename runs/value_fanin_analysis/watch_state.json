@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-19T06:31:59+08:00",
+  "pid": 850878,
+  "stage": "completed_review_required",
+  "result": {
+    "time": "2026-11-19T06:31:59+08:00",
+    "stage": "completed_review_required",
+    "comparison": "runs/value_fanin_analysis/comparison.json",
+    "context": "runs/value_fanin_context/context_diagnostics.json",
+    "storage": "logs/storage_migration_value_fanin/state.json",
+    "main_model_mutations": false,
+    "automatic_main_switch": false,
+    "test_access": false,
+    "script_sha256": "20c3944af2821afbd8fe8b6f9db6359ba09f0daccbf56504c7a70d0e374805b8"
+  }
+}

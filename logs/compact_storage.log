@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-17T03:10:16+08:00",
+  "removed": "replogle.h5ad (redundant decompressed copy)",
+  "archive_retained": "data/raw/replogle.h5ad.zst",
+  "archive_sha256": "5f42388fff4a50414e67bc1b5b3685208a3b1b0b92920a6eb87bf1004e8976d8",
+  "restore_command": "python scripts/download_data.py",
+  "training_cache_retained": "data/processed/expression.npy"
+}

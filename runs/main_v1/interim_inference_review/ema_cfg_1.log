@@ -1,0 +1,23 @@
+{"time": "2026-11-17T19:16:23+08:00", "completed": 8, "total": 480}
+{"time": "2026-11-17T19:20:11+08:00", "completed": 88, "total": 480}
+{"time": "2026-11-17T19:24:01+08:00", "completed": 168, "total": 480}
+{"time": "2026-11-17T19:27:51+08:00", "completed": 248, "total": 480}
+{"time": "2026-11-17T19:31:45+08:00", "completed": 328, "total": 480}
+{"time": "2026-11-17T19:35:33+08:00", "completed": 408, "total": 480}
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 2014.47it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 1753.86it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3623.90it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 64412.14it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 75414.52it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 65965.46it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 73412.56it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 67850.70it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 74060.69it/s]
+{
+  "PDCorr": 0.16499076782104868,
+  "MSE": 0.04007872436195612,
+  "MAE": 0.1346730176359415,
+  "PDS_L1": 0.5222222222222221,
+  "PDS_L2": 0.5280555555555555,
+  "PDS_cos": 0.5097222222222223
+}

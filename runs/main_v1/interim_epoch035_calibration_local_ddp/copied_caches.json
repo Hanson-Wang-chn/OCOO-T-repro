@@ -1,0 +1,58 @@
+{
+  "files": {
+    "refine_00": {
+      "prediction.npy": "08545388c23318af2a272d0894358a176b0a2f5b0dd0d3435425c27391a8a413",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+    },
+    "refine_01": {
+      "prediction.npy": "e3c5dad27f7377106df4a08b8f25455588efd2a08ee4090e1a54d8aa86d88051",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "719bb74665c3cef5acefd398793470acaa9c96f6f4b8b505f2a6fc99f7294638"
+    },
+    "screen_00": {
+      "prediction.npy": "d9a5bc1f592b425dc6d15f469f846f24e7f1b921a5d34d8779509372966b1100",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b"
+    },
+    "screen_01": {
+      "prediction.npy": "734119b8d88212368511a2507b4a77a1e83c1e3b30ae44f7e4ddd22bb12d794b",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "5e811ac1f236de1cf42ba004c3ec4f8d6f21b72ef07fc0e9beec70940d74d5b1"
+    },
+    "screen_02": {
+      "prediction.npy": "3cb8aa4ce2569b0d67d06210d3bdc2b881ab7a28bea720b9f296ffbb45258de2",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "4cf2c5ae9b51af8393f00bfa58ab0f979556b5ea2f211622a0e42ce68769e2b8"
+    },
+    "screen_03": {
+      "prediction.npy": "2f3a143a5bc38d2c31bb976516051cf05f60bf254256863a2b1540974887af03",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "b1c103ce20a6e2f66d39003aa2c3d5abe1dfc07c31fd52877811f2d8b8314edd"
+    },
+    "screen_04": {
+      "prediction.npy": "b7517d5328a8f73bf0e61cc8d7c39cd500fa8ad8bbd2f5a1d70eec8087bd4fc7",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "feb35f1cac2a6399fa039c00d3b6beb862b2bf9eeb3350a1a3b0ffbdb8a6b786"
+    },
+    "screen_full_interval": {
+      "prediction.npy": "4f9f3f852eb1fea9f5356648d6d7bd3c320d25ef6f074dc437b6b12af52516d2",
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "generation_state.json": "7aa3710f49bedeef27c6489953f9a26e6abea408dbb8ed331edc4988232c9424"
+    }
+  },
+  "partial": {
+    "completed": 1024,
+    "total": 4825,
+    "options": {
+      "noise_std": 1.0,
+      "batch_size": 32,
+      "steps": 50,
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "clamp": false,
+      "seed": 4242
+    }
+  }
+}

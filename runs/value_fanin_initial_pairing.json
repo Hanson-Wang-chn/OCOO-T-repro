@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-19T04:27:10+08:00",
+  "training_pid": 850532,
+  "training_indices_exactly_equal": true,
+  "source_snapshot_matches_registered_model_flow_train_runner_tests": true,
+  "model_source_sha256": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+  "reference_and_candidate_first_zero_head_loss_exact": 1.6526803970336914,
+  "parameter_count": 136919041,
+  "caveat": "Zero-head loss match is a target/noise check, not equivalence after the registered feature-scale change."
+}

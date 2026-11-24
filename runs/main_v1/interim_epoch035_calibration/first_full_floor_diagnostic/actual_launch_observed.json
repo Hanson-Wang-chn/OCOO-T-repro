@@ -1,0 +1,13 @@
+{
+  "root_observed_time": "2026-11-21T21:47:06+08:00",
+  "exec_session": 63236,
+  "cpu_only": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "PIDs_observed": [
+    1315579
+  ],
+  "plan": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/plan.json",
+  "log": "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/actual_run.log",
+  "historical_plan_unchanged": true,
+  "test_access": false
+}

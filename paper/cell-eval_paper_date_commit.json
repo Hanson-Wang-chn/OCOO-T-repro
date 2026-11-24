@@ -1,0 +1,89 @@
+[
+  {
+    "sha": "44f9009d6f3d4a4f944cba333c96ed258dd0d973",
+    "node_id": "C_kwDOOkKwVdoAKDQ0ZjkwMDlkNmYzZDRhNGY5NDRjYmEzMzNjOTZlZDI1OGRkMGQ5NzM",
+    "commit": {
+      "author": {
+        "name": "Leon Hafner",
+        "email": "60394289+LeonHafner@users.noreply.github.com",
+        "date": "2026-05-15T03:52:17Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-05-15T03:52:17Z"
+      },
+      "message": "Merge pull request #236 from LeonHafner/leonhafner/fix_cpu_count\n\nfix: respect CPU affinity (SLURM cgroups) when auto-detecting num_threads",
+      "tree": {
+        "sha": "aeb8bf10c192213da0c0c97b24739ec733ad1418",
+        "url": "https://api.github.com/repos/ArcInstitute/cell-eval/git/trees/aeb8bf10c192213da0c0c97b24739ec733ad1418"
+      },
+      "url": "https://api.github.com/repos/ArcInstitute/cell-eval/git/commits/44f9009d6f3d4a4f944cba333c96ed258dd0d973",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqBphxCRC1aQ7uu5UhlAAAaJ0QAJDwVCFYPsKtX57NQZivo4OH\nwMqSl39nMiODtk4kp6pz9wQhS0i0jpKZuj5perZPIAqfzIDx7KN3rmX9HRUgzQVK\n2/l5r2rLjfEGs+AzhVzAGhV2oA+AooaoqumhZSBQWu2qyWi4RIXYOYwFNuDjDIWB\nEngXw/xllA/4o2mmmi9+X7zJu5PECw7n5IlzYds8QxvJ9h2I0KMbIiku5bQ1IJop\n+R65O5ll05u3J2EBuL+IOL13yg3vaL5KUY2aI2yUh4qX7mimowBgLqx5Swpgb9EE\nrWUlv/fHubfEZ0fjkgdFX9/luk/qucdx2Y8Q2Joy+2yolQopjyKW+hZXetiqcVX/\nIQ2rp0EUwWM/sHeGEfzHvX6OlUcu/hwbeIuVNCCP92/Cltro1bTTPqHZGOFMe9L2\nzaLdG5yuaBsUFcg6G/TzJ42E+EPlcnoO9UGTIeutT4tcSlstQ3k+fqwxoeE5XwYw\n6cbzhlI6SieFMY278lxYjvZOFYZrKoD/na+f4APjNhKA0m6/L7hsnNJ3uILvGONV\nIroFh/qjwfykBVOuQzmdKT3CRWyKvJhC94rrDKZv97jDaYQ9ozinZJeqYKH3nGQb\n4HPfXJ+YpgVTfQ2fWORcoLgBLGll+nOzPAJ/XuD8tdzf2GGQQwLMcuzNStoT3cR2\nB0zeGdhsyYHtZ+C0FAPv\n=yKGK\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree aeb8bf10c192213da0c0c97b24739ec733ad1418\nparent c1d0d051997821fb336461d55b91436b87f342d4\nparent 885ff84ede3a11b2846aaea369f021082fed5eda\nauthor Leon Hafner <60394289+LeonHafner@users.noreply.github.com> 1778817137 -0700\ncommitter GitHub <noreply@github.com> 1778817137 -0700\n\nMerge pull request #236 from LeonHafner/leonhafner/fix_cpu_count\n\nfix: respect CPU affinity (SLURM cgroups) when auto-detecting num_threads",
+        "verified_at": "2026-05-15T03:52:17Z"
+      }
+    },
+    "url": "https://api.github.com/repos/ArcInstitute/cell-eval/commits/44f9009d6f3d4a4f944cba333c96ed258dd0d973",
+    "html_url": "https://github.com/ArcInstitute/cell-eval/commit/44f9009d6f3d4a4f944cba333c96ed258dd0d973",
+    "comments_url": "https://api.github.com/repos/ArcInstitute/cell-eval/commits/44f9009d6f3d4a4f944cba333c96ed258dd0d973/comments",
+    "author": {
+      "login": "LeonHafner",
+      "id": 60394289,
+      "node_id": "MDQ6VXNlcjYwMzk0Mjg5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60394289?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/LeonHafner",
+      "html_url": "https://github.com/LeonHafner",
+      "followers_url": "https://api.github.com/users/LeonHafner/followers",
+      "following_url": "https://api.github.com/users/LeonHafner/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LeonHafner/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/LeonHafner/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LeonHafner/subscriptions",
+      "organizations_url": "https://api.github.com/users/LeonHafner/orgs",
+      "repos_url": "https://api.github.com/users/LeonHafner/repos",
+      "events_url": "https://api.github.com/users/LeonHafner/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/LeonHafner/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c1d0d051997821fb336461d55b91436b87f342d4",
+        "url": "https://api.github.com/repos/ArcInstitute/cell-eval/commits/c1d0d051997821fb336461d55b91436b87f342d4",
+        "html_url": "https://github.com/ArcInstitute/cell-eval/commit/c1d0d051997821fb336461d55b91436b87f342d4"
+      },
+      {
+        "sha": "885ff84ede3a11b2846aaea369f021082fed5eda",
+        "url": "https://api.github.com/repos/ArcInstitute/cell-eval/commits/885ff84ede3a11b2846aaea369f021082fed5eda",
+        "html_url": "https://github.com/ArcInstitute/cell-eval/commit/885ff84ede3a11b2846aaea369f021082fed5eda"
+      }
+    ]
+  }
+]

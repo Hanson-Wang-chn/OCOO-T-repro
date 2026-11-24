@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-20T16:45:24+08:00",
+  "scope": "secondary unchanged-main trajectory context, not the batch-option primary contrast",
+  "score_difference": {
+    "value": 0.001447694405085631,
+    "ci95": [
+      -0.004860520112863049,
+      0.007681249275268836
+    ]
+  },
+  "observation": "One-epoch guided score gain is small and the paired interval crosses0. DEOver improves with positive interval; PD/DEPrec/threePDS/error changes do not establish a broad stable improvement. This single epoch is insufficient to infer convergence.",
+  "decision": "Keep original main training and registered E30 review. Wait for candidate-vs-reference matched all9 analysis; no implementation, inference or quality-gate change.",
+  "source": "runs/batch_dropout_mature_trial/original_epoch25_to26/comparison.json",
+  "test_access": false,
+  "new_gpu_jobs": 0
+}

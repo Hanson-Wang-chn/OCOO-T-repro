@@ -1,0 +1,125 @@
+{
+  "note": "All entries are intermediate capped validation diagnostics; fixed sampling options are stored per entry.",
+  "epochs": [
+    {
+      "time": "2026-11-22T15:54:54+08:00",
+      "epoch": 40,
+      "generation_dir": "runs/main_ddp_recovery/validation_epoch_040",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "f0938d4c8c0b53398e765311328aa5e9f01514215fce55b1440d6d6ae27baaef",
+      "metrics": {
+        "PDCorr": 0.3009033913622261,
+        "MSE": 0.009511960619905342,
+        "MAE": 0.06795647827287515,
+        "PDS_L1": 0.6958333333333333,
+        "PDS_L2": 0.7111111111111109,
+        "PDS_cos": 0.7477777777777779,
+        "DEOver": 0.09538420545319459,
+        "DEPrec": 0.07963228938881185,
+        "DirAgr": 0.7120867550042913
+      },
+      "context": "runs/main_ddp_recovery/validation_epoch_040/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-22T19:15:20+08:00",
+      "epoch": 45,
+      "generation_dir": "runs/main_ddp_recovery/validation_epoch_045",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "a909c5c4da37307097f48b8167141a60752ff1c48c0781e048fc543fa40533a3",
+      "metrics": {
+        "PDCorr": 0.3043310401029885,
+        "MSE": 0.009428679101013889,
+        "MAE": 0.0677328372374177,
+        "PDS_L1": 0.7024999999999999,
+        "PDS_L2": 0.7166666666666666,
+        "PDS_cos": 0.7472222222222222,
+        "DEOver": 0.09744126832903793,
+        "DEPrec": 0.07974728451049452,
+        "DirAgr": 0.70255015884359
+      },
+      "context": "runs/main_ddp_recovery/validation_epoch_045/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-22T22:36:46+08:00",
+      "epoch": 50,
+      "generation_dir": "runs/main_ddp_recovery/validation_epoch_050",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "28fc2f74ffa7e649eddeba86529789e25d4af180d4f7e289030b6dc601720e9c",
+      "metrics": {
+        "PDCorr": 0.29683005353435876,
+        "MSE": 0.009728854250473281,
+        "MAE": 0.06865014775345722,
+        "PDS_L1": 0.6886111111111112,
+        "PDS_L2": 0.7022222222222222,
+        "PDS_cos": 0.7380555555555556,
+        "DEOver": 0.09323939479411826,
+        "DEPrec": 0.07989413568327201,
+        "DirAgr": 0.6963117489760514
+      },
+      "context": "runs/main_ddp_recovery/validation_epoch_050/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-23T02:00:52+08:00",
+      "epoch": 55,
+      "generation_dir": "runs/main_ddp_recovery/validation_epoch_055",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 1.0,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": null,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "5d67e89e07d5817bc43ba33a0549aaefed99884a31e1f7327a12783db340bd2e",
+      "metrics": {
+        "PDCorr": 0.2895889235660434,
+        "MSE": 0.009822499600704759,
+        "MAE": 0.06905498020350934,
+        "PDS_L1": 0.6855555555555556,
+        "PDS_L2": 0.7002777777777778,
+        "PDS_cos": 0.7547222222222221,
+        "DEOver": 0.09103569027659458,
+        "DEPrec": 0.07798435242738264,
+        "DirAgr": 0.6938350391869393
+      },
+      "context": "runs/main_ddp_recovery/validation_epoch_055/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    }
+  ]
+}

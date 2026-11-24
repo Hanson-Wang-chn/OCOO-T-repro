@@ -1,0 +1,32 @@
+[
+  {
+    "name": "replogle.h5ad.zst",
+    "url": "https://huggingface.co/datasets/katarinayuan/PerturbDiff_data/resolve/10654f24cfb539d619e8221ec61eb7e878364cec/perturb_data/finetune_data/nadig_processed_data/replogle.h5ad.zst",
+    "bytes": 2549667537,
+    "sha256": "5f42388fff4a50414e67bc1b5b3685208a3b1b0b92920a6eb87bf1004e8976d8"
+  },
+  {
+    "name": "replogle_real_selected_genes.pkl",
+    "url": "https://huggingface.co/datasets/katarinayuan/PerturbDiff_data/resolve/10654f24cfb539d619e8221ec61eb7e878364cec/perturb_data/selected_genes/replogle_real_selected_genes.pkl",
+    "bytes": 16684,
+    "sha256": "e2c1ddfb36b1e9c11ad3320ba7c6d57551a895b7203d51f8c80d2bee350dae79"
+  },
+  {
+    "name": "esm2_human.pt",
+    "url": "https://huggingface.co/minwoosun/uce-misc/resolve/bffb91084e4476698984e7e01f6170ce291f4074/protein_embeddings/Homo_sapiens.GRCh38.gene_symbol_to_embedding_ESM2.pt",
+    "bytes": 410886729,
+    "sha256": "a210e1cc7901513999b2bca3836ba9e2f203cd008be4e9a9d6412a2267de9748"
+  },
+  {
+    "name": "hgnc_complete_set.tsv",
+    "url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+    "bytes": 17007798,
+    "sha256": "6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4"
+  },
+  {
+    "name": "replogle.h5ad",
+    "bytes": 22297813040,
+    "sha256": "2c53aadd1bbbaee7604b579b2592034a0b9d9bfa9eecfc6cdc622a9d2e205c77",
+    "same_as": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/blob/833d2be/replogle.h5ad"
+  }
+]

@@ -1,0 +1,39 @@
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 2040.69it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 409.27it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 2990.95it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 37008.56it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 46603.38it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 45756.04it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 45923.04it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 42799.02it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 49932.19it/s]
+Output directory runs/metric_protocol_audit/full_de_metrics already exists, potential overwrite occurring
+/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+  warnings.warn(problem)
+Running parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]Running parallel differential expression (against reference):  25%|██▌       | 1/4 [00:03<00:10,  3.61s/it]Running parallel differential expression (against reference):  75%|███████▌  | 3/4 [00:03<00:01,  1.00s/it]Running parallel differential expression (against reference): 100%|██████████| 4/4 [00:03<00:00,  1.05it/s]
+Running parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]Running parallel differential expression (against reference):  50%|█████     | 2/4 [00:00<00:00, 11.50it/s]Running parallel differential expression (against reference): 100%|██████████| 4/4 [00:00<00:00, 15.32it/s]
+Identified 4 infinite log2 fold change values (real)
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 2072.97it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 2161.27it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 3209.93it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 44462.59it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 52211.25it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 42945.09it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 52211.25it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 48582.67it/s]
+Iterating over perturbations...:   0%|          | 0/3 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 3/3 [00:00<00:00, 47482.69it/s]
+{
+  "nonidentical_prediction_protocol_comparison": true,
+  "perturbations": 3,
+  "generated_cells": 48,
+  "max_first_six_metrics_difference": 0.0,
+  "differences": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  },
+  "purpose": "Check constructor ordering, normalization and metric consistency on actual nonidentical pilot outputs; not a performance estimate."
+}

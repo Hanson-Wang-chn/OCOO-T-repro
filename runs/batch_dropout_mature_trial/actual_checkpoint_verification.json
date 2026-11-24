@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-20T10:43:15+08:00",
+  "checkpoint_step": 27950,
+  "strict_raw_model_load": true,
+  "parameters": 189,
+  "all_dual_ema_names_shapes_dtypes_match": true,
+  "all_optimizer_slots_bitwise_restored": true,
+  "actual_mature_nonzero_fully_conditional_output_bitwise_equal": true,
+  "output_max_abs_difference": 0.0,
+  "cells": 1,
+  "genes": 2000,
+  "cuda_visible_devices": "",
+  "main_training_changed": false,
+  "training_random_numbers_bitwise_audited": false,
+  "note": "Initial complete RNG state is preserved; compiled training random streams across the two interpretations have not been separately instrumented. Inference comparisons use the same private per-batch seed.",
+  "source_sha256": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+  "fork_checkpoint_sha256": "f29f6423bc775fa3cf4e2ac14454cf2ac6fbfd14809a0a4f14c5d2d5a0b2fba8"
+}

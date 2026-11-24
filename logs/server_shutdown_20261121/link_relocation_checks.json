@@ -1,0 +1,6 @@
+{
+  "dry_run_unchanged": true,
+  "apply_relative_link_and_bytes_verified": true,
+  "missing_destination_refused_before_any_change": true,
+  "source_project_links_modified": false
+}

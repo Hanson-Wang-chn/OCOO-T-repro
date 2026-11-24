@@ -1,0 +1,42 @@
+{
+  "time": "2026-11-20T07:15:11+08:00",
+  "label": "\u7b2c25\u8f6e\u56fa\u5b9aw2",
+  "purpose": "Full-population validation diagnostic to distinguish limited predicted-cell counts from model/postprocessing error. Formal calibration/gates/test remain separate.",
+  "source_dir": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/full_source_view",
+  "source_sha256": {
+    "model.pt": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+    "prediction.npy": "2689dfbf8b24c8398861585c9f1a75e5b8497b155b2f24f810d5dcdd129d52b1",
+    "prediction_raw.npy": "42cc220e1c676fd52abe44592b5fa8fb485f799d450730aed46422f71c018a69",
+    "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "evaluation_config.json": "54e024c8aafecc9345e729eeb21ddc510117f4283adfddf0070da6e1be717d44",
+    "metrics/summary.json": "3bb18c8c464fba874f84380961d79e951f2ea7939fdebb337becd0f73230f080",
+    "source_view_manifest.json": "46d106c8050efa9bbc2ecb236dd04d002d3fc0eed31005099084077b6f82e291"
+  },
+  "source_options": {
+    "noise_std": 1.0,
+    "batch_size": 16,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "step": 27950,
+  "base_cells": 960,
+  "extra_cells": 3865,
+  "full_cells": 4825,
+  "extra_seed": 62525,
+  "extra_batch_size": 32,
+  "allow_positive_cfg_extension": true,
+  "script_sha256": "f7619abaa9f713c1d32b50d975fc440e036a55d8c910e2e9cf2b4e8bb8f4952f",
+  "script_validation": "logs/tests_guided_validation_extension.log",
+  "script_validation_cases": "ordinary and positiveCFG routing, exact base preservation, explicit inference-batch routing, complete-extra resume, completed-cache hash check, unregisteredCFG rejection",
+  "model_or_training_changed": false,
+  "test_access": false,
+  "source_prefix_must_be_bitwise_preserved": true,
+  "formal_postprocess_changed": false,
+  "population_note": "Base960 retain B16/seed4242 sampling; only missing3865 use B32 and a separate fixed RNG segment. This is a nested diagnostic population, not a standard full-validation sampling cache or a formal inference selection.",
+  "after_completion": "On identical all4825 samples, recompute original9 metrics for clamp0 andfloor0.05 only. Larger truncation thresholds rejected on cap16 evidence. Keep raw arrays, complete prefix proof and original metric definitions."
+}

@@ -1,0 +1,11 @@
+--- registered helper
++++ current helper
+@@ -85,7 +85,7 @@
+                     'conditioning': 'literal_positive_dual_CFG' if guided else 'ordinary_conditional',
+                     'data_metadata_sha256': file_sha256(data.path / 'metadata.npz'),
+                     'note': 'All validation cells, preserving the complete capped prefix. '
+-                            'Extra cells use a separate RNG segment with seed+base_count. '
++                            'Extra cells use the separately registered extra_seed RNG segment. '
+                             'Nested-population diagnostic; batch sizes and RNG segments are recorded. '
+                             'Not formal calibration, gated validation or test.'}
+         protocol_path = out / 'extension_config.json'

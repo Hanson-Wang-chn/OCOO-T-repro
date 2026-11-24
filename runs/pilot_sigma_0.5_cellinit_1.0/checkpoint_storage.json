@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-18T23:36:07+08:00",
+  "run": "runs/pilot_sigma_0.5_cellinit_1.0",
+  "original_path": "/home/whs/ocoo-t/runs/pilot_sigma_0.5_cellinit_1.0/last.pt",
+  "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt",
+  "bytes": 2818998755,
+  "sha256": "4b6a199ce8144420c38597e625374bfd0bb90efa968673207ca521cc8b8c00e6",
+  "step": 384,
+  "full_model_optimizer_ema_rng_retained": true,
+  "original_path_is_symlink": true
+}

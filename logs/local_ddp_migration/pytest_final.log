@@ -1,0 +1,19 @@
+.......................................ss............................s.. [ 85%]
+............                                                             [100%]
+=============================== warnings summary ===============================
+tests/test_postprocess_workflow.py: 46 warnings
+tests/test_validation_cache_promotion.py: 10 warnings
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/cell_eval/_evaluator.py:119: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_postprocess_workflow.py::test_full_selection_and_promotion_match_real_metrics_and_are_idempotent
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+    warnings.warn(problem)
+
+tests/test_postprocess_workflow.py: 46 warnings
+tests/test_validation_cache_promotion.py: 10 warnings
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/cell_eval/_types/_de.py:32: DeprecationWarning: the string cache has been replaced by pl.Categories
+    with pl.StringCache():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+81 passed, 3 skipped, 113 warnings in 24.52s

@@ -1,0 +1,434 @@
+[
+  {
+    "path": "runs/pilot_sigma_1.0/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_cellinit_1.0/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_cellinit_1.0/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_cellinit_1.0/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_cellinit_1.0/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_cellinit_1.0/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_guidance_boundary/ema_none",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_none",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_0p6666666667",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_1",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_1p5",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_merge_cache_check/ema_cfg_2",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_none",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_none",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_0p6666666667",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_0p6666666667",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_1",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_1p5",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_1p5",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_2",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_2p5",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_2p5",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch020_all_scales/ema_cfg_3",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary/ema_cfg_3",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/snapshots/step_27950/full.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/snapshots/step_29068/full.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch026/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch026/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/snapshots/step_33540/full.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch030/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch030/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/snapshots/step_39130/full.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch035/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/snapshots/step_40248/full.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch036/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch036/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/conditioning_epoch_025/source_snapshot.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch025/full.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/metrics",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/prediction.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction.npy",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/prediction_raw.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/prediction_raw.npy",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/indices.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/indices.npy",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/generation_state.json",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/generation_state.json",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/evaluation_config.json",
+    "link": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/candidate/evaluation_config.json",
+    "exists": true
+  },
+  {
+    "path": "runs/main_v1/interim_epoch025_fixed_cfg/full_source_view/model.pt",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_1.0_t1000_cellinit_1.0/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/batch_dropout_mature_trial/reference/model.pt",
+    "link": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt",
+    "resolved": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/reference.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/batch_dropout_mature_trial/candidate/model.pt",
+    "link": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/candidate.pt",
+    "resolved": "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/candidate.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_sigma_0.5_t1000_cellinit_1.0/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_pert_projection_separate/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_pert_projection_separate/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_pert_projection_separate/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_pert_projection_separate/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_pert_projection_separate/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_xpred_vloss/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_xpred_vloss/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_xpred_vloss/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_xpred_vloss/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_xpred_vloss/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_value_fanin/best_denoise.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/best_denoise.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/best_denoise.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_value_fanin/last.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilots/pilot_value_fanin/last.pt",
+    "exists": true
+  },
+  {
+    "path": "runs/pilot_value_fanin/final_ema.pt",
+    "link": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/final_ema.pt",
+    "resolved": "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference/pilot_value_fanin/final_ema.pt",
+    "exists": true
+  },
+  {
+    "path": "logs/legacy_inference_step1871/data",
+    "link": "/home/whs/ocoo-t/data",
+    "resolved": "/home/whs/ocoo-t/data",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch020/metrics",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/metrics_de_diagnostic",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/metrics_de_diagnostic",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch020/indices.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/indices.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/indices.npy",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch020/generation_state.json",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/generation_state.json",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/generation_state.json",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch020/prediction.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction.npy",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch020/prediction_raw.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction_raw.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/prediction_raw.npy",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch025/metrics",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/metrics_de_diagnostic",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/metrics_de_diagnostic",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch025/indices.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/indices.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/indices.npy",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch025/generation_state.json",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/generation_state.json",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/generation_state.json",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch025/prediction.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction.npy",
+    "exists": true
+  },
+  {
+    "path": "logs/checkpoint_factor_periodic_view/epoch025/prediction_raw.npy",
+    "link": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction_raw.npy",
+    "resolved": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/prediction_raw.npy",
+    "exists": true
+  }
+]

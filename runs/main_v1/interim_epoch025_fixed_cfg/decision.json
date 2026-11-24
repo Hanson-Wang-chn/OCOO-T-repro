@@ -1,0 +1,131 @@
+{
+  "time": "2026-11-20T06:54:47+08:00",
+  "status": "completed_reviewed",
+  "decision": "Continue original full-data training. Fixed positive-CFG generation progresses from epoch20 to25 despite the weak ordinary-generation change. DEPrec declines, so this is not a full performance repair or paper parity; retain all9 and diagnose expression support on CPU without new GPU work or changing inference defaults.",
+  "primary_change": {
+    "value": 0.040753539189975374,
+    "ci95": [
+      0.01884886049768971,
+      0.06419916949249882
+    ]
+  },
+  "metric_changes": {
+    "PDCorr": {
+      "metric": "PDCorr",
+      "reference": 0.26780689170821764,
+      "candidate": 0.28754191237967464,
+      "difference": 0.019735020671456993,
+      "ci95": [
+        0.009132792432798555,
+        0.031799718816522125
+      ]
+    },
+    "DEOver": {
+      "metric": "DEOver",
+      "reference": 0.10897938537034076,
+      "candidate": 0.1127715238640063,
+      "difference": 0.0037921384936655395,
+      "ci95": [
+        -0.005933378433257789,
+        0.01855556279315951
+      ]
+    },
+    "DEPrec": {
+      "metric": "DEPrec",
+      "reference": 0.09173765885150174,
+      "candidate": 0.08622879344459407,
+      "difference": -0.005508865406907676,
+      "ci95": [
+        -0.011619015397537558,
+        -0.00022475131320875993
+      ]
+    },
+    "DirAgr": {
+      "metric": "DirAgr",
+      "reference": 0.672418082273102,
+      "candidate": 0.6918600832790334,
+      "difference": 0.01944200100593141,
+      "ci95": [
+        -0.02310635678283197,
+        0.06924202585964451
+      ]
+    },
+    "PDS_L1": {
+      "metric": "PDS_L1",
+      "reference": 0.7552777777777778,
+      "candidate": 0.7719444444444445,
+      "difference": 0.01666666666666672,
+      "ci95": [
+        0.001104166666666626,
+        0.03277777777777792
+      ]
+    },
+    "PDS_L2": {
+      "metric": "PDS_L2",
+      "reference": 0.7663888888888889,
+      "candidate": 0.7852777777777777,
+      "difference": 0.018888888888888844,
+      "ci95": [
+        0.007770833333333119,
+        0.031111111111111093
+      ]
+    },
+    "PDS_cos": {
+      "metric": "PDS_cos",
+      "reference": 0.7388888888888889,
+      "candidate": 0.7663888888888889,
+      "difference": 0.02749999999999997,
+      "ci95": [
+        0.007770833333333441,
+        0.05222916666666712
+      ]
+    },
+    "MSE": {
+      "metric": "MSE",
+      "reference": 0.01939240605570371,
+      "candidate": 0.020757763118793522,
+      "difference": 0.0013653570630898122,
+      "ci95": [
+        -0.0006530436112855986,
+        0.006225614630384381
+      ]
+    },
+    "MAE": {
+      "metric": "MAE",
+      "reference": 0.09411315793792402,
+      "candidate": 0.09505822968979673,
+      "difference": 0.0009450717518727086,
+      "ci95": [
+        -0.0010047279857099065,
+        0.004343710131943251
+      ]
+    }
+  },
+  "all9": "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/summary.json",
+  "context": "runs/main_v1/interim_epoch025_fixed_cfg/context/context_diagnostics.json",
+  "checkpoint_comparison_proof": {
+    "training_config_equal": true,
+    "model_tensor_schema_equal": true,
+    "frozen_buffers_bitwise_equal": true,
+    "checkpoints": [
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_020/model.pt",
+        "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+        "step": 22360
+      },
+      {
+        "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+        "checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+        "step": 27950
+      }
+    ]
+  },
+  "fixed_protocol": "EMA0.9996, w2, interval[.1,.9], cap16/B16,960validationcells,seed4242,uniformHeun50",
+  "selection_implication": "Both current ordinary and fixed-CFG comparisons prefer epoch25 over20. Preserve periodic checkpoints and review fixed-guidance progress at epoch30; do not infer convergence solely from ordinary scores. Current convergence rule and formal checkpoint selection are unchanged.",
+  "next_periodic_epoch": 30,
+  "new_gpu_jobs_queued": false,
+  "main_training_changed": false,
+  "formal_inference_selected": false,
+  "test_access": false,
+  "limitations": "One fixed generation seed and60-perturbation paired intervals, not independent training-seed uncertainty; not full-population calibration, full gated validation or test."
+}

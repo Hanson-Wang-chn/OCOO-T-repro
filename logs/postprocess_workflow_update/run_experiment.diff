@@ -1,0 +1,100 @@
+--- logs/postprocess_workflow_update/run_experiment_before.py
++++ scripts/run_experiment.py
+@@ -38,6 +38,7 @@
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--config',required=True)
++    p.add_argument('--postprocess-plan',help='Opt-in registered full-validation zero-floor selection; default original clamp0 workflow')
+     p.add_argument('--min-val-pdcorr',type=float,default=.35);p.add_argument('--min-val-pds',type=float,default=.75)
+     p.add_argument('--min-val-pds-each',type=float,default=.70)
+     p.add_argument('--max-val-mse',type=float,default=.02);p.add_argument('--max-val-mae',type=float,default=.09)
+@@ -45,10 +46,17 @@
+     p.add_argument('--min-val-diragr',type=float,default=.70);a=p.parse_args()
+     cfg=yaml.safe_load(open(a.config));run=Path(cfg['run_dir']);run.mkdir(exist_ok=True,parents=True)
+     if cfg['training'].get('train_subset'):raise ValueError('This workflow is for full-data experiments, not pilots')
++    if a.postprocess_plan:
++        from ocoot.postprocess import DEFAULT_THRESHOLDS
++        postprocess_plan=json.loads(Path(a.postprocess_plan).read_text())
++        thresholds={key:getattr(a,key) for key in DEFAULT_THRESHOLDS}
++        if postprocess_plan['quality_thresholds']!=thresholds or thresholds!=DEFAULT_THRESHOLDS:
++            raise ValueError('Optional postprocessing must preserve every original validation threshold')
+     with exclusive_run(run,'pipeline'):
+         (run/'pipeline.pid').write_text(str(os.getpid()))
+         def state(stage,**extra):
+             value={'time':timestamp(),'pid':os.getpid(),'stage':stage,'config':str(Path(a.config).resolve()),**extra}
++            if a.postprocess_plan:value['postprocess_plan_sha256']=file_sha256(a.postprocess_plan)
+             tmp=run/'pipeline_state.tmp';tmp.write_text(json.dumps(value,indent=2));tmp.replace(run/'pipeline_state.json')
+             log_event(run/'events.jsonl',{'event':'pipeline','stage':stage,**extra})
+         def execute(args,cpu_only=False):
+@@ -72,17 +80,38 @@
+             calibration=run/'calibration'
+             if not (calibration/'selected.json').exists():
+                 state('calibrating_validation');execute(['scripts/calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(calibration)])
+-            selected=json.loads((calibration/'selected.json').read_text())
++            selection_file=calibration/'selected.json'
++            if a.postprocess_plan:
++                postprocessing=calibration/'postprocessing'
++                state('selecting_full_validation_postprocess')
++                try:
++                    execute(['scripts/select_validation_postprocess.py','--calibration',str(calibration),
++                             '--outdir',str(postprocessing),'--plan',a.postprocess_plan],cpu_only=True)
++                except subprocess.CalledProcessError as error:
++                    if error.returncode!=2:raise
++                    review_file=postprocessing/'review.json'
++                    if not review_file.exists() or json.loads(review_file.read_text()).get('selected') is not None:raise
++                    state('validation_needs_review',postprocess_review=str(postprocessing/'review.json'))
++                    readme_event(f'`{run}` 的完整0/.05验证候选均未通过原质量检查，保留结果并停在测试前；见 `{postprocessing}/review.json`。')
++                    raise SystemExit(2)
++                selection_file=postprocessing/'selected.json'
++            selected=json.loads(selection_file.read_text())
+             if selected['checkpoint_sha256']!=file_sha256(selected['checkpoint']):raise ValueError('Selected checkpoint changed')
+             w=selected.get('guidance')
+             if (selected.get('formal_guidance_policy')!='literal_dual_cfg_positive_scale' or
+                     w is None or not math.isfinite(w) or w<=0):
+                 raise ValueError('Formal reproduction requires literal dual-CFG with a positive scale; rerun validation calibration')
+-            validation=run/'validation_full'
++            validation=run/('validation_full_postprocess' if a.postprocess_plan else 'validation_full')
+             reuse=(selected.get('cap') is None and selected.get('cache_provenance') is not None
+                    and ((validation/'promotion_config.json').exists()
+                         or not (validation/'generation_state.json').exists()))
+-            if reuse:
++            if a.postprocess_plan:
++                if selected.get('cap') is not None or selected.get('cache_provenance') is None:
++                    raise ValueError('Optional postprocessing requires a complete raw refinement cache')
++                state('full_validation_de_reusing_calibration_postprocess')
++                execute(['scripts/promote_validation_cache.py','--calibration',str(calibration),
++                         '--selection',str(selection_file),'--outdir',str(validation)],cpu_only=True)
++            elif reuse:
+                 state('full_validation_de_reusing_calibration')
+                 execute(['scripts/promote_validation_cache.py','--calibration',str(calibration),'--outdir',str(validation)],cpu_only=True)
+             elif not (validation/'metrics/summary.json').exists():
+@@ -95,17 +124,25 @@
+                     'DirAgr':metrics['DirAgr']>=a.min_val_diragr,
+                     **{k:metrics[k]>=a.min_val_pds_each for k in ['PDS_L1','PDS_L2','PDS_cos']}}
+             validation_review={'metrics':metrics,'checks':checks,
+-                               'thresholds':{k:v for k,v in vars(a).items() if k!='config'},
++                               'thresholds':{k:v for k,v in vars(a).items() if k not in ('config','postprocess_plan')},
+                                'note':'Validation-only engineering checks, not a declaration of agreement with paper test performance.'}
+-            (run/'validation_review.json').write_text(json.dumps(validation_review,indent=2))
++            review_path=run/('validation_postprocess_review.json' if a.postprocess_plan else 'validation_review.json')
++            review_path.write_text(json.dumps(validation_review,indent=2))
+             if not all(checks.values()):
+                 state('validation_needs_review',**validation_review)
+                 readme_event(f'`{run}` 的完整验证未通过预设质量检查，保留全部结果并停止在测试集之前；需排查/优化。指标见 `{validation}/metrics/summary.json`。')
+                 raise SystemExit(2)
+-            test=run/'test_full'
+-            if not (test/'metrics/summary.json').exists():
++            test=run/('test_full_postprocess' if a.postprocess_plan else 'test_full')
++            if a.postprocess_plan:
++                state('full_test_de_with_frozen_postprocess')
++                execute(['scripts/evaluate_postprocess.py','--selection',str(selection_file),
++                         '--validation-dir',str(validation),'--baseline-outdir',str(run/'test_full_clamp0'),
++                         '--outdir',str(test)])
++            elif not (test/'metrics/summary.json').exists():
+                 state('full_test_de');evaluate(selected,'test',test)
+             state('reporting');execute(['scripts/report.py','--evaluation-dir',str(test),'--outdir',str(run/'results')])
++            if a.postprocess_plan:
++                execute(['scripts/report.py','--evaluation-dir',str(run/'test_full_clamp0'),'--outdir',str(run/'results_clamp0')])
+             execute(['scripts/plot_progress.py',str(run)])
+             summary=json.loads((test/'metrics/summary.json').read_text())
+             state('evaluated',test_metrics=summary,report=str(run/'results/REPORT.md'))

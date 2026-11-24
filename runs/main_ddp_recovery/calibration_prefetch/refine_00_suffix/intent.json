@@ -1,0 +1,21 @@
+{
+  "time": "2026-11-23T03:35:20+08:00",
+  "parent_pid": 236455,
+  "child_pid": 236464,
+  "reason": "repartition validation suffix; preserve committed prefix",
+  "marker": {
+    "completed": 1568,
+    "total": 4825,
+    "options": {
+      "noise_std": 1.0,
+      "batch_size": 32,
+      "steps": 50,
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": false,
+      "seed": 4242
+    }
+  },
+  "test_access": false
+}

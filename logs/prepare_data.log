@@ -1,0 +1,44 @@
+{
+  "train": {
+    "cells": 572545,
+    "perturbations": 2013,
+    "cell_lines": [
+      "hepg2",
+      "jurkat",
+      "k562",
+      "rpe1"
+    ]
+  },
+  "validation": {
+    "cells": 4825,
+    "perturbations": 60,
+    "cell_lines": [
+      "hepg2"
+    ]
+  },
+  "test": {
+    "cells": 26878,
+    "perturbations": 380,
+    "cell_lines": [
+      "hepg2"
+    ]
+  },
+  "control": {
+    "cells": 39165,
+    "perturbations": 1,
+    "cell_lines": [
+      "hepg2",
+      "jurkat",
+      "k562",
+      "rpe1"
+    ]
+  },
+  "embedding_coverage": {
+    "total": 3618,
+    "matched": 3545,
+    "hvg_missing": 70
+  },
+  "batch_combinations": 56,
+  "original_gem_group_labels": 56,
+  "normalization": "Published normalized log1p X_hvg retained without rescaling; validated against X and fixed HVGs."
+}

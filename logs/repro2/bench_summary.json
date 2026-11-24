@@ -1,0 +1,53 @@
+{
+  "time": "2026-11-23T12:50:30+08:00",
+  "runs": {
+    "16": {
+      "event": "benchmark_result",
+      "start_step": 50310,
+      "first_timed_step": 50313,
+      "end_step": 50324,
+      "seconds": 22.899365602061152,
+      "cells_per_sec": 268.3043760586531,
+      "loss": 0.3402305841445923,
+      "grad_norm": 0.07801473885774612,
+      "peak_gpu_GB": 18.469584896,
+      "world_size": 4,
+      "local_micro_batch": 16,
+      "accumulation": 8,
+      "accumulation_by_rank": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "global_batch": 512,
+      "gpu": "NVIDIA A100-PCIE-40GB",
+      "dynamo_ddp_optimizer": false,
+      "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt"
+    },
+    "32": {
+      "event": "benchmark_result",
+      "start_step": 50310,
+      "first_timed_step": 50313,
+      "end_step": 50324,
+      "seconds": 22.797545325011015,
+      "cells_per_sec": 269.50269919013886,
+      "loss": 0.34827035665512085,
+      "grad_norm": 0.13833831250667572,
+      "peak_gpu_GB": 32.022853632,
+      "world_size": 4,
+      "local_micro_batch": 32,
+      "accumulation": 4,
+      "accumulation_by_rank": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "global_batch": 512,
+      "gpu": "NVIDIA A100-PCIE-40GB",
+      "dynamo_ddp_optimizer": false,
+      "resume_checkpoint": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch045_ddp_recovery/full.pt"
+    }
+  }
+}

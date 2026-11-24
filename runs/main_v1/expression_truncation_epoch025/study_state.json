@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-20T07:02:07+08:00",
+  "pid": 964485,
+  "stage": "complete",
+  "cases": [
+    "case_00",
+    "case_01",
+    "case_02",
+    "case_03",
+    "case_04",
+    "case_05",
+    "case_06",
+    "case_07",
+    "case_08"
+  ],
+  "formal_postprocess_selected": false
+}

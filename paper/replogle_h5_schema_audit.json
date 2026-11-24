@@ -1,0 +1,161 @@
+{
+  "time": "2026-11-18T16:35:32+08:00",
+  "url": "https://huggingface.co/datasets/arcinstitute/Replogle-Nadig-Preprint/resolve/833d2be9f604dd656ebaddf875d9ad3fbf5dda0d/replogle.h5ad",
+  "revision": "833d2be9f604dd656ebaddf875d9ad3fbf5dda0d",
+  "file_size": 22297813040,
+  "file_sha256_from_pinned_lfs_metadata": "2c53aadd1bbbaee7604b579b2592034a0b9d9bfa9eecfc6cdc622a9d2e205c77",
+  "metadata_bytes_transferred": 630832,
+  "http_ranges": [
+    [
+      0,
+      65535
+    ],
+    [
+      22297772032,
+      22297813039
+    ],
+    [
+      17150443520,
+      17150509055
+    ],
+    [
+      17150312448,
+      17150377983
+    ],
+    [
+      17094148096,
+      17094213631
+    ],
+    [
+      17149394944,
+      17149460479
+    ],
+    [
+      17144283136,
+      17144348671
+    ],
+    [
+      17140219904,
+      17140285439
+    ],
+    [
+      17141661696,
+      17141727231
+    ],
+    [
+      17150050304,
+      17150115839
+    ]
+  ],
+  "expression_datasets_read": false,
+  "schema": {
+    "root_keys": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "obsp",
+      "uns",
+      "var",
+      "varm",
+      "varp"
+    ],
+    "root": {
+      "X": {
+        "kind": "dataset",
+        "shape": [
+          643413,
+          6642
+        ],
+        "dtype": "float32",
+        "compression": null,
+        "encoding-type": "array",
+        "encoding-version": "0.2.0"
+      },
+      "layers": {
+        "kind": "group",
+        "keys": [],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      },
+      "obs": {
+        "kind": "group",
+        "keys": [
+          "UMI_count",
+          "cell_barcode",
+          "cell_line",
+          "gem_group",
+          "gene",
+          "gene_id",
+          "gene_transcript",
+          "mitopercent",
+          "sgID_AB",
+          "transcript",
+          "z_gemgroup_UMI"
+        ],
+        "encoding-type": "dataframe",
+        "encoding-version": "0.2.0"
+      },
+      "obsm": {
+        "kind": "group",
+        "keys": [
+          "X_hvg"
+        ],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      },
+      "obsp": {
+        "kind": "group",
+        "keys": [],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      },
+      "uns": {
+        "kind": "group",
+        "keys": [
+          "hvg"
+        ],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      },
+      "var": {
+        "kind": "group",
+        "keys": [
+          "dispersions",
+          "dispersions_norm",
+          "gene_name_index",
+          "highly_variable",
+          "means"
+        ],
+        "encoding-type": "dataframe",
+        "encoding-version": "0.2.0"
+      },
+      "varm": {
+        "kind": "group",
+        "keys": [],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      },
+      "varp": {
+        "kind": "group",
+        "keys": [],
+        "encoding-type": "dict",
+        "encoding-version": "0.1.0"
+      }
+    },
+    "obsm": {
+      "X_hvg": {
+        "kind": "dataset",
+        "shape": [
+          643413,
+          2000
+        ],
+        "dtype": "float32",
+        "compression": null,
+        "encoding-type": "array",
+        "encoding-version": "0.2.0"
+      }
+    },
+    "layers": {}
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-22T13:46:23+08:00",
+  "source": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+  "source_step": 41374,
+  "source_sha256": "cf418b1615a7ec4c48906f931a21c08a50564f2938816d117b18d1fbedc00df8",
+  "original_run_dir": "runs/main_v1",
+  "recovery_run_dir": "runs/main_ddp_recovery",
+  "inherited_selection": {
+    "best_generation.pt": {
+      "sha256": "90293f57dd86dbb8d2fe8f2b917c62e91866438b6c416c165074884825be0ef6",
+      "step": 39130
+    },
+    "best_denoise.pt": {
+      "sha256": "afd04b1e5bae69fa659f85dc29d28fca98179653a5d50c5c104aba60fdfb874b",
+      "step": 37750
+    }
+  },
+  "pending_generation_epoch": null,
+  "earliest_early_stop_epoch": 45,
+  "recovery_config_sha256": "8f7879073877c89c15bc41ea3102b19f7bc182bf755ab0a4e4e37fb6496377e9",
+  "test_access": false
+}

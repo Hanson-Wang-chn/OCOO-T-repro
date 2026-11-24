@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-21T18:52:44+08:00",
+  "status": "reviewed_keep_existing_training_and_generation_protocol",
+  "plan_sha256": "b6432299ddee933042da276fa7250271a8cd09e04ba95a609b8ffac49e2846be",
+  "completed_sha256": "d99c614df15e14aa18ff5f6264ce3d191dbd9ff83ebcc016532671361a016983",
+  "summary_sha256": "2eaed45a472b53336981d4e3280763c576a4402cbdca7c11f8066018b4db4423",
+  "figure_visually_reviewed": true,
+  "scope": "CPU diagnostic of frozen E25 mixed-RNG full-validation cache only; independent of live E35 full calibration",
+  "actual_outputs_verified": true,
+  "math_CPU_checks_passed": 4,
+  "clamp0": {
+    "official_MSE_all60_unchanged": 0.014458370274708917,
+    "estimable_conditions": 60,
+    "mean_official_MSE_same_estimable_conditions": 0.014458370274708868,
+    "mean_repeated_strata_MC_contribution": 0.000981199598783485,
+    "mean_common_variance_pooled_proxy": 0.0023216604613240668,
+    "repeated_component_to_observed_ratio": 0.06786377580188527,
+    "pooled_proxy_to_observed_ratio": 0.16057552941393427,
+    "mean_repeated_cell_fraction": 0.5011205531220236,
+    "mean_observed_MSE_minus_assumption_based_proxy": 0.012136709813384805,
+    "maximum_independent_MSE_scope_check_difference": 9.527185845792374e-09,
+    "all_conditions_all_strata_repeated": false
+  },
+  "stratum_coverage_range": [
+    0.1875,
+    0.9714285714285714
+  ],
+  "all_three_transforms_maximum_MSE_scope_difference": 9.527185845792374e-09,
+  "interpretation": [
+    "Repeated-stratum terms estimate only identifiable conditional mean-sampling variance components. Singleton variances remain unidentified.",
+    "Under an additional unverified common within-stratum variance assumption, pooled proxy is about16.1% of observed clamp0 MSE. This conditional result does not establish an error fraction or a bound.",
+    "Finite generation can contribute to error, but these results do not justify attributing the entire performance gap to generation count or changing the registered count.",
+    "Official CellEval MSE covers all2000 genes; target exclusion is metric-specific (PDS), not a shared MSE mask.",
+    "Real validation means are fixed. Old E25 mixed-RNG outputs cannot establish E35 full-validation quality or model-seed uncertainty."
+  ],
+  "action": "Keep original main, both E35 full refinements, existing CPU0/.05 review and early stopping. Review current full-validation metrics before selecting a new controlled trial.",
+  "official_metric_correction_applied": false,
+  "training_or_sampling_change": false,
+  "postprocess_adopted": false,
+  "test_access": false
+}

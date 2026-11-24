@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-18T23:17:13+08:00",
+  "status": "registered before evaluation",
+  "sigmas": [
+    0,
+    0.0001,
+    0.001,
+    0.01,
+    0.03,
+    0.05
+  ],
+  "seed": 6321,
+  "population": "All4825 measured validation cells; controls remain real and identical. Only entries exactly0 receive max(0,sigma*N(0,1)); every positive stays unchanged. Same standard-normal draws for every sigma.",
+  "hypothesis": "Continuous near-zero residuals can break the real zero ties and affect Wilcoxon/FDR DE much more than pseudobulk scores. Establish metric sensitivity separately from model error.",
+  "model_predictions_used": false,
+  "model_or_training_change": false,
+  "metric_change": false,
+  "test_access": false,
+  "script_sha256": "b0adb327329c913551b6dbdc11a78ea89574365a6d89e6a562a0c1403faae65e",
+  "metric_source_sha256": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "note": "A synthetic measured-data diagnostic; never treat these results as OCOO-T performance or a valid substitute prediction. No postprocess is adopted by this experiment."
+}

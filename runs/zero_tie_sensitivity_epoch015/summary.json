@@ -1,0 +1,145 @@
+{
+  "time": "2026-11-18T23:18:33+08:00",
+  "plan_sha256": "7e45ca2dfe47e3095fc8dddb6719ae5a37d31eaee9963251d6a257ffe8c6f152",
+  "real_validation_cells": 4825,
+  "perturbations": 60,
+  "real_zero_fraction": 0.5557973056994818,
+  "seed": 6321,
+  "records": [
+    {
+      "sigma": 0,
+      "metrics": {
+        "PDCorr": 0.9999999731779099,
+        "MSE": 0.0,
+        "MAE": 0.0,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.8833333333333333,
+        "DEPrec": 0.8833333333333333,
+        "DirAgr": 1.0
+      },
+      "zero_fraction": 0.5557973056994818,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 0.0,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 28.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    },
+    {
+      "sigma": 0.0001,
+      "metrics": {
+        "PDCorr": 0.9999999672174453,
+        "MSE": 6.335732744000566e-10,
+        "MAE": 2.1991765940280554e-05,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.2754065052648348,
+        "DEPrec": 0.11655846265083387,
+        "DirAgr": 1.0
+      },
+      "zero_fraction": 0.2782497409326425,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 2.213915243183584e-05,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "844496510893437c56ca6bb120ea083178e462235bddac1a2a9364e4983f90aa",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 1198.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    },
+    {
+      "sigma": 0.001,
+      "metrics": {
+        "PDCorr": 0.9999984155098597,
+        "MSE": 6.335725242223588e-08,
+        "MAE": 0.00021991758282335165,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.2762501843530789,
+        "DEPrec": 0.11655846265083387,
+        "DirAgr": 1.0
+      },
+      "zero_fraction": 0.2782497409326425,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 0.00022139154043173027,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "f0f906349c268606f5a5574473231fba02cbfc0e8b811b3ec07dbc003e72e667",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 1198.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    },
+    {
+      "sigma": 0.01,
+      "metrics": {
+        "PDCorr": 0.9998403668403626,
+        "MSE": 6.335723658897526e-06,
+        "MAE": 0.002199175818047176,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.2842458296419122,
+        "DEPrec": 0.11655846265083387,
+        "DirAgr": 1.0
+      },
+      "zero_fraction": 0.2782497409326425,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 0.002213915249486811,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "f5cfaed910d40f00152950aad001de7cd84f377ae4fc291987b41a727b709e93",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 1198.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    },
+    {
+      "sigma": 0.03,
+      "metrics": {
+        "PDCorr": 0.998558567961057,
+        "MSE": 5.702151411242084e-05,
+        "MAE": 0.006597527403694888,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.30646603071936124,
+        "DEPrec": 0.11655846265083387,
+        "DirAgr": 0.9999248788671733
+      },
+      "zero_fraction": 0.2782497409326425,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 0.006641745748763026,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "94f3c8de26ad9e0c4d2d081783e42ba1ce0f0de5d12d8e01084de1cf1a70c284",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 1198.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    },
+    {
+      "sigma": 0.05,
+      "metrics": {
+        "PDCorr": 0.9959982722997666,
+        "MSE": 0.00015839310556960604,
+        "MAE": 0.010995879474406441,
+        "PDS_L1": 1.0,
+        "PDS_L2": 1.0,
+        "PDS_cos": 1.0,
+        "DEOver": 0.3051219375990198,
+        "DEPrec": 0.11655614785126361,
+        "DirAgr": 0.9993536740570858
+      },
+      "zero_fraction": 0.2782497409326425,
+      "positive_entries_unchanged": true,
+      "mean_abs_change": 0.011069576685696912,
+      "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+      "synthetic_sha256": "ab3e6a0e953cebe37ecd8e368811028fa5f14bb3a8acfba2bb8af60af71a771b",
+      "median_real_significant": 28.0,
+      "median_synthetic_significant": 1198.0,
+      "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+    }
+  ],
+  "model_predictions_used": false,
+  "test_access": false,
+  "note": "Controls stay exactly real, as in the paper protocol. Identity and its zero-only perturbations share the same measured cells; this is a controlled metric sensitivity check, not independent generation."
+}

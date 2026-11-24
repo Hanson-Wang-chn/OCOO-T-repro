@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-21T17:26:28+08:00",
+  "settings_in_original_algorithm_order": [
+    {
+      "tag": "screen_full_interval",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "score": 1.1219200910188052
+    },
+    {
+      "tag": "screen_04",
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "score": 1.103315399955544
+    }
+  ],
+  "policy": "Unchanged original positive-CFG primary-score ranking; ordinary field excluded",
+  "full_refinement_cells_each": 4825,
+  "full_metrics_pending": true,
+  "final_protocol_adopted": false,
+  "screen_snapshot_sha256": "ba45840a8391bb73f8a64ce4cc05fd207050c2ace5c2ff4cf9c341e78aa5199c",
+  "test_access": false
+}

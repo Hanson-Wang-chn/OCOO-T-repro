@@ -1,0 +1,30 @@
+{
+  "time": "2026-11-23T03:36:30+08:00",
+  "case": "refine_01",
+  "candidate_floors": [
+    0.05,
+    0.07
+  ],
+  "train_hepg2_min_positive": 0.07278690487146378,
+  "seed": 9232,
+  "draws": 2000,
+  "selection_or_test_authorized": false,
+  "test_access": false,
+  "plan_note": "Use immutable full validation raw predictions and compare an earlier independently registered .07 cutoff below the minimum positive training value against .05. Compare all nine metrics and retain the formal selector unchanged.",
+  "raw_sha256": "bcf13b49716311384896faaea6d197ec535404551faad188b91bfa6d869298ca",
+  "indices_sha256": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+  "marker": {
+    "completed": 4825,
+    "total": 4825,
+    "options": {
+      "noise_std": 1.0,
+      "batch_size": 32,
+      "steps": 50,
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "clamp": false,
+      "seed": 4242
+    }
+  }
+}

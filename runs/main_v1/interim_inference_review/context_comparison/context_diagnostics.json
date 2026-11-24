@@ -1,0 +1,105 @@
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "ema_none": {
+      "source": "runs/main_v1/interim_inference_review/ema_none",
+      "generated_cells": 480,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 480,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.03141824214243406,
+        "jurkat": 0.12118533057418704,
+        "k562": 0.09530942519305867,
+        "rpe1": 0.10885243821569343
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.1322966568999341,
+        "clipped": 0.08169731109455003,
+        "raw_ratio_to_real": 1.04821695452485,
+        "clipped_ratio_to_real": 0.6473066563818902
+      },
+      "metrics": {
+        "PDCorr": 0.12425128307659179,
+        "MSE": 0.05000851613779863,
+        "MAE": 0.14807482088605564,
+        "PDS_L1": 0.5158333333333333,
+        "PDS_L2": 0.5194444444444445,
+        "PDS_cos": 0.5086111111111111
+      }
+    },
+    "raw_none": {
+      "source": "runs/main_v1/interim_inference_review/raw_none",
+      "generated_cells": 480,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 480,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0012567275803956695,
+        "jurkat": 0.1480511086450319,
+        "k562": 0.11411157151811023,
+        "rpe1": 0.11031887506756206
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.10798349249881616,
+        "clipped": 0.10561493534258504,
+        "raw_ratio_to_real": 0.8555781400559521,
+        "clipped_ratio_to_real": 0.83681151490381
+      },
+      "metrics": {
+        "PDCorr": 0.21237969167462628,
+        "MSE": 0.021035628238071997,
+        "MAE": 0.10353408480683962,
+        "PDS_L1": 0.6044444444444445,
+        "PDS_L2": 0.6047222222222222,
+        "PDS_cos": 0.5619444444444445
+      }
+    },
+    "ema_cfg_1": {
+      "source": "runs/main_v1/interim_inference_review/ema_cfg_1",
+      "generated_cells": 480,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 480,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.022394164061274306,
+        "jurkat": 0.15134656943816613,
+        "k562": 0.11939298807140056,
+        "rpe1": 0.12745854273733098
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12999429116291797,
+        "clipped": 0.07656258657870117,
+        "raw_ratio_to_real": 1.0299747792680494,
+        "clipped_ratio_to_real": 0.6066230486441814
+      },
+      "metrics": {
+        "PDCorr": 0.16499076782104868,
+        "MSE": 0.04007872436195612,
+        "MAE": 0.1346730176359415,
+        "PDS_L1": 0.5222222222222221,
+        "PDS_L2": 0.5280555555555555,
+        "PDS_cos": 0.5097222222222223
+      }
+    }
+  }
+}

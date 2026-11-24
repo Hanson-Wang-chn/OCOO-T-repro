@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-21T13:03:45+08:00",
+  "stage": "completed_review_required",
+  "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+  "step": 39130,
+  "fixed_score_difference": {
+    "value": 0.011156461291118802,
+    "ci95": [
+      -0.007622752507402796,
+      0.031300992555877226
+    ]
+  },
+  "periodic_score_difference": {
+    "value": 0.009552101189415074,
+    "ci95": [
+      -0.010146107371788452,
+      0.032353939150775404
+    ]
+  },
+  "fixed_comparison_sha256": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+  "periodic_comparison_sha256": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+  "automatic_checkpoint_or_convergence_change": false,
+  "test_access": false
+}

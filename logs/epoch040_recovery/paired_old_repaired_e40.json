@@ -1,0 +1,290 @@
+{
+  "time": "2026-11-22T15:56:34+08:00",
+  "epoch": 40,
+  "step": 44720,
+  "same_indices_and_sampling": true,
+  "bootstrap": 2000,
+  "seed": 9232,
+  "summary": {
+    "original_e40": {
+      "metrics": {
+        "PDCorr": {
+          "value": 0.18819195442677786,
+          "ci95": [
+            0.15189564344143341,
+            0.22194861116760875
+          ],
+          "finite_perturbations": 60
+        },
+        "DEOver": {
+          "value": 0.08985507077680448,
+          "ci95": [
+            0.059792115588739043,
+            0.12447976450711092
+          ],
+          "finite_perturbations": 60
+        },
+        "DEPrec": {
+          "value": 0.09508713904742239,
+          "ci95": [
+            0.06240270444457622,
+            0.13269303739691493
+          ],
+          "finite_perturbations": 60
+        },
+        "DirAgr": {
+          "value": 0.5876203113833949,
+          "ci95": [
+            0.5300837540466086,
+            0.6376079843882666
+          ],
+          "finite_perturbations": 53
+        },
+        "PDS_L1": {
+          "value": 0.5741666666666667,
+          "ci95": [
+            0.49888888888888905,
+            0.6422291666666665
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_L2": {
+          "value": 0.5830555555555554,
+          "ci95": [
+            0.5080486111111111,
+            0.6544444444444447
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_cos": {
+          "value": 0.5380555555555556,
+          "ci95": [
+            0.4619375000000001,
+            0.6111319444444443
+          ],
+          "finite_perturbations": 60
+        },
+        "MSE": {
+          "value": 0.0987819571048021,
+          "ci95": [
+            0.09670285718205072,
+            0.1010933886685719
+          ],
+          "finite_perturbations": 60
+        },
+        "MAE": {
+          "value": 0.22046721155444782,
+          "ci95": [
+            0.21818345590184132,
+            0.2230340872394542
+          ],
+          "finite_perturbations": 60
+        }
+      },
+      "primary": {
+        "value": 0.7532845470193704,
+        "ci95": [
+          0.6531099994757333,
+          0.8469997048816791
+        ]
+      }
+    },
+    "repaired_e40": {
+      "metrics": {
+        "PDCorr": {
+          "value": 0.3009033913622261,
+          "ci95": [
+            0.22583066157267848,
+            0.37415788345246254
+          ],
+          "finite_perturbations": 60
+        },
+        "DEOver": {
+          "value": 0.09538420545319458,
+          "ci95": [
+            0.05937452135328361,
+            0.13425056156727938
+          ],
+          "finite_perturbations": 60
+        },
+        "DEPrec": {
+          "value": 0.07963228938881181,
+          "ci95": [
+            0.05076435249813566,
+            0.11167085895397727
+          ],
+          "finite_perturbations": 60
+        },
+        "DirAgr": {
+          "value": 0.7120867550042913,
+          "ci95": [
+            0.646125762877084,
+            0.7747520181316038
+          ],
+          "finite_perturbations": 53
+        },
+        "PDS_L1": {
+          "value": 0.6958333333333333,
+          "ci95": [
+            0.6286041666666666,
+            0.7622361111111111
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_L2": {
+          "value": 0.7111111111111109,
+          "ci95": [
+            0.6458263888888888,
+            0.7752847222222219
+          ],
+          "finite_perturbations": 60
+        },
+        "PDS_cos": {
+          "value": 0.7477777777777779,
+          "ci95": [
+            0.6794305555555554,
+            0.8108472222222222
+          ],
+          "finite_perturbations": 60
+        },
+        "MSE": {
+          "value": 0.009511960619905297,
+          "ci95": [
+            0.008120086842488144,
+            0.011175006852426988
+          ],
+          "finite_perturbations": 60
+        },
+        "MAE": {
+          "value": 0.06795647827287511,
+          "ci95": [
+            0.06440919122503448,
+            0.07203543540555982
+          ],
+          "finite_perturbations": 60
+        }
+      },
+      "primary": {
+        "value": 1.0191441321029666,
+        "ci95": [
+          0.9141865684468433,
+          1.1298105223436594
+        ]
+      }
+    }
+  },
+  "paired_difference": {
+    "reference": "original_e40",
+    "candidate": "repaired_e40",
+    "rows": [
+      {
+        "metric": "PDCorr",
+        "reference": 0.18819195442677786,
+        "candidate": 0.3009033913622261,
+        "difference": 0.11271143693544824,
+        "ci95": [
+          0.06106161382873933,
+          0.16639619807428968
+        ]
+      },
+      {
+        "metric": "DEOver",
+        "reference": 0.08985507077680448,
+        "candidate": 0.09538420545319458,
+        "difference": 0.005529134676390102,
+        "ci95": [
+          -0.012729356148570103,
+          0.023861619529273775
+        ]
+      },
+      {
+        "metric": "DEPrec",
+        "reference": 0.09508713904742239,
+        "candidate": 0.07963228938881181,
+        "difference": -0.015454849658610575,
+        "ci95": [
+          -0.024691431452664964,
+          -0.008192025472357872
+        ]
+      },
+      {
+        "metric": "DirAgr",
+        "reference": 0.5876203113833949,
+        "candidate": 0.7120867550042913,
+        "difference": 0.12446644362089643,
+        "ci95": [
+          0.03872318876820141,
+          0.20924928647523655
+        ]
+      },
+      {
+        "metric": "PDS_L1",
+        "reference": 0.5741666666666667,
+        "candidate": 0.6958333333333333,
+        "difference": 0.12166666666666659,
+        "ci95": [
+          0.026104166666666324,
+          0.21584722222222213
+        ]
+      },
+      {
+        "metric": "PDS_L2",
+        "reference": 0.5830555555555554,
+        "candidate": 0.7111111111111109,
+        "difference": 0.12805555555555548,
+        "ci95": [
+          0.029694444444444544,
+          0.22583333333333333
+        ]
+      },
+      {
+        "metric": "PDS_cos",
+        "reference": 0.5380555555555556,
+        "candidate": 0.7477777777777779,
+        "difference": 0.20972222222222225,
+        "ci95": [
+          0.14415972222222223,
+          0.2777916666666667
+        ]
+      },
+      {
+        "metric": "MSE",
+        "reference": 0.0987819571048021,
+        "candidate": 0.009511960619905297,
+        "difference": -0.08926999648489681,
+        "ci95": [
+          -0.09171603980697307,
+          -0.08695346801920098
+        ]
+      },
+      {
+        "metric": "MAE",
+        "reference": 0.22046721155444782,
+        "candidate": 0.06795647827287511,
+        "difference": -0.15251073328157272,
+        "ci95": [
+          -0.15661008930454653,
+          -0.14834784698517375
+        ]
+      }
+    ],
+    "primary_difference": {
+      "value": 0.2658595850835962,
+      "ci95": [
+        0.15743587654661545,
+        0.37070091028423824
+      ]
+    }
+  },
+  "test_access": false,
+  "source_sha256": {
+    "runs/main_v1/validation_epoch_040/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_v1/validation_epoch_040/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_v1/validation_epoch_040/metrics_de_diagnostic/results.csv": "89f09587639ff75b5b58e9a1e6fb3cb4910a9f592f6d4dd1273b892935247651",
+    "runs/main_v1/validation_epoch_040/metrics_de_diagnostic/summary.json": "77672f9bff722cdb4a2e2f4d459e753cfd576cd06b1e1dee88e5830ee0b5ce19",
+    "runs/main_ddp_recovery/validation_epoch_040/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_ddp_recovery/validation_epoch_040/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_ddp_recovery/validation_epoch_040/metrics_de_diagnostic/results.csv": "ecb0a2865c4498ade787a4d79f60fc20d9f4a9cafaed9fe4fa3c4a2eca278f66",
+    "runs/main_ddp_recovery/validation_epoch_040/metrics_de_diagnostic/summary.json": "f5b513b415e84ab5df029b65180731dc6f6eca4db927a21d0fa09dcc2c916e16"
+  }
+}

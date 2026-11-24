@@ -1,0 +1,10 @@
+{
+  "pid": 1245624,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/publish_readme_update.py",
+    "--plan",
+    "logs/readme_epoch035_periodic_update.json"
+  ],
+  "respect_900_second_cadence": true
+}

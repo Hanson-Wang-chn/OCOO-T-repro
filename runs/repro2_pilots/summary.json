@@ -1,0 +1,139 @@
+{
+  "time": "2026-11-23T12:49:09+08:00",
+  "scope": "Matched raw-weight diagnostics on 960 validation cells / 60 perturbations.",
+  "paired_interval": "2,000 bootstrap draws over perturbations from the same library with seed 9232.",
+  "plan_sha256": "cc8d9021a58a91c6cbae62282746f64f4ab0cb34b2b56b23f6c437211f0ffda6",
+  "rows": [
+    {
+      "case": "control",
+      "PDCorr": 0.22211451046168804,
+      "MSE": 0.0138389786084493,
+      "MAE": 0.08278859456380208,
+      "PDS_L1": 0.5141666666666667,
+      "PDS_L2": 0.5222222222222223,
+      "PDS_cos": 0.5105555555555555,
+      "DEOver": 0.051221841519727015,
+      "DEPrec": 0.053631892727633065,
+      "DirAgr": 0.6317159709917826,
+      "score": 0.7377626586098361,
+      "score_delta": 0.0,
+      "score_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "final_raw_endpoint_mse": 0.12156219004342954,
+      "final_ema_endpoint_mse": 0.7290572052200636,
+      "median_log_cells_s": 265.5794273521296,
+      "peak_at_log_GB": 18.439026176,
+      "parameters": 136919041,
+      "evaluation_parts": [],
+      "source_sha256": {
+        "summary.json": "155a10f81cc97043647c6396c10ddec1c1ae60426d9e84d9e940abb4aa8e8636",
+        "results.csv": "3fb775592bef000463876123d8dc7e005bf7b798f177afa72775f7ebc7bc3b61",
+        "model.pt": "44b0df50796f867e870d767744ea3b6ad844bf2b7860cec55b91df5c3774ffea"
+      }
+    },
+    {
+      "case": "position_0p125",
+      "PDCorr": 0.21920259569305928,
+      "MSE": 0.014986329370488723,
+      "MAE": 0.0863891091197729,
+      "PDS_L1": 0.5147222222222222,
+      "PDS_L2": 0.5199999999999999,
+      "PDS_cos": 0.5105555555555555,
+      "DEOver": 0.05349266662136153,
+      "DEPrec": 0.05258992430770726,
+      "DirAgr": 0.619871956667304,
+      "score": 0.7342951882856519,
+      "score_delta": -0.003467470324184263,
+      "score_delta_ci95": [
+        -0.015749337047825832,
+        0.009509347625081061
+      ],
+      "final_raw_endpoint_mse": 0.12060099219282468,
+      "final_ema_endpoint_mse": 0.7089929158488909,
+      "median_log_cells_s": 265.71117101379923,
+      "peak_at_log_GB": 17.896086528,
+      "parameters": 136919041,
+      "evaluation_parts": [
+        256,
+        224,
+        256,
+        224
+      ],
+      "source_sha256": {
+        "summary.json": "2523f6c9054e0441dba49ecd4f25693f7f425413278f59732c18f1440f849dff",
+        "results.csv": "818fc1cd58c717b85c21e2c03f15295d1161d6c79f298af1dfde00809545a99a",
+        "model.pt": "a67eb7a5562eb2ba4caf8b166f9c80ef5cdf4ea66a0815d8edd607894577050a"
+      }
+    },
+    {
+      "case": "gene_init_2",
+      "PDCorr": 0.22011153780234358,
+      "MSE": 0.014141239908834298,
+      "MAE": 0.0832196860263745,
+      "PDS_L1": 0.5141666666666667,
+      "PDS_L2": 0.52,
+      "PDS_cos": 0.5091666666666667,
+      "DEOver": 0.052651626468686465,
+      "DEPrec": 0.05209660370146862,
+      "DirAgr": 0.6170250294741246,
+      "score": 0.7345559822467881,
+      "score_delta": -0.0032066763630480555,
+      "score_delta_ci95": [
+        -0.012086018539128645,
+        0.005601090418183479
+      ],
+      "final_raw_endpoint_mse": 0.1207302672167619,
+      "final_ema_endpoint_mse": 0.7249447554349899,
+      "median_log_cells_s": 265.98443829831615,
+      "peak_at_log_GB": 17.896086528,
+      "parameters": 136919041,
+      "evaluation_parts": [
+        256,
+        224,
+        256,
+        224
+      ],
+      "source_sha256": {
+        "summary.json": "62059ef749648e7170198abebe6bff5031138e836ec76e10d54b6a90cf38820e",
+        "results.csv": "8a417cef95d850b91e1a1427ce2be3576ead00b8026ca15dedef08731be7cae9",
+        "model.pt": "70ee26df130edabf8e6c75372d4c09f5f67c95272140900fb190428056a17127"
+      }
+    },
+    {
+      "case": "swiglu_literal",
+      "PDCorr": 0.2272982289781794,
+      "MSE": 0.014894844808926186,
+      "MAE": 0.0867899339646101,
+      "PDS_L1": 0.5163888888888889,
+      "PDS_L2": 0.5175,
+      "PDS_cos": 0.5066666666666666,
+      "DEOver": 0.05468692491147314,
+      "DEPrec": 0.055244989852127106,
+      "DirAgr": 0.652692518671466,
+      "score": 0.7408167474966979,
+      "score_delta": 0.003054088886861761,
+      "score_delta_ci95": [
+        -0.0053414908588380805,
+        0.011006465556160624
+      ],
+      "final_raw_endpoint_mse": 0.121641938885053,
+      "final_ema_endpoint_mse": 0.7300193185607592,
+      "median_log_cells_s": 230.28947857076147,
+      "peak_at_log_GB": 21.94149888,
+      "parameters": 165255169,
+      "evaluation_parts": [
+        256,
+        224,
+        224,
+        256
+      ],
+      "source_sha256": {
+        "summary.json": "e42cfde04608a268c153313302dc78120db0156dbaf23b2245f5ed925f8c1ad8",
+        "results.csv": "ac1c25813c88404b972c2bcd90eadbbbcedd4f6d776e9fb277ebdeed2fb2e43a",
+        "model.pt": "f54fd0a51f8e9dd0007d461aa6a0d6905eb27a8ac694e6a0cffbbceb3b282098"
+      }
+    }
+  ]
+}

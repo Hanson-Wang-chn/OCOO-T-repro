@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-20T07:18:38+08:00",
+  "affected_file": "extension_config.json",
+  "affected_legacy_description": "Extra cells use a separate RNG segment with seed+base_count.",
+  "correct_description": "Additional cells use the explicitly registered extra_seed62525, with batch seed62525+a for extra-array offset a. This is an independent fixed RNG segment; it is not4242+960.",
+  "source_seed": 4242,
+  "base_cells": 960,
+  "actual_extra_seed": 62525,
+  "observed_generation_options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 62525
+  },
+  "immutable_plan_sha256": "1cf7d0667337cdde1ecf8d777e73f2431b3e56813ea9e5bda5548e7024e65e7f",
+  "sampling_values_in_plan_protocol_call_and_marker_agree": true,
+  "sampling_or_source_changed": false,
+  "job_restarted": false,
+  "reason": "The original epoch15 extension used source_seed+base_count; its explanatory sentence remained in the generic tool. Numeric fields and sampling code use plan.extra_seed directly. Keep the running job/source/plan immutable and retain this description erratum.",
+  "postcompletion_helper_update": "helper_description_update.json",
+  "archived_registered_helper": "logs/source_archive/extend_validation_cache_guided_f7619abaa9f7.py"
+}

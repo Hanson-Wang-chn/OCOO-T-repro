@@ -1,0 +1,45 @@
+{
+  "time": "2026-11-18T23:13:12+08:00",
+  "plan_sha256": "54fcdd8f84ff451ad7592f861b8867364d5d8fb2cc7c5b47088bb5d923ecf077",
+  "source_dir": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_015",
+  "source_options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "source_checkpoint_sha256": "e25a6d860ee1afe18acde45b25de9ab80bae0ca8ddc3e4959391d47e8e1aa4fa",
+  "step": 16770,
+  "weights": "ema_0.9996",
+  "base_cells": 1916,
+  "extra_cells": 2909,
+  "full_cells": 4825,
+  "extra_seed": 6158,
+  "extra_batch_size": 32,
+  "data_metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "note": "All validation cells, preserving the complete capped prefix. Extra cells use a separate RNG segment with seed+base_count. Ordinary-field finite-population diagnostic, not formal dual-CFG or test.",
+  "metrics": {
+    "PDCorr": 0.34908726265033085,
+    "MSE": 0.007453473856245788,
+    "MAE": 0.05933312553291519,
+    "PDS_L1": 0.6769444444444445,
+    "PDS_L2": 0.6886111111111112,
+    "PDS_cos": 0.6777777777777778,
+    "DEOver": 0.11945629850426202,
+    "DEPrec": 0.08798729310444936,
+    "DirAgr": 0.7128464825031232
+  },
+  "raw_metrics": {
+    "PDCorr": 0.3459404611106341,
+    "MSE": 0.007522469195343244,
+    "MAE": 0.059704716845105095,
+    "PDS_L1": 0.6791666666666667,
+    "PDS_L2": 0.6883333333333336,
+    "PDS_cos": 0.6791666666666667
+  },
+  "prefix_predictions_exactly_preserved": true
+}

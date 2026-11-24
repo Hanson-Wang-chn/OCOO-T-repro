@@ -1,0 +1,38 @@
+{
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/best_generation.pt",
+  "checkpoint_sha256": "88180a502e5b08d6ba1d6ba2a03caeb7081fff82d216f5ac6c9d00d012b92d09",
+  "step": 39130,
+  "weights": "ema_0.9996",
+  "data_dir": "data/processed",
+  "screen_cap": 16,
+  "refine_cap": null,
+  "batch_size": 32,
+  "scales": "0.75,1,1.25,1.5,1.75,2",
+  "refinement_population": "all validation cells",
+  "objective": "PDCorr + mean(PDS_L1,PDS_L2,PDS_cos)",
+  "data": "validation only",
+  "formal_guidance_policy": "literal_dual_cfg_positive_scale",
+  "source_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/scripts/calibrate.py": "0b6024ae94c222aa063e73e9ddddcc8508dc55a30e93db90730bba682f2ab804",
+    "src/ocoot/model.py": "f41a2ca5f3210d20ef7a6a82965a8a750c7e401fc472f0b4b8549474a704870f",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "05bd7bea99e012dc264290b3f8daace4e66be78c874180189554ea0ca8850ee2",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "045ec23291deaa37e79577c3d7b323466a2c23f9dfa35dd4b7b2c9e0438a9d61",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "conditional_only_role": "diagnostic reference; excluded from formal refinement and selection",
+  "metric_protocol": "all nine paper metrics on nonnegative predictions; six array diagnostics on raw predictions",
+  "formal_postprocess": "clamp_min_0, matching the nonnegative expression domain; raw arrays are retained",
+  "screen_windows": [
+    [
+      0.1,
+      0.9
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "refinement_policy": "Highest primary score plus lowest MSE among other cases within 0.04, or next highest score"
+}

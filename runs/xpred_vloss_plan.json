@@ -1,0 +1,81 @@
+{
+  "time": "2026-11-19T02:17:38+08:00",
+  "status": "completed",
+  "question": "Does the paper-defined x-prediction / v-loss parameterization improve late-time clean-expression behavior and generation at the same short budget?",
+  "paper_basis": "OCOO-T v2 Eq.6, explicit parameterization ablation; primary Table3 default remains Eq.5 v-prediction. This unpatched diagnostic is not a claim of reproducing the patched Fig.5 experiments.",
+  "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate_run": "runs/pilot_xpred_vloss",
+  "candidate_config": "configs/pilot_xpred_vloss.yaml",
+  "candidate_config_sha256": "53b3bfe6b27457d6ba6975d1d6cb84eb8c0536382c61322b4c827abb3713897e",
+  "reference_config_sha256": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+  "only_changes": [
+    "run_dir",
+    "model.prediction_space=x",
+    "model.prediction_eps=1e-5 (inactive guard)"
+  ],
+  "model_prediction_api": "Forward always returns velocity. In x mode use (x_theta(z,t)-z)/(1-t). Existing velocity loss, EMA validation, literal CFG and Heun solver consume that velocity without a second conversion.",
+  "loss_identity": "||v_theta-(x-eps)||^2 = ||(x_theta-x)/(1-t)||^2",
+  "numerical_guard": {
+    "eps": 1e-05,
+    "reason": "Finite denominator if a floating-point sampled time approaches 1. OCOO-T does not specify this guard; it is inactive on the Heun50 grid (largest model time 0.98).",
+    "no_time_distribution_change": true
+  },
+  "initialization": "Identical neural parameter initialization and RNG to shared v reference. The zero clean head has v=-z/(1-t), so initial functions and initial losses intentionally differ; do not require first-step loss equality.",
+  "training_cells": 16384,
+  "epochs": 12,
+  "updates": 384,
+  "warmup_epochs": 5,
+  "effective_batch": 512,
+  "micro_batch": 16,
+  "seed": 42,
+  "training_indices_reference_sha256": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+  "fixed_factors": {
+    "noise_std": 1.0,
+    "p_mean": -0.8,
+    "p_std": 0.8,
+    "time_scale": 1.0,
+    "cell_init_std": 1.0,
+    "pert_projection": "shared",
+    "depth": 12,
+    "width": 768,
+    "heads": 12
+  },
+  "generation": {
+    "weights": "raw",
+    "cap_per_condition": 16,
+    "batch": 32,
+    "steps": 50,
+    "guidance": null,
+    "preserve_raw_and_clipped": true
+  },
+  "primary_objective": "PDCorr+mean(PDS_L1,PDS_L2,PDS_cos), raw and nonnegative reported separately; all nine nonnegative metrics and paired60-condition intervals.",
+  "additional_diagnostics": [
+    "same training and generation indices/options",
+    "frozen buffers and initialized parameter compatibility",
+    "late-time zero/positive behavior if useful",
+    "cell-line centroids/within-condition variance"
+  ],
+  "pre_launch_checks": {
+    "tests": "logs/tests_prediction_space_compatibility.log",
+    "result": "4 CPU tests passed1.60s: default exact legacy compatibility, untying compatibility, x/v weighted loss+gradient identity, zero x-head under actual Heun50"
+  },
+  "source_sha256": {
+    "src/ocoot/model.py": "27321aad305713a969d0e8a51a269c1bdf3230eee1fd7d61de49244e08e74f39",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "scripts/run_pilots.py": "65c766a73731123495cfbb8d35aab456f879e227818ce7bdc1302a68c6a4b44a",
+    "tests/test_prediction_space.py": "e0acd17e644dedff212ea85bc0431f5db316b897a4f80098c005cdda54fa6945"
+  },
+  "archived_previous_model": "logs/source_archive/model_before_prediction_space_faa2d7d95d06.py",
+  "main_config_unchanged_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_training_pid": 656512,
+  "main_pipeline_pid": 656436,
+  "automatic_main_switch": false,
+  "test_expression_access": false,
+  "caveat": "Short raw-weight pilot cannot establish mature EMA superiority or training-seed robustness. Main original v model continues unchanged; candidate must be labeled as an explicit parameterization ablation.",
+  "launch_time": "2026-11-19T02:18:03+08:00",
+  "controller_pid": 839902,
+  "stage": "completed",
+  "completion_time": "2026-11-19T04:27:10+08:00",
+  "decision": "runs/xpred_vloss_analysis/decision.json"
+}

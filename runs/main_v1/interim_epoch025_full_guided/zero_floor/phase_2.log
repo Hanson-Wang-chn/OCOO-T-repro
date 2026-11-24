@@ -1,0 +1,360 @@
+{
+  "validation_cells": 4825,
+  "perturbations": 60,
+  "comparisons_to_zero": [
+    {
+      "reference": "floor_0",
+      "candidate": "floor_0p05",
+      "reference_floor": 0.0,
+      "candidate_floor": 0.05,
+      "primary_difference": {
+        "value": -0.0006216602406439176,
+        "ci95": [
+          -0.003582746170692495,
+          0.0022353573701888118
+        ]
+      },
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.3306210098813608,
+          "candidate": 0.3287956459370131,
+          "difference": -0.00182536394434768,
+          "ci95": [
+            -0.0024528567104577263,
+            -0.001272527122118848
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.16823972826188463,
+          "candidate": 0.19428454358572447,
+          "difference": 0.026044815323839843,
+          "ci95": [
+            -0.004203820065446508,
+            0.052314606262394314
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.09892627276806547,
+          "candidate": 0.15859118495792834,
+          "difference": 0.059664912189862876,
+          "ci95": [
+            0.02320041356486876,
+            0.09275760660138593
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.7120130080493235,
+          "candidate": 0.7305319429384035,
+          "difference": 0.018518934889079963,
+          "ci95": [
+            -0.0037436151507939303,
+            0.059362431429133035
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.7816666666666666,
+          "candidate": 0.7830555555555556,
+          "difference": 0.001388888888888995,
+          "ci95": [
+            -0.0033333333333335213,
+            0.006111111111110848
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.7908333333333333,
+          "candidate": 0.7916666666666666,
+          "difference": 0.0008333333333333526,
+          "ci95": [
+            -0.0019444444444443043,
+            0.0038888888888888307
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.8213888888888888,
+          "candidate": 0.8227777777777778,
+          "difference": 0.001388888888888995,
+          "ci95": [
+            -0.003618055555555663,
+            0.00639583333333351
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.014458370274708868,
+          "candidate": 0.014507388556376047,
+          "difference": 4.9018281667178795e-05,
+          "ci95": [
+            2.0095818229798162e-05,
+            7.851114855535841e-05
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.07542472134033835,
+          "candidate": 0.07577362085382139,
+          "difference": 0.0003488995134830336,
+          "ci95": [
+            0.00019149992149322982,
+            0.0005105460016056932
+          ]
+        }
+      ],
+      "precision_heterogeneity": {
+        "increased": 34,
+        "decreased": 14,
+        "equal": 12,
+        "median_difference": 0.021724089540313754,
+        "top_three_share_of_net_change": 0.2577708601152162,
+        "per_condition": [
+          {
+            "perturbation": "ALG11",
+            "difference": 0.1965239986272491
+          },
+          {
+            "perturbation": "ANAPC1",
+            "difference": 0.0112504343797057
+          },
+          {
+            "perturbation": "ASCC3",
+            "difference": 0.0383402489626557
+          },
+          {
+            "perturbation": "ATP6V1G1",
+            "difference": 0.2857142857142857
+          },
+          {
+            "perturbation": "C9orf78",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CABIN1",
+            "difference": -0.0007788161993769
+          },
+          {
+            "perturbation": "CCDC115",
+            "difference": 0.1226507439310885
+          },
+          {
+            "perturbation": "CEP85",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CSNK2B",
+            "difference": -0.0357072594924257
+          },
+          {
+            "perturbation": "CYREN",
+            "difference": -0.0127986348122866
+          },
+          {
+            "perturbation": "DCTN1",
+            "difference": 0.0145192078262944
+          },
+          {
+            "perturbation": "DCTN6",
+            "difference": -0.004524886877828
+          },
+          {
+            "perturbation": "DERL2",
+            "difference": 0.202136853551328
+          },
+          {
+            "perturbation": "DESI1",
+            "difference": 0.01924737189579
+          },
+          {
+            "perturbation": "DHX36",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "DNTTIP2",
+            "difference": 0.2701388780991618
+          },
+          {
+            "perturbation": "E4F1",
+            "difference": -0.0950479233226837
+          },
+          {
+            "perturbation": "GINS4",
+            "difference": 0.0674240326599999
+          },
+          {
+            "perturbation": "GNL3",
+            "difference": 0.1505872143136348
+          },
+          {
+            "perturbation": "HMGCS1",
+            "difference": 0.08457700366070298
+          },
+          {
+            "perturbation": "HNRNPH1",
+            "difference": 0.0265069169960475
+          },
+          {
+            "perturbation": "INTS13",
+            "difference": 0.0829289370471315
+          },
+          {
+            "perturbation": "LAMTOR4",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "MRGBP",
+            "difference": 0.14648540507084978
+          },
+          {
+            "perturbation": "MRPL36",
+            "difference": 0.14625844787619574
+          },
+          {
+            "perturbation": "NAA10",
+            "difference": -0.0274914089347079
+          },
+          {
+            "perturbation": "NDC1",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "NDUFA3",
+            "difference": 0.2322030253064736
+          },
+          {
+            "perturbation": "NDUFS3",
+            "difference": 0.0911308203991131
+          },
+          {
+            "perturbation": "NFKBIE",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "NFRKB",
+            "difference": 0.034021406727828704
+          },
+          {
+            "perturbation": "NOC4L",
+            "difference": 0.19513988808952842
+          },
+          {
+            "perturbation": "NOL10",
+            "difference": 0.2941011975259902
+          },
+          {
+            "perturbation": "NPLOC4",
+            "difference": 0.2133650581089483
+          },
+          {
+            "perturbation": "NUP85",
+            "difference": 0.02227009303034931
+          },
+          {
+            "perturbation": "PABPC4",
+            "difference": -7.312899467129888e-05
+          },
+          {
+            "perturbation": "PITRM1",
+            "difference": 0.0211780860502782
+          },
+          {
+            "perturbation": "POLR2G",
+            "difference": 0.31743986254295536
+          },
+          {
+            "perturbation": "POLR3K",
+            "difference": -0.0010449320794148
+          },
+          {
+            "perturbation": "PPAN",
+            "difference": 0.20317434514455945
+          },
+          {
+            "perturbation": "PRDM4",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "RFC4",
+            "difference": 0.05918221510239979
+          },
+          {
+            "perturbation": "RPA3",
+            "difference": 0.10151389834450192
+          },
+          {
+            "perturbation": "RTCB",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "SLC1A5",
+            "difference": -6.914417046470001e-05
+          },
+          {
+            "perturbation": "SMN2",
+            "difference": -0.493787933089163
+          },
+          {
+            "perturbation": "SPG7",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "SRSF7",
+            "difference": 0.2138472877358491
+          },
+          {
+            "perturbation": "STAT5B",
+            "difference": 0.061660037680552705
+          },
+          {
+            "perturbation": "TAF5",
+            "difference": 0.163982569154983
+          },
+          {
+            "perturbation": "TERF2",
+            "difference": -0.2063015753938484
+          },
+          {
+            "perturbation": "THAP1",
+            "difference": -0.1413308208993488
+          },
+          {
+            "perturbation": "TP53RK",
+            "difference": 0.11320489876127308
+          },
+          {
+            "perturbation": "TRAIP",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "TRAPPC8",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "TUBD1",
+            "difference": -0.0008045052292839
+          },
+          {
+            "perturbation": "UCHL5",
+            "difference": 0.09000247259540099
+          },
+          {
+            "perturbation": "WDR77",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "ZC3H4",
+            "difference": -0.0043029259896729
+          },
+          {
+            "perturbation": "ZCCHC9",
+            "difference": 0.31125148396384267
+          }
+        ]
+      }
+    }
+  ]
+}

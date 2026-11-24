@@ -1,0 +1,7 @@
+only_ema {'denoise': {'velocity_mse': 0.4700965080410242, 'endpoint_mse': 0.20095125399529934}, 'time': {'rms': 5.097338676452637, 'span_rms': 2.3347411155700684}}
+only_raw {'denoise': {'velocity_mse': 0.2606692388653755, 'endpoint_mse': 0.10804476076737046}, 'time': {'rms': 6.895791053771973, 'span_rms': 2.114767551422119}}
+raw_time {'denoise': {'velocity_mse': 0.2985702119767666, 'endpoint_mse': 0.12483658362179995}, 'time': {'rms': 6.895791053771973, 'span_rms': 2.114767551422119}}
+raw_input_condition {'denoise': {'velocity_mse': 0.28956983238458633, 'endpoint_mse': 0.12093128124251962}, 'time': {'rms': 6.895791053771973, 'span_rms': 2.114767551422119}}
+raw_output {'denoise': {'velocity_mse': 0.4579377882182598, 'endpoint_mse': 0.195248045027256}, 'time': {'rms': 5.097338676452637, 'span_rms': 2.3347411155700684}}
+raw_context_and_value {'denoise': {'velocity_mse': 0.46793923527002335, 'endpoint_mse': 0.20016622822731733}, 'time': {'rms': 5.097338676452637, 'span_rms': 2.3347411155700684}}
+raw_blocks {'denoise': {'velocity_mse': 0.3386302962899208, 'endpoint_mse': 0.13811578135937452}, 'time': {'rms': 5.097338676452637, 'span_rms': 2.3347411155700684}}

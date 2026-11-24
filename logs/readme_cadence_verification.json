@@ -1,0 +1,6 @@
+{
+  "interval_seconds": 900,
+  "before_interval_no_document_write": true,
+  "latest_state_and_events_batched": true,
+  "verified": true
+}

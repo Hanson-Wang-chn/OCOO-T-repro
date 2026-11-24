@@ -1,0 +1,55 @@
+data_dir: data/processed
+model:
+  batch_condition: true
+  context_start: 1
+  context_tokens: 2
+  depth: 4
+  dim: 32
+  drop_prob: 0.1
+  grad_checkpoint: false
+  heads: 4
+  mlp_ratio: 4.0
+  pos_encoding: true
+  swiglu_convention: param_matched
+  time_dim: 16
+  value_hidden: 32
+run_dir: runs/engine_smoke_v2
+sampling:
+  cfg_max: 0.9
+  cfg_min: 0.1
+  clamp: false
+  guidance: null
+  steps: 50
+seed: 42
+training:
+  betas:
+  - 0.9
+  - 0.95
+  checkpoint_steps: 1
+  compile: false
+  compile_mode: default
+  data_on_gpu: false
+  effective_batch: 512
+  ema_decays:
+  - 0.9999
+  - 0.9996
+  epochs: 2
+  log_steps: 1
+  lr: 0.0001
+  max_grad_norm: null
+  micro_batch: 16
+  noise_std: 1.0
+  p_mean: -0.8
+  p_std: 0.8
+  train_subset: 512
+  val_cells: 16
+  val_generation_batch: 32
+  val_generation_cap: 1
+  val_generation_epochs: 1
+  val_generation_steps: 50
+  val_interval_steps: 1
+  warmup_epochs: 1
+  weight_decay: 0.0
+  early_stop_patience_epochs: 1
+  min_epochs: 1
+  early_stop_min_delta: 10.0

@@ -1,0 +1,36 @@
+{
+  "metrics": {
+    "PDCorr": 0.3738548585679382,
+    "MSE": 0.01146308557751278,
+    "MAE": 0.06897375428428253,
+    "PDS_L1": 0.8038888888888888,
+    "PDS_L2": 0.8133333333333336,
+    "PDS_cos": 0.8180555555555556,
+    "DEOver": 0.19884692456764327,
+    "DEPrec": 0.17333844775021262,
+    "DirAgr": 0.7981793494318202
+  },
+  "checks": {
+    "PDCorr": true,
+    "mean_PDS": true,
+    "DEOver": true,
+    "DEPrec": false,
+    "DirAgr": true,
+    "PDS_L1": true,
+    "PDS_L2": true,
+    "PDS_cos": true,
+    "MSE": true,
+    "MAE": true
+  },
+  "thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "note": "Validation-only engineering checks, not a declaration of agreement with paper test performance."
+}

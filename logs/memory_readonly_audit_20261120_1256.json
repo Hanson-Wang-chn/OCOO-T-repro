@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-20T12:56:35+08:00",
+  "anonymous_GiB": 60.59193420410156,
+  "reclaimable_file_GiB": 34.92434310913086,
+  "oom_count_zero": true,
+  "own_training_pids": [
+    656512,
+    979910
+  ],
+  "observation": "A separate CPU process also contributes transient RAM usage. Both registered training jobs retain finite loss, normal throughput and complete checkpoints. No other process was modified.",
+  "action": "Continue unchanged with the existing90GiB anonymous-memory alert."
+}

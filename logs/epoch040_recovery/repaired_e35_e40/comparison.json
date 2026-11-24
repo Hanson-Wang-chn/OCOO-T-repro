@@ -1,0 +1,148 @@
+{
+  "time": "2026-11-22T15:55:39+08:00",
+  "epochs": [
+    35,
+    40
+  ],
+  "steps": [
+    39130,
+    44720
+  ],
+  "validation_directories": [
+    "runs/main_v1/validation_epoch_035",
+    "runs/main_ddp_recovery/validation_epoch_040"
+  ],
+  "perturbations": 60,
+  "generated_cells": 1916,
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "rows": [
+    {
+      "metric": "PDCorr",
+      "reference": 0.29607402292701107,
+      "candidate": 0.3009033913622261,
+      "difference": 0.004829368435215031,
+      "ci95": [
+        -0.0013335800045145762,
+        0.011026305651915543
+      ]
+    },
+    {
+      "metric": "DEOver",
+      "reference": 0.09479206465591195,
+      "candidate": 0.09538420545319458,
+      "difference": 0.0005921407972826337,
+      "ci95": [
+        -0.0017654925330236174,
+        0.00291103342742408
+      ]
+    },
+    {
+      "metric": "DEPrec",
+      "reference": 0.0784456142891281,
+      "candidate": 0.07963228938881181,
+      "difference": 0.0011866750996837178,
+      "ci95": [
+        0.00018893339134507613,
+        0.002185190239913608
+      ]
+    },
+    {
+      "metric": "DirAgr",
+      "reference": 0.7091815233056369,
+      "candidate": 0.7120867550042913,
+      "difference": 0.00290523169865442,
+      "ci95": [
+        -0.02447926866171868,
+        0.02878762628723575
+      ]
+    },
+    {
+      "metric": "PDS_L1",
+      "reference": 0.6980555555555555,
+      "candidate": 0.6958333333333333,
+      "difference": -0.0022222222222222365,
+      "ci95": [
+        -0.01944444444444449,
+        0.011395833333333622
+      ]
+    },
+    {
+      "metric": "PDS_L2",
+      "reference": 0.7119444444444443,
+      "candidate": 0.7111111111111109,
+      "difference": -0.0008333333333333526,
+      "ci95": [
+        -0.018611111111111137,
+        0.013055555555555376
+      ]
+    },
+    {
+      "metric": "PDS_cos",
+      "reference": 0.7527777777777779,
+      "candidate": 0.7477777777777779,
+      "difference": -0.0050000000000000044,
+      "ci95": [
+        -0.019722222222221978,
+        0.008055555555555594
+      ]
+    },
+    {
+      "metric": "MSE",
+      "reference": 0.00943374131262919,
+      "candidate": 0.009511960619905297,
+      "difference": 7.82193072761065e-05,
+      "ci95": [
+        -7.060025566412694e-05,
+        0.00029904028963453677
+      ]
+    },
+    {
+      "metric": "MAE",
+      "reference": 0.06780563183128828,
+      "candidate": 0.06795647827287511,
+      "difference": 0.0001508464415868327,
+      "ci95": [
+        -0.0001699993402386659,
+        0.0005519284742573912
+      ]
+    }
+  ],
+  "reference_score": 1.0169999488529369,
+  "candidate_score": 1.0191441321029666,
+  "score_difference": {
+    "value": 0.002144183250029741,
+    "ci95": [
+      -0.015376583214497785,
+      0.017639840945707665
+    ]
+  },
+  "bootstrap": 2000,
+  "seed": 9232,
+  "source_sha256": {
+    "runs/main_v1/validation_epoch_035/model.pt": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+    "runs/main_v1/validation_epoch_035/prediction.npy": "2da03ed3087ded15435ec66da007b0901f6f32dbaaaeabbcc9df93ca11d0f337",
+    "runs/main_v1/validation_epoch_035/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_v1/validation_epoch_035/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_v1/validation_epoch_035/metrics_de_diagnostic/diagnostic_config.json": "a32e300f4eb848170bf604ed8788994c93b04918d54a400581f40731264c1e24",
+    "runs/main_v1/validation_epoch_035/metrics_de_diagnostic/results.csv": "38654df9b9b64413378f48c83dd3a7460b990ba778575feec50cb028b803c961",
+    "runs/main_v1/validation_epoch_035/metrics_de_diagnostic/summary.json": "b1ad949f3aa843420b8230dbea2a81582bed447225b74f7c82335b9eedbe73a5",
+    "runs/main_ddp_recovery/validation_epoch_040/model.pt": "f0938d4c8c0b53398e765311328aa5e9f01514215fce55b1440d6d6ae27baaef",
+    "runs/main_ddp_recovery/validation_epoch_040/prediction.npy": "75f41ecd1ba25188607e43c7f2cd7c182373851878bd7838eb6b841593b62528",
+    "runs/main_ddp_recovery/validation_epoch_040/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_ddp_recovery/validation_epoch_040/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_ddp_recovery/validation_epoch_040/metrics_de_diagnostic/diagnostic_config.json": "8b55f404362c302d1d207a9cffebe1893a67b601bc5be876451ddbcd4e83d6eb",
+    "runs/main_ddp_recovery/validation_epoch_040/metrics_de_diagnostic/results.csv": "ecb0a2865c4498ade787a4d79f60fc20d9f4a9cafaed9fe4fa3c4a2eca278f66",
+    "runs/main_ddp_recovery/validation_epoch_040/metrics_de_diagnostic/summary.json": "f5b513b415e84ab5df029b65180731dc6f6eca4db927a21d0fa09dcc2c916e16"
+  },
+  "script_sha256": "51edc552a0f90b0064077a67ccfdaa8125cddab65bac67355fa8830ec5f32423",
+  "note": "Fixed-library paired perturbation intervals under identical sampling indices/noise/options. Does not measure independent training-seed or generation-noise uncertainty. Periodic validation diagnostic, not formal calibrated full validation or test."
+}

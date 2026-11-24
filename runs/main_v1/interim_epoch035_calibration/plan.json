@@ -1,0 +1,129 @@
+{
+  "time": "2026-11-21T13:12:29+08:00",
+  "status": "registered_before_interim_epoch35_full_calibration",
+  "scope": "Intermediate complete validation calibration on immutableE35; no test command, no final protocol adoption, no change to ongoing main training or any paper-specified parameter.",
+  "reason": "E25-to30 and E30-to35 primary intervals under both protocols crosszero, while fixedw2 MSE/MAE increase with positive intervals in both periods. Diagnose guidance/zero-support tradeoffs on complete validation before assuming longer training resolves PD/DE gaps.",
+  "outdir": "runs/main_v1/interim_epoch035_calibration",
+  "checkpoint": "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+  "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+  "checkpoint_step": 39130,
+  "weights": "ema_0.9996",
+  "trainer_pid": 656512,
+  "trainer_start_tick": "783674341",
+  "main_run": "runs/main_v1",
+  "main_pipeline_pid": 1100222,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "source_sha256": {
+    "logs/run_epoch035_validation_calibration.py": "ece78427a19713384d79f2b3d185527fb66e60aaec27c94192e79a92d7e2a8e6",
+    "tests/test_interim_validation_controller.py": "6010752d7758050bc5ec6605686197053e0328f00159672cdadd94d51ba44f18",
+    "scripts/calibrate.py": "b9e3a554a862bfe7cc6dc66c194e76eee71a25b51c5cd5f745d58520a6fbaa47",
+    "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+    "scripts/promote_validation_cache.py": "9e465ed9e321468c34b686282b07c0292ab6d9c4f83fb2aba3f5d6344f90ef3d",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "prerequisite_sha256": {
+    "runs/main_v1/interim_epoch035_fixed_cfg/decision.json": "dd1024a879f96331e33a4c154c0997b880d554de8cc3f6c6cceb05e2a6b1abde",
+    "runs/main_v1/interim_epoch035_fixed_cfg/checkpoint_verification.json": "02da6e7503f759a445069f8d71f1dda1b931aa88ee28fa66e0f9359d4fd26356",
+    "runs/main_v1/interim_epoch035_fixed_cfg/independent_comparison_verification.json": "00db9db35b19c31b696948f8f5e4473623dd2c1bb670165adb5f095801728e55",
+    "runs/main_v1/snapshots/step_39130/preserved.json": "f6a9213328f4e211ea50ea6092e15a959305fc229fc9339a0edefb6579225af1",
+    "logs/postprocess_workflow_update/plan.json": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371",
+    "logs/postprocess_workflow_update/verification.json": "0b48f18cf9069ed0e977002f0f366fbc4756f75977dc3c8924d328ea9b9870f0",
+    "logs/epoch035_validation_controller_tests.log": "2db0967fd79317100af6bb4cec7455f97eec77fac54b665eb12d82769aa51944",
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "data_expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+  "screen_cap": 16,
+  "screen_cases": 6,
+  "positive_scales": [
+    0.6666666667,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "partial_interval": [
+    0.1,
+    0.9
+  ],
+  "interval_comparison": [
+    0.0,
+    1.0
+  ],
+  "refine_cap": null,
+  "refinements": 2,
+  "full_validation_cells_each": 4825,
+  "conditions": 60,
+  "sampling_batch_size": 32,
+  "steps": 50,
+  "seed": 4242,
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "quality_thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "ordinary_reference_role": "diagnostic only; excluded from formal refinement/selection",
+  "sampling_provenance": "Use original calibrate.py B32 protocol throughout. It differs from completed fixed-CFG B16 checkpoint comparisons, so do not transplant/alter their raw caches or pretend sampling is paired across those protocols.",
+  "new_architecture_or_training_trial": false,
+  "stopping_policy_changed": false,
+  "quality_thresholds_relaxed": false,
+  "final_posttraining_workflow_separate": true,
+  "future_cache_reuse": "Requires explicit exact-checkpoint/provenance review after training; do not automatically substitute an interim checkpoint or chosen case for a later final model.",
+  "failure_policy": "Selector exit2/no feasible candidate is a completed validation review result, not permission to relax thresholds or execute test. All raw/refinement/0/.05 metrics are retained.",
+  "cpu_controller_checks": 4,
+  "test_access": false,
+  "final_test_protocol_adopted": false,
+  "commands": {
+    "calibration": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/calibrate.py",
+      "--checkpoint",
+      "/home/whs/ocoo-t/runs/main_v1/validation_epoch_035/model.pt",
+      "--outdir",
+      "runs/main_v1/interim_epoch035_calibration/calibration",
+      "--screen-cap",
+      "16",
+      "--refine-cap",
+      "full",
+      "--batch-size",
+      "32",
+      "--scales",
+      "0.6666666667,1,1.5,2"
+    ],
+    "postprocessing": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/select_validation_postprocess.py",
+      "--calibration",
+      "runs/main_v1/interim_epoch035_calibration/calibration",
+      "--outdir",
+      "runs/main_v1/interim_epoch035_calibration/calibration/postprocessing",
+      "--plan",
+      "logs/postprocess_workflow_update/plan.json"
+    ],
+    "promotion": [
+      "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+      "scripts/promote_validation_cache.py",
+      "--calibration",
+      "runs/main_v1/interim_epoch035_calibration/calibration",
+      "--selection",
+      "runs/main_v1/interim_epoch035_calibration/calibration/postprocessing/selected.json",
+      "--outdir",
+      "runs/main_v1/interim_epoch035_calibration/validation_full"
+    ]
+  }
+}

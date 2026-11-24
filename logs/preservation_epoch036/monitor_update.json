@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-21T16:35:36+08:00",
+  "scope": "Read-only health observer also checks passiveE36 archive liveness/source, requests CPU metadata verification when complete; no process signals or science changes",
+  "before_sha256": "fd7918d0fb91ba671ca9241d9ff0f3056fba9364c033727476525fa92c7dcd58",
+  "after_sha256": "5c1f90171ae6c61fd3db141e75ff322a5cd3ca1e2821df6824cf6f3412f7a9ae",
+  "current_state": {
+    "time": "2026-11-21T16:35:22+08:00",
+    "pid": 1277287,
+    "stage": "waiting_step40248",
+    "target_step": 40248,
+    "training_changed": false,
+    "purpose": "Preserve an exact mature checkpoint; no new experiment or policy change"
+  },
+  "current_alerts": [],
+  "main_training_changed": false,
+  "test_access": false
+}

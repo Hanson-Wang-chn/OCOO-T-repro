@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-18T11:16:33+08:00",
+  "trial": "sigma_0.5_t1000_cellinit_1.0",
+  "training_indices_exactly_equal": true,
+  "reference_first_step_loss": 0.9035190939903259,
+  "candidate_first_step_loss": 0.9035190939903259,
+  "difference": 0.0,
+  "note": "Zero-initialized output-head consistency check of inputs/target/noise, not learned predictive quality."
+}

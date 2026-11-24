@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-20T11:01:00+08:00",
+  "first_resumable_step": 28000,
+  "optimizer_slots": 189,
+  "optimizer_step_range": [
+    28000,
+    28000
+  ],
+  "dual_ema_and_rng_retained": true,
+  "candidate_batch_retention": true,
+  "original100_epoch_schedule_retained": true,
+  "budget_endpoint": 29068,
+  "main_unchanged": true
+}

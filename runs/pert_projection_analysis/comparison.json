@@ -1,0 +1,216 @@
+{
+  "time": "2026-11-19T01:47:29+08:00",
+  "reference": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate": "runs/pilot_pert_projection_separate",
+  "updates": 384,
+  "generated_cells": 960,
+  "perturbations": 60,
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": false,
+    "seed": 4242
+  },
+  "results": {
+    "raw": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.2179164782942583,
+          "candidate": 0.20925110626655322,
+          "difference": -0.008665372027705093,
+          "ci95": [
+            -0.011211290710295259,
+            -0.006188079684895173
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5161111111111112,
+          "candidate": 0.5152777777777778,
+          "difference": -0.0008333333333333526,
+          "ci95": [
+            -0.007777777777777553,
+            0.0055555555555556494
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5208333333333334,
+          "candidate": 0.515,
+          "difference": -0.005833333333333357,
+          "ci95": [
+            -0.011111111111110964,
+            -0.001388888888888884
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5105555555555555,
+          "candidate": 0.5080555555555555,
+          "difference": -0.0025000000000000577,
+          "ci95": [
+            -0.007777777777777883,
+            0.0024999999999998357
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013664484303444574,
+          "candidate": 0.013993900843585481,
+          "difference": 0.00032941654014090674,
+          "ci95": [
+            0.00026430573469649727,
+            0.00039651328658996127
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08211884573101995,
+          "candidate": 0.08350137149294215,
+          "difference": 0.0013825257619222014,
+          "ci95": [
+            0.0011899550755818853,
+            0.0015723819968600985
+          ]
+        }
+      ],
+      "reference_score": 0.7337498116275916,
+      "candidate_score": 0.722028884044331,
+      "score_difference": -0.011720927583260599,
+      "score_difference_ci95": [
+        -0.01773307540123708,
+        -0.006103925275400956
+      ]
+    },
+    "clamped": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.22990732928737997,
+          "candidate": 0.2228709391085431,
+          "difference": -0.0070363901788368655,
+          "ci95": [
+            -0.009447224241254508,
+            -0.004709123082381381
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.05293600144839774,
+          "candidate": 0.0507865452971907,
+          "difference": -0.002149456151207041,
+          "ci95": [
+            -0.0036929146753973043,
+            -0.0007987547945156305
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.05452449758784506,
+          "candidate": 0.053733934315896,
+          "difference": -0.0007905632719490616,
+          "ci95": [
+            -0.0016450845914588806,
+            -5.961040166207249e-05
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.63140910783508,
+          "candidate": 0.6276582047307839,
+          "difference": -0.003750903104296044,
+          "ci95": [
+            -0.009606594828170504,
+            0.0022128088890852097
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5147222222222222,
+          "candidate": 0.5161111111111112,
+          "difference": 0.001388888888888995,
+          "ci95": [
+            -0.004444444444444254,
+            0.008055555555555429
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5183333333333332,
+          "candidate": 0.5183333333333332,
+          "difference": 0.0,
+          "ci95": [
+            -0.0038888888888889443,
+            0.004166666666667042
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5080555555555556,
+          "candidate": 0.5055555555555554,
+          "difference": -0.0025000000000001688,
+          "ci95": [
+            -0.008333333333333304,
+            0.0030555555555554794
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013566651071111312,
+          "candidate": 0.013877330751468686,
+          "difference": 0.0003106796803573741,
+          "ci95": [
+            0.00023683541299155666,
+            0.00038779389850484777
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08192139901220792,
+          "candidate": 0.08319838618238765,
+          "difference": 0.0012769871701797247,
+          "ci95": [
+            0.0010453822836279888,
+            0.0015158213954418942
+          ]
+        }
+      ],
+      "reference_score": 0.7436110329910837,
+      "candidate_score": 0.7362042724418765,
+      "score_difference": -0.007406760549207192,
+      "score_difference_ci95": [
+        -0.013521943235321318,
+        -0.0012661314085600495
+      ]
+    }
+  },
+  "source_sha256": {
+    "runs/pilot_sigma_1.0_cellinit_1.0/config.yaml": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+    "runs/pilot_sigma_1.0_cellinit_1.0/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/finished.json": "23b3c8cb22f55a7502299921e172e959f0729275bcf7e966abd9e4622464b84f",
+    "runs/pilot_pert_projection_separate/config.yaml": "d8c391b94fcebfd0524dff121f85e2745e4f5b6e5810f3cb6aa6fa3c213e23f1",
+    "runs/pilot_pert_projection_separate/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_pert_projection_separate/finished.json": "392cc1f3dd0817b2052cb88bf5654749e96de87d48b8cd152b5c816caba0dd71",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/model.pt": "cc242816d67483e25c68d7e3cb57ea1fef23ea242e0af25e1316f7822c1eb272",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/model.pt": "803f3cfc496bc31ec590ce8dd1f68929bd1328d5d5d4a5d92bb28b12d6d82292",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/results.csv": "24b731c00be338ff6e314f30c1d41208f42f7e97beb8b7a9fa3bf784408fed1e",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/summary.json": "55660beef9dc907cb8166e4fc0bd368d3c42b8c98eea3887d83f240de5549b34",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/metrics/results.csv": "32384b0b23f0cb0302f0266c96eae274dfb59bc1e5c8e9dc0c68edb5e07a199e",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/metrics/summary.json": "54c5e578796e2b652de8e19a3990f7f131a8b96b8fc2ec60c0041d89f2e35202",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/results.csv": "c45b6aa573d38e213b2e826cc054445d8c434d13b0dbcb43b7dc9b2aa7e52c7f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/summary.json": "0bd32a738cbc233d33c5cf65b2774c71be8ea675dab622871faf7e6576c64042",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/metrics_clamped_de/results.csv": "634f028cfb9915244ae9523f70af9ff1361b1ab36a37d14b1464237e891c17fb",
+    "runs/pilot_pert_projection_separate/validation_epoch_012/metrics_clamped_de/summary.json": "38faed4dcb20e280fcbcd0370c357b6689b38b89022ea05db762593b6d3c94e0"
+  },
+  "script_sha256": "a98b9dc9c6a54414e667905f93c9b9dbe160a0167212836735dfa3b4a6e1d615",
+  "note": "Copied initial projection, same data/budget/noise; paired fixed-library perturbation intervals. Short raw diagnostics do not establish mature-EMA or independent-training-seed behavior; no automatic main switch."
+}

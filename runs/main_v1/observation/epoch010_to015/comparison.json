@@ -1,0 +1,136 @@
+{
+  "time": "2026-11-18T22:29:34+08:00",
+  "epochs": [
+    10,
+    15
+  ],
+  "steps": [
+    11180,
+    16770
+  ],
+  "perturbations": 60,
+  "generated_cells": 1916,
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "rows": [
+    {
+      "metric": "PDCorr",
+      "epoch10": 0.2801946957440426,
+      "epoch15": 0.2976139705288612,
+      "difference": 0.017419274784818584,
+      "ci95": [
+        -0.0043746725365054,
+        0.03974934280313991
+      ]
+    },
+    {
+      "metric": "DEOver",
+      "epoch10": 0.08149303820493389,
+      "epoch15": 0.08953040360131,
+      "difference": 0.008037365396376103,
+      "ci95": [
+        -0.0002879557244023535,
+        0.016254941174481112
+      ]
+    },
+    {
+      "metric": "DEPrec",
+      "epoch10": 0.06879187157793389,
+      "epoch15": 0.0749555200753569,
+      "difference": 0.006163648497423013,
+      "ci95": [
+        0.002018201304061974,
+        0.010902825674401158
+      ]
+    },
+    {
+      "metric": "DirAgr",
+      "epoch10": 0.6601766350018052,
+      "epoch15": 0.6704829498318969,
+      "difference": 0.0103063148300917,
+      "ci95": [
+        -0.044552773307108655,
+        0.051870683052007545
+      ]
+    },
+    {
+      "metric": "PDS_L1",
+      "epoch10": 0.5983333333333333,
+      "epoch15": 0.6622222222222224,
+      "difference": 0.0638888888888891,
+      "ci95": [
+        0.02943749999999972,
+        0.09945138888888908
+      ]
+    },
+    {
+      "metric": "PDS_L2",
+      "epoch10": 0.6041666666666666,
+      "epoch15": 0.6808333333333333,
+      "difference": 0.07666666666666666,
+      "ci95": [
+        0.036944444444444335,
+        0.11917361111111094
+      ]
+    },
+    {
+      "metric": "PDS_cos",
+      "epoch10": 0.5772222222222222,
+      "epoch15": 0.655,
+      "difference": 0.07777777777777783,
+      "ci95": [
+        0.032222222222222596,
+        0.1266736111111111
+      ]
+    },
+    {
+      "metric": "MSE",
+      "epoch10": 0.00980738739793494,
+      "epoch15": 0.009040744008962008,
+      "difference": -0.0007666433889729311,
+      "ci95": [
+        -0.0012233195932155145,
+        -0.0003242772495529369
+      ]
+    },
+    {
+      "metric": "MAE",
+      "epoch10": 0.06795263433208064,
+      "epoch15": 0.0667998198419809,
+      "difference": -0.0011528144900997406,
+      "ci95": [
+        -0.0022474850310633446,
+        -6.668148407091053e-05
+      ]
+    }
+  ],
+  "score_difference": {
+    "value": 0.09019705256259646,
+    "ci95": [
+      0.037142472575268766,
+      0.14528119582140014
+    ]
+  },
+  "bootstrap": 2000,
+  "seed": 9232,
+  "source_sha256": {
+    "runs/main_v1/validation_epoch_010/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_v1/validation_epoch_010/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_v1/validation_epoch_010/metrics_de_diagnostic/diagnostic_config.json": "73fdd0cb1b56accf4cf090739310bdb8a5fbfe43de4ddb48751771477b21d0b7",
+    "runs/main_v1/validation_epoch_010/metrics_de_diagnostic/results.csv": "204461cca5c4c5eb3fa827a70f9caf8acc918d0d2b74ae38fd6bd94ef6c26f78",
+    "runs/main_v1/validation_epoch_015/indices.npy": "fedcd824ebfdc0e594a81ef0871e83fe077e05d9f2f2d7e983766c19619d87da",
+    "runs/main_v1/validation_epoch_015/generation_state.json": "0ca12313fc6cbb6b8b996a5db673fc3e755a8348e365e06db29d16b68fc7199c",
+    "runs/main_v1/validation_epoch_015/metrics_de_diagnostic/diagnostic_config.json": "31dda41c6453ece3c6ee24a9597b79751843703c29d869ae9a7fc8c23803694b",
+    "runs/main_v1/validation_epoch_015/metrics_de_diagnostic/results.csv": "90e06aeb284f58837ffe694aefc645f868bba3ac918caacd2452d5bc3e5e9e30"
+  },
+  "script_sha256": "350e723fea93258b33a96033a75e40133ce6a21a3bdc1f5e754716fa91060334",
+  "note": "Paired60-perturbation diagnostic with fixed reference library/indices/noise/sampler. Intervals are not independent-training-seed or generation-noise uncertainty. Ordinary conditional field, not formal CFG or test."
+}

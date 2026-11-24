@@ -1,0 +1,246 @@
+{
+  "time": "2026-11-23T04:00:23+08:00",
+  "scope": "complete validation only",
+  "cells_each": 4825,
+  "perturbations": 60,
+  "thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "candidates": [
+    {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.3664164968766272,
+        "MSE": 0.019047259694586198,
+        "MAE": 0.08367338124662638,
+        "PDS_L1": 0.8191666666666665,
+        "PDS_L2": 0.8336111111111111,
+        "PDS_cos": 0.8652777777777777,
+        "DEOver": 0.1731017998669691,
+        "DEPrec": 0.10191752743602288,
+        "DirAgr": 0.807026851480079
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3655943182607492,
+        "MSE": 0.019134092982858418,
+        "MAE": 0.08393889411042134,
+        "PDS_L1": 0.8175,
+        "PDS_L2": 0.8333333333333334,
+        "PDS_cos": 0.8666666666666668
+      },
+      "score": 1.205768348728479,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "77f56539c28133779b0fe8937e42677b5f450c87a666bafb0c1197f97a60ea8a",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "93c6f65b7aff5fff77105474ce7c14c0b25d2fa02e42de5bea43de3d51d55920"
+        }
+      },
+      "zero_floor": 0.0,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": false,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_00/metrics_clamped/summary.json"
+    },
+    {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.36513211481894053,
+        "MSE": 0.019074094039388,
+        "MAE": 0.08379152106742065,
+        "PDS_L1": 0.8216666666666668,
+        "PDS_L2": 0.8344444444444445,
+        "PDS_cos": 0.8683333333333334,
+        "DEOver": 0.19464386780680085,
+        "DEPrec": 0.15862601107232258,
+        "DirAgr": 0.8196504238469156
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3655943182607492,
+        "MSE": 0.019134092982858418,
+        "MAE": 0.08393889411042134,
+        "PDS_L1": 0.8175,
+        "PDS_L2": 0.8333333333333334,
+        "PDS_cos": 0.8666666666666668
+      },
+      "score": 1.206613596300422,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "77f56539c28133779b0fe8937e42677b5f450c87a666bafb0c1197f97a60ea8a",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "93c6f65b7aff5fff77105474ce7c14c0b25d2fa02e42de5bea43de3d51d55920"
+        }
+      },
+      "zero_floor": 0.05,
+      "checks": {
+        "PDCorr": true,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json"
+    },
+    {
+      "tag": "refine_01",
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.345872558777531,
+        "MSE": 0.01576547077856958,
+        "MAE": 0.07926623169332743,
+        "PDS_L1": 0.8205555555555555,
+        "PDS_L2": 0.8341666666666667,
+        "PDS_cos": 0.8652777777777776,
+        "DEOver": 0.1630823565619952,
+        "DEPrec": 0.10002491675226483,
+        "DirAgr": 0.8099960152488621
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3452093661917994,
+        "MSE": 0.015795668602610627,
+        "MAE": 0.0793415080755949,
+        "PDS_L1": 0.821388888888889,
+        "PDS_L2": 0.8344444444444445,
+        "PDS_cos": 0.8652777777777777
+      },
+      "score": 1.1858725587775307,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_01",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "bcf13b49716311384896faaea6d197ec535404551faad188b91bfa6d869298ca",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "be185daaabf89067ce2685344aa9686400a05cddc59375bfc6e3125624c73e16"
+        }
+      },
+      "zero_floor": 0.0,
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": false,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_01/metrics_clamped/summary.json"
+    },
+    {
+      "tag": "refine_01",
+      "guidance": 2.0,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.34481935143315545,
+        "MSE": 0.01577923314956327,
+        "MAE": 0.07930293008685112,
+        "PDS_L1": 0.8216666666666668,
+        "PDS_L2": 0.8347222222222221,
+        "PDS_cos": 0.866388888888889,
+        "DEOver": 0.1916758643709358,
+        "DEPrec": 0.15860692786185143,
+        "DirAgr": 0.8125367063664427
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3452093661917994,
+        "MSE": 0.015795668602610627,
+        "MAE": 0.0793415080755949,
+        "PDS_L1": 0.821388888888889,
+        "PDS_L2": 0.8344444444444445,
+        "PDS_cos": 0.8652777777777777
+      },
+      "score": 1.1857452773590813,
+      "cache_provenance": {
+        "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/refine_01",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "bcf13b49716311384896faaea6d197ec535404551faad188b91bfa6d869298ca",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "be185daaabf89067ce2685344aa9686400a05cddc59375bfc6e3125624c73e16"
+        }
+      },
+      "zero_floor": 0.05,
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/calibration/postprocessing/refine_01_floor_0p05/metrics/summary.json"
+    }
+  ],
+  "selected": null,
+  "protocol": {
+    "plan_sha256": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371",
+    "calibration_config_sha256": "55045b962ef23882a3c29830fddb9d427836ddfd7148b89ed539b5860e6342cd",
+    "base_results_sha256": "ef41be490bed91c177f87a8ed0f598cea1d3dcfa49f1a0f76c4b43f444741bb9",
+    "original_selected_sha256": "5f1acf24fb1536d5759ae6badb7d5973c779c876408a217bea5cd73ffcb53a03",
+    "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "source_sha256": {
+      "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+      "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9"
+    }
+  },
+  "test_access": false,
+  "new_generated_samples": 0,
+  "decision_policy": "Best unchanged primary score among full candidates passing every original check; exact ties prefer floor0."
+}

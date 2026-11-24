@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-19T19:33:44+08:00",
+  "stage": "completed_reviewed",
+  "controller_pid": 906363,
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_interval_review.py",
+    "--reference",
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2",
+    "--outdir",
+    "runs/main_v1/interim_epoch020_interval_review",
+    "--cfg-min",
+    "0",
+    "--cfg-max",
+    "1"
+  ],
+  "main_training_pid_unchanged": 656512,
+  "free_gpu_MiB_at_start": 21162,
+  "new_generation_cases": 1,
+  "status": "completed_reviewed",
+  "completed_at": "2026-11-19T20:29:03+08:00",
+  "decision": "runs/main_v1/interim_epoch020_interval_review/decision.json"
+}

@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-20T06:02:45+08:00",
+  "backup": "logs/README_before_epoch025_20261120.md",
+  "replacements": [
+    [
+      "**当前：第20轮引导强度与区间诊断均已完成，存在辨别收益与均值误差的取舍，尚未锁定正式推理设置。GPU仅用于原全量主训练，下一周期评估为第25轮。正式校准、最终验证与测试尚未开始，尚未达到论文成绩。**",
+      "**当前：第25轮周期验证的综合改善已明显放缓；留出扰动条件在去噪中仍有学习进展。原全量主训练继续，现做一次固定CFG的跨轮生成比较，下一周期为第30轮。正式校准、最终验证与测试尚未开始，尚未达到论文成绩。**"
+    ],
+    [
+      "第20轮周期EMA验证（普通条件场、cap32，未校准CFG）：PDCorr=0.3001、PDS_L2=0.7014、MSE=0.00901、DEPrec=0.0769。相对第15轮综合+0.0322，配对区间[0.0102,0.0572]，改善主要来自PDS。原训练继续，下一周期为第25轮，见 [配对决定](runs/main_v1/observation/epoch015_to020/decision.json)。",
+      "第25轮周期EMA验证（普通条件场、cap32，未校准CFG）：PDCorr=0.2987、PDS_L2=0.6967、MSE=0.00921、DEPrec=0.0774。相对第20轮综合仅+0.00279，配对区间[-0.01873,0.02527]跨0；仅PDS_cos显示明确增量，不能宣称整体继续明显改善。原模型按预登记收敛规则继续，下一周期第30轮，见 [配对决定](runs/main_v1/observation/epoch020_to025/decision.json)。step27950完整模型/优化器/双EMA/RNG已SHA核验保存，见 [断点记录](runs/main_v1/snapshots/step_27950/preserved.json)。\n\n同协议条件探针中，第25轮EMA验证置乱扰动的velocity损失增量为0.003321，较第12轮增长0.001361[0.000842,0.001983]。这说明仍在利用留出扰动条件，不等于生成达标。现只新增固定w2/[0.1,0.9]/cap16/B16的E20→25生成比较，复用已有E20参考，不重新搜索强度或区间。见 [条件探针决定](runs/main_v1/conditioning_epoch_025/decision.json) 和 [固定CFG计划](runs/main_v1/interim_epoch025_fixed_cfg/plan.json)。"
+    ],
+    [
+      "| 11-19 20:28 | 区间对照完成，未消除指标取舍；结束第20轮推理诊断，GPU恢复仅原主训练，等待第25轮评估。 |",
+      "| 11-19 20:28 | 区间对照完成，未消除指标取舍；结束第20轮推理诊断，GPU恢复仅原主训练，等待第25轮评估。 |\n| 11-20 05:38–05:51 | 第25轮生成与九指标完成；完整step27950断点已SHA归档。综合增益变弱，保持原训练并做同协议条件探针。 |\n| 11-20 05:56–06:02 | 留出扰动去噪依赖继续增强；只新增一次固定CFG的跨断点生成比较，不重新扫引导。 |"
+    ],
+    [
+      "\n\n- 2026-11-19T20:27:58+08:00：完成 `runs/main_v1/interim_epoch020_interval_review/candidate` 的 validation 评估（细胞 960，weights=ema_0.9996，CFG=2.0）；指标见 `runs/main_v1/interim_epoch020_interval_review/candidate/metrics/summary.json`。PDCorr=0.2872，MSE=0.02132。\n\n- 2026-11-19T20:28:06+08:00：冻结断点CFG区间对照及九指标配对分析完成：`runs/main_v1/interim_epoch020_interval_review/paired/comparison.json`；原主训练继续，正式推理配置尚未锁定，未计算测试结果。\n\n- 2026-11-19T20:29:03+08:00：第20轮固定w2区间对照完成：全区间较[0.1,0.9]的PDCorr/DEOver/DEPrec提高0.01936/0.01772/0.01357，但MSE/MAE变差，综合+0.01381[-0.00876,0.03706]。保留两区间待成熟模型正式验证，结束本轮推理诊断；GPU恢复仅原主训练，下一关键评估第25轮，未访问测试。见 `runs/main_v1/interim_epoch020_interval_review/decision.json`。\n\n- 2026-11-20T05:40:06+08:00：第25轮周期验证生成已开始；step27950的完整模型/优化器/双EMA/RNG断点已只读固定，并经SHA256核验保存至现有用户挂载，保留本地快照链接。断点记录 `runs/main_v1/snapshots/step_27950/preserved.json`；九指标完成后与第20轮按相同协议比较。\n\n- 2026-11-20T05:51:00+08:00：`runs/main_v1` 第 25 轮验证生成（EMA=0.9996，每扰动最多 32 细胞，50 步）：PDCorr=0.2987，MSE=0.00921，PDS_L2=0.6967。这是验证结果，非测试结果。\n\n- 2026-11-20T05:51:06+08:00：`runs/main_v1` 完成第 25/100 轮，已保存优化器、双 EMA、随机状态检查点；验证 EMA endpoint MSE=0.10397。\n\n- 2026-11-20T05:51:24+08:00：第 25 轮缓存的 CPU 九指标检查完成：DEOver=0.0922、DEPrec=0.0774、DirAgr=0.6707；复用既有预测，无新增生成。完整结果见 `runs/main_v1/validation_epoch_025/metrics_de_diagnostic/summary.json`（周期验证诊断，非正式测试）。\n",
+      "\n"
+    ]
+  ],
+  "condensed_event_count": 7,
+  "all_condensed_events_retained_verbatim_in": "logs/progress_history.md"
+}

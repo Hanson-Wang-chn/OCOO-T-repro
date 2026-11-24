@@ -1,0 +1,138 @@
+{
+  "time": "2026-11-20T14:29:47+08:00",
+  "candidate_updates": 800,
+  "registered_updates": 1118,
+  "rows": [
+    {
+      "step": 28000,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.2609976097010076,
+      "candidate": 0.2610623510554433,
+      "difference": 6.47413544356823e-05
+    },
+    {
+      "step": 28000,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.10457005968783051,
+      "candidate": 0.10459761717356741,
+      "difference": 2.755748573690653e-05
+    },
+    {
+      "step": 28000,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.2594551315996796,
+      "candidate": 0.25945247802883387,
+      "difference": -2.653570845723152e-06
+    },
+    {
+      "step": 28000,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10396940517239273,
+      "candidate": 0.10396862565539777,
+      "difference": -7.795169949531555e-07
+    },
+    {
+      "step": 28250,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.2611507619731128,
+      "candidate": 0.2611443174537271,
+      "difference": -6.4445193856954575e-06
+    },
+    {
+      "step": 28250,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.10476539318915457,
+      "candidate": 0.10476295626722276,
+      "difference": -2.4369219318032265e-06
+    },
+    {
+      "step": 28250,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.2594471932388842,
+      "candidate": 0.25944729964248836,
+      "difference": 1.0640360414981842e-07
+    },
+    {
+      "step": 28250,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10396650899201632,
+      "candidate": 0.10396659362595528,
+      "difference": 8.463393896818161e-08
+    },
+    {
+      "step": 28500,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.26054688543081284,
+      "candidate": 0.2605838922318071,
+      "difference": 3.7006800994277e-05
+    },
+    {
+      "step": 28500,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.1043927016435191,
+      "candidate": 0.10440370137803257,
+      "difference": 1.099973451346159e-05
+    },
+    {
+      "step": 28500,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.2594435450155288,
+      "candidate": 0.2594449515454471,
+      "difference": 1.4065299183130264e-06
+    },
+    {
+      "step": 28500,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10396755882538855,
+      "candidate": 0.10396886710077524,
+      "difference": 1.3082753866910934e-06
+    },
+    {
+      "step": 28750,
+      "weights": "raw",
+      "metric": "velocity_mse",
+      "reference": 0.26058695861138403,
+      "candidate": 0.2606284653302282,
+      "difference": 4.150671884417534e-05
+    },
+    {
+      "step": 28750,
+      "weights": "raw",
+      "metric": "endpoint_mse",
+      "reference": 0.10442598490044475,
+      "candidate": 0.10444387560710311,
+      "difference": 1.7890706658363342e-05
+    },
+    {
+      "step": 28750,
+      "weights": "ema_0.9996",
+      "metric": "velocity_mse",
+      "reference": 0.25944422045722604,
+      "candidate": 0.2594514440279454,
+      "difference": 7.223570719361305e-06
+    },
+    {
+      "step": 28750,
+      "weights": "ema_0.9996",
+      "metric": "endpoint_mse",
+      "reference": 0.10397140285931528,
+      "candidate": 0.1039750399067998,
+      "difference": 3.6370474845170975e-06
+    }
+  ],
+  "decision": "Continue remaining318 updates to exact endpoint29068. Denoising remains stable; wait all9 fixedCFG generation metrics, no automatic selection.",
+  "automatic_main_switch": false,
+  "test_access": false
+}

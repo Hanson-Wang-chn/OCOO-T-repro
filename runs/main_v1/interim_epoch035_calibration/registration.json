@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-21T13:12:29+08:00",
+  "plan_sha256": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc",
+  "source_archive_sha256": "802cd6b3f98245d7ced614f7107807d1eae8b3af4d016290a652978c94ad43c1",
+  "controller_sha256": "ece78427a19713384d79f2b3d185527fb66e60aaec27c94192e79a92d7e2a8e6",
+  "cpu_tests_sha256": "2db0967fd79317100af6bb4cec7455f97eec77fac54b665eb12d82769aa51944",
+  "status": "registered_not_launched",
+  "main_training_changed": false,
+  "test_access": false
+}

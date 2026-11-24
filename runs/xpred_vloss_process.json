@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-19T02:18:03+08:00",
+  "controller_pid": 839902,
+  "stage": "completed",
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--trials",
+    "xpred_vloss",
+    "--comparison-output",
+    "runs/xpred_vloss_trial_comparison.json",
+    "--de",
+    "--pid-file",
+    "logs/xpred_vloss_pilot.pid"
+  ],
+  "free_local_GiB_at_start": 30.166236877441406,
+  "free_gpu_MiB_at_start": 21162,
+  "main_pipeline_pid_unchanged": 656436,
+  "main_training_pid_unchanged": 656512,
+  "training_pid": 839903,
+  "pairing_check": "runs/xpred_vloss_initial_pairing.json",
+  "status": "completed",
+  "completion_time": "2026-11-19T04:27:10+08:00",
+  "decision": "runs/xpred_vloss_analysis/decision.json"
+}

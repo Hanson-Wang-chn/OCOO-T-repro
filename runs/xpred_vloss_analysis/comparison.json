@@ -1,0 +1,285 @@
+{
+  "time": "2026-11-19T04:25:10+08:00",
+  "reference": "runs/pilot_sigma_1.0_cellinit_1.0",
+  "candidate": "runs/pilot_xpred_vloss",
+  "factor": "prediction_space",
+  "updates": 384,
+  "generated_cells": 960,
+  "perturbations": [
+    "ALG11",
+    "ANAPC1",
+    "ASCC3",
+    "ATP6V1G1",
+    "C9orf78",
+    "CABIN1",
+    "CCDC115",
+    "CEP85",
+    "CSNK2B",
+    "CYREN",
+    "DCTN1",
+    "DCTN6",
+    "DERL2",
+    "DESI1",
+    "DHX36",
+    "DNTTIP2",
+    "E4F1",
+    "GINS4",
+    "GNL3",
+    "HMGCS1",
+    "HNRNPH1",
+    "INTS13",
+    "LAMTOR4",
+    "MRGBP",
+    "MRPL36",
+    "NAA10",
+    "NDC1",
+    "NDUFA3",
+    "NDUFS3",
+    "NFKBIE",
+    "NFRKB",
+    "NOC4L",
+    "NOL10",
+    "NPLOC4",
+    "NUP85",
+    "PABPC4",
+    "PITRM1",
+    "POLR2G",
+    "POLR3K",
+    "PPAN",
+    "PRDM4",
+    "RFC4",
+    "RPA3",
+    "RTCB",
+    "SLC1A5",
+    "SMN2",
+    "SPG7",
+    "SRSF7",
+    "STAT5B",
+    "TAF5",
+    "TERF2",
+    "THAP1",
+    "TP53RK",
+    "TRAIP",
+    "TRAPPC8",
+    "TUBD1",
+    "UCHL5",
+    "WDR77",
+    "ZC3H4",
+    "ZCCHC9"
+  ],
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": false,
+    "seed": 4242
+  },
+  "results": {
+    "raw": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.2179164782942583,
+          "candidate": 0.0974038635187753,
+          "difference": -0.12051261477548302,
+          "ci95": [
+            -0.14355161986825202,
+            -0.0955215314074273
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5161111111111112,
+          "candidate": 0.5094444444444445,
+          "difference": -0.00666666666666671,
+          "ci95": [
+            -0.046118055555555655,
+            0.0344444444444445
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5208333333333334,
+          "candidate": 0.5213888888888889,
+          "difference": 0.0005555555555555314,
+          "ci95": [
+            -0.026111111111110866,
+            0.026673611111111238
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5105555555555555,
+          "candidate": 0.5083333333333333,
+          "difference": -0.0022222222222222365,
+          "ci95": [
+            -0.029999999999999756,
+            0.026118055555555592
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013664484303444574,
+          "candidate": 0.05844889233509696,
+          "difference": 0.04478440803165239,
+          "ci95": [
+            0.04434783308805591,
+            0.04525586202934698
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08211884573101995,
+          "candidate": 0.1741569275657336,
+          "difference": 0.09203808183471364,
+          "ci95": [
+            0.09032729540951552,
+            0.09361723078104359
+          ]
+        }
+      ],
+      "reference_score": 0.7337498116275916,
+      "candidate_score": 0.6104594190743308,
+      "score_difference": -0.1232903925532608,
+      "score_difference_ci95": [
+        -0.1594233565245214,
+        -0.08930929555964522
+      ]
+    },
+    "clamped": {
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.22990732928737997,
+          "candidate": 0.09818823089008216,
+          "difference": -0.1317190983972978,
+          "ci95": [
+            -0.15619310290489619,
+            -0.10527172397356487
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.05293600144839774,
+          "candidate": 0.08091279050976129,
+          "difference": 0.027976789061363548,
+          "ci95": [
+            0.016443726856356262,
+            0.04044443157992652
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.05452449758784506,
+          "candidate": 0.08829619329748715,
+          "difference": 0.03377169570964209,
+          "ci95": [
+            0.023520569730520878,
+            0.044242883885764854
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.63140910783508,
+          "candidate": 0.5462897976458714,
+          "difference": -0.0851193101892086,
+          "ci95": [
+            -0.16290265006572352,
+            -0.00537555256438832
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.5147222222222222,
+          "candidate": 0.51,
+          "difference": -0.004722222222222183,
+          "ci95": [
+            -0.048333333333333235,
+            0.03972222222222227
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.5183333333333332,
+          "candidate": 0.5241666666666667,
+          "difference": 0.005833333333333468,
+          "ci95": [
+            -0.019444444444444264,
+            0.030562500000000187
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.5080555555555556,
+          "candidate": 0.5102777777777777,
+          "difference": 0.0022222222222221255,
+          "ci95": [
+            -0.02722222222222243,
+            0.0322222222222221
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.013566651071111312,
+          "candidate": 0.056496272298196905,
+          "difference": 0.042929621227085595,
+          "ci95": [
+            0.04248835873634868,
+            0.04340878588962372
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.08192139901220792,
+          "candidate": 0.16818746477365493,
+          "difference": 0.086266065761447,
+          "ci95": [
+            0.08433659435870745,
+            0.08808496257600686
+          ]
+        }
+      ],
+      "reference_score": 0.7436110329910837,
+      "candidate_score": 0.6130030457048969,
+      "score_difference": -0.13060798728618672,
+      "score_difference_ci95": [
+        -0.16831503808411397,
+        -0.09368072953176054
+      ]
+    }
+  },
+  "source_sha256": {
+    "runs/pilot_sigma_1.0_cellinit_1.0/config.yaml": "639e212ff12f0ca7c2d7bfaab169283821a092c859b6b3b1cb97d352d5cfebba",
+    "runs/pilot_sigma_1.0_cellinit_1.0/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/finished.json": "23b3c8cb22f55a7502299921e172e959f0729275bcf7e966abd9e4622464b84f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/source_manifest_step_0.json": "5fc3aec65642e420fbc86493694dec65d84883f3576545e0e5e820c54732d264",
+    "runs/pilot_sigma_1.0_cellinit_1.0/source_snapshot_step_0.tar.gz": "1129cc6dbe6960abfb4ca154c4565570c2ced2f74f88aa756ec8bc988bdb739c",
+    "runs/pilot_xpred_vloss/config.yaml": "53b3bfe6b27457d6ba6975d1d6cb84eb8c0536382c61322b4c827abb3713897e",
+    "runs/pilot_xpred_vloss/train_indices.npy": "8bfd3439b38e82b1740980d90c923295ff88265c2c240cc26b80f05e02ec2c2b",
+    "runs/pilot_xpred_vloss/finished.json": "be3c9799876e6e3ccb6497b71f7e3662b9474b369db8acc4c2f783863a4c0e8e",
+    "runs/pilot_xpred_vloss/source_manifest_step_0.json": "eef6acff617f4e9b04a7b0d0f1994d524c683a81c1f7a5e2c319810010004045",
+    "runs/pilot_xpred_vloss/source_snapshot_step_0.tar.gz": "88b2ab5128820db450f101e20bfa1404117b6732b89943c520d78230cfaa946f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/model.pt": "cc242816d67483e25c68d7e3cb57ea1fef23ea242e0af25e1316f7822c1eb272",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/prediction.npy": "da1123f69f893d278652384a8da4d8f73315fad396baba0ad7795f4d0d289c98",
+    "runs/pilot_xpred_vloss/validation_epoch_012/model.pt": "af99fdbed258b3908d6e98b8392892c261d68f5e823459333d24c8d69d8fb354",
+    "runs/pilot_xpred_vloss/validation_epoch_012/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/pilot_xpred_vloss/validation_epoch_012/generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b",
+    "runs/pilot_xpred_vloss/validation_epoch_012/prediction.npy": "1a2bbf35290cec53a472b2e5ea9b93b4d68c4663d31274c9f4371b6df60feb9b",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/results.csv": "24b731c00be338ff6e314f30c1d41208f42f7e97beb8b7a9fa3bf784408fed1e",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics/summary.json": "55660beef9dc907cb8166e4fc0bd368d3c42b8c98eea3887d83f240de5549b34",
+    "runs/pilot_xpred_vloss/validation_epoch_012/metrics/results.csv": "4dd1f1b1405ae3380af126c9dd9896cf7ce30f5c62d9b15789d233a058238116",
+    "runs/pilot_xpred_vloss/validation_epoch_012/metrics/summary.json": "cfc1a74a17ec19d4ee87b9996cc35c4bbd1b60d08616e1b6c21a1186c996a069",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/results.csv": "c45b6aa573d38e213b2e826cc054445d8c434d13b0dbcb43b7dc9b2aa7e52c7f",
+    "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012/metrics_clamped_de/summary.json": "0bd32a738cbc233d33c5cf65b2774c71be8ea675dab622871faf7e6576c64042",
+    "runs/pilot_xpred_vloss/validation_epoch_012/metrics_clamped_de/results.csv": "ce87866f4063b5465cc52229bfee1a873117785ded5f79704b7ee3e98aab954d",
+    "runs/pilot_xpred_vloss/validation_epoch_012/metrics_clamped_de/summary.json": "a4aba44fc9a37aed7e2fa41893c31fe88128911d5385d8abd723b5dcbc9461ec"
+  },
+  "script_sha256": "b310fc16d85ba4332d10550b4391732d1adb351a79e02607da8b0266c07dd55f",
+  "automatic_main_switch": false,
+  "note": "Paper Eqs.5/6: initial neural weights match, but initial velocity functions/losses differ. This unpatched diagnostic is not the patched Fig.5 experiment. Same data, architecture, budget and sampling noise. Fixed-library paired perturbation intervals do not measure independent training-seed uncertainty. Short raw diagnostics are not mature EMA or test results."
+}

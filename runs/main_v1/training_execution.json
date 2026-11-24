@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-22T11:14:17+08:00",
+  "start_step": 41374,
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 83639,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 1,
+      "pid": 83640,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 2,
+      "pid": 83641,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 3,
+      "pid": 83642,
+      "start_tick": 516199159
+    }
+  ],
+  "cuda_visible_devices": "0,1,2,3",
+  "world_size": 4,
+  "local_micro_batch": 16,
+  "accumulation": 8,
+  "global_batch": 512,
+  "gpu": "NVIDIA A100-PCIE-40GB"
+}

@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-19T02:12:16+08:00",
+  "decision": "Keep original main training, time_scale1 and BF16 inference for now. FP32 is not a material explanation of the current late-time error; short time1000 also does not resolve it.",
+  "late_zero_velocity_mse_bf16": 0.2992780076974781,
+  "late_zero_velocity_mse_fp32": 0.29885454225774916,
+  "relative_fp32_improvement": 0.001414956758723772,
+  "late_zero_noise_slope_bf16": 0.4875786892950922,
+  "late_zero_noise_slope_fp32": 0.48796146576721355,
+  "interpretation": "Mature model improves strongly over short pilots, but zero-mode velocity gain drops between t0.95 and0.98. This supports continued training and a targeted paper-defined parameterization comparison, not changing the specified training time distribution or claiming a code error from the oracle.",
+  "next_candidate": "An x-prediction / v-loss short diagnostic following paperEq6, alongside unchanged v-prediction main training; no automatic main switch.",
+  "test_access": false
+}

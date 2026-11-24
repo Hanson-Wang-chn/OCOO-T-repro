@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T12:10:17+08:00",
+  "analysis_source_sha256": "075a86ad474814aec23cf3dae4984d9373e2b5d44968d61dcf77d7f447ca3532",
+  "source_sha256": {
+    "scripts/analyze_mature_batch_dropout_trial.py": "075a86ad474814aec23cf3dae4984d9373e2b5d44968d61dcf77d7f447ca3532",
+    "scripts/analyze_inference_review.py": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+    "logs/mature_batch_dropout_analysis_verification.json": "4164dd40dae8f0db9a3e7b4637fc7cef52712d7ef51c905b83f3f26e6b02b290"
+  },
+  "bootstrap": 2000,
+  "seed": 9232,
+  "all9_and_primary_formula_verified_against_prior_actual_cases": true,
+  "prior_agreement_max_abs_difference": 0.0,
+  "registered_before_either_trial_endpoint_generation": true,
+  "no_automatic_main_switch": true
+}

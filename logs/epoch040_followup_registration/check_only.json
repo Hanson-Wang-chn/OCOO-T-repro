@@ -1,0 +1,25 @@
+{
+  "time": "2026-11-21T13:18:12+08:00",
+  "ready": false,
+  "checks": {
+    "observer_epoch40_complete": false,
+    "epoch40_inference_checkpoint_exists": false,
+    "epoch40_full_snapshot_preserved": false,
+    "gpu_only_original_trainer": false
+  },
+  "gpu_pids": [
+    656512,
+    1251202
+  ],
+  "observer_epochs": [
+    10,
+    15,
+    20,
+    25,
+    30,
+    35
+  ],
+  "source": "Actual CPU check-only completed in exec session55140",
+  "expected_gpu_reason": "Original trainer plus the registered frozenE35 complete-validation calibration; E40 follower remains passive",
+  "plan_sha256": "d0f2102565b53504480e11b99f7b33372a4437cb91ded45d2510d83ec9f985b8"
+}

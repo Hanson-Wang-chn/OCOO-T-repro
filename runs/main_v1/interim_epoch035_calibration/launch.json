@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-21T13:16:01+08:00",
+  "pid": 1251199,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "logs/run_epoch035_validation_calibration.py",
+    "--plan",
+    "runs/main_v1/interim_epoch035_calibration/plan.json"
+  ],
+  "plan_sha256": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc",
+  "controller_sha256": "ece78427a19713384d79f2b3d185527fb66e60aaec27c94192e79a92d7e2a8e6",
+  "check_only_sha256": "7f27f9c65e4e9e068a54fbd3978b46e8c245cf1bf5c877003825b69f563e23e7",
+  "visibility_inherited_from_original_trainer": {
+    "CUDA_VISIBLE_DEVICES": null,
+    "NVIDIA_VISIBLE_DEVICES": null
+  },
+  "main_trainer_unchanged": 656512,
+  "test_access": false,
+  "final_test_protocol_adopted": false
+}

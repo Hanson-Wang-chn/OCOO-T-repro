@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-21T22:37:42+08:00",
+  "step": 41374,
+  "source_run": "/home/whs/ocoo-t/runs/main_v1",
+  "snapshot_path": "/home/whs/ocoo-t/runs/main_v1/snapshots/step_41374/full.pt",
+  "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/shutdown_step041374/full.pt",
+  "sha256": "cf418b1615a7ec4c48906f931a21c08a50564f2938816d117b18d1fbedc00df8",
+  "bytes": 2818999011,
+  "ema_decays": [
+    "0.9999",
+    "0.9996"
+  ],
+  "pending_generation_epoch": null,
+  "full_model_optimizer_ema_rng_retained": true,
+  "active_training_or_last_checkpoint_modified": false,
+  "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"
+}

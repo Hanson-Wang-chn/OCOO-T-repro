@@ -1,0 +1,18 @@
+{
+  "step": 250,
+  "bytes": 2818998947,
+  "ema_decays": [
+    "0.9999",
+    "0.9996"
+  ],
+  "optimizer_parameter_states": 189,
+  "gene_tokens": 2000,
+  "rng_components": [
+    "python",
+    "numpy",
+    "torch",
+    "cuda"
+  ],
+  "pending_generation_epoch": null,
+  "note": "Read-only structural audit of atomic full-data checkpoint; no training interruption or test evaluation."
+}

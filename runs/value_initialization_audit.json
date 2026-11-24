@@ -1,0 +1,51 @@
+{
+  "time": "2026-11-19T03:15:41+08:00",
+  "scope": "CPU-only scalar-value MLP audit; no training or expression reads",
+  "initial_model_seed": 42,
+  "reference_config": "configs/pilot_sigma_1.0_cellinit_1.0.yaml",
+  "network_source_sha256": "27321aad305713a969d0e8a51a269c1bdf3230eee1fd7d61de49244e08e74f39",
+  "mature_checkpoint": "runs/main_v1/validation_epoch_015/model.pt",
+  "mature_step": 16770,
+  "mature_weights": "ema_0.9996",
+  "mathematics": {
+    "xavier_uniform_bound": "sqrt(6/(fan_in+fan_out))",
+    "fan_in_uniform_bound": "1/sqrt(fan_in), nn.Linear default weight distribution",
+    "scalar_fan_in": 1,
+    "fan_out": 768,
+    "weight_rescale_factor": 11.321071798494463,
+    "bias": "preserve zero, not full nn.Linear reinitialization",
+    "rescaling_consumes_rng": false
+  },
+  "initial_first_weight_absolute_max": 0.08830145746469498,
+  "fan_in_first_weight_absolute_max": 0.9996671080589294,
+  "small_positive_signal_rms_gain": {
+    "initial_xavier": {
+      "0.0001": 0.025384973734617233,
+      "0.001": 0.025384968146681786,
+      "0.01": 0.025384895503520966,
+      "0.1": 0.025384314358234406,
+      "1.0": 0.02539159171283245,
+      "2.0": 0.02542736567556858,
+      "5.0": 0.025701172649860382
+    },
+    "initial_fan_in_zero_bias": {
+      "0.0001": 0.2873850166797638,
+      "0.001": 0.28738412261009216,
+      "0.01": 0.28737691044807434,
+      "0.1": 0.2874947190284729,
+      "1.0": 0.3047444522380829,
+      "2.0": 0.33716362714767456,
+      "5.0": 0.3839218318462372
+    },
+    "epoch015_ema": {
+      "0.0001": 0.2669614553451538,
+      "0.001": 0.26696082949638367,
+      "0.01": 0.26695188879966736,
+      "0.1": 0.2668628692626953,
+      "1.0": 0.26597726345062256,
+      "2.0": 0.26500606536865234,
+      "5.0": 0.2622111141681671
+    }
+  },
+  "interpretation": "Xavier shrinks the scalar input branch with increasing output width. Compare a fan-in-scaled initialization as an undocumented detail if useful. Mature learned gain and initial gain are descriptive; neither proves generation superiority. Paper does not specify this scalar-MLP initialization."
+}

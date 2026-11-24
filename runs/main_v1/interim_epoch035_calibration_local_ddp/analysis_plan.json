@@ -1,0 +1,35 @@
+{
+  "time": "2026-11-21T13:22:23+08:00",
+  "status": "analysis_registered_before_any_complete_calibration_case",
+  "validation_root": "runs/main_v1/interim_epoch035_calibration_local_ddp",
+  "outdir": "runs/main_v1/interim_epoch035_calibration_local_ddp/full_candidate_audit",
+  "bootstrap": 2000,
+  "seed": 9232,
+  "scope": "Read completed full4825/60 validation candidate metrics only; preserve all4 variants, all9 metrics, all6 paired contrasts, mean/95% intervals and original checks. No official-metric recomputation, selection/training change or test access. Descriptive unadjusted perturbation intervals only, not independent training/generation seeds.",
+  "source_sha256": {
+    "scripts/analyze_full_calibration.py": "b3bb77693973830de797f45a4861a020918b47cb5b05166e1e4050d03f7c6d80",
+    "tests/test_full_calibration_analysis.py": "8684c3a61f76b55d2a88032cd61f8b0402224d26e34f70e0ea1a0935bd34ae71",
+    "scripts/select_validation_postprocess.py": "8e528bc504baefb43418f50e4351ed9f1c55c51d163ec6e691e6a53998fd4a2e",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db"
+  },
+  "prerequisite_sha256": {
+    "runs/main_v1/interim_epoch035_calibration/plan.json": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc",
+    "logs/postprocess_workflow_update/plan.json": "87445b9d673b299bef461ec5cc6ce78a37d3cb64b94ab4b46ed672fe89e79371",
+    "logs/epoch035_full_calibration_analysis_tests.log": "661fb6354a30823b107a3c6f4ca5125655631c72072b0b74eb3e10cc5d4fd854",
+    "runs/main_v1/interim_epoch035_calibration_local_ddp/plan.json": "5f7df112a9f5ab46c94aadbbcce482f2970a7ce061b09e632351c1a998c13b30"
+  },
+  "cpu_tests": 3,
+  "full_calibration_results_read": false,
+  "test_access": false,
+  "prelaunch_review": "Ensure every registered prerequisite SHA is verified as well as source SHA. Statistical code and three passed CPU checks unchanged; analysis not launched.",
+  "migration": {
+    "time": "2026-11-22T11:18:10+08:00",
+    "original": "runs/main_v1/interim_epoch035_calibration/analysis_plan.json",
+    "sha256": "337489792d00d5a3b0a5b78f11cc1065fe949034ebd03681d612456484be0f30",
+    "python": "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "project_root": "/home/dataset-assist-0/whs/ocoo-t"
+  }
+}

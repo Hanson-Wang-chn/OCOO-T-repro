@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-20T07:23:54+08:00",
+  "previous_publication_unix": 1795129734.1286511,
+  "publication_interval_seconds": 899.9999616146088,
+  "plan_sha256": "9d89efb829efe73b6ea4b5938ab7920e5bf7204ac95c50e206d3f84eec6e81cf",
+  "readme_sha256": "dd215f7c89fdfd928e9b77223faa290f4d3f3ca94ec70bdabc55d24fdbe03b6a",
+  "backup": "logs/README_before_epoch025_full_diagnostic_20261120.md"
+}

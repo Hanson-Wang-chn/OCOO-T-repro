@@ -1,0 +1,20 @@
+[
+  {
+    "file": "paper/OCOO-T_v1.pdf",
+    "url": "https://arxiv.org/pdf/2606.12838v1",
+    "bytes": 1715457,
+    "sha256": "6b576a3c890ef7d4d1f5fa047c94b98f8f6c9efe6f8a7719d614346315b896ed"
+  },
+  {
+    "file": "paper/OCOO-T_v2.pdf",
+    "url": "https://arxiv.org/pdf/2606.12838v2",
+    "bytes": 1661167,
+    "sha256": "ad55f9fc7a6d5d053cacf103559108e19f2f2e40ef0d068ff09445b2ca33dd9f"
+  },
+  {
+    "file": "paper/OCOO-T_v2.html",
+    "url": "https://arxiv.org/html/2606.12838v2",
+    "bytes": 271741,
+    "sha256": "d1826567e1a8fae6d7df41d545788ef85a0e8cc8c7446dcdc74135ecaf498ba6"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "time": "2026-11-22T11:18:10+08:00",
+  "worker_identity": [
+    {
+      "rank": 0,
+      "pid": 83639,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 1,
+      "pid": 83640,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 2,
+      "pid": 83641,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 3,
+      "pid": 83642,
+      "start_tick": 516199159
+    }
+  ],
+  "path_mapping": {
+    "/home/whs/ocoo-t": "/home/dataset-assist-0/whs/ocoo-t",
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python": "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "runs/main_v1/interim_epoch035_calibration": "runs/main_v1/interim_epoch035_calibration_local_ddp",
+    "runs/main_v1/ema_epoch035_review": "runs/main_v1/ema_epoch035_review_local_ddp",
+    "runs/main_v1/interim_epoch040_fixed_cfg": "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp"
+  },
+  "plans": {
+    "runs/main_v1/interim_epoch035_calibration_local_ddp/plan.json": "5f7df112a9f5ab46c94aadbbcce482f2970a7ce061b09e632351c1a998c13b30",
+    "runs/main_v1/interim_epoch035_calibration_local_ddp/analysis_plan.json": "7d3cbe2e4b0fddae8ea1b272ce4ff0b6da15534814e3c6b38e8776d16f4d52f9",
+    "runs/main_v1/ema_epoch035_review_local_ddp/plan.json": "e8e6214070c270c2cca77af8d96fef5284b3610e76596c6f095d320235db430c",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/plan.json": "b1092f48cc84c93955f5e567ac98f57346a56a8014fa0c6114e713be31b7a35e"
+  },
+  "artifacts": "/home/dataset-assist-0/whs/ocoo-t-artifacts",
+  "test_access": false
+}

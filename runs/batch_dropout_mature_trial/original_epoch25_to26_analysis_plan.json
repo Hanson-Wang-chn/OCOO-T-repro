@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-20T16:34:42+08:00",
+  "status": "registered_before_endpoint_metric_result",
+  "question": "How much does the unmodified main trajectory improve fixed-CFG generation from E25 to E26? Context for interpreting the matched batch-drop trial, not a replacement primary comparison.",
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/compare_inference_cases.py",
+    "--reference",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+    "--candidate",
+    "runs/batch_dropout_mature_trial/reference",
+    "--factor",
+    "checkpoint",
+    "--outdir",
+    "runs/batch_dropout_mature_trial/original_epoch25_to26"
+  ],
+  "fixed": "EMA0.9996; cap16/B16; identical960 indices and seed4242; w2/[.1,.9]; uniformHeun50/finalEuler; clamp0/all9",
+  "changed_factor": "original main checkpoint only:27950→29068",
+  "source_sha256": {
+    "scripts/compare_inference_cases.py": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+    "scripts/analyze_inference_review.py": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df"
+  },
+  "bootstrap": 2000,
+  "seed": 9232,
+  "cpu_only": true,
+  "new_generation_cases": 0,
+  "test_access": false,
+  "automatic_main_or_convergence_change": false
+}

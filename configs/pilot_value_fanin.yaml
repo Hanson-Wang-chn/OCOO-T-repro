@@ -1,0 +1,55 @@
+data_dir: data/processed
+model:
+  batch_condition: true
+  context_start: 3
+  context_tokens: 32
+  depth: 12
+  dim: 768
+  drop_prob: 0.1
+  grad_checkpoint: false
+  heads: 12
+  mlp_ratio: 4.0
+  pos_encoding: true
+  swiglu_convention: param_matched
+  time_dim: 256
+  value_hidden: 768
+  cell_init_std: 1.0
+  value_input_init: fan_in
+run_dir: runs/pilot_value_fanin
+sampling:
+  cfg_max: 0.9
+  cfg_min: 0.1
+  clamp: false
+  guidance: null
+  steps: 50
+seed: 42
+training:
+  betas:
+  - 0.9
+  - 0.95
+  checkpoint_steps: 32
+  compile: true
+  compile_mode: default
+  data_on_gpu: false
+  effective_batch: 512
+  ema_decays:
+  - 0.9999
+  - 0.9996
+  epochs: 12
+  log_steps: 5
+  lr: 0.0001
+  max_grad_norm: null
+  micro_batch: 16
+  noise_std: 1.0
+  p_mean: -0.8
+  p_std: 0.8
+  train_subset: 16384
+  val_cells: 1024
+  val_generation_batch: 32
+  val_generation_cap: 16
+  val_generation_epochs: 12
+  val_generation_steps: 50
+  val_interval_steps: 64
+  warmup_epochs: 5
+  weight_decay: 0.0
+  generation_weights: raw

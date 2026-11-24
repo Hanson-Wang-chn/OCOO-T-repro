@@ -1,0 +1,21 @@
+{
+  "time": "2026-11-21T16:35:21+08:00",
+  "pid": 1277287,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "logs/preserve_main_epoch036_when_ready.py"
+  ],
+  "source_sha256": "9d956927e706fc7b394762bfd79ac4a28d3f9fe0193f0c27d410afe08401d9e4",
+  "registration_sha256": "ba451f8296dad0101bc200d64f2cc26a34f1f5da19f1edd43ecc105a688c72dd",
+  "test_access": false,
+  "new_gpu_job": false,
+  "training_changed": false,
+  "initial_state": {
+    "time": "2026-11-21T16:35:22+08:00",
+    "pid": 1277287,
+    "stage": "waiting_step40248",
+    "target_step": 40248,
+    "training_changed": false,
+    "purpose": "Preserve an exact mature checkpoint; no new experiment or policy change"
+  }
+}

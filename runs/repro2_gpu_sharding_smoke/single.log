@@ -1,0 +1,18 @@
+{"time": "2026-11-23T11:48:56+08:00", "completed": 8, "total": 60}
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3368.74it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3018.64it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3743.63it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 77385.68it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 80018.52it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 74831.47it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 81760.31it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 74411.07it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 81893.34it/s]
+{
+  "PDCorr": 0.10489248064041021,
+  "MSE": 0.13797320903589327,
+  "MAE": 0.2711463169505199,
+  "PDS_L1": 0.7030555555555555,
+  "PDS_L2": 0.7272222222222222,
+  "PDS_cos": 0.7019444444444445
+}

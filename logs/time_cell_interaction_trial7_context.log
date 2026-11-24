@@ -1,0 +1,72 @@
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "pilot_sigma_1.0_cellinit_1.0": {
+      "source": "runs/pilot_sigma_1.0_cellinit_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "evaluated_postprocess": "none",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0010494717139919536,
+        "jurkat": 0.14419970158179257,
+        "k562": 0.11101272132755229,
+        "rpe1": 0.1068052315506025
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.08170491756768453,
+        "clipped": 0.07451612347527789,
+        "raw_ratio_to_real": 0.6473669242245595,
+        "clipped_ratio_to_real": 0.5904084490308265
+      },
+      "metrics": {
+        "PDCorr": 0.2179164782942583,
+        "MSE": 0.013664484303444625,
+        "MAE": 0.08211884573101998,
+        "PDS_L1": 0.5161111111111112,
+        "PDS_L2": 0.5208333333333334,
+        "PDS_cos": 0.5105555555555557
+      }
+    },
+    "pilot_sigma_1.0_t1000_cellinit_1.0": {
+      "source": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/validation_epoch_012",
+      "generated_cells": 960,
+      "evaluated_postprocess": "none",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 960,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0012572490448039516,
+        "jurkat": 0.13983623094265882,
+        "k562": 0.10728930879022051,
+        "rpe1": 0.10273304592920643
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.08802874498516346,
+        "clipped": 0.08103827101702213,
+        "raw_ratio_to_real": 0.6974720687672846,
+        "clipped_ratio_to_real": 0.6420849297021403
+      },
+      "metrics": {
+        "PDCorr": 0.21866206272000757,
+        "MSE": 0.014392005776365598,
+        "MAE": 0.08481047414243222,
+        "PDS_L1": 0.5158333333333334,
+        "PDS_L2": 0.5197222222222222,
+        "PDS_cos": 0.5091666666666667
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "reference": "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2",
+  "candidate": "runs/main_v1/interim_epoch020_interval_review/candidate",
+  "factor": "cfg_interval",
+  "source_sha256": {
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/evaluation_config.json": "1f4064cd4f39d1b3502c94cc7466303a7a8966b1f22a04db1ed841dd48e4939a",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/prediction.npy": "60f3b81a0c023e32b1fbfe886f5499c43e189c32228e7544f4109457bc5f6b3a",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/prediction_raw.npy": "a5c2537fb114231f086533e6f163f66cca5ba8f95760c5f460a0ec59397db9de",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/metrics/summary.json": "4a622e5cfe762f29d5b25fac64678192fdc905a4d54dfdc037c22ba9c985bf01",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review/ema_cfg_2/metrics/results.csv": "b27da1b56e257fc58c99cd8d9e0488c3d4f8725f2b147b0005db8f179cad9cc2",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/evaluation_config.json": "e7fa34c8ebbe40a5ebe34745d9a42f37d9ba1d855e67c5862f533083bcc913a6",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/generation_state.json": "4c0ad99aa71b9d598e20979e20767752f1d5075d07ce96ef9948f73baa7ca9e3",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/prediction.npy": "f109b9b1d4c22e102f784e7d0d34010dc7815d090bc68718e72a7662722b7901",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/prediction_raw.npy": "556adc7e953ec9d14d4497706546c8dd7a2db6da32f2527b4de827bbd93ff985",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/metrics/summary.json": "483cce851cac0741ea066990fab29f20bb5425856e5417f6cdc5e44bf4baca0c",
+    "runs/main_v1/interim_epoch020_interval_review/candidate/metrics/results.csv": "afae0b5e54159593ae8d331e142a4fc77883e1a74b3e17b6a1eaf809c5edd7f1"
+  },
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "451cb751136103e0acb15b6f1c150c602c31ed6fd645d03357271118bbcb1276",
+  "bootstrap": 2000,
+  "seed": 9232
+}

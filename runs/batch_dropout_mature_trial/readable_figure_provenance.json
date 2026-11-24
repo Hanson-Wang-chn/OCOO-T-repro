@@ -1,0 +1,11 @@
+{
+  "analysis_sha256": "de8f88a8d14ab65c4f3747f477ecf638e62f72cd22c68e6d7886cc9ca755f98a",
+  "plot_script_sha256": "ffcfe53c886d2db4f1c0bbffb27f80ca6ff8d4260c2e64d768a38129efb9a245",
+  "source_results_changed": false,
+  "recomputed_metrics": false,
+  "reason": "Display only: shared caption and shorter ticks avoid clipping in the original registered figure.",
+  "artifacts": {
+    "paired_comparison_readable.png": "be96e88c297a5fe9a31232b40eab645e0e518ca44ed6c476aca0c2119bc63b39",
+    "paired_comparison_readable.pdf": "75fb5b27384ea9b53e4e1636ac42483a9e4c566476b2a5d01e5cce5c7bbdf635"
+  }
+}

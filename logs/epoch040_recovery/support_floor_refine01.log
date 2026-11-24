@@ -1,0 +1,193 @@
+Output directory logs/epoch040_recovery/support_floor_diagnostic/refine_01/0.05 already exists, potential overwrite occurring
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+  warnings.warn(problem)
+Running parallel differential expression (against reference):   0%|          | 0/61 [00:00<?, ?it/s]Running parallel differential expression (against reference):   2%|▏         | 1/61 [00:03<03:50,  3.84s/it]Running parallel differential expression (against reference):   3%|▎         | 2/61 [00:03<01:37,  1.65s/it]Running parallel differential expression (against reference):   5%|▍         | 3/61 [00:04<00:55,  1.05it/s]Running parallel differential expression (against reference):   7%|▋         | 4/61 [00:04<00:35,  1.62it/s]Running parallel differential expression (against reference):   8%|▊         | 5/61 [00:04<00:24,  2.30it/s]Running parallel differential expression (against reference):  10%|▉         | 6/61 [00:04<00:17,  3.09it/s]Running parallel differential expression (against reference):  11%|█▏        | 7/61 [00:04<00:13,  3.93it/s]Running parallel differential expression (against reference):  13%|█▎        | 8/61 [00:04<00:11,  4.79it/s]Running parallel differential expression (against reference):  15%|█▍        | 9/61 [00:04<00:09,  5.60it/s]Running parallel differential expression (against reference):  16%|█▋        | 10/61 [00:04<00:07,  6.38it/s]Running parallel differential expression (against reference):  20%|█▉        | 12/61 [00:05<00:06,  7.76it/s]Running parallel differential expression (against reference):  21%|██▏       | 13/61 [00:05<00:05,  8.05it/s]Running parallel differential expression (against reference):  23%|██▎       | 14/61 [00:05<00:05,  8.30it/s]Running parallel differential expression (against reference):  25%|██▍       | 15/61 [00:05<00:05,  8.58it/s]Running parallel differential expression (against reference):  26%|██▌       | 16/61 [00:05<00:05,  8.74it/s]Running parallel differential expression (against reference):  28%|██▊       | 17/61 [00:05<00:04,  8.87it/s]Running parallel differential expression (against reference):  30%|██▉       | 18/61 [00:05<00:04,  8.92it/s]Running parallel differential expression (against reference):  31%|███       | 19/61 [00:05<00:04,  8.99it/s]Running parallel differential expression (against reference):  33%|███▎      | 20/61 [00:05<00:04,  9.11it/s]Running parallel differential expression (against reference):  34%|███▍      | 21/61 [00:06<00:04,  8.96it/s]Running parallel differential expression (against reference):  36%|███▌      | 22/61 [00:06<00:04,  8.97it/s]Running parallel differential expression (against reference):  38%|███▊      | 23/61 [00:06<00:04,  9.01it/s]Running parallel differential expression (against reference):  39%|███▉      | 24/61 [00:06<00:04,  9.07it/s]Running parallel differential expression (against reference):  41%|████      | 25/61 [00:06<00:04,  8.95it/s]Running parallel differential expression (against reference):  43%|████▎     | 26/61 [00:06<00:03,  9.01it/s]Running parallel differential expression (against reference):  44%|████▍     | 27/61 [00:06<00:03,  9.14it/s]Running parallel differential expression (against reference):  46%|████▌     | 28/61 [00:06<00:03,  9.38it/s]Running parallel differential expression (against reference):  49%|████▉     | 30/61 [00:06<00:03, 10.04it/s]Running parallel differential expression (against reference):  52%|█████▏    | 32/61 [00:07<00:02, 10.36it/s]Running parallel differential expression (against reference):  56%|█████▌    | 34/61 [00:07<00:02, 10.00it/s]Running parallel differential expression (against reference):  57%|█████▋    | 35/61 [00:07<00:02,  9.73it/s]Running parallel differential expression (against reference):  61%|██████    | 37/61 [00:07<00:02, 10.12it/s]Running parallel differential expression (against reference):  64%|██████▍   | 39/61 [00:07<00:02, 10.43it/s]Running parallel differential expression (against reference):  67%|██████▋   | 41/61 [00:08<00:01, 10.57it/s]Running parallel differential expression (against reference):  70%|███████   | 43/61 [00:08<00:01, 10.01it/s]Running parallel differential expression (against reference):  74%|███████▍  | 45/61 [00:08<00:01,  9.75it/s]Running parallel differential expression (against reference):  75%|███████▌  | 46/61 [00:08<00:01,  9.51it/s]Running parallel differential expression (against reference):  77%|███████▋  | 47/61 [00:08<00:01,  9.35it/s]Running parallel differential expression (against reference):  80%|████████  | 49/61 [00:08<00:01,  9.77it/s]Running parallel differential expression (against reference):  84%|████████▎ | 51/61 [00:09<00:00, 10.05it/s]Running parallel differential expression (against reference):  87%|████████▋ | 53/61 [00:09<00:00, 10.12it/s]Running parallel differential expression (against reference):  90%|█████████ | 55/61 [00:09<00:00, 10.28it/s]Running parallel differential expression (against reference):  93%|█████████▎| 57/61 [00:09<00:00, 10.45it/s]Running parallel differential expression (against reference):  97%|█████████▋| 59/61 [00:09<00:00, 10.60it/s]Running parallel differential expression (against reference): 100%|██████████| 61/61 [00:09<00:00,  6.15it/s]
+Running parallel differential expression (against reference):   0%|          | 0/61 [00:00<?, ?it/s]Running parallel differential expression (against reference):   3%|▎         | 2/61 [00:00<00:05, 10.41it/s]Running parallel differential expression (against reference):   7%|▋         | 4/61 [00:00<00:05, 10.37it/s]Running parallel differential expression (against reference):  10%|▉         | 6/61 [00:00<00:05, 10.46it/s]Running parallel differential expression (against reference):  13%|█▎        | 8/61 [00:00<00:05, 10.55it/s]Running parallel differential expression (against reference):  16%|█▋        | 10/61 [00:00<00:04, 10.57it/s]Running parallel differential expression (against reference):  20%|█▉        | 12/61 [00:01<00:05,  9.73it/s]Running parallel differential expression (against reference):  23%|██▎       | 14/61 [00:01<00:04, 10.05it/s]Running parallel differential expression (against reference):  26%|██▌       | 16/61 [00:01<00:04,  9.97it/s]Running parallel differential expression (against reference):  30%|██▉       | 18/61 [00:01<00:04, 10.23it/s]Running parallel differential expression (against reference):  33%|███▎      | 20/61 [00:01<00:03, 10.41it/s]Running parallel differential expression (against reference):  36%|███▌      | 22/61 [00:02<00:03, 10.42it/s]Running parallel differential expression (against reference):  39%|███▉      | 24/61 [00:02<00:03, 10.45it/s]Running parallel differential expression (against reference):  43%|████▎     | 26/61 [00:02<00:03, 10.19it/s]Running parallel differential expression (against reference):  46%|████▌     | 28/61 [00:02<00:03, 10.35it/s]Running parallel differential expression (against reference):  49%|████▉     | 30/61 [00:02<00:02, 10.43it/s]Running parallel differential expression (against reference):  52%|█████▏    | 32/61 [00:03<00:02, 10.46it/s]Running parallel differential expression (against reference):  56%|█████▌    | 34/61 [00:03<00:02, 10.49it/s]Running parallel differential expression (against reference):  59%|█████▉    | 36/61 [00:03<00:02, 10.50it/s]Running parallel differential expression (against reference):  62%|██████▏   | 38/61 [00:03<00:02, 10.15it/s]Running parallel differential expression (against reference):  66%|██████▌   | 40/61 [00:03<00:02, 10.20it/s]Running parallel differential expression (against reference):  69%|██████▉   | 42/61 [00:04<00:01, 10.32it/s]Running parallel differential expression (against reference):  72%|███████▏  | 44/61 [00:04<00:01, 10.45it/s]Running parallel differential expression (against reference):  75%|███████▌  | 46/61 [00:04<00:01, 10.07it/s]Running parallel differential expression (against reference):  79%|███████▊  | 48/61 [00:04<00:01, 10.22it/s]Running parallel differential expression (against reference):  82%|████████▏ | 50/61 [00:04<00:01, 10.25it/s]Running parallel differential expression (against reference):  85%|████████▌ | 52/61 [00:05<00:00, 10.28it/s]Running parallel differential expression (against reference):  89%|████████▊ | 54/61 [00:05<00:00, 10.32it/s]Running parallel differential expression (against reference):  92%|█████████▏| 56/61 [00:05<00:00, 10.40it/s]Running parallel differential expression (against reference):  95%|█████████▌| 58/61 [00:05<00:00, 10.45it/s]Running parallel differential expression (against reference):  98%|█████████▊| 60/61 [00:05<00:00, 10.49it/s]Running parallel differential expression (against reference): 100%|██████████| 61/61 [00:05<00:00, 10.50it/s]
+Identified 117 infinite log2 fold change values (real)
+Identified 159 infinite log2 fold change values (pred)
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3239.22it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 2688.60it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3611.47it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 68702.77it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 75618.46it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 64643.78it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 72377.98it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 68478.43it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 71049.76it/s]
+Output directory logs/epoch040_recovery/support_floor_diagnostic/refine_01/0.07 already exists, potential overwrite occurring
+Running parallel differential expression (against reference):   0%|          | 0/61 [00:00<?, ?it/s]Running parallel differential expression (against reference):   3%|▎         | 2/61 [00:00<00:05, 10.40it/s]Running parallel differential expression (against reference):   7%|▋         | 4/61 [00:00<00:06,  8.88it/s]Running parallel differential expression (against reference):  10%|▉         | 6/61 [00:00<00:05,  9.52it/s]Running parallel differential expression (against reference):  13%|█▎        | 8/61 [00:00<00:05,  9.95it/s]Running parallel differential expression (against reference):  16%|█▋        | 10/61 [00:01<00:05,  9.79it/s]Running parallel differential expression (against reference):  18%|█▊        | 11/61 [00:01<00:05,  9.67it/s]Running parallel differential expression (against reference):  20%|█▉        | 12/61 [00:01<00:05,  9.58it/s]Running parallel differential expression (against reference):  21%|██▏       | 13/61 [00:01<00:05,  9.46it/s]Running parallel differential expression (against reference):  23%|██▎       | 14/61 [00:01<00:04,  9.43it/s]Running parallel differential expression (against reference):  25%|██▍       | 15/61 [00:01<00:04,  9.38it/s]Running parallel differential expression (against reference):  26%|██▌       | 16/61 [00:01<00:04,  9.36it/s]Running parallel differential expression (against reference):  30%|██▉       | 18/61 [00:01<00:04,  9.80it/s]Running parallel differential expression (against reference):  33%|███▎      | 20/61 [00:02<00:03, 10.25it/s]Running parallel differential expression (against reference):  36%|███▌      | 22/61 [00:02<00:03, 10.38it/s]Running parallel differential expression (against reference):  39%|███▉      | 24/61 [00:02<00:03, 10.44it/s]Running parallel differential expression (against reference):  43%|████▎     | 26/61 [00:02<00:03, 10.30it/s]Running parallel differential expression (against reference):  46%|████▌     | 28/61 [00:02<00:03, 10.40it/s]Running parallel differential expression (against reference):  49%|████▉     | 30/61 [00:03<00:02, 10.45it/s]Running parallel differential expression (against reference):  52%|█████▏    | 32/61 [00:03<00:02, 10.46it/s]Running parallel differential expression (against reference):  56%|█████▌    | 34/61 [00:03<00:02, 10.47it/s]Running parallel differential expression (against reference):  59%|█████▉    | 36/61 [00:03<00:02, 10.10it/s]Running parallel differential expression (against reference):  62%|██████▏   | 38/61 [00:03<00:02, 10.09it/s]Running parallel differential expression (against reference):  66%|██████▌   | 40/61 [00:04<00:02,  9.86it/s]Running parallel differential expression (against reference):  67%|██████▋   | 41/61 [00:04<00:02,  9.77it/s]Running parallel differential expression (against reference):  69%|██████▉   | 42/61 [00:04<00:01,  9.75it/s]Running parallel differential expression (against reference):  70%|███████   | 43/61 [00:04<00:01,  9.62it/s]Running parallel differential expression (against reference):  72%|███████▏  | 44/61 [00:04<00:01,  9.52it/s]Running parallel differential expression (against reference):  74%|███████▍  | 45/61 [00:04<00:01,  9.23it/s]Running parallel differential expression (against reference):  75%|███████▌  | 46/61 [00:04<00:01,  9.40it/s]Running parallel differential expression (against reference):  79%|███████▊  | 48/61 [00:04<00:01,  9.95it/s]Running parallel differential expression (against reference):  82%|████████▏ | 50/61 [00:05<00:01, 10.22it/s]Running parallel differential expression (against reference):  85%|████████▌ | 52/61 [00:05<00:00, 10.36it/s]Running parallel differential expression (against reference):  89%|████████▊ | 54/61 [00:05<00:00, 10.59it/s]Running parallel differential expression (against reference):  92%|█████████▏| 56/61 [00:05<00:00, 10.60it/s]Running parallel differential expression (against reference):  95%|█████████▌| 58/61 [00:05<00:00, 10.76it/s]Running parallel differential expression (against reference):  98%|█████████▊| 60/61 [00:05<00:00, 10.84it/s]Running parallel differential expression (against reference): 100%|██████████| 61/61 [00:05<00:00, 10.25it/s]
+Running parallel differential expression (against reference):   0%|          | 0/61 [00:00<?, ?it/s]Running parallel differential expression (against reference):   3%|▎         | 2/61 [00:00<00:05, 10.67it/s]Running parallel differential expression (against reference):   7%|▋         | 4/61 [00:00<00:05, 10.87it/s]Running parallel differential expression (against reference):  10%|▉         | 6/61 [00:00<00:05, 10.93it/s]Running parallel differential expression (against reference):  13%|█▎        | 8/61 [00:00<00:04, 11.00it/s]Running parallel differential expression (against reference):  16%|█▋        | 10/61 [00:00<00:04, 11.00it/s]Running parallel differential expression (against reference):  20%|█▉        | 12/61 [00:01<00:04, 11.07it/s]Running parallel differential expression (against reference):  23%|██▎       | 14/61 [00:01<00:04, 11.12it/s]Running parallel differential expression (against reference):  26%|██▌       | 16/61 [00:01<00:04, 11.17it/s]Running parallel differential expression (against reference):  30%|██▉       | 18/61 [00:01<00:03, 11.17it/s]Running parallel differential expression (against reference):  33%|███▎      | 20/61 [00:01<00:03, 11.18it/s]Running parallel differential expression (against reference):  36%|███▌      | 22/61 [00:01<00:03, 11.16it/s]Running parallel differential expression (against reference):  39%|███▉      | 24/61 [00:02<00:03, 11.17it/s]Running parallel differential expression (against reference):  43%|████▎     | 26/61 [00:02<00:03, 11.04it/s]Running parallel differential expression (against reference):  46%|████▌     | 28/61 [00:02<00:02, 11.10it/s]Running parallel differential expression (against reference):  49%|████▉     | 30/61 [00:02<00:02, 11.15it/s]Running parallel differential expression (against reference):  52%|█████▏    | 32/61 [00:02<00:02, 11.16it/s]Running parallel differential expression (against reference):  56%|█████▌    | 34/61 [00:03<00:02, 11.14it/s]Running parallel differential expression (against reference):  59%|█████▉    | 36/61 [00:03<00:02, 11.13it/s]Running parallel differential expression (against reference):  62%|██████▏   | 38/61 [00:03<00:02, 11.15it/s]Running parallel differential expression (against reference):  66%|██████▌   | 40/61 [00:03<00:01, 11.17it/s]Running parallel differential expression (against reference):  69%|██████▉   | 42/61 [00:03<00:01, 11.19it/s]Running parallel differential expression (against reference):  72%|███████▏  | 44/61 [00:03<00:01, 11.18it/s]Running parallel differential expression (against reference):  75%|███████▌  | 46/61 [00:04<00:01, 10.83it/s]Running parallel differential expression (against reference):  79%|███████▊  | 48/61 [00:04<00:01, 10.88it/s]Running parallel differential expression (against reference):  82%|████████▏ | 50/61 [00:04<00:01, 10.72it/s]Running parallel differential expression (against reference):  85%|████████▌ | 52/61 [00:04<00:00, 10.68it/s]Running parallel differential expression (against reference):  89%|████████▊ | 54/61 [00:04<00:00, 10.76it/s]Running parallel differential expression (against reference):  92%|█████████▏| 56/61 [00:05<00:00, 10.81it/s]Running parallel differential expression (against reference):  95%|█████████▌| 58/61 [00:05<00:00, 10.84it/s]Running parallel differential expression (against reference):  98%|█████████▊| 60/61 [00:05<00:00, 10.82it/s]Running parallel differential expression (against reference): 100%|██████████| 61/61 [00:05<00:00, 11.18it/s]
+Identified 117 infinite log2 fold change values (real)
+Identified 185 infinite log2 fold change values (pred)
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3183.45it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3094.55it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3657.61it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 43743.83it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 76584.98it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 66930.38it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 74920.58it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 67162.59it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 73951.88it/s]
+{
+  "time": "2026-11-23T03:37:01+08:00",
+  "test_access": false,
+  "candidates": {
+    "0.05": {
+      "metrics": {
+        "PDCorr": 0.34481935143315545,
+        "MSE": 0.01577923314956327,
+        "MAE": 0.07930293008685112,
+        "PDS_L1": 0.8216666666666668,
+        "PDS_L2": 0.8347222222222221,
+        "PDS_cos": 0.866388888888889,
+        "DEOver": 0.1916758643709358,
+        "DEPrec": 0.15860692786185143,
+        "DirAgr": 0.8125367063664427
+      },
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "score": 1.1857452773590813,
+      "zero_fraction": 0.5387313989637306
+    },
+    "0.07": {
+      "metrics": {
+        "PDCorr": 0.3447798799878607,
+        "MSE": 0.015781241632066668,
+        "MAE": 0.07931339672456185,
+        "PDS_L1": 0.8216666666666668,
+        "PDS_L2": 0.8350000000000001,
+        "PDS_cos": 0.8669444444444445,
+        "DEOver": 0.19143121582022235,
+        "DEPrec": 0.15884072887226577,
+        "DirAgr": 0.812550107088544
+      },
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "score": 1.1859835836915644,
+      "zero_fraction": 0.540959170984456
+    }
+  },
+  "paired": {
+    "reference": "0.05",
+    "candidate": "0.07",
+    "rows": [
+      {
+        "metric": "PDCorr",
+        "reference": 0.34481935143315545,
+        "candidate": 0.3447798799878607,
+        "difference": -3.9471445294758656e-05,
+        "ci95": [
+          -6.403067013401598e-05,
+          -1.401167673367732e-05
+        ]
+      },
+      {
+        "metric": "DEOver",
+        "reference": 0.1916758643709358,
+        "candidate": 0.19143121582022235,
+        "difference": -0.00024464855071346103,
+        "ci95": [
+          -0.0008412987669160488,
+          0.0002868885578571473
+        ]
+      },
+      {
+        "metric": "DEPrec",
+        "reference": 0.1586069278618514,
+        "candidate": 0.15884072887226575,
+        "difference": 0.00023380101041434176,
+        "ci95": [
+          -0.0004857663081839103,
+          0.0010436232449333625
+        ]
+      },
+      {
+        "metric": "DirAgr",
+        "reference": 0.8125367063664427,
+        "candidate": 0.812550107088544,
+        "difference": 1.3400722101319928e-05,
+        "ci95": [
+          -8.777008893810223e-05,
+          0.00010663281475425379
+        ]
+      },
+      {
+        "metric": "PDS_L1",
+        "reference": 0.8216666666666668,
+        "candidate": 0.8216666666666668,
+        "difference": 0.0,
+        "ci95": [
+          -0.0008333333333333526,
+          0.0008333333333332416
+        ]
+      },
+      {
+        "metric": "PDS_L2",
+        "reference": 0.8347222222222221,
+        "candidate": 0.8350000000000001,
+        "difference": 0.0002777777777779322,
+        "ci95": [
+          0.0,
+          0.0008333333333334636
+        ]
+      },
+      {
+        "metric": "PDS_cos",
+        "reference": 0.8663888888888889,
+        "candidate": 0.8669444444444444,
+        "difference": 0.0005555555555555314,
+        "ci95": [
+          0.0,
+          0.001388888888888884
+        ]
+      },
+      {
+        "metric": "MSE",
+        "reference": 0.015779233149563223,
+        "candidate": 0.015781241632066616,
+        "difference": 2.0084825033926668e-06,
+        "ci95": [
+          5.729717668012582e-07,
+          3.4584108895343522e-06
+        ]
+      },
+      {
+        "metric": "MAE",
+        "reference": 0.07930293008685108,
+        "candidate": 0.07931339672456181,
+        "difference": 1.0466637710732085e-05,
+        "ci95": [
+          2.285973168906011e-06,
+          1.855480484663184e-05
+        ]
+      }
+    ],
+    "primary_difference": {
+      "value": 0.00023830633248300703,
+      "ci95": [
+        -0.00020805553259341665,
+        0.000785445760120676
+      ]
+    }
+  }
+}

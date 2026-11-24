@@ -1,0 +1,84 @@
+[
+  {
+    "sha": "cbc743a2ada5e9762697da2c83f8c4f8379e8c17",
+    "node_id": "C_kwDOQTKGudoAKGNiYzc0M2EyYWRhNWU5NzYyNjk3ZGEyYzgzZjhjNGY4Mzc5ZThjMTc",
+    "commit": {
+      "author": {
+        "name": "LTH14",
+        "email": "tianhongthu@gmail.com",
+        "date": "2025-12-08T07:11:25Z"
+      },
+      "committer": {
+        "name": "LTH14",
+        "email": "tianhongthu@gmail.com",
+        "date": "2025-12-08T07:11:25Z"
+      },
+      "message": "include pretrained ckpts",
+      "tree": {
+        "sha": "7927c44fa0c8ccad67d820b82544293cdae0109e",
+        "url": "https://api.github.com/repos/LTH14/JiT/git/trees/7927c44fa0c8ccad67d820b82544293cdae0109e"
+      },
+      "url": "https://api.github.com/repos/LTH14/JiT/git/commits/cbc743a2ada5e9762697da2c83f8c4f8379e8c17",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/LTH14/JiT/commits/cbc743a2ada5e9762697da2c83f8c4f8379e8c17",
+    "html_url": "https://github.com/LTH14/JiT/commit/cbc743a2ada5e9762697da2c83f8c4f8379e8c17",
+    "comments_url": "https://api.github.com/repos/LTH14/JiT/commits/cbc743a2ada5e9762697da2c83f8c4f8379e8c17/comments",
+    "author": {
+      "login": "LTH14",
+      "id": 22166952,
+      "node_id": "MDQ6VXNlcjIyMTY2OTUy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22166952?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/LTH14",
+      "html_url": "https://github.com/LTH14",
+      "followers_url": "https://api.github.com/users/LTH14/followers",
+      "following_url": "https://api.github.com/users/LTH14/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LTH14/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/LTH14/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LTH14/subscriptions",
+      "organizations_url": "https://api.github.com/users/LTH14/orgs",
+      "repos_url": "https://api.github.com/users/LTH14/repos",
+      "events_url": "https://api.github.com/users/LTH14/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/LTH14/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "LTH14",
+      "id": 22166952,
+      "node_id": "MDQ6VXNlcjIyMTY2OTUy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22166952?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/LTH14",
+      "html_url": "https://github.com/LTH14",
+      "followers_url": "https://api.github.com/users/LTH14/followers",
+      "following_url": "https://api.github.com/users/LTH14/following{/other_user}",
+      "gists_url": "https://api.github.com/users/LTH14/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/LTH14/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/LTH14/subscriptions",
+      "organizations_url": "https://api.github.com/users/LTH14/orgs",
+      "repos_url": "https://api.github.com/users/LTH14/repos",
+      "events_url": "https://api.github.com/users/LTH14/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/LTH14/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "869190a33f59271724cd1bfddd85777501dadf03",
+        "url": "https://api.github.com/repos/LTH14/JiT/commits/869190a33f59271724cd1bfddd85777501dadf03",
+        "html_url": "https://github.com/LTH14/JiT/commit/869190a33f59271724cd1bfddd85777501dadf03"
+      }
+    ]
+  }
+]

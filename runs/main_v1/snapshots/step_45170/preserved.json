@@ -1,0 +1,17 @@
+{
+  "time": "2026-11-22T13:46:29+08:00",
+  "step": 45170,
+  "source_run": "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1",
+  "snapshot_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1/snapshots/step_45170/full.pt",
+  "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch040_failed_ddp_stop45170/full.pt",
+  "sha256": "0be41ed5cc4f92bb71392e8287e14092867988b8aba12376b7d5c02da8cf776a",
+  "bytes": 2819039133,
+  "ema_decays": [
+    "0.9999",
+    "0.9996"
+  ],
+  "pending_generation_epoch": null,
+  "full_model_optimizer_ema_rng_retained": true,
+  "active_training_or_last_checkpoint_modified": false,
+  "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"
+}

@@ -1,0 +1,572 @@
+[
+  {
+    "tag": "screen_00",
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.24308259604149499,
+      "MSE": 0.013643727358430623,
+      "MAE": 0.0837438608209292,
+      "PDS_L1": 0.6877777777777776,
+      "PDS_L2": 0.6958333333333332,
+      "PDS_cos": 0.7111111111111111,
+      "DEOver": 0.07723584241051748,
+      "DEPrec": 0.0679121315948447,
+      "DirAgr": 0.6956540111665024
+    },
+    "raw_metrics": {
+      "PDCorr": 0.24251111539197154,
+      "MSE": 0.013667739345692098,
+      "MAE": 0.08387886621057987,
+      "PDS_L1": 0.6886111111111112,
+      "PDS_L2": 0.6955555555555556,
+      "PDS_cos": 0.7119444444444445
+    },
+    "score": 0.9413233367822356,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_00",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "3632b27ec837f1a27f9e8a5d01d6955de0491ff908731dbc251392529fe3b006",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "49ecc595cce22b53dd010e74310b9bc21f7243653ac869ca10aaf13a0507ad4b"
+      }
+    }
+  },
+  {
+    "tag": "screen_01",
+    "guidance": 0.75,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.2564740703441203,
+      "MSE": 0.013207925041206181,
+      "MAE": 0.08307076344887415,
+      "PDS_L1": 0.7158333333333334,
+      "PDS_L2": 0.7241666666666666,
+      "PDS_cos": 0.7322222222222223,
+      "DEOver": 0.07922259235039157,
+      "DEPrec": 0.06951136949787419,
+      "DirAgr": 0.709613789932474
+    },
+    "raw_metrics": {
+      "PDCorr": 0.2559131156265115,
+      "MSE": 0.013232961328079303,
+      "MAE": 0.0832122211654981,
+      "PDS_L1": 0.7158333333333334,
+      "PDS_L2": 0.7255555555555555,
+      "PDS_cos": 0.7327777777777779
+    },
+    "score": 0.9805481444181945,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_01",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "7a64b8f3618b85707f362c030bb586d526142a8c92a7679b9477bffbf3151485",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "4be053c7a8e34f8f9f0fe3e5eb8924f50339f72cfff12d4afc5fabe50e02fdd4"
+      }
+    }
+  },
+  {
+    "tag": "screen_02",
+    "guidance": 1.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.27041569876795013,
+      "MSE": 0.013775431031050781,
+      "MAE": 0.08403519143660863,
+      "PDS_L1": 0.7316666666666667,
+      "PDS_L2": 0.7444444444444446,
+      "PDS_cos": 0.7441666666666668,
+      "DEOver": 0.0886017405732977,
+      "DEPrec": 0.07451805738843735,
+      "DirAgr": 0.7302686597679389
+    },
+    "raw_metrics": {
+      "PDCorr": 0.26983496031413473,
+      "MSE": 0.013806082750670612,
+      "MAE": 0.08420455815891424,
+      "PDS_L1": 0.7313888888888889,
+      "PDS_L2": 0.745,
+      "PDS_cos": 0.7447222222222223
+    },
+    "score": 1.0105082913605428,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_02",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "21a8710717839a247815ebaefb997378ba313beca3b4cb219f979c1381236d52",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "4cf2c5ae9b51af8393f00bfa58ab0f979556b5ea2f211622a0e42ce68769e2b8"
+      }
+    }
+  },
+  {
+    "tag": "screen_03",
+    "guidance": 1.25,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.27997711176673573,
+      "MSE": 0.014869660371914506,
+      "MAE": 0.08594005145132541,
+      "PDS_L1": 0.7466666666666667,
+      "PDS_L2": 0.7536111111111113,
+      "PDS_cos": 0.7525,
+      "DEOver": 0.09492217363144523,
+      "DEPrec": 0.07918375071404878,
+      "DirAgr": 0.7304309092620376
+    },
+    "raw_metrics": {
+      "PDCorr": 0.2793757910529772,
+      "MSE": 0.014905343942033748,
+      "MAE": 0.08613724522292614,
+      "PDS_L1": 0.7469444444444445,
+      "PDS_L2": 0.7541666666666669,
+      "PDS_cos": 0.7527777777777779
+    },
+    "score": 1.0309030376926618,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_03",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "709d1c61b6c2d11e152e6dbb84d3a20b7c3a6219fdd5ed6350635e41a3fd1393",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "01cf89170f209cc328f6ba4f5d1d80de7b1bce79963dcbca45ff1f5912f2197e"
+      }
+    }
+  },
+  {
+    "tag": "screen_04",
+    "guidance": 1.5,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.28647566901830335,
+      "MSE": 0.016488186021645864,
+      "MAE": 0.08873024197916189,
+      "PDS_L1": 0.7558333333333332,
+      "PDS_L2": 0.7719444444444447,
+      "PDS_cos": 0.7655555555555557,
+      "DEOver": 0.10197092878498544,
+      "DEPrec": 0.08380605624216063,
+      "DirAgr": 0.7257739963525915
+    },
+    "raw_metrics": {
+      "PDCorr": 0.28586426729646824,
+      "MSE": 0.01652953258405129,
+      "MAE": 0.088961328069369,
+      "PDS_L1": 0.7566666666666665,
+      "PDS_L2": 0.7719444444444447,
+      "PDS_cos": 0.7658333333333334
+    },
+    "score": 1.0509201134627477,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_04",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "e41b7468d4a21b8e59e6cb4889038b7661b26dae03fe54ad7c8ffafbb9b52797",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "b1c103ce20a6e2f66d39003aa2c3d5abe1dfc07c31fd52877811f2d8b8314edd"
+      }
+    }
+  },
+  {
+    "tag": "screen_05",
+    "guidance": 1.75,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.28963119169541945,
+      "MSE": 0.018575568745533625,
+      "MAE": 0.09234478982786337,
+      "PDS_L1": 0.7694444444444444,
+      "PDS_L2": 0.7880555555555556,
+      "PDS_cos": 0.7811111111111112,
+      "DEOver": 0.10781600312950398,
+      "DEPrec": 0.08929191380208153,
+      "DirAgr": 0.7259039263477832
+    },
+    "raw_metrics": {
+      "PDCorr": 0.2889988272295644,
+      "MSE": 0.018625047461440166,
+      "MAE": 0.09261335966487726,
+      "PDS_L1": 0.7705555555555555,
+      "PDS_L2": 0.7877777777777778,
+      "PDS_cos": 0.7802777777777778
+    },
+    "score": 1.0691682287324564,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_05",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "66205b70b732ea0d5eb69c08a1bc189984687df7613622bed375915932eac7e4",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "fc5ad5301189e0530f7c579eaa1d4270425c3796c28eeacaa5c5134c08f5ddf4"
+      }
+    }
+  },
+  {
+    "tag": "screen_06",
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.29224067509251955,
+      "MSE": 0.02106265559171637,
+      "MAE": 0.09652639180421829,
+      "PDS_L1": 0.7836111111111111,
+      "PDS_L2": 0.7972222222222223,
+      "PDS_cos": 0.7872222222222223,
+      "DEOver": 0.11277015648810843,
+      "DEPrec": 0.09268677292588152,
+      "DirAgr": 0.73697285968892
+    },
+    "raw_metrics": {
+      "PDCorr": 0.29157946129950385,
+      "MSE": 0.02111931503750384,
+      "MAE": 0.09682222666839758,
+      "PDS_L1": 0.7844444444444444,
+      "PDS_L2": 0.7986111111111112,
+      "PDS_cos": 0.7875000000000001
+    },
+    "score": 1.0815925269443716,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_06",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "eab75c8115dd42a063707deeb9a35bd9459b71c5de9c7e77724291e6c3dde5af",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "feb35f1cac2a6399fa039c00d3b6beb862b2bf9eeb3350a1a3b0ffbdb8a6b786"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_01",
+    "guidance": 0.75,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.26508044472041853,
+      "MSE": 0.013069647465211649,
+      "MAE": 0.08276330903172494,
+      "PDS_L1": 0.7208333333333332,
+      "PDS_L2": 0.73,
+      "PDS_cos": 0.726388888888889,
+      "DEOver": 0.08024604231887617,
+      "DEPrec": 0.06993898215938608,
+      "DirAgr": 0.7095804246276664
+    },
+    "raw_metrics": {
+      "PDCorr": 0.2646494007281338,
+      "MSE": 0.01309209136137118,
+      "MAE": 0.08288584090769291,
+      "PDS_L1": 0.7202777777777777,
+      "PDS_L2": 0.7305555555555555,
+      "PDS_cos": 0.7255555555555556
+    },
+    "score": 0.9908211854611593,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_01",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "bc2263db76f7d614ab05fa7634803adf3f1fc59baef9ad0d38fbcc9119427594",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "6d540ac3cdfbb7ac20bc0d289f3d57c127d8767fc3342635f64d5f1d80805c25"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_02",
+    "guidance": 1.0,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.2886228078433002,
+      "MSE": 0.01377590159730365,
+      "MAE": 0.0837617094318072,
+      "PDS_L1": 0.7366666666666667,
+      "PDS_L2": 0.7477777777777779,
+      "PDS_cos": 0.7383333333333334,
+      "DEOver": 0.09404576760184008,
+      "DEPrec": 0.07727178210053766,
+      "DirAgr": 0.7371706862375792
+    },
+    "raw_metrics": {
+      "PDCorr": 0.28833979478416344,
+      "MSE": 0.013799337468420466,
+      "MAE": 0.08388364737232526,
+      "PDS_L1": 0.7363888888888889,
+      "PDS_L2": 0.7488888888888889,
+      "PDS_cos": 0.7383333333333333
+    },
+    "score": 1.0295487337692262,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_02",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "a864116206d81c6b06fb2fe0af5ce74ba51770ce2d3c4e08541e45592447c65f",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "c386ce9df37e17b500d1e5bbbe0a9254f90b5b2df6e2a330561ba4422790abda"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_03",
+    "guidance": 1.25,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.30318956474463143,
+      "MSE": 0.015380455390550196,
+      "MAE": 0.08644247390329837,
+      "PDS_L1": 0.75,
+      "PDS_L2": 0.7669444444444445,
+      "PDS_cos": 0.7477777777777779,
+      "DEOver": 0.10282623369477764,
+      "DEPrec": 0.08194789086961171,
+      "DirAgr": 0.7319409398137053
+    },
+    "raw_metrics": {
+      "PDCorr": 0.30299719562754035,
+      "MSE": 0.015406009772171577,
+      "MAE": 0.08656970324615637,
+      "PDS_L1": 0.7486111111111111,
+      "PDS_L2": 0.7669444444444445,
+      "PDS_cos": 0.7472222222222223
+    },
+    "score": 1.0580969721520388,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_03",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "355b9495d5fd0f2ed022c91eea27923f623a2c63b05c3c61819a410a56dc0909",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "9f6fecc5777e295e5cd13592813b43825e3e7c448ec157db8c4699f3579e0e2a"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_04",
+    "guidance": 1.5,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.310463594722872,
+      "MSE": 0.01766534927301109,
+      "MAE": 0.09016573627789816,
+      "PDS_L1": 0.7683333333333333,
+      "PDS_L2": 0.785,
+      "PDS_cos": 0.7650000000000001,
+      "DEOver": 0.11063394299590583,
+      "DEPrec": 0.08591059832377605,
+      "DirAgr": 0.7528503926061503
+    },
+    "raw_metrics": {
+      "PDCorr": 0.3103063622411961,
+      "MSE": 0.017696365341544153,
+      "MAE": 0.09030767368773619,
+      "PDS_L1": 0.7680555555555555,
+      "PDS_L2": 0.7852777777777777,
+      "PDS_cos": 0.7644444444444445
+    },
+    "score": 1.0832413725006498,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_04",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "adf70ccfb3e41a53ad897cb258ad525e848bff361860f8da7d0b75a9c2a1a9b6",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "ed25c3e62c5daaea077cac7f5c818128afd9c7606339f737701cced19a88f893"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_05",
+    "guidance": 1.75,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.31555604576909296,
+      "MSE": 0.020382059427599113,
+      "MAE": 0.09437812777856985,
+      "PDS_L1": 0.7833333333333334,
+      "PDS_L2": 0.7955555555555556,
+      "PDS_cos": 0.7691666666666667,
+      "DEOver": 0.11757633402304395,
+      "DEPrec": 0.08921556476117502,
+      "DirAgr": 0.7637767993425923
+    },
+    "raw_metrics": {
+      "PDCorr": 0.31537112082199503,
+      "MSE": 0.020428332251807055,
+      "MAE": 0.09457619525492192,
+      "PDS_L1": 0.783888888888889,
+      "PDS_L2": 0.7955555555555555,
+      "PDS_cos": 0.7680555555555556
+    },
+    "score": 1.0982412309542782,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_05",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "2ece7a039a82ec830ab63104702c5e2f9c1ca5ace979b84dac8cd45c1ce5469c",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "af13765a275ddfff95950c1e51f5fb1ecbb8c8e3be4c91840285e99516ac6609"
+      }
+    }
+  },
+  {
+    "tag": "screen_full_06",
+    "guidance": 2.0,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": 16,
+    "metrics": {
+      "PDCorr": 0.3164446856826544,
+      "MSE": 0.023543788663422067,
+      "MAE": 0.09928152486681938,
+      "PDS_L1": 0.7866666666666668,
+      "PDS_L2": 0.798611111111111,
+      "PDS_cos": 0.7755555555555557,
+      "DEOver": 0.12438122456630245,
+      "DEPrec": 0.09283042182280592,
+      "DirAgr": 0.7623834963572946
+    },
+    "raw_metrics": {
+      "PDCorr": 0.31620412207751847,
+      "MSE": 0.023612292498971024,
+      "MAE": 0.09956901073455811,
+      "PDS_L1": 0.7866666666666667,
+      "PDS_L2": 0.7988888888888889,
+      "PDS_cos": 0.775
+    },
+    "score": 1.1033891301270988,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/screen_full_06",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "a8df926a6f1192656e4a436a8559f3ef75c8f78d7d0cd2a3c450f4d0999d963e",
+        "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+        "generation_state.json": "7aa3710f49bedeef27c6489953f9a26e6abea408dbb8ed331edc4988232c9424"
+      }
+    }
+  },
+  {
+    "tag": "refine_00",
+    "guidance": 2.0,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": null,
+    "metrics": {
+      "PDCorr": 0.3637612698754917,
+      "MSE": 0.01733553862043967,
+      "MAE": 0.08036993158360323,
+      "PDS_L1": 0.8105555555555557,
+      "PDS_L2": 0.8183333333333334,
+      "PDS_cos": 0.8277777777777778,
+      "DEOver": 0.18508125037216316,
+      "DEPrec": 0.1003904942732867,
+      "DirAgr": 0.7915397882595757
+    },
+    "raw_metrics": {
+      "PDCorr": 0.3634787939799329,
+      "MSE": 0.0173863150489827,
+      "MAE": 0.08057724616179864,
+      "PDS_L1": 0.8102777777777779,
+      "PDS_L2": 0.8186111111111111,
+      "PDS_cos": 0.8277777777777778
+    },
+    "score": 1.1826501587643807,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_00",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "ffdde873c669f5c9df8d47288469679f4c6002045965d063b25a2b7f31bb5f13",
+        "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+        "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+      }
+    }
+  },
+  {
+    "tag": "refine_01",
+    "guidance": 1.5,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": true,
+    "cap": null,
+    "metrics": {
+      "PDCorr": 0.3771456860316296,
+      "MSE": 0.011411207726147647,
+      "MAE": 0.0687280929957827,
+      "PDS_L1": 0.8033333333333333,
+      "PDS_L2": 0.8119444444444445,
+      "PDS_cos": 0.8197222222222222,
+      "DEOver": 0.16140346691439705,
+      "DEPrec": 0.09791297323009432,
+      "DirAgr": 0.7848416168842908
+    },
+    "raw_metrics": {
+      "PDCorr": 0.3769080446412166,
+      "MSE": 0.011430502954560022,
+      "MAE": 0.06881742120410005,
+      "PDS_L1": 0.8033333333333333,
+      "PDS_L2": 0.8122222222222223,
+      "PDS_cos": 0.818611111111111
+    },
+    "score": 1.1888123526982963,
+    "cache_provenance": {
+      "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_main/calibration/refine_01",
+      "raw_unclamped": true,
+      "split": "validation",
+      "files": {
+        "prediction.npy": "6795659cb75094d812cf711ad40edd3e417ae00b56f26275444209dd29eddfb0",
+        "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+        "generation_state.json": "4074e7f004bbfa21846e83833add3407ac83fbd422e46ccc606422833c6c8ae1"
+      }
+    }
+  }
+]

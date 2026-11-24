@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-21T21:56:23+08:00",
+  "plan_sha256": "cdc72b7b4b4d9427e218b2f6aed41d9083d3dc58bf7f52fb0b72b93a5ec5fd50",
+  "source_archive_sha256": "367b011b349fef682bceaad1e2c68e60319e2be0ed8b55444c5eed1677c713eb",
+  "status": "registered_not_launched",
+  "protocol_CPU_tests_passed": 4,
+  "CPU_test_seconds": 1.48,
+  "test_access": false
+}

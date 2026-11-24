@@ -1,0 +1,6 @@
+[Gloo] Rank [Gloo] Rank 0[Gloo] Rank [Gloo] Rank 3 is connected to 12 is connected to 3 is connected to  is connected to 3 peer ranks. 33 peer ranks. Expected number of connected peer ranks is :  peer ranks.  peer ranks. Expected number of connected peer ranks is : 3Expected number of connected peer ranks is : Expected number of connected peer ranks is : 3
+33
+
+
+{"event": "benchmark_start", "step": 41374, "training_cells": 572545, "steps_per_epoch": 1118, "parameters": 136919041, "world_size": 4, "local_micro_batch": 16, "accumulation": 8, "global_batch": 512, "gpu": "NVIDIA A100-PCIE-40GB"}
+{"event": "benchmark_result", "start_step": 41374, "first_timed_step": 41377, "end_step": 41384, "seconds": 15.124839572235942, "cells_per_sec": 270.8127898109321, "loss": 0.33788764476776123, "grad_norm": 0.24389715492725372, "peak_gpu_GB": 17.75138304, "world_size": 4, "local_micro_batch": 16, "accumulation": 8, "global_batch": 512, "gpu": "NVIDIA A100-PCIE-40GB"}

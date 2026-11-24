@@ -1,0 +1,47 @@
+[
+  {
+    "name": "00README.json",
+    "bytes": 213,
+    "type": "file"
+  },
+  {
+    "name": "figures",
+    "bytes": 0,
+    "type": "other"
+  },
+  {
+    "name": "figures/fig1_radar_comparison_all_methods.pdf",
+    "bytes": 44457,
+    "type": "file"
+  },
+  {
+    "name": "figures/FigurePlots_3.pdf",
+    "bytes": 367229,
+    "type": "file"
+  },
+  {
+    "name": "figures/barplot.jpeg",
+    "bytes": 242178,
+    "type": "file"
+  },
+  {
+    "name": "figures/FigurePlots_2.pdf",
+    "bytes": 365356,
+    "type": "file"
+  },
+  {
+    "name": "figures/FigurePlots_1.pdf",
+    "bytes": 369875,
+    "type": "file"
+  },
+  {
+    "name": "figures/v_x_pred_comparison.pdf",
+    "bytes": 38202,
+    "type": "file"
+  },
+  {
+    "name": "main.tex",
+    "bytes": 82716,
+    "type": "file"
+  }
+]

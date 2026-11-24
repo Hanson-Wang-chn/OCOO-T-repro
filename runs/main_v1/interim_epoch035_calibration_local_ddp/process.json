@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-22T11:23:58+08:00",
+  "pid": 86319,
+  "stage": "interrupted",
+  "test_access": false,
+  "main_training_changed": false,
+  "error": "InterruptedError('Interim controller interrupted; completed caches retained')"
+}

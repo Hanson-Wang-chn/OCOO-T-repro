@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-17T23:51:42+08:00",
+  "checks": [
+    "zero-field paired target/noise unchanged",
+    "within-batch label multiset preserved",
+    "time multiset preserved",
+    "zero paired bootstrap intervals",
+    "atomic phase cache round trip"
+  ],
+  "status": "passed",
+  "source_sha256": "236d26a2a9d3eef7df5da5d0f60c2fbbf244ddff54f43219108701c35c25b0f0"
+}

@@ -1,0 +1,22 @@
+{
+  "sigma": 0.05,
+  "metrics": {
+    "PDCorr": 0.9959982722997666,
+    "MSE": 0.00015839310556960604,
+    "MAE": 0.010995879474406441,
+    "PDS_L1": 1.0,
+    "PDS_L2": 1.0,
+    "PDS_cos": 1.0,
+    "DEOver": 0.3051219375990198,
+    "DEPrec": 0.11655614785126361,
+    "DirAgr": 0.9993536740570858
+  },
+  "zero_fraction": 0.2782497409326425,
+  "positive_entries_unchanged": true,
+  "mean_abs_change": 0.011069576685696912,
+  "source_real_sha256": "6c13ce56736565b70c25bf7c0d3c2a1cbda0ffaf1f383a45f8a7cccdfb3e183e",
+  "synthetic_sha256": "ab3e6a0e953cebe37ecd8e368811028fa5f14bb3a8acfba2bb8af60af71a771b",
+  "median_real_significant": 28.0,
+  "median_synthetic_significant": 1198.0,
+  "note": "Measured-data zero-tie sensitivity, NOT OCOO-T predictions or a model score."
+}

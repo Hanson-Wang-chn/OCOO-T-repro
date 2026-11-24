@@ -1,0 +1,40 @@
+# Python and editor state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store
+
+# Checkpoints, generated expression arrays, embeddings, and source datasets
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.npy
+*.npz
+*.h5ad
+*.h5
+*.zst
+*.pkl
+!/data/raw/replogle_real_selected_genes.pkl
+/data/raw/hgnc_complete_set.tsv
+*.csv.gz
+
+# Per-gene DE intermediates. Keep per-perturbation scores and reports.
+pred_de.csv
+real_de.csv
+
+# Redundant stdout and runtime state
+/runs/**/pipeline.log
+/runs/**/*.pid
+/logs/**/*.pid
+/runs/**/*.lock
+/logs/**/*.lock
+/logs/readme_pending.json
+*.tmp
+*.copying

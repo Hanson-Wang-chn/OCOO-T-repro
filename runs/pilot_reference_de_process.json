@@ -1,0 +1,28 @@
+{
+  "time": "2026-11-18T09:55:17+08:00",
+  "pid": 770742,
+  "stage": "completed",
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--trials",
+    "sigma_1.0,sigma_0.5,sigma_1.0_t1000,sigma_0.5_t1000,sigma_1.0_cellinit_1.0,sigma_0.5_cellinit_1.0",
+    "--comparison-output",
+    "runs/pilot_reference_de_comparison.json",
+    "--de",
+    "--evaluate-only",
+    "--pid-file",
+    "logs/pilot_reference_de.pid"
+  ],
+  "trials": [
+    "sigma_1.0",
+    "sigma_0.5",
+    "sigma_1.0_t1000",
+    "sigma_0.5_t1000",
+    "sigma_1.0_cellinit_1.0",
+    "sigma_0.5_cellinit_1.0"
+  ],
+  "note": "Completed validation caches only, CPU forced, no training or additional generation; preserve the original six-metric comparisons.",
+  "completed_time": "2026-11-18T09:56:43+08:00",
+  "first_six_agreement": true
+}

@@ -1,0 +1,151 @@
+{
+  "time": "2026-11-21T10:10:39.961Z",
+  "scope": "Bounded read-only daily recheck; not an exhaustive proof that no code exists anywhere",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2606.12838",
+      "finding": "Header and submission history still show v2, revised2026-08-14; no new version observed."
+    },
+    {
+      "url": "https://infevo.ai/publications",
+      "finding": "Paper/DOI and method summary; no confirmed implementation, model weights or training configuration download link located in this page."
+    },
+    {
+      "url": "https://infevo.ai/technology",
+      "finding": "Public technical overview links the paper and a company press release; no additional implementation parameters located."
+    },
+    {
+      "url": "https://www.prnewswire.com/apac/zh/news-releases/sota-302828459.html",
+      "finding": "Company release dated2026-07-17; no GitHub or open-source implementation link located; promotional metrics were not used as independent evaluation evidence."
+    }
+  ],
+  "github_tool": "GitHub connector search_repositories/fetch; public repositories only; metadata queries limited to recorded first pages",
+  "github_searches": {
+    "OCOO-T": {
+      "page": 1,
+      "per_page": 10,
+      "returned": [
+        {
+          "name": "ItmanHunter/OCoolTNT",
+          "url": "https://github.com/ItmanHunter/OCoolTNT",
+          "visibility": "public"
+        },
+        {
+          "name": "faragostaresh/pi-theme-ocook",
+          "url": "https://github.com/faragostaresh/pi-theme-ocook",
+          "visibility": "public"
+        },
+        {
+          "name": "Dobromag/OcOO-1-Task-main",
+          "url": "https://github.com/Dobromag/OcOO-1-Task-main",
+          "visibility": "public"
+        },
+        {
+          "name": "flamesResource6/frontend-repo_q8s9tsr8_ocootb",
+          "url": "https://github.com/flamesResource6/frontend-repo_q8s9tsr8_ocootb",
+          "visibility": "public"
+        },
+        {
+          "name": "voltan/pi-theme-ocook",
+          "url": "https://github.com/voltan/pi-theme-ocook",
+          "visibility": "public"
+        },
+        {
+          "name": "LRAQI70/-slowloris",
+          "url": "https://github.com/LRAQI70/-slowloris",
+          "visibility": "public"
+        }
+      ]
+    },
+    "OCOOT": {
+      "page": 1,
+      "per_page": 10,
+      "returned": [
+        {
+          "name": "akhilthej/ocoott_website",
+          "url": "https://github.com/akhilthej/ocoott_website",
+          "visibility": "public"
+        },
+        {
+          "name": "flamesResource6/frontend-repo_q8s9tsr8_ocootb",
+          "url": "https://github.com/flamesResource6/frontend-repo_q8s9tsr8_ocootb",
+          "visibility": "public"
+        }
+      ]
+    },
+    "infevo": {
+      "page": 1,
+      "per_page": 10,
+      "returned": [
+        {
+          "name": "navyagitautomation/Infevo123",
+          "url": "https://github.com/navyagitautomation/Infevo123",
+          "visibility": "public"
+        },
+        {
+          "name": "navyagitautomation/Infevo",
+          "url": "https://github.com/navyagitautomation/Infevo",
+          "visibility": "public"
+        },
+        {
+          "name": "wiryls/infevo",
+          "url": "https://github.com/wiryls/infevo",
+          "visibility": "public"
+        },
+        {
+          "name": "akashroshans/infevox",
+          "url": "https://github.com/akashroshans/infevox",
+          "visibility": "public"
+        },
+        {
+          "name": "infevotech/infevo-web",
+          "url": "https://github.com/infevotech/infevo-web",
+          "visibility": "public"
+        }
+      ]
+    },
+    "\"2606.12838\" in:readme": {
+      "page": 1,
+      "per_page": 20,
+      "returned": [
+        {
+          "name": "iszhanjiawei/flow_matching_arxiv_daily",
+          "url": "https://github.com/iszhanjiawei/flow_matching_arxiv_daily",
+          "visibility": "public"
+        }
+      ]
+    }
+  },
+  "inspected_name_matches": [
+    {
+      "repository": "https://github.com/wiryls/infevo/tree/en",
+      "classification": "Unrelated terminal-agent project, not a transcriptional perturbation model. Excluded.",
+      "readme_git_blob_sha": "3e958616d0e823ecfe905f473f7a88fe42faa534"
+    },
+    {
+      "repository": "https://github.com/infevotech/infevo-web",
+      "classification": "Generic static web page, not an OCOO-T implementation; authorship connection not established. Excluded.",
+      "root_files": [
+        "README.md",
+        "index.html",
+        "infevo.css",
+        "script.js"
+      ]
+    }
+  ],
+  "unavailable_sources": [
+    {
+      "url": "https://doi.org/10.64898/2026.06.08.731000",
+      "finding": "Web tool could not fetch redirected bioRxiv page; no absence/version claim inferred."
+    },
+    {
+      "url": "https://api.biorxiv.org/details/biorxiv/2026.06.08.731000",
+      "finding": "Not accessible through the web tool; no contents inferred."
+    }
+  ],
+  "repository_code_executed": false,
+  "external_messages_sent": false,
+  "new_hyperparameters_or_data_inferred": false,
+  "decision": "Continue the pinned v2 implementation and registered main training/validation calibration. No scientific source/configuration changes.",
+  "test_access": false
+}

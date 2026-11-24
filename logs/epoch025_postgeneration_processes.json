@@ -1,0 +1,10 @@
+{
+  "run_epoch025_full_zero_floor": {
+    "pid": 978358,
+    "script": "logs/run_epoch025_full_zero_floor.py"
+  },
+  "preserve_main_epoch026_when_ready": {
+    "pid": 978359,
+    "script": "logs/preserve_main_epoch026_when_ready.py"
+  }
+}

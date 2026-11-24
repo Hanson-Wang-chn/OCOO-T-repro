@@ -1,0 +1,23 @@
+{
+  "time": "2026-11-21T17:28:22+08:00",
+  "reason": "E35 all6 screen results complete and first full4825 refinement started; verifiedE36 recovery backup; retain900s cadence and archive old narrative events",
+  "backup": "logs/README_before_epoch035_full_refinements.md",
+  "replacements": [
+    [
+      "**当前：第35轮两协议复核完成，综合增益区间跨0，固定CFG误差继续上升。原训练继续；冻结E35已开始完整验证校准，最终设置未采用，测试尚未运行。**",
+      "**当前：冻结E35已完成6组粗筛，开始两个全量验证细化；原主模型继续训练。最终采样设置尚待完整检查，测试尚未运行。**"
+    ],
+    [
+      "因连续两期固定CFG误差上升，13:16开始对冻结E35运行[中途完整验证校准](runs/main_v1/interim_epoch035_calibration/plan.json)：沿用既有B32正CFG强度/区间搜索、两个全4,825细胞细化，随后CPU比较0/.05并检查全部原质量线。主训练并行，未增加架构试验、改明确参数或放宽检查线；不同B16诊断缓存不混入此次校准。结果尚待完成，最终测试设置未采用。\n\n",
+      "冻结E35的[中途完整验证校准](runs/main_v1/interim_epoch035_calibration/plan.json)已完成六组粗筛。按原综合目标选出w2/[0,1]与w2/[0.1,0.9]，各做全4,825细胞/B32/seed4242/Heun50细化，第一组已开始；之后CPU比较0/.05四候选并做九指标与配对区间核查。[粗筛九指标图](runs/main_v1/interim_epoch035_calibration/coarse_review/screen_tradeoffs.png)显示辨别点估计改善伴随误差增加，尚无全量成绩或最终选择。\n\n原主训练及预设规则保持，第36轮完整恢复备份已[独立核查](logs/preservation_epoch036/verification.json)：189个AdamW slots、双EMA、四类RNG和E35评估后的元数据保留；没有另起恢复训练。不同B16诊断缓存不混入本次B32校准。\n\n"
+    ],
+    [
+      "| 11-21 12:03–13:18 | E35完整归档/联合复核完成；原训练继续，启动冻结E35全量验证校准，登记E40后续。 |",
+      "| 11-21 12:03–13:18 | E35完整归档/联合复核完成；原训练继续，启动冻结E35全量验证校准，登记E40后续。 |\n| 11-21 17:13–17:27 | E36完整恢复备份核查通过；E35六组粗筛完成，开始两个全4,825细胞验证细化。 |"
+    ],
+    [
+      "\n- 2026-11-21T13:16:04+08:00：冻结E35默认EMA开始中途完整验证校准：沿用原正CFG搜索和两个全量4825细化，随后检查0/.05；主训练及质量线保持，不执行测试。见 `runs/main_v1/interim_epoch035_calibration/plan.json`。\n\n- 2026-11-21T13:29:52+08:00：验证集 CFG 校准 `screen_00`：w=None，区间 [0.1,0.9]，PDCorr=0.2503，PDS_L2=0.7044，MSE=0.01318（非测试）。\n\n- 2026-11-21T13:35:29+08:00：冻结E35完整校准的四候选/九指标/全部配对区间分析已登记，3项CPU检查通过；首个普通参考完成，正CFG粗筛进行中。训练、原质量线和测试隔离保持；见 `runs/main_v1/interim_epoch035_calibration/analysis_plan.json`。\n\n- 2026-11-21T14:16:24+08:00：验证集 CFG 校准 `screen_01`：w=0.6666666667，区间 [0.1,0.9]，PDCorr=0.2552，PDS_L2=0.7161，MSE=0.01283（非测试）。\n\n- 2026-11-21T15:01:46+08:00：验证集 CFG 校准 `screen_02`：w=1.0，区间 [0.1,0.9]，PDCorr=0.2801，PDS_L2=0.7678，MSE=0.01334（非测试）。\n\n- 2026-11-21T15:47:29+08:00：验证集 CFG 校准 `screen_03`：w=1.5，区间 [0.1,0.9]，PDCorr=0.2959，PDS_L2=0.7869，MSE=0.01633（非测试）。\n\n- 2026-11-21T16:33:00+08:00：验证集 CFG 校准 `screen_04`：w=2.0，区间 [0.1,0.9]，PDCorr=0.3003，PDS_L2=0.8039，MSE=0.02134（非测试）。\n\n- 2026-11-21T16:35:22+08:00：已登记第36轮step40248完整状态额外归档，只在原训练保存后用CPU复制/SHA核验到现有挂载，保留E35评估完成后的恢复备份；原训练、校准和策略保持。见 `logs/preservation_epoch036/registration.json`。\n",
+      "\n"
+    ]
+  ]
+}

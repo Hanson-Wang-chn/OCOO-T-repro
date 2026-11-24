@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-21T13:17:17+08:00",
+  "status": "registered_not_launched",
+  "plan_sha256": "d0f2102565b53504480e11b99f7b33372a4437cb91ded45d2510d83ec9f985b8",
+  "source_archive_sha256": "12cc348262e527ca6758cfd0d398ed79532897bcaec52eeaf8a10cf972188243",
+  "preserver_source_sha256": "49fbc9acab84ba4ea1de433006cac0dba4938101f9771c8f8a4c77805b18de14",
+  "follower_source_sha256": "2da3d7c1ed3253491f3c97587d13969c0e1f572743783b1b4377d6d938b575a0",
+  "prelaunch_paths_and_epoch_arguments_checked": true,
+  "test_access": false,
+  "main_training_changed": false
+}

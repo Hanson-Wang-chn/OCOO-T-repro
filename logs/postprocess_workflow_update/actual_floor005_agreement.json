@@ -1,0 +1,26 @@
+{
+  "time": "2026-11-20T19:57:50+08:00",
+  "passed": true,
+  "cpu_only": true,
+  "test_access": false,
+  "validation_cells": 4825,
+  "zero_floor": 0.05,
+  "all9_max_abs_difference": 0.0,
+  "metrics": {
+    "PDCorr": 0.3287956459370131,
+    "MSE": 0.0145073885563761,
+    "MAE": 0.07577362085382143,
+    "PDS_L1": 0.7830555555555556,
+    "PDS_L2": 0.7916666666666666,
+    "PDS_cos": 0.8227777777777778,
+    "DEOver": 0.1942845435857245,
+    "DEPrec": 0.15859118495792834,
+    "DirAgr": 0.7305319429384035
+  },
+  "reference_sha256": "bdd5b4165584bf0b088598a3691b19d62555106c38b8a881e5baf41c0c49c2ff",
+  "module_sha256": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+  "source_raw_sha256": "5fa141dafe6d4730b2ae988c62b22aea1a1c4b255475280abe93afe83e569ecc",
+  "interim_cache_formal_selection_rejected": "A complete formal calibration is required; interim stitched caches are not eligible",
+  "promoted_as_formal_validation": false,
+  "elapsed_seconds": 17.301416573114693
+}

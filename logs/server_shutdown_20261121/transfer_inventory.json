@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-21T22:54:01+08:00",
+  "project": {
+    "source": "/home/whs/ocoo-t",
+    "allocated_size_about_GiB": 44
+  },
+  "artifacts": {
+    "source": "/home/dataset-assist-0/whs/ocoo-t-artifacts",
+    "allocated_size_about_GiB": 66,
+    "contains_environment_archive": true
+  },
+  "latest_step": 41374,
+  "next_step": 41375,
+  "environment_pack_sha256": "a07fbf5aba814ed447216055430ecb272705c8444f83bfac88cbc9e91fda8032",
+  "documentation": [
+    "context.md",
+    "MIGRATION.md"
+  ],
+  "old_host_training_stays_stopped": true
+}

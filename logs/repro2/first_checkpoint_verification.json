@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-23T12:53:26+08:00",
+  "path": "runs/repro2_main/last.pt",
+  "verified_step": 50,
+  "sha256_at_verification": "97df995e302ac444475517200a929f1c559458a71a5ce5f008820e6e6457e9b2",
+  "bytes": 2819039133,
+  "model_tensors": 193,
+  "optimizer_slots": 189,
+  "ema_decays": [
+    "0.9999",
+    "0.9996"
+  ],
+  "rng_by_rank": 4
+}

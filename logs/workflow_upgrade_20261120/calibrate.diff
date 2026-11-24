@@ -1,0 +1,34 @@
+--- logs/source_archive/calibrate_before_full_validation_cache_ba57f98edbcf.py
++++ scripts/calibrate.py
+@@ -53,7 +53,10 @@
+     s=torch.load(a.checkpoint,map_location='cpu',mmap=True,weights_only=False);cfg=s['config']
+     if cfg['training'].get('train_subset'):raise ValueError('Formal inference calibration requires a full-data model')
+     if s.get('weights') in ['raw_pilot_only','raw_diagnostic']:raise ValueError('Formal calibration requires EMA inference weights')
++    weights='ema_0.9996' if '0.9996' in s.get('ema',{}) else s.get('weights')
++    if weights!='ema_0.9996':raise ValueError('Formal calibration requires the default EMA0.9996 weights')
+     provenance={'checkpoint':str(Path(a.checkpoint).resolve()),'checkpoint_sha256':file_sha256(a.checkpoint),'step':s['step'],
++                'weights':weights,'data_dir':cfg['data_dir'],
+                 'screen_cap':a.screen_cap,'refine_cap':a.refine_cap,'batch_size':a.batch_size,'scales':a.scales,
+                 'refinement_population':'all validation cells' if a.refine_cap is None else 'capped validation predictions',
+                 'objective':'PDCorr + mean(PDS_L1,PDS_L2,PDS_cos)','data':'validation only',
+@@ -84,8 +87,11 @@
+         # of pseudobulk scores. Record it during screening, keeping the locked
+         # primary selection objective and the full-validation gate unchanged.
+         metrics=official_metrics(m,idx,np.maximum(raw,0),case/'metrics_clamped',de=True)
++        cache={'directory':str(case.resolve()),'raw_unclamped':True,'split':'validation',
++               'files':{name:file_sha256(case/name) for name in
++                        ('prediction.npy','indices.npy','generation_state.json')}}
+         record={'tag':tag,'guidance':w,'cfg_min':low,'cfg_max':high,'clamp':True,'cap':cap,
+-                'metrics':metrics,'raw_metrics':raw_metrics,'score':score(metrics)}
++                'metrics':metrics,'raw_metrics':raw_metrics,'score':score(metrics),'cache_provenance':cache}
+         records.append(record);write_json_atomic(out/'all_results.json',records)
+         readme_event(f'验证集 CFG 校准 `{tag}`：w={w}，区间 [{low},{high}]，PDCorr={metrics["PDCorr"]:.4f}，PDS_L2={metrics["PDS_L2"]:.4f}，MSE={metrics["MSE"]:.5f}（非测试）。')
+         return record
+@@ -102,6 +108,7 @@
+     for i,r in enumerate(top):refined.append(evaluate(r['guidance'],r['cfg_min'],r['cfg_max'],a.refine_cap,f'refine_{i:02d}'))
+     selected=max(refined,key=lambda r:r['score'])
+     selected.update(checkpoint=provenance['checkpoint'],checkpoint_sha256=provenance['checkpoint_sha256'],step=provenance['step'],
++                    weights=weights,data_dir=cfg['data_dir'],
+                     noise_std=cfg['training']['noise_std'],sampling_steps=50,seed=4242,batch_size=a.batch_size,
+                     formal_guidance_policy=provenance['formal_guidance_policy'],
+                     source_sha256=provenance['source_sha256'],

@@ -1,0 +1,33 @@
+{
+  "time": "2026-11-21T21:58:06+08:00",
+  "reason": "Update first complete E35 validation and early0.05 result plus registered mature EMA study; merge pending/live only at the900-second publication window. Compress already documented old tail; exact prior document retained.",
+  "replacements": [
+    [
+      "**当前：冻结E35已完成6组粗筛，开始两个全量验证细化；原主模型继续训练。最终采样设置尚待完整检查，测试尚未运行。**",
+      "**当前：冻结E35首组完整验证及0.05诊断完成，DEPrec仍未过预设检查；第二组全量验证与原主训练继续。最终设置未采用，测试尚未运行。**"
+    ],
+    [
+      "推理用默认EMA0.9996",
+      "复现默认用EMA0.9996推理（原文未指定两份EMA的选择规则）"
+    ],
+    [
+      "冻结E35的[中途完整验证校准](runs/main_v1/interim_epoch035_calibration/plan.json)已完成六组粗筛。按原综合目标选出w2/[0,1]与w2/[0.1,0.9]，各做全4,825细胞/B32/seed4242/Heun50细化，第一组已开始；之后CPU比较0/.05四候选并做九指标与配对区间核查。[粗筛九指标图](runs/main_v1/interim_epoch035_calibration/coarse_review/screen_tradeoffs.png)显示辨别点估计改善伴随误差增加，尚无全量成绩或最终选择。",
+      "冻结E35的[中途校准](runs/main_v1/interim_epoch035_calibration/plan.json)已完成六组粗筛，按原综合目标选出w2/[0,1]与w2/[0.1,0.9]各做完整4,825细胞/B32/seed4242/Heun50。首组全区间及预登记CPU0.05诊断已完成：\n\n| 首组全量处理 | PDCorr | PDS_L2 | MSE | DEOver | DEPrec | DirAgr |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n| clamp0 | 0.3614 | 0.8125 | 0.01820 | 0.1770 | 0.1012 | 0.7931 |\n| 原文未公开的0.05候选 | 0.3591 | 0.8119 | 0.01822 | 0.1963 | 0.1542 | 0.7951 |\n\n0.05改善DE点估计，但仍缺DEPrec的原0.18复现检查线，PD及综合略降，尚未采用；这不是论文测试成绩。完整九指标、来源与限制见[提前诊断结论](runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/decision.json)。第二组部分区间全量生成继续，之后仍须原四候选完整检查、提前/正式0.05结果核对及[独立配对区间审计](runs/main_v1/interim_epoch035_calibration/analysis_plan.json)。\n\n另已登记[成熟双EMA配对检查](runs/main_v1/ema_epoch035_review/plan.json)：CPU验证两份193-tensor推理装载与同一E35完整断点一致；当前校准和审计结束后，只补0.9999普通/全区间CFG各960个验证细胞，复用同索引/噪声的0.9996参考。4项协议检查通过，尚未启动这项GPU生成，不增加训练或自动更换EMA。"
+    ],
+    [
+      "- E25→26成熟batch-retention单因素对照综合增益区间跨0，MSE/MAE/方向退化，未采用或追加预算；CPU批次结构检查也不支持简单漏学或均值补丁。见[成熟对照](runs/batch_dropout_mature_trial/decision.json)、[结构检查](runs/main_v1/batch_structure_epoch025/decision.json)。",
+      "- E25→26成熟batch-retention单因素对照综合增益区间跨0，MSE/MAE/方向退化，未采用或追加预算；CPU批次结构检查也不支持简单漏学或均值补丁。见[成熟对照](runs/batch_dropout_mature_trial/decision.json)、[结构检查](runs/main_v1/batch_structure_epoch025/decision.json)。\n- 旧E25缓存的[有限采样CPU诊断](runs/main_v1/mc_variance_epoch025/decision.json)仅覆盖部分可识别方差；额外同方差假设下proxy约为原MSE的16%，不能当作误差占比或修正成绩，未据此改生成数量。"
+    ],
+    [
+      "| 11-21 17:13–17:27 | E36完整恢复备份核查通过；E35六组粗筛完成，开始两个全4,825细胞验证细化。 |",
+      "| 11-21 17:13–17:27 | E36完整恢复备份核查通过；E35六组粗筛完成，开始两个全4,825细胞验证细化。 |\n| 11-21 18:45 | 旧E25缓存有限采样CPU诊断完成，保留原指标与采样配置。 |\n| 11-21 21:46–21:50 | E35首组全量及提前0.05检查完成，仍缺DEPrec；第二组全量继续。 |\n| 11-21 21:56 | 成熟双EMA两病例检查登记、CPU核查通过；等本轮完整审计后再运行。 |"
+    ],
+    [
+      "\n- 2026-11-21T17:16:15+08:00：第36轮step40248完整状态已SHA归档并通过独立CPU核查：189个AdamW slots、双EMA、四类RNG及已完成E35评估后的元数据保持。原训练继续，E35完整验证校准仍在进行。见 `logs/preservation_epoch036/verification.json`。\n\n- 2026-11-21T17:25:05+08:00：验证集 CFG 校准 `screen_full_interval`：w=2.0，区间 [0.0,1.0]，PDCorr=0.3208，PDS_L2=0.8056，MSE=0.02447（非测试）。\n\n- 2026-11-21T17:28:22+08:00：冻结E35六组粗筛完成，按原主分选择w2/[0,1]与w2/[.1,.9]各做全4825细化，第一组已开始；完整质量结果与0/.05选择仍待完成。粗筛图和固定输入已保存，训练/预设规则保持，未访问测试。\n\n- 2026-11-21T18:04:42+08:00：已登记首份全量refine_00完成后的提前CPU0.05诊断，复用原候选/实现，独立保存以尽早检查近零问题；最终仍须原两组全量和四候选完整复核。预启动拒绝未完整数据检查通过，实际指标尚未执行。\n\n- 2026-11-21T18:44:19+08:00：登记复用E25完整缓存的CPU Monte Carlo均值方差诊断，4项独立数学检查通过；按batch×原RNG段分组，单例方差标记不可识别，保留原MSE，不作分数修正或新模型选择。见 `runs/main_v1/mc_variance_epoch025/plan.json`。\n\n- 2026-11-21T18:52:44+08:00：旧E25全验证缓存的有限采样CPU诊断完成（4项数学检查通过）：单例层方差不可识别；仅在额外同方差假设下proxy约占原MSE的16%，不足以据此修改生成数量或训练。保留原成绩，详见 `runs/main_v1/mc_variance_epoch025/decision.json`；原主训练与E35全量验证继续。\n\n- 2026-11-21T21:46:13+08:00：验证集 CFG 校准 `refine_00`：w=2.0，区间 [0.0,1.0]，PDCorr=0.3614，PDS_L2=0.8125，MSE=0.01820（非测试）。\n\n- 2026-11-21T21:50:10+08:00：E35首组完整4825验证完成（w2/[0,1]）：clamp0 PD0.3614、DEPrec0.1012、MSE0.01820。按预登记CPU0.05检查，DEPrec升至0.1542但仍未过原0.18复现检查线，PD0.3591；未采用。第二组full及四候选审计继续，详见 `runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/decision.json`。\n",
+      "\n"
+    ]
+  ],
+  "backup": "logs/README_before_epoch035_first_full.md",
+  "publisher_source_sha256": "b1110906f51adb51ffdfee052c16d876de72a0affedf0b9ab741353e6e8093a4",
+  "test_access": false
+}

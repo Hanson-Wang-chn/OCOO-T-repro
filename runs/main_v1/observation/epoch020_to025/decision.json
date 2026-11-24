@@ -1,0 +1,38 @@
+{
+  "time": "2026-11-20T05:55:52+08:00",
+  "decision": "Continue original main training under unchanged pre-registered convergence rule; the small primary point improvement at epoch25 is uncertain, so do not claim clear overall improvement. Run one exactly matched frozen conditioning probe against epoch12; retain all nine validation metrics and no test access.",
+  "periodic_metrics": {
+    "PDCorr": 0.29873848673111447,
+    "MSE": 0.009205212094821036,
+    "MAE": 0.06710182161380847,
+    "PDS_L1": 0.6802777777777778,
+    "PDS_L2": 0.6966666666666665,
+    "PDS_cos": 0.7227777777777777,
+    "DEOver": 0.09215188783868386,
+    "DEPrec": 0.0774017169606635,
+    "DirAgr": 0.6706910204308733
+  },
+  "paired_change": {
+    "value": 0.0027888860844541563,
+    "ci95": [
+      -0.018729618658522833,
+      0.02527051287085776
+    ]
+  },
+  "PDS_cos_change": {
+    "metric": "PDS_cos",
+    "reference": 0.6969444444444446,
+    "candidate": 0.7227777777777777,
+    "difference": 0.025833333333333153,
+    "ci95": [
+      0.005555555555555642,
+      0.046118055555555516
+    ]
+  },
+  "current_protocol": "ordinary conditional EMA0.9996,cap32,B32,uniformHeun50",
+  "formal_calibration_or_test_done": false,
+  "next_generation_epoch": 30,
+  "probe_plan": "runs/main_v1/conditioning_epoch_025/plan.json",
+  "full_checkpoint_preservation": "runs/main_v1/snapshots/step_27950/preserved.json",
+  "default_EMA_and_uniform_timestep_paper_reference_rechecked": true
+}

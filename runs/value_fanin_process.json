@@ -1,0 +1,40 @@
+{
+  "time": "2026-11-19T03:17:45+08:00",
+  "controller_pid": 846260,
+  "stage": "completed",
+  "wait_pid": 839902,
+  "args": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--wait-pid",
+    "839902",
+    "--trials",
+    "value_fanin",
+    "--comparison-output",
+    "runs/value_fanin_trial_comparison.json",
+    "--de",
+    "--pid-file",
+    "logs/value_fanin_pilot.pid"
+  ],
+  "main_training_pid_unchanged": 656512,
+  "main_pipeline_pid_unchanged": 656436,
+  "no_three_simultaneous_gpu_jobs": true,
+  "analysis_command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/analyze_parameterization_trial.py",
+    "--candidate",
+    "runs/pilot_value_fanin",
+    "--outdir",
+    "runs/value_fanin_analysis",
+    "--factor",
+    "value_input_init"
+  ],
+  "training_pid": 850532,
+  "actual_start_time": "2026-11-19T04:25:19+08:00",
+  "pairing_check": "runs/value_fanin_initial_pairing.json",
+  "post_analysis_pid": 850878,
+  "post_analysis_script_sha256": "20c3944af2821afbd8fe8b6f9db6359ba09f0daccbf56504c7a70d0e374805b8",
+  "status": "completed",
+  "completion_time": "2026-11-19T06:34:23+08:00",
+  "decision": "runs/value_fanin_analysis/decision.json"
+}

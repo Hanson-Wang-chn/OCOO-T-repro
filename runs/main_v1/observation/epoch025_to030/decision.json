@@ -1,0 +1,90 @@
+{
+  "time": "2026-11-21T00:42:23+08:00",
+  "status": "jointly_reviewed_continue_original_training",
+  "reference_epoch": 25,
+  "candidate_epoch": 30,
+  "ordinary_primary_difference": {
+    "value": 0.008801953525000017,
+    "ci95": [
+      -0.007994444230293185,
+      0.026531295593955864
+    ]
+  },
+  "fixed_cfg_primary_difference": {
+    "value": 0.01432304109412219,
+    "ci95": [
+      -0.00579462338871927,
+      0.03644093150327297
+    ]
+  },
+  "fixed_cfg_nonzero_intervals": {
+    "DEPrec": {
+      "metric": "DEPrec",
+      "reference": 0.08622879344459407,
+      "candidate": 0.09159200751649337,
+      "difference": 0.005363214071899297,
+      "ci95": [
+        0.0014900162536946383,
+        0.009579227434898172
+      ]
+    },
+    "PDS_cos": {
+      "metric": "PDS_cos",
+      "reference": 0.7663888888888889,
+      "candidate": 0.7944444444444444,
+      "difference": 0.0280555555555555,
+      "ci95": [
+        0.006659722222221937,
+        0.0508402777777779
+      ]
+    },
+    "MSE": {
+      "metric": "MSE",
+      "reference": 0.020757763118793522,
+      "candidate": 0.022058012646933352,
+      "difference": 0.0013002495281398303,
+      "ci95": [
+        0.0002110615504595165,
+        0.0029746291313009934
+      ]
+    },
+    "MAE": {
+      "metric": "MAE",
+      "reference": 0.09505822968979673,
+      "candidate": 0.09694590071837102,
+      "difference": 0.0018876710285742893,
+      "ci95": [
+        0.0005593427239606718,
+        0.0033830674054721914
+      ]
+    }
+  },
+  "interpretation": "Both primary intervals cross zero. Fixed CFG improves DEPrec and PDS_cos but increases MSE/MAE; PD does not improve. Do not claim a stable overall gain or paper-level performance. Both point rankings preferE30, so no current evidence to override the original checkpoint or stopping policy.",
+  "main_config_changed": false,
+  "training_or_optimizer_changed": false,
+  "inference_checkpoint_override": false,
+  "stopping_policy_changed": false,
+  "current_best_generation_epoch": 30,
+  "current_early_reference_epoch": 30,
+  "earliest_possible_original_early_stop_epoch": 40,
+  "next_joint_validation_epoch": 35,
+  "next_actions": [
+    "Continue original main, then compare E30-to-E35 under the same two protocols; preserve exact fullE35 state.",
+    "Deploy the verified optional full-validation0/.05 workflow with a separately recorded parent-only handoff. No floor is adopted before independent mature full validation passes every original quality check.",
+    "Retain all original CFG search settings, thresholds and clamp0 results. No new architecture or auxiliary GPU case now."
+  ],
+  "postprocess_selection_adopted": false,
+  "quality_thresholds_relaxed": false,
+  "formal_calibration_started": false,
+  "test_access": false,
+  "uncertainty_scope": "Paired perturbation resampling conditional on fixed libraries and one inference seed, not independent training-seed or generation-noise uncertainty. DirAgr has53 finite populations; the official nanmean is retained.",
+  "evidence_sha256": {
+    "runs/main_v1/interim_epoch030_fixed_cfg/completed.json": "261b7b3e968cd62e9f5c388117c05b7390208998df74eea0386ea57c35030230",
+    "runs/main_v1/interim_epoch030_fixed_cfg/paired/comparison.json": "01fdc2956497eead0fece5fbef0c9ecc6be576af122c4f9ba62de469dac160bd",
+    "runs/main_v1/observation/epoch025_to030/comparison.json": "9c43e48fb31cbbe71259c086d5322d467fc2ec5b110e98da021bfd8f5b7c26b0",
+    "runs/main_v1/interim_epoch030_fixed_cfg/independent_comparison_verification.json": "d3911668f4484025b9ea86fa2dd4adb2405b6b513097b05e77ec9b2c1e38481b",
+    "runs/main_v1/interim_epoch030_fixed_cfg/checkpoint_verification.json": "53b7bf556656a4d45afb31336817789cddb2ba47dad0bb53ddd3715c688c9a23",
+    "runs/main_v1/interim_epoch030_fixed_cfg/joint_review/figure_provenance.json": "55625c0816937cce3798b8267c3e13e86bdaaa2fd22f360791fa80798ab1e5ce",
+    "logs/postprocess_workflow_update/verification.json": "0b48f18cf9069ed0e977002f0f366fbc4756f75977dc3c8924d328ea9b9870f0"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "time": "2026-11-19T14:25:48+08:00",
+  "status": "running",
+  "question": "At the more mature epoch20 checkpoint, can literal dual CFG improve perturbation specificity and DE recovery without degrading the other paper metrics?",
+  "motivation": "Epoch15-to20 paired primary score improves0.03222 [0.01018,0.05720], mainly PDS; PDCorr and DE remain below paper. Earlier epoch10 CFG benefits were small/inconclusive. Revisit inference on the new checkpoint before changing training.",
+  "checkpoint": "runs/main_v1/validation_epoch_020/model.pt",
+  "checkpoint_sha256": "a6578209a09edce722f9e942b2407066eb61388a36a67ab31d7495e4f697e3db",
+  "weights": "ema_0.9996",
+  "step": 22360,
+  "guidances": [
+    null,
+    0.6666666667,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "interval": [
+    0.1,
+    0.9
+  ],
+  "steps": 50,
+  "seed": 4242,
+  "batch_size": 16,
+  "cap_per_condition": 16,
+  "generated_per_case": 960,
+  "conditions": 60,
+  "metrics": "all9 on clamp_min0; raw predictions retained; fixed cell indices and noise across cases",
+  "objective": "PDCorr+mean(PDS_L1,PDS_L2,PDS_cos), with all9 reviewed",
+  "comparison_to_periodic_cache": "Periodic epoch20 used cap32/B32; it is not a matched-noise baseline for these cap16/B16 cases. Include a fresh ordinary reference here.",
+  "ordinary_role": "diagnostic reference only; excluded from eventual formal positive-CFG selection",
+  "scope": "Interim validation-only screen, no full refinement or final setting selection, no test expression. Main original training continues unchanged.",
+  "extra_checks": [
+    "paired2,000 perturbation intervals",
+    "training-cell centroid and within-condition variance diagnostics",
+    "source/config/indices/noise/cached-generation hashes"
+  ],
+  "if_boundary_best": "Review boundary behavior before any final selection; do not assume the initial finite scale grid establishes a global optimum.",
+  "epoch20_periodic_metrics": {
+    "PDCorr": 0.300116267313327,
+    "MSE": 0.009013737190980465,
+    "MAE": 0.06667922666917245,
+    "PDS_L1": 0.6888888888888888,
+    "PDS_L2": 0.701388888888889,
+    "PDS_cos": 0.6969444444444446,
+    "DEOver": 0.08975126229973615,
+    "DEPrec": 0.07686461996545925,
+    "DirAgr": 0.6767609566915194
+  },
+  "epoch15_to20_score_change": {
+    "value": 0.03222451900668788,
+    "ci95": [
+      0.010182656372620315,
+      0.05720410100891923
+    ]
+  },
+  "source_sha256": {
+    "scripts/run_inference_review.py": "b464e7559f878f27921989469c8566595ec9cc8cbce2d57bacbf235e0681b706",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "src/ocoot/model.py": "1f83d4d27de5a0e72ffc06647443c6490b1442ecb52ddcbdc72f0794cb269a09",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "scripts/analyze_inference_review.py": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+    "scripts/watch_inference_review.py": "1132e3df62bd77c69580accedbc357bd1bc26f24bf7bd406cda61e51ae8644ae"
+  },
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "main_training_pid": 656512,
+  "main_pipeline_pid": 656436,
+  "automatic_training_or_formal_policy_change": false,
+  "controller_pid": 886613,
+  "post_analysis_pid": 886614
+}

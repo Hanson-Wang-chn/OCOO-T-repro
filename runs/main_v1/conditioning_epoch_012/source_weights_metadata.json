@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-18T15:10:29+08:00",
+  "source_checkpoint": "/home/whs/ocoo-t/runs/main_v1/last.pt",
+  "source_checkpoint_sha256": "3ac09b542ad6562e84141ff9d2ea9f4f4e87a2124f2168495c57075799190ea9",
+  "step": 13416,
+  "epoch": 12.0,
+  "purpose": "Paired condition intervention after EMA lag diminished; denoising diagnostic only, no test access",
+  "kept_weights": [
+    "raw",
+    "ema_0.9996"
+  ],
+  "omitted": [
+    "optimizer",
+    "rng",
+    "ema_0.9999"
+  ],
+  "restartable_training_checkpoint": false,
+  "source_training_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52"
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_pilots/swiglu_literal/validation_epoch_012/model.pt",
+  "checkpoint_sha256": "f54fd0a51f8e9dd0007d461aa6a0d6905eb27a8ac694e6a0cffbbceb3b282098",
+  "step": 384,
+  "weights": "raw_pilot_only",
+  "generation_dir": "/home/dataset-assist-0/whs/ocoo-t/runs/repro2_pilots/swiglu_literal/validation_epoch_012",
+  "sampling": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": null,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "prediction_sha256": "713ac80dc4176ec060c0e5669c1d1328ae3170bf9f57a700daada373576d3940",
+  "indices_sha256": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+  "metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "script_sha256": "e4b48131802e024caca3aafbfc028c522ac99482b83c29c648fc4210ae6773ce",
+  "metric_source_sha256": "05bd7bea99e012dc264290b3f8daace4e66be78c874180189554ea0ca8850ee2",
+  "note": "Validation-only cached diagnostic, no new generation. Sampling cap and guidance differ from the final calibrated full benchmark."
+}

@@ -1,0 +1,15 @@
+{
+  "plan_sha256": "97e36ed156277baac3415e38ff75e886c344c14d9f2ef488e8b24d5f2671bc02",
+  "source_sha256": {
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/train.py": "b1920ed23394a08e4ade338cb7d93cfea3251cc0345db73b40a96b0c033f4881",
+    "scripts/run_batch_dropout_trial.py": "38e101960644baee64481f28fdf5dc83c3fb0d1d4f007ce31a2faf853494ac1a",
+    "tests/test_batch_dropout_trial.py": "6319e27d30a2d5515653e8e76f204857e6305a51debbf8bbf0631da89c122d3b",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "scripts/diagnose_zero_floor.py": "37dc192f81806bede1cca4b36d309fbe2385967336170825d6324531d8247698",
+    "scripts/analyze_zero_floor.py": "4cad8e652d6cdaaa891efa92e8cf2f91d3487ef6de10d03db869627c530f9172"
+  },
+  "verification_sha256": "7d2fd21ac3c13ebefed1a99e6585affba7f763b2582885e26889fbd0617919c7"
+}

@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-23T11:52:26+08:00",
+  "scope": "60 validation cells and 60 perturbations, E45 default EMA, real A100 eager forward, B8 and w=1.5 in [.1,.9]",
+  "files": {
+    "indices.npy": {
+      "identical": true,
+      "sha256": "93b26ec9fad64b85c7cf4ba55a5f07340e50c9ff2ee73dfaed9073d1b681abb0"
+    },
+    "prediction_raw.npy": {
+      "identical": true,
+      "sha256": "f5a7ac4ff2c48068de31c84fb0f5945a4567c4f15a6735daf63e6c7a81732bfd"
+    },
+    "prediction.npy": {
+      "identical": true,
+      "sha256": "ecdb4a7ba06b831c6830fae0fbd52f97d3f00904cb7735df797abb21902330e8"
+    }
+  },
+  "metrics_identical": true
+}

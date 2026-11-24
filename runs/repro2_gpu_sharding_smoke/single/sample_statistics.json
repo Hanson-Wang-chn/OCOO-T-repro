@@ -1,0 +1,19 @@
+{
+  "raw": {
+    "mean": 0.42856850416744113,
+    "std": 0.6656189605177686,
+    "min": -0.1220761090517044,
+    "max": 6.085441589355469,
+    "negative_fraction": 0.204575,
+    "zero_fraction": 0.0
+  },
+  "evaluated": {
+    "mean": 0.43030843602401936,
+    "std": 0.6644754232978823,
+    "min": 0.0,
+    "max": 6.085441589355469,
+    "negative_fraction": 0.0,
+    "zero_fraction": 0.204575
+  },
+  "postprocess": "clamp_min_0"
+}

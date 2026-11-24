@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-20T18:39:18+08:00",
+  "stage": "completed_review_required",
+  "execution_sha256": "7a6fc3b80b2483d94b71c6512e03768739ceeed07bbf7cce0fba9e4819fc3fd0",
+  "summary_sha256": "efa17d8003e05094e068c8e4fb66d463ac02a8a72583f0724660a469315db156",
+  "cpu_only": true,
+  "test_access": false,
+  "training_changed": false
+}

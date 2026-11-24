@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-18T07:19:40+08:00",
+  "pid": 758404,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_inference_review.py",
+    "--checkpoint",
+    "runs/main_v1/validation_epoch_010/model.pt",
+    "--outdir",
+    "runs/main_v1/interim_epoch010_review",
+    "--guidances",
+    "none,1,1.5",
+    "--cap",
+    "16",
+    "--batch-size",
+    "16"
+  ],
+  "stage": "running"
+}

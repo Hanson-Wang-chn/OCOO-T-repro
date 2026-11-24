@@ -1,0 +1,8 @@
+{
+  "time": "2026-11-19T03:17:45+08:00",
+  "previous_analysis_sha256": "94cbf45b8da1302f7a8904cead1daffbbce55fb294ff3e63a6b73df39c8bd011",
+  "current_analysis_sha256": "b310fc16d85ba4332d10550b4391732d1adb351a79e02607da8b0266c07dd55f",
+  "change": "Add optional factor=value_input_init. Default prediction_space comparison checks, source/metric audits, fixed library and bootstrap mathematics unchanged; candidate output field now records factor. This revision occurs before either result is available.",
+  "old_source_archive": "logs/source_archive/analyze_parameterization_trial_before_factor_94cbf45b8da1.py",
+  "no_objective_metric_or_budget_change": true
+}

@@ -1,0 +1,55 @@
+{
+  "time": "2026-11-18T09:09:59+08:00",
+  "pid": 767313,
+  "stage": "completed",
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--trials",
+    "sigma_1.0_t1000_cellinit_1.0,sigma_0.5_t1000_cellinit_1.0",
+    "--comparison-output",
+    "runs/time_cell_interaction_comparison.json"
+  ],
+  "log": "logs/time_cell_interaction_controller.log",
+  "free_gpu_MiB_before_start": 21162,
+  "main_training_pid": 656512,
+  "planned_trials": [
+    {
+      "noise_std": 1.0,
+      "reference_config": "configs/pilot_sigma_1.0_cellinit_1.0.yaml",
+      "candidate_config": "configs/pilot_sigma_1.0_t1000_cellinit_1.0.yaml",
+      "reference_run": "runs/pilot_sigma_1.0_cellinit_1.0",
+      "candidate_run": "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+      "config_sha256": "04c5ee0099839a82cc77556229ade8137d37e914afb93e18ae162338602cbc2f",
+      "only_change": "time_scale 1 -> 1000; output run_dir is separate"
+    },
+    {
+      "noise_std": 0.5,
+      "reference_config": "configs/pilot_sigma_0.5_cellinit_1.0.yaml",
+      "candidate_config": "configs/pilot_sigma_0.5_t1000_cellinit_1.0.yaml",
+      "reference_run": "runs/pilot_sigma_0.5_cellinit_1.0",
+      "candidate_run": "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+      "config_sha256": "48bad181c51f35c87b4e827d3d0b222a13346f2385e1c2d8c8645d692de7f173",
+      "only_change": "time_scale 1 -> 1000; output run_dir is separate"
+    }
+  ],
+  "current_trial": null,
+  "training_pid": null,
+  "last_checked_time": "2026-11-18T13:17:09+08:00",
+  "completed_trials": [
+    {
+      "trial": "sigma_1.0_t1000_cellinit_1.0",
+      "step": 384,
+      "finished_time": "2026-11-18T11:12:56+08:00",
+      "raw_score": 0.7335694701274149
+    },
+    {
+      "trial": "sigma_0.5_t1000_cellinit_1.0",
+      "step": 384,
+      "finished_time": "2026-11-18T13:16:01+08:00",
+      "raw_score": 0.72846399400297
+    }
+  ],
+  "completed_time": "2026-11-18T13:20:18+08:00",
+  "analysis": "runs/pilot_grid_complete/summary.json"
+}

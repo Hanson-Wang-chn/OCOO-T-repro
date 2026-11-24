@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-20T10:45:10+08:00",
+  "pid": 979902,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_batch_dropout_trial.py",
+    "--plan",
+    "runs/batch_dropout_mature_trial/plan.json"
+  ],
+  "plan_sha256": "97e36ed156277baac3415e38ff75e886c344c14d9f2ef488e8b24d5f2671bc02",
+  "prelaunch_verification_sha256": "7d2fd21ac3c13ebefed1a99e6585affba7f763b2582885e26889fbd0617919c7",
+  "main_training_pid_unchanged": 656512,
+  "main_pipeline_pid_unchanged": 961459,
+  "test_access": false
+}

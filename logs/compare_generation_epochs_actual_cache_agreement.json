@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-19T06:36:54+08:00",
+  "result": "all9 point estimates and paired bootstrap intervals agree within1e-12 with archived epoch10/15 analysis",
+  "old_analysis": "runs/main_v1/observation/epoch010_to015/comparison.json",
+  "generic_analysis": "runs/main_v1/observation/epoch010_to015_generic_check/comparison.json",
+  "additional_checks": "actual checkpoint, prediction and index hashes; EMA variant, config, frozen buffers and full sampling protocol",
+  "next_use": "epoch15 vs20 after observer completes cached nine metrics",
+  "gpu_used": false,
+  "training_changed": false,
+  "test_access": false
+}

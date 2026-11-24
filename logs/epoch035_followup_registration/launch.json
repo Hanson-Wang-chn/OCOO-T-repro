@@ -1,0 +1,74 @@
+{
+  "time": "2026-11-21T00:45:49+08:00",
+  "status": "both_passive_watchers_running",
+  "plan_sha256": "e5c08a8f5c76ce6e225b368632e6a32d2505c21b81222e85fba4946fa05bc67e",
+  "source_archive_sha256": "ad33eb7748cd51d5966e6dde509d650eedb82dd2241bac027ae3764cb6394c3c",
+  "check_only_sha256": "41cbee268bbf694aae0390ec39392a1189e2d1fa62a9e2a895b1f14ec57c2b8a",
+  "launched": [
+    {
+      "time": "2026-11-21T00:45:46+08:00",
+      "pid": 1100879,
+      "command": [
+        "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+        "logs/preserve_main_epoch035_when_ready.py"
+      ],
+      "source_sha256": "5c28bc758b8a2206c52d1805ad1f5cf3075f3c5470a997136c551c036d857207",
+      "test_access": false,
+      "new_gpu_job_now": false,
+      "initial_state": {
+        "time": "2026-11-21T00:45:47+08:00",
+        "pid": 1100879,
+        "stage": "waiting_step39130",
+        "target_step": 39130,
+        "training_changed": false,
+        "purpose": "Preserve an exact mature checkpoint; no new experiment or policy change"
+      }
+    },
+    {
+      "time": "2026-11-21T00:45:47+08:00",
+      "pid": 1100944,
+      "command": [
+        "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+        "logs/follow_epoch035_fixed_cfg.py",
+        "--plan",
+        "runs/main_v1/interim_epoch035_fixed_cfg/plan.json"
+      ],
+      "source_sha256": "270f1befdd265399b602aa3d958670a7f2847e69735e58e846ee8ce15aef7fb7",
+      "test_access": false,
+      "new_gpu_job_now": false,
+      "initial_state": {
+        "time": "2026-11-21T00:45:49+08:00",
+        "pid": 1100944,
+        "stage": "waiting_for_registered_epoch35",
+        "test_access": false,
+        "training_changed": false,
+        "readiness": {
+          "ready": false,
+          "checks": {
+            "observer_epoch35_complete": false,
+            "epoch35_inference_checkpoint_exists": false,
+            "epoch35_full_snapshot_preserved": false,
+            "gpu_only_original_trainer": true
+          },
+          "gpu_pids": [
+            656512
+          ],
+          "observer_epochs": [
+            10,
+            15,
+            20,
+            25,
+            30
+          ]
+        },
+        "cpu_only": true
+      }
+    }
+  ],
+  "new_gpu_jobs_now": 0,
+  "new_gpu_generation_cases_at_epoch35": 1,
+  "main_trainer_pid_unchanged": 656512,
+  "main_pipeline_pid": 1100222,
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "test_access": false
+}

@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-20T09:32:58+08:00",
+  "main_training_pid_unchanged": 656512,
+  "pipeline_pid_unchanged": 961459,
+  "extension_pid_unchanged": 965660,
+  "extension_completed_extra": 2752,
+  "checked_finite": true,
+  "clamp0_identity_verified": true,
+  "plan_and_source_unchanged": true,
+  "raw_negative_fraction_so_far": 0.2434562136627907,
+  "raw_min": -0.17288880050182343,
+  "raw_max": 6.889070987701416,
+  "no_jobs_relaunched": true
+}

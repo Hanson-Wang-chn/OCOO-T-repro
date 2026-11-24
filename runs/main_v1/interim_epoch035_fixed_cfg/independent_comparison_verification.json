@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "cpu_only": true,
+  "recomputed_predictions_or_official_metrics": false,
+  "audits": {
+    "ordinary": {
+      "perturbations": 60,
+      "bootstrap": 2000,
+      "finite_observations_per_metric": {
+        "PDCorr": 60,
+        "DEOver": 60,
+        "DEPrec": 60,
+        "DirAgr": 53,
+        "PDS_L1": 60,
+        "PDS_L2": 60,
+        "PDS_cos": 60,
+        "MSE": 60,
+        "MAE": 60
+      },
+      "seed": 9232,
+      "maximum_absolute_difference": 0.0
+    },
+    "fixed_cfg": {
+      "perturbations": 60,
+      "bootstrap": 2000,
+      "finite_observations_per_metric": {
+        "PDCorr": 60,
+        "DEOver": 60,
+        "DEPrec": 60,
+        "DirAgr": 53,
+        "PDS_L1": 60,
+        "PDS_L2": 60,
+        "PDS_cos": 60,
+        "MSE": 60,
+        "MAE": 60
+      },
+      "seed": 9232,
+      "maximum_absolute_difference": 0.0
+    }
+  },
+  "source_sha256": {
+    "runs/main_v1/observation/epoch030_to035/comparison.json": "1d20d174b00e48d01e467dccbef618d0e4523574d5cf2a83a16610ced7e8b2ed",
+    "runs/main_v1/validation_epoch_030/metrics_de_diagnostic/results.csv": "6ca3c5e261525043530037c257543cd7de90639089ce96706d944afa25294394",
+    "runs/main_v1/validation_epoch_035/metrics_de_diagnostic/results.csv": "38654df9b9b64413378f48c83dd3a7460b990ba778575feec50cb028b803c961",
+    "runs/main_v1/interim_epoch035_fixed_cfg/paired/comparison.json": "2873517f7d834e5a7c90da5c8f818f06d274dfdb7b9959ad08043ee330bc3bf6",
+    "runs/main_v1/interim_epoch030_fixed_cfg/candidate/metrics/results.csv": "b9172d9b474b329133a8a0a198ff5b93c2d9ea9bbccf706d156c4a4109d91502",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/results.csv": "7cdcec006f99a443479cd1adbabe1427f70bc415648abd15fbfadaa5e97871f7"
+  },
+  "script_sha256": "b54c71dca1f2cd570f4275318b778ec7af517e46f417982e2283748d993aad96"
+}

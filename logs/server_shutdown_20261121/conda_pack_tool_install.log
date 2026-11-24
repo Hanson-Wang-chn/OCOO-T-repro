@@ -1,0 +1,5 @@
+Collecting conda-pack==0.8.1
+  Downloading conda_pack-0.8.1-py2.py3-none-any.whl.metadata (2.6 kB)
+Downloading conda_pack-0.8.1-py2.py3-none-any.whl (34 kB)
+Installing collected packages: conda-pack
+Successfully installed conda-pack-0.8.1

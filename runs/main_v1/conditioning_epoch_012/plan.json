@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-18T15:10:33+08:00",
+  "checkpoint": "runs/main_v1/conditioning_epoch_012/diagnostic_weights.pt",
+  "checkpoint_sha256": "2c29f9e40557bff8a8d1ada70ad703e55cf11a7b2f37c1fef2ccdf4cf5c20a48",
+  "reference": "runs/main_v1/conditioning_epoch_008",
+  "source_step": 13416,
+  "cells": 1024,
+  "batch_size": 8,
+  "seed": 9231,
+  "bootstrap": 1000,
+  "cases": [
+    "matched",
+    "shuffled_pert",
+    "null_pert",
+    "shuffled_time"
+  ],
+  "objective": "Compare matched-vs-shuffled/null perturbation and shuffled input timestep after EMA maturity; keep indices/noise/targets identical; not a generation performance estimate.",
+  "training_change": false
+}

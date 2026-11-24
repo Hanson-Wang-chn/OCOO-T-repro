@@ -1,0 +1,40 @@
+{
+  "time": "2026-11-20T07:15:11+08:00",
+  "stage": "completed_reviewed",
+  "pid": 965660,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/extend_validation_cache.py",
+    "--source-dir",
+    "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/full_source_view",
+    "--outdir",
+    "runs/main_v1/interim_epoch025_full_guided"
+  ],
+  "immutable_plan_sha256": "1cf7d0667337cdde1ecf8d777e73f2431b3e56813ea9e5bda5548e7024e65e7f",
+  "main_training_pid_unchanged": 656512,
+  "pipeline_pid": 961459,
+  "protocol_description_correction": "runs/main_v1/interim_epoch025_full_guided/protocol_note_correction.json",
+  "first_completed_batch_options_verified": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 62525
+  },
+  "reviewed_time": "2026-11-20T10:34:31+08:00",
+  "decision": "decision.json",
+  "full_metrics": {
+    "PDCorr": 0.3306210098813608,
+    "MSE": 0.014458370274708917,
+    "MAE": 0.07542472134033838,
+    "PDS_L1": 0.7816666666666666,
+    "PDS_L2": 0.7908333333333333,
+    "PDS_cos": 0.8213888888888888,
+    "DEOver": 0.16823972826188463,
+    "DEPrec": 0.0989262727680655,
+    "DirAgr": 0.7120130080493234
+  }
+}

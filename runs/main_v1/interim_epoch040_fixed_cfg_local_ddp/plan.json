@@ -1,0 +1,141 @@
+{
+  "time": "2026-11-21T13:17:17+08:00",
+  "status": "registered_before_epoch40_generation",
+  "question": "Do both original periodic and the same fixed positiveCFG continue to improve fromE35 toE40? Preserve complete state and jointly inspect all9/error tradeoffs before any policy change. The separate frozenE35 full calibration must release the auxiliary GPU slot before this case starts.",
+  "reference": "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/reference_epoch035",
+  "candidate": "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/candidate",
+  "candidate_checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1/validation_epoch_040/model.pt",
+  "candidate_step": 44720,
+  "full_snapshot_record": "runs/main_v1/snapshots/step_44720/preserved.json",
+  "trainer_pid": 83639,
+  "trainer_start_tick": "516199159",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "source_sha256": {
+    "scripts/evaluate.py": "8c56e09e14b033e77ca1ef2374066eb85131ee2ba5f240ecdce32aaacf48ea70",
+    "scripts/compare_inference_cases.py": "845fa52dbc611ffd413250c07dc83c95615e3e636821d5e8b77e6c0588f2574e",
+    "scripts/compare_generation_epochs.py": "5cb4f04a6ab6cab7611d3cac6b948a87431337c54b1fc2c917c0b8d72bea4c2c",
+    "scripts/analyze_inference_review.py": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+    "scripts/preserve_checkpoint.py": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177",
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/train.py": "113df5ae9b4baa11cfd2b01bacca67c23e0eee48d6b2de76e3c14db8adad0d0f",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "logs/follow_epoch040_fixed_cfg.py": "9a1036abcb7f1dcee1091f234735a16e322e047b3aef43d9119bfe76487f99cc",
+    "src/ocoot/distributed.py": "3dfb3761e413ae734beb0751e6f2103f89d9e265a7ed45d7a955940f8c1e6d6a"
+  },
+  "prerequisite_sha256": {
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "runs/main_v1/interim_epoch035_fixed_cfg/decision.json": "dd1024a879f96331e33a4c154c0997b880d554de8cc3f6c6cceb05e2a6b1abde",
+    "logs/postprocess_workflow_update/deployment.json": "36d401c584d1d4616a1d5ac9e348c3f35fba2442b54a8bf42e8113e2f2e20fcb",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/evaluation_config.json": "48ad75803d207c21e6d20e2161c6a7f01a29b5146b58b2a868a6ec251105061b",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/summary.json": "1ae823f8449e95b7cc421d3c92abf5ac0777b901228def632750c3b60b2ee9f2",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/metrics/results.csv": "7cdcec006f99a443479cd1adbabe1427f70bc415648abd15fbfadaa5e97871f7",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction.npy": "c21f3d3d3f2e2a7e34ebc6537b35accb16075822b0c8ddd1d16a9f9d45148a8d",
+    "runs/main_v1/interim_epoch035_fixed_cfg/candidate/prediction_raw.npy": "8593aacb7ce0f352a985f799b2614035089c17df6772761e02a81c05d7124245",
+    "runs/main_v1/interim_epoch035_calibration/plan.json": "f24dcdff987abd0ef788556da569b436cc6ae76a5c3d0ce889494e211263d6cc",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/reference_epoch035/evaluation_config.json": "a808e525bddea0deed12ab633b473f61ec9cf34f972702f8e926325ead1ccd52",
+    "runs/main_v1/interim_epoch035_calibration_local_ddp/plan.json": "5f7df112a9f5ab46c94aadbbcce482f2970a7ce061b09e632351c1a998c13b30"
+  },
+  "fixed": {
+    "weights": "ema_0.9996",
+    "cap": 16,
+    "batch_size": 16,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "steps": 50,
+    "seed": 4242,
+    "clamp": true,
+    "de": true
+  },
+  "conditions": 60,
+  "cells": 960,
+  "new_generation_cases": 1,
+  "reference_cache_reused": true,
+  "new_strength_or_interval_search": false,
+  "test_access": false,
+  "automatic_main_or_early_stop_change": false,
+  "generation_command": [
+    "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "scripts/evaluate.py",
+    "--checkpoint",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/main_v1/validation_epoch_040/model.pt",
+    "--split",
+    "validation",
+    "--outdir",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/candidate",
+    "--cap",
+    "16",
+    "--batch-size",
+    "16",
+    "--guidance",
+    "2",
+    "--cfg-min",
+    ".1",
+    "--cfg-max",
+    ".9",
+    "--clamp",
+    "--de"
+  ],
+  "fixed_comparison_command": [
+    "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "scripts/compare_inference_cases.py",
+    "--reference",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/reference_epoch035",
+    "--candidate",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/candidate",
+    "--factor",
+    "checkpoint",
+    "--outdir",
+    "runs/main_v1/interim_epoch040_fixed_cfg_local_ddp/paired"
+  ],
+  "periodic_comparison_command": [
+    "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "scripts/compare_generation_epochs.py",
+    "--reference-epoch",
+    "35",
+    "--candidate-epoch",
+    "40",
+    "--outdir",
+    "runs/main_v1/observation/epoch035_to040"
+  ],
+  "readiness": "Wait for CPU observerE40, exact full snapshot and immutable defaultEMA inference model; verify all193tensors; wait until GPU has only original trainer before starting one auxiliary case. No training interruption.",
+  "decision_policy": "Root reviews all9/correlated perturbation intervals under both protocols. No automatic switch, extension, checkpoint replacement, gate relaxation, or test evaluation.",
+  "prelaunch_prose_correction": "Prelaunch diff inspection caught stale lowercase labels and candidate/comparison paths in an unlaunched clone. Regenerated from the original with exact one-pass tokens, retaining sleep30 and all scientific settings. Initial registration archived; no E40 outputs existed or were read.",
+  "earliest_current_original_stopping_epoch": 45,
+  "separate_frozen_epoch35_validation_calibration": "runs/main_v1/interim_epoch035_calibration/plan.json; separate original full calibration, no implicit adoption or change to the matched checkpoint comparison",
+  "trainer_workers": [
+    {
+      "rank": 0,
+      "pid": 83639,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 1,
+      "pid": 83640,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 2,
+      "pid": 83641,
+      "start_tick": 516199159
+    },
+    {
+      "rank": 3,
+      "pid": 83642,
+      "start_tick": 516199159
+    }
+  ],
+  "migration": {
+    "time": "2026-11-22T11:18:10+08:00",
+    "original": "runs/main_v1/interim_epoch040_fixed_cfg/plan.json",
+    "sha256": "d0f2102565b53504480e11b99f7b33372a4437cb91ded45d2510d83ec9f985b8",
+    "python": "/home/whs/miniconda3/envs/ocoo-t/bin/python",
+    "project_root": "/home/dataset-assist-0/whs/ocoo-t"
+  }
+}

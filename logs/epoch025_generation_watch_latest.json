@@ -1,0 +1,62 @@
+{
+  "time": "2026-11-20T05:52:05+08:00",
+  "generation": {
+    "completed": 1916,
+    "total": 1916,
+    "options": {
+      "noise_std": 1.0,
+      "batch_size": 32,
+      "steps": 50,
+      "guidance": null,
+      "cfg_min": 0.1,
+      "cfg_max": 0.9,
+      "clamp": true,
+      "seed": 4242
+    }
+  },
+  "metrics": {
+    "PDCorr": 0.29873848673111447,
+    "MSE": 0.009205212094821036,
+    "MAE": 0.06710182161380847,
+    "PDS_L1": 0.6802777777777778,
+    "PDS_L2": 0.6966666666666665,
+    "PDS_cos": 0.7227777777777777
+  },
+  "de": {
+    "PDCorr": 0.29873848673111447,
+    "MSE": 0.009205212094821036,
+    "MAE": 0.06710182161380847,
+    "PDS_L1": 0.6802777777777778,
+    "PDS_L2": 0.6966666666666665,
+    "PDS_cos": 0.7227777777777777,
+    "DEOver": 0.09215188783868386,
+    "DEPrec": 0.0774017169606635,
+    "DirAgr": 0.6706910204308733
+  },
+  "observation": {
+    "time": "2026-11-20T05:51:24+08:00",
+    "pid": 785577,
+    "stage": "observing",
+    "run_dir": "/home/whs/ocoo-t/runs/main_v1",
+    "completed_epoch": 25,
+    "observed_epochs": [
+      10,
+      15,
+      20,
+      25
+    ],
+    "failures": {},
+    "gpu_disabled_for_observer_and_children": true,
+    "training_mutations": false,
+    "script_sha256": "f9f1a7668b98a6db6cea2e7b4e4a78fd01b5b26f633823db06ed669bb0fd17f0"
+  },
+  "checkpoint": {
+    "step": 27950,
+    "epoch": 25.0,
+    "time": "2026-11-20T05:51:06+08:00"
+  },
+  "finished": false,
+  "main_alive": true,
+  "free_GiB": 23.535228729248047,
+  "readme_age": 851.706027507782
+}

@@ -1,0 +1,25 @@
+{
+  "plan_sha256": "1cf7d0667337cdde1ecf8d777e73f2431b3e56813ea9e5bda5548e7024e65e7f",
+  "source_dir": "/home/whs/ocoo-t/runs/main_v1/interim_epoch025_fixed_cfg/full_source_view",
+  "source_options": {
+    "noise_std": 1.0,
+    "batch_size": 16,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": true,
+    "seed": 4242
+  },
+  "source_checkpoint_sha256": "ff05d2d18dd5861a972522e41ec623ef80e366d9c9ce277e21c18dd956a34113",
+  "step": 27950,
+  "weights": "ema_0.9996",
+  "base_cells": 960,
+  "extra_cells": 3865,
+  "full_cells": 4825,
+  "extra_seed": 62525,
+  "extra_batch_size": 32,
+  "conditioning": "literal_positive_dual_CFG",
+  "data_metadata_sha256": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+  "note": "All validation cells, preserving the complete capped prefix. Extra cells use a separate RNG segment with seed+base_count. Nested-population diagnostic; batch sizes and RNG segments are recorded. Not formal calibration, gated validation or test."
+}

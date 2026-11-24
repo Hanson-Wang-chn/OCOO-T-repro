@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-18T11:15:12+08:00",
+  "pid": 776160,
+  "stage": "completed",
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/run_pilots.py",
+    "--trials",
+    "sigma_1.0_t1000_cellinit_1.0",
+    "--comparison-output",
+    "runs/time_cell_interaction_trial7_de_comparison.json",
+    "--de",
+    "--evaluate-only",
+    "--pid-file",
+    "logs/time_cell_interaction_trial7_de.pid"
+  ],
+  "completed_time": "2026-11-18T11:16:33+08:00"
+}

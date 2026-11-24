@@ -1,0 +1,386 @@
+{
+  "time": "2026-11-20T17:31:42+08:00",
+  "validation_cells": 960,
+  "perturbations": 60,
+  "full_validation_population": false,
+  "bootstrap": 2000,
+  "seed": 9232,
+  "comparisons_to_zero": [
+    {
+      "reference": "floor_0",
+      "candidate": "floor_0p05",
+      "reference_floor": 0.0,
+      "candidate_floor": 0.05,
+      "primary_difference": {
+        "value": -0.0014591339015815885,
+        "ci95": [
+          -0.0031776701456747397,
+          0.00014653564559461362
+        ]
+      },
+      "rows": [
+        {
+          "metric": "PDCorr",
+          "reference": 0.29027110399135075,
+          "candidate": 0.289089747867547,
+          "difference": -0.0011813561238037673,
+          "ci95": [
+            -0.0015684838790911994,
+            -0.0008152091690378279
+          ]
+        },
+        {
+          "metric": "DEOver",
+          "reference": 0.10844705662575073,
+          "candidate": 0.11636384578165641,
+          "difference": 0.007916789155905685,
+          "ci95": [
+            -0.01926757745512174,
+            0.036994456187423454
+          ]
+        },
+        {
+          "metric": "DEPrec",
+          "reference": 0.08637652675623766,
+          "candidate": 0.1238190559213567,
+          "difference": 0.03744252916511903,
+          "ci95": [
+            -0.0032493834245236014,
+            0.08539113848670231
+          ]
+        },
+        {
+          "metric": "DirAgr",
+          "reference": 0.6865723690153966,
+          "candidate": 0.6888577015580678,
+          "difference": 0.002285332542671159,
+          "ci95": [
+            0.0005200829253306088,
+            0.004266377828140619
+          ]
+        },
+        {
+          "metric": "PDS_L1",
+          "reference": 0.7699999999999999,
+          "candidate": 0.7725000000000001,
+          "difference": 0.0025000000000001688,
+          "ci95": [
+            -0.001118055555555827,
+            0.006111111111111178
+          ]
+        },
+        {
+          "metric": "PDS_L2",
+          "reference": 0.7855555555555557,
+          "candidate": 0.7841666666666669,
+          "difference": -0.001388888888888773,
+          "ci95": [
+            -0.0030555555555559248,
+            0.0
+          ]
+        },
+        {
+          "metric": "PDS_cos",
+          "reference": 0.7691666666666668,
+          "candidate": 0.7672222222222221,
+          "difference": -0.0019444444444446374,
+          "ci95": [
+            -0.0038888888888889417,
+            -0.0002777777777777102
+          ]
+        },
+        {
+          "metric": "MSE",
+          "reference": 0.020961060343931078,
+          "candidate": 0.021098300411055447,
+          "difference": 0.00013724006712436884,
+          "ci95": [
+            0.00010059471319739632,
+            0.00017557853716426472
+          ]
+        },
+        {
+          "metric": "MAE",
+          "reference": 0.09553361584742862,
+          "candidate": 0.09630072476963199,
+          "difference": 0.0007671089222033717,
+          "ci95": [
+            0.0006132999093582343,
+            0.0009121900983154746
+          ]
+        }
+      ],
+      "precision_heterogeneity": {
+        "increased": 17,
+        "decreased": 27,
+        "equal": 16,
+        "median_difference": 0.0,
+        "top_three_share_of_net_change": 0.7422324943270513,
+        "per_condition": [
+          {
+            "perturbation": "ALG11",
+            "difference": 0.33601506333447445
+          },
+          {
+            "perturbation": "ANAPC1",
+            "difference": -0.0070621468926553
+          },
+          {
+            "perturbation": "ASCC3",
+            "difference": -0.0014388489208633
+          },
+          {
+            "perturbation": "ATP6V1G1",
+            "difference": 0.20961446930033317
+          },
+          {
+            "perturbation": "C9orf78",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CABIN1",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CCDC115",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CEP85",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "CSNK2B",
+            "difference": -0.046793760831889
+          },
+          {
+            "perturbation": "CYREN",
+            "difference": -0.0109090909090909
+          },
+          {
+            "perturbation": "DCTN1",
+            "difference": -0.0023612750885478
+          },
+          {
+            "perturbation": "DCTN6",
+            "difference": -0.0039164490861618
+          },
+          {
+            "perturbation": "DERL2",
+            "difference": -0.035586124401913916
+          },
+          {
+            "perturbation": "DESI1",
+            "difference": 0.0681894524689285
+          },
+          {
+            "perturbation": "DHX36",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "DNTTIP2",
+            "difference": 0.08970520497466611
+          },
+          {
+            "perturbation": "E4F1",
+            "difference": -0.0423728813559322
+          },
+          {
+            "perturbation": "GINS4",
+            "difference": 0.2671104091456077
+          },
+          {
+            "perturbation": "GNL3",
+            "difference": 0.10298668276975098
+          },
+          {
+            "perturbation": "HMGCS1",
+            "difference": 0.1912761151891586
+          },
+          {
+            "perturbation": "HNRNPH1",
+            "difference": -0.0055096418732782
+          },
+          {
+            "perturbation": "INTS13",
+            "difference": -0.0124610591900311
+          },
+          {
+            "perturbation": "LAMTOR4",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "MRGBP",
+            "difference": -0.0686274509803921
+          },
+          {
+            "perturbation": "MRPL36",
+            "difference": -0.12734487734487732
+          },
+          {
+            "perturbation": "NAA10",
+            "difference": -0.0148148148148148
+          },
+          {
+            "perturbation": "NDC1",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "NDUFA3",
+            "difference": -0.053338854174508704
+          },
+          {
+            "perturbation": "NDUFS3",
+            "difference": -0.0073529411764705
+          },
+          {
+            "perturbation": "NFKBIE",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "NFRKB",
+            "difference": -0.0059612518628912
+          },
+          {
+            "perturbation": "NOC4L",
+            "difference": 0.3328630727909058
+          },
+          {
+            "perturbation": "NOL10",
+            "difference": 0.21594668946801
+          },
+          {
+            "perturbation": "NPLOC4",
+            "difference": -0.023572688906545097
+          },
+          {
+            "perturbation": "NUP85",
+            "difference": 0.163428007456958
+          },
+          {
+            "perturbation": "PABPC4",
+            "difference": 0.0029130952491986002
+          },
+          {
+            "perturbation": "PITRM1",
+            "difference": -0.0015455950540958
+          },
+          {
+            "perturbation": "POLR2G",
+            "difference": -0.145147704121611
+          },
+          {
+            "perturbation": "POLR3K",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "PPAN",
+            "difference": 0.22586539168211406
+          },
+          {
+            "perturbation": "PRDM4",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "RFC4",
+            "difference": 0.1229060974442424
+          },
+          {
+            "perturbation": "RPA3",
+            "difference": 0.25060425603608044
+          },
+          {
+            "perturbation": "RTCB",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "SLC1A5",
+            "difference": 0.9985855728429986
+          },
+          {
+            "perturbation": "SMN2",
+            "difference": -0.3015597920277296
+          },
+          {
+            "perturbation": "SPG7",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "SRSF7",
+            "difference": -0.0852819807427785
+          },
+          {
+            "perturbation": "STAT5B",
+            "difference": -0.0290205562273276
+          },
+          {
+            "perturbation": "TAF5",
+            "difference": 0.0587106983584022
+          },
+          {
+            "perturbation": "TERF2",
+            "difference": -0.1408
+          },
+          {
+            "perturbation": "THAP1",
+            "difference": -0.2226640159045725
+          },
+          {
+            "perturbation": "TP53RK",
+            "difference": -0.0497131931166348
+          },
+          {
+            "perturbation": "TRAIP",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "TRAPPC8",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "TUBD1",
+            "difference": -0.0011454753722794
+          },
+          {
+            "perturbation": "UCHL5",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "WDR77",
+            "difference": 0.0
+          },
+          {
+            "perturbation": "ZC3H4",
+            "difference": -0.0051457975986277
+          },
+          {
+            "perturbation": "ZCCHC9",
+            "difference": 0.061279739371831066
+          }
+        ]
+      }
+    }
+  ],
+  "source_sha256": {
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/study_state.json": "0d9c27cd2aa4b19d53ff95bd6490087d4c4a700def3ce28a723f54bded034f5f",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/study_config.json": "012a61f1682dc6ace90ffb5f35e52aafbd8dd09d8372973381bc84f8302655cc",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/comparison.json": "4e9c047bbcc30ae69892ec5c8435b727fcbbe1505df9ec7e65b9ce6a1bec1b86",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/ema_models/candidate.pt": "ae1ae3bc9dea9b0650a9946a5e60d952e86d3ff7883b0f6da3e90929ea17c4ea",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/prediction.npy": "a9a61c70b27bacd3267087815f5701421ca71ab87176fb1e19ed32e5901f65b7",
+    "/home/whs/ocoo-t/runs/batch_dropout_mature_trial/candidate/indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+    "src/ocoot/evaluate.py": "6acb24f78199aa1b366b2456780a0ca1e82208da02c36ba11f402579bc84e81f",
+    "scripts/diagnose_zero_floor.py": "37dc192f81806bede1cca4b36d309fbe2385967336170825d6324531d8247698",
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0/completed.json": "07f4c2d92bc759299b3b3da1f516125b097ed36a8fadcb8685f81c3aaac9b6cd",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0/metrics/results.csv": "39bbd95635fd91c0034f2d52ab4d9af8f1c1c9cdde68644d3661205639bbd630",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0/metrics/summary.json": "30e33e2403ef551ccd8ba2b2d0914b74fb1bd78108de15759b3bd50035fc7f1c",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0p05/completed.json": "5257a9ec026baa85b4f597ee5e08496d94020a72c7f4be4e1ca4cc0163dbd297",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0p05/metrics/results.csv": "96907624c7552ff544bcfe4924a1c505d504e668ae9336ca76546669f56082ac",
+    "runs/batch_dropout_mature_trial/candidate/zero_floor/floor_0p05/metrics/summary.json": "905209d80488c84dc3b4ba7569dba317208a23efa11b8e92fc1d0e4740887860"
+  },
+  "script_sha256": "4cad8e652d6cdaaa891efa92e8cf2f91d3487ef6de10d03db869627c530f9172",
+  "bootstrap_helper_sha256": "0bbfede39ff7bbc9311489f9aba1a580019b69c7354f2f99df36ecfed9c9b8df",
+  "automatic_formal_selection": false,
+  "note": "Exploratory paired intervals for fixed validation predictions and perturbations. Not independent training seeds or generation-noise uncertainty. Original metric definitions and inference defaults remain unchanged."
+}

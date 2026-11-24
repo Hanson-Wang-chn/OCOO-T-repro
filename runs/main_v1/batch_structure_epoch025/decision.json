@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-20T18:44:07+08:00",
+  "status": "completed_reviewed_no_training_change",
+  "decision": "Keep original main training and the planned E30 ordinary/fixed-CFG review. Do not start a larger batch-initialization trial or adopt a fitted batch-mean correction on these diagnostics. Continue the preplanned positive-CFG calibration and later independently validate the retained near-zero candidate.",
+  "observations": {
+    "reliable_batches": 53,
+    "crossvalidation_cells": 4785,
+    "real_batch_effect_rms": 0.05928440928060771,
+    "generated_batch_effect_rms": 0.08371571519437074,
+    "effect_slope_prediction_on_real": 0.9619966055207736,
+    "effect_cosine_prediction_vs_real": 0.6812508303349453,
+    "crossvalidated_real_fraction": 0.003470682364074329,
+    "crossvalidated_generated_fraction": 0.03204754383300645,
+    "crossvalidated_error_fraction": -0.009492235304398466,
+    "batch_composition_vector_energy_ratio": 0.005697483277413527,
+    "common_across_perturbations_gene_bias_energy_fraction": 0.07359608716109399
+  },
+  "interpretation": "Generated batch-associated variation is larger, rather than simply underrepresented. Error batch effects do not improve held-out within-perturbation centered residual prediction across any of five perturbation folds at these sample sizes. The centered batch-composition vector is small relative to pseudobulk mean error. These results do not support a simple missing-batch-effect explanation.",
+  "limits": "Effects are observational and noisy in both real and generated finite populations. The composition ratio is a descriptive squared norm, not a causal attribution or independent performance improvement. Most observed mean-error energy varies across perturbations, including Monte Carlo sampling effects; this does not establish one specific architecture or optimizer fault. No validation-fitted coefficients may be applied to test predictions.",
+  "sources": {
+    "summary_sha256": "efa17d8003e05094e068c8e4fb66d463ac02a8a72583f0724660a469315db156",
+    "mean_component_sha256": "9ddb40d56b92921b96c2ed8a6af2e019e4f278c3e061e225280371aa6883f854",
+    "math_verification": "math_verification.json",
+    "plot": "batch_structure.png"
+  },
+  "cpu_only": true,
+  "test_access": false,
+  "training_changed": false,
+  "formal_postprocess_changed": false,
+  "new_gpu_jobs": 0
+}

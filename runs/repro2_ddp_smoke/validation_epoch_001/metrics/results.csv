@@ -1,0 +1,3 @@
+perturbation,pearson_delta,mse,mae,discrimination_score_l1,discrimination_score_l2,discrimination_score_cosine
+G0,0.06632573157548904,0.5764403343200684,0.5780668258666992,1.0,1.0,1.0
+G1,0.2550104856491089,0.18971841037273407,0.361013799905777,1.0,0.5,1.0

@@ -1,0 +1,10 @@
+{
+  "pid": 1101742,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/publish_readme_update.py",
+    "--plan",
+    "logs/readme_epoch030_joint_result_update.json"
+  ],
+  "wait_for_900_seconds": true
+}

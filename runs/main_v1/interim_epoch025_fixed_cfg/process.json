@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-20T06:02:07+08:00",
+  "stage": "completed_reviewed",
+  "pid": 960334,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/evaluate.py",
+    "--checkpoint",
+    "/home/whs/ocoo-t/runs/main_v1/validation_epoch_025/model.pt",
+    "--split",
+    "validation",
+    "--outdir",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate",
+    "--cap",
+    "16",
+    "--batch-size",
+    "16",
+    "--guidance",
+    "2",
+    "--cfg-min",
+    ".1",
+    "--cfg-max",
+    ".9",
+    "--clamp",
+    "--de"
+  ],
+  "main_training_pid_unchanged": 656512,
+  "status": "completed_reviewed",
+  "completed_at": "2026-11-20T06:54:47+08:00",
+  "decision": "runs/main_v1/interim_epoch025_fixed_cfg/decision.json"
+}

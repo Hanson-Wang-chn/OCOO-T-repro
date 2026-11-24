@@ -1,0 +1,57 @@
+{
+  "time": "2026-11-21T21:47:14+08:00",
+  "cpu_only": true,
+  "protocol": {
+    "plan_sha256": "cf687408640714b115633db628fc202d9f2807eed2ce11fa1d48101412f5a1a2",
+    "calibration_config_sha256": "eb6d8259fc50a5874f95dd6de96aace7163542868c6f6a352170f6aab124b481",
+    "checkpoint_sha256": "c51e91a0ce8fb9495b650788b2694f50b7cb036eb4a0b9baaee8926db43216bd",
+    "data_expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+    "complete_refinement_record": {
+      "tag": "refine_00",
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": true,
+      "cap": null,
+      "metrics": {
+        "PDCorr": 0.36139087307577333,
+        "MSE": 0.018197357802030942,
+        "MAE": 0.08195292359838884,
+        "PDS_L1": 0.8000000000000002,
+        "PDS_L2": 0.8125,
+        "PDS_cos": 0.8505555555555556,
+        "DEOver": 0.17702016847706575,
+        "DEPrec": 0.10120331530343506,
+        "DirAgr": 0.7931048160529413
+      },
+      "raw_metrics": {
+        "PDCorr": 0.3608543042248736,
+        "MSE": 0.018254958442412317,
+        "MAE": 0.08213135047505299,
+        "PDS_L1": 0.801388888888889,
+        "PDS_L2": 0.8125,
+        "PDS_cos": 0.8505555555555556
+      },
+      "score": 1.182409391594292,
+      "cache_provenance": {
+        "directory": "/home/whs/ocoo-t/runs/main_v1/interim_epoch035_calibration/calibration/refine_00",
+        "raw_unclamped": true,
+        "split": "validation",
+        "files": {
+          "prediction.npy": "08545388c23318af2a272d0894358a176b0a2f5b0dd0d3435425c27391a8a413",
+          "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+          "generation_state.json": "ead97a1e557d63f47b7579da65fcd1d3761ad4225c843b3d3186e620bcbfdc7a"
+        }
+      }
+    },
+    "zero_floor": 0.05,
+    "independent_of_formal_selector_outputs": true
+  },
+  "output_sha256": {
+    "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/review.json": "d04e1d6fe2a8d06d232abb8ee414d3c196c22e88f5db6ed13eb610b685f666e5",
+    "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/metrics_floor_0p05/summary.json": "71e675cdaedb95785851547707ba7a9c1cc6a00c4291b92c9e14252a99927157",
+    "runs/main_v1/interim_epoch035_calibration/first_full_floor_diagnostic/metrics_floor_0p05/results.csv": "2fc9be785d774605c731e01d1bbfd64c3b6cb28ed379f05624bc433319d37853"
+  },
+  "final_protocol_adopted": false,
+  "test_access": false
+}

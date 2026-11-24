@@ -1,0 +1,465 @@
+..........FFFF................................ss........................ [ 79%]
+....s..............                                                      [100%]
+=================================== FAILURES ===================================
+_ test_calibration_keeps_conditional_reference_out_of_formal_selection[False-0.99] _
+
+tmp_path = PosixPath('/tmp/pytest-of-whs/pytest-7/test_calibration_keeps_conditi0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff1665e5490>
+conditional_score = 0.99, full_population_reverses_interval = False
+
+    @pytest.mark.parametrize('conditional_score', [.99, .50])
+    @pytest.mark.parametrize('full_population_reverses_interval', [False, True])
+    def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_path, monkeypatch, conditional_score, full_population_reverses_interval):
+        namespace=runpy.run_path(str(Path(__file__).resolve().parents[1]/'scripts/calibrate.py'))
+        main=namespace['main']
+        module=main.__globals__
+        checkpoint=tmp_path/'frozen.pt'
+        checkpoint.write_bytes(b'frozen EMA checkpoint placeholder')
+        out=tmp_path/'calibration'
+        calls=[]
+    
+        class Model:
+            def load_state_dict(self, state):pass
+            def cuda(self):return self
+            def eval(self):return self
+    
+        class Data:
+            def __init__(self, directory):pass
+            def build_model(self, config):return Model()
+            def evaluation_indices(self, split, cap):
+                assert split=='validation'
+                return np.arange(48 if cap is None else cap)
+    
+        def generate(forward, data, indices, case, **options):
+            assert options['steps']==50
+            calls.append({'tag':case.name,'cells':len(indices),**options})
+            value=10 if options['guidance'] is None else options['guidance']
+            result=np.tile([value,options['cfg_min'],options['cfg_max']],(len(indices),1))
+            case.mkdir(parents=True,exist_ok=True)
+            np.save(case/'prediction.npy',result)
+            np.save(case/'indices.npy',indices)
+            (case/'generation_state.json').write_text(json.dumps({
+                'completed':len(indices),'total':len(indices),'options':{'seed':4242,**options}}))
+            return result
+    
+        def metrics(data, indices, pred, directory, de=False):
+            w,low,high=pred[0]
+            value=conditional_score if w==10 else .80-.10*abs(w-1.5)+(.01 if low==0 and high==1 else 0)
+            if full_population_reverses_interval and len(indices)==48 and low==0 and high==1:
+                value-=.02
+            result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':.01,'MAE':.06}
+            if de:
+                result.update(DEOver=.2,DEPrec=.21,DirAgr=.75)
+            return result
+    
+        monkeypatch.setattr(module['torch'],'load',lambda *a,**kw:{'config':{'data_dir':'unused','model':{},'training':{'noise_std':1.}},'model':{},'step':123,'weights':'ema_0.9996'})
+        monkeypatch.setattr(module['torch'],'compile',lambda model,**kw:model)
+        monkeypatch.setattr(module['torch'],'set_num_threads',lambda *a:None)
+        monkeypatch.setitem(module,'BenchmarkData',Data)
+        monkeypatch.setitem(module,'generate',generate)
+        monkeypatch.setitem(module,'official_metrics',metrics)
+        monkeypatch.setitem(module,'readme_event',lambda *a,**kw:None)
+        monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),'--scales','.5,1,1.5'])
+>       main()
+
+tests/test_calibration_policy.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/calibrate.py:60: in main
+    calibrate(a,scales,ranks)
+scripts/calibrate.py:119: in calibrate
+    for i,w in enumerate(candidates):evaluate(w,.1,.9,a.screen_cap,f'screen_{i:02d}')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/calibrate.py:102: in evaluate
+    raw=generate(forward,m,idx,case,noise_std=cfg['training']['noise_std'],batch_size=a.batch_size,
+tests/test_calibration_policy.py:42: in generate
+    (case/'generation_state.json').write_text(json.dumps({
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/__init__.py:231: in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:200: in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:258: in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.encoder.JSONEncoder object at 0x7ff289a6ff90>
+o = <ocoot.distributed.TrainingRanks object at 0x7ff1665e4250>
+
+    def default(self, o):
+        """Implement this method in a subclass such that it returns
+        a serializable object for ``o``, or calls the base implementation
+        (to raise a ``TypeError``).
+    
+        For example, to support arbitrary iterators, you could
+        implement default like this::
+    
+            def default(self, o):
+                try:
+                    iterable = iter(o)
+                except TypeError:
+                    pass
+                else:
+                    return list(iterable)
+                # Let the base class default method raise the TypeError
+                return super().default(o)
+    
+        """
+>       raise TypeError(f'Object of type {o.__class__.__name__} '
+                        f'is not JSON serializable')
+E       TypeError: Object of type TrainingRanks is not JSON serializable
+
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:180: TypeError
+_ test_calibration_keeps_conditional_reference_out_of_formal_selection[False-0.5] _
+
+tmp_path = PosixPath('/tmp/pytest-of-whs/pytest-7/test_calibration_keeps_conditi1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff164465c10>
+conditional_score = 0.5, full_population_reverses_interval = False
+
+    @pytest.mark.parametrize('conditional_score', [.99, .50])
+    @pytest.mark.parametrize('full_population_reverses_interval', [False, True])
+    def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_path, monkeypatch, conditional_score, full_population_reverses_interval):
+        namespace=runpy.run_path(str(Path(__file__).resolve().parents[1]/'scripts/calibrate.py'))
+        main=namespace['main']
+        module=main.__globals__
+        checkpoint=tmp_path/'frozen.pt'
+        checkpoint.write_bytes(b'frozen EMA checkpoint placeholder')
+        out=tmp_path/'calibration'
+        calls=[]
+    
+        class Model:
+            def load_state_dict(self, state):pass
+            def cuda(self):return self
+            def eval(self):return self
+    
+        class Data:
+            def __init__(self, directory):pass
+            def build_model(self, config):return Model()
+            def evaluation_indices(self, split, cap):
+                assert split=='validation'
+                return np.arange(48 if cap is None else cap)
+    
+        def generate(forward, data, indices, case, **options):
+            assert options['steps']==50
+            calls.append({'tag':case.name,'cells':len(indices),**options})
+            value=10 if options['guidance'] is None else options['guidance']
+            result=np.tile([value,options['cfg_min'],options['cfg_max']],(len(indices),1))
+            case.mkdir(parents=True,exist_ok=True)
+            np.save(case/'prediction.npy',result)
+            np.save(case/'indices.npy',indices)
+            (case/'generation_state.json').write_text(json.dumps({
+                'completed':len(indices),'total':len(indices),'options':{'seed':4242,**options}}))
+            return result
+    
+        def metrics(data, indices, pred, directory, de=False):
+            w,low,high=pred[0]
+            value=conditional_score if w==10 else .80-.10*abs(w-1.5)+(.01 if low==0 and high==1 else 0)
+            if full_population_reverses_interval and len(indices)==48 and low==0 and high==1:
+                value-=.02
+            result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':.01,'MAE':.06}
+            if de:
+                result.update(DEOver=.2,DEPrec=.21,DirAgr=.75)
+            return result
+    
+        monkeypatch.setattr(module['torch'],'load',lambda *a,**kw:{'config':{'data_dir':'unused','model':{},'training':{'noise_std':1.}},'model':{},'step':123,'weights':'ema_0.9996'})
+        monkeypatch.setattr(module['torch'],'compile',lambda model,**kw:model)
+        monkeypatch.setattr(module['torch'],'set_num_threads',lambda *a:None)
+        monkeypatch.setitem(module,'BenchmarkData',Data)
+        monkeypatch.setitem(module,'generate',generate)
+        monkeypatch.setitem(module,'official_metrics',metrics)
+        monkeypatch.setitem(module,'readme_event',lambda *a,**kw:None)
+        monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),'--scales','.5,1,1.5'])
+>       main()
+
+tests/test_calibration_policy.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/calibrate.py:60: in main
+    calibrate(a,scales,ranks)
+scripts/calibrate.py:119: in calibrate
+    for i,w in enumerate(candidates):evaluate(w,.1,.9,a.screen_cap,f'screen_{i:02d}')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/calibrate.py:102: in evaluate
+    raw=generate(forward,m,idx,case,noise_std=cfg['training']['noise_std'],batch_size=a.batch_size,
+tests/test_calibration_policy.py:42: in generate
+    (case/'generation_state.json').write_text(json.dumps({
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/__init__.py:231: in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:200: in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:258: in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.encoder.JSONEncoder object at 0x7ff289a6ff90>
+o = <ocoot.distributed.TrainingRanks object at 0x7ff16738cd10>
+
+    def default(self, o):
+        """Implement this method in a subclass such that it returns
+        a serializable object for ``o``, or calls the base implementation
+        (to raise a ``TypeError``).
+    
+        For example, to support arbitrary iterators, you could
+        implement default like this::
+    
+            def default(self, o):
+                try:
+                    iterable = iter(o)
+                except TypeError:
+                    pass
+                else:
+                    return list(iterable)
+                # Let the base class default method raise the TypeError
+                return super().default(o)
+    
+        """
+>       raise TypeError(f'Object of type {o.__class__.__name__} '
+                        f'is not JSON serializable')
+E       TypeError: Object of type TrainingRanks is not JSON serializable
+
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:180: TypeError
+_ test_calibration_keeps_conditional_reference_out_of_formal_selection[True-0.99] _
+
+tmp_path = PosixPath('/tmp/pytest-of-whs/pytest-7/test_calibration_keeps_conditi2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff164428cd0>
+conditional_score = 0.99, full_population_reverses_interval = True
+
+    @pytest.mark.parametrize('conditional_score', [.99, .50])
+    @pytest.mark.parametrize('full_population_reverses_interval', [False, True])
+    def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_path, monkeypatch, conditional_score, full_population_reverses_interval):
+        namespace=runpy.run_path(str(Path(__file__).resolve().parents[1]/'scripts/calibrate.py'))
+        main=namespace['main']
+        module=main.__globals__
+        checkpoint=tmp_path/'frozen.pt'
+        checkpoint.write_bytes(b'frozen EMA checkpoint placeholder')
+        out=tmp_path/'calibration'
+        calls=[]
+    
+        class Model:
+            def load_state_dict(self, state):pass
+            def cuda(self):return self
+            def eval(self):return self
+    
+        class Data:
+            def __init__(self, directory):pass
+            def build_model(self, config):return Model()
+            def evaluation_indices(self, split, cap):
+                assert split=='validation'
+                return np.arange(48 if cap is None else cap)
+    
+        def generate(forward, data, indices, case, **options):
+            assert options['steps']==50
+            calls.append({'tag':case.name,'cells':len(indices),**options})
+            value=10 if options['guidance'] is None else options['guidance']
+            result=np.tile([value,options['cfg_min'],options['cfg_max']],(len(indices),1))
+            case.mkdir(parents=True,exist_ok=True)
+            np.save(case/'prediction.npy',result)
+            np.save(case/'indices.npy',indices)
+            (case/'generation_state.json').write_text(json.dumps({
+                'completed':len(indices),'total':len(indices),'options':{'seed':4242,**options}}))
+            return result
+    
+        def metrics(data, indices, pred, directory, de=False):
+            w,low,high=pred[0]
+            value=conditional_score if w==10 else .80-.10*abs(w-1.5)+(.01 if low==0 and high==1 else 0)
+            if full_population_reverses_interval and len(indices)==48 and low==0 and high==1:
+                value-=.02
+            result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':.01,'MAE':.06}
+            if de:
+                result.update(DEOver=.2,DEPrec=.21,DirAgr=.75)
+            return result
+    
+        monkeypatch.setattr(module['torch'],'load',lambda *a,**kw:{'config':{'data_dir':'unused','model':{},'training':{'noise_std':1.}},'model':{},'step':123,'weights':'ema_0.9996'})
+        monkeypatch.setattr(module['torch'],'compile',lambda model,**kw:model)
+        monkeypatch.setattr(module['torch'],'set_num_threads',lambda *a:None)
+        monkeypatch.setitem(module,'BenchmarkData',Data)
+        monkeypatch.setitem(module,'generate',generate)
+        monkeypatch.setitem(module,'official_metrics',metrics)
+        monkeypatch.setitem(module,'readme_event',lambda *a,**kw:None)
+        monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),'--scales','.5,1,1.5'])
+>       main()
+
+tests/test_calibration_policy.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/calibrate.py:60: in main
+    calibrate(a,scales,ranks)
+scripts/calibrate.py:119: in calibrate
+    for i,w in enumerate(candidates):evaluate(w,.1,.9,a.screen_cap,f'screen_{i:02d}')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/calibrate.py:102: in evaluate
+    raw=generate(forward,m,idx,case,noise_std=cfg['training']['noise_std'],batch_size=a.batch_size,
+tests/test_calibration_policy.py:42: in generate
+    (case/'generation_state.json').write_text(json.dumps({
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/__init__.py:231: in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:200: in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:258: in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.encoder.JSONEncoder object at 0x7ff289a6ff90>
+o = <ocoot.distributed.TrainingRanks object at 0x7ff164428050>
+
+    def default(self, o):
+        """Implement this method in a subclass such that it returns
+        a serializable object for ``o``, or calls the base implementation
+        (to raise a ``TypeError``).
+    
+        For example, to support arbitrary iterators, you could
+        implement default like this::
+    
+            def default(self, o):
+                try:
+                    iterable = iter(o)
+                except TypeError:
+                    pass
+                else:
+                    return list(iterable)
+                # Let the base class default method raise the TypeError
+                return super().default(o)
+    
+        """
+>       raise TypeError(f'Object of type {o.__class__.__name__} '
+                        f'is not JSON serializable')
+E       TypeError: Object of type TrainingRanks is not JSON serializable
+
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:180: TypeError
+_ test_calibration_keeps_conditional_reference_out_of_formal_selection[True-0.5] _
+
+tmp_path = PosixPath('/tmp/pytest-of-whs/pytest-7/test_calibration_keeps_conditi3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7ff1644b4b50>
+conditional_score = 0.5, full_population_reverses_interval = True
+
+    @pytest.mark.parametrize('conditional_score', [.99, .50])
+    @pytest.mark.parametrize('full_population_reverses_interval', [False, True])
+    def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_path, monkeypatch, conditional_score, full_population_reverses_interval):
+        namespace=runpy.run_path(str(Path(__file__).resolve().parents[1]/'scripts/calibrate.py'))
+        main=namespace['main']
+        module=main.__globals__
+        checkpoint=tmp_path/'frozen.pt'
+        checkpoint.write_bytes(b'frozen EMA checkpoint placeholder')
+        out=tmp_path/'calibration'
+        calls=[]
+    
+        class Model:
+            def load_state_dict(self, state):pass
+            def cuda(self):return self
+            def eval(self):return self
+    
+        class Data:
+            def __init__(self, directory):pass
+            def build_model(self, config):return Model()
+            def evaluation_indices(self, split, cap):
+                assert split=='validation'
+                return np.arange(48 if cap is None else cap)
+    
+        def generate(forward, data, indices, case, **options):
+            assert options['steps']==50
+            calls.append({'tag':case.name,'cells':len(indices),**options})
+            value=10 if options['guidance'] is None else options['guidance']
+            result=np.tile([value,options['cfg_min'],options['cfg_max']],(len(indices),1))
+            case.mkdir(parents=True,exist_ok=True)
+            np.save(case/'prediction.npy',result)
+            np.save(case/'indices.npy',indices)
+            (case/'generation_state.json').write_text(json.dumps({
+                'completed':len(indices),'total':len(indices),'options':{'seed':4242,**options}}))
+            return result
+    
+        def metrics(data, indices, pred, directory, de=False):
+            w,low,high=pred[0]
+            value=conditional_score if w==10 else .80-.10*abs(w-1.5)+(.01 if low==0 and high==1 else 0)
+            if full_population_reverses_interval and len(indices)==48 and low==0 and high==1:
+                value-=.02
+            result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':.01,'MAE':.06}
+            if de:
+                result.update(DEOver=.2,DEPrec=.21,DirAgr=.75)
+            return result
+    
+        monkeypatch.setattr(module['torch'],'load',lambda *a,**kw:{'config':{'data_dir':'unused','model':{},'training':{'noise_std':1.}},'model':{},'step':123,'weights':'ema_0.9996'})
+        monkeypatch.setattr(module['torch'],'compile',lambda model,**kw:model)
+        monkeypatch.setattr(module['torch'],'set_num_threads',lambda *a:None)
+        monkeypatch.setitem(module,'BenchmarkData',Data)
+        monkeypatch.setitem(module,'generate',generate)
+        monkeypatch.setitem(module,'official_metrics',metrics)
+        monkeypatch.setitem(module,'readme_event',lambda *a,**kw:None)
+        monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),'--scales','.5,1,1.5'])
+>       main()
+
+tests/test_calibration_policy.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/calibrate.py:60: in main
+    calibrate(a,scales,ranks)
+scripts/calibrate.py:119: in calibrate
+    for i,w in enumerate(candidates):evaluate(w,.1,.9,a.screen_cap,f'screen_{i:02d}')
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts/calibrate.py:102: in evaluate
+    raw=generate(forward,m,idx,case,noise_std=cfg['training']['noise_std'],batch_size=a.batch_size,
+tests/test_calibration_policy.py:42: in generate
+    (case/'generation_state.json').write_text(json.dumps({
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/__init__.py:231: in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:200: in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:258: in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.encoder.JSONEncoder object at 0x7ff289a6ff90>
+o = <ocoot.distributed.TrainingRanks object at 0x7ff1644b6c10>
+
+    def default(self, o):
+        """Implement this method in a subclass such that it returns
+        a serializable object for ``o``, or calls the base implementation
+        (to raise a ``TypeError``).
+    
+        For example, to support arbitrary iterators, you could
+        implement default like this::
+    
+            def default(self, o):
+                try:
+                    iterable = iter(o)
+                except TypeError:
+                    pass
+                else:
+                    return list(iterable)
+                # Let the base class default method raise the TypeError
+                return super().default(o)
+    
+        """
+>       raise TypeError(f'Object of type {o.__class__.__name__} '
+                        f'is not JSON serializable')
+E       TypeError: Object of type TrainingRanks is not JSON serializable
+
+/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/json/encoder.py:180: TypeError
+=============================== warnings summary ===============================
+tests/test_postprocess_workflow.py: 46 warnings
+tests/test_validation_cache_promotion.py: 10 warnings
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/cell_eval/_evaluator.py:119: DeprecationWarning: the string cache has been replaced by pl.Categories
+    pl.enable_string_cache()
+
+tests/test_postprocess_workflow.py::test_full_selection_and_promotion_match_real_metrics_and_are_idempotent
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+    warnings.warn(problem)
+
+tests/test_postprocess_workflow.py: 46 warnings
+tests/test_validation_cache_promotion.py: 10 warnings
+  /home/whs/miniconda3/envs/ocoo-t/lib/python3.11/site-packages/cell_eval/_types/_de.py:32: DeprecationWarning: the string cache has been replaced by pl.Categories
+    with pl.StringCache():
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_calibration_policy.py::test_calibration_keeps_conditional_reference_out_of_formal_selection[False-0.99]
+FAILED tests/test_calibration_policy.py::test_calibration_keeps_conditional_reference_out_of_formal_selection[False-0.5]
+FAILED tests/test_calibration_policy.py::test_calibration_keeps_conditional_reference_out_of_formal_selection[True-0.99]
+FAILED tests/test_calibration_policy.py::test_calibration_keeps_conditional_reference_out_of_formal_selection[True-0.5]
+4 failed, 84 passed, 3 skipped, 113 warnings in 24.64s

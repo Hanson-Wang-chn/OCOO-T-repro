@@ -1,0 +1,39 @@
+{"time": "2026-11-22T14:18:33+08:00", "step": 42250, "source_run": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery", "snapshot_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/snapshots/step_42250/full.pt", "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/recovery_step042250/full.pt", "sha256": "2b9bac0ffdf542b4fbe8250a65682c921e29e8e40a2f281d0edf48e8e2df0761", "bytes": 2819039133, "ema_decays": ["0.9999", "0.9996"], "pending_generation_epoch": null, "full_model_optimizer_ema_rng_retained": true, "active_training_or_last_checkpoint_modified": false, "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"}
+{"time": "2026-11-22T15:42:05+08:00", "step": 44720, "source_run": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery", "snapshot_path": "/home/dataset-assist-0/whs/ocoo-t/runs/main_ddp_recovery/snapshots/step_44720/full.pt", "archive_path": "/home/dataset-assist-0/whs/ocoo-t-artifacts/main-snapshots/epoch040_ddp_recovery/full.pt", "sha256": "c50a656d568c3f75d345b80ce5aa065dbe0cdbbf2c9576288bc4df57547f0c14", "bytes": 2819039133, "ema_decays": ["0.9999", "0.9996"], "pending_generation_epoch": 40, "full_model_optimizer_ema_rng_retained": true, "active_training_or_last_checkpoint_modified": false, "script_sha256": "dc28700d86c5c16ce260aad4aca03e121155aadd8aa2264115b2af75bda5c177"}
+{
+  "epochs": [
+    35,
+    40
+  ],
+  "score_difference": {
+    "value": 0.002144183250029741,
+    "ci95": [
+      -0.015376583214497785,
+      0.017639840945707665
+    ]
+  }
+}
+{"time": "2026-11-23T02:00:50+08:00", "event": "pipeline", "stage": "calibrating_validation"}
+{"time": "2026-11-23T03:35:20+08:00", "event": "pipeline", "stage": "failed", "error": "CalledProcessError: Command '['/home/whs/miniconda3/envs/ocoo-t/bin/python', 'scripts/calibrate.py', '--checkpoint', 'runs/main_ddp_recovery/best_generation.pt', '--outdir', 'runs/main_ddp_recovery/calibration']' died with <Signals.SIGTERM: 15>."}
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/run_experiment.py", line 155, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/run_experiment.py", line 82, in main
+    state('calibrating_validation');execute(['scripts/calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(calibration)])
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dataset-assist-0/whs/ocoo-t/scripts/run_experiment.py", line 65, in execute
+    subprocess.run([sys.executable,*args],stdout=log,stderr=log,check=True,env=environment)
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/whs/miniconda3/envs/ocoo-t/bin/python', 'scripts/calibrate.py', '--checkpoint', 'runs/main_ddp_recovery/best_generation.pt', '--outdir', 'runs/main_ddp_recovery/calibration']' died with <Signals.SIGTERM: 15>.
+Traceback (most recent call last):
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/epoch040_recovery/monitor.py", line 139, in <module>
+    main()
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/epoch040_recovery/monitor.py", line 117, in main
+    run_final_workflow(launch, result)
+  File "/home/dataset-assist-0/whs/ocoo-t/logs/epoch040_recovery/monitor.py", line 135, in run_final_workflow
+    process.check_returncode()
+  File "/home/whs/miniconda3/envs/ocoo-t/lib/python3.11/subprocess.py", line 502, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '['/home/whs/miniconda3/envs/ocoo-t/bin/python', 'scripts/run_experiment.py', '--config', 'configs/main_ddp_recovery.yaml', '--postprocess-plan', 'logs/postprocess_workflow_update/plan.json']' returned non-zero exit status 1.

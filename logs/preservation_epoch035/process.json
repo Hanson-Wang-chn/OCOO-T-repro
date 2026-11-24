@@ -1,0 +1,11 @@
+{
+  "time": "2026-11-21T00:45:46+08:00",
+  "pid": 1100879,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "logs/preserve_main_epoch035_when_ready.py"
+  ],
+  "source_sha256": "5c28bc758b8a2206c52d1805ad1f5cf3075f3c5470a997136c551c036d857207",
+  "test_access": false,
+  "new_gpu_job_now": false
+}

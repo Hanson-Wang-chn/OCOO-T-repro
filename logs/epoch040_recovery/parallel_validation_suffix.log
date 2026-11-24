@@ -1,0 +1,4 @@
+parallel suffix status 0; resuming registered final workflow
+{"time": "2026-11-23T03:57:58+08:00", "event": "pipeline", "stage": "calibrating_validation"}
+{"time": "2026-11-23T03:59:48+08:00", "event": "pipeline", "stage": "selecting_full_validation_postprocess"}
+{"time": "2026-11-23T04:00:24+08:00", "event": "pipeline", "stage": "validation_needs_review", "postprocess_review": "runs/main_ddp_recovery/calibration/postprocessing/review.json"}

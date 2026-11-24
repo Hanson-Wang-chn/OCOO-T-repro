@@ -1,0 +1,82 @@
+{
+  "time": "2026-11-20T06:01:28+08:00",
+  "status": "completed_reviewed",
+  "decision": "Correct perturbation labels still provide growing denoising benefit on held-out validation, so the weak ordinary-generation score change does not by itself establish that all conditional learning has stopped. Keep original main training and run one fixed positive-CFG checkpoint comparison, not a new strength or interval search.",
+  "ema_validation_perturbation_shuffle": {
+    "weights": "ema_0.9996",
+    "split": "validation",
+    "space": "velocity",
+    "case": "shuffled_pert",
+    "quantity": "intervention_minus_matched_loss",
+    "cells": 1024,
+    "perturbations": 60,
+    "reference": 0.0019599507213570178,
+    "candidate": 0.003321259853692027,
+    "difference": 0.001361309132335009,
+    "ci95_low": 0.0008415242977349723,
+    "ci95_high": 0.001983011428398602
+  },
+  "other_shuffle_rows": [
+    {
+      "weights": "raw_diagnostic",
+      "split": "train_hepg2",
+      "space": "velocity",
+      "case": "shuffled_pert",
+      "quantity": "intervention_minus_matched_loss",
+      "cells": 1024,
+      "perturbations": 561,
+      "reference": 0.007223353430163115,
+      "candidate": 0.009462419839110225,
+      "difference": 0.00223906640894711,
+      "ci95_low": 0.0017185366956390393,
+      "ci95_high": 0.0028239258309863463
+    },
+    {
+      "weights": "raw_diagnostic",
+      "split": "validation",
+      "space": "velocity",
+      "case": "shuffled_pert",
+      "quantity": "intervention_minus_matched_loss",
+      "cells": 1024,
+      "perturbations": 60,
+      "reference": 0.0025051123157027178,
+      "candidate": 0.0030391269356186967,
+      "difference": 0.000534014619915979,
+      "ci95_low": 0.0001598386789585237,
+      "ci95_high": 0.0008751254477388642
+    },
+    {
+      "weights": "ema_0.9996",
+      "split": "train_hepg2",
+      "space": "velocity",
+      "case": "shuffled_pert",
+      "quantity": "intervention_minus_matched_loss",
+      "cells": 1024,
+      "perturbations": 561,
+      "reference": 0.005372131457988871,
+      "candidate": 0.009730043584568193,
+      "difference": 0.004357912126579322,
+      "ci95_low": 0.003728937212954484,
+      "ci95_high": 0.005084436630448693
+    },
+    {
+      "weights": "ema_0.9996",
+      "split": "validation",
+      "space": "velocity",
+      "case": "shuffled_pert",
+      "quantity": "intervention_minus_matched_loss",
+      "cells": 1024,
+      "perturbations": 60,
+      "reference": 0.0019599507213570178,
+      "candidate": 0.003321259853692027,
+      "difference": 0.001361309132335009,
+      "ci95_low": 0.0008415242977349723,
+      "ci95_high": 0.001983011428398602
+    }
+  ],
+  "limitations": "Denoising dependence only; cannot establish generated distributions or paper-level performance. The difference in train/validation gains is not an isolated overfitting estimate because their biological conditions differ.",
+  "paired_progress": "runs/main_v1/conditioning_epoch_025/paired_progress/comparison.json",
+  "legacy_source_exactly_matches_reference": true,
+  "test_access": false,
+  "main_training_changed": false
+}

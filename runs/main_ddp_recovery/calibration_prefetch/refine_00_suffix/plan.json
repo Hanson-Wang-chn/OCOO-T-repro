@@ -1,0 +1,37 @@
+{
+  "prefix_marker": {
+    "completed": 1568,
+    "total": 4825,
+    "options": {
+      "noise_std": 1.0,
+      "batch_size": 32,
+      "steps": 50,
+      "guidance": 2.0,
+      "cfg_min": 0.0,
+      "cfg_max": 1.0,
+      "clamp": false,
+      "seed": 4242
+    }
+  },
+  "prefix_sha256": "c61bf2d1e006c0ebc93ac1bca280c1d0eb28364d541371c420ff3919670351ff",
+  "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "ranges": [
+    [
+      1568,
+      2400
+    ],
+    [
+      2400,
+      3232
+    ],
+    [
+      3232,
+      4032
+    ],
+    [
+      4032,
+      4825
+    ]
+  ],
+  "test_access": false
+}

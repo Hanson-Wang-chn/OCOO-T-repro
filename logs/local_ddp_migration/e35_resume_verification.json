@@ -1,0 +1,20 @@
+{
+  "time": "2026-11-22T11:24:57+08:00",
+  "old_completed": 1024,
+  "new_completed": 1056,
+  "total": 4825,
+  "same_prefix_and_indices": true,
+  "options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.1,
+    "cfg_max": 0.9,
+    "clamp": false,
+    "seed": 4242
+  },
+  "marker_sha256": "8a22b588869e0a56d82f5aaa98f3a99c1eacc30749f6b31f5f987400c8c94dd2",
+  "stage": "queued_after_main",
+  "test_access": false
+}

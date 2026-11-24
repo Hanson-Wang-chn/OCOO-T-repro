@@ -1,0 +1,14 @@
+{
+  "time": "2026-11-20T10:51:04+08:00",
+  "script_sha256": "075a86ad474814aec23cf3dae4984d9373e2b5d44968d61dcf77d7f447ca3532",
+  "actual_heldout_case_pair": "E20\u219225 fixedw2/cap16/B16",
+  "all9_points_and_paired_ci_max_abs_difference": 0.0,
+  "tolerance": 1e-12,
+  "source_files_sha256": {
+    "runs/main_v1/interim_epoch020_review/ema_cfg_2/metrics/results.csv": "b27da1b56e257fc58c99cd8d9e0488c3d4f8725f2b147b0005db8f179cad9cc2",
+    "runs/main_v1/interim_epoch025_fixed_cfg/candidate/metrics/results.csv": "b5dfda10686c7c9c7113d5720934bcf5feefa1b287a73c6defd14f12ca6f3421"
+  },
+  "prospective_mature_trial_plan": "runs/batch_dropout_mature_trial/plan.json",
+  "gpu_used": false,
+  "trial_results_not_yet_available": true
+}

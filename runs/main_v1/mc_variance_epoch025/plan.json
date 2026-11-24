@@ -1,0 +1,63 @@
+{
+  "time": "2026-11-21T18:44:19+08:00",
+  "status": "registered_after_math_checks_before_actual_cache_MC_variance_analysis",
+  "outdir": "runs/main_v1/mc_variance_epoch025",
+  "data_dir": "data/processed",
+  "indices_file": "runs/main_v1/interim_epoch025_full_guided/indices.npy",
+  "raw_prediction_file": "runs/main_v1/interim_epoch025_full_guided/stitched_raw.npy",
+  "clamped_prediction_file": "runs/main_v1/interim_epoch025_full_guided/stitched_predictions.npy",
+  "cache_completed_file": "runs/main_v1/interim_epoch025_full_guided/completed.json",
+  "metric_dirs": {
+    "raw": "runs/main_v1/interim_epoch025_full_guided/metrics_raw_full",
+    "clamp0": "runs/main_v1/interim_epoch025_full_guided/metrics_full",
+    "floor0p05": "runs/main_v1/interim_epoch025_full_guided/zero_floor/floor_0p05/metrics"
+  },
+  "expression_sha256": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+  "mse_scope_check_tolerance": 1e-07,
+  "source_sha256": {
+    "src/ocoot/mc_diagnostics.py": "b814931ed6ffb9c1ff08c2a6de133292184b9aba208914f75d3420e984b20981",
+    "scripts/diagnose_generation_mc.py": "cb25a9f151b8d6354dd80019722fe4db3ee470ac014591c1a47b65a5374c0a72",
+    "tests/test_mc_diagnostics.py": "2b4de10addc0e626fb3ada046da2a99f8443b21b49c31050535e96a4c50f8aaf",
+    "logs/mc_diagnostics_math_tests.log": "497a48836ebe8250efd6a2be95e6a182ee7675b4430e9b23644291fbc0f99632",
+    "src/ocoot/data.py": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+    "src/ocoot/model.py": "3f179f11cec383d8ce56a67241cdae6ef72d03ba0f9e4ea2ad4ca165bef5b2cf",
+    "src/ocoot/flow.py": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+    "src/ocoot/postprocess.py": "aa58626be164e589c9d035d2131db3a580e0d717068ed1379fbcf5c4fb9decd9",
+    "src/ocoot/runtime.py": "b58155c1b4f85c0b8bbfdfdb084374287f4f7ac8a13ac76d923c3989c250b6db",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18",
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/cell_eval/metrics/_anndata.py": "7311472b9bdc3a787714949d88564dc57afecd69588b975411ada41415a2f71d",
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/lib/python3.11/site-packages/cell_eval/_types/_anndata.py": "66f2414130a479f8c0b33c420618871ff18406fade42ed9cd0afdcc3813d9fef"
+  },
+  "input_sha256": {
+    "runs/main_v1/interim_epoch025_full_guided/stitched_raw.npy": "5fa141dafe6d4730b2ae988c62b22aea1a1c4b255475280abe93afe83e569ecc",
+    "runs/main_v1/interim_epoch025_full_guided/stitched_predictions.npy": "ba2ac516a0e7d09de5d51420597e8b4a0f76cd37824eb20079aed0803e9f35da",
+    "runs/main_v1/interim_epoch025_full_guided/indices.npy": "a556f82115bda8c0f48a882c31739e03d13296cf385530161e1f73e0b2c12c34",
+    "runs/main_v1/interim_epoch025_full_guided/completed.json": "4690645ea29354f1213ba6aeec61ef46dbf7e9b73366cb3f72873bd9b3228f5a",
+    "runs/main_v1/interim_epoch025_full_guided/extension_config.json": "8b2393fa42ca5fb9578ee036bacdec984e6567d19027a137be2fca221f66024c",
+    "data/processed/metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "data/processed/vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7",
+    "runs/main_v1/interim_epoch025_full_guided/metrics_raw_full/summary.json": "d65a03cac2cf129b81f30f65902a9fe1d0b2f052c5631c51b02b5e625a764035",
+    "runs/main_v1/interim_epoch025_full_guided/metrics_raw_full/results.csv": "7bbcb682c3ebefec1cd35798433832b308e69d8f50846a107ea0f945caa4eb03",
+    "runs/main_v1/interim_epoch025_full_guided/metrics_full/summary.json": "70908a6888c200a1c79abdd944e32ed0af5afa3ed54acd97bb1b4b14d9d09dd8",
+    "runs/main_v1/interim_epoch025_full_guided/metrics_full/results.csv": "c3b380c9bb341943ac03f63df527dd286f944076c810b7f0320890d0ccd414f1",
+    "runs/main_v1/interim_epoch025_full_guided/zero_floor/floor_0p05/metrics/summary.json": "bdd5b4165584bf0b088598a3691b19d62555106c38b8a881e5baf41c0c49c2ff",
+    "runs/main_v1/interim_epoch025_full_guided/zero_floor/floor_0p05/metrics/results.csv": "5ae33090b0f0ab3324b04b16c3867eb7154e75db6a18fcd81afb1f7a9cca6546"
+  },
+  "assumptions": [
+    "Hold the trained generator and the realized perturbation/batch/protocol composition fixed; individual generated cells use independent Gaussian noise, and genes may be correlated.",
+    "Primary strata are biological batch crossed with the original prefixB16/extraB32 RNG segment. Repeated groups have iid conditional draws; their n_b*S_b^2/n^2 contributions are unbiased for those groups.",
+    "Singleton variances are unidentifiable from this one saved population. The pooled proxy extrapolates only under a common average within-stratum variance assumption. No claim that this assumption holds is made."
+  ],
+  "interpretation_limits": [
+    "Keep official all2000-gene MSE and its original60-condition denominator. Any estimator subset is compared with the observed MSE of exactly the same conditions, with coverage reported.",
+    "Do not interpret a single-population estimated contribution as a deterministic lower bound, causal error fraction, corrected benchmark score, or independent model-seed uncertainty.",
+    "Observed MSE minus the pooled proxy is an assumption-dependent diagnostic and may be negative in a realized sample; do not clip it to zero.",
+    "Real validation pseudobulks are held fixed; this does not remove their sampling noise. The old stitched mixedRNG cache remains a diagnostic, not a formal refinement.",
+    "No new samples, fitted correction, official metric changes, hyperparameter adoption or test access."
+  ],
+  "mathematical_CPU_checks_passed": 4,
+  "cpu_only": true,
+  "new_generated_samples": 0,
+  "model_or_training_changed": false,
+  "test_access": false
+}

@@ -1,0 +1,23 @@
+{"time": "2026-11-17T19:00:11+08:00", "completed": 8, "total": 480}
+{"time": "2026-11-17T19:01:23+08:00", "completed": 88, "total": 480}
+{"time": "2026-11-17T19:02:37+08:00", "completed": 168, "total": 480}
+{"time": "2026-11-17T19:03:51+08:00", "completed": 248, "total": 480}
+{"time": "2026-11-17T19:05:04+08:00", "completed": 328, "total": 480}
+{"time": "2026-11-17T19:06:16+08:00", "completed": 408, "total": 480}
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3270.84it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 1261.57it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 3561.59it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 69692.12it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 77030.38it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 73177.74it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 76771.89it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 64002.60it/s]
+Iterating over perturbations...:   0%|          | 0/60 [00:00<?, ?it/s]Iterating over perturbations...: 100%|██████████| 60/60 [00:00<00:00, 72986.73it/s]
+{
+  "PDCorr": 0.12425128307659179,
+  "MSE": 0.05000851613779863,
+  "MAE": 0.14807482088605564,
+  "PDS_L1": 0.5158333333333333,
+  "PDS_L2": 0.5194444444444445,
+  "PDS_cos": 0.5086111111111111
+}

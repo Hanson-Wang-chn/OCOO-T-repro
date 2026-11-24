@@ -1,0 +1,44 @@
+{
+  "time": "2026-11-20T17:31:43+08:00",
+  "stage": "completed_review_required",
+  "step": 29068,
+  "exports": {
+    "reference": {
+      "source_checkpoint_sha256": "4cab554940edfea758a933df67f32f664f85f637c5be509719dd2d67ae8d21d3",
+      "export_sha256": "a98f0fc4171d481f19f698b5c260b23d1274de5588435261ddb1b41d62f4af3d",
+      "step": 29068,
+      "weights": "ema_0.9996"
+    },
+    "candidate": {
+      "source_checkpoint_sha256": "22f96a66588b51645524f9389586afeb86b10a9efc0dda5bfa20808ccc9a9626",
+      "export_sha256": "ae1ae3bc9dea9b0650a9946a5e60d952e86d3ff7883b0f6da3e90929ea17c4ea",
+      "step": 29068,
+      "weights": "ema_0.9996"
+    }
+  },
+  "case_sha256": {
+    "reference": {
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "prediction.npy": "1ce6a326f35a4e7e39f5bbc7584e69fc6982fb6579b4efc19badac2c2a0772c5",
+      "prediction_raw.npy": "fda7dad340b88d3ebdf2bdee2a28a2afcd93edd5211c6abd09199c9664477113",
+      "generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+      "evaluation_config.json": "67f54299645cbfdda2b1e47539303e465d76a0a816778e16df437b5f0c30f7b0",
+      "metrics/summary.json": "eeccba572209885e25d149cbe8013ac186dcea11ed09aa8161cea41d7e633452",
+      "metrics_raw/summary.json": "4a6b01b36f6abdd76dc4493df27195ba03a665624cef572f70e55792bd6904d0",
+      "zero_floor/comparison.json": "8dbd0ba03160c502c35a785a801122433458bee448c957e3fd50d7378649393b"
+    },
+    "candidate": {
+      "indices.npy": "a5af8efa549011282e8114623b326fbba3328cc8b9054b329f928490542ef035",
+      "prediction.npy": "a9a61c70b27bacd3267087815f5701421ca71ab87176fb1e19ed32e5901f65b7",
+      "prediction_raw.npy": "d259c1772b7baa08b2a3b40ef2e249bc3a540792920621d1aff52b462e01d476",
+      "generation_state.json": "fcd7c8e44315ee76547492f251718459051176e0b317d39d2c4396e62a7b2ad0",
+      "evaluation_config.json": "2e7e5f6c634b1ef14f699cc74ea7d569510620a142efd3a64cb9793801aa4b25",
+      "metrics/summary.json": "30e33e2403ef551ccd8ba2b2d0914b74fb1bd78108de15759b3bd50035fc7f1c",
+      "metrics_raw/summary.json": "61a248c6172e061dd73f4593f6226ddaa5fc2fff1264c0881f940847e9dd4893",
+      "zero_floor/comparison.json": "4e9c047bbcc30ae69892ec5c8435b727fcbbe1505df9ec7e65b9ce6a1bec1b86"
+    }
+  },
+  "automatic_main_switch": false,
+  "formal_selection_changed": false,
+  "test_access": false
+}

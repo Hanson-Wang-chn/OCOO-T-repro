@@ -1,0 +1,16 @@
+{
+  "time": "2026-11-18T13:20:18+08:00",
+  "status": "keep_main_configuration",
+  "selected_pilot": "sigma_1.0_cellinit_1.0",
+  "noise_std": 1.0,
+  "time_scale": 1.0,
+  "cell_init_std": 1.0,
+  "main_config": "configs/main_selected.yaml",
+  "main_config_sha256": "e51d2cc9b8bb4ddc8e9dda24861f675b6a37a2486b7faffc69ed71e7f2342b52",
+  "completed_grid": true,
+  "analysis": "runs/pilot_grid_complete/summary.json",
+  "analysis_sha256": "660eb80503e04cf80ea8a528ce02f9f3b99d7089aeaeca1a91cb7596302b95fe",
+  "basis": "Original selected pilot has the highest raw and nonnegative PDCorr+mean(PDS) point estimates across the completed 2x2x2 grid. Neither additional time-scale combination shows a reliable composite improvement; inspect all nine metrics and variance rather than one DE score.",
+  "limitations": "Matched 384-update subset pilots, one training seed, raw weights, fixed validation noise. Perturbation bootstrap is not training-seed uncertainty or proof of mature full-model superiority.",
+  "action": "Continue the existing full-data run unchanged; no restart and no test evaluation yet."
+}

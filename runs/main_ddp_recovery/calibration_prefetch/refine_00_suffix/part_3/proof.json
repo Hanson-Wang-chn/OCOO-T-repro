@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-23T03:56:22+08:00",
+  "range": [
+    4032,
+    4825
+  ],
+  "options": {
+    "noise_std": 1.0,
+    "batch_size": 32,
+    "steps": 50,
+    "guidance": 2.0,
+    "cfg_min": 0.0,
+    "cfg_max": 1.0,
+    "clamp": false,
+    "seed": 8274
+  },
+  "bitwise_prefix_batch_match": true,
+  "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "files": {
+    "indices.npy": "77c0d12176b8c08936bb6abae904869e6a8f78ad6b33a0b830576fe74b7d3ce8",
+    "prediction.npy": "c6f72933051abd4d5afb122beaab2cb78440f9fa2c6ce54024124540c9ff53a7",
+    "generation_state.json": "91a29a4e05678de9e2a21aeb3a245a2f46d2f69e3302e75333828e021d7a8399"
+  }
+}

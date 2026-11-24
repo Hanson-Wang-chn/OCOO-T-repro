@@ -1,0 +1,61 @@
+{
+  "time": "2026-11-23T03:34:20+08:00",
+  "raw_sha256": "bcf13b49716311384896faaea6d197ec535404551faad188b91bfa6d869298ca",
+  "test_access": false,
+  "candidates": [
+    {
+      "floor": 0.0,
+      "metrics": {
+        "PDCorr": 0.345872558777531,
+        "MSE": 0.01576547077856958,
+        "MAE": 0.07926623169332743,
+        "PDS_L1": 0.8205555555555555,
+        "PDS_L2": 0.8341666666666667,
+        "PDS_cos": 0.8652777777777776,
+        "DEOver": 0.1630823565619952,
+        "DEPrec": 0.10002491675226483,
+        "DirAgr": 0.8099960152488621
+      },
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": false,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "score": 1.1858725587775307
+    },
+    {
+      "floor": 0.05,
+      "metrics": {
+        "PDCorr": 0.34481935143315545,
+        "MSE": 0.01577923314956327,
+        "MAE": 0.07930293008685112,
+        "PDS_L1": 0.8216666666666668,
+        "PDS_L2": 0.8347222222222221,
+        "PDS_cos": 0.866388888888889,
+        "DEOver": 0.1916758643709358,
+        "DEPrec": 0.15860692786185143,
+        "DirAgr": 0.8125367063664427
+      },
+      "checks": {
+        "PDCorr": false,
+        "mean_PDS": true,
+        "MSE": true,
+        "MAE": true,
+        "DEOver": true,
+        "DEPrec": false,
+        "DirAgr": true,
+        "PDS_L1": true,
+        "PDS_L2": true,
+        "PDS_cos": true
+      },
+      "score": 1.1857452773590813
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "time": "2026-11-23T04:01:34+08:00",
+  "cases": {
+    "omit_early": [
+      2.0,
+      0.1,
+      1.0
+    ],
+    "omit_late": [
+      2.0,
+      0.0,
+      0.9
+    ],
+    "weaker": [
+      1.75,
+      0.0,
+      1.0
+    ],
+    "stronger": [
+      2.25,
+      0.0,
+      1.0
+    ]
+  },
+  "references": {
+    "full_window": "screen_full_interval",
+    "partial_window": "screen_04"
+  },
+  "checkpoint_sha256": "688defb16aa3354d0a37fd385446a31c8fce1bb07fd0bb5d16ed6d5a64bb1fb3",
+  "failed_review_sha256": "3d3cb90e537647cb8f25fdb725ec157c6dc59552b4e118887c4d50b545dc6d21",
+  "calibration_config_sha256": "55045b962ef23882a3c29830fddb9d427836ddfd7148b89ed539b5860e6342cd",
+  "seed": 4242,
+  "cells_per_case": 960,
+  "cap": 16,
+  "batch_size": 32,
+  "steps": 50,
+  "floor": 0.05,
+  "bootstrap": 2000,
+  "bootstrap_seed": 9232,
+  "scope": "E45 fixed checkpoint. Control early/late endpoints one at a time at w2, and bracket w2 at the full interval. Match the original cap16 screen exactly. Primary diagnosis is precision with paired DE and pseudobulk metrics. No fitting, training, or formal test access.",
+  "full_followup_rule": "Prefer one higher-precision candidate, with observed DEPrec gain at least .008 and MSE/MAE increases under .002/.005, PDCorr drop under .01, DEOver drop under .01, and no PDS drop beyond .02, relative to the full-window baseline. Review paired intervals before spending the full follow-up budget. These screen limits do not replace the original full-validation checks.",
+  "test_access": false
+}

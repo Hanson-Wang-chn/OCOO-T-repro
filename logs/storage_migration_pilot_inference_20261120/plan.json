@@ -1,0 +1,161 @@
+{
+  "time": "2026-11-20T13:28:13+08:00",
+  "reason": "Maintain room for active full checkpoints and forthcoming full evaluation. Only two immutable artifacts in explicitly finished subset pilots; active main and candidate paths untouched.",
+  "artifacts": [
+    {
+      "path": "runs/pilot_sigma_1.0/best_denoise.pt",
+      "bytes": 628005117,
+      "hardlinks": 1,
+      "mtime_ns": 1794851865820965110
+    },
+    {
+      "path": "runs/pilot_sigma_1.0/final_ema.pt",
+      "bytes": 628005117,
+      "hardlinks": 1,
+      "mtime_ns": 1794852276802579443
+    },
+    {
+      "path": "runs/pilot_sigma_0.5/best_denoise.pt",
+      "bytes": 628005117,
+      "hardlinks": 1,
+      "mtime_ns": 1794855375891582747
+    },
+    {
+      "path": "runs/pilot_sigma_0.5/final_ema.pt",
+      "bytes": 628005117,
+      "hardlinks": 1,
+      "mtime_ns": 1794855785384322970
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794858846941180528
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794859255562903448
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794862291222689193
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794862691857340625
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_cellinit_1.0/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794865743719220991
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_cellinit_1.0/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794866148283933320
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_cellinit_1.0/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794869567525645067
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_cellinit_1.0/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794869966032369829
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794970764477742538
+    },
+    {
+      "path": "runs/pilot_sigma_1.0_t1000_cellinit_1.0/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794971576072897398
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794978141614191992
+    },
+    {
+      "path": "runs/pilot_sigma_0.5_t1000_cellinit_1.0/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1794978960865691236
+    },
+    {
+      "path": "runs/pilot_pert_projection_separate/best_denoise.pt",
+      "bytes": 643737593,
+      "hardlinks": 1,
+      "mtime_ns": 1795022995496742142
+    },
+    {
+      "path": "runs/pilot_pert_projection_separate/final_ema.pt",
+      "bytes": 643737593,
+      "hardlinks": 1,
+      "mtime_ns": 1795023834512381360
+    },
+    {
+      "path": "runs/pilot_xpred_vloss/best_denoise.pt",
+      "bytes": 628005245,
+      "hardlinks": 1,
+      "mtime_ns": 1795032643413947236
+    },
+    {
+      "path": "runs/pilot_xpred_vloss/final_ema.pt",
+      "bytes": 628005245,
+      "hardlinks": 1,
+      "mtime_ns": 1795033479770422758
+    },
+    {
+      "path": "runs/pilot_value_fanin/best_denoise.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1795040232697399784
+    },
+    {
+      "path": "runs/pilot_value_fanin/final_ema.pt",
+      "bytes": 628005181,
+      "hardlinks": 1,
+      "mtime_ns": 1795041072923522898
+    }
+  ],
+  "source_sha256": "e975f39d4213d518856b98c3ee7098d24d953e0fffe224bfef68030a931fc4e5",
+  "tests": "logs/tests_finished_inference_archival.log",
+  "cpu_tests": 4,
+  "free_GiB_before": 14.340629577636719,
+  "command": [
+    "/home/dataset-assist-0/whs/conda-env/ocoo-t/bin/python",
+    "scripts/archive_finished_pilot_inference.py",
+    "runs/pilot_sigma_1.0",
+    "runs/pilot_sigma_0.5",
+    "runs/pilot_sigma_1.0_t1000",
+    "runs/pilot_sigma_0.5_t1000",
+    "runs/pilot_sigma_1.0_cellinit_1.0",
+    "runs/pilot_sigma_0.5_cellinit_1.0",
+    "runs/pilot_sigma_1.0_t1000_cellinit_1.0",
+    "runs/pilot_sigma_0.5_t1000_cellinit_1.0",
+    "runs/pilot_pert_projection_separate",
+    "runs/pilot_xpred_vloss",
+    "runs/pilot_value_fanin",
+    "--destination",
+    "/home/dataset-assist-0/whs/ocoo-t-artifacts/completed-pilot-inference",
+    "--audit-dir",
+    "logs/storage_migration_pilot_inference_20261120"
+  ]
+}

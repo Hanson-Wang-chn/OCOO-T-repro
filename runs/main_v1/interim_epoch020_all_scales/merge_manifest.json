@@ -1,0 +1,29 @@
+{
+  "time": "2026-11-19T19:30:40+08:00",
+  "stage": "completed",
+  "fingerprint": {
+    "source_reviews": {
+      "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_review": {
+        "review_config.json": "9b44647edcd76a40e9d93481c8651f000213dd794bdb9debc2eb780f67e645f4",
+        "comparison.json": "610a6131a28e3130d439a4965c165c2bfe9979270bc5547eaccd9942ad246b52"
+      },
+      "/home/whs/ocoo-t/runs/main_v1/interim_epoch020_guidance_boundary": {
+        "review_config.json": "08c39fae5d415372a302f8c536d7345d1d398ece000f98f2ed608bbf3acf0654",
+        "comparison.json": "a50a980e0aa2beaf6e2d5d39bb03f6a859b9f39467c9e6920baf8c1afd6a0808"
+      }
+    },
+    "script_sha256": "8c1606c832d0eee70b6ea8115bb28bb7ca4deeb878bfbc6ce66fa5ddb84bc036"
+  },
+  "cases": [
+    "ema_none",
+    "ema_cfg_0p6666666667",
+    "ema_cfg_1",
+    "ema_cfg_1p5",
+    "ema_cfg_2",
+    "ema_cfg_2p5",
+    "ema_cfg_3"
+  ],
+  "new_generated_cells": 0,
+  "source_mutations": false,
+  "test_access": false
+}

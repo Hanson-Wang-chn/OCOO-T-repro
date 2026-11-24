@@ -1,0 +1,34 @@
+{
+  "cap_16_seed_0": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  },
+  "cap_16_seed_1": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  },
+  "cap_32_seed_0": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  },
+  "cap_32_seed_1": {
+    "PDCorr": 0.0,
+    "MSE": 0.0,
+    "MAE": 0.0,
+    "PDS_L1": 0.0,
+    "PDS_L2": 0.0,
+    "PDS_cos": 0.0
+  }
+}

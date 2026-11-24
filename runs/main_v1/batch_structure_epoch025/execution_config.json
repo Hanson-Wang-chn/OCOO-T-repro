@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-20T18:38:22+08:00",
+  "plan_sha256": "08e92d610962c512ad3e57fcbef7b256422c59cfc03c2147777ddad296d84845",
+  "script_sha256": "138e831849bcd82a52691ebc0180617210b04e6b94b19827d2c096317e2b0234",
+  "math_verification_passed": true,
+  "math_verification_sha256": "74ec07fc52a6abbd7701c70c5a83a39019f39f95cfe2b907d7cc1e6a50f110cb",
+  "math_test_source_sha256": "c96aee7592e4d88a1fd89d411dc2fdfdb74eb6379236cb260074f07d068d3fb5",
+  "source_archive_sha256": "3c68573ce2ee878601e2c1be9f48f15e065de3613b5bfdfb4e875e144bfc85de",
+  "actual_expression_analysis_started": false
+}

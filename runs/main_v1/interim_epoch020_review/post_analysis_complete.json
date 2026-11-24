@@ -1,0 +1,10 @@
+{
+  "time": "2026-11-19T17:50:57+08:00",
+  "stage": "completed_review_required",
+  "paired_analysis": "runs/main_v1/interim_epoch020_review/paired_differences.json",
+  "context": "runs/main_v1/interim_epoch020_review/context/context_diagnostics.json",
+  "script_sha256": "1132e3df62bd77c69580accedbc357bd1bc26f24bf7bd406cda61e51ae8644ae",
+  "test_access": false,
+  "main_training_changed": false,
+  "formal_settings_selected": false
+}

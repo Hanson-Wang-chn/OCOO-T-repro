@@ -1,0 +1,9 @@
+{
+  "time": "2026-11-21T22:51:21+08:00",
+  "publication_interval_seconds": 1384.130867242813,
+  "previous_backup": "logs/server_shutdown_20261121/README_before_shutdown.md",
+  "README_sha256": "f549d21b682b16ab85ecd978d0ba75569ed9668a0ecd15f2de4e73315687cb9d",
+  "reason": "User-requested safe server shutdown and migration; stale pending LIVE is archived instead of reporting running jobs.",
+  "final_fact_check_time": "2026-11-21T22:54:01+08:00",
+  "correction": "Independent CPU verification completed22:47:51; timeline range corrected to22:48."
+}

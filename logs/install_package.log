@@ -1,0 +1,17 @@
+Obtaining file:///home/whs/ocoo-t
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: ocoot-reproduction
+  Building editable for ocoot-reproduction (pyproject.toml): started
+  Building editable for ocoot-reproduction (pyproject.toml): finished with status 'done'
+  Created wheel for ocoot-reproduction: filename=ocoot_reproduction-0.1.0-0.editable-py3-none-any.whl size=1365 sha256=0c0e30c42ba47624925f12620c1a801dc5a01a156b9fa3d4cbb4dbbaa21e00ec
+  Stored in directory: /tmp/pip-ephem-wheel-cache-pm9r3n26/wheels/ab/b5/f8/19f5ec2d10e59def65a8b249a97da5c384d1058275b794674f
+Successfully built ocoot-reproduction
+Installing collected packages: ocoot-reproduction
+Successfully installed ocoot-reproduction-0.1.0

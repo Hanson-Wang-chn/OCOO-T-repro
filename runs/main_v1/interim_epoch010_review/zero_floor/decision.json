@@ -1,0 +1,18 @@
+{
+  "time": "2026-11-18T07:28:36+08:00",
+  "adopted": false,
+  "retained_postprocess": "clamp_min_0",
+  "reason": "Increasing the zero fraction did not resolve DE quality. Floors 0.05/0.07 lowered DE overlap and precision and worsened expression error; 0.01/0.02 gave only negligible precision changes while reducing overlap. No evidence to add this unreported postprocessing parameter.",
+  "baseline_metrics": {
+    "PDCorr": 0.2801946957440426,
+    "MSE": 0.009807387397934993,
+    "MAE": 0.06795263433208068,
+    "PDS_L1": 0.5983333333333333,
+    "PDS_L2": 0.6041666666666666,
+    "PDS_cos": 0.5772222222222222,
+    "DEOver": 0.0814930382049339,
+    "DEPrec": 0.06879187157793391,
+    "DirAgr": 0.6601766350018052
+  },
+  "next_step": "Await paired literal-CFG results; continue the unchanged full-data training."
+}
