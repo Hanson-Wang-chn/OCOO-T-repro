@@ -79,6 +79,7 @@ def calibrate(a, scales, ranks):
                     'source_sha256':{str(path):file_sha256(path) for path in [Path(__file__),
                                       Path('src/ocoot/model.py'),Path('src/ocoot/flow.py'),
                                       Path('src/ocoot/evaluate.py'),Path('src/ocoot/data.py'),
+                                      Path('src/ocoot/postprocess.py'),
                                       Path('src/ocoot/runtime.py'),Path('environment.lock.txt')]},
                     'conditional_only_role':'diagnostic reference; excluded from formal refinement and selection',
                     'metric_protocol':'all nine paper metrics on nonnegative predictions; six array diagnostics on raw predictions',
@@ -157,7 +158,7 @@ def calibrate(a, scales, ranks):
     if a.mse_weight:
         selected['mse_weight'] = a.mse_weight
     write_json_atomic(out/'selected.json',selected)
-    readme_event(f'完成验证集采样校准；设置已锁定于 `{out}/selected.json`，尚未据此计算测试结果。')
+    readme_event(f'完成验证集采样校准。两组全量候选和校准选择见 `{out}/selected.json` 与 `{out}/all_results.json`。')
     print(json.dumps(selected,indent=2),flush=True)
 
 

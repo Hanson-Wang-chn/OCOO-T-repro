@@ -42,13 +42,14 @@ def test_resume_pending_generation(tmp_path,monkeypatch,epochs):
     monkeypatch.setattr(evaluation,'update_readme_live',lambda *a,**k:None)
     config={'seed':42,'data_dir':'memory','run_dir':str(tmp_path),
             'model':{'dim':16,'depth':2,'heads':2,'value_hidden':16,'time_dim':8,
-                     'context_tokens':2,'context_start':1,'grad_checkpoint':False},
+                     'context_tokens':2,'context_start':1,'grad_checkpoint':False,
+                     'null_condition_init':'training_mean'},
             'training':{'epochs':epochs,'warmup_epochs':1,'micro_batch':2,'effective_batch':4,
                         'lr':1e-4,'betas':[.9,.95],'weight_decay':0.,'ema_decays':[.9999,.9996],
                         'noise_std':1.,'p_mean':-.8,'p_std':.8,'compile':False,'train_subset':None,
                         'checkpoint_steps':1,'log_steps':1,'val_cells':2,'val_interval_steps':1,
                         'val_generation_epochs':1,'val_generation_cap':1,
-                        'val_generation_steps':50,'val_generation_batch':1},
+                        'val_generation_steps':50,'val_generation_batch':1,'generation_mse_weight':10.},
             'sampling':{'steps':50,'guidance':None,'cfg_min':.1,'cfg_max':.9,'clamp':False}}
     original_sample=evaluation.sample
     calls=[]
@@ -76,6 +77,11 @@ def test_resume_pending_generation(tmp_path,monkeypatch,epochs):
     assert len(resumed_calls)==1+2*(epochs-1)  # completed sample is never repeated
     np.testing.assert_array_equal(np.load(tmp_path/'validation_epoch_001/prediction.npy')[0],first_prediction)
     assert (tmp_path/'best_generation.pt').exists() and (tmp_path/'finished.json').exists()
+    selected = torch.load(tmp_path/'best_generation.pt', map_location='cpu', weights_only=False)
+    metrics = selected['metrics']
+    score = metrics['PDCorr'] + np.mean([metrics[key] for key in ['PDS_L1', 'PDS_L2', 'PDS_cos']]) - 10 * metrics['MSE']
+    assert selected['selection_score'] == pytest.approx(score)
+    assert final['best_generation'] == selected['selection_score']
     events=[json.loads(x) for x in (tmp_path/'events.jsonl').read_text().splitlines()]
     assert [e['step'] for e in events if e['event']=='train']==list(range(1,2*epochs+1))
     if epochs==1:

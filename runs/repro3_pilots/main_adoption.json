@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-25T04:47:53+08:00",
+  "selected": "sigma_075",
+  "noise_std": 0.75,
+  "null_condition_init": "zero",
+  "started_from_scratch": true,
+  "plan_sha256": "3e517a08337fec84fb7c346066efba305f86cf9282f3fd3a6cfdf2afc705056c",
+  "pilot_summary_sha256": "da0066b969c523c2736a6114f339afc8d0404ed2b533f83e772e2c4c3ddca038",
+  "config": "configs/repro3_main.yaml",
+  "config_sha256": "6a68024c477201b7c6d80248969a94c13dcb7ee251dc027772ac79c43be5e3e6",
+  "postprocess_plan": "configs/repro3_postprocess.json",
+  "postprocess_plan_sha256": "b216094fad262c1bb420fc8f84ba3d309c89466d238454becfabfa730d0100c8"
+}

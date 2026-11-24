@@ -40,6 +40,7 @@ def main():
     rows = []
     training = {}
     source_hashes = {}
+    matched_source = None
     weights = np.array([{'PDCorr': 1., 'PDS_L1': 1/3, 'PDS_L2': 1/3, 'PDS_cos': 1/3,
                          'MSE': -plan['mse_weight']}.get(name, 0.) for name in NAMES])
 
@@ -52,6 +53,13 @@ def main():
         if (file_sha256(case['config']) != case['config_sha256'] or config != expected
                 or yaml.safe_load((run / 'config.yaml').read_text()) != expected):
             raise ValueError(f'Unregistered settings for {name}')
+        manifest = json.loads((run / 'source_manifest_step_0.json').read_text())
+        source = {path: digest for path, digest in manifest.items() if path.startswith('src/ocoot/')
+                  or path in ('scripts/train.py', 'environment.lock.txt')}
+        if matched_source is None:
+            matched_source = source
+        if source != matched_source:
+            raise ValueError(f'Training source differs for {name}')
         np.testing.assert_array_equal(np.load(run / 'train_indices.npy'), train_indices)
         generation = run / f'validation_epoch_{plan["epochs"]:03d}'
         np.testing.assert_array_equal(np.load(generation / 'indices.npy'), validation_indices)
@@ -116,7 +124,8 @@ def main():
     feasible = [row for row in rows if row['floor'] == 0 and row['case'] in checks and all(checks[row['case']].values())]
     selected = max(feasible, key=lambda row: row['delta_score'])['case'] if feasible else 'control'
     report = {'time': timestamp(), 'plan_sha256': file_sha256(plan_path), 'selected': selected,
-              'candidate_checks': checks, 'training': training, 'rows': rows, 'artifact_sha256': source_hashes,
+              'candidate_checks': checks, 'training': training, 'rows': rows,
+              'matched_training_source_sha256': matched_source, 'artifact_sha256': source_hashes,
               'bootstrap_scope': 'Paired over validation perturbations, with one training and generation seed.'}
     write_json_atomic(root / 'summary.json', report)
     pd.DataFrame(rows).to_csv(root / 'summary.csv', index=False)

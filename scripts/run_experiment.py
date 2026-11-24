@@ -96,6 +96,8 @@ def main():
                 if a.compare_windows:args+=['--compare-windows']
                 execute(args,parallel=True)
             selection_file=calibration/'selected.json'
+            if json.loads(selection_file.read_text()).get('mse_weight', 0.0) != a.calibration_mse_weight:
+                raise ValueError('The requested MSE weight differs from the completed calibration')
             if a.postprocess_plan:
                 postprocessing=calibration/'postprocessing'
                 state('selecting_full_validation_postprocess')

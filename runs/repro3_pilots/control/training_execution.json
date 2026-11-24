@@ -1,0 +1,39 @@
+{
+  "time": "2026-11-25T01:30:49+08:00",
+  "start_step": 0,
+  "workers": [
+    {
+      "rank": 0,
+      "pid": 510110,
+      "start_tick": 538618351
+    },
+    {
+      "rank": 1,
+      "pid": 510111,
+      "start_tick": 538618351
+    },
+    {
+      "rank": 2,
+      "pid": 510112,
+      "start_tick": 538618351
+    },
+    {
+      "rank": 3,
+      "pid": 510113,
+      "start_tick": 538618351
+    }
+  ],
+  "cuda_visible_devices": "0,1,2,3",
+  "world_size": 4,
+  "local_micro_batch": 16,
+  "accumulation": 8,
+  "accumulation_by_rank": [
+    8,
+    8,
+    8,
+    8
+  ],
+  "global_batch": 512,
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "dynamo_ddp_optimizer": false
+}
