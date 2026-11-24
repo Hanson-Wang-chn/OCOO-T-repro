@@ -16,6 +16,7 @@ import yaml
 from .data import BenchmarkData
 from .distributed import TrainingRanks, microbatch_shard
 from .flow import flow_batch
+from .postprocess import primary_score
 from .runtime import DualEMA, atomic_save, exclusive_run, log_event, readme_event, timestamp, update_readme_live
 
 
@@ -78,6 +79,9 @@ def train(config, resume=True, *, local_micro_batch=None, benchmark_steps=None, 
 def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, preserve_steps,
                   resume_from, max_ema_endpoint_relative_gap):
     tr=config['training'];run=Path(config['run_dir'])
+    generation_mse_weight = tr.get('generation_mse_weight', 0.0)
+    if not math.isfinite(generation_mse_weight) or generation_mse_weight < 0:
+        raise ValueError('generation_mse_weight must be nonnegative and finite')
     benchmarking = benchmark_steps is not None
     primary = ranks.primary
     effective = tr['effective_batch']
@@ -111,7 +115,11 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         indices=np.sort(np.random.default_rng(config['seed']).choice(indices,tr['train_subset'],replace=False))
     if primary and not benchmarking:
         np.save(run/'train_indices.npy',indices)
-    model=data.build_model(config['model']).to(ranks.device).train()
+    restoring = resume and (resume_from is not None or checkpoint_path.exists())
+    model = data.build_model(config['model'])
+    if not restoring and model.cfg.null_condition_init == 'training_mean':
+        model.initialize_null_conditions(*(torch.from_numpy(data.meta[k][indices]) for k in ('pert', 'cell', 'batch')))
+    model = model.to(ranks.device).train()
     opt=torch.optim.AdamW(model.parameters(),lr=tr['lr'],betas=tuple(tr['betas']),weight_decay=tr['weight_decay'],fused=True)
     ema=DualEMA(model,tuple(tr['ema_decays'])) if primary else None
     steps_per_epoch=len(indices)//effective
@@ -121,7 +129,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
     early_reference=-float('inf');early_reference_epoch=0
     pending_generation_epoch=None
     saved_config=run/'config.yaml'
-    if resume and (resume_from is not None or checkpoint_path.exists()):
+    if restoring:
         checkpoint=torch.load(checkpoint_path,map_location='cpu',mmap=True,weights_only=False)
         expected_config = checkpoint['config']
         if resume_from is not None:
@@ -265,15 +273,21 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                         weights='ema_0.9996' if use_ema else 'raw_pilot_only'
                         artifact={'config':config,'model':model.state_dict(),'step':step,'weights':weights,'metrics':metrics}
                         atomic_save({**artifact,'criterion':'periodic_validation'},val_out/'model.pt')
-                        score=metrics['PDCorr']+sum(metrics[k] for k in ['PDS_L1','PDS_L2','PDS_cos'])/3
+                        score = primary_score(metrics) - generation_mse_weight * metrics['MSE']
+                        if generation_mse_weight:
+                            artifact.update(generation_mse_weight=generation_mse_weight, selection_score=score)
                         if score>best_generation:
                             best_generation=score;best_generation_epoch=epoch_number
-                            atomic_save({**artifact,'criterion':'validation_PDCorr_plus_mean_PDS'},run/'best_generation.pt')
+                            criterion = 'validation_PDCorr_plus_mean_PDS'
+                            if generation_mse_weight:
+                                criterion += '_minus_weighted_MSE'
+                            atomic_save({**artifact,'criterion':criterion},run/'best_generation.pt')
                         if score>early_reference+tr.get('early_stop_min_delta',0.002):
                             early_reference=score;early_reference_epoch=epoch_number
                 model.train()
                 if primary:
-                    log_event(run/'events.jsonl',{'event':'validation_generation','epoch':epoch_number,'step':step,**metrics})
+                    log_event(run/'events.jsonl',{'event':'validation_generation','epoch':epoch_number,'step':step,
+                                                  'selection_score':score,**metrics})
                     weight_label='EMA=0.9996' if use_ema else '原始权重诊断'
                     readme_event(f'`{run}` 第 {epoch_number} 轮验证生成（{weight_label}，每扰动最多 {tr["val_generation_cap"]} 细胞，50 步）：PDCorr={metrics["PDCorr"]:.4f}，MSE={metrics["MSE"]:.5f}，PDS_L2={metrics["PDS_L2"]:.4f}。这是验证结果，非测试结果。')
                 last_log=time.monotonic();losses=[];log_cells=0

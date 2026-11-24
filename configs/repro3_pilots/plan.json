@@ -1,0 +1,45 @@
+{
+  "dataset": "Replogle–Nadig 2000 HVG official split",
+  "run_dir": "runs/repro3_pilots",
+  "seed": 42,
+  "epochs": 48,
+  "training_subset_cells": 16384,
+  "optimizer_updates": 1536,
+  "gpu_workers": 4,
+  "validation_cells": 960,
+  "validation_perturbations": 60,
+  "ema_decay": 0.9996,
+  "validation_generation_seed": 4242,
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "mse_weight": 10.0,
+  "bootstrap_seed": 9232,
+  "bootstrap_draws": 2000,
+  "adoption": {
+    "minimum_score_ci95_low_exclusive": 0.0,
+    "minimum_delta_pdcorr": -0.01,
+    "minimum_delta_deprec_at_0p05": -0.005
+  },
+  "cases": {
+    "control": {
+      "config": "configs/repro3_pilots/control.yaml",
+      "config_sha256": "6c46ffd802f611e400f1fb44ac59c8f469109ae8e84e60f71c0f64813eb3418d",
+      "noise_std": 1.0,
+      "null_condition_init": "zero"
+    },
+    "sigma_075": {
+      "config": "configs/repro3_pilots/sigma_075.yaml",
+      "config_sha256": "23d1ea0aac99ffc41437d14ea6fc53d90f4ebb1baad09196960eadd3f61bdff9",
+      "noise_std": 0.75,
+      "null_condition_init": "zero"
+    },
+    "null_training_mean": {
+      "config": "configs/repro3_pilots/null_training_mean.yaml",
+      "config_sha256": "94bad54abbb9d1eb78b964c70c4eaaa00752588f91765d447c57876a5b65c213",
+      "noise_std": 1.0,
+      "null_condition_init": "training_mean"
+    }
+  }
+}

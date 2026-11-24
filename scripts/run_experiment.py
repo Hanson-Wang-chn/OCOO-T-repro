@@ -42,6 +42,7 @@ def main():
     p.add_argument('--postprocess-plan',help='Opt-in registered full-validation zero-floor selection; default original clamp0 workflow')
     p.add_argument('--gpu-workers',type=int,default=1,help='Local GPU processes for training and generation')
     p.add_argument('--calibration-scales',help='Comma-separated positive guidance scales')
+    p.add_argument('--calibration-mse-weight',type=float,default=0.0,help='MSE penalty for calibration selection')
     p.add_argument('--compare-windows',action='store_true',help='Screen positive scales in both guidance windows')
     p.add_argument('--min-val-pdcorr',type=float,default=.35);p.add_argument('--min-val-pds',type=float,default=.75)
     p.add_argument('--min-val-pds-each',type=float,default=.70)
@@ -49,6 +50,8 @@ def main():
     p.add_argument('--min-val-deover',type=float,default=.18);p.add_argument('--min-val-deprec',type=float,default=.18)
     p.add_argument('--min-val-diragr',type=float,default=.70);a=p.parse_args()
     if a.gpu_workers < 1:p.error('gpu-workers must be positive')
+    if not math.isfinite(a.calibration_mse_weight) or a.calibration_mse_weight < 0:
+        p.error('calibration-mse-weight must be nonnegative and finite')
     cfg=yaml.safe_load(open(a.config));run=Path(cfg['run_dir']);run.mkdir(exist_ok=True,parents=True)
     if cfg['training'].get('train_subset'):raise ValueError('This workflow is for full-data experiments, not pilots')
     thresholds={key:getattr(a,key) for key in DEFAULT_THRESHOLDS}
@@ -89,6 +92,7 @@ def main():
                 state('calibrating_validation')
                 args=['scripts/calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(calibration)]
                 if a.calibration_scales:args+=['--scales',a.calibration_scales]
+                if a.calibration_mse_weight:args+=['--mse-weight',str(a.calibration_mse_weight)]
                 if a.compare_windows:args+=['--compare-windows']
                 execute(args,parallel=True)
             selection_file=calibration/'selected.json'

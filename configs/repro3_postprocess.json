@@ -1,0 +1,44 @@
+{
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "quality_thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "allow_validation_shortfall": true,
+  "selection": "If no case passes every original validation check, freeze the candidate with the smallest total relative shortfall. Report failed checks and all nine test metrics.",
+  "scope": "OCOO-T v2 Table 3 short-panel official full validation and a single frozen full test on Replogle\u2013Nadig.",
+  "calibration": {
+    "scales": [
+      1.125,
+      1.25,
+      1.375,
+      1.5,
+      1.625,
+      1.75
+    ],
+    "windows": [
+      [
+        0.1,
+        0.9
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "screen_cap": 16,
+    "full_refinements": 2,
+    "seed": 4242,
+    "batch_size": 32,
+    "mse_weight": 10.0
+  }
+}

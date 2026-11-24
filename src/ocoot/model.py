@@ -38,6 +38,7 @@ class ModelConfig:
     drop_batch_with_cell: bool = True  # Unspecified; preserve the original combined-drop default.
     position_scale: float = 1.0
     gene_proj_init_scale: float = 1.0
+    null_condition_init: str = "zero"
 
 
 def sincos(x, dim, max_period=10000):
@@ -120,6 +121,8 @@ class OCOOT(nn.Module):
             raise ValueError('prediction_eps must lie in (0,1)')
         if cfg.value_input_init not in ('xavier', 'fan_in'):
             raise ValueError('value_input_init must be xavier or fan_in')
+        if cfg.null_condition_init not in ('zero', 'training_mean'):
+            raise ValueError('null_condition_init must be zero or training_mean')
         for name in ('position_scale', 'gene_proj_init_scale'):
             scale = getattr(cfg, name)
             if not math.isfinite(scale) or scale <= 0:
@@ -180,17 +183,27 @@ class OCOOT(nn.Module):
             with torch.no_grad():
                 layer.weight.mul_(factor)
 
-    def gene_table(self):
-        return self.gene_proj(self.esm) + self.missing_identity.weight * self.missing[:, None]
+    def gene_table(self, projection=None):
+        projection = self.gene_proj if projection is None else projection
+        return projection(self.esm) + self.missing_identity.weight * self.missing[:, None]
+
+    @torch.no_grad()
+    def initialize_null_conditions(self, pert_ids, cell_ids, batch_ids):
+        """Start the dropped conditions at the cell-weighted training means."""
+        def population_mean(table, ids):
+            counts = torch.bincount(ids, minlength=len(table)).to(table)
+            return (counts / counts.sum()) @ table
+
+        self.null_pert.copy_(population_mean(self.gene_table(self.pert_proj), pert_ids))
+        cell_mean = population_mean(self.cell.weight, cell_ids)
+        if self.batch is not None and self.cfg.drop_batch_with_cell:
+            cell_mean += population_mean(self.batch.weight, batch_ids)
+        self.null_cell.copy_(cell_mean)
 
     def forward(self, z, t, pert, cell, batch, drop_pert=None, drop_cell=None):
         """Return velocity for both network prediction spaces (paper Eqs.5/6)."""
         table = self.gene_table()
-        if self.pert_proj is None:
-            p = table[pert]
-        else:
-            ptable = self.pert_proj(self.esm) + self.missing_identity.weight * self.missing[:, None]
-            p = ptable[pert]
+        p = (table if self.pert_proj is None else self.gene_table(self.pert_proj))[pert]
         c = self.cell(cell)
         batch_embedding = self.batch(batch) if self.batch is not None else None
         if batch_embedding is not None and self.cfg.drop_batch_with_cell:
