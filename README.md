@@ -4,7 +4,7 @@
 
 <!-- LIVE_TRAINING_START -->
 
-正在准备四卡小实验。长时间运行时约每 15 分钟更新一次。
+四卡对照已开始，训练子集 16,384 个细胞，全局 batch 512，计划 1,536 步。其后依次比较 σ=0.75 和训练均值 null。更新于 2026-11-25T01:33:31+08:00。
 
 <!-- LIVE_TRAINING_END -->
 
@@ -19,4 +19,14 @@
 
 Git 保留源代码、参数、文档、指标和可核验的运行清单。模型权重、原始数据、大数组和逐基因 DE 大表留在工作区。
 
+## 运行配置
+
+- 小实验启动命令为 `CUDA_VISIBLE_DEVICES=0,1,2,3 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TORCHINDUCTOR_COMPILE_THREADS=6 python scripts/run_repro3_pilots.py`。相同子集的 48 个小轮次每轮 32 步，warmup 为 160 步。完整设置和配置哈希见 [小实验登记](configs/repro3_pilots/plan.json)。
+- 独立 dropout 使两个温度无关的条件都被置空的概率为 1%。训练均值初始化直接使用训练细胞的标签频率，核对了两个初值与逐细胞计算的均值一致，且随机数流保持相同。 [模型代码](src/ocoot/model.py)
+- CFG 的密集范围参考第二轮完整验证。全时间区间的 `w=2` 在裁负下的 MSE 为 0.01734，`w=1.5` 为 0.01141。较小尺度与更密的网格能检验表达误差和扰动区分之间的取舍。 [第二轮校准](runs/repro2_main/calibration/all_results.json) · [第三轮评测登记](configs/repro3_postprocess.json)
+
 ## 实验记录
+
+- 2026-11-25T01:30:49+08:00：启动/续训 `runs/repro3_pilots/control`，从 step 0 接续，4 卡、每卡 microbatch=16、各卡累积 [8, 8, 8, 8] 次、全局 batch=512，完整配置 `runs/repro3_pilots/control/config.yaml`。
+
+- 2026-11-25T01:33:31+08:00：CPU 测试 98 项通过，3 项 CUDA 测试因隐藏 GPU 而跳过。共享和独立投影中的 null 初始化、旧模型一致性、CFG 有无 MSE 权重的筛选路径均已覆盖。

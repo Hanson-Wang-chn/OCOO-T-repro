@@ -4,6 +4,7 @@ import importlib.util
 from pathlib import Path
 import sys
 
+import pytest
 import torch
 
 from ocoot.model import ModelConfig, OCOOT
@@ -114,3 +115,27 @@ def test_input_scales_do_not_change_other_weights_or_the_initial_rng_stream():
     for key, value in original.state_dict().items():
         expected = value * .125 if key == 'position' else value * 2 if key == 'gene_proj.weight' else value
         torch.testing.assert_close(candidate.state_dict()[key], expected, rtol=0, atol=0)
+
+
+@pytest.mark.parametrize('projection,drop_batch', [('shared', True), ('separate', False)])
+@torch.no_grad()
+def test_null_initialization_uses_only_the_dropped_conditions(projection, drop_batch):
+    cfg = ModelConfig(**OPTIONS, pert_projection=projection, drop_batch_with_cell=drop_batch,
+                      null_condition_init='training_mean')
+    model = build(OCOOT, cfg)
+    if projection == 'separate':
+        model.pert_proj.weight.mul_(2)
+    before = {name: value.clone() for name, value in model.state_dict().items()}
+    pert = torch.tensor([1, 1, 1, 2, 4])
+    cell = torch.tensor([0, 0, 1, 1, 1])
+    batch = torch.tensor([0, 1, 1, 1, 2])
+    expected_pert = model.gene_table(model.pert_proj)[pert].mean(0)
+    expected_cell = model.cell(cell)
+    if drop_batch:
+        expected_cell += model.batch(batch)
+    rng = torch.get_rng_state()
+    model.initialize_null_conditions(pert, cell, batch)
+    assert torch.equal(torch.get_rng_state(), rng)
+    before.update(null_pert=expected_pert, null_cell=expected_cell.mean(0))
+    for name, value in model.state_dict().items():
+        torch.testing.assert_close(value, before[name])

@@ -10,7 +10,9 @@ import pytest
 
 @pytest.mark.parametrize('conditional_score', [.99, .50])
 @pytest.mark.parametrize('full_population_reverses_interval', [False, True])
-def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_path, monkeypatch, conditional_score, full_population_reverses_interval):
+@pytest.mark.parametrize('mse_weight', [0, 10])
+def test_calibration_keeps_conditional_reference_out_of_formal_selection(
+        tmp_path, monkeypatch, conditional_score, full_population_reverses_interval, mse_weight):
     namespace=runpy.run_path(str(Path(__file__).resolve().parents[1]/'scripts/calibrate.py'))
     main=namespace['main']
     module=main.__globals__
@@ -48,7 +50,8 @@ def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_pat
         value=conditional_score if w==10 else .80-.10*abs(w-1.5)+(.01 if low==0 and high==1 else 0)
         if full_population_reverses_interval and len(indices)==48 and low==0 and high==1:
             value-=.02
-        result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':.01,'MAE':.06}
+        mse = .005 if w == 1 else .02
+        result={'PDCorr':value,'PDS_L1':value,'PDS_L2':value,'PDS_cos':value,'MSE':mse,'MAE':.06}
         if de:
             result.update(DEOver=.2,DEPrec=.21,DirAgr=.75)
         return result
@@ -60,12 +63,13 @@ def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_pat
     monkeypatch.setitem(module,'generate',generate)
     monkeypatch.setitem(module,'official_metrics',metrics)
     monkeypatch.setitem(module,'readme_event',lambda *a,**kw:None)
-    monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),'--scales','.5,1,1.5'])
+    monkeypatch.setattr(sys,'argv',['calibrate.py','--checkpoint',str(checkpoint),'--outdir',str(out),
+                                  '--scales','.5,1,1.5','--mse-weight',str(mse_weight)])
     main()
 
     selected=json.loads((out/'selected.json').read_text())
     records=json.loads((out/'all_results.json').read_text())
-    assert selected['guidance']==1.5
+    assert selected['guidance']==(1 if mse_weight else 1.5)
     expected_interval=(.1,.9) if full_population_reverses_interval else (0,1)
     assert (selected['cfg_min'],selected['cfg_max'])==expected_interval
     assert selected['cap'] is None
@@ -78,5 +82,10 @@ def test_calibration_keeps_conditional_reference_out_of_formal_selection(tmp_pat
     assert all(c['cells']==16 for c in calls if c['tag'].startswith('screen_'))
     assert all({'DEOver','DEPrec','DirAgr'}.issubset(r['metrics']) for r in records)
     assert all('DEPrec' not in r['raw_metrics'] for r in records)
+    if mse_weight:
+        assert selected['mse_weight']==mse_weight
+        for record in records:
+            assert record['score']==pytest.approx(2 * record['metrics']['PDCorr'])
+            assert record['selection_score']==pytest.approx(record['score'] - mse_weight * record['metrics']['MSE'])
     if conditional_score==.99:
         assert next(r['score'] for r in records if r['guidance'] is None)>selected['score']
