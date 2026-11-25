@@ -86,6 +86,6 @@ def test_calibration_keeps_conditional_reference_out_of_formal_selection(
         assert selected['mse_weight']==mse_weight
         for record in records:
             assert record['score']==pytest.approx(2 * record['metrics']['PDCorr'])
-            assert record['selection_score']==pytest.approx(record['score'] - mse_weight * record['metrics']['MSE'])
+            assert record['clamp0_selection_score']==pytest.approx(record['score'] - mse_weight * record['metrics']['MSE'])
     if conditional_score==.99:
         assert next(r['score'] for r in records if r['guidance'] is None)>selected['score']

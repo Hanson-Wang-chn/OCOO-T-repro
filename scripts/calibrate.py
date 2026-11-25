@@ -104,7 +104,7 @@ def calibrate(a, scales, ranks):
     records=[]
 
     def selection_score(record):
-        return record.get('selection_score', record['score'])
+        return record.get('clamp0_selection_score', record['score'])
 
     def evaluate(w,low,high,cap,tag):
         case=out/tag;idx=m.evaluation_indices('validation',cap)
@@ -120,7 +120,7 @@ def calibrate(a, scales, ranks):
             record={'tag':tag,'guidance':w,'cfg_min':low,'cfg_max':high,'clamp':True,'cap':cap,
                     'metrics':metrics,'raw_metrics':raw_metrics,'score':primary_score(metrics),'cache_provenance':cache}
             if a.mse_weight:
-                record['selection_score'] = record['score'] - a.mse_weight * metrics['MSE']
+                record['clamp0_selection_score'] = record['score'] - a.mse_weight * metrics['MSE']
             write_json_atomic(out/'all_results.json',[*records,record])
             readme_event(f'验证集 CFG 校准 `{tag}`：w={w}，区间 [{low},{high}]，PDCorr={metrics["PDCorr"]:.4f}，PDS_L2={metrics["PDS_L2"]:.4f}，MSE={metrics["MSE"]:.5f}（非测试）。')
         record=ranks.from_primary(record)
