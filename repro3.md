@@ -1,3 +1,100 @@
+# OCOO-T Replogle–Nadig 第三轮复现归档
+
+第三轮于北京时间 **2026-11-26 23:31** 完成正式评测。四卡全量训练从头跑完 55 轮、61,490 个优化步，周期验证选出第 45 轮的 EMA 0.9996 权重。冻结测试覆盖 26,878 个细胞、380 个扰动，真实和预测端共用 4,976 个 HepG2 对照。相较第二轮，九项指标中八项点估计改善。相较论文表 3，三项点估计更好，表达量误差、差异表达精度和余弦扰动区分仍有差距。 [论文 v2 表 3](https://arxiv.org/html/2606.12838v2#S4.T3) · [测试报告](runs/repro3_main/results/REPORT.md) · [第二轮归档](repro2.md)
+
+## 参数与选择依据
+
+| 项目 | 第三轮设置 |
+| --- | --- |
+| 数据与预处理 | Replogle–Nadig 官方划分及固定 2,000 HVG，保留公开归一化 log1p 表达与基因顺序。训练 572,545 个细胞、2,013 个扰动、4 个细胞系。完整验证 4,825 个细胞、60 个扰动。 |
+| 主干 | 136,919,041 个参数，12 层 Transformer、宽 768、12 头、RMSNorm、QK-norm、AdaLN-zero、SwiGLU ratio 4，按 JiT 参数匹配约定取隐层宽 2,048。第 4 层起注入 32 个上下文 token。 |
+| 表达与条件 | 表达 MLP 1→768→768，固定一维位置编码，幅度 1。时间正弦编码维数 256、尺度 1。冻结 5,120 维 ESM2，经共享投影编码基因及扰动。细胞系和 56 个 batch 标签嵌入的初始化标准差分别为 1 和 0.02。 |
+| 噪声与目标 | 小实验选定训练和生成共用 Gaussian σ=0.75。保留零初始化的可学习 null embedding，扰动和细胞标签独立以 0.1 概率置空。时间采样为 `sigmoid(N(−0.8, 0.8²))`，采用速度预测和 L2 损失。 |
+| 优化器与调度 | 训练 seed 42，AdamW β=(0.9, 0.95)，零权重衰减，峰值 lr 1e−4。前 5 轮线性 warmup，余弦衰减至 0，预算 55 轮。最低 20 轮，若连续 10 轮未取得 0.002 的周期选型分数改善则早停。实际跑满预算。 |
+| 四卡执行 | 4×A100 PCIe 40 GB，BF16、默认核心编译、原生 DDP。每卡 microbatch 16，累积 8 次，全局 batch 512，每轮 1,118 步。关闭 Dynamo DDPOptimizer 分图，每 50 步保存完整训练状态。 |
+| 周期选型 | 保存 EMA 0.9999 和 0.9996，每 5 轮用 EMA 0.9996 评估同一组 1,916 个验证细胞。周期采样用双 CFG `w=1.5`、区间 `[0.1,0.9]`。用 `S = PDCorr + mean(PDS_L1, PDS_L2, PDS_cos) − 10 × MSE` 选检查点并判断收敛。 |
+| 冻结测试 | 第 45 轮、step 50,310、EMA 0.9996。式 11 双 CFG `w=1.375`、区间 `[0,1]`、50 等步 Heun、末步 Euler，生成 batch 32、seed 4242。将小于 0.05 的预测表达置零，另用同一批原始生成计算仅裁负对照。Cell Eval 0.8.2 / pdex 0.3.0。 |
+
+论文约束了主干、训练目标、优化器、EMA 及双 CFG 公式。σ、null 初始化、验证打分、候选尺度及近零阈值为本轮登记并由验证选择的复现参数。近零阈值用于输出处理，训练始终优化速度 L2。 [主训练 YAML](configs/repro3_main.yaml) · [小实验登记](configs/repro3_pilots/plan.json) · [评测登记](configs/repro3_postprocess.json) · [数据清单](data/raw/manifest.json)
+
+## 实际运行与验证过程
+
+1. **三组四卡小实验各跑 1,536 步。** 三组共享 16,384 个训练细胞与 960 个验证生成索引。比较第二轮对照、σ=0.75、训练均值 null 初始化。在仅裁负的 EMA 结果上，σ=0.75 的配对 ΔS 为 +0.06185，95% 区间为 `[+0.03795, +0.08648]`，且满足 PDCorr 和 DEPrec 守门条件。训练均值 null 的 ΔS 为 −0.36515，主跑沿用零初始化。短实验中三组 PDS 均接近随机，收益主要来自早期 MSE。 [小实验全指标与配对区间](runs/repro3_pilots/summary.json)
+2. **一次全量重训。** 2026-11-25 04:48:38 至 2026-11-26 18:14:23，耗时 37 小时 25 分 45 秒，含周期生成。日志中位吞吐 265.46 cells/s，rank 0 分配显存峰值 18.44 GB。第 45 轮的 S=1.02233 为周期最佳。末步的优化器状态、双 EMA 和四个 rank 的 RNG 均已核对。 [训练完成核验](runs/repro3_main/training_completion_verification.json) · [周期九指标](runs/repro3_main/observation/generation_history.json) · [完整事件日志](runs/repro3_main/events.jsonl.gz)
+3. **只用验证集校准并冻结。** 用 960 个固定索引筛选两种时间窗与六个正指导尺度，另跑普通条件参考。将 S 最高的 `w=1.375/[0,1]` 和邻近候选中 MSE 最低的 `w=1.125/[0,1]` 各补齐至 4,825 个验证细胞。两种尺度的 0.05 候选都通过预先登记的质量门槛，依原综合分选中 `w=1.375`，完整验证的 PDCorr 0.39385、MSE 0.01068、DEPrec 0.18961。 [校准全记录](runs/repro3_main/calibration/all_results.json) · [完整验证审查](runs/repro3_main/calibration/postprocessing/review.json)
+4. **冻结后完成一次正式生成。** 2026-11-26 20:36 进入测试，23:31:20 产出报告。复用同一批原始生成计算两种阈值，核对 19 项产物哈希、完整测试索引及两套按扰动宏平均。训练代码启动副本与后续注释变更有单独校验，校准与评测的源码哈希可在 `57631a8` 核对。 [测试协议](runs/repro3_main/test_full_postprocess/test_protocol.json) · [测试完成核验](runs/repro3_main/test_completion_verification.json) · [评测代码核验](runs/repro3_main/evaluation_code_verification.json)
+
+## 九项正式指标与论文差距
+
+差值为第三轮减去论文值。区间来自第三轮测试扰动 bootstrap，反映该次评测的扰动间变异。
+
+| 指标 | 论文表 3 | 第二轮 | 第三轮 | 第三轮 − 论文 | 第三轮 95% 区间 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| PDCorr ↑ | 0.43700 | 0.40058 | 0.41224 | −0.02476 | [0.37864, 0.44889] |
+| DEOver ↑ | 0.23200 | 0.23892 | 0.24153 | +0.00953 | [0.21398, 0.26948] |
+| DEPrec ↑ | 0.24000 | 0.20700 | 0.21641 | −0.02359 | [0.19334, 0.23941] |
+| DirAgr ↑ | 0.76600 | 0.81160 | 0.82113 | +0.05513 | [0.79615, 0.84563] |
+| PDS_L1 ↑ | 0.82000 | 0.83136 | 0.83589 | +0.01589 | [0.81519, 0.85451] |
+| PDS_L2 ↑ | 0.85300 | 0.84435 | 0.84951 | −0.00349 | [0.82951, 0.86849] |
+| PDS_cos ↑ | 0.83300 | 0.80520 | 0.80286 | −0.03014 | [0.77568, 0.82750] |
+| MSE ↓ | 0.00790 | 0.01107 | 0.01010 | +0.00220 | [0.00942, 0.01085] |
+| MAE ↓ | 0.06100 | 0.06949 | 0.06727 | +0.00627 | [0.06541, 0.06912] |
+
+表达量重建的差距最明确，MSE 和 MAE 仍比论文高 27.8% 和 10.3%。PDS_L2 已接近论文，PDS_cos 仍低 0.03014，表明按余弦相似度区分扰动响应仍偏弱。DEPrec 低 2.36 个百分点，DirAgr 在成功找回的差异基因上高 5.51 个百分点。第三轮相较第二轮的配对区间支持 PDCorr、MSE、MAE 和 DEPrec 改善，PDS_cos 的下降区间跨零。 [表 3 对照 CSV](runs/repro3_main/results/benchmark_comparison.csv) · [第二、三轮配对 CSV](runs/repro3_main/results/paired_repro2_comparison.csv) · [裁负测试对照](runs/repro3_main/results_clamp0/REPORT.md)
+
+## Git 交付与复现入口
+
+`codex/repro3` 收录训练、数据准备、评测及测试代码，三轮归档文档，第三轮冻结配置、每扰动指标、完整结果与日志、数据和源码哈希。模型检查点、原始表达数据、ESM2 张量及大预测数组留在运行工作区。克隆后可直接查看已归档结果，从头训练需按下列命令准备数据。原始文件清单记录了主跑的校验值。 [环境定义](environment.yml) · [环境快照](environment.lock.txt) · [第三轮正式结果](runs/repro3_main/results/REPORT.md) · [数据来源清单](data/raw/manifest.json)
+
+从新克隆的仓库根目录准备 Python 环境和数据。分支提供主跑所用的 HGNC 表压缩快照，供重跑使用同一份基因别名表。解压后的 SHA256 为 `6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4`。 [压缩快照](data/raw/hgnc_complete_set.tsv.gz) · [HGNC 数据下载说明](https://hgnc.genenames.org/download/) · [HGNC CC0 声明](https://hgnc.genenames.org/about/license/)
+
+```bash
+conda env create -f environment.yml
+conda activate ocoo-t
+
+if [ ! -e data/raw/hgnc_complete_set.tsv ]; then
+  gzip -dc data/raw/hgnc_complete_set.tsv.gz > data/raw/hgnc_complete_set.tsv
+fi
+printf '%s\n' '6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4  data/raw/hgnc_complete_set.tsv' | sha256sum -c - &&
+  python scripts/download_data.py &&
+  python scripts/prepare_data.py
+```
+
+全量重跑使用新的 `run_dir`。下例将已有的主跑归档保留在 `runs/repro3_main`，并将同一组科学参数复制到新配置。归档数据目录里的 `finished.json` 是旧跑完成标记，新的输出目录应当空置。
+
+```bash
+repro3_rerun_config=$(mktemp /tmp/ocoot-repro3.XXXXXXXX.yaml)
+sed 's|^run_dir: runs/repro3_main$|run_dir: runs/repro3_main_rerun|' \
+  configs/repro3_main.yaml > "$repro3_rerun_config"
+CUDA_VISIBLE_DEVICES=0,1,2,3 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 TORCHINDUCTOR_COMPILE_THREADS=6 \
+  python scripts/run_experiment.py --config "$repro3_rerun_config" --gpu-workers 4 \
+  --calibration-scales 1.125,1.25,1.375,1.5,1.625,1.75 --compare-windows \
+  --calibration-mse-weight 10 --postprocess-plan configs/repro3_postprocess.json
+```
+
+三组小实验的原始命令见下方归档。在独立克隆中重跑小实验时，可先把 `runs/repro3_pilots` 移至邻近备份目录，给登记计划留出同名的空输出位置。运行期间进度脚本会重新创建本地 `README.md`。
+
+## 上传到 GitHub
+
+在 GitHub 创建空仓库，保持 README、许可证和 `.gitignore` 的初始化选项空置。使用已配置的 GitHub HTTPS 凭据，或采用 GitHub 提供的 SSH URL。在项目根目录将 `OWNER/REPO` 替换为自己的账号和仓库名。 [GitHub 导入本地代码](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=linux) · [GitHub 认证方式](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
+
+```bash
+git remote add origin https://github.com/OWNER/REPO.git
+git remote -v
+git push -u origin codex/repro3
+git ls-remote --heads origin refs/heads/codex/repro3
+```
+
+推送后在仓库页面选 `codex/repro3`，打开根目录的 `repro3.md`。若 `origin` 已配置为目标仓库，可从核对远端 URL 的命令开始。
+
+---
+
+## 原 README 全文
+
+归档前 `README.md` 的 SHA256 为 `a12b8dd46ae7d8f7d8c1a97007a3053ff811114ffa0d2b3a6bb250382e384d0d`。从下一个一级标题起为原文件全文。
+
+<!-- ARCHIVED_README_START -->
+
 # OCOO-T Replogle–Nadig 第三轮复现
 
 本轮固定 Replogle–Nadig 官方划分和 2,000 HVG。第二轮冻结测试的 PDCorr 为 0.40058，MSE 为 0.01107，DEPrec 为 0.20700。论文表 3 分别为 0.437、0.00790、0.240。完整的第二轮结果、参数和当时的 README 已归档于 [repro2.md](repro2.md)，基线提交为 `codex/repro2` 上的 `bfd2ce0`。第三轮在 `codex/repro3` 分支开展。 [论文 v2](https://arxiv.org/html/2606.12838v2)
