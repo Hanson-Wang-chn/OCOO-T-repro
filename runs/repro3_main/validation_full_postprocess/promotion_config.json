@@ -1,0 +1,19 @@
+{
+  "selected_sha256": "c889b50632e8a84fa332d7c880e9e257cec7f75229f1fdbbd8a1765fe918a87a",
+  "calibration_config_sha256": "4b5ef9caf8408dae6988dc919ac8d47538de1ad14789406f072ba1c2289bb05d",
+  "source": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_00",
+  "source_files_sha256": {
+    "prediction.npy": "9e2f95183ff8e6a60d742033d987b9f640a756e8dcc27a4e7d9f67aa92cf2522",
+    "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "generation_state.json": "1ec8074730267ae8226c46f5495185d5f4ec1aaec8b5f34e94c62c6044c93d99"
+  },
+  "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+  "data_files_sha256": {
+    "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+    "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+    "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+  },
+  "script_sha256": "9e465ed9e321468c34b686282b07c0292ab6d9c4f83fb2aba3f5d6344f90ef3d",
+  "zero_floor": 0.05,
+  "postprocess_review_sha256": "4057e38ff65e747cd7fc3b11b8c43ccd2732100af98390b271ac4b54ab19b2cc"
+}

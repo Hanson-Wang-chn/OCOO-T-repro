@@ -1,0 +1,15 @@
+{
+  "time": "2026-11-26T23:32:28+08:00",
+  "evaluation_finished": "2026-11-26T23:31:20+08:00",
+  "population": {
+    "real_perturbed_cells": 26878,
+    "generated_cells": 26878,
+    "shared_real_controls": 4976
+  },
+  "perturbations": 380,
+  "all_output_hashes_verified": 19,
+  "frozen_selection_sha256": "c889b50632e8a84fa332d7c880e9e257cec7f75229f1fdbbd8a1765fe918a87a",
+  "shared_raw_sha256": "9d44c75bde8a3abe0cdc5ddc46fb6baf565fb89208082f831f04cacfec387e14",
+  "both_macro_means_verified": true,
+  "gpu_processes_at_verification": []
+}

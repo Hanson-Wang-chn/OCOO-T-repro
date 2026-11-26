@@ -1,0 +1,12 @@
+{
+  "src/ocoot/model.py": {
+    "git_version_sha256": "c6b3b65c1efa88c1a203c13ff3b82ba259fbacaad7fcd84e4304b878b0184406",
+    "workspace_sha256": "2b374c8f97d3bd17c729f17dffecadad072f0f32bd17bfed530d95a014b15c12",
+    "parsed_contents_equal": true
+  },
+  "src/ocoot/train.py": {
+    "git_version_sha256": "a418fa8d914d302606b8c69ba60b4fa2e8c0a1449e60717d690973eec95cb38b",
+    "workspace_sha256": "80cc8a4c616e9f8b64a027282d610f4e165c95137f3e5be15c6059fc8a663ed5",
+    "parsed_contents_equal": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "time": "2026-11-26T23:31:20+08:00",
+  "pid": 529965,
+  "stage": "evaluated",
+  "config": "/home/dataset-assist-0/whs/ocoo-t/configs/repro3_main.yaml",
+  "test_metrics": {
+    "PDCorr": 0.4122382589404496,
+    "MSE": 0.01009680387490478,
+    "MAE": 0.06726981684761613,
+    "PDS_L1": 0.8358864265927978,
+    "PDS_L2": 0.8495083102493075,
+    "PDS_cos": 0.8028601108033241,
+    "DEOver": 0.24153422412301617,
+    "DEPrec": 0.21640845861215655,
+    "DirAgr": 0.8211274360258288
+  },
+  "report": "runs/repro3_main/results/REPORT.md",
+  "postprocess_plan_sha256": "b216094fad262c1bb420fc8f84ba3d309c89466d238454becfabfa730d0100c8"
+}

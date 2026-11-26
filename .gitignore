@@ -31,6 +31,8 @@ real_de.csv
 
 # Redundant stdout and runtime state
 /runs/**/pipeline.log
+# The complete third-round event log is tracked as events.jsonl.gz.
+/runs/repro3_main/events.jsonl
 /runs/**/*.pid
 /logs/**/*.pid
 /runs/**/*.lock

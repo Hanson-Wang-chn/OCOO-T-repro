@@ -1,0 +1,49 @@
+{
+  "time": "2026-11-26T20:36:49+08:00",
+  "source": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_00",
+  "cells": 4825,
+  "new_generated_samples": 0,
+  "gpu_used": false,
+  "test_access": false,
+  "raw_samples_retained_bitwise": true,
+  "all9_metrics_recomputed_and_agree_atol": 1e-10,
+  "metrics": {
+    "PDCorr": 0.39385006348214424,
+    "MSE": 0.010678357262319575,
+    "MAE": 0.06726685324683786,
+    "PDS_L1": 0.8116666666666668,
+    "PDS_L2": 0.8200000000000001,
+    "PDS_cos": 0.83,
+    "DEOver": 0.21585617681781197,
+    "DEPrec": 0.18961462092159007,
+    "DirAgr": 0.8127499778052014
+  },
+  "protocol": {
+    "selected_sha256": "c889b50632e8a84fa332d7c880e9e257cec7f75229f1fdbbd8a1765fe918a87a",
+    "calibration_config_sha256": "4b5ef9caf8408dae6988dc919ac8d47538de1ad14789406f072ba1c2289bb05d",
+    "source": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_00",
+    "source_files_sha256": {
+      "prediction.npy": "9e2f95183ff8e6a60d742033d987b9f640a756e8dcc27a4e7d9f67aa92cf2522",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "1ec8074730267ae8226c46f5495185d5f4ec1aaec8b5f34e94c62c6044c93d99"
+    },
+    "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "script_sha256": "9e465ed9e321468c34b686282b07c0292ab6d9c4f83fb2aba3f5d6344f90ef3d",
+    "zero_floor": 0.05,
+    "postprocess_review_sha256": "4057e38ff65e747cd7fc3b11b8c43ccd2732100af98390b271ac4b54ab19b2cc"
+  },
+  "output_sha256": {
+    "prediction_raw.npy": "9e2f95183ff8e6a60d742033d987b9f640a756e8dcc27a4e7d9f67aa92cf2522",
+    "prediction.npy": "0c291f85687ecd9c741d4eccd27fcae305fbd35e755588c1877b5f49d845d1fe",
+    "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+    "generation_state.json": "411be6ef271f97860bf7616140d5a9b904a2f65cd3463869d80f9133a6395b24",
+    "evaluation_config.json": "0a25e0ccfd05a6fb3890ff4363ee73caad6cedb20797dd2b83e598d74d727075",
+    "metrics/summary.json": "0fd954cda36ee8b74f6e71140046ea24a3a9e62e6a8abfa87134d0a39169ca24",
+    "metrics/results.csv": "f3999b76f88cbd82bc9675170fdfbcedba9587df0889b4ed78e4eda74be99dc1"
+  }
+}

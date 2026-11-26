@@ -1,0 +1,39 @@
+{
+  "note": "Validation only. Nearest training centroids are diagnostics, not an independent cell-type classifier.",
+  "centroid_source": "perturbed training cells only, excluding validation, test and controls",
+  "runs": {
+    "repro3_main": {
+      "source": "runs/repro3_main/validation_epoch_030",
+      "generated_cells": 1916,
+      "evaluated_postprocess": "clamp_min_0",
+      "target_cell_line": "hepg2",
+      "nearest_training_centroid_counts": {
+        "hepg2": 1916,
+        "jurkat": 0,
+        "k562": 0,
+        "rpe1": 0
+      },
+      "bulk_MSE_to_training_centroids": {
+        "hepg2": 0.0007685426370153221,
+        "jurkat": 0.14351979334168483,
+        "k562": 0.1109062851313069,
+        "rpe1": 0.10929586238280656
+      },
+      "within_perturbation_variance": {
+        "real": 0.1262111400973316,
+        "raw": 0.12941539154640094,
+        "clipped": 0.1284759149152154,
+        "raw_ratio_to_real": 1.0253880239620552,
+        "clipped_ratio_to_real": 1.0179443337263039
+      },
+      "metrics": {
+        "PDCorr": 0.3350652500084834,
+        "MSE": 0.011838969270077845,
+        "MAE": 0.07304261314372222,
+        "PDS_L1": 0.7791666666666666,
+        "PDS_L2": 0.7975000000000001,
+        "PDS_cos": 0.8177777777777778
+      }
+    }
+  }
+}

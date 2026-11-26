@@ -1,0 +1,335 @@
+{
+  "note": "All entries are intermediate capped validation diagnostics; fixed sampling options are stored per entry.",
+  "epochs": [
+    {
+      "time": "2026-11-25T08:14:23+08:00",
+      "epoch": 5,
+      "generation_dir": "runs/repro3_main/validation_epoch_005",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "255c099dcd831a6c2abdee3babe787dfc9f8c4d47de865634af30166a1a48c40",
+      "metrics": {
+        "PDCorr": 0.16714103718598683,
+        "MSE": 0.03960641187926133,
+        "MAE": 0.12997781982024512,
+        "PDS_L1": 0.5249999999999999,
+        "PDS_L2": 0.5319444444444444,
+        "PDS_cos": 0.5105555555555555,
+        "DEOver": 0.12514131973951056,
+        "DEPrec": 0.11472631819399844,
+        "DirAgr": 0.6517167109631328
+      },
+      "context": "runs/repro3_main/validation_epoch_005/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-25T11:40:21+08:00",
+      "epoch": 10,
+      "generation_dir": "runs/repro3_main/validation_epoch_010",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "10647130370cf8e345b20a0427c47dcac0af68a087ae381fab0f60c882803f94",
+      "metrics": {
+        "PDCorr": 0.2857543010264635,
+        "MSE": 0.01022994213271886,
+        "MAE": 0.06818720232695341,
+        "PDS_L1": 0.6511111111111111,
+        "PDS_L2": 0.6619444444444444,
+        "PDS_cos": 0.6425000000000001,
+        "DEOver": 0.09665845681809117,
+        "DEPrec": 0.07529231879498677,
+        "DirAgr": 0.680172273094452
+      },
+      "context": "runs/repro3_main/validation_epoch_010/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-25T15:06:20+08:00",
+      "epoch": 15,
+      "generation_dir": "runs/repro3_main/validation_epoch_015",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "47d8b2488cd43918ad135b1244534744bde75098ae73c0fad4295fc27fbc84af",
+      "metrics": {
+        "PDCorr": 0.3005387961592836,
+        "MSE": 0.01002301253999273,
+        "MAE": 0.06997816779961188,
+        "PDS_L1": 0.725,
+        "PDS_L2": 0.7386111111111112,
+        "PDS_cos": 0.7338888888888888,
+        "DEOver": 0.11024028589986973,
+        "DEPrec": 0.08369153980275192,
+        "DirAgr": 0.6794411258850247
+      },
+      "context": "runs/repro3_main/validation_epoch_015/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-25T18:29:34+08:00",
+      "epoch": 20,
+      "generation_dir": "runs/repro3_main/validation_epoch_020",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "6aca7792a0c7ef63a97c2c8ded1bf441c6183e360d4ac31d8d3d0db01bc95110",
+      "metrics": {
+        "PDCorr": 0.3314013512649884,
+        "MSE": 0.010367601015605032,
+        "MAE": 0.0709895508363843,
+        "PDS_L1": 0.7636111111111112,
+        "PDS_L2": 0.7811111111111112,
+        "PDS_cos": 0.7716666666666666,
+        "DEOver": 0.12269630015180889,
+        "DEPrec": 0.08945356881789396,
+        "DirAgr": 0.7180537122448174
+      },
+      "context": "runs/repro3_main/validation_epoch_020/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-25T21:51:00+08:00",
+      "epoch": 25,
+      "generation_dir": "runs/repro3_main/validation_epoch_025",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "7d4d5627bdf6f0a2b3ec90b1e4a8276710a17d90c9c8951efe993447656699ed",
+      "metrics": {
+        "PDCorr": 0.3329601674185445,
+        "MSE": 0.010865602859606345,
+        "MAE": 0.071809550623099,
+        "PDS_L1": 0.7694444444444445,
+        "PDS_L2": 0.7883333333333333,
+        "PDS_cos": 0.7905555555555556,
+        "DEOver": 0.12056985180322065,
+        "DEPrec": 0.0897262808098316,
+        "DirAgr": 0.7315305197517464
+      },
+      "context": "runs/repro3_main/validation_epoch_025/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T01:17:00+08:00",
+      "epoch": 30,
+      "generation_dir": "runs/repro3_main/validation_epoch_030",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "e6aad857cc9091a280a17211a781c804c57072b2fdd7f38b0190ac385227898b",
+      "metrics": {
+        "PDCorr": 0.3350652500084834,
+        "MSE": 0.011838969270077845,
+        "MAE": 0.07304261314372222,
+        "PDS_L1": 0.7791666666666666,
+        "PDS_L2": 0.7975000000000001,
+        "PDS_cos": 0.8177777777777778,
+        "DEOver": 0.12272302894236745,
+        "DEPrec": 0.09014042068364948,
+        "DirAgr": 0.7325832271719344
+      },
+      "context": "runs/repro3_main/validation_epoch_030/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T04:42:08+08:00",
+      "epoch": 35,
+      "generation_dir": "runs/repro3_main/validation_epoch_035",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "2e933de9065922b08eef857ecd59fda2828ae98d4c46be470befc02d1ab5ddf6",
+      "metrics": {
+        "PDCorr": 0.33018450646971664,
+        "MSE": 0.011811394896358251,
+        "MAE": 0.07338101646552483,
+        "PDS_L1": 0.7786111111111111,
+        "PDS_L2": 0.7972222222222223,
+        "PDS_cos": 0.8419444444444444,
+        "DEOver": 0.12215637486455592,
+        "DEPrec": 0.09199583965364308,
+        "DirAgr": 0.7321011256667885
+      },
+      "context": "runs/repro3_main/validation_epoch_035/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T08:06:20+08:00",
+      "epoch": 40,
+      "generation_dir": "runs/repro3_main/validation_epoch_040",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "5a435ef4520f45cce72c13649ed3279057096e53e183f6d1d88ace5b1ecc6353",
+      "metrics": {
+        "PDCorr": 0.322227677609529,
+        "MSE": 0.012374113197438419,
+        "MAE": 0.07444768113394579,
+        "PDS_L1": 0.7836111111111113,
+        "PDS_L2": 0.7980555555555554,
+        "PDS_cos": 0.8366666666666667,
+        "DEOver": 0.11949180882274456,
+        "DEPrec": 0.0914681616145512,
+        "DirAgr": 0.7571534241702751
+      },
+      "context": "runs/repro3_main/validation_epoch_040/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T11:29:45+08:00",
+      "epoch": 45,
+      "generation_dir": "runs/repro3_main/validation_epoch_045",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "ad0a97b1e3735611c1bc178b112250fb81dc90e9584a8dcd16d4767698a25862",
+      "metrics": {
+        "PDCorr": 0.3330375849948723,
+        "MSE": 0.012468921517332395,
+        "MAE": 0.07476030321170886,
+        "PDS_L1": 0.7927777777777778,
+        "PDS_L2": 0.8055555555555556,
+        "PDS_cos": 0.8436111111111112,
+        "DEOver": 0.13541726078526706,
+        "DEPrec": 0.09111503275268734,
+        "DirAgr": 0.7459608809450932
+      },
+      "context": "runs/repro3_main/validation_epoch_045/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T14:54:01+08:00",
+      "epoch": 50,
+      "generation_dir": "runs/repro3_main/validation_epoch_050",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "3de9e16d2f9a1e52b1f722404b7e5da32ab01be4d15a5592528764f92207b2c5",
+      "metrics": {
+        "PDCorr": 0.33205897854156013,
+        "MSE": 0.012941696324075262,
+        "MAE": 0.07562000869462887,
+        "PDS_L1": 0.7913888888888888,
+        "PDS_L2": 0.8027777777777777,
+        "PDS_cos": 0.8397222222222223,
+        "DEOver": 0.13629845485564399,
+        "DEPrec": 0.09218959555439771,
+        "DirAgr": 0.7499515787319614
+      },
+      "context": "runs/repro3_main/validation_epoch_050/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    },
+    {
+      "time": "2026-11-26T18:14:46+08:00",
+      "epoch": 55,
+      "generation_dir": "runs/repro3_main/validation_epoch_055",
+      "generated_cells": 1916,
+      "sampling": {
+        "noise_std": 0.75,
+        "batch_size": 32,
+        "steps": 50,
+        "guidance": 1.5,
+        "cfg_min": 0.1,
+        "cfg_max": 0.9,
+        "clamp": true,
+        "seed": 4242
+      },
+      "checkpoint_sha256": "bf9adfef470f6a69bc4acb1012cf8cdc9eb508df7a99e8047a1b256a62fe365d",
+      "metrics": {
+        "PDCorr": 0.3312258079686823,
+        "MSE": 0.013024134266500672,
+        "MAE": 0.07596026559670767,
+        "PDS_L1": 0.7908333333333334,
+        "PDS_L2": 0.8047222222222222,
+        "PDS_cos": 0.8475000000000001,
+        "DEOver": 0.13641140828911846,
+        "DEPrec": 0.09107965573894873,
+        "DirAgr": 0.727513624452829
+      },
+      "context": "runs/repro3_main/validation_epoch_055/context_diagnostics/context_diagnostics.json",
+      "note": "Capped validation diagnostic, not calibrated full validation or test."
+    }
+  ]
+}

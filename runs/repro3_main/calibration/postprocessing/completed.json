@@ -1,0 +1,37 @@
+{
+  "time": "2026-11-26T20:36:23+08:00",
+  "cells_each": 4825,
+  "selected_sha256": "c889b50632e8a84fa332d7c880e9e257cec7f75229f1fdbbd8a1765fe918a87a",
+  "review_sha256": "4057e38ff65e747cd7fc3b11b8c43ccd2732100af98390b271ac4b54ab19b2cc",
+  "output_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/selected.json": "c889b50632e8a84fa332d7c880e9e257cec7f75229f1fdbbd8a1765fe918a87a",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/review.json": "4057e38ff65e747cd7fc3b11b8c43ccd2732100af98390b271ac4b54ab19b2cc",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_00/metrics_clamped/summary.json": "424564067bdcb7d0deb9a5fc90736f19890c7fa8a1cd047e96a0a474e6ee8fea",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_00/metrics_clamped/results.csv": "5bd8620e20db58ebf0af8c069ef9c3a6b9432570921622ca2a5ca76cd68bcbc0",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json": "0fd954cda36ee8b74f6e71140046ea24a3a9e62e6a8abfa87134d0a39169ca24",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/refine_00_floor_0p05/metrics/results.csv": "f3999b76f88cbd82bc9675170fdfbcedba9587df0889b4ed78e4eda74be99dc1",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_01/metrics_clamped/summary.json": "262d834bdcc3df1e94f2a676fcdfc86d2ee0f74b29a4db7bafb36175e2163671",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_01/metrics_clamped/results.csv": "f69765f0137242641dc1177080ec627b5fbcb1fc5d359c7f5ee20a0191fdd888",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/refine_01_floor_0p05/metrics/summary.json": "03d3a56f1b78e7306d29f86d9f478d1b138fd283fbf237d977a9b271225383c2",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/postprocessing/refine_01_floor_0p05/metrics/results.csv": "a7312043418066524df07ad39f2788b7ab75c0476d638cce327cc2841d909225"
+  },
+  "protocol": {
+    "plan_sha256": "b216094fad262c1bb420fc8f84ba3d309c89466d238454becfabfa730d0100c8",
+    "calibration_config_sha256": "4b5ef9caf8408dae6988dc919ac8d47538de1ad14789406f072ba1c2289bb05d",
+    "base_results_sha256": "6c1b6da0ea66b0c978e26f281c4eb7d5fc31898961fc6a02df6045342f4b6350",
+    "original_selected_sha256": "680b861cb562299c0d2069c6fc386cbb6141e4d3690f9d8f6ceaddf4150c0363",
+    "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "source_sha256": {
+      "scripts/select_validation_postprocess.py": "40090e71b7fed1106d7af0cb7952cb2f30bc0c2e2d9d75b1b52f4f7f7b1d0ecc",
+      "src/ocoot/postprocess.py": "a462c7b34cf2aa2947a5907719ea0cdebfedb9f91d1a46f1693b643baabd479f"
+    }
+  },
+  "cpu_only": true,
+  "test_access": false,
+  "new_generated_samples": 0
+}

@@ -1,0 +1,62 @@
+{
+  "tag": "refine_01",
+  "guidance": 1.125,
+  "cfg_min": 0.0,
+  "cfg_max": 1.0,
+  "clamp": true,
+  "cap": null,
+  "metrics": {
+    "PDCorr": 0.3953622165756921,
+    "MSE": 0.008720718250454713,
+    "MAE": 0.06293462958807747,
+    "PDS_L1": 0.7997222222222222,
+    "PDS_L2": 0.8122222222222223,
+    "PDS_cos": 0.8075,
+    "DEOver": 0.17202066659304283,
+    "DEPrec": 0.10110292830641868,
+    "DirAgr": 0.8121518887825289
+  },
+  "raw_metrics": {
+    "PDCorr": 0.39456934792300064,
+    "MSE": 0.00874583957483992,
+    "MAE": 0.063053911862274,
+    "PDS_L1": 0.7994444444444445,
+    "PDS_L2": 0.8125,
+    "PDS_cos": 0.8072222222222223
+  },
+  "score": 1.2018436980571736,
+  "cache_provenance": {
+    "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/calibration/refine_01",
+    "raw_unclamped": true,
+    "split": "validation",
+    "files": {
+      "prediction.npy": "c1eaa0a315a1f960ca525f6c2d7c5cf5bb287d95864c633131fd26d85a26fc13",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "e997b27146b8f05276d31a8b03a45deaf07931819bf49c814a9df4869dcb4819"
+    }
+  },
+  "clamp0_selection_score": 1.1146365155526266,
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/best_generation.pt",
+  "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+  "step": 50310,
+  "weights": "ema_0.9996",
+  "data_dir": "data/processed",
+  "noise_std": 0.75,
+  "sampling_steps": 50,
+  "seed": 4242,
+  "batch_size": 32,
+  "formal_guidance_policy": "literal_dual_cfg_positive_scale",
+  "source_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/scripts/calibrate.py": "0967d46b29502708cb431b00256850f9fdf34e86ba4ad621a5828b6946eaccc7",
+    "src/ocoot/model.py": "c6b3b65c1efa88c1a203c13ff3b82ba259fbacaad7fcd84e4304b878b0184406",
+    "src/ocoot/flow.py": "d4518079ac692923f365e526aa0c5a8451850e6c92cb9479a88a498811caedd1",
+    "src/ocoot/evaluate.py": "f547f0bc95c5d90c7a16c8fa1da202af5bac0253ae0d985cc7fb7ec0db860f5e",
+    "src/ocoot/data.py": "fb813441832e0f18795e424cda9e93c5fcce92b4b93830ad7c9bfe26ce209b9b",
+    "src/ocoot/postprocess.py": "a462c7b34cf2aa2947a5907719ea0cdebfedb9f91d1a46f1693b643baabd479f",
+    "src/ocoot/runtime.py": "dd0b7a5e89c20c021f48689022ec38a0c859abecfe42e1af92fb9876cc15cb6a",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "conditional_reference_tag": "screen_00",
+  "note": "Locked using validation only within the literal dual-CFG family; the conditional-only field is diagnostic. Final two candidates used all validation cells. Run full validation DE and full test with these settings.",
+  "mse_weight": 10.0
+}

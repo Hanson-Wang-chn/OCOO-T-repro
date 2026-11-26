@@ -158,7 +158,7 @@ class OCOOT(nn.Module):
         # Only non-protein/missing genes use these trainable fallback identities.
 # 缺失基因使用可学习 fallback embedding；普通基因由 missing mask 屏蔽。
         self.missing_identity = nn.Embedding(len(embeddings), cfg.dim)
-# value 编码标量表达值，time 编码连续时间。
+# value 编码标量表达值，time 编码连续时间。即 Expression encoder。
         self.value = nn.Sequential(nn.Linear(1, cfg.value_hidden), nn.SiLU(), nn.Linear(cfg.value_hidden, cfg.dim))
         self.time = nn.Sequential(nn.Linear(cfg.time_dim, cfg.dim), nn.SiLU(), nn.Linear(cfg.dim, cfg.dim))
 # cell/batch 为离散条件 embedding；null 参数提供 classifier-free guidance 的空条件。

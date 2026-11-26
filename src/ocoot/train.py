@@ -341,10 +341,10 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                 first = within*effective + batch*micro
                 with defer_sync() if batch != shard.stop-1 else contextlib.nullcontext():
                     x,p,c,b=data.batch(perm[first:first+micro],device=ranks.device)
-                    z,t,v=flow_batch(x,tr['noise_std'],tr['p_mean'],tr['p_std'])
+                    z,t,v=flow_batch(x,tr['noise_std'],tr['p_mean'],tr['p_std']) # 构造一批训练数据
                     with torch.autocast('cuda',dtype=torch.bfloat16):
-                        loss=(training_forward(z,t,p,c,b).float()-v).square().mean()*micro_loss_weight
-                    loss.backward()
+                        loss=(training_forward(z,t,p,c,b).float()-v).square().mean()*micro_loss_weight # 核心前向计算
+                    loss.backward() # 自动反向计算
                 batch_loss+=loss.detach()
             stopping=terminate[0]
             if ranks.size>1:

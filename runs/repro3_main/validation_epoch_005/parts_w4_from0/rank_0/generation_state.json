@@ -1,0 +1,1 @@
+{"completed": 480, "total": 480, "options": {"noise_std": 0.75, "batch_size": 32, "steps": 50, "guidance": 1.5, "cfg_min": 0.1, "cfg_max": 0.9, "clamp": true, "seed": 4242}}
