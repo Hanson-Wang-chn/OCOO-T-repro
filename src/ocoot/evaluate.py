@@ -15,6 +15,7 @@ METRICS={'pearson_delta':'PDCorr','mse':'MSE','mae':'MAE',
          'overlap_at_N':'DEOver','precision_at_N':'DEPrec','de_direction_match':'DirAgr'}
 
 
+# 从样本预测和真实表达计算论文使用的官方指标。
 def official_metrics(data, indices, pred, outdir, de=False):
     from cell_eval import MetricsEvaluator
     outdir=Path(outdir);outdir.mkdir(parents=True,exist_ok=True)
@@ -32,6 +33,7 @@ def official_metrics(data, indices, pred, outdir, de=False):
     # Same true controls in both real and prediction, as required by Appendix B.
     real=np.concatenate([np.asarray(data.x[real_indices]),np.asarray(data.x[ctr])])
     prediction=np.concatenate([pred,np.asarray(data.x[ctr])])
+# 对扰动、control 等组合取真实或预测的伪批次观测。
     def observation(idx):
         pids=np.concatenate([data.meta['pert'][idx],data.meta['pert'][ctr]])
         return pd.DataFrame({'gene':[data.vocab['all_genes'][p] for p in pids]},index=[str(i) for i in range(len(pids))])
@@ -62,6 +64,7 @@ def official_metrics(data, indices, pred, outdir, de=False):
 
 
 @torch.no_grad()
+# 以可恢复方式生成验证或测试样本，并可选保存原始预测和统计信息。
 def generate(model, data, indices, outdir, noise_std=1., batch_size=32, steps=50,
              guidance=None,cfg_min=.1,cfg_max=.9,clamp=False,seed=4242,resume=True,*,ranks=None):
     outdir=Path(outdir);outdir.mkdir(exist_ok=True,parents=True)
@@ -79,6 +82,7 @@ def generate(model, data, indices, outdir, noise_std=1., batch_size=32, steps=50
     return result
 
 
+# 读取已有生成进度或创建起始状态，保证 resume 可继续。
 def _generation_start(outdir, indices, options, resume):
     marker=outdir/'generation_state.json'
     if marker.exists() and resume:
@@ -94,6 +98,7 @@ def _generation_start(outdir, indices, options, resume):
     return 0
 
 
+# 打开或创建内存映射式预测文件，逐区间写入并支持 clamp。
 def _prediction_files(outdir, indices, n_genes, clamp, start):
     shape = (len(indices), n_genes)
     if not start:
@@ -111,16 +116,19 @@ def _prediction_files(outdir, indices, n_genes, clamp, start):
     return result, raw_result
 
 
+# 在元数据中标记已完成比例和采样配置。
 def _mark_generated(outdir, options, completed, total):
     tmp=outdir/'generation_state.tmp'
     tmp.write_text(json.dumps({'completed':completed,'total':total,'options':options}))
     tmp.replace(outdir/'generation_state.json')
 
 
+# 输出当前生成进度并更新实时状态。
 def _report_generation(outdir, completed, total, steps):
     update_readme_live(f'实时生成评估：`{outdir}`，已生成 **{completed:,}/{total:,}** 个细胞（Heun {steps} 步）；更新于 {timestamp()}。')
 
 
+# 单进程分批调用采样器，必要时保存原始和后处理预测。
 def _generate_local(model, data, indices, outdir, options, start, progress=None):
     batch_size = options['batch_size']
     clamp = options['clamp']
@@ -145,6 +153,7 @@ def _generate_local(model, data, indices, outdir, options, start, progress=None)
     return result, raw_result
 
 
+# 在 DDP rank 间分片生成，主 rank 合并结果并保存统计。
 def _generate_distributed(model, data, indices, outdir, options, resume, ranks):
     start = ranks.from_primary(_generation_start(outdir, indices, options, resume) if ranks.primary else None)
     if start < len(indices):
@@ -196,7 +205,9 @@ def _generate_distributed(model, data, indices, outdir, options, resume, ranks):
     return None
 
 
+# 分块汇总原始及后处理预测的均值、方差、极值和零值比例。
 def _save_sample_statistics(outdir, result, raw_result):
+# 分块读取避免一次性载入全部内存，同时累加二阶矩。
     def moments(array):
         total=0.;squares=0.;negative=0;zeros=0;n=0;lo=float('inf');hi=-float('inf')
         for a in range(0,len(array),4096):

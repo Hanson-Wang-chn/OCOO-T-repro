@@ -21,6 +21,7 @@ from .runtime import DualEMA, atomic_save, exclusive_run, log_event, readme_even
 
 
 @contextlib.contextmanager
+# 临时切换到 EMA 权重执行验证或保存，再恢复原始训练参数。
 def ema_parameters(model, ema, ranks=None):
     saved={n:p.detach().clone() for n,p in model.named_parameters()}
     try:
@@ -35,12 +36,14 @@ def ema_parameters(model, ema, ranks=None):
             for n,p in model.named_parameters():p.copy_(saved[n])
 
 
+# 将关键训练指标格式化为 README 实时状态。
 def update_live_status(run_dir, event):
     update_readme_live(f'实时训练：`{run_dir}`，epoch **{event["epoch"]:.3f}**，优化步 **{event["step"]}**，'
                        f'loss **{event["loss"]:.5f}**，约 **{event["cells_per_sec"]:.1f} cells/s**，更新于 {event["time"]}。')
 
 
 @torch.no_grad()
+# 在固定验证 RNG 和模型 eval 模式下计算速度误差与端点误差。
 def validate(model, forward, data, indices, config):
     model.eval();stats=[]
     # A fixed RNG isolates validation from changes in training RNG.
@@ -55,6 +58,7 @@ def validate(model, forward, data, indices, config):
     return {key:sum(n*s[i] for n,*s in stats)/sum(x[0] for x in stats) for i,key in enumerate(['velocity_mse','endpoint_mse'])}
 
 
+# public 训练入口：校验参数、初始化进程环境并进入排他训练锁。
 def train(config, resume=True, *, local_micro_batch=None, benchmark_steps=None, preserve_steps=(),
           resume_from=None, max_ema_endpoint_relative_gap=None):
     if resume_from is not None and not resume:
@@ -76,19 +80,23 @@ def train(config, resume=True, *, local_micro_batch=None, benchmark_steps=None, 
                              resume_from, max_ema_endpoint_relative_gap)
 
 
+# 内部完整训练流程：恢复、优化、验证、周期生成、收敛和最终保存。
 def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, preserve_steps,
                   resume_from, max_ema_endpoint_relative_gap):
     tr=config['training'];run=Path(config['run_dir'])
     generation_mse_weight = tr.get('generation_mse_weight', 0.0)
     if not math.isfinite(generation_mse_weight) or generation_mse_weight < 0:
         raise ValueError('generation_mse_weight must be nonnegative and finite')
+# benchmark 模式只执行有限优化步并测量吞吐，不产出正式训练结果。
     benchmarking = benchmark_steps is not None
     primary = ranks.primary
     effective = tr['effective_batch']
     micro = tr['micro_batch'] if local_micro_batch is None else local_micro_batch
+# 按 rank 分配连续微批次，保证全局 batch 仍完整且每卡累积一致。
     shard = microbatch_shard(effective, micro, ranks.size, ranks.rank)
     accumulation_by_rank = [len(microbatch_shard(effective, micro, ranks.size, i))
                             for i in range(ranks.size)]
+# DDP 会对梯度取平均；按全局 batch 比例缩放每个 rank 的微批损失。
     # DDP averages over ranks. Scale each microbatch by its contribution to
     # the global batch, even if some ranks accumulate one more microbatch.
     micro_loss_weight = ranks.size / (effective // micro)
@@ -115,20 +123,25 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         indices=np.sort(np.random.default_rng(config['seed']).choice(indices,tr['train_subset'],replace=False))
     if primary and not benchmarking:
         np.save(run/'train_indices.npy',indices)
+# 只有显式恢复或本地 checkpoint 存在时才加载训练状态。
     restoring = resume and (resume_from is not None or checkpoint_path.exists())
+# 构造模型并按恢复状态决定是否初始化训练均值空条件。
     model = data.build_model(config['model'])
     if not restoring and model.cfg.null_condition_init == 'training_mean':
         model.initialize_null_conditions(*(torch.from_numpy(data.meta[k][indices]) for k in ('pert', 'cell', 'batch')))
     model = model.to(ranks.device).train()
+# AdamW 与双 EMA 是该训练实现的固定优化与评估权重管理方式。
     opt=torch.optim.AdamW(model.parameters(),lr=tr['lr'],betas=tuple(tr['betas']),weight_decay=tr['weight_decay'],fused=True)
     ema=DualEMA(model,tuple(tr['ema_decays'])) if primary else None
     steps_per_epoch=len(indices)//effective
     assert steps_per_epoch>0
+# 根据有效 batch 和总轮数预计算总步数与 warmup 步数。
     total_steps=steps_per_epoch*tr['epochs'];warmup=steps_per_epoch*tr['warmup_epochs']
     step=0;best=float('inf');best_generation=-float('inf');best_generation_epoch=0
     early_reference=-float('inf');early_reference_epoch=0
     pending_generation_epoch=None
     saved_config=run/'config.yaml'
+# 恢复前严格校验配置，并加载模型、优化器、EMA、进度与随机状态。
     if restoring:
         checkpoint=torch.load(checkpoint_path,map_location='cpu',mmap=True,weights_only=False)
         expected_config = checkpoint['config']
@@ -152,6 +165,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         (run/f'source_manifest_step_{step}.json').write_text(json.dumps(manifest,indent=2))
         with tarfile.open(run/f'source_snapshot_step_{step}.tar.gz','w:gz') as archive:
             for p in source_files:archive.add(p,arcname=str(p))
+# 可选编译模型；DDP 模式只编译内部模型以避免优化器兼容问题。
     forward=torch.compile(model,fullgraph=True,mode=tr.get('compile_mode','default')) if tr['compile'] else model
     if ranks.size > 1:
         training_forward = DistributedDataParallel(
@@ -161,18 +175,21 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
     else:
         training_forward = forward
         defer_sync = contextlib.nullcontext
+# 捕获终止信号；当前优化步结束后保存并退出，而非立即中断。
     terminate=[False]
     def on_signal(signum, frame):terminate[0]=True
     signal.signal(signal.SIGTERM,on_signal);signal.signal(signal.SIGINT,on_signal)
     val_indices=np.sort(np.random.default_rng(923).choice(data.val,min(len(data.val),tr['val_cells']),replace=False))
     if primary and not benchmarking:
         np.save(run/'validation_probe_indices.npy',val_indices)
+# 收集所有 rank 的随机状态，由主 rank 原子写入完整 checkpoint。
     def save():
         rank_rng = ranks.gather_rng()
         if primary:
             save_primary(rank_rng)
         ranks.barrier()
 
+# 主 rank 保存模型、优化器、双 EMA、进度和随机状态。
     def save_primary(rank_rng):
         state={'config':config,'model':model.state_dict(),'optimizer':opt.state_dict(),
                'ema':ema.state_dict(),'step':step,'best':best,'best_generation':best_generation,
@@ -181,6 +198,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
             state['rng_by_rank'] = rank_rng
         state.update(early_reference=early_reference,early_reference_epoch=early_reference_epoch)
         state['pending_generation_epoch']=pending_generation_epoch
+# 旧 last.pt 保留到新文件完全刷盘并原子替换后。
         # old last is retained until the new file is completely fsynced.
         atomic_save(state,run/'last.pt')
         if step in preserve_steps:
@@ -226,6 +244,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
     last_log=time.monotonic();losses=[];log_cells=0
     generation_ranks = ranks if ranks.size > 1 and tr.get('distributed_generation', False) else None
 
+# 周期采样前先持久化待处理轮次，采样失败也能从同一轮恢复。
     def epoch_generations(epoch_number):
         nonlocal pending_generation_epoch
         if primary or generation_ranks is not None:
@@ -233,6 +252,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         pending_generation_epoch=None
         save()
 
+# 调用评估模块生成该轮 EMA 状态的验证或诊断候选。
     def generate_epoch(epoch_number):
         nonlocal best_generation,best_generation_epoch,early_reference,early_reference_epoch
         nonlocal last_log,losses,log_cells
@@ -294,6 +314,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         finally:
             ranks.set_local_rng(evaluation_rng)
 
+# 基于验证主分数的耐心轮数执行显式早停，不在 warmup 阶段触发。
     def converged(epoch_number):
         value = (tr.get('early_stop_patience_epochs') and epoch_number>=tr.get('min_epochs',20)
                  and early_reference_epoch and epoch_number-early_reference_epoch>=tr['early_stop_patience_epochs'])
@@ -314,6 +335,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
             within=step%steps_per_epoch
             lr=tr['lr']*((step+1)/warmup if step<warmup else .5*(1+math.cos(math.pi*(step-warmup)/max(1,total_steps-warmup))))
             for group in opt.param_groups:group['lr']=lr
+# 新累积段开始前清空梯度，并按 defer_sync 控制 DDP 同步时机。
             opt.zero_grad(set_to_none=True);batch_loss=torch.zeros((),device=ranks.device)
             for batch in shard:
                 first = within*effective + batch*micro
@@ -337,6 +359,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
             if tr.get('max_grad_norm'):
                 norm=torch.nn.utils.clip_grad_norm_(model.parameters(),tr['max_grad_norm'])
                 if not torch.isfinite(norm):raise FloatingPointError('Nonfinite gradient; previous checkpoint retained')
+# 累积完成后更新参数，再同步两套 EMA 权重副本。
             opt.step()
             if primary:
                 ema.update(model)
@@ -368,6 +391,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                        'cells_per_sec':log_cells/elapsed,'grad_norm':grad_norm.item(),'peak_gpu_GB':torch.cuda.max_memory_allocated()/1e9,'time':timestamp(),**execution}
                 log_event(run/'events.jsonl',event);update_live_status(run,event)
                 losses=[];log_cells=0;last_log=time.monotonic()
+# 每个完整 epoch 或固定验证间隔触发验证。
             epoch_end=step%steps_per_epoch==0
             if epoch_end or step%tr['val_interval_steps']==0:
                 unhealthy = False
@@ -386,6 +410,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                     unhealthy = ranks.from_primary(unhealthy)
                 else:
                     ranks.barrier()
+# EMA 指标显著劣于原始模型时保存 checkpoint 并触发健康停止。
                 if unhealthy:
                     save()
                     if primary:
@@ -397,6 +422,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                     return
             diagnostic_due=(not tr.get('train_subset') and epoch+1 in tr.get('diagnostic_generation_epochs',[]))
             formal_due=(tr.get('val_generation_epochs') and (epoch+1)%tr['val_generation_epochs']==0)
+# 到达诊断或正式采样轮次时先保存 pending_generation_epoch，再采样。
             if epoch_end and (diagnostic_due or formal_due):
                 pending_generation_epoch=epoch+1
                 save()  # persist pending work before sampling, including the final epoch
@@ -411,6 +437,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                 if primary:
                     readme_event(f'`{run}` 收到停止信号，完成当前优化步 {step} 后安全保存。')
                 return
+# 按验证主分数的连续无改善轮数判断收敛；warmup 阶段不会触发。
         # Explicit validation-based early stopping; never stops during warmup.
         if not benchmarking and converged(epoch+1):
             if primary:

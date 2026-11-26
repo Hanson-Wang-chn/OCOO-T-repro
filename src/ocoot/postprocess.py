@@ -21,6 +21,7 @@ DEFAULT_THRESHOLDS = {
 }
 
 
+# 校验并规范化注册的非负零值修正候选。
 def zero_floor(value):
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         raise ValueError('A registered numerical zero floor is required')
@@ -30,6 +31,7 @@ def zero_floor(value):
     return value
 
 
+# 对原始预测应用注册的零值 floor，并保留 dtype 与默认操作语义。
 def apply_zero_floor(raw, floor):
     floor = zero_floor(floor)
     raw = np.asarray(raw)
@@ -39,10 +41,12 @@ def apply_zero_floor(raw, floor):
     return np.maximum(raw, 0) if floor == 0 else np.where(raw < floor, 0, raw)
 
 
+# 综合 PDCorr 与三个 PDS 指标形成候选排序分数。
 def primary_score(metrics):
     return metrics['PDCorr'] + sum(metrics[k] for k in ('PDS_L1', 'PDS_L2', 'PDS_cos')) / 3
 
 
+# 将完整验证指标逐项与阈值比较，返回每项是否通过的布尔表。
 def quality_checks(metrics, thresholds=None):
     thresholds = DEFAULT_THRESHOLDS if thresholds is None else thresholds
     if set(thresholds) != set(DEFAULT_THRESHOLDS) or any(
@@ -53,6 +57,7 @@ def quality_checks(metrics, thresholds=None):
     return {key: margin >= 0 for key, (margin, _) in _quality_margins(metrics, thresholds).items()}
 
 
+# 计算指标相对阈值的原始余量，供筛选与短缺排序复用。
 def _quality_margins(metrics, thresholds):
     pds_keys = ('PDS_L1', 'PDS_L2', 'PDS_cos')
     values = {**metrics, 'mean_PDS': sum(metrics[k] for k in pds_keys) / len(pds_keys)}
@@ -64,6 +69,7 @@ def _quality_margins(metrics, thresholds):
             **{key: (bound - values[key], bound) for key, bound in maximum.items()}}
 
 
+# 筛选完整 CFG 值域内、已 clamp 且全部通过验证阈值的候选。
 def choose_feasible(candidates, thresholds=None):
     feasible = []
     for candidate in candidates:
@@ -78,6 +84,7 @@ def choose_feasible(candidates, thresholds=None):
     return max(feasible, key=lambda r: (primary_score(r['metrics']), -r['zero_floor'])) if feasible else None
 
 
+# 检查计划是否允许在无候选通过时报告最接近阈值的方案。
 def allow_validation_shortfall(plan):
     value = plan.get('allow_validation_shortfall', False)
     if not isinstance(value, bool):
@@ -85,11 +92,13 @@ def allow_validation_shortfall(plan):
     return value
 
 
+# 优先返回通过方案；允许短缺时按归一化阈值短缺排序。
 def choose_validation_candidate(candidates, thresholds, report_shortfall=False):
     feasible = choose_feasible(candidates, thresholds)
     if feasible is not None or not report_shortfall or not candidates:
         return feasible
 
+# 对所有未通过指标的相对短缺求和，再用主分数和 zero_floor 作次级排序。
     def rank(candidate):
         metrics = candidate['metrics']
         shortfall = sum(max(0., -margin) / max(bound, 1e-12)
@@ -99,6 +108,7 @@ def choose_validation_candidate(candidates, thresholds, report_shortfall=False):
     return min(candidates, key=rank)
 
 
+# 核验候选选择证据、脚本哈希、采样参数和保存指标的一致性。
 def verify_selection_postprocessing(selected, require_review=False):
     """Verify the optional layer added to the original calibration provenance."""
     floor = zero_floor(selected.get('zero_floor', 0.))

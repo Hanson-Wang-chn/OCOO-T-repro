@@ -8,6 +8,7 @@ without additional assumptions when any such strata exist.
 import numpy as np
 
 
+# 固定生成总体的条件 Monte Carlo 方差诊断，不改变预测或官方指标。
 def mean_sampling_variance(values, strata):
     """Estimate per-gene-averaged MC variance of a fixed-composition mean.
 
@@ -17,11 +18,13 @@ def mean_sampling_variance(values, strata):
     a common within-stratum variance and extrapolates to singleton strata.
     Stratum means can differ arbitrarily. Both average over all input genes.
     """
+# 校验并把所有输入统一为 float64，避免统计计算受到输入精度影响。
     x = np.asarray(values, dtype=np.float64)
     labels = np.asarray(strata)
     if (x.ndim != 2 or not x.shape[0] or not x.shape[1] or labels.shape != (len(x),)
             or not np.isfinite(x).all()):
         raise ValueError('A finite nonempty cell-by-gene array and aligned stratum labels are required')
+# 识别独立层级并统计重复层级与 singleton 层级。
     _, inverse, counts = np.unique(labels, return_inverse=True, return_counts=True)
     total, genes = x.shape
     repeated = counts >= 2
@@ -29,6 +32,7 @@ def mean_sampling_variance(values, strata):
     degrees = int(np.sum(counts - 1))
     partial, within_ss = 0., 0.
     for group, count in enumerate(counts):
+# 未重复的层级无法由该总体内数据估计条件方差，保留为缺失。
         if count < 2:
             continue
         group_x = x[inverse == group]

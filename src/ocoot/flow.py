@@ -2,12 +2,14 @@
 import torch
 
 
+# 构造流模型训练样本：对数据噪声插值，并返回速度监督目标。
 def flow_batch(x, noise_std=1.0, p_mean=-0.8, p_std=0.8, generator=None):
     t = torch.sigmoid(torch.randn(len(x), device=x.device, generator=generator) * p_std + p_mean)
     eps = torch.randn(x.shape, device=x.device, dtype=x.dtype, generator=generator) * noise_std
     return t[:, None] * x + (1 - t[:, None]) * eps, t, x - eps
 
 
+# 普通 CFG 或四路分类器自由引导速度场；w=None 时不叠加无条件分量。
 def guided_velocity(model, z, t, pert, cell, batch, w=None):
     # w=None means the ordinary fully conditional field. w=1 in Eq.11 is
     # NOT the ordinary field: the two half-weight terms also remain active.
@@ -22,7 +24,9 @@ def guided_velocity(model, z, t, pert, cell, batch, w=None):
     return vu + w / 2 * (vc - vu) + w / 2 * (vp - vu) + w * (vpc - vu)
 
 
+# 采样过程中不构建反向图；依据时间区间启用双精度或 BF16 推理。
 @torch.no_grad()
+# 从高斯噪声出发，使用最终区间 Euler 与中间区间 midpoint-style 二阶积分。
 def sample(model, pert, cell, batch, n_genes, steps=50, noise_std=1., guidance=None,
            cfg_min=0.1, cfg_max=0.9, seed=0, clamp=False):
     device = pert.device

@@ -1,0 +1,67 @@
+{
+  "time": "2026-11-26T18:17:39+08:00",
+  "method": "Python AST equality with type comments and YAML safe-load equality",
+  "baseline_commit": "0849e8e",
+  "files": {
+    "configs/repro3_main.yaml": {
+      "git_version_sha256": "6a68024c477201b7c6d80248969a94c13dcb7ee251dc027772ac79c43be5e3e6",
+      "workspace_sha256": "813b7ac0c6808bb9e10967e86d0d0a2d259820b792f4ebc72fa2c523bc5fff53",
+      "parsed_contents_equal": true
+    },
+    "scripts/run_experiment.py": {
+      "git_version_sha256": "a37662647d3437b6de5cda3b80c3b4ff564a25ebc77741acd084baeb706dc780",
+      "workspace_sha256": "501fb802aed504df9bd25d988b36e12b14421fe3ef1e7301d2c3a8330990af7e",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/__init__.py": {
+      "git_version_sha256": "2e8f7b6286600d214668a14aab22ddd111e710e371826772841588b86466f9a0",
+      "workspace_sha256": "4ee68d71d48c76e72e05f07e7cedcc7e4f1690c4f80faeb555c01d47e49cb013",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/data.py": {
+      "git_version_sha256": "d62ba2f7016509a29e02db505bc6cdb58244e7ecc486df504c2923788dab8a5c",
+      "workspace_sha256": "fb813441832e0f18795e424cda9e93c5fcce92b4b93830ad7c9bfe26ce209b9b",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/distributed.py": {
+      "git_version_sha256": "c2a476754942b112134ec2b62e72a8dce99a6ac95e4579abfac8163f5cbac4bc",
+      "workspace_sha256": "1d733165581b3094f77f4f7f0fe68027823ac52124277fe6850c9e56525e8c35",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/evaluate.py": {
+      "git_version_sha256": "05bd7bea99e012dc264290b3f8daace4e66be78c874180189554ea0ca8850ee2",
+      "workspace_sha256": "f547f0bc95c5d90c7a16c8fa1da202af5bac0253ae0d985cc7fb7ec0db860f5e",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/flow.py": {
+      "git_version_sha256": "2fb0dbb7432994b127e0893b4196146e05a78735d9d68de6768219b5a6325d78",
+      "workspace_sha256": "d4518079ac692923f365e526aa0c5a8451850e6c92cb9479a88a498811caedd1",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/mc_diagnostics.py": {
+      "git_version_sha256": "b814931ed6ffb9c1ff08c2a6de133292184b9aba208914f75d3420e984b20981",
+      "workspace_sha256": "b4d2a02119a1bc0a3d12179274948322214bdd371d8cf133dfff90f72040dce9",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/model.py": {
+      "git_version_sha256": "fd05b58342d593abb91b4b8fc6cdd600a3a72f5b74382d10361d4653191dc85e",
+      "workspace_sha256": "c6b3b65c1efa88c1a203c13ff3b82ba259fbacaad7fcd84e4304b878b0184406",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/postprocess.py": {
+      "git_version_sha256": "8abea4ea8d3d79b274b1ffcccfb04c889f982f407682442325fc3efb1a4513a5",
+      "workspace_sha256": "a462c7b34cf2aa2947a5907719ea0cdebfedb9f91d1a46f1693b643baabd479f",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/runtime.py": {
+      "git_version_sha256": "045ec23291deaa37e79577c3d7b323466a2c23f9dfa35dd4b7b2c9e0438a9d61",
+      "workspace_sha256": "dd0b7a5e89c20c021f48689022ec38a0c859abecfe42e1af92fb9876cc15cb6a",
+      "parsed_contents_equal": true
+    },
+    "src/ocoot/train.py": {
+      "git_version_sha256": "1b82858a6a978eb35674f743868048d7d17077f0c197c9e237ef8c7cf14307a5",
+      "workspace_sha256": "a418fa8d914d302606b8c69ba60b4fa2e8c0a1449e60717d690973eec95cb38b",
+      "parsed_contents_equal": true
+    }
+  }
+}

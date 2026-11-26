@@ -5,7 +5,9 @@ import torch
 from .model import ModelConfig, OCOOT
 
 
+# 基准数据访问器：统一加载表达矩阵、元数据、词表及模型所需 embedding。
 class BenchmarkData:
+# 使用 mmap 读取表达矩阵，并按 metadata 中的 split 编码划分训练、验证、测试和 control。
     def __init__(self, path='data/processed'):
         self.path=Path(path)
         self.x=np.load(self.path/'expression.npy',mmap_mode='r')
@@ -16,14 +18,17 @@ class BenchmarkData:
         self.test=np.flatnonzero(self.meta['split']==2)
         self.control=np.flatnonzero(self.meta['split']==3)
 
+# 将 NumPy 索引批次转换为 GPU Tensor，并按顺序返回表达值与扰动、细胞、batch ID。
     def batch(self, indices, device='cuda'):
         return (torch.from_numpy(np.array(self.x[indices],dtype=np.float32)).to(device),
                 *[torch.from_numpy(self.meta[k][indices]).to(device) for k in ['pert','cell','batch']])
 
+# 从词表和 embedding 包重建模型，并保留缺失基因信息。
     def build_model(self, cfg):
         emb=torch.load(self.path/'embeddings.pt',map_location='cpu',weights_only=True)
         return OCOOT(ModelConfig(**cfg),emb['embeddings'],torch.tensor(self.meta['gene_indices']),len(self.vocab['cell_lines']),len(self.vocab['batches']),emb['missing'])
 
+# 验证或测试切分按扰动类型分组，必要时进行可复现的限量抽样。
     def evaluation_indices(self, split='validation', cap=None, seed=123):
         idx=self.val if split=='validation' else self.test
         if cap is None: return idx

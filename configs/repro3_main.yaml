@@ -1,65 +1,101 @@
+# OCOO-T Replogle–Nadig 第三轮全量复现配置。
+# 本配置用于正式全量训练及周期验证；脚本 run_experiment.py 另负责验证集采样校准、
+# 完整验证质量门控和冻结后的正式测试。配置中的周期验证不是正式测试。
+# 实验背景、第三轮小实验选择与复现状态见 README.md；不要将本配置改作 pilot 子集实验。
 seed: 42
+# 已按官方 Replogle–Nadig 划分准备的数据；沿用预处理后的 2,000 个 HVG。
 data_dir: data/processed
+# 本次完整运行的产物根目录；断点、周期验证、校准、测试和报告均保存在此处。
 run_dir: runs/repro3_main
 model:
+  # 12 层、768 维、12 头的主干；mlp_ratio 与 SwiGLU 约定共同确定前馈层宽度。
   dim: 768
   depth: 12
   heads: 12
   mlp_ratio: 4.0
+  # JiT 参数匹配约定：ratio=4 时采用 2048 的 SwiGLU 隐层宽度。
   swiglu_convention: param_matched
+  # 32 个上下文 token 从零基第 3 层（第 4 层）前开始注入。
   context_tokens: 32
   context_start: 3
+  # 扰动和细胞条件独立 dropout 的概率；用于训练分类器自由引导所需的条件分支。
   drop_prob: 0.1
+  # 表达值输入投影的隐藏宽度；时间正弦特征维度及其尺度。
   value_hidden: 768
   time_dim: 256
   time_scale: 1.0
+  # 使用基因位置编码；对原位置编码幅度不额外缩放。
   pos_encoding: true
+  # 启用 batch 标签嵌入；细胞系条件另由 cell embedding 表示。
   batch_condition: true
+  # 细胞标签嵌入初始化标准差为 1；batch 标签嵌入初始化标准差为 0.02。
   cell_init_std: 1.0
   batch_init_std: 0.02
+  # 不启用激活重计算；这是本次登记的训练执行配置。
   grad_checkpoint: false
+  # 保持基因位置编码和基因投影的默认幅度；null 条件向量从零初始化。
   position_scale: 1.0
   gene_proj_init_scale: 1.0
   null_condition_init: zero
 training:
+  # 训练最多 55 轮；至少 20 轮后，验证选择分数连续 10 轮未改善 0.002 即早停。
   epochs: 55
   min_epochs: 20
   early_stop_patience_epochs: 10
   early_stop_min_delta: 0.002
+  # 前 5 轮线性 warmup，之后依训练预算进行余弦衰减。
   warmup_epochs: 5
+  # 每卡 micro-batch 16；四卡 DDP 下通过梯度累积保持全局有效 batch=512。
   micro_batch: 16
   effective_batch: 512
+  # AdamW 峰值学习率及 beta；零 weight decay 与本轮锁定设置一致。
   lr: 0.0001
   betas:
   - 0.9
   - 0.95
   weight_decay: 0.0
+  # 第三轮配对小实验选择的噪声标准差；训练流匹配及生成初始噪声共用此值。
+  # 时间 t 从 sigmoid(N(p_mean,p_std^2)) 采样。
   noise_std: 0.75
   p_mean: -0.8
   p_std: 0.8
+  # 同时维护两条 EMA；正式生成/校准使用论文默认的 0.9996，另一条用于保留和诊断。
   ema_decays:
   - 0.9999
   - 0.9996
+  # 编译模型核心以加速训练；使用默认编译模式。
   compile: true
   compile_mode: default
+  # 训练数据保留在 CPU，按批送入设备；null 表示不限制训练数据子集，即全量数据。
   data_on_gpu: false
   train_subset: null
+  # 定期完整保存训练状态并记录训练日志的步数间隔。
   checkpoint_steps: 50
   log_steps: 5
+  # 周期快速验证：固定 1024 个细胞，每 5 轮生成一次，最多每扰动采样 32 个。
+  # 生成使用 50 步，结果仅用于模型选择/训练监控，不是最终全验证或正式测试。
   val_cells: 1024
   val_interval_steps: 250
   val_generation_epochs: 5
   val_generation_cap: 32
   val_generation_steps: 50
   val_generation_batch: 32
+  # 不额外安排原始权重诊断轮次；正式周期生成使用 EMA 权重。
   diagnostic_generation_epochs: []
   diagnostic_generation_cap: 8
+  # 不设置梯度范数裁剪阈值。
   max_grad_norm: null
+  # 训练期间的验证生成可分发到多个本地 GPU。
   distributed_generation: true
+  # 周期验证的模型选择分数在主分数上扣除 10 倍 MSE；只影响验证选型，
+  # 不改变训练目标。校准脚本须通过同名 CLI 参数沿用此权重。
   generation_mse_weight: 10.0
 sampling:
+  # 训练过程中的默认验证采样：50 步双 CFG，指导尺度 1.5，仅在 [0.1,0.9] 时间窗启用。
+  # 正式评估会以验证集校准并冻结的选择为准，不会仅凭此处默认值启动测试。
   steps: 50
   guidance: 1.5
   cfg_min: 0.1
   cfg_max: 0.9
+  # 对默认验证输出裁负；正式候选评估另外保留原始输出，并按登记的阈值比较。
   clamp: true
