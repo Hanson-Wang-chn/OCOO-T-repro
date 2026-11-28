@@ -6,8 +6,6 @@ import math
 import os
 from pathlib import Path
 
-os.environ['CUDA_VISIBLE_DEVICES'] = ''
-
 import numpy as np
 import pandas as pd
 import torch
@@ -15,7 +13,8 @@ import torch
 from ocoot.data import BenchmarkData
 from ocoot.evaluate import METRICS, official_metrics
 from ocoot.postprocess import (DEFAULT_THRESHOLDS, SUPPORTED_FLOORS, allow_validation_shortfall,
-                              apply_zero_floor, choose_validation_candidate, primary_score, quality_checks)
+                              apply_zero_floor, choose_validation_candidate, primary_score, quality_checks,
+                              selection_score)
 from ocoot.runtime import exclusive_run, file_sha256, timestamp
 
 
@@ -75,9 +74,10 @@ def load_calibration(calibration):
     indices = data.evaluation_indices('validation', None)
     records = json.loads((calibration / 'all_results.json').read_text())
     refinements = [r for r in records if r['tag'].startswith('refine_')]
-    if (len(refinements) != 2 or len({r['tag'] for r in refinements}) != 2
-            or len({(r['guidance'], r['cfg_min'], r['cfg_max']) for r in refinements}) != 2):
-        raise ValueError('The registered calibration requires two distinct full refinements')
+    count = len(refinements)
+    if (count < 2 or len({r['tag'] for r in refinements}) != count
+            or len({(r['guidance'], r['cfg_min'], r['cfg_max']) for r in refinements}) != count):
+        raise ValueError('The registered calibration requires at least two distinct full refinements')
     return calibration, provenance, original, cfg, data, indices, refinements
 
 
@@ -117,6 +117,13 @@ def select(calibration, destination, plan_path):
         raise ValueError('Use the registered two floors and unchanged quality checks')
     report_shortfall = allow_validation_shortfall(plan)
     calibration, provenance, original, cfg, data, indices, refinements = load_calibration(calibration)
+    mse_weight = provenance.get('mse_weight', 0.0)
+    if (not math.isfinite(mse_weight) or mse_weight < 0
+            or original.get('mse_weight', 0.0) != mse_weight
+            or plan.get('calibration', {}).get('mse_weight', mse_weight) != mse_weight):
+        raise ValueError('The registered postprocessing and calibration MSE weights differ')
+    if plan.get('calibration', {}).get('refine_top', len(refinements)) != len(refinements):
+        raise ValueError('The registered full refinement count differs from calibration')
     destination = Path(destination).resolve()
     sources = [Path(r['cache_provenance']['directory']).resolve() for r in refinements]
     if (destination == calibration or any(source == destination or source in destination.parents
@@ -168,17 +175,21 @@ def select(calibration, destination, plan_path):
                         official_metrics(data, indices, apply_zero_floor(raw, floor), metric_dir, de=True)
                     metrics = verified_metrics(metric_dir, conditions=conditions, labels=labels)
                 candidate = {**copy.deepcopy(record), 'zero_floor': floor, 'metrics': metrics,
-                             'score': primary_score(metrics), 'checks': quality_checks(metrics, plan['quality_thresholds']),
+                             'score': primary_score(metrics), 'mse_weight': mse_weight,
+                             'selection_score': selection_score(metrics, mse_weight),
+                             'checks': quality_checks(metrics, plan['quality_thresholds']),
                              'candidate_metrics_path': str((metric_dir / 'summary.json').resolve())}
                 candidates.append(candidate)
-        chosen = choose_validation_candidate(candidates, plan['quality_thresholds'], report_shortfall)
+        chosen = choose_validation_candidate(candidates, plan['quality_thresholds'], report_shortfall, mse_weight)
         review = {'time': timestamp(), 'scope': 'complete validation only',
                   'cells_each': len(indices), 'perturbations': conditions,
                   'thresholds': plan['quality_thresholds'], 'candidates': candidates,
-                  'selected': chosen, 'protocol': protocol,
+                  'selected': chosen, 'protocol': protocol, 'mse_weight': mse_weight,
+                  'score': chosen['score'] if chosen is not None else None,
+                  'selection_score': chosen['selection_score'] if chosen is not None else None,
                   'test_access': False, 'new_generated_samples': 0,
                   'allow_validation_shortfall': report_shortfall,
-                  'decision_policy': ('Highest primary score among candidates passing all original checks. With explicit'
+                  'decision_policy': ('Highest PDCorr plus mean PDS minus weighted MSE among candidates passing all original checks. With explicit'
                                       ' report mode and no passing case, choose the lowest total relative shortfall.')}
         review_path = destination / 'review.json'
         atomic_json(review_path, review)

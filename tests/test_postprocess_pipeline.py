@@ -9,13 +9,23 @@ import sys
 import pytest
 import yaml
 
-from ocoot.postprocess import DEFAULT_THRESHOLDS
+from ocoot.postprocess import DEFAULT_THRESHOLDS, choose_validation_candidate
 from ocoot.runtime import file_sha256
 
 
 def metrics():
     return {'PDCorr': .4, 'DEOver': .21, 'DEPrec': .22, 'DirAgr': .76,
             'PDS_L1': .8, 'PDS_L2': .82, 'PDS_cos': .81, 'MSE': .009, 'MAE': .06}
+
+
+def test_round_three_full_validation_uses_registered_mse_weight():
+    evidence = Path(__file__).resolve().parents[1] / 'runs/repro3_main/calibration/postprocessing/review.json'
+    candidates = json.loads(evidence.read_text())['candidates']
+    assert len(candidates) == 4
+    legacy = choose_validation_candidate(candidates, DEFAULT_THRESHOLDS)
+    weighted = choose_validation_candidate(candidates, DEFAULT_THRESHOLDS, mse_weight=10.0)
+    assert (legacy['guidance'], legacy['zero_floor']) == (1.375, .05)
+    assert (weighted['guidance'], weighted['zero_floor']) == (1.125, .05)
 
 
 def setup_pipeline(tmp_path, monkeypatch, use_postprocess, no_feasible=False, changed_gate=False,
@@ -132,3 +142,56 @@ def test_registered_full_test_preserves_and_reports_validation_shortfall(tmp_pat
     states = [json.loads(line).get('stage') for line in (run / 'events.jsonl').read_text().splitlines()]
     assert states.index('validation_shortfall_reported') < states.index('full_test_de_with_frozen_postprocess')
     assert states[-1] == 'evaluated'
+
+
+def test_parent_forwards_calibration_windows_screen_cap_and_refine_top(tmp_path, monkeypatch):
+    main, run, calls = setup_pipeline(tmp_path, monkeypatch, True)
+    plan = tmp_path / 'postprocess_plan.json'
+    body = json.loads(plan.read_text())
+    body['calibration'] = {'mse_weight': 10.0, 'screen_cap': 24, 'refine_top': 3}
+    plan.write_text(json.dumps(body))
+    monkeypatch.setattr(sys, 'argv', [
+        'run_experiment.py', '--config', str(tmp_path / 'config.yaml'), '--postprocess-plan', str(plan),
+        '--calibration-scales', '0.75,1.05,1.25', '--calibration-windows', '0.0:0.75,0.0:0.85,0.0:1.0',
+        '--calibration-screen-cap', '24', '--calibration-refine-top', '3', '--calibration-mse-weight', '10.0',
+    ])
+    # Update fake calibrate output to carry matching mse_weight=10.0
+    namespace = runpy.run_path(str(Path(__file__).resolve().parents[1] / 'scripts/run_experiment.py'))
+    module = namespace['main'].__globals__
+    monkeypatch.setitem(module, 'readme_event', lambda *args, **kwargs: None)
+    recorded = []
+    checkpoint = run / 'best_generation.pt'
+
+    def fake_run(command, **kwargs):
+        recorded.append(command)
+        script = Path(command[1]).name
+        option = lambda key: Path(command[command.index(key) + 1])
+        if script == 'calibrate.py':
+            out = option('--outdir'); out.mkdir()
+            selected = {'checkpoint': str(checkpoint), 'checkpoint_sha256': file_sha256(checkpoint),
+                        'formal_guidance_policy': 'literal_dual_cfg_positive_scale',
+                        'weights': 'ema_0.9996', 'cap': None, 'cache_provenance': {'directory': 'fixture'},
+                        'guidance': 1.15, 'cfg_min': 0.0, 'cfg_max': 0.85, 'batch_size': 32, 'clamp': True,
+                        'mse_weight': 10.0}
+            (out / 'selected.json').write_text(json.dumps(selected))
+        elif script == 'select_validation_postprocess.py':
+            out = option('--outdir'); out.mkdir()
+            selected = json.loads((option('--calibration') / 'selected.json').read_text())
+            selected['zero_floor'] = .05
+            (out / 'selected.json').write_text(json.dumps(selected))
+        elif script in ('promote_validation_cache.py', 'evaluate.py', 'evaluate_postprocess.py'):
+            out = option('--outdir'); (out / 'metrics').mkdir(parents=True)
+            (out / 'metrics/summary.json').write_text(json.dumps(metrics()))
+        elif script == 'report.py':
+            out = option('--outdir'); out.mkdir(parents=True)
+            (out / 'REPORT.md').write_text('ok')
+        return subprocess.CompletedProcess(command, 0)
+
+    monkeypatch.setattr(module['subprocess'], 'run', fake_run)
+    namespace['main']()
+    cal_cmd = recorded[0]
+    assert Path(cal_cmd[1]).name == 'calibrate.py'
+    assert cal_cmd[cal_cmd.index('--screen-cap') + 1] == '24'
+    assert cal_cmd[cal_cmd.index('--refine-top') + 1] == '3'
+    assert cal_cmd[cal_cmd.index('--windows') + 1] == '0.0:0.75,0.0:0.85,0.0:1.0'
+    assert cal_cmd[cal_cmd.index('--mse-weight') + 1] == '10.0'

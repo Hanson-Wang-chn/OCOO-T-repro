@@ -1,4 +1,5 @@
 """The validation workflow must preserve the paper's inference mechanism."""
+import argparse
 import json
 from pathlib import Path
 import runpy
@@ -6,6 +7,37 @@ import sys
 
 import numpy as np
 import pytest
+
+
+@pytest.fixture
+def calibration():
+    return runpy.run_path(str(Path(__file__).resolve().parents[1] / 'scripts/calibrate.py'))
+
+
+def test_calibration_windows_parser(calibration):
+    parse = calibration['parse_windows']
+    assert parse('0.05:0.75,.1:.9,0:1') == [(0.05, .75), (.1, .9), (0., 1.)]
+    for invalid in ('', '0', '0:.5:1', '0:0', '1:0', '-1:.9', '.1:1.2', 'nan:1', '0:1,0.0:1.0'):
+        with pytest.raises(argparse.ArgumentTypeError):
+            parse(invalid)
+
+
+def test_calibration_three_refinements_include_low_mse_and_an_unused_window(calibration):
+    def candidate(guidance, high, pdcorr, mse):
+        return {'guidance': guidance, 'cfg_min': .1, 'cfg_max': high,
+                'metrics': {'PDCorr': pdcorr, 'MSE': mse, 'PDS_L1': .8, 'PDS_L2': .8, 'PDS_cos': .8}}
+
+    unguided = candidate(None, .9, .99, .001)
+    best = candidate(1.05, .75, .45, .009)
+    low_mse = candidate(.85, .75, .38, .005)
+    next_same_window = candidate(.95, .75, .43, .009)
+    next_window = candidate(1.05, .85, .41, .009)
+    far_low_mse = candidate(.65, .9, .30, .004)
+    select = calibration['choose_refinements']
+    assert select([unguided, low_mse, best, next_same_window, next_window, far_low_mse], 3, 10) == [best, low_mse, next_window]
+    assert select([low_mse, next_same_window, best], 3, 10) == [best, low_mse, next_same_window]
+    with pytest.raises(ValueError, match='refine-top'):
+        select([unguided, best], 3, 10)
 
 
 @pytest.mark.parametrize('conditional_score', [.99, .50])

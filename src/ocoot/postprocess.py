@@ -46,6 +46,10 @@ def primary_score(metrics):
     return metrics['PDCorr'] + sum(metrics[k] for k in ('PDS_L1', 'PDS_L2', 'PDS_cos')) / 3
 
 
+def selection_score(metrics, mse_weight=0.0):
+    return primary_score(metrics) - mse_weight * metrics['MSE']
+
+
 # 将完整验证指标逐项与阈值比较，返回每项是否通过的布尔表。
 def quality_checks(metrics, thresholds=None):
     thresholds = DEFAULT_THRESHOLDS if thresholds is None else thresholds
@@ -70,18 +74,17 @@ def _quality_margins(metrics, thresholds):
 
 
 # 筛选完整 CFG 值域内、已 clamp 且全部通过验证阈值的候选。
-def choose_feasible(candidates, thresholds=None):
+def choose_feasible(candidates, thresholds=None, mse_weight=0.0):
     feasible = []
     for candidate in candidates:
         w = candidate.get('guidance')
         if (candidate.get('cap', 'missing') is not None or w is None
                 or not math.isfinite(w) or w <= 0 or not candidate.get('clamp')):
             raise ValueError('Postprocessing selection requires full positive-CFG candidates')
-        floor = zero_floor(candidate['zero_floor'])
+        zero_floor(candidate['zero_floor'])
         if all(quality_checks(candidate['metrics'], thresholds).values()):
             feasible.append(candidate)
-    # Prefer the simpler original transformation when primary scores tie.
-    return max(feasible, key=lambda r: (primary_score(r['metrics']), -r['zero_floor'])) if feasible else None
+    return max(feasible, key=lambda r: (selection_score(r['metrics'], mse_weight), -r['zero_floor'])) if feasible else None
 
 
 # 检查计划是否允许在无候选通过时报告最接近阈值的方案。
@@ -93,17 +96,17 @@ def allow_validation_shortfall(plan):
 
 
 # 优先返回通过方案；允许短缺时按归一化阈值短缺排序。
-def choose_validation_candidate(candidates, thresholds, report_shortfall=False):
-    feasible = choose_feasible(candidates, thresholds)
+def choose_validation_candidate(candidates, thresholds, report_shortfall=False, mse_weight=0.0):
+    feasible = choose_feasible(candidates, thresholds, mse_weight)
     if feasible is not None or not report_shortfall or not candidates:
         return feasible
 
-# 对所有未通过指标的相对短缺求和，再用主分数和 zero_floor 作次级排序。
+# 对所有未通过指标的相对短缺求和，再用选型分数和 zero_floor 作次级排序。
     def rank(candidate):
         metrics = candidate['metrics']
         shortfall = sum(max(0., -margin) / max(bound, 1e-12)
                         for margin, bound in _quality_margins(metrics, thresholds).values())
-        return shortfall, -primary_score(metrics), candidate['zero_floor']
+        return shortfall, -selection_score(metrics, mse_weight), candidate['zero_floor']
 
     return min(candidates, key=rank)
 
@@ -135,7 +138,20 @@ def verify_selection_postprocessing(selected, require_review=False):
     report_shortfall = allow_validation_shortfall(plan)
     if review.get('allow_validation_shortfall', False) != report_shortfall:
         raise ValueError('Validation shortfall policy differs')
-    best = choose_validation_candidate(review['candidates'], review['thresholds'], report_shortfall)
+    mse_weight = review.get('mse_weight', 0.0)
+    if 'mse_weight' in review:
+        if (not math.isfinite(mse_weight) or mse_weight < 0
+                or plan.get('calibration', {}).get('mse_weight', mse_weight) != mse_weight
+                or selected.get('mse_weight', 0.0) != mse_weight):
+            raise ValueError('Postprocessing selection MSE weight differs')
+        for candidate in review['candidates']:
+            if (candidate.get('mse_weight') != mse_weight or candidate.get('score') != primary_score(candidate['metrics'])
+                    or candidate.get('selection_score') != selection_score(candidate['metrics'], mse_weight)):
+                raise ValueError('Postprocessing candidate scores differ')
+        if (selected.get('score') != primary_score(selected['metrics'])
+                or selected.get('selection_score') != selection_score(selected['metrics'], mse_weight)):
+            raise ValueError('Selected postprocessing scores differ')
+    best = choose_validation_candidate(review['candidates'], review['thresholds'], report_shortfall, mse_weight)
     if best is None or (best['tag'], best['zero_floor']) != (choice['tag'], floor):
         raise ValueError('Review did not select the best registered candidate')
     for key in ('guidance', 'cfg_min', 'cfg_max', 'cap', 'clamp'):

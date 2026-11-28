@@ -54,12 +54,20 @@ def main():
     p.add_argument('--calibration-scales',help='Comma-separated positive guidance scales')
     p.add_argument('--calibration-mse-weight',type=float,default=0.0,help='MSE penalty for calibration selection')
     p.add_argument('--compare-windows',action='store_true',help='Screen positive scales in both guidance windows')
+    p.add_argument('--calibration-windows', help='Comma-separated low:high guidance windows')
+    p.add_argument('--calibration-screen-cap', type=int, help='Per-perturbation validation cell cap during screening')
+    p.add_argument('--calibration-refine-top', type=int, default=2, help='Number of screening cases to refine')
+    p.add_argument('--calibration-checkpoint', type=Path, help='EMA checkpoint chosen on validation')
+    p.add_argument('--calibration-dir', type=Path, help='Use a registered validation calibration directory')
     p.add_argument('--min-val-pdcorr',type=float,default=.35);p.add_argument('--min-val-pds',type=float,default=.75)
     p.add_argument('--min-val-pds-each',type=float,default=.70)
     p.add_argument('--max-val-mse',type=float,default=.02);p.add_argument('--max-val-mae',type=float,default=.09)
     p.add_argument('--min-val-deover',type=float,default=.18);p.add_argument('--min-val-deprec',type=float,default=.18)
     p.add_argument('--min-val-diragr',type=float,default=.70);a=p.parse_args()
     if a.gpu_workers < 1:p.error('gpu-workers must be positive')
+    if a.calibration_refine_top < 1:p.error('calibration-refine-top must be positive')
+    if a.calibration_screen_cap is not None and a.calibration_screen_cap < 1:
+        p.error('calibration-screen-cap must be positive')
     if not math.isfinite(a.calibration_mse_weight) or a.calibration_mse_weight < 0:
         p.error('calibration-mse-weight must be nonnegative and finite')
     cfg=yaml.safe_load(open(a.config));run=Path(cfg['run_dir']);run.mkdir(exist_ok=True,parents=True)
@@ -72,6 +80,14 @@ def main():
         postprocess_plan=json.loads(Path(a.postprocess_plan).read_text())
         if postprocess_plan['quality_thresholds']!=thresholds or thresholds!=DEFAULT_THRESHOLDS:
             raise ValueError('Optional postprocessing must preserve every original validation threshold')
+        plan_cal = postprocess_plan.get('calibration', {})
+        if plan_cal.get('mse_weight', a.calibration_mse_weight) != a.calibration_mse_weight:
+            raise ValueError('The requested MSE weight differs from the postprocessing plan')
+        if plan_cal.get('refine_top', a.calibration_refine_top) != a.calibration_refine_top:
+            raise ValueError('The requested refine_top differs from the postprocessing plan')
+        effective_screen_cap = 16 if a.calibration_screen_cap is None else a.calibration_screen_cap
+        if plan_cal.get('screen_cap', effective_screen_cap) != effective_screen_cap:
+            raise ValueError('The requested screen_cap differs from the postprocessing plan')
         report_shortfall=allow_validation_shortfall(postprocess_plan)
     with exclusive_run(run,'pipeline'):
         (run/'pipeline.pid').write_text(str(os.getpid()))
@@ -104,9 +120,9 @@ def main():
                 wait_for_existing_training(run)
                 if not (run/'finished.json').exists():execute(['scripts/train.py','--config',a.config],parallel=True)
                 if not (run/'finished.json').exists():raise RuntimeError('Training stopped before completion; checkpoint retained')
-            checkpoint=run/'best_generation.pt'
+            checkpoint=a.calibration_checkpoint or run/'best_generation.pt'
             if not checkpoint.exists():raise RuntimeError('No EMA generation checkpoint has been selected')
-            calibration=run/'calibration'
+            calibration=a.calibration_dir or run/'calibration'
             if not (calibration/'selected.json').exists():
                 # 在验证集上筛选正尺度双 CFG；可按登记尺度和两个时间窗筛选，
                 # MSE 权重仅影响验证候选排序，不改变训练损失。
@@ -115,12 +131,18 @@ def main():
                 if a.calibration_scales:args+=['--scales',a.calibration_scales]
                 if a.calibration_mse_weight:args+=['--mse-weight',str(a.calibration_mse_weight)]
                 if a.compare_windows:args+=['--compare-windows']
+                if a.calibration_windows:args+=['--windows',a.calibration_windows]
+                if a.calibration_screen_cap is not None:args+=['--screen-cap',str(a.calibration_screen_cap)]
+                if a.calibration_refine_top != 2:args+=['--refine-top',str(a.calibration_refine_top)]
                 execute(args,parallel=True)
             selection_file=calibration/'selected.json'
             # 若 calibration 已存在，仍核对其 MSE 选择权重与本次请求一致，
             # 防止将旧设置下的选择误用于本次正式复现。
-            if json.loads(selection_file.read_text()).get('mse_weight', 0.0) != a.calibration_mse_weight:
+            base_selection = json.loads(selection_file.read_text())
+            if base_selection.get('mse_weight', 0.0) != a.calibration_mse_weight:
                 raise ValueError('The requested MSE weight differs from the completed calibration')
+            if Path(base_selection['checkpoint']).resolve() != checkpoint.resolve():
+                raise ValueError('The completed calibration used another checkpoint')
             if a.postprocess_plan:
                 # 登记的可选流程在完整验证原始缓存上比较后处理候选；短缺规则及
                 # 选择结果均写入独立目录，后续测试只采用已冻结的 selection_file。

@@ -1,0 +1,52 @@
+{
+  "floors": [
+    0.0,
+    0.05
+  ],
+  "quality_thresholds": {
+    "min_val_pdcorr": 0.35,
+    "min_val_pds": 0.75,
+    "min_val_pds_each": 0.7,
+    "max_val_mse": 0.02,
+    "max_val_mae": 0.09,
+    "min_val_deover": 0.18,
+    "min_val_deprec": 0.18,
+    "min_val_diragr": 0.7
+  },
+  "allow_validation_shortfall": false,
+  "selection": "Rank feasible full-validation candidates by PDCorr + mean(PDS) - 10 * MSE (consistent with calibration). Stop before test if no candidate passes every original validation check.",
+  "scope": "OCOO-T v2 Table 3 short-panel official full validation and a single frozen full test on Replogle\u2013Nadig (Round 5).",
+  "calibration": {
+    "scales": [
+      0.75,
+      0.9,
+      1.05,
+      1.15,
+      1.25,
+      1.375
+    ],
+    "windows": [
+      [
+        0.0,
+        0.75
+      ],
+      [
+        0.0,
+        0.85
+      ],
+      [
+        0.05,
+        0.85
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "screen_cap": 24,
+    "refine_top": 3,
+    "seed": 4242,
+    "batch_size": 32,
+    "mse_weight": 10.0
+  }
+}

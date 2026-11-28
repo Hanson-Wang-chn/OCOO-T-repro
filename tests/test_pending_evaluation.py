@@ -92,3 +92,48 @@ def test_resume_pending_generation(tmp_path,monkeypatch,epochs):
     assert (tmp_path/'last.pt').stat().st_mtime_ns==before
     with pytest.raises(FileExistsError,match='new run_dir'):
         trainer.train(config,resume=False)
+
+
+@pytest.mark.skipif(not torch.cuda.is_available(), reason='Single-GPU trainer integration')
+@pytest.mark.parametrize('min_step,finished', [(12000, True), (2, False)])
+def test_ema_health_warmup_and_validation_diagnostics(tmp_path, monkeypatch, min_step, finished):
+    monkeypatch.setattr(trainer, 'BenchmarkData', MemoryData)
+    monkeypatch.setattr(trainer, 'readme_event', lambda *args, **kwargs: None)
+    monkeypatch.setattr(trainer, 'update_live_status', lambda *args, **kwargs: None)
+    endpoints = iter([.1, .2, .1, .2])
+    monkeypatch.setattr(trainer, 'validate', lambda *args: {'endpoint_mse': next(endpoints)})
+    calls = []
+
+    def generate(forward, data, indices, outdir, **sampling):
+        calls.append((Path(outdir).name, sampling['guidance']))
+        return data.x[indices]
+
+    monkeypatch.setattr(evaluation, 'generate', generate)
+    monkeypatch.setattr(evaluation, 'official_metrics', lambda *args: {
+        'PDCorr': .3, 'PDS_L1': .7, 'PDS_L2': .7, 'PDS_cos': .7, 'MSE': .01})
+    config = {'seed': 42, 'data_dir': 'memory', 'run_dir': str(tmp_path),
+              'model': {'dim': 16, 'depth': 2, 'heads': 2, 'value_hidden': 16, 'time_dim': 8,
+                        'context_tokens': 2, 'context_start': 1, 'grad_checkpoint': False},
+              'training': {'epochs': 1, 'warmup_epochs': 1, 'micro_batch': 2, 'effective_batch': 4,
+                           'lr': 1e-4, 'betas': [.9, .95], 'weight_decay': 0., 'ema_decays': [.9999, .9996],
+                           'noise_std': 1., 'p_mean': -.8, 'p_std': .8, 'compile': False, 'train_subset': None,
+                           'checkpoint_steps': 1, 'log_steps': 1, 'val_cells': 2, 'val_interval_steps': 1,
+                           'val_generation_epochs': 1, 'val_generation_cap': 16, 'val_generation_steps': 50,
+                           'val_generation_batch': 1, 'val_unguided_epochs': 1, 'pilot_eval_raw_final': True},
+              'sampling': {'steps': 50, 'guidance': .85, 'cfg_min': .1, 'cfg_max': .8, 'clamp': True}}
+    trainer.train(config, max_ema_endpoint_relative_gap=.04, ema_health_min_step=min_step)
+    rows = [json.loads(line) for line in (tmp_path / 'events.jsonl').read_text().splitlines()]
+    assert [row['ema_to_raw_gap'] for row in rows if row['event'] == 'validation'] == [1., 1.]
+    assert (tmp_path / 'finished.json').exists() == finished
+    denoise = torch.load(tmp_path / 'best_denoise.pt', map_location='cpu', weights_only=False)
+    assert denoise['weights'] == 'ema_0.9996'
+    if finished:
+        assert calls == [('diagnostic_raw_epoch_001', .85), ('validation_epoch_001', .85),
+                         ('validation_unguided_epoch_001', None)]
+        assert [row['diagnostic_only'] for row in rows if row['event'] in
+                ('validation_unguided', 'diagnostic_generation')] == [True, True]
+    else:
+        assert not calls
+        assert [row['step'] for row in rows if row['event'] == 'ema_health_stop'] == [2]
+        previous = torch.load(tmp_path / 'snapshots/before_ema_health_stop_2.pt', map_location='cpu', weights_only=False)
+        assert previous['step'] == 1
