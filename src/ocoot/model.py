@@ -46,6 +46,13 @@ class ModelConfig:
     position_scale: float = 1.0
     gene_proj_init_scale: float = 1.0
     null_condition_init: str = "zero"
+    attn_drop: float = 0.0
+    proj_drop: float = 0.0
+    dropout_layer_policy: str = "jit_middle"
+    condition_dropout_mode: str = "independent"
+    drop_cell_only_prob: float = 0.08
+    drop_pert_only_prob: float = 0.08
+    drop_both_prob: float = 0.06
 
 
 # 为标量时间或位置生成正余弦周期编码。
@@ -74,7 +81,7 @@ class RMSNorm(nn.Module):
 # 多头点积注意力；Query 和 Key 在计算前分别经过 RMSNorm。
 # 此实现不接收显式 mask，context 与基因 token 进行双向完全注意力。
 class Attention(nn.Module):
-    def __init__(self, dim, heads):
+    def __init__(self, dim, heads, attn_drop=0.0, proj_drop=0.0):
         super().__init__()
         self.heads = heads
         self.head_dim = dim // heads
@@ -82,12 +89,15 @@ class Attention(nn.Module):
         self.qnorm = RMSNorm(self.head_dim)
         self.knorm = RMSNorm(self.head_dim)
         self.proj = nn.Linear(dim, dim)
+        self.attn_drop = attn_drop
+        self.proj_drop = nn.Dropout(proj_drop)
 
     def forward(self, x):
         b, n, d = x.shape
         q, k, v = self.qkv(x).view(b, n, 3, self.heads, self.head_dim).permute(2, 0, 3, 1, 4).unbind(0)
-        y = F.scaled_dot_product_attention(self.qnorm(q), self.knorm(k), v, dropout_p=0.0)
-        return self.proj(y.transpose(1, 2).reshape(b, n, d))
+        y = F.scaled_dot_product_attention(self.qnorm(q), self.knorm(k), v,
+                                          dropout_p=self.attn_drop if self.training else 0.0)
+        return self.proj_drop(self.proj(y.transpose(1, 2).reshape(b, n, d)))
 
 
 # SwiGLU 门控前馈网络：SiLU(u) 与并行投影 v逐元素相乘。
@@ -114,11 +124,11 @@ def modulate(x, shift, scale):
 
 # Transformer block：前置归一化、AdaLN 调制和两条门控残差分支。
 class Block(nn.Module):
-    def __init__(self, cfg):
+    def __init__(self, cfg, attn_drop=0.0, proj_drop=0.0):
         super().__init__()
         self.norm1 = RMSNorm(cfg.dim)
         self.norm2 = RMSNorm(cfg.dim)
-        self.attn = Attention(cfg.dim, cfg.heads)
+        self.attn = Attention(cfg.dim, cfg.heads, attn_drop, proj_drop)
         self.ffn = SwiGLU(cfg.dim, cfg.mlp_ratio, cfg.swiglu_convention)
         self.ada = nn.Sequential(nn.SiLU(), nn.Linear(cfg.dim, 6 * cfg.dim))
 
@@ -142,6 +152,16 @@ class OCOOT(nn.Module):
             raise ValueError('value_input_init must be xavier or fan_in')
         if cfg.null_condition_init not in ('zero', 'training_mean'):
             raise ValueError('null_condition_init must be zero or training_mean')
+        if not (0 <= cfg.attn_drop < 1 and 0 <= cfg.proj_drop < 1):
+            raise ValueError('Attention and projection dropout probabilities must lie in [0,1)')
+        if cfg.dropout_layer_policy not in ('jit_middle', 'all'):
+            raise ValueError('dropout_layer_policy must be jit_middle or all')
+        if cfg.condition_dropout_mode not in ('independent', 'balanced_3mode'):
+            raise ValueError('condition_dropout_mode must be independent or balanced_3mode')
+        if cfg.condition_dropout_mode == 'balanced_3mode':
+            probs = (cfg.drop_cell_only_prob, cfg.drop_pert_only_prob, cfg.drop_both_prob)
+            if not (all(prob >= 0 for prob in probs) and sum(probs) < 1):
+                raise ValueError('Balanced condition dropout requires nonnegative probabilities summing to less than one')
         for name in ('position_scale', 'gene_proj_init_scale'):
             scale = getattr(cfg, name)
             if not math.isfinite(scale) or scale <= 0:
@@ -172,7 +192,12 @@ class OCOOT(nn.Module):
         if cfg.position_scale != 1.0:
             pos.mul_(cfg.position_scale)
         self.register_buffer("position", pos if cfg.pos_encoding else torch.zeros_like(pos))
-        self.blocks = nn.ModuleList(Block(cfg) for _ in range(cfg.depth))
+        quarter = cfg.depth // 4
+        self.blocks = nn.ModuleList(
+            Block(cfg, cfg.attn_drop, cfg.proj_drop)
+            if cfg.dropout_layer_policy == 'all' or quarter <= i < 3 * quarter else Block(cfg)
+            for i in range(cfg.depth)
+        )
         self.final_norm = RMSNorm(cfg.dim)
         self.final_ada = nn.Sequential(nn.SiLU(), nn.Linear(cfg.dim, 2 * cfg.dim))
         self.output = nn.Linear(cfg.dim, 1)
@@ -245,6 +270,15 @@ class OCOOT(nn.Module):
         if batch_embedding is not None and self.cfg.drop_batch_with_cell:
             c = c + batch_embedding
         # 训练时随机丢弃，推理时默认不丢弃；显式参数可覆盖该行为。
+        if (drop_pert is None and drop_cell is None and self.training
+                and self.cfg.condition_dropout_mode == 'balanced_3mode'):
+            u = torch.rand(len(z), device=z.device)
+            p_both = self.cfg.drop_both_prob
+            p_cell = p_both + self.cfg.drop_cell_only_prob
+            p_pert = p_cell + self.cfg.drop_pert_only_prob
+            drop_both = u < p_both
+            drop_cell = drop_both | ((u >= p_both) & (u < p_cell))
+            drop_pert = drop_both | ((u >= p_cell) & (u < p_pert))
         if drop_pert is None:
             drop_pert = torch.rand(len(z), device=z.device) < self.cfg.drop_prob if self.training else torch.zeros(len(z), device=z.device, dtype=torch.bool)
         if drop_cell is None:

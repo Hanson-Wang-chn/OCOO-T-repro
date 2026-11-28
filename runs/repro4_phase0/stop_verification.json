@@ -1,0 +1,88 @@
+{
+  "time": "2026-11-28T14:19:12+08:00",
+  "requested": "2026-11-28T14:18:33+08:00",
+  "stage": "pilot_round1",
+  "runs": {
+    "runs/repro4_pilots/p1_cell_nobatch": {
+      "step": 5784,
+      "epoch": 5.173524150268336,
+      "time": "2026-11-28T14:18:42+08:00",
+      "checkpoint": "runs/repro4_pilots/p1_cell_nobatch/last.pt",
+      "sha256": "ec22dd0864d44c745478f018ee530a888c2f96c78b4826b9c01ec37195c59cbf",
+      "optimizer_slots": 188,
+      "ema_decays": [
+        "0.9999",
+        "0.9996"
+      ],
+      "rng_ranks": 2,
+      "pending_generation_epoch": null,
+      "validation": [
+        {
+          "time": "2026-11-28T14:06:04+08:00",
+          "event": "validation_generation",
+          "epoch": 5,
+          "step": 5590,
+          "selection_score": 0.5584707579286381,
+          "PDCorr": 0.2051336523911838,
+          "MSE": 0.023082956112921237,
+          "MAE": 0.09717620760202408,
+          "PDS_L1": 0.6116666666666666,
+          "PDS_L2": 0.6186111111111111,
+          "PDS_cos": 0.5222222222222223
+        }
+      ]
+    },
+    "runs/repro4_pilots/p1_ctrl": {
+      "step": 5731,
+      "epoch": 5.126118067978533,
+      "time": "2026-11-28T14:18:42+08:00",
+      "checkpoint": "runs/repro4_pilots/p1_ctrl/last.pt",
+      "sha256": "349853242b3d012aea19b8949a06f5807cd3635724e94040f88891c8f2ba0ddf",
+      "optimizer_slots": 189,
+      "ema_decays": [
+        "0.9999",
+        "0.9996"
+      ],
+      "rng_ranks": 2,
+      "pending_generation_epoch": null,
+      "validation": [
+        {
+          "time": "2026-11-28T14:09:33+08:00",
+          "event": "validation_generation",
+          "epoch": 5,
+          "step": 5590,
+          "selection_score": 0.400315643199892,
+          "PDCorr": 0.14159398650129637,
+          "MSE": 0.031063019515325627,
+          "MAE": 0.11451380377014478,
+          "PDS_L1": 0.5886111111111111,
+          "PDS_L2": 0.5833333333333334,
+          "PDS_cos": 0.5361111111111111
+        }
+      ]
+    }
+  },
+  "test_access": false,
+  "gpu_after_stop": [
+    {
+      "index": 0,
+      "memory_mib": 0,
+      "utilization_percent": 0
+    },
+    {
+      "index": 1,
+      "memory_mib": 0,
+      "utilization_percent": 0
+    },
+    {
+      "index": 2,
+      "memory_mib": 0,
+      "utilization_percent": 0
+    },
+    {
+      "index": 3,
+      "memory_mib": 0,
+      "utilization_percent": 0
+    }
+  ]
+}

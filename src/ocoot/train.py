@@ -16,7 +16,7 @@ import yaml
 from .data import BenchmarkData
 from .distributed import TrainingRanks, microbatch_shard
 from .flow import flow_batch
-from .postprocess import primary_score
+from .postprocess import selection_score
 from .runtime import DualEMA, atomic_save, exclusive_run, log_event, readme_event, timestamp, update_readme_live
 
 
@@ -60,12 +60,15 @@ def validate(model, forward, data, indices, config):
 
 # public 训练入口：校验参数、初始化进程环境并进入排他训练锁。
 def train(config, resume=True, *, local_micro_batch=None, benchmark_steps=None, preserve_steps=(),
-          resume_from=None, max_ema_endpoint_relative_gap=None):
+          resume_from=None, max_ema_endpoint_relative_gap=None, ema_health_min_step=12000,
+          finish_schedule=False):
     if resume_from is not None and not resume:
         raise ValueError('Resume from a checkpoint and fresh training are mutually exclusive')
     if max_ema_endpoint_relative_gap is not None and not (
             math.isfinite(max_ema_endpoint_relative_gap) and max_ema_endpoint_relative_gap > 0):
         raise ValueError('EMA endpoint error gap must be positive')
+    if isinstance(ema_health_min_step, bool) or not isinstance(ema_health_min_step, int) or ema_health_min_step < 0:
+        raise ValueError('EMA health minimum step must be a nonnegative integer')
     ranks = TrainingRanks()
     with ranks.initialize(), contextlib.ExitStack() as stack:
         if ranks.primary and benchmark_steps is None:
@@ -77,16 +80,18 @@ def train(config, resume=True, *, local_micro_batch=None, benchmark_steps=None, 
             stack.enter_context(torch._dynamo.config.patch(optimize_ddp=False))
         ranks.barrier()
         return _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, preserve_steps,
-                             resume_from, max_ema_endpoint_relative_gap)
+                             resume_from, max_ema_endpoint_relative_gap, ema_health_min_step, finish_schedule)
 
 
 # 内部完整训练流程：恢复、优化、验证、周期生成、收敛和最终保存。
 def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, preserve_steps,
-                  resume_from, max_ema_endpoint_relative_gap):
+                  resume_from, max_ema_endpoint_relative_gap, ema_health_min_step, finish_schedule):
     tr=config['training'];run=Path(config['run_dir'])
     generation_mse_weight = tr.get('generation_mse_weight', 0.0)
     if not math.isfinite(generation_mse_weight) or generation_mse_weight < 0:
         raise ValueError('generation_mse_weight must be nonnegative and finite')
+    unguided_interval = tr.get('val_unguided_epochs')
+    raw_final = tr.get('pilot_eval_raw_final', False)
 # benchmark 模式只执行有限优化步并测量吞吐，不产出正式训练结果。
     benchmarking = benchmark_steps is not None
     primary = ranks.primary
@@ -111,7 +116,15 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
     if resume and not benchmarking and (run/'finished.json').exists():
         if yaml.safe_load((run/'config.yaml').read_text())!=config:
             raise ValueError('Completed run config differs; use a new run directory')
-        return
+        if not finish_schedule or not json.loads((run/'finished.json').read_text())['stopped_early']:
+            return
+        ranks.barrier()
+        if primary:
+            archive = run / 'finished_early_stop.json'
+            if archive.exists():
+                raise FileExistsError('Prior early stopping decision already archived')
+            (run/'finished.json').replace(archive)
+        ranks.barrier()
     if primary and not benchmarking:
         (run/'training.pid').write_text(str(os.getpid()))
     torch.set_num_threads(max(1, 8 // ranks.size))
@@ -220,6 +233,9 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         execution['resume_checkpoint'] = str(checkpoint_path.resolve())
     if max_ema_endpoint_relative_gap is not None:
         execution['max_ema_endpoint_relative_gap'] = max_ema_endpoint_relative_gap
+        execution['ema_health_min_step'] = ema_health_min_step
+    if finish_schedule:
+        execution['early_stopping_overridden'] = True
     if not benchmarking:
         pid = os.getpid()
         fields = Path('/proc/self/stat').read_text().rsplit(')',1)[1].split()
@@ -244,6 +260,15 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
     last_log=time.monotonic();losses=[];log_cells=0
     generation_ranks = ranks if ranks.size > 1 and tr.get('distributed_generation', False) else None
 
+    def pilot_raw_due(epoch_number):
+        return raw_final and epoch_number == tr['epochs'] and not tr.get('train_subset')
+
+    def diagnostic_due(epoch_number):
+        return (not tr.get('train_subset') and epoch_number in tr.get('diagnostic_generation_epochs', []))
+
+    def unguided_due(epoch_number):
+        return unguided_interval and epoch_number % unguided_interval == 0
+
 # 周期采样前先持久化待处理轮次，采样失败也能从同一轮恢复。
     def epoch_generations(epoch_number):
         nonlocal pending_generation_epoch
@@ -258,10 +283,11 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
         nonlocal last_log,losses,log_cells
         evaluation_rng=ranks.local_rng()
         try:
-            if not tr.get('train_subset') and epoch_number in tr.get('diagnostic_generation_epochs',[]):
+            if diagnostic_due(epoch_number) or pilot_raw_due(epoch_number):
                 from .evaluate import generate,official_metrics
                 diagnostic_out=run/f'diagnostic_raw_epoch_{epoch_number:03d}'
-                diagnostic_idx=data.evaluation_indices(cap=tr.get('diagnostic_generation_cap',8))
+                cap = 16 if pilot_raw_due(epoch_number) else tr.get('diagnostic_generation_cap', 8)
+                diagnostic_idx=data.evaluation_indices(cap=cap)
                 with torch.random.fork_rng(devices=[ranks.local_rank]):
                     pred=generate(forward,data,diagnostic_idx,diagnostic_out,noise_std=tr['noise_std'],steps=50,
                                   batch_size=tr['val_generation_batch'],ranks=generation_ranks,
@@ -269,10 +295,12 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                     if primary:
                         diagnostic=official_metrics(data,diagnostic_idx,pred,diagnostic_out/'metrics')
                         atomic_save({'config':config,'model':model.state_dict(),'step':step,'weights':'raw_diagnostic',
-                                     'criterion':'early_condition_learning_diagnostic','metrics':diagnostic},diagnostic_out/'model.pt')
+                                     'criterion':'early_condition_learning_diagnostic','diagnostic_only':True,
+                                     'metrics':diagnostic},diagnostic_out/'model.pt')
                 model.train()
                 if primary:
-                    log_event(run/'events.jsonl',{'event':'diagnostic_generation','epoch':epoch_number,'step':step,'weights':'raw_diagnostic',**diagnostic})
+                    log_event(run/'events.jsonl',{'event':'diagnostic_generation','epoch':epoch_number,'step':step,
+                                                 'weights':'raw_diagnostic','diagnostic_only':True,**diagnostic})
                     readme_event(f'`{run}` 第 {epoch_number} 轮原始权重诊断（非 EMA 正式结果、非测试）：PDCorr={diagnostic["PDCorr"]:.4f}，PDS_L2={diagnostic["PDS_L2"]:.4f}，MSE={diagnostic["MSE"]:.5f}。仅用于尽早发现条件学习问题，不参与正式最佳模型选择。')
                 last_log=time.monotonic();losses=[];log_cells=0
             if tr.get('val_generation_epochs') and (epoch_number)%tr['val_generation_epochs']==0:
@@ -293,7 +321,7 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                         weights='ema_0.9996' if use_ema else 'raw_pilot_only'
                         artifact={'config':config,'model':model.state_dict(),'step':step,'weights':weights,'metrics':metrics}
                         atomic_save({**artifact,'criterion':'periodic_validation'},val_out/'model.pt')
-                        score = primary_score(metrics) - generation_mse_weight * metrics['MSE']
+                        score = selection_score(metrics, generation_mse_weight)
                         if generation_mse_weight:
                             artifact.update(generation_mse_weight=generation_mse_weight, selection_score=score)
                         if score>best_generation:
@@ -311,12 +339,28 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                     weight_label='EMA=0.9996' if use_ema else '原始权重诊断'
                     readme_event(f'`{run}` 第 {epoch_number} 轮验证生成（{weight_label}，每扰动最多 {tr["val_generation_cap"]} 细胞，50 步）：PDCorr={metrics["PDCorr"]:.4f}，MSE={metrics["MSE"]:.5f}，PDS_L2={metrics["PDS_L2"]:.4f}。这是验证结果，非测试结果。')
                 last_log=time.monotonic();losses=[];log_cells=0
+            if unguided_due(epoch_number):
+                from .evaluate import generate, official_metrics
+                unguided_out = run / f'validation_unguided_epoch_{epoch_number:03d}'
+                eval_idx = data.evaluation_indices(cap=16)
+                sampling = dict(config['sampling'], guidance=None, steps=50)
+                with ema_parameters(model, ema, generation_ranks):
+                    pred = generate(forward, data, eval_idx, unguided_out, noise_std=tr['noise_std'],
+                                    batch_size=tr['val_generation_batch'], ranks=generation_ranks, **sampling)
+                    if primary:
+                        metrics = official_metrics(data, eval_idx, pred, unguided_out / 'metrics')
+                        log_event(run/'events.jsonl', {'event':'validation_unguided','epoch':epoch_number,'step':step,
+                                  'weights':'ema_0.9996','cap':16,'diagnostic_only':True,**metrics})
+                        readme_event(f'`{run}` 第 {epoch_number} 轮无引导验证，PDCorr={metrics["PDCorr"]:.4f}，'
+                                     f'PDS_L2={metrics["PDS_L2"]:.4f}，MSE={metrics["MSE"]:.5f}。')
+                model.train()
+                last_log=time.monotonic();losses=[];log_cells=0
         finally:
             ranks.set_local_rng(evaluation_rng)
 
 # 基于验证主分数的耐心轮数执行显式早停，不在 warmup 阶段触发。
     def converged(epoch_number):
-        value = (tr.get('early_stop_patience_epochs') and epoch_number>=tr.get('min_epochs',20)
+        value = (not finish_schedule and tr.get('early_stop_patience_epochs') and epoch_number>=tr.get('min_epochs',20)
                  and early_reference_epoch and epoch_number-early_reference_epoch>=tr['early_stop_patience_epochs'])
         return ranks.from_primary(bool(value))
 
@@ -398,13 +442,19 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                 if primary:
                     raw=validate(model,forward,data,val_indices,tr)
                     with ema_parameters(model,ema):ema_val=validate(model,forward,data,val_indices,tr)
-                    log_event(run/'events.jsonl',{'event':'validation','step':step,'epoch':step/steps_per_epoch,'raw':raw,'ema_0.9996':ema_val})
-                    if max_ema_endpoint_relative_gap is not None:
+                    raw_endpoint = raw['endpoint_mse']
+                    ema_endpoint = ema_val['endpoint_mse']
+                    relative_gap = ema_endpoint / raw_endpoint - 1 if raw_endpoint > 0 else None
+                    log_event(run/'events.jsonl',{'event':'validation','step':step,'epoch':step/steps_per_epoch,
+                             'raw':raw,'ema_0.9996':ema_val,'ema_to_raw_gap':relative_gap})
+                    if max_ema_endpoint_relative_gap is not None and step >= ema_health_min_step:
                         unhealthy = (ema_val['endpoint_mse'] >
                                      raw['endpoint_mse'] * (1 + max_ema_endpoint_relative_gap))
                     if ema_val['endpoint_mse']<best:
                         best=ema_val['endpoint_mse']
-                        with ema_parameters(model,ema):atomic_save({'config':config,'model':model.state_dict(),'step':step,'criterion':'ema_endpoint_mse'},run/'best_denoise.pt')
+                        with ema_parameters(model,ema):
+                            atomic_save({'config':config,'model':model.state_dict(),'step':step,
+                                         'criterion':'ema_endpoint_mse','weights':'ema_0.9996'},run/'best_denoise.pt')
                     last_log=time.monotonic();losses=[];log_cells=0
                 if max_ema_endpoint_relative_gap is not None:
                     unhealthy = ranks.from_primary(unhealthy)
@@ -412,18 +462,23 @@ def _train_locked(config, resume, ranks, local_micro_batch, benchmark_steps, pre
                     ranks.barrier()
 # EMA 指标显著劣于原始模型时保存 checkpoint 并触发健康停止。
                 if unhealthy:
+                    if primary and local_checkpoint.exists():
+                        previous = run / 'snapshots' / f'before_ema_health_stop_{step}.pt'
+                        previous.parent.mkdir(exist_ok=True)
+                        if not previous.exists():
+                            os.link(local_checkpoint, previous)
                     save()
                     if primary:
                         log_event(run/'events.jsonl', {'event':'ema_health_stop', 'step':step,
                                   'raw_endpoint_mse':raw['endpoint_mse'],
                                   'ema_endpoint_mse':ema_val['endpoint_mse'],
+                                  'ema_to_raw_gap':relative_gap, 'ema_health_min_step':ema_health_min_step,
                                   'max_relative_gap':max_ema_endpoint_relative_gap})
                         readme_event(f'`{run}` 的 EMA 去噪误差触发健康阈值，已在 step {step} 保存完整断点并暂停。')
                     return
-            diagnostic_due=(not tr.get('train_subset') and epoch+1 in tr.get('diagnostic_generation_epochs',[]))
             formal_due=(tr.get('val_generation_epochs') and (epoch+1)%tr['val_generation_epochs']==0)
 # 到达诊断或正式采样轮次时先保存 pending_generation_epoch，再采样。
-            if epoch_end and (diagnostic_due or formal_due):
+            if epoch_end and (formal_due or diagnostic_due(epoch+1) or pilot_raw_due(epoch+1) or unguided_due(epoch+1)):
                 pending_generation_epoch=epoch+1
                 save()  # persist pending work before sampling, including the final epoch
                 if not stopping:

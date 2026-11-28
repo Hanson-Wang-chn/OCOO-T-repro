@@ -1,0 +1,76 @@
+{
+  "tag": "refine_00",
+  "guidance": 1.25,
+  "cfg_min": 0.0,
+  "cfg_max": 1.0,
+  "clamp": true,
+  "cap": null,
+  "metrics": {
+    "PDCorr": 0.3944688889508446,
+    "MSE": 0.009601792027630533,
+    "MAE": 0.06497335514674583,
+    "PDS_L1": 0.8069444444444444,
+    "PDS_L2": 0.8158333333333334,
+    "PDS_cos": 0.8216666666666668,
+    "DEOver": 0.21834792776709996,
+    "DEPrec": 0.20744799515484783,
+    "DirAgr": 0.8107053034491976
+  },
+  "raw_metrics": {
+    "PDCorr": 0.39487982462160287,
+    "MSE": 0.009606298522946114,
+    "MAE": 0.06498882739494244,
+    "PDS_L1": 0.8063888888888889,
+    "PDS_L2": 0.8161111111111112,
+    "PDS_cos": 0.8219444444444445
+  },
+  "score": 1.2092837037656594,
+  "cache_provenance": {
+    "directory": "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_00",
+    "raw_unclamped": true,
+    "split": "validation",
+    "files": {
+      "prediction.npy": "61ac162b20aa25b55f28ada1fff0baaf0532ce846e3e231a2c90d6fc2bf43656",
+      "indices.npy": "520ec1ef8f7e6151848952be337a362b5e367470301a1c078b1d8d77f26e6fb2",
+      "generation_state.json": "738fdd1a4435ffd5541cfaea1c00c214167806c37f00ad6fac96f2f8ceea9106"
+    }
+  },
+  "clamp0_selection_score": 1.1143646669491298,
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/best_generation.pt",
+  "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+  "step": 50310,
+  "weights": "ema_0.9996",
+  "data_dir": "data/processed",
+  "noise_std": 0.75,
+  "sampling_steps": 50,
+  "seed": 4242,
+  "batch_size": 32,
+  "formal_guidance_policy": "literal_dual_cfg_positive_scale",
+  "source_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/scripts/calibrate.py": "94f4cadfff63539591a54ac19b761487713eb62625198549240e6650379e35d1",
+    "src/ocoot/model.py": "766e3f89d61c2296121d32fd26fb56589c020c912a84a2f08a2ba01d771fc5ee",
+    "src/ocoot/flow.py": "d4518079ac692923f365e526aa0c5a8451850e6c92cb9479a88a498811caedd1",
+    "src/ocoot/evaluate.py": "f547f0bc95c5d90c7a16c8fa1da202af5bac0253ae0d985cc7fb7ec0db860f5e",
+    "src/ocoot/data.py": "fb813441832e0f18795e424cda9e93c5fcce92b4b93830ad7c9bfe26ce209b9b",
+    "src/ocoot/postprocess.py": "edfc9e67358398994733d4d28a8862012e9d7beb9fbd3af74c12754bfe4e8a19",
+    "src/ocoot/runtime.py": "dd0b7a5e89c20c021f48689022ec38a0c859abecfe42e1af92fb9876cc15cb6a",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "conditional_reference_tag": "screen_00",
+  "note": "Selected on full validation from registered floors 0 and 0.05. All validation checks passed: True. The paper does not specify a zero floor.",
+  "mse_weight": 10.0,
+  "zero_floor": 0.05,
+  "selection_score": 1.113265783489354,
+  "postprocess_selection": {
+    "plan_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/postprocess_plan.json",
+    "plan_sha256": "e710b3a1035f2de9b9e24cee86f5401dd0451d444522fe7a6905ccd81fc7657e",
+    "review_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/review.json",
+    "review_sha256": "225dbd5259c5b1e10acd1a393a1e1f9e55be168b4d2a2313cabb99bbd6e2044b",
+    "candidate_metrics_path": "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json",
+    "candidate_metrics_sha256": "8d3231f90dd743bb893937564520313cb40411f076bf9845e30ba52825bc8c5b",
+    "selector_sha256": "6d37ef94783301e4c8515ca754928c7afa3555a230bc13b3fbb2a2bfc956c040",
+    "module_sha256": "edfc9e67358398994733d4d28a8862012e9d7beb9fbd3af74c12754bfe4e8a19",
+    "base_results_sha256": "5f8ae7eb722b82d258542d48bd56a286b41f18cb76a07177a8d3d6871256988d",
+    "calibration_config_sha256": "da64d675cc0b7ced6cc9392ddd9ee6d089205f3a7654a8e249e8c753aa94ab25"
+  }
+}

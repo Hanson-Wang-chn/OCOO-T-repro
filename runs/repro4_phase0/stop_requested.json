@@ -1,0 +1,32 @@
+{
+  "time": "2026-11-28T14:18:33+08:00",
+  "reason": "user requested immediate graceful stop",
+  "scheduler_pid": 940498,
+  "stage_before_stop": "pilot_round1",
+  "signalled_training_workers": {
+    "runs/repro4_pilots/p1_cell_nobatch": [
+      {
+        "rank": 0,
+        "pid": 978382,
+        "start_tick": 566822269
+      },
+      {
+        "rank": 1,
+        "pid": 978383,
+        "start_tick": 566822269
+      }
+    ],
+    "runs/repro4_pilots/p1_ctrl": [
+      {
+        "rank": 0,
+        "pid": 978394,
+        "start_tick": 566822281
+      },
+      {
+        "rank": 1,
+        "pid": 978395,
+        "start_tick": 566822281
+      }
+    ]
+  }
+}

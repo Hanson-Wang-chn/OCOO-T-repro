@@ -1,0 +1,11 @@
+{
+  "stage": "stopped_by_user",
+  "time": "2026-11-28T14:19:12+08:00",
+  "previous": {
+    "stage": "pilot_round1",
+    "time": "2026-11-28T07:51:22+08:00",
+    "pid": 940498
+  },
+  "stop_verification": "runs/repro4_phase0/stop_verification.json",
+  "test_access": false
+}

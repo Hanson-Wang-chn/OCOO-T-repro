@@ -1,0 +1,41 @@
+{
+  "time": "2026-11-28T05:32:06+08:00",
+  "cells_each": 4825,
+  "selected_sha256": "efcaf3f0187dadc8a0ef3d899c467c5110f250d559c31457828f008f0cc84c91",
+  "review_sha256": "225dbd5259c5b1e10acd1a393a1e1f9e55be168b4d2a2313cabb99bbd6e2044b",
+  "output_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/selected.json": "efcaf3f0187dadc8a0ef3d899c467c5110f250d559c31457828f008f0cc84c91",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/review.json": "225dbd5259c5b1e10acd1a393a1e1f9e55be168b4d2a2313cabb99bbd6e2044b",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_00/metrics_clamped/summary.json": "18f8ddfe685fbe7668ca6f2e3f34cdd39440346b3ffc4697a33422bf6e4879be",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_00/metrics_clamped/results.csv": "f7478f592fbb471c9c9589dccd3db0de640ae23035919db15249f2744480d883",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_00_floor_0p05/metrics/summary.json": "8d3231f90dd743bb893937564520313cb40411f076bf9845e30ba52825bc8c5b",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_00_floor_0p05/metrics/results.csv": "d9b2e0de14979b4dc137bc71b06e17bfc661fad3005263d3d35eec7db9d73066",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_01/metrics_clamped/summary.json": "40c0946eaf728628fc656c147bae8a5dc8e1c839f0a546a0feec6692ac93f988",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_01/metrics_clamped/results.csv": "64ae341f9912f019100c23a86e84eafe32dca435202b2338e90cc7c54262b2f5",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_01_floor_0p05/metrics/summary.json": "b90ca3eb3f64532f243e09e1b944e8a55ca70680facfa45ebe466794890ef132",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_01_floor_0p05/metrics/results.csv": "f6110d85bc6cd6d674e33c042e0425e4a09de0e7ae169ccba2bbab0ca274ded7",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_02/metrics_clamped/summary.json": "557014d10f0f7738aaaf8b89b07256442e8a3a2edf77906d9a94eaa733f5a296",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/refine_02/metrics_clamped/results.csv": "fbae9b90bbca533e422ec812bec2ae597ceaba4b099d4db9505976121ff20a37",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_02_floor_0p05/metrics/summary.json": "91061b7b59de6eeb4ce2986c04b6ae258a9cff4a79e4e1c8a4fb3d2d0b24844e",
+    "/home/dataset-assist-0/whs/ocoo-t/runs/repro4_phase0/repro3_e45_calibration/postprocessing/refine_02_floor_0p05/metrics/results.csv": "2697558c57352bb5fa8ab0f9b7840d2ca497ba5f767302b886c834c75cf44f97"
+  },
+  "protocol": {
+    "plan_sha256": "e710b3a1035f2de9b9e24cee86f5401dd0451d444522fe7a6905ccd81fc7657e",
+    "calibration_config_sha256": "da64d675cc0b7ced6cc9392ddd9ee6d089205f3a7654a8e249e8c753aa94ab25",
+    "base_results_sha256": "5f8ae7eb722b82d258542d48bd56a286b41f18cb76a07177a8d3d6871256988d",
+    "original_selected_sha256": "eb5ccc0e6ad851c1b9079abe5e3d278a28f60fcd61b3fd1583279c7725ff2b81",
+    "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+    "data_files_sha256": {
+      "expression.npy": "9fdfab26056c7f9b5b024b8206357847aafddfed8b385bfb0d7f349b3cf0596c",
+      "metadata.npz": "fdc81f636c89ac81855f8eebbb4c26ab47afff376daff6eef250c4b2981abb75",
+      "vocab.json": "2f30ef9c79e1447e66fd0aad13c385a6d90a297a8cafce449469be047bfdb2f7"
+    },
+    "source_sha256": {
+      "scripts/select_validation_postprocess.py": "6d37ef94783301e4c8515ca754928c7afa3555a230bc13b3fbb2a2bfc956c040",
+      "src/ocoot/postprocess.py": "edfc9e67358398994733d4d28a8862012e9d7beb9fbd3af74c12754bfe4e8a19"
+    }
+  },
+  "cpu_only": true,
+  "test_access": false,
+  "new_generated_samples": 0
+}

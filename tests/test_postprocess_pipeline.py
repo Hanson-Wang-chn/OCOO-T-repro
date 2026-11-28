@@ -9,13 +9,23 @@ import sys
 import pytest
 import yaml
 
-from ocoot.postprocess import DEFAULT_THRESHOLDS
+from ocoot.postprocess import DEFAULT_THRESHOLDS, choose_validation_candidate
 from ocoot.runtime import file_sha256
 
 
 def metrics():
     return {'PDCorr': .4, 'DEOver': .21, 'DEPrec': .22, 'DirAgr': .76,
             'PDS_L1': .8, 'PDS_L2': .82, 'PDS_cos': .81, 'MSE': .009, 'MAE': .06}
+
+
+def test_round_three_full_validation_uses_registered_mse_weight():
+    evidence = Path(__file__).resolve().parents[1] / 'runs/repro3_main/calibration/postprocessing/review.json'
+    candidates = json.loads(evidence.read_text())['candidates']
+    assert len(candidates) == 4
+    legacy = choose_validation_candidate(candidates, DEFAULT_THRESHOLDS)
+    weighted = choose_validation_candidate(candidates, DEFAULT_THRESHOLDS, mse_weight=10.0)
+    assert (legacy['guidance'], legacy['zero_floor']) == (1.375, .05)
+    assert (weighted['guidance'], weighted['zero_floor']) == (1.125, .05)
 
 
 def setup_pipeline(tmp_path, monkeypatch, use_postprocess, no_feasible=False, changed_gate=False,

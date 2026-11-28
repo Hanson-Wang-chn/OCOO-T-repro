@@ -1,0 +1,56 @@
+{
+  "checkpoint": "/home/dataset-assist-0/whs/ocoo-t/runs/repro3_main/best_generation.pt",
+  "checkpoint_sha256": "854797ba7cc71ae821ab53feeec231dc0f75b67938baf1398aead60267220918",
+  "step": 50310,
+  "weights": "ema_0.9996",
+  "data_dir": "data/processed",
+  "screen_cap": 16,
+  "refine_cap": null,
+  "batch_size": 32,
+  "scales": "0.65,0.75,0.85,0.95,1.05,1.15,1.25",
+  "screen_windows": [
+    [
+      0.05,
+      0.75
+    ],
+    [
+      0.05,
+      0.85
+    ],
+    [
+      0.1,
+      0.8
+    ],
+    [
+      0.1,
+      0.9
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "refine_top": 3,
+  "probe_full_interval": false,
+  "seed": 4242,
+  "test_access": false,
+  "refinement_population": "all validation cells",
+  "objective": "PDCorr + mean(PDS_L1,PDS_L2,PDS_cos) - weighted MSE",
+  "data": "validation only",
+  "formal_guidance_policy": "literal_dual_cfg_positive_scale",
+  "source_sha256": {
+    "/home/dataset-assist-0/whs/ocoo-t/scripts/calibrate.py": "94f4cadfff63539591a54ac19b761487713eb62625198549240e6650379e35d1",
+    "src/ocoot/model.py": "766e3f89d61c2296121d32fd26fb56589c020c912a84a2f08a2ba01d771fc5ee",
+    "src/ocoot/flow.py": "d4518079ac692923f365e526aa0c5a8451850e6c92cb9479a88a498811caedd1",
+    "src/ocoot/evaluate.py": "f547f0bc95c5d90c7a16c8fa1da202af5bac0253ae0d985cc7fb7ec0db860f5e",
+    "src/ocoot/data.py": "fb813441832e0f18795e424cda9e93c5fcce92b4b93830ad7c9bfe26ce209b9b",
+    "src/ocoot/postprocess.py": "edfc9e67358398994733d4d28a8862012e9d7beb9fbd3af74c12754bfe4e8a19",
+    "src/ocoot/runtime.py": "dd0b7a5e89c20c021f48689022ec38a0c859abecfe42e1af92fb9876cc15cb6a",
+    "environment.lock.txt": "7103c117f4350d827625e3ff8312834d439593e8eb3d06bc08c1fc83c86a8c18"
+  },
+  "conditional_only_role": "diagnostic reference; excluded from formal refinement and selection",
+  "metric_protocol": "all nine paper metrics on nonnegative predictions; six array diagnostics on raw predictions",
+  "formal_postprocess": "clamp_min_0, matching the nonnegative expression domain; raw arrays are retained",
+  "mse_weight": 10.0,
+  "refinement_policy": "Highest score, lowest MSE within 0.04 or next highest score, then best unused window when available"
+}

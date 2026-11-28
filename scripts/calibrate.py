@@ -14,8 +14,8 @@ import torch
 from ocoot.data import BenchmarkData
 from ocoot.distributed import TrainingRanks
 from ocoot.evaluate import generate,official_metrics
-from ocoot.postprocess import primary_score
-from ocoot.runtime import file_sha256,readme_event
+from ocoot.postprocess import primary_score, selection_score
+from ocoot.runtime import exclusive_run, file_sha256, readme_event
 
 
 def write_json_atomic(path,value):
@@ -37,6 +37,40 @@ def refinement_cap(value):
     return cap
 
 
+def parse_windows(value):
+    try:
+        windows = [tuple(map(float, interval.split(':'))) for interval in value.split(',')]
+    except ValueError:
+        windows = []
+    if not windows or any(len(w) != 2 or not 0 <= w[0] < w[1] <= 1 for w in windows):
+        raise argparse.ArgumentTypeError('windows must be comma-separated low:high pairs with 0 <= low < high <= 1')
+    if len(windows) != len(set(windows)):
+        raise argparse.ArgumentTypeError('duplicate guidance windows')
+    return windows
+
+
+def choose_refinements(records, count, mse_weight, *, prefer_low_mse=True):
+    def score(record):
+        return selection_score(record['metrics'], mse_weight)
+
+    eligible = sorted((record for record in records if record['guidance'] is not None),
+                      key=score, reverse=True)
+    if not 1 <= count <= len(eligible):
+        raise ValueError('refine-top must be positive and no larger than the number of positive screening cases')
+    top = [eligible.pop(0)]
+    if count >= 2:
+        near = [r for r in eligible if score(r) >= score(top[0]) - .04] if prefer_low_mse else []
+        runner_up = min(near, key=lambda r: (r['metrics']['MSE'], -score(r))) if near else eligible[0]
+        eligible.remove(runner_up)
+        top.append(runner_up)
+    if count >= 3:
+        seen_windows = {(r['cfg_min'], r['cfg_max']) for r in top}
+        alternate = next((r for r in eligible if (r['cfg_min'], r['cfg_max']) not in seen_windows), eligible[0])
+        eligible.remove(alternate)
+        top.append(alternate)
+    return top + eligible[:count - len(top)]
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--checkpoint',required=True);p.add_argument('--outdir',required=True)
     p.add_argument('--screen-cap',type=int,default=16)
@@ -46,6 +80,8 @@ def main():
                    help='MSE penalty in the validation selection score')
     p.add_argument('--compare-windows', action='store_true',
                    help='Screen each positive scale in two windows and refine one lower-MSE alternative')
+    p.add_argument('--windows', type=parse_windows, help='Comma-separated low:high windows for every positive scale')
+    p.add_argument('--refine-top', type=int, default=2, help='Number of positive screening cases to refine')
     a=p.parse_args()
     if a.screen_cap<1 or a.batch_size<1:p.error('screen-cap and batch-size must be positive')
     if not math.isfinite(a.mse_weight) or a.mse_weight < 0:p.error('mse-weight must be nonnegative and finite')
@@ -55,12 +91,17 @@ def main():
         p.error('formal dual-CFG scales must be positive and finite')
     if len(set(scales))!=len(scales):
         p.error('duplicate guidance scales')
+    windows = a.windows or ([(.1, .9), (0., 1.)] if a.compare_windows else [(.1, .9)])
+    probe_full_interval = a.windows is None and not a.compare_windows
+    if not 1 <= a.refine_top <= len(scales) * len(windows) + probe_full_interval:
+        p.error('refine-top must be positive and no larger than the number of positive screening cases')
     ranks=TrainingRanks()
     with ranks.initialize() if ranks.size>1 else nullcontext():
-        calibrate(a,scales,ranks)
+        with exclusive_run(a.outdir, 'calibration') if ranks.primary else nullcontext():
+            calibrate(a, scales, windows, probe_full_interval, ranks)
 
 
-def calibrate(a, scales, ranks):
+def calibrate(a, scales, windows, probe_full_interval, ranks):
     torch.set_num_threads(8 if ranks.primary else 2)
     torch.backends.cuda.matmul.allow_tf32=True
     out=Path(a.outdir);out.mkdir(exist_ok=True,parents=True)
@@ -69,10 +110,13 @@ def calibrate(a, scales, ranks):
     if s.get('weights') in ['raw_pilot_only','raw_diagnostic']:raise ValueError('Formal calibration requires EMA inference weights')
     weights='ema_0.9996' if '0.9996' in s.get('ema',{}) else s.get('weights')
     if weights!='ema_0.9996':raise ValueError('Formal calibration requires the default EMA0.9996 weights')
+    prefer_low_mse = not probe_full_interval or a.refine_top != 2
     if ranks.primary:
         provenance={'checkpoint':str(Path(a.checkpoint).resolve()),'checkpoint_sha256':file_sha256(a.checkpoint),'step':s['step'],
                     'weights':weights,'data_dir':cfg['data_dir'],
                     'screen_cap':a.screen_cap,'refine_cap':a.refine_cap,'batch_size':a.batch_size,'scales':a.scales,
+                    'screen_windows':[list(window) for window in windows],'refine_top':a.refine_top,
+                    'probe_full_interval':probe_full_interval,'seed':4242,'test_access':False,
                     'refinement_population':'all validation cells' if a.refine_cap is None else 'capped validation predictions',
                     'objective':'PDCorr + mean(PDS_L1,PDS_L2,PDS_cos)','data':'validation only',
                     'formal_guidance_policy':'literal_dual_cfg_positive_scale',
@@ -87,9 +131,9 @@ def calibrate(a, scales, ranks):
         if a.mse_weight:
             provenance['objective'] += ' - weighted MSE'
             provenance['mse_weight'] = a.mse_weight
-        if a.compare_windows:
-            provenance['screen_windows']=[[.1,.9],[0.,1.]]
-            provenance['refinement_policy']='Highest selection score plus lowest MSE among other cases within 0.04, or next highest score'
+        provenance['refinement_policy'] = (
+            'Highest score, lowest MSE within 0.04 or next highest score, then best unused window when available'
+            if prefer_low_mse else 'Two highest selection scores')
         fp=out/'calibration_config.json'
         if fp.exists() and json.loads(fp.read_text())!=provenance:raise ValueError('Calibration output already has different settings')
         write_json_atomic(fp,provenance)
@@ -103,8 +147,8 @@ def calibrate(a, scales, ranks):
     parallel_options={'ranks':ranks} if ranks.size>1 else {}
     records=[]
 
-    def selection_score(record):
-        return record.get('clamp0_selection_score', record['score'])
+    def score(record):
+        return selection_score(record['metrics'], a.mse_weight)
 
     def evaluate(w,low,high,cap,tag):
         case=out/tag;idx=m.evaluation_indices('validation',cap)
@@ -120,33 +164,28 @@ def calibrate(a, scales, ranks):
             record={'tag':tag,'guidance':w,'cfg_min':low,'cfg_max':high,'clamp':True,'cap':cap,
                     'metrics':metrics,'raw_metrics':raw_metrics,'score':primary_score(metrics),'cache_provenance':cache}
             if a.mse_weight:
-                record['clamp0_selection_score'] = record['score'] - a.mse_weight * metrics['MSE']
+                record['clamp0_selection_score'] = score(record)
             write_json_atomic(out/'all_results.json',[*records,record])
             readme_event(f'验证集 CFG 校准 `{tag}`：w={w}，区间 [{low},{high}]，PDCorr={metrics["PDCorr"]:.4f}，PDS_L2={metrics["PDS_L2"]:.4f}，MSE={metrics["MSE"]:.5f}（非测试）。')
         record=ranks.from_primary(record)
         records.append(record)
         return record
-    candidates=[None]+scales
-    for i,w in enumerate(candidates):evaluate(w,.1,.9,a.screen_cap,f'screen_{i:02d}')
-    guided=[r for r in records if r['guidance'] is not None]
-    best_guided=max(guided,key=selection_score)
-    if a.compare_windows:
-        for i,w in enumerate(scales,1):evaluate(w,0.,1.,a.screen_cap,f'screen_full_{i:02d}')
-    else:
+    evaluate(None, .1, .9, a.screen_cap, 'screen_00')
+    for index, (low, high) in enumerate(windows):
+        prefix = 'screen' if index == 0 else 'screen_full' if (low, high) == (0., 1.) else f'screen_window_{index:02d}'
+        for i, w in enumerate(scales, 1):
+            evaluate(w, low, high, a.screen_cap, f'{prefix}_{i:02d}')
+    if probe_full_interval:
+        best_guided = max((r for r in records if r['guidance'] is not None), key=score)
         evaluate(best_guided['guidance'],0.,1.,a.screen_cap,'screen_full_interval')
     # Section 3.3 specifies dual CFG at inference. The ordinary conditional
     # field remains a diagnostic reference, including when it scores higher.
-    eligible=sorted((r for r in records if r['guidance'] is not None),key=selection_score,reverse=True)
-    top=eligible[:2]
-    if a.compare_windows:
-        near=[r for r in eligible[1:] if selection_score(r)>=selection_score(eligible[0])-.04]
-        if near:
-            top[1]=min(near,key=lambda r:(r['metrics']['MSE'],-selection_score(r)))
-    refined=[]
-    for i,r in enumerate(top):refined.append(evaluate(r['guidance'],r['cfg_min'],r['cfg_max'],a.refine_cap,f'refine_{i:02d}'))
+    top = choose_refinements(records, a.refine_top, a.mse_weight, prefer_low_mse=prefer_low_mse)
+    refined = [evaluate(r['guidance'], r['cfg_min'], r['cfg_max'], a.refine_cap, f'refine_{i:02d}')
+               for i, r in enumerate(top)]
     if not ranks.primary:
         return
-    selected=max(refined,key=selection_score)
+    selected=max(refined,key=score).copy()
     selected.update(checkpoint=provenance['checkpoint'],checkpoint_sha256=provenance['checkpoint_sha256'],step=provenance['step'],
                     weights=weights,data_dir=cfg['data_dir'],
                     noise_std=cfg['training']['noise_std'],sampling_steps=50,seed=4242,batch_size=a.batch_size,
@@ -154,11 +193,11 @@ def calibrate(a, scales, ranks):
                     source_sha256=provenance['source_sha256'],
                     conditional_reference_tag=records[0]['tag'],
                     note='Locked using validation only within the literal dual-CFG family; the conditional-only field is diagnostic. '
-                         f'Final two candidates used {provenance["refinement_population"]}. Run full validation DE and full test with these settings.')
+                         f'{len(refined)} refinements used {provenance["refinement_population"]}.')
     if a.mse_weight:
         selected['mse_weight'] = a.mse_weight
     write_json_atomic(out/'selected.json',selected)
-    readme_event(f'完成验证集采样校准。两组全量候选和校准选择见 `{out}/selected.json` 与 `{out}/all_results.json`。')
+    readme_event(f'`{out}` 完成验证集校准，共 {len(refined)} 个精炼候选，完整记录见 `all_results.json`。')
     print(json.dumps(selected,indent=2),flush=True)
 
 
